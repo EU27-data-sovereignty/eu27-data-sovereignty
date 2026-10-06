@@ -7,6 +7,31 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Changed: the gate runs as parallel jobs, and the deploy ships the build the gate tested (#97)
+
+- **One build, shipped as tested (optimisation 1).** The deploy job no longer rebuilds the site or recompiles the
+  28 PDFs. It downloads the web app the browser tests ran against and the PDFs the PDF job inspected, packages
+  them with `PREBUILT_SITE=1 vercel build` (`./run.sh site`, now `vercel.json`'s `buildCommand`), and fails
+  unless `.vercel/output/static` hashes to the gate's files. The run summary records that hash.
+- **Caches keyed by pins and checksums (optimisation 2).** These are cached:
+  - npm, keyed by the lockfiles;
+  - pip, by `requirements-dev.txt`;
+  - the typst tarball, by its sha256, which is still checked on every run;
+  - Playwright's browsers, by the pinned Playwright version.
+
+  `npm ci` and `pip --require-hashes` still verify everything they install.
+- **Parallel jobs (optimisation 3).** The new `.github/workflows/gate.yml` runs the stage groups at the same
+  time: `model`, `web`, `pdf`, and `e2e` once per browser project (5 jobs). Pull requests (`ci.yml`) and
+  deploys (`deploy.yml`) both call it. `./test.sh --only model|pdf|web|e2e [--project NAME]` runs one group;
+  plain `./test.sh` is unchanged.
+- **Tests.** `tests/test_workflows.py` checks that:
+  - the groups cover every stage of `./test.sh`, and each group runs;
+  - each Playwright project has a job with its own engine;
+  - every cache key is a pin or checksum;
+  - the deploy ships the gate's artifacts.
+- **Verified locally.** Each group passes on its own, and `vercel build` of the prebuilt `web/dist` gives an
+  identical tree hash. The CI timings before and after are **not yet measured**; the first run gives them.
+
 ### Fixed: a new high-severity advisory in the web build's dependencies blocked the deploy
 
 - **What happened.** The deploy of `2deb629` stopped at `npm audit`. GHSA-68fv-2mgg-jv7q (`source-map-js` up to

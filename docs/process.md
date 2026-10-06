@@ -1,7 +1,7 @@
 # The process, end to end
 
 How a fact gets from research to eu27.cloud, and what each deploy costs. Timings come from the deploy run
-37383861627 (2026-10-05). The optimisations below are **proposed, not done**: each lands as its own tested
+37383861627 (2026-10-05). The optimisations below were **proposed** on that date; 1–3 are now built (see Status): each lands as its own tested
 commit with a CHANGELOG entry, and any that changes how facts are checked gets a `DECISIONS.md` entry first.
 
 **What a deploy costs today:**
@@ -93,6 +93,13 @@ Each is keyed by content, so a stale cache cannot be used. Savings are estimates
 
 **Kept as they are:** the fact-hash invalidation (already the main cache for the fact check), the ledger
 replay, the clean-room rebuild, and the full local `./test.sh`.
+
+## Status
+
+- **Optimisations 1–3: built on 2026-10-06 (#97)**, in `.github/workflows/gate.yml`, `deploy.yml`, `ci.yml`,
+  `./test.sh --only` and `./run.sh site`. They are one change because they share `gate.yml`. The timings
+  above are from before; the first runs give the after, recorded in `CHANGELOG.md`.
+- Optimisations 4–8 are not started.
 
 ## Order of work
 

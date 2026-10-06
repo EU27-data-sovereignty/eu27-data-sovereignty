@@ -10,8 +10,8 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | When | What runs | Where it is defined |
 |---|---|---|
 | Before every commit you make | `./test.sh` (all stages below); the security gate on commit | `test.sh` |
-| On every pull request | `./test.sh --no-pdf`, `npm audit --audit-level=high` (root and `web/`), gitleaks, Python tests | `.github/workflows/ci.yml` |
-| On every push to `main` (a production deploy) | `./test.sh` with PDFs, the dependency audit, `factcheck.py gate`, then the deploy and `model/smoke.py` | `.github/workflows/deploy.yml` |
+| On every pull request | the gate without PDFs, `npm audit --audit-level=high` (root and `web/`), gitleaks, Python tests | `.github/workflows/ci.yml`, calling `gate.yml` |
+| On every push to `main` (a production deploy) | the gate with PDFs and `factcheck.py gate`, then the deploy of the gate's own build and `model/smoke.py` | `.github/workflows/deploy.yml`, calling `gate.yml` |
 | Every Monday, 06:17 UTC | `model/smoke.py` against the live site, and `fetch_eurostat.py --check` for new vintages | `.github/workflows/monitor.yml` |
 | Every day, 07:41 UTC | `model/ask_smoke.py`: one fixed question to the live `/ask`, which must answer with a citation | `.github/workflows/monitor.yml` |
 | Before a release, by hand | the fact-check stability sample (`factcheck.py prepare --sample 50`) and mutation testing (below) | `docs/fact-check.md`, this file |
@@ -36,6 +36,16 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 16 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
 `--no-e2e` skips stage 16 and `--no-pdf` skips stage 9.
+
+**In CI the stages run as parallel jobs** (`.github/workflows/gate.yml`, #97). `./test.sh --only GROUP` runs one
+group:
+- `model`: stages 1–4 and 6–8;
+- `web`: stages 5 and 10–15;
+- `pdf`: stage 9;
+- `e2e`: stage 16, with `--project NAME` for one Playwright project.
+
+The four groups partition the stages, and `tests/test_workflows.py` fails if a stage is outside every group or
+a group is not run. Locally, `./test.sh` with no flag still runs everything in order.
 
 ## The Python suite, by subject
 

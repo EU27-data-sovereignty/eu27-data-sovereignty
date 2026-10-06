@@ -33,6 +33,7 @@ are recorded: `tests/test_docs.py` enforces it.
 ./test.sh                              # the full gate; run before every commit
 ./test.sh --no-e2e                     # without Playwright
 ./test.sh --no-pdf                     # without compiling the PDFs (otherwise missing typst fails)
+./test.sh --only model|pdf|web|e2e [--project NAME]   # one stage group; CI runs them as parallel jobs (#97)
 ./run.sh                               # dev server, http://localhost:5173
 ./run.sh data                          # regenerate briefs, bundle and /ask corpus (pins the epoch)
 ./run.sh artefacts                     # re-render the 27 tracked posters (needs Chrome)
@@ -119,7 +120,10 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `docs/fact-check-audit.md`. A fact the checker did not confirm is withheld as disputed, not printed (#89):
   `document.Sources.withheld`, keyed on the fact's hash. The gate is not in `./test.sh`, so branches stay unblocked; run
   `./run.sh factcheck status` to see what is due. Never edit the ledger or a verdict to pass it.
-- **A push to `main` is a production deploy** (#81), gated by `./test.sh` in Actions. The PDFs need `typst`,
+- **A push to `main` is a production deploy** (#81), gated by `./test.sh` in Actions, run as the parallel jobs of
+  `.github/workflows/gate.yml` (#97). The deploy ships the gate's own build (`web-dist` and `pdfs` artifacts,
+  `PREBUILT_SITE=1`), never a second one. A new `./test.sh` stage must sit inside an `in_group` block, or
+  `tests/test_workflows.py` fails. The PDFs need `typst`,
   which Vercel's image lacks, so every deploy is prebuilt (CI pins and checksums typst). The build command runs
   `npm ci` at the root (for `api/`) and in `web/`. Previews are by hand and sit behind Vercel login.
 - **Pin every action by SHA** in `.github/workflows/`, and checksum any downloaded binary

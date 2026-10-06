@@ -10,6 +10,9 @@ set -e
 #   ./test.sh              everything
 #   ./test.sh --no-e2e     skip the browser stage (no Chrome, or CI without one)
 #   ./test.sh --no-pdf     skip compiling the PDFs (no typst); without it, missing typst fails
+#   ./test.sh --only GROUP one group: model, pdf, web or e2e (CI runs them as parallel jobs)
+#   ./test.sh --only e2e --project NAME   one Playwright project (CI runs one job each)
+#   PDF_OUT=dir ./test.sh  keep the compiled PDFs in dir (CI deploys exactly these)
 #
 # Exit 0 = safe to publish. Anything else = do not.
 
@@ -24,20 +27,32 @@ cd "$ROOT"
 
 SKIP_E2E=false
 SKIP_PDF=false
-for arg in "$@"; do
-    case "$arg" in
+ONLY=""
+PROJECT=""
+while [ $# -gt 0 ]; do
+    case "$1" in
         --no-e2e) SKIP_E2E=true ;;
         --no-pdf) SKIP_PDF=true ;;
+        --only)
+            ONLY="$2"; shift
+            case "$ONLY" in model|pdf|web|e2e) ;; *) echo -e "${RED}❌ --only takes model, pdf, web or e2e${NC}"; exit 1 ;; esac
+            ;;
+        --project) PROJECT="$2"; shift ;;
         --help|-h)
-            sed -n '3,15p' "$0" | sed 's/^# \{0,1\}//'
+            sed -n '3,18p' "$0" | sed 's/^# \{0,1\}//'
             exit 0
             ;;
         *)
-            echo -e "${RED}❌ Unknown option: $arg${NC}"
+            echo -e "${RED}❌ Unknown option: $1${NC}"
             exit 1
             ;;
     esac
+    shift
 done
+
+# A stage runs when no group is chosen, or when it is in the chosen one. The groups partition the
+# stages: running all four is exactly ./test.sh, which tests/test_workflows.py checks.
+in_group() { [ -z "$ONLY" ] || [ "$ONLY" = "$1" ]; }
 
 STEP=0
 step() {
@@ -54,6 +69,7 @@ export SOURCE_DATE_EPOCH="$(cat "$ROOT/.build-epoch")"
 
 echo -e "${GREEN}Running the full test gate${NC}"
 
+if in_group model; then
 # -----------------------------------------------------------------------------
 step "Python model and data integrity"
 python3 -m unittest discover -s tests -q
@@ -80,7 +96,9 @@ step "Every fact shown is sourced"
 # An unsourced value is a gap, never a fact. This is the gate the author asked for: unimpeachable.
 python3 model/document.py --check
 ok "every fact in all 27 documents resolves to a checked source"
+fi
 
+if in_group web; then
 # -----------------------------------------------------------------------------
 step "The /ask function type-checks against the real SDK"
 # api/ask.ts proves at compile time that the request it builds is a valid SDK request (#78).
@@ -90,7 +108,9 @@ if [ ! -d "node_modules/@anthropic-ai/sdk" ]; then
 fi
 web/node_modules/.bin/tsc -p tsconfig.json
 ok "api/ type-checks"
+fi
 
+if in_group model; then
 # -----------------------------------------------------------------------------
 step "Generated files are current"
 # Regenerate with the date pinned; anything the generator *moves* is a real change
@@ -115,12 +135,6 @@ fi
 ok "briefs, CSVs and bundle match the model"
 
 # -----------------------------------------------------------------------------
-if [ ! -d "web/node_modules" ]; then
-    echo -e "${RED}❌ web/node_modules missing. Run ./init.sh first.${NC}"
-    exit 1
-fi
-
-# -----------------------------------------------------------------------------
 step "Admission reproduces the committed registers"
 # Research then vetting admission, re-run on the committed evidence, must change nothing: the
 # registers a reader sees follow from the staged findings, verification rows and tier table (#84).
@@ -134,9 +148,17 @@ step "Fact-check ledger and audit file reproduce"
 python3 model/factcheck.py replay
 python3 model/factcheck.py audit --check
 ok "fact-check ledger reproduces from the staged runs; audit file current"
+fi
+
+if { in_group web || in_group e2e; } && [ ! -d "web/node_modules" ]; then
+    echo -e "${RED}❌ web/node_modules missing. Run ./init.sh first.${NC}"
+    exit 1
+fi
 
 # -----------------------------------------------------------------------------
-if [ "$SKIP_PDF" = true ]; then
+if ! in_group pdf; then
+    :
+elif [ "$SKIP_PDF" = true ]; then
     echo
     echo -e "${YELLOW}⚠️  Skipping the PDF stage (--no-pdf)${NC}"
 else
@@ -147,8 +169,13 @@ else
         echo -e "${RED}    ❌ typst is not installed (brew install typst), or pass --no-pdf${NC}"
         exit 1
     fi
-    PDF_DIR="$(mktemp -d)"
-    trap 'rm -rf "$PDF_DIR"' EXIT
+    if [ -n "$PDF_OUT" ]; then
+        PDF_DIR="$PDF_OUT"
+        mkdir -p "$PDF_DIR"
+    else
+        PDF_DIR="$(mktemp -d)"
+        trap 'rm -rf "$PDF_DIR"' EXIT
+    fi
     python3 book/report.py -o "$PDF_DIR" > /dev/null
     pdfs=$(find "$PDF_DIR" -name '*.pdf' -size +1k | wc -l | tr -d ' ')
     if [ "$pdfs" != 28 ]; then
@@ -165,6 +192,7 @@ else
     ok "28 PDFs compiled and inspected: disclaimer, appendices, fonts, size; 4 previews"
 fi
 
+if in_group web; then
 cd web
 
 step "TypeScript types"
@@ -206,15 +234,22 @@ PY
 ok "data bundle and JavaScript within their gzipped budgets"
 
 cd "$ROOT"
+fi
 
 # -----------------------------------------------------------------------------
-if [ "$SKIP_E2E" = true ]; then
+if ! in_group e2e; then
+    :
+elif [ "$SKIP_E2E" = true ]; then
     echo
     echo -e "${YELLOW}⚠️  Skipping browser stage (--no-e2e)${NC}"
 else
     step "End-to-end, accessibility and rendered-data assertions"
     cd web
-    npx playwright test
+    if [ -n "$PROJECT" ]; then
+        npx playwright test --project "$PROJECT"
+    else
+        npx playwright test
+    fi
     ok "routes render real data; no accessibility violations"
     cd "$ROOT"
 fi
@@ -222,6 +257,10 @@ fi
 # -----------------------------------------------------------------------------
 echo
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+if [ -n "$ONLY" ]; then
+    echo -e "${GREEN}✅ All checks in the ${ONLY}${PROJECT:+ ($PROJECT)} group passed${NC}"
+    exit 0
+fi
 echo -e "${GREEN}✅ All checks passed${NC}"
 echo
 echo -e "${YELLOW}Note:${NC} passing does not mean the data is verified."

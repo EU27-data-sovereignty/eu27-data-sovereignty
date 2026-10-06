@@ -2444,3 +2444,45 @@ to a sourced organisation.
 
 *Would change if:* the backfill finds too few sourced ownership links to derive anything; or one
 organisation per holding proves enough, making a column simpler than a table.
+
+### 97. The gate runs as parallel jobs, and the deploy ships the build the gate tested
+**Decision.** 2026-10-06, on the owner's go-ahead for optimisations 1–3 of `docs/process.md`.
+- **Parallel jobs.** `.github/workflows/gate.yml` runs `./test.sh --only model`, `--only web`, `--only pdf` and
+  `--only e2e --project <name>` (one job per Playwright project) at the same time. `ci.yml` (pull requests,
+  without PDFs) and `deploy.yml` (with PDFs and the fact-check gate) both call it.
+- **One build.** The deploy downloads the `web-dist` and `pdfs` artifacts, packages them with
+  `PREBUILT_SITE=1 vercel build` (`./run.sh site`), and fails unless the tree sha256 of
+  `.vercel/output/static` equals the gate's files.
+- **Caches** are keyed only by a pin or a checksum: lockfiles, `requirements-dev.txt`, `TYPST_SHA256` and the
+  Playwright version.
+
+**Problem.** A deploy took about 11.5 minutes (run 37383861627): 414 s of `./test.sh` in one job, then a
+second, untested build of the web app and all 28 PDFs (152 s) in the deploy job. The deploy shipped a build
+the browser tests had never seen. Today's advisory fix (GHSA-68fv-2mgg-jv7q) waited behind the whole sequence.
+
+**Alternatives considered.**
+- **Parallel jobs in a reusable workflow, shipping the gate's artifacts (chosen).** One definition for pull
+  requests and deploys, and what ships is what was tested.
+- **Keep one sequential job and add only caches.** *Why not:* it saves about a minute, and leaves the second,
+  untested build.
+- **Move the Vercel build into the gate job.** *Why not:* the gate would need `VERCEL_TOKEN`, which only the
+  `production` environment may read, and every test would run with a production credential in reach.
+- **Let Vercel build remotely.** *Why not:* its image has no typst, so it cannot build the PDFs (#71).
+- **Skip the gate on a push whose tree passed a pull request's gate (optimisation 4).** *Why not now:* it needs
+  this split first. It stays proposed in `docs/process.md`.
+
+**Closes off.** A stage of `./test.sh` that sits outside every `--only` group, which `tests/test_workflows.py`
+now fails. It also closes off a deploy that builds anything itself: the deploy job installs no typst, and
+`./run.sh site` refuses `PREBUILT_SITE=1` without `index.html` and 28 PDFs.
+
+**Verified:** in part, locally on 2026-10-06:
+- `./test.sh --only web`, `--only pdf` (28 PDFs) and `--only e2e --project firefox` each exit 0;
+- `PREBUILT_SITE=1 npx vercel@61.1.0 build` on a prebuilt `web/dist` gives a tree sha256 equal to
+  `web/dist`'s (`ba417761…`), with `functions/api/ask.func` emitted;
+- `python3 -m unittest tests.test_workflows` passes 17 tests;
+- `actionlint` reports nothing on the new workflow.
+
+**NOT YET:** the first CI runs of the split gate, and their before-and-after timings.
+
+*Would change if:* the parallel jobs' setup time outweighs the saving (each job installs its own
+dependencies); or GitHub artifacts prove unreliable enough that a deploy fails for want of one.

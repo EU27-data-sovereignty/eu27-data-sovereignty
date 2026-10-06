@@ -1,0 +1,165 @@
+name: Gate
+
+# The full gate (./test.sh) as parallel jobs, called by ci.yml for pull requests and by deploy.yml before
+# production (#92, #81). The four groups of ./test.sh --only partition its stages, so these jobs together
+# run exactly what ./test.sh runs locally (tests/test_workflows.py). Every cache is keyed by a pin or a
+# checksum, and every install still verifies what it installs: npm ci the lockfile, pip --require-hashes,
+# typst its sha256 (docs/process.md, optimisations 1 to 3).
+on:
+  workflow_call:
+    inputs:
+      pdf:
+        description: Compile and inspect the 28 PDFs, and keep them for the deploy
+        type: boolean
+        default: true
+      factcheck:
+        description: Require every printed fact to pass the cross-model fact check (#87)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+env:
+  # Pinned and checksummed, never `latest` (dotfiles supply-chain.md). The sha256 is the one
+  # GitHub publishes for the release asset; bump both together.
+  TYPST_VERSION: v0.15.1
+  TYPST_SHA256: a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c
+  # ubuntu-latest ships Google Chrome; playwright.config.ts uses an installed browser (#22).
+  CHROME_PATH: /usr/bin/google-chrome
+
+jobs:
+  model:
+    name: Model and data (./test.sh --only model)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Test-only Python packages (hashed)
+        run: python3 -m pip install --require-hashes -r requirements-dev.txt
+      - name: Run the model group
+        run: ./test.sh --only model
+      # Every printed fact checked by the model that did not write it, and the audit file current (#87).
+      # The check itself runs locally (/factcheck); this only enforces its committed result, so no model
+      # key is needed here.
+      - name: Fact-check gate
+        if: inputs.factcheck
+        run: python3 model/factcheck.py gate
+
+  web:
+    name: Web app (./test.sh --only web)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --prefix web
+      - name: No high-severity advisories in the shipped dependencies
+        run: |
+          npm audit --audit-level=high
+          npm audit --audit-level=high --prefix web
+      - name: Run the web group
+        run: ./test.sh --only web
+      # The build the browser tests run against, and the one deploy.yml ships (optimisation 1).
+      - name: Keep the tested build
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: web-dist
+          path: web/dist
+          if-no-files-found: error
+          retention-days: 7
+
+  pdf:
+    name: PDFs (./test.sh --only pdf)
+    if: inputs.pdf
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: Cache the typst release (keyed by its checksum)
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/typst.tar.xz
+          key: typst-${{ env.TYPST_SHA256 }}
+      - name: Install typst (pinned, checksummed on every run, cached or not)
+        run: |
+          [ -f "$HOME/typst.tar.xz" ] || curl -sSLo "$HOME/typst.tar.xz" "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz"
+          echo "${TYPST_SHA256}  $HOME/typst.tar.xz" | sha256sum -c -
+          tar -xJf "$HOME/typst.tar.xz" -C "$RUNNER_TEMP"
+          mkdir -p "$HOME/.local/bin"
+          mv "$RUNNER_TEMP/typst-x86_64-unknown-linux-musl/typst" "$HOME/.local/bin/typst"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Install poppler (to inspect the compiled PDFs)
+        run: sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Compile and inspect the PDFs
+        run: PDF_OUT="$RUNNER_TEMP/pdfs" ./test.sh --only pdf
+      # The PDFs deploy.yml ships are these, compiled and inspected here (optimisation 1).
+      - name: Keep the inspected PDFs
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: pdfs
+          path: ${{ runner.temp }}/pdfs
+          if-no-files-found: error
+          retention-days: 7
+
+  e2e:
+    name: Browser tests (${{ matrix.project }})
+    needs: web
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      # One job per Playwright project in web/playwright.config.ts. Chrome is the runner's own (#22);
+      # the others use Playwright's builds, pinned with @playwright/test (#92).
+      matrix:
+        include:
+          - { project: chrome, browser: "" }
+          - { project: firefox, browser: firefox }
+          - { project: webkit, browser: webkit }
+          - { project: iphone-se, browser: webkit }
+          - { project: iphone-17-pro, browser: webkit }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install dependencies
+        run: npm ci --prefix web
+      - name: The build the web job tested
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: web-dist
+          path: web/dist
+      - name: Playwright version (the cache key)
+        id: playwright
+        if: matrix.browser != ''
+        run: echo "version=$(node -p "require('./web/node_modules/@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+      - name: Cache the browser (keyed by the pinned Playwright version)
+        if: matrix.browser != ''
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright.outputs.version }}-${{ matrix.browser }}
+      - name: Install the browser and its system libraries (#92)
+        if: matrix.browser != ''
+        run: npx --prefix web playwright install --with-deps "${{ matrix.browser }}"
+      - name: Run the e2e group for this project
+        run: ./test.sh --only e2e --project "${{ matrix.project }}"

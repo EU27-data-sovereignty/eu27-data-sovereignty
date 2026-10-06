@@ -23,7 +23,7 @@ The site is static except for one function, `/api/ask` (#78). There is no databa
 
 | Piece | Source | Notes |
 |---|---|---|
-| Build | `vercel.json` `buildCommand`: the web app, then `book/report.py -o web/dist` | Runs on the GitHub Actions runner (or this machine) through `vercel build` (#81); it needs `typst`, which Vercel's image lacks |
+| Build | `vercel.json` `buildCommand`: `./run.sh site`, the web app, then `book/report.py -o web/dist` | Runs on the GitHub Actions runner (or this machine) through `vercel build` (#81); it needs `typst`, which Vercel's image lacks. In `deploy.yml`, `PREBUILT_SITE=1` makes it ship the gate's tested build instead of rebuilding (#97) |
 | Output | `web/dist` | Vite. `dist/` is never committed (#24) |
 | PDFs | `/eu27-report.pdf`, `/report/<ISO>.pdf` | The EU-27 report and the 27 country reports, typeset from the content model with footnoted sources (#74, #75). Built into `web/dist/`, never committed (#41). `/briefs/<ISO>.pdf` redirects to `/report/<ISO>.pdf` (#76) |
 | Data | `web/public/data/eu27.json` → `/data/eu27.json` | Tracked; CI asserts it is fresh. It is the app's only network fetch |
@@ -44,16 +44,19 @@ demand (`gh workflow run Deploy`). Deploys never overlap, and a running one is n
 
 ```mermaid
 flowchart TD
-    P([push to main]) --> G["gate job: ./test.sh<br/>unit · data · types · lint · build · Playwright + axe"]
-    G --> F["fact-check gate: every printed fact has a current supported verdict<br/>from a model that did not write it; audit file current (#87, #89)"]
-    G -- fails --> X1[Stop: nothing ships]
-    F -- fails --> X1
-    F -- passes --> T["deploy job (environment: production)<br/>typst v0.15.1, sha256-checked"]
-    T --> B["vercel pull → vercel build --prod<br/>web app + EU-27 report + 27 country PDFs"]
-    B --> D["vercel deploy --prebuilt --prod<br/>uploads .vercel/output only"]
+    P([push to main]) --> G["gate.yml, in parallel (#97)"]
+    G --> GM["model: ./test.sh --only model<br/>+ fact-check gate (#87, #89)"]
+    G --> GW["web: ./test.sh --only web<br/>keeps the tested build (web-dist)"]
+    G --> GP["pdf: typst v0.15.1, sha256-checked<br/>28 PDFs compiled + inspected (pdfs)"]
+    GW --> GE["e2e: one job per Playwright project<br/>against web-dist"]
+    GM & GW & GP & GE -- any fails --> X1[Stop: nothing ships]
+    GM & GP & GE -- all pass --> T["deploy job (environment: production)<br/>downloads web-dist + pdfs"]
+    T --> B["vercel pull → PREBUILT_SITE=1 vercel build --prod<br/>packages the gate's build, no rebuild"]
+    B --> H["tree sha256 of .vercel/output/static<br/>must equal the gate's build"]
+    H --> D["vercel deploy --prebuilt --prod<br/>uploads .vercel/output only"]
     D --> S["smoke test https://eu27.cloud<br/>/ · /country/DE · /eu27-report.pdf · robots · noindex · bundle hash"]
     S -- mismatch --> X2[Run fails: investigate the live site]
-    S -- passes --> L[Run summary: deployment · commit · bundle hash]
+    S -- passes --> L[Run summary: deployment · commit · bundle hash · site tree hash]
 ```
 
 **Secrets and settings (once, by the owner).**

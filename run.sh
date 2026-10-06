@@ -40,6 +40,7 @@ show_help() {
     echo "  dev, start       Start the dev server (default)"
     echo "  build            Production build"
     echo "  preview          Serve the production build"
+    echo "  site             What vercel build runs (vercel.json); PREBUILT_SITE=1 ships the gate's build"
     echo
     echo -e "${GREEN}Quality${NC}"
     echo "  test             Full test gate (delegates to ./test.sh)"
@@ -110,6 +111,28 @@ case "${1:-dev}" in
         else
             print_warning "typst missing — built without the PDFs"
             print_success "Built to web/dist/"
+        fi
+        ;;
+    site)
+        # vercel.json's buildCommand: what `vercel build` runs to produce web/dist (#71, #81). The root
+        # node_modules are for api/ (the /ask function). In deploy.yml PREBUILT_SITE=1: web/dist is then
+        # the build the gate tested, with the 28 PDFs its PDF job compiled and inspected, so it is checked
+        # and shipped, never rebuilt (docs/process.md, optimisation 1).
+        npm ci
+        if [ "${PREBUILT_SITE:-}" = 1 ]; then
+            if [ ! -f web/dist/index.html ]; then
+                print_error "PREBUILT_SITE=1, but web/dist has no index.html"
+                exit 1
+            fi
+            pdfs=$(find web/dist -name '*.pdf' -size +1k | wc -l | tr -d ' ')
+            if [ "$pdfs" != 28 ]; then
+                print_error "PREBUILT_SITE=1, but web/dist has $pdfs PDFs, not 28"
+                exit 1
+            fi
+            print_success "Shipping the gate's build: web/dist with 28 PDFs"
+        else
+            (cd web && npm ci && npm run build)
+            python3 book/report.py -o web/dist
         fi
         ;;
     preview)

@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm ci && cd web && npm ci && npm run build && cd .. && python3 book/report.py -o web/dist",
+  "buildCommand": "./run.sh site",
   "outputDirectory": "web/dist",
   "functions": { "api/ask.ts": { "maxDuration": 60 } },
   "installCommand": "echo skip",
