@@ -66,16 +66,18 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
 
 ## Security
 
-**EU-1** (private findings register): Anthropic keys were exposed in plain text during `/ask` setup. A new key
-is live and was set via the dashboard. The finding closes once every older key in the `eu27-ask` workspace is
-revoked. The spend limit is set.
-
-**Waiting on the owner:** confirm the old keys are revoked.
+**EU-1** (private findings register): Anthropic keys were exposed in plain text during `/ask` setup.
+**Closed 2026-10-06.**
+- The workspace `eu27` now holds a single key, created 2026-10-06, and set in the Vercel dashboard as a
+  sensitive Production variable.
+- Deploy run 37518689761 passed the live `/ask` stage (940 characters, 3 citations).
+- The spend limit is set.
+- **The key expires 2026-11-05.** The renewal steps are in `DEPLOYMENT.md` § `/ask` runbook.
 
 ## Waiting on the owner
 
 1. ~~The swept-in feature~~: resolved, option A.
-2. Revoking the old Anthropic keys, to close EU-1.
+2. ~~Revoking the old Anthropic keys~~: done 2026-10-06, EU-1 closed. Renew the key before 2026-11-05.
 3. The mobile reader: port it or drop it. Its 4 Dependabot alerts, 2 of them high, clear only that way.
 4. The mobile app plan: see `docs/plans/mobile-app.md`, owner decisions 1–9.
 5. The foundation plan: see `docs/plans/stichting.md`, owner decisions 1–10.
@@ -83,7 +85,7 @@ revoked. The spend limit is set.
 ## Next steps, in order
 
 1. ~~Resolve the swept-in feature~~: done, option A.
-2. Close EU-1.
+2. ~~Close EU-1~~: done 2026-10-06.
 3. **The human sampling audit**, which unlocks launch and indexing (#25, #50):
    - recruit reviewers for the roster (`model/contrib/reviewers.csv`);
    - draw the sample (`./run.sh contrib audit-sample`);

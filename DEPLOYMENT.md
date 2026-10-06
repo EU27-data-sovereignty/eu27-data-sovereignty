@@ -33,7 +33,7 @@ The site is static except for one function, `/api/ask` (#78). There is no databa
 | Indexing | `web/public/robots.txt` disallows everything, and `X-Robots-Tag: noindex` on every path | Removing both is stage 2 (#80) |
 | Domain | `eu27.cloud`, registered at iwantmyname; nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, so Vercel serves DNS and issues the certificate; `www` → apex | #80, #90 |
 | Function | `api/ask.ts` → `/api/ask`, Node 24, `maxDuration` 60 s | Streams answers from the Anthropic API over the sourced corpus `api/_corpus.json` (#78). Dependencies in the root `package.json` (exact pins); `vercel build` emits `.vercel/output/functions/api/ask.func` |
-| Secret | `ANTHROPIC_API_KEY` (Vercel env, Preview + Production) | The value is set with `vercel env add` by the owner and never printed. Without it, `/ask` returns a readable error |
+| Secret | `ANTHROPIC_API_KEY` (Vercel env, Production, sensitive) | The owner sets the value in the Vercel dashboard, and it is never printed. The key is from the Anthropic workspace `eu27` and **expires 2026-11-05** (see the `/ask` runbook). Without it, `/ask` returns a readable error |
 | Cost cap | A dedicated Anthropic workspace for that key, with a monthly spend limit | The hard ceiling, enforced by Anthropic. When it is reached, `/ask` says questions are paused |
 | Rate limit | Vercel Firewall rule on `/api/ask`, per IP | Staged with `vercel firewall`, applied only with the owner's OK |
 
@@ -180,8 +180,29 @@ An empty question returns 400; a question over 500 characters returns 400.
 redeploy: every question then gets a readable "something went wrong" message, and nothing else on the
 site changes. To remove it properly, run `vercel env rm ANTHROPIC_API_KEY production` and redeploy.
 
-**Rotating the key.** Create a new key in the same workspace, run `vercel env rm` and then
-`vercel env add` for both environments, redeploy, then revoke the old key.
+**The current key** (2026-10-06):
+- it is in the Anthropic workspace `eu27`, and is the only key there;
+- it is set in the Vercel dashboard as `ANTHROPIC_API_KEY`, a sensitive Production variable;
+- it **expires 2026-11-05**, and `/ask` stops working that day.
+
+The daily monitor (`monitor.yml`) notices a lapsed key only after `/ask` is down, so renew it a few days before.
+`TODO.md` carries the date.
+
+**Rotating or renewing the key.** Use the dashboard, so the key goes from one browser tab to another and never
+through a terminal or a chat. Earlier keys were exposed by pasting them into a chat and onto a command line, and
+had to be revoked.
+1. In the Anthropic Console, **Settings → API keys → Create key**, in the `eu27` workspace.
+2. In Vercel, **sovereign-data-centers → Settings → Environment Variables → `ANTHROPIC_API_KEY` → ⋯ → Edit**.
+   Paste the key, keep **Production** ticked and **Sensitive** on, and click **Save**. Skip Vercel's Redeploy
+   button: a remote build has no typst (#71).
+3. Redeploy from GitHub Actions: push to `main`, or `gh workflow run Deploy`. The deploy job's last step,
+   `./test.sh --only live`, asks the live `/ask` one question through a real API call. It fails unless the
+   answer comes back with citations.
+4. Only then delete the old key in the Console (**⋯ → Delete**). With the Status filter on **All**, check that
+   the `eu27` workspace lists only the new key.
+5. Record it in `CHANGELOG.md`, and move the expiry date in this runbook, the Topology table and `TODO.md`.
+
+If `/ask` breaks after step 4, the deleted key was the live one: repeat from step 1.
 
 **Watching cost.** The workspace usage page in the Console. Expect about $0.10–0.20 per question once
 the corpus is large: roughly 80k corpus tokens today, read from cache after the first question in an
