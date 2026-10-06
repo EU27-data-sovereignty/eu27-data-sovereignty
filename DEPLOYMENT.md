@@ -186,7 +186,7 @@ site changes. To remove it properly, run `vercel env rm ANTHROPIC_API_KEY produc
 - it **expires 2026-11-05**, and `/ask` stops working that day.
 
 The daily monitor (`monitor.yml`) notices a lapsed key only after `/ask` is down, so renew it a few days before.
-`TODO.md` carries the date.
+`TODO.md` carries the date, and the owner's calendar has a reminder for 2026-11-02, 09:00 ET.
 
 **Rotating or renewing the key.** Use the dashboard, so the key goes from one browser tab to another and never
 through a terminal or a chat. Earlier keys were exposed by pasting them into a chat and onto a command line, and
@@ -261,7 +261,9 @@ From #81 on, the record of each production deploy is the `Deploy` workflow run: 
 the commit and the bundle hash (`gh run list --workflow Deploy`). The rows below are the manual deploys before
 that. A deploy made with `./run.sh deploy` should still add a row here.
 
-The bundle hash is the sha256 of the served `/data/eu27.json`.
+The bundle hash is the sha256 of the served `/data/eu27.json`. From #97 on, the run summary also records the
+site tree sha256: one hash over every file the gate built and tested, which the deploy checks against what it
+uploads.
 
 | Date | Deployment | Commit | `eu27.json` sha256 |
 |---|---|---|---|

@@ -63,6 +63,8 @@ What changed and when. Reasoning for the choices behind these changes lives in
   | deploy, including the tree-hash check | 1:02 |
 
   The deploy then passed 55 of 55 smoke checks, with 1,396 of 1,396 printed facts.
+- **The second run** (`747ed22`, every cache warm, 13 restored) took 4 min 54 s. The caches save about 15–20 s per
+  job; the PDF job still takes about 4 min.
 
 ### Fixed: a new high-severity advisory in the web build's dependencies blocked the deploy
 

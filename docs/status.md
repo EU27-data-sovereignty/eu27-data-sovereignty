@@ -1,4 +1,4 @@
-# Status: 2026-10-06
+# Status: 2026-10-06 (updated at the end of the day)
 
 This is a point-in-time snapshot. It is not maintained; the current state is in `TODO.md`, `CHANGELOG.md`
 and `docs/fact-check-audit.md`.
@@ -43,15 +43,26 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
 
 | Area | State |
 |---|---|
-| Site | https://eu27.cloud, `noindex`, deploy `f119e8f` |
+| Site | https://eu27.cloud, `noindex`, deploy `e39228e` (run 37522504720) |
 | Printed facts | 1,396, each confirmed by a second model that did not write it (#87) |
 | Withheld facts | 56, shown as disputed with the checker's reason (#89, #94) |
 | Fact-check runs | the pilot; the full run; populations; refused pages from hashed copies; the correction round re-check; 2 stability samples (6 of 100 rejected by the second checker) |
-| `/ask` | answers with citations, on the new key, set in the Vercel dashboard (2026-10-05) |
+| `/ask` | answers with citations, on a key created 2026-10-06 and set in the Vercel dashboard. It **expires 2026-11-05**; a calendar reminder is set for 2026-11-02, 09:00 ET |
 | Monitoring | weekly live smoke test plus a Eurostat vintage check; daily `/ask` check, strict (`ASK_LIVE=true`) |
-| Deploys | only from GitHub Actions, prebuilt, after `./test.sh` and the fact-check gate. Vercel's own git deploys are off (`vercel.json`) |
-| Pull requests | full `./test.sh --no-pdf` plus `npm audit` |
+| Deploys | only from GitHub Actions, prebuilt, in about 5 minutes. The gate runs as parallel jobs (`gate.yml`, #97); then the fact-check gate. The deploy ships the gate's own build, checked by tree hash, then runs the smoke test and a live `/ask` call. Vercel's own git deploys are off (`vercel.json`) |
+| Pull requests | the same parallel gate without PDFs, plus `npm audit` |
 | Tests | 270+ Python; 51 Vitest; 198 browser tests (Chrome, Firefox, WebKit, iPhone SE, iPhone 17 Pro, visual) |
+
+## Today's deploys (2026-10-06)
+
+| Run | Commit | Result | What it shipped |
+|---|---|---|---|
+| 37498565798 | `2deb629` | failed at `npm audit` | the 60 hosting facts checked; stopped by GHSA-68fv-2mgg-jv7q in `source-map-js` |
+| 37509836013 | `437d707` | live, 13.8 min | `source-map-js` 1.2.2; `docs/process.md`; 1,396 facts; 55 of 55 smoke checks |
+| 37511934214 | `d8bd0d1` | live, 5:08 | the parallel gate, shipping the tested build (#97), every cache cold |
+| 37515393649 | `747ed22` | live, 4:54 | the measured timings; every cache warm (13 restored) |
+| 37518689761 | `ac5c6af` | live, 5:14 | the live `/ask` stage, after the new key was set; `/ask`: 940 characters, 3 citations |
+| 37522504720 | `e39228e` | live, 5:05 | the key closure, its expiry and the rotation runbook; `/ask`: 1,020 characters, 3 citations |
 
 ## Decisions recorded this period
 
@@ -63,6 +74,7 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
 - **#92** The full gate on every pull request, plus live smoke tests after each deploy and weekly.
 - **#93** A withheld fact can be corrected by a later round, through every check again.
 - **#94** A second checker's disagreement withholds a confirmed fact too.
+- **#97** The gate runs as parallel jobs, and the deploy ships the build the gate tested.
 
 ## Security
 
@@ -92,7 +104,11 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
    - measure the error rate.
 4. Decide on the mobile app and the foundation. The app's store accounts and Supabase wait for the
    foundation.
-5. Small items:
+5. **Before 2026-11-05: renew the `/ask` key** (`DEPLOYMENT.md` § `/ask` runbook; calendar reminder
+   2026-11-02).
+6. **Optimisation 5**, a per-country PDF cache. The PDF job (about 4 min) is now the slowest part of every
+   deploy (`docs/process.md`).
+7. Small items:
    - a per-visitor rate limit on `/api/ask` in the Vercel firewall;
    - tests for the 3 remaining mutation-audit gaps;
    - a vetting reviewer from a different model than its researcher;
@@ -112,3 +128,4 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
 | Testing | `docs/testing.md` |
 | Deploying | `DEPLOYMENT.md` |
 | Plans | `docs/plans/mobile-app.md`, `docs/plans/stichting.md` |
+| The pipeline, its timings and the proposed speed-ups | `docs/process.md` |

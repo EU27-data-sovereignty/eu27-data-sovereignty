@@ -100,6 +100,16 @@ replay, the clean-room rebuild, and the full local `./test.sh`.
   `./test.sh --only` and `./run.sh site`. They are one change because they share `gate.yml`.
 - **Measured.** The first run took 5 min 08 s from push to live, against about 11.5 min before (`CHANGELOG.md`).
   Its caches were all cold.
+- **The second run** (`747ed22`, every cache warm, 13 restored) took 4 min 54 s:
+
+  | Job | Time |
+  |---|---|
+  | web | 0:23 |
+  | browser tests | 0:51–1:55 |
+  | deploy | 0:45 |
+  | pdf | 3:58 |
+
+  The caches save about 15–20 s per job, so the PDF job sets the total.
 - **The PDF job (3:59) is now the critical path,** so optimisation 5 (a per-country PDF cache) is the next
   saving.
 - Optimisations 4–8 are not started.

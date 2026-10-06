@@ -62,7 +62,8 @@ Open
 - [ ] **Before 2026-11-05: renew the `/ask` key.** The current key expires that day, and `/ask` stops with it.
       Create a key in the `eu27` workspace, paste it in the Vercel dashboard (`ANTHROPIC_API_KEY`, Production),
       then push or run `gh workflow run Deploy`. The deploy's live `/ask` stage confirms it. Then delete the old key.
-      The daily monitor would catch a lapse, but only after `/ask` is down
+      The daily monitor would catch a lapse, but only after `/ask` is down. A calendar reminder is set for
+      2026-11-02, 09:00 ET, with these steps
 - [x] Live `/ask` answers with citations (`ask_smoke.py --require`: 1122 characters, 3 citations, 2026-10-03);
       repository variable ASK_LIVE=true, so the daily check now fails if it stops
 - [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)
