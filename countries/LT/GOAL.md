@@ -49,7 +49,7 @@ Lithuania described on its own measured characteristics. Each figure is the publ
 
 ## 3. Critical data holdings, by priority
 
-The holdings Lithuania cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 6 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Lithuania cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 8 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -63,10 +63,10 @@ The holdings Lithuania cannot let depend on infrastructure a foreign state can c
 | High | Document issuance history (tier 0) | Asmens dokumentų išdavimo informacinė sistema, ADIS (Personal Documents Issuance Information System)[^s16] | Lietuvos Respublikos vidaus reikalų ministerija (Ministry of the Interior), with Informatikos ir ryšių departamentas maintaining the infrastructure[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | Lietuvos Respublikos asmens tapatybės kortelė, ATK / eID (Lithuanian identity card eID)[^s4] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | MD Root CA (root) and MD CA (issuing CA) of the Migration Department[^s17] | *Disputed: the fact check (claude-fable-5-1, run wf_b66a7125-0d9) did not confirm this: The RRT page is a register of qualified-certificate providers and lists the Migration Department as one registered provider (order of 13 Nov 2025) alongside VĮ Registrų centras (orders of 2017); it never mentions a state PKI or says the…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | Įtariamųjų, kaltinamųjų ir nuteistųjų registras, ĮKNR (Register of Suspects, Accused and Convicted Persons)[^s17] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras, IAŽR (Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons)[^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Įtariamųjų, kaltinamųjų ir nuteistųjų registras, ĮKNR (Register of Suspects, Accused and Convicted Persons)[^s18] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras, IAŽR (Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons)[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
@@ -78,16 +78,16 @@ The holdings Lithuania cannot let depend on infrastructure a foreign state can c
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | Ginklų registras (Firearms Register)[^s19] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Ginklų registras (Firearms Register)[^s20] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | dispečerinio valdymo sistema (dispatch control system) of Litgrid, with an automatic generation control (AGV) module[^s21] | Litgrid (Lithuanian electricity transmission system operator)[^s22][^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | Diplomų, atestatų ir kvalifikacijos pažymėjimų registras (Register of Diplomas, Certificates and Qualification Certificates)[^s20] | Nacionalinė švietimo agentūra (National Agency for Education)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Diplomų, atestatų ir kvalifikacijos pažymėjimų registras (Register of Diplomas, Certificates and Qualification Certificates)[^s23] | Nacionalinė švietimo agentūra (National Agency for Education)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
@@ -97,7 +97,7 @@ The holdings Lithuania cannot let depend on infrastructure a foreign state can c
 
 ## 4. Foreign-dependency exposure
 
-Of the 6 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 8 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -105,7 +105,7 @@ Of the 6 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 6 |
+| Not stated in sources | 8 |
 
 ## 5. Legal and institutional posture
 
@@ -136,7 +136,6 @@ Tier 0 and 1 holdings for Lithuania without a verified source yet. Corrections a
 - Breeder document scans (tier 0)
 - Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
 - Residence and migration status (tier 1)
 - Tax (tier 1)
 - Customs declarations (tier 1)
@@ -156,7 +155,6 @@ Tier 0 and 1 holdings for Lithuania without a verified source yet. Corrections a
 - Intelligence services (tier 1)
 - Emergency calls and public-safety radio (tier 1)
 - Crisis management and civil protection (tier 1)
-- Electricity grid control (tier 1)
 - Water management control (tier 1)
 
 ## Appendix: methodology
@@ -167,7 +165,7 @@ Tier 0 and 1 holdings for Lithuania without a verified source yet. Corrections a
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -184,17 +182,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -224,8 +222,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -236,8 +234,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -280,7 +278,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -322,7 +320,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -346,6 +344,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -357,7 +356,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Lithuania
 
-21 of 21 printed facts about Lithuania pass.
+24 of 24 printed facts about Lithuania pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -375,17 +374,22 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:LT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LT:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LT:grid_control:register | Electricity grid control: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LT:grid_control:operator | Electricity grid control: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LT:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LT:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Lithuania
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:LT:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | claude-fable-5-1 | not supported | The RRT page is a register of qualified-certificate providers and lists the Migration Department as one registered provider (order of 13 Nov 2025) alongside VĮ Registrų centras (orders of 2017); it never mentions a state PKI or says the Migration Department operates it. The source therefore does not establish the Migration Department as 'the body that operates' state PKI and qualified trust servic |
 
 ---
 
@@ -405,11 +409,14 @@ None.
 [^s14]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s15]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
 [^s16]: Informatikos ir ryšių departamentas prie VRM — Asmens dokumentų išdavimo informacinė sistema (ADIS). Asmens dokumentų išdavimo informacinė sistema (ADIS). <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/asmens-dokumentu-isdavimo-informacine-sistema-adis-2> ([archived](https://web.archive.org/web/20250719212715/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/asmens-dokumentu-isdavimo-informacine-sistema-adis-2))
-[^s17]: Informatikos ir ryšių departamentas prie VRM — Įtariamųjų, kaltinamųjų ir nuteistųjų registro (ĮKNR)…. Įtariamųjų, kaltinamųjų ir nuteistųjų registro (ĮKNR) paslaugos. <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2> ([archived](https://web.archive.org/web/20260606162800/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2))
-[^s18]: Informatikos ir ryšių departamentas prie VRM — Ieškomų asmenų žinybinio registro (IAŽR) paslaugos. Ieškomų asmenų žinybinio registro (IAŽR) paslaugos. <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ieskomu-asmenu-zinybinio-registro-iazr-paslaugos-2> ([archived](https://web.archive.org/web/20260606163203/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ieskomu-asmenu-zinybinio-registro-iazr-paslaugos-2))
-[^s19]: Informatikos ir ryšių departamentas prie VRM — Ginklų registro pažymos ar išrašo užsakymas. Ginklų registro pažymos ar išrašo užsakymas. <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2> ([archived](https://web.archive.org/web/20260606171118/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2))
-[^s20]: Nacionalinė švietimo agentūra — Diplomų, atestatų ir kvalifikacijos pažymėjimų registras, 2025-07-16. Diplomų, atestatų ir kvalifikacijos pažymėjimų registras. <https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras> ([archived](https://web.archive.org/web/20260831051634/https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras/))
+[^s17]: Migracijos departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos — Asmens tapatybės kortelė ir elektroninis parašas –…, 2025. Asmens tapatybės kortelė ir elektroninis parašas – Parašo įrankiai. <https://www.nsc.vrm.lt/downloads.htm>
+[^s18]: Informatikos ir ryšių departamentas prie VRM — Įtariamųjų, kaltinamųjų ir nuteistųjų registro (ĮKNR)…. Įtariamųjų, kaltinamųjų ir nuteistųjų registro (ĮKNR) paslaugos. <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2> ([archived](https://web.archive.org/web/20260606162800/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2))
+[^s19]: Informatikos ir ryšių departamentas prie VRM — Ieškomų asmenų žinybinio registro (IAŽR) paslaugos. Ieškomų asmenų žinybinio registro (IAŽR) paslaugos. <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ieskomu-asmenu-zinybinio-registro-iazr-paslaugos-2> ([archived](https://web.archive.org/web/20260606163203/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ieskomu-asmenu-zinybinio-registro-iazr-paslaugos-2))
+[^s20]: Informatikos ir ryšių departamentas prie VRM — Ginklų registro pažymos ar išrašo užsakymas. Ginklų registro pažymos ar išrašo užsakymas. <https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2> ([archived](https://web.archive.org/web/20260606171118/https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2))
+[^s21]: Litgrid AB — „Litgrid“ pabaigė 8 sinchronizacijos projektą: elektros…, 2024-02-08. „Litgrid“ pabaigė 8 sinchronizacijos projektą: elektros perdavimo tinklą sustiprino nauja valdymo sistema. <https://www.litgrid.eu/naujienos/litgrid-pabaige-8-sinchronizacijos-projekta-elektros-perdavimo-tinkla-sustiprino-nauja-valdymo-sistema>
+[^s22]: Litgrid AB — Apie Litgrid. Apie Litgrid. <https://www.litgrid.eu/apie-litgrid>
+[^s23]: Nacionalinė švietimo agentūra — Diplomų, atestatų ir kvalifikacijos pažymėjimų registras, 2025-07-16. Diplomų, atestatų ir kvalifikacijos pažymėjimų registras. <https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras> ([archived](https://web.archive.org/web/20260831051634/https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras/))
 
-**Evidence grades:** 0 Strong, 21 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 0 Strong, 24 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -49,55 +49,55 @@ Italy described on its own measured characteristics. Each figure is the publishe
 
 ## 3. Critical data holdings, by priority
 
-The holdings Italy cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 27 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
+The holdings Italy cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 28 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data[^s13][^s14] | Ministry of the Interior; Sogei S.p.A. provides the technical operation[^s13][^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Fingerprint biometric (tier 0) | No permanent central register: fingerprint images are held in the banca dati del CP-CIE e di SSCE (database of the CIE production centre and of the CNSD services system) only for the time strictly necessary to produce the CIE[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Facial biometric (tier 0) | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data[^s16] | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior[^s16] | *Not yet sourced* | National infrastructure[^s16] | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system)[^s17] | Open set of public and private entities accredited by AgID[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Facial biometric (tier 0) | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data[^s17] | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior[^s17] | *Not yet sourced* | National infrastructure[^s17] | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system)[^s18] | Open set of public and private entities accredited by AgID[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Anagrafe Immobiliare Integrata (Integrated Property Register)[^s18] | Agenzia del Territorio (Land Agency)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | casellario giudiziale (criminal records register)[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Centro elaborazione dati (Data Processing Centre, the inter-force police database)[^s20] | Ministero dell'interno (Ministry of the Interior)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Anagrafe Immobiliare Integrata (Integrated Property Register)[^s19] | Agenzia del Territorio (Land Agency)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | casellario giudiziale (criminal records register)[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Centro elaborazione dati (Data Processing Centre, the inter-force police database)[^s21] | Ministero dell'interno (Ministry of the Interior)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | The CIE database is part of the CNSD infrastructure[^s16] | Only the Ministry of the Interior may issue the CIE[^s6][^s21] | The CIE issuance circuit (SSCE) runs on IT infrastructure located in the Ministry of the Interior's CNSD[^s16] | National infrastructure[^s16] | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | The CNSD 'CA Autenticazione' is the Ministry of the Interior's certification authority that issues online-authentication certificates for the CIE[^s16] | AgID is Italy's supervisory authority for qualified trust service providers[^s22] | The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the IT infrastructure located in the CNSD[^s16] | National infrastructure[^s16] | *Not yet measured* |
+| High | Document issuance history (tier 0) | The CIE database is part of the CNSD infrastructure[^s17] | Only the Ministry of the Interior may issue the CIE[^s6][^s22] | The CIE issuance circuit (SSCE) runs on IT infrastructure located in the Ministry of the Interior's CNSD[^s17] | National infrastructure[^s17] | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | The CNSD 'CA Autenticazione' is the Ministry of the Interior's certification authority that issues online-authentication certificates for the CIE[^s17] | AgID is Italy's supervisory authority for qualified trust service providers[^s23] | The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the IT infrastructure located in the CNSD[^s17] | National infrastructure[^s17] | *Not yet measured* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Tax (tier 1) | Anagrafe tributaria (national tax register)[^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | AIDA (Integrated Customs and Excise Automation) data warehouse of the Customs and Monopolies Agency[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | casellario centrale dei pensionati (central register of pensioners)[^s25] | Istituto nazionale della previdenza sociale (INPS)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | The National Register of Patients (ANA) is the reference register for public health, run within Sistema Tessera Sanitaria[^s26][^s27] | ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Registro delle imprese (Register of Companies)[^s28] | Camera di commercio (chambers of commerce)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Apposita sezione del Registro delle imprese (dedicated beneficial-ownership section of the Register of Companies)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | archivio nazionale dei veicoli (national vehicle archive)[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Anagrafe tributaria (national tax register)[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | AIDA (Integrated Customs and Excise Automation) data warehouse of the Customs and Monopolies Agency[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | casellario centrale dei pensionati (central register of pensioners)[^s26] | Istituto nazionale della previdenza sociale (INPS)[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | The National Register of Patients (ANA) is the reference register for public health, run within Sistema Tessera Sanitaria[^s27][^s28] | ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Registro delle imprese (Register of Companies)[^s29] | Camera di commercio (chambers of commerce)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Apposita sezione del Registro delle imprese (dedicated beneficial-ownership section of the Register of Companies)[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | archivio nazionale dei veicoli (national vehicle archive)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | SIOPE monitors the receipts and payments made by the treasurers of all public administrations[^s31][^s32] | The SIOPE+ infrastructure is operated by the Banca d'Italia[^s31][^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | NoiPA[^s33] | Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG), Ministero dell'Economia e delle Finanze (MEF)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | The historical election archive is an online database of election results down to municipality level[^s34] | The Central Directorate for Electoral Services publishes turnout and results data[^s34][^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | BI‑Comp (national multilateral clearing system)[^s36] | Banca d'Italia[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | SIOPE monitors the receipts and payments made by the treasurers of all public administrations[^s32][^s33] | The SIOPE+ infrastructure is operated by the Banca d'Italia[^s32][^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | NoiPA[^s34] | Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG), Ministero dell'Economia e delle Finanze (MEF)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | The historical election archive is an online database of election results down to municipality level[^s35] | The Central Directorate for Electoral Services publishes turnout and results data[^s35][^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | BI‑Comp (national multilateral clearing system)[^s37] | Banca d'Italia[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency[^s37][^s38] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency[^s38][^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | Anagrafe nazionale dell'istruzione (ANIST) (National Education Register)[^s39] | Ministero dell'istruzione (Ministry of Education)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | The electronic health record (FSE) holds the patient's clinical data and documents[^s40][^s41] | The FSE is set up by the regions and autonomous provinces[^s40][^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | The printed Gazzetta Ufficiale is the only definitive text and prevails over the digital version[^s42] | IPZS publishes the Gazzetta Ufficiale in digital form[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Anagrafe nazionale dell'istruzione (ANIST) (National Education Register)[^s40] | Ministero dell'istruzione (Ministry of Education)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | The electronic health record (FSE) holds the patient's clinical data and documents[^s41][^s42] | The FSE is set up by the regions and autonomous provinces[^s41][^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The printed Gazzetta Ufficiale is the only definitive text and prevails over the digital version[^s43] | IPZS publishes the Gazzetta Ufficiale in digital form[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | The Central State Archive is building the repository for digital archives produced by central state bodies[^s43] | *Not yet sourced* | The Digital Preservation Hub is described as a 'natively cloud' infrastructure; no provider is named[^s43] | *Not stated in sources* | *Not yet measured* |
-| Standard | Statistical microdata (tier 2) | *Not yet sourced* | ISTAT is the main producer of official statistics[^s44][^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | The Central State Archive is building the repository for digital archives produced by central state bodies[^s44] | *Not yet sourced* | The Digital Preservation Hub is described as a 'natively cloud' infrastructure; no provider is named[^s44] | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | *Not yet sourced* | ISTAT is the main producer of official statistics[^s45][^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 27 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 28 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -105,7 +105,7 @@ Of the 27 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 24 |
+| Not stated in sources | 25 |
 
 ## 5. Legal and institutional posture
 
@@ -130,7 +130,6 @@ Of the 27 verified holdings, how many sources state where the infrastructure is 
 
 Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Fingerprint biometric (tier 0)
 - Authentication audit log (tier 0)
 - Residence and migration status (tier 1)
 - Border and visa systems (tier 1)
@@ -149,7 +148,7 @@ Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -166,17 +165,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -206,8 +205,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -218,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -262,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -304,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -328,6 +327,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -339,7 +339,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Italy
 
-60 of 60 printed facts about Italy pass.
+61 of 61 printed facts about Italy pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -357,6 +357,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | param:IT:land_km2 | param:IT:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IT:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:IT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:facial_biometric:foreign_dependency | Facial biometric: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -427,37 +428,38 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s13]: Ministero dell'Interno - Anagrafe Nazionale — Conosci l'ANPR. Conosci l'ANPR. <https://www.anagrafenazionale.interno.it/anpr/> ([archived](https://web.archive.org/web/20260927003857/https://www.anagrafenazionale.interno.it/anpr/))
 [^s14]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto legislativo 7 marzo 2005, n. 82 (Codice…, 2005. Decreto legislativo 7 marzo 2005, n. 82 (Codice dell'amministrazione digitale), art. 62. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62> ([archived](https://web.archive.org/web/20260125120137/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62))
 [^s15]: Ministero dell'Interno — Missione – ANPR. Missione – ANPR. <https://www.anagrafenazionale.interno.it/anpr/missione/> ([archived](https://web.archive.org/web/20260906012128/https://www.anagrafenazionale.interno.it/anpr/missione/))
-[^s16]: Gazzetta Ufficiale della Repubblica Italiana - Istituto Poligrafico e Zecca dello Stato — Decreto del Ministero dell'Interno 23 dicembre 2015 -…, 2015-12-30. Decreto del Ministero dell'Interno 23 dicembre 2015 - Modalità tecniche di emissione della Carta d'identità elettronica (GU Serie Generale n. 302 del 30-12-2015). <https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf>
-[^s17]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 82/2005 (CAD), art. 64, 2022-06-30. D.Lgs. 82/2005 (CAD), art. 64. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64> ([archived](https://web.archive.org/web/20251111011946/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64))
-[^s18]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DL 78/2010, art. 19 (Aggiornamento del catasto), 2011-02-27. DL 78/2010, art. 19 (Aggiornamento del catasto). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19> ([archived](https://web.archive.org/web/20251116145932/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19))
-[^s19]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DPR 313/2002 (Testo unico casellario giudiziale), art. 2, 2024-05-01. DPR 313/2002 (Testo unico casellario giudiziale), art. 2. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2002-11-14;313~art2>
-[^s20]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — Legge 121/1981, art. 8 (Istituzione del Centro…, 2005-06-01. Legge 121/1981, art. 8 (Istituzione del Centro elaborazione dati). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8> ([archived](https://web.archive.org/web/20250709093424/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8))
-[^s21]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto-legge 31 gennaio 2005, n. 7, art. 7-vicies ter, 2005. Decreto-legge 31 gennaio 2005, n. 7, art. 7-vicies ter. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2005-01-31;7~art7viciester>
-[^s22]: Agenzia per l'Italia Digitale (AgID) — Servizi fiduciari qualificati / Firma elettronica…, 2024-04-23. Servizi fiduciari qualificati / Firma elettronica qualificata. <https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata> ([archived](https://web.archive.org/web/20260924003149/https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata))
-[^s23]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DPR 605/1973, art. 1, 1976-12-04. DPR 605/1973, art. 1. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1973-09-29;605~art1!vig=2026-09-30>
-[^s24]: Agenzia delle Dogane e dei Monopoli — Libro Blu 2024 - Relazione, 2025. Libro Blu 2024 - Relazione. <https://www.adm.gov.it/portale/documents/20182/261920520/Libro+blu+2024+-+Relazione.pdf/e46989ce-b39f-a404-3b4b-2af3196cba43?t=1784560697678>
-[^s25]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DPR 1388/1971 – Istituzione del casellario centrale dei…, 1998-01-01. DPR 1388/1971 – Istituzione del casellario centrale dei pensionati. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1971-12-31;1388~art1>
-[^s26]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto legislativo 7 marzo 2005, n. 82 (Codice…, 2005. Decreto legislativo 7 marzo 2005, n. 82 (Codice dell'amministrazione digitale), art. 62-ter. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter> ([archived](https://web.archive.org/web/20251012072920/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter))
-[^s27]: MEF - Ragioneria Generale dello Stato — Sistema Tessera Sanitaria - Home. Sistema Tessera Sanitaria - Home. <https://www.sistemats.it/> ([archived](https://web.archive.org/web/20160502181750/http://www.sistemats.it:80/))
-[^s28]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — Legge 580/1993, art. 8 (Registro delle imprese), 2016-12-10. Legge 580/1993, art. 8 (Registro delle imprese). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1993-12-29;580~art8>
-[^s29]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 231/2007, art. 21, 2026-07-23. D.Lgs. 231/2007, art. 21. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231~art21> ([archived](https://web.archive.org/web/20260106152255/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231~art21))
-[^s30]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 285/1992 (Codice della strada), art. 226, 2018-07-01. D.Lgs. 285/1992 (Codice della strada), art. 226. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226> ([archived](https://web.archive.org/web/20251011185708/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226))
-[^s31]: Agenzia per l'Italia Digitale (AgID) — SIOPE. SIOPE. <https://www.agid.gov.it/it/piattaforme/siope> ([archived](https://web.archive.org/web/20260923012741/https://www.agid.gov.it/it/piattaforme/siope))
-[^s32]: MEF – Ragioneria Generale dello Stato — SIOPE+. SIOPE+. <https://www.rgs.mef.gov.it/VERSIONE-I/e_government/amministrazioni_pubbliche/siope/siope_/> ([archived](https://web.archive.org/web/20260921013404/https://www.rgs.mef.gov.it/VERSIONE-I/e_government/amministrazioni_pubbliche/siope/siope_/))
-[^s33]: Ministero dell'Economia e delle Finanze — Chi siamo – NoiPA. Chi siamo – NoiPA. <https://noipa.mef.gov.it/cl/chi-siamo> ([archived](https://web.archive.org/web/20250413225956/https://noipa.mef.gov.it/cl/chi-siamo))
-[^s34]: Ministero dell'Interno - Dipartimento per gli Affari Interni e Territoriali — Le elezioni. Le elezioni. <https://dait.interno.gov.it/elezioni> ([archived](https://web.archive.org/web/20260929012749/https://dait.interno.gov.it/elezioni))
-[^s35]: Ministero dell'Interno – DAIT — Archivio Storico delle Elezioni. Archivio Storico delle Elezioni. <https://elezionistorico.interno.gov.it/> ([archived](https://web.archive.org/web/20260924110557/https://elezionistorico.interno.gov.it/))
-[^s36]: Banca d'Italia — Gestione dei sistemi di pagamento. Gestione dei sistemi di pagamento. <https://www.bancaditalia.it/compiti/sistema-pagamenti/index.html>
-[^s37]: Presidenza del Consiglio dei Ministri – Dipartimento della Protezione Civile — IT-alert – Cos'è. IT-alert – Cos'è. <https://www.it-alert.it/it/cose/> ([archived](https://web.archive.org/web/20260629070727/https://www.it-alert.it/it/cose/))
-[^s38]: Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile — Come funziona | IT-alert. Come funziona | IT-alert. <https://www.it-alert.it/it/come-funziona/>
-[^s39]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 82/2005 (CAD), art. 62-quater, 2021-07-31. D.Lgs. 82/2005 (CAD), art. 62-quater. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater> ([archived](https://web.archive.org/web/20250713135628/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater))
-[^s40]: Ministero della Salute / Dipartimento per la trasformazione digitale — Fascicolo Sanitario Elettronico, 2026. Fascicolo Sanitario Elettronico. <https://www.fascicolosanitario.gov.it/>
-[^s41]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto-legge 18 ottobre 2012, n. 179, art. 12, 2012. Decreto-legge 18 ottobre 2012, n. 179, art. 12. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12> ([archived](https://web.archive.org/web/20250819092310/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12))
-[^s42]: Istituto Poligrafico e Zecca dello Stato — Gazzetta Ufficiale - Home. Gazzetta Ufficiale - Home. <https://www.gazzettaufficiale.it/> ([archived](https://web.archive.org/web/20260913204754/https://www.gazzettaufficiale.it/))
-[^s43]: Archivio Centrale dello Stato — Polo di conservazione digitale. Polo di conservazione digitale. <https://acs.cultura.gov.it/piano-nazionale-di-ripresa-e-resilienza-del-ministero-della-cultura/polo-di-conservazione-digitale/>
-[^s44]: Istituto nazionale di statistica (ISTAT) — L'Istituto: organizzazione e attività. L'Istituto: organizzazione e attività. <https://www.istat.it/listituto/> ([archived](https://web.archive.org/web/20260927005502/https://www.istat.it/listituto/))
-[^s45]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT), 1989-10-07. D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15> ([archived](https://web.archive.org/web/20250906141609/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15))
+[^s16]: Gazzetta Ufficiale della Repubblica Italiana, Serie generale n. 302 (Ministero dell'interno) — Decreto 23 dicembre 2015 - Modalita' tecniche di…, 2015-12-30. Decreto 23 dicembre 2015 - Modalita' tecniche di emissione della Carta d'identita' elettronica (Allegato, 4.4.1.2 Dati biometrici secondari: le impronte digitali). <https://www.gazzettaufficiale.it/do/atto/serie_generale/caricaPdf?cdimg=15A0980900100010110001&dgu=2015-12-30&art.dataPubblicazioneGazzetta=2015-12-30&art.codiceRedazionale=15A09809&art.num=1&art.tiposerie=SG> ([archived](https://web.archive.org/web/20260917070715/https://www.gazzettaufficiale.it/do/atto/serie_generale/caricaPdf?cdimg=15A0980900100010110001&dgu=2015-12-30&art.dataPubblicazioneGazzetta=2015-12-30&art.codiceRedazionale=15A09809&art.num=1&art.tiposerie=SG))
+[^s17]: Gazzetta Ufficiale della Repubblica Italiana - Istituto Poligrafico e Zecca dello Stato — Decreto del Ministero dell'Interno 23 dicembre 2015 -…, 2015-12-30. Decreto del Ministero dell'Interno 23 dicembre 2015 - Modalità tecniche di emissione della Carta d'identità elettronica (GU Serie Generale n. 302 del 30-12-2015). <https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf>
+[^s18]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 82/2005 (CAD), art. 64, 2022-06-30. D.Lgs. 82/2005 (CAD), art. 64. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64> ([archived](https://web.archive.org/web/20251111011946/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64))
+[^s19]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DL 78/2010, art. 19 (Aggiornamento del catasto), 2011-02-27. DL 78/2010, art. 19 (Aggiornamento del catasto). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19> ([archived](https://web.archive.org/web/20251116145932/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19))
+[^s20]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DPR 313/2002 (Testo unico casellario giudiziale), art. 2, 2024-05-01. DPR 313/2002 (Testo unico casellario giudiziale), art. 2. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2002-11-14;313~art2>
+[^s21]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — Legge 121/1981, art. 8 (Istituzione del Centro…, 2005-06-01. Legge 121/1981, art. 8 (Istituzione del Centro elaborazione dati). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8> ([archived](https://web.archive.org/web/20250709093424/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8))
+[^s22]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto-legge 31 gennaio 2005, n. 7, art. 7-vicies ter, 2005. Decreto-legge 31 gennaio 2005, n. 7, art. 7-vicies ter. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2005-01-31;7~art7viciester>
+[^s23]: Agenzia per l'Italia Digitale (AgID) — Servizi fiduciari qualificati / Firma elettronica…, 2024-04-23. Servizi fiduciari qualificati / Firma elettronica qualificata. <https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata> ([archived](https://web.archive.org/web/20260924003149/https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata))
+[^s24]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DPR 605/1973, art. 1, 1976-12-04. DPR 605/1973, art. 1. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1973-09-29;605~art1!vig=2026-09-30>
+[^s25]: Agenzia delle Dogane e dei Monopoli — Libro Blu 2024 - Relazione, 2025. Libro Blu 2024 - Relazione. <https://www.adm.gov.it/portale/documents/20182/261920520/Libro+blu+2024+-+Relazione.pdf/e46989ce-b39f-a404-3b4b-2af3196cba43?t=1784560697678>
+[^s26]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — DPR 1388/1971 – Istituzione del casellario centrale dei…, 1998-01-01. DPR 1388/1971 – Istituzione del casellario centrale dei pensionati. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1971-12-31;1388~art1>
+[^s27]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto legislativo 7 marzo 2005, n. 82 (Codice…, 2005. Decreto legislativo 7 marzo 2005, n. 82 (Codice dell'amministrazione digitale), art. 62-ter. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter> ([archived](https://web.archive.org/web/20251012072920/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter))
+[^s28]: MEF - Ragioneria Generale dello Stato — Sistema Tessera Sanitaria - Home. Sistema Tessera Sanitaria - Home. <https://www.sistemats.it/> ([archived](https://web.archive.org/web/20160502181750/http://www.sistemats.it:80/))
+[^s29]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — Legge 580/1993, art. 8 (Registro delle imprese), 2016-12-10. Legge 580/1993, art. 8 (Registro delle imprese). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1993-12-29;580~art8>
+[^s30]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 231/2007, art. 21, 2026-07-23. D.Lgs. 231/2007, art. 21. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231~art21> ([archived](https://web.archive.org/web/20260106152255/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231~art21))
+[^s31]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 285/1992 (Codice della strada), art. 226, 2018-07-01. D.Lgs. 285/1992 (Codice della strada), art. 226. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226> ([archived](https://web.archive.org/web/20251011185708/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226))
+[^s32]: Agenzia per l'Italia Digitale (AgID) — SIOPE. SIOPE. <https://www.agid.gov.it/it/piattaforme/siope> ([archived](https://web.archive.org/web/20260923012741/https://www.agid.gov.it/it/piattaforme/siope))
+[^s33]: MEF – Ragioneria Generale dello Stato — SIOPE+. SIOPE+. <https://www.rgs.mef.gov.it/VERSIONE-I/e_government/amministrazioni_pubbliche/siope/siope_/> ([archived](https://web.archive.org/web/20260921013404/https://www.rgs.mef.gov.it/VERSIONE-I/e_government/amministrazioni_pubbliche/siope/siope_/))
+[^s34]: Ministero dell'Economia e delle Finanze — Chi siamo – NoiPA. Chi siamo – NoiPA. <https://noipa.mef.gov.it/cl/chi-siamo> ([archived](https://web.archive.org/web/20250413225956/https://noipa.mef.gov.it/cl/chi-siamo))
+[^s35]: Ministero dell'Interno - Dipartimento per gli Affari Interni e Territoriali — Le elezioni. Le elezioni. <https://dait.interno.gov.it/elezioni> ([archived](https://web.archive.org/web/20260929012749/https://dait.interno.gov.it/elezioni))
+[^s36]: Ministero dell'Interno – DAIT — Archivio Storico delle Elezioni. Archivio Storico delle Elezioni. <https://elezionistorico.interno.gov.it/> ([archived](https://web.archive.org/web/20260924110557/https://elezionistorico.interno.gov.it/))
+[^s37]: Banca d'Italia — Gestione dei sistemi di pagamento. Gestione dei sistemi di pagamento. <https://www.bancaditalia.it/compiti/sistema-pagamenti/index.html>
+[^s38]: Presidenza del Consiglio dei Ministri – Dipartimento della Protezione Civile — IT-alert – Cos'è. IT-alert – Cos'è. <https://www.it-alert.it/it/cose/> ([archived](https://web.archive.org/web/20260629070727/https://www.it-alert.it/it/cose/))
+[^s39]: Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile — Come funziona | IT-alert. Come funziona | IT-alert. <https://www.it-alert.it/it/come-funziona/>
+[^s40]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 82/2005 (CAD), art. 62-quater, 2021-07-31. D.Lgs. 82/2005 (CAD), art. 62-quater. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater> ([archived](https://web.archive.org/web/20250713135628/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater))
+[^s41]: Ministero della Salute / Dipartimento per la trasformazione digitale — Fascicolo Sanitario Elettronico, 2026. Fascicolo Sanitario Elettronico. <https://www.fascicolosanitario.gov.it/>
+[^s42]: Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto-legge 18 ottobre 2012, n. 179, art. 12, 2012. Decreto-legge 18 ottobre 2012, n. 179, art. 12. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12> ([archived](https://web.archive.org/web/20250819092310/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12))
+[^s43]: Istituto Poligrafico e Zecca dello Stato — Gazzetta Ufficiale - Home. Gazzetta Ufficiale - Home. <https://www.gazzettaufficiale.it/> ([archived](https://web.archive.org/web/20260913204754/https://www.gazzettaufficiale.it/))
+[^s44]: Archivio Centrale dello Stato — Polo di conservazione digitale. Polo di conservazione digitale. <https://acs.cultura.gov.it/piano-nazionale-di-ripresa-e-resilienza-del-ministero-della-cultura/polo-di-conservazione-digitale/>
+[^s45]: Istituto nazionale di statistica (ISTAT) — L'Istituto: organizzazione e attività. L'Istituto: organizzazione e attività. <https://www.istat.it/listituto/> ([archived](https://web.archive.org/web/20260927005502/https://www.istat.it/listituto/))
+[^s46]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT), 1989-10-07. D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15> ([archived](https://web.archive.org/web/20250906141609/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15))
 
-**Evidence grades:** 1 Strong, 59 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 60 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

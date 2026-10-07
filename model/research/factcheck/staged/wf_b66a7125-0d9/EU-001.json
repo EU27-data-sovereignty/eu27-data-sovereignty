@@ -1,0 +1,310 @@
+{
+ "run": "wf_b66a7125-0d9",
+ "prepared": "2026-10-06-6400d8b4",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FI:emergency_communications:register",
+   "fact_sha256": "99f77ab3d802c892c9162119f19a9196e2f2fbdbd796491526edf50202e1a4f0",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live 112.fi returns 403 to automated clients; the Wayback capture of 2026-09-22 (title 'Tietojärjestelmät | Hätäkeskuslaitos') carries the quote verbatim under the heading 'Hätäkeskustietojärjestelmä ERICA', naming ERICA as the nationwide emergency response centre information system. WebFetch of the live page also returned the sentence's opening verbatim.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260922135207/https://112.fi/ekasikirja-tietojarjestelmat"
+  },
+  {
+   "claim": "record:LU:emergency_communications:register",
+   "fact_sha256": "b7fdb408007fcfb78b72e55973dd776bf42877778e6f29cd9609466c159aa9de",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim 'Le central des secours d'urgences-112 (CSU-112) du CGDIS ... est l'unique point d'entrée pour les appels de secours', which gives the name, abbreviation and the CGDIS attribution as printed.",
+   "quote_found": true,
+   "checked_url": "https://112.public.lu/fr/organisation/csu.html"
+  },
+  {
+   "claim": "record:LU:land_property:register",
+   "fact_sha256": "dae251c080432e4a0c894d6c3ed54a10b6ea5a89098c85b8ce08b2901b3cc00f",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim and describes the integrated management system for Publicité Foncière (PF) linking ACT, AED and the notariat, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://act.public.lu/fr/espace-pro/pubfonc.html"
+  },
+  {
+   "claim": "record:LU:geospatial:register",
+   "fact_sha256": "2110fb17a725ead505844c6e2247407482f7597cec361a8f9d82e713835acd04",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the centralised address database called 'Registre national des localités et des rues' was set up by the ACT, matching the printed name and attribution.",
+   "quote_found": true,
+   "checked_url": "https://act.public.lu/fr/parcelles-residences/registre-adresses.html"
+  },
+  {
+   "claim": "record:IE:benefits_pensions:register",
+   "fact_sha256": "b68c1b578e9477481f43e3b02abc70f0e2a1c3eee394fb33618f618d6c2b4138",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF text contains the quote verbatim; the preceding paragraph 1.1.1 states that 'the Department of Social Protection (DSP) has been engaged in a continuous Service Delivery Modernisation (SDM) programme', so 'its main strategic system (Business Object Model implementation – BOMi)' refers to the Department as printed.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/125816/5df543d8-ca27-44fd-ab3d-251940256c83.pdf"
+  },
+  {
+   "claim": "record:IE:government_payroll:register",
+   "fact_sha256": "42a2b0d34c35fee348526ba49fde068cda6aa10712ed4f2286e17d9d8781bf57",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The document is the 'Annual Report 2023 National Shared Services Office (NSSO)' and contains the quote verbatim; 'our core Human Resources Management System (HRMS) platform, PeopleSoft' is therefore the NSSO's, as the printed parenthesis says.",
+   "quote_found": true,
+   "checked_url": "https://assets.nsso.gov.ie/documents/Annual_report_2023_Final1.pdf"
+  },
+  {
+   "claim": "record:LU:civil_registry:register",
+   "fact_sha256": "da6b1997cbe9f76315870d3106e132c9098c2b9a2114ae81c333a1533e40005a",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim, and the page title and first question expand the abbreviation as 'Registre National des Personnes Physiques (RNPP)', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://cnpd.public.lu/fr/dossiers-thematiques/citoyennete/rnpp.html"
+  },
+  {
+   "claim": "record:RO:breeder_documents:register",
+   "fact_sha256": "ee9f3a754c0252f9f419b0efdbe07200ae75f46376735717854e7c726a5cd605",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote verbatim, naming the 'Sistemului Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)' rolled out nationally, which is the system as printed.",
+   "quote_found": true,
+   "checked_url": "https://dgep.mai.gov.ro/1-an-de-la-operationalizarea-siieasc-la-nivel-national/"
+  },
+  {
+   "claim": "record:RO:civil_registry:register",
+   "fact_sha256": "32ef084790739e9f52b90b35f812a5803cae1947e986f7ee69f28a3daa9efc44",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote verbatim: the Registrul Naţional de Evidenţă a Persoanelor was established as the main component of the Sistemul Naţional Informatic de Evidenţă a Populaţiei, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://dgep.mai.gov.ro/istoric-institutie/"
+  },
+  {
+   "claim": "record:DK:digital_identity_credentials:register",
+   "fact_sha256": "7ae03ec43563c58d62d99de36dd367f199b0567071cd7a73867476384c10adab",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim 'MitID er Danmarks digitale ID', which is the printed name and gloss.",
+   "quote_found": true,
+   "checked_url": "https://digst.dk/it-loesninger/mitid/om-mitid/"
+  },
+  {
+   "claim": "record:DK:digital_identity_credentials:count",
+   "fact_sha256": "01dab7a8da8a3013e9625c68b6b48890819c7a7f342c2c8c381a6249241ba68c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The statistics page states verbatim '5,3 mio. registrerede MitID-brugere i alt', the same figure, unit and scope as printed.",
+   "quote_found": true,
+   "checked_url": "https://digst.dk/tal-og-statistik/"
+  },
+  {
+   "claim": "record:FI:digital_identity_credentials:register",
+   "fact_sha256": "7c2d7bdd3a79efc45296d68367fc0267d0d1fd59511820f8a273eac60e763675",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live dvv.fi returns 403 to automated clients; the cited archived copy contains the quote verbatim, requiring state and municipal authorities to provide identification for statutory services with the 'Suomi.fi-tunnistus' service, which is the printed name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260618051613/https://dvv.fi/tunnistus"
+  },
+  {
+   "claim": "record:FI:digital_identity_credentials:operator",
+   "fact_sha256": "2df3707dfa43946e4140c32a02d6bdf15cad0e01077d6af5b4787af9e7d1e6c1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live dvv.fi returns 403; the cited archived privacy notice for the certificate system contains the quote verbatim, stating that the Digi- ja väestötietovirasto's task is to provide nationwide certified electronic transaction services, which names the agency as the provider of these identity credentials. Note the page speaks of certificate services generally and does not mention Suomi.fi-tunnistus ",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251229202228/https://dvv.fi/varmennetietojarjestelman-tietosuoja"
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:register",
+   "fact_sha256": "20d9d3faed99c2e67955520a6c5f16bc1d1fc29bbfdf07482691e2e132b1440d",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote verbatim, defining vehicle registration as entry 'v evidenco registriranih vozil', which is the register name as printed.",
+   "quote_found": true,
+   "checked_url": "https://e-uprava.gov.si/podrocja/promet/vozniki-in-vozila/registracija-vozila.html"
+  },
+  {
+   "claim": "record:LU:electoral_roll:register",
+   "fact_sha256": "2ea87ae883c46799fc7d54f2ce184a9b057c06bd140f1fab524c04bc394eb1b4",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote verbatim, referring to 'inscriptions sur les listes électorales'; the printed value is only that generic name, which the source uses.",
+   "quote_found": true,
+   "checked_url": "https://elections.public.lu/fr/actualites/2024/17-inscriptions-europennes.html"
+  },
+  {
+   "claim": "record:DK:business_registry:register",
+   "fact_sha256": "48685f7a4cc6c6109966944d0522d46683f847abc44abefd34ffb666ca61bf8b",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that 'det Centrale Virksomhedsregister (CVR)' has been the authoritative register for basic data on all registered businesses since 1999, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://erhvervsstyrelsen.dk/det-centrale-virksomhedsregister-cvr"
+  },
+  {
+   "claim": "record:EL:business_registry:operator",
+   "fact_sha256": "4edba1da666c9edf6f08130bff42c88b15de528baa75916f6e4a63bd9367898f",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 20 on the page contains the quote verbatim and continues that this KEEE department 'είναι αρμόδιο για: α) την ορθή και αδιάλειπτη λειτουργία των πληροφοριακών συστημάτων Γ.Ε.ΜΗ. και Υ.Μ.Σ.', i.e. it is responsible for the correct and uninterrupted operation of the GEMI information systems, which supports it as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://gge.mindev.gov.gr/tomeas-emporiou/thesmiko-plasio-gemh-genikes-plhrofories/"
+  },
+  {
+   "claim": "record:EL:business_registry:register",
+   "fact_sha256": "5a243a828c66df459cdf0a7dcadd5475f4e32af8f5d5e0e647ef107f5d0e0b3b",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote verbatim: 'Το Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) είναι το εθνικό μητρώο εμπορικής δημοσιότητας', the register name as printed.",
+   "quote_found": true,
+   "checked_url": "https://gge.mindev.gov.gr/tomeas-emporiou/thesmiko-plasio-gemh-genikes-plhrofories/"
+  },
+  {
+   "claim": "record:HR:judicial_criminal:register",
+   "fact_sha256": "68d601fcec88b1a75db9286e4fdd2e40a109402fcb1ce42405ea2e364da4b2f5",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote verbatim, referring to complete data 'iz Kaznene evidencije', the register name as printed.",
+   "quote_found": true,
+   "checked_url": "https://gov.hr/hr/potvrda-iz-kaznene-evidencije/2485?lang=hr"
+  },
+  {
+   "claim": "record:LU:judicial_criminal:register",
+   "fact_sha256": "affe5cc3a6c6d759144a5450f85c4fcbff89a09b0b1223d7adcd919c1ca27bba",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page's summary contains the quote verbatim, stating an extract is a copy of the 'casier judiciaire national', the name as printed.",
+   "quote_found": true,
+   "checked_url": "https://guichet.public.lu/fr/citoyens/citoyennete/certificats-copies-actes-casier-judiciaire/extrait-casier-judiciaire/casier-judiciaire-pers-physique.html"
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:register",
+   "fact_sha256": "3bf3ad49c4ed70ecaca1accd0eee7339465ce5924cacea63a9cb2062a0f25bf0",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim and the sentence before it reads 'Le Luxembourg Business Registers (LBR) est un GIE ...', so 'Il est en charge de la gestion ... du Registre des bénéficiaires effectifs (RBE)' names LBR as the manager, as printed.",
+   "quote_found": true,
+   "checked_url": "https://guichet.public.lu/fr/entreprises/gestion-juridique-comptabilite/registre-commerce/registre-beneficiaires-effectifs/declaration-beneficiaires-rbe.html"
+  },
+  {
+   "claim": "record:DK:land_property:register",
+   "fact_sha256": "37a79c8fb78dc3ff871ce7729adcfb266f8156f7bc810a4421243646b42616c3",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim 'The Land Register (in Danish: Tingbogen) is a public register which records certain rights to real property', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://lifeindenmark.borger.dk/actionpage?selfserviceid=55e49bf5-c72a-4d3b-a209-489129a8fa70"
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:register",
+   "fact_sha256": "7b48635512db55f23bd0a99076ed3d4c3228f61e317e3e27b2027d1a1f78d875",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The English translation of the law contains Section 3 verbatim: the Biometric Data Processing System is a State Information System whose manager and holder is the Information Centre of the Ministry of the Interior, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/en/en/id/193111"
+  },
+  {
+   "claim": "record:LV:border_control:operator",
+   "fact_sha256": "f144978c81679569c90c881147f6783374f0f355a367e92aca7ac81e55c4a4cf",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Schengen Information System law contains the quote verbatim: the Iekšlietu ministrijas Informācijas centrs ensures the System's technical operation in Latvia and acts as controller of its national part, which names the Centre as operator of a border system. Note the source speaks of the SIS national part, not of the national visa information system named in the register row.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/159481-sengenas-informacijas-sistemas-darbibas-likums"
+  },
+  {
+   "claim": "record:LV:facial_biometric:operator",
+   "fact_sha256": "582e50a7f5e0589ff52656691a85a16350f03878fc8d0f38a820e2fece7cc1a1",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 3 of the law is on the page verbatim and names the Iekšlietu ministrijas Informācijas centrs as controller and holder of the Biometric Data Processing System, which supports it as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/193111"
+  },
+  {
+   "claim": "record:LV:facial_biometric:register",
+   "fact_sha256": "66ede353636c922ebd656f6bb454e01176ee335a82917589794f93e21e4fc852",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 3 is on the page verbatim and names the 'Biometrijas datu apstrādes sistēma' as a state information system, the register name as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/193111"
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:operator",
+   "fact_sha256": "0ea1a5e9e22b6acb124debc1e205098e661b01155c40679995998afd1020205c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same Section 3 is on the page verbatim and names the Iekšlietu ministrijas Informācijas centrs as controller and holder of the system, supporting the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/193111"
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "fact_sha256": "3ae20aa72f2354cc6a9280324d582bbe0cf8ede934d657965ce9b8efb7b5be0e",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The visa regulations contain the quote verbatim, naming the 'nacionālajā vīzu informācijas sistēmā (turpmāk – nacionālā vīzu sistēma)', which is the printed name; the second citation (SIS law) was also found verbatim on its page.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/235770-vizu-noteikumi"
+  },
+  {
+   "claim": "record:LV:crisis_management:register",
+   "fact_sha256": "3bb8526638135bdc266100df3648b200c8246d0726c37ea328307aeb43015169",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The law's definitions contain item 8 verbatim, defining 'valsts agrīnās brīdināšanas sistēma' as a technological system providing early warning, which is the system name as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/282333"
+  },
+  {
+   "claim": "record:LV:health_insurance:register",
+   "fact_sha256": "3355159b5c4daaec41454e951d1de8f00460dc87d56dbe671ce1dc6ebd6ae356",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The law contains the quote verbatim: a person gains rights under state compulsory health insurance when included in the 'dienesta uzturētajā veselības aprūpes pakalpojumu saņēmēju datubāzē' (the law earlier defines 'dienests' as the Nacionālais veselības dienests), matching the printed name and 'maintained by the Service'.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/296188-veselibas-aprupes-finansesanas-likums"
+  }
+ ]
+}

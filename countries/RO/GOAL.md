@@ -50,35 +50,35 @@ Romania described on its own measured characteristics. Each figure is the publis
 
 ## 3. Critical data holdings, by priority
 
-The holdings Romania cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 15 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Romania cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 17 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued[^s15] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Civil registry core (tier 0) | Registrul Naţional de Evidenţă a Persoanelor (National Register of Persons Records), main component of the Sistemul Naţional Informatic de Evidenţă a Populaţiei[^s15] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă – SIIEASC (Integrated IT System for Issuing Civil Status Documents)[^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Digital identity credentials (tier 0) | ROeID is Romania's Single Sign-On solution. It generates and manages digital identities for all Romanian citizens.[^s6] | ROeID was implemented by the Authority for the Digitalization of Romania (ADR)[^s6] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment.[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures[^s15] | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment.[^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures[^s16] | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities.[^s18] | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts.[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities.[^s20] | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts.[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Tax (tier 1) | Registrul contribuabililor/plătitorilor (Register of taxpayers/payers)[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Registrul contribuabililor/plătitorilor (Register of taxpayers/payers)[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | SIUI is the health insurance IT platform, run by CNAS[^s20][^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | SIUI is the health insurance IT platform, run by CNAS[^s22][^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)[^s22] | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)[^s24] | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -86,19 +86,19 @@ The holdings Romania cannot let depend on infrastructure a foreign state can com
 | High | Central bank systems (tier 1) | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres[^s24] | Transelectrica is responsible for keeping the national power system running safely at all times[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | WATMAN is the IT system for integrated water management, aimed at flood prevention[^s25] | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres[^s26] | Transelectrica is responsible for keeping the national power system running safely at all times[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | WATMAN is the IT system for integrated water management, aimed at flood prevention[^s27] | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | The ANCPI Geoportal is one of the online platforms ANCPI manages[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | The ANCPI Geoportal is one of the online platforms ANCPI manages[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 15 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 17 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +106,7 @@ Of the 15 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 15 |
+| Not stated in sources | 17 |
 
 ## 5. Legal and institutional posture
 
@@ -131,9 +131,7 @@ Of the 15 verified holdings, how many sources state where the infrastructure is 
 
 Tier 0 and 1 holdings for Romania without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
 - Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
 - Document issuance history (tier 0)
 - Authentication audit log (tier 0)
 - Residence and migration status (tier 1)
@@ -160,7 +158,7 @@ Tier 0 and 1 holdings for Romania without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -177,17 +175,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -217,8 +215,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -229,8 +227,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -273,7 +271,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -315,7 +313,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -339,6 +337,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -350,7 +349,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Romania
 
-28 of 28 printed facts about Romania pass.
+30 of 30 printed facts about Romania pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -364,7 +363,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | param:RO:elec_price_eur_mwh | param:RO:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:RO:renewables_pct | param:RO:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:RO:land_km2 | param:RO:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:RO:civil_registry:register | Civil registry core: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:RO:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:RO:breeder_documents:register | Breeder document scans: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:RO:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:RO:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:RO:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -405,20 +406,22 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
 [^s13]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s14]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s15]: Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor — Despre | Cartea electronică de identitate. Despre | Cartea electronică de identitate. <https://carteadeidentitate.gov.ro/despre/> ([archived](https://web.archive.org/web/20260820162144/https://carteadeidentitate.gov.ro/despre/))
-[^s16]: Autoritatea Electorală Permanentă — Notă de informare - Registrul electoral. Notă de informare - Registrul electoral. <https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf>
-[^s17]: Ministerul Afacerilor Interne — Direcția Generală pentru Comunicații și Tehnologia…. Direcția Generală pentru Comunicații și Tehnologia Informației. <https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/> ([archived](https://web.archive.org/web/20260310104221/https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/))
-[^s18]: Inspectoratul General al Poliției de Frontieră — Sistemul de Informații Schengen - Poliția de Frontieră…. Sistemul de Informații Schengen - Poliția de Frontieră Română. <https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html> ([archived](https://web.archive.org/web/20260826035149/https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html))
-[^s19]: Agenția Națională de Administrare Fiscală (ANAF) — Raport de performanță și transparență 2024, 2025. Raport de performanță și transparență 2024. <https://static.anaf.ro/static/10/Anaf/Informatii_R/Raportperformanta2024.pdf> ([archived](https://web.archive.org/web/20260523213236/https://static.anaf.ro/static/10/Anaf/Informatii_R/Raportperformanta2024.pdf))
-[^s20]: Casa Naţională de Asigurări de Sănătate (CNAS), Portal CNAS-PIAS — Specificaţii de interfaţare cu PIAS - pentru…, 2026-04-07. Specificaţii de interfaţare cu PIAS - pentru producătorii de aplicaţii software. <https://portal.cnas.ro/cnas/pias/specificatii>
-[^s21]: Casa Națională de Asigurări de Sănătate — SIUI Platforma Informatică a Asigurărilor de Sănătate. SIUI Platforma Informatică a Asigurărilor de Sănătate. <https://siui.casan.ro/> ([archived](https://web.archive.org/web/20260727073727/https://siui.casan.ro/))
-[^s22]: Ministerul Afacerilor Interne — Comunicate de presa - Schengen Romania, 2018-07-05. Comunicate de presa - Schengen Romania. <https://schengen.mai.gov.ro/index09.htm> ([archived](https://web.archive.org/web/20250523114019/https://schengen.mai.gov.ro/index09.htm))
-[^s23]: Ministerul Afacerilor Interne — Structuri în subordinea / în cadrul MAI. Structuri în subordinea / în cadrul MAI. <https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/> ([archived](https://web.archive.org/web/20260709212319/https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/))
-[^s24]: C.N.T.E.E. Transelectrica S.A. — Operator de sistem - Transelectrica. Operator de sistem - Transelectrica. <https://www.transelectrica.ro/ro/web/tel/operator-de-sistem> ([archived](https://web.archive.org/web/20250803190750/https://www.transelectrica.ro/ro/web/tel/operator-de-sistem))
-[^s25]: Administrația Națională Apele Române — WATMAN - Administrația Națională Apele Române. WATMAN - Administrația Națională Apele Române. <https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/> ([archived](https://web.archive.org/web/20260519042221/https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/))
-[^s26]: Ministerul Educației și Cercetării — Sistem integrat de management al informațiilor în educație, 2026-07-30. Sistem integrat de management al informațiilor în educație. <https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale> ([archived](https://web.archive.org/web/20260928194106/https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale))
-[^s27]: Agenția Națională de Cadastru și Publicitate Imobiliară — ANCPI - Agentia Nationala de Cadastru si Publicitate…, 2026-08-20. ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara. <https://www.ancpi.ro/>
+[^s15]: Direcția Generală pentru Evidența Persoanelor (MAI) — Istoric instituție. Istoric instituție. <https://dgep.mai.gov.ro/istoric-institutie/> ([archived](https://web.archive.org/web/20260710101728/https://dgep.mai.gov.ro/istoric-institutie/))
+[^s16]: Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor — Despre | Cartea electronică de identitate. Despre | Cartea electronică de identitate. <https://carteadeidentitate.gov.ro/despre/> ([archived](https://web.archive.org/web/20260820162144/https://carteadeidentitate.gov.ro/despre/))
+[^s17]: Direcția Generală pentru Evidența Persoanelor (MAI) — 1 an de la operaționalizarea SIIEASC la nivel național, 2026-04-03. 1 an de la operaționalizarea SIIEASC la nivel național. <https://dgep.mai.gov.ro/1-an-de-la-operationalizarea-siieasc-la-nivel-national/>
+[^s18]: Autoritatea Electorală Permanentă — Notă de informare - Registrul electoral. Notă de informare - Registrul electoral. <https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf>
+[^s19]: Ministerul Afacerilor Interne — Direcția Generală pentru Comunicații și Tehnologia…. Direcția Generală pentru Comunicații și Tehnologia Informației. <https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/> ([archived](https://web.archive.org/web/20260310104221/https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/))
+[^s20]: Inspectoratul General al Poliției de Frontieră — Sistemul de Informații Schengen - Poliția de Frontieră…. Sistemul de Informații Schengen - Poliția de Frontieră Română. <https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html> ([archived](https://web.archive.org/web/20260826035149/https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html))
+[^s21]: Agenția Națională de Administrare Fiscală (ANAF) — Raport de performanță și transparență 2024, 2025. Raport de performanță și transparență 2024. <https://static.anaf.ro/static/10/Anaf/Informatii_R/Raportperformanta2024.pdf> ([archived](https://web.archive.org/web/20260523213236/https://static.anaf.ro/static/10/Anaf/Informatii_R/Raportperformanta2024.pdf))
+[^s22]: Casa Naţională de Asigurări de Sănătate (CNAS), Portal CNAS-PIAS — Specificaţii de interfaţare cu PIAS - pentru…, 2026-04-07. Specificaţii de interfaţare cu PIAS - pentru producătorii de aplicaţii software. <https://portal.cnas.ro/cnas/pias/specificatii>
+[^s23]: Casa Națională de Asigurări de Sănătate — SIUI Platforma Informatică a Asigurărilor de Sănătate. SIUI Platforma Informatică a Asigurărilor de Sănătate. <https://siui.casan.ro/> ([archived](https://web.archive.org/web/20260727073727/https://siui.casan.ro/))
+[^s24]: Ministerul Afacerilor Interne — Comunicate de presa - Schengen Romania, 2018-07-05. Comunicate de presa - Schengen Romania. <https://schengen.mai.gov.ro/index09.htm> ([archived](https://web.archive.org/web/20250523114019/https://schengen.mai.gov.ro/index09.htm))
+[^s25]: Ministerul Afacerilor Interne — Structuri în subordinea / în cadrul MAI. Structuri în subordinea / în cadrul MAI. <https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/> ([archived](https://web.archive.org/web/20260709212319/https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/))
+[^s26]: C.N.T.E.E. Transelectrica S.A. — Operator de sistem - Transelectrica. Operator de sistem - Transelectrica. <https://www.transelectrica.ro/ro/web/tel/operator-de-sistem> ([archived](https://web.archive.org/web/20250803190750/https://www.transelectrica.ro/ro/web/tel/operator-de-sistem))
+[^s27]: Administrația Națională Apele Române — WATMAN - Administrația Națională Apele Române. WATMAN - Administrația Națională Apele Române. <https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/> ([archived](https://web.archive.org/web/20260519042221/https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/))
+[^s28]: Ministerul Educației și Cercetării — Sistem integrat de management al informațiilor în educație, 2026-07-30. Sistem integrat de management al informațiilor în educație. <https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale> ([archived](https://web.archive.org/web/20260928194106/https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale))
+[^s29]: Agenția Națională de Cadastru și Publicitate Imobiliară — ANCPI - Agentia Nationala de Cadastru si Publicitate…, 2026-08-20. ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara. <https://www.ancpi.ro/>
 
-**Evidence grades:** 1 Strong, 27 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 29 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -1,0 +1,339 @@
+{
+ "iso": "LT",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:LT:authentication_audit_log:register",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/99d5f6b2f94811ebb4af84e751d2e0c9/",
+   "quote": "Asmens duomenų tvarkymo tikslas – patvirtinti VIISP naudotojų, elektroninių paslaugų gavėjų tapatybę ir užtikrinti VIISP paslaugų teikimą, fiksuoti VIISP naudotojų duomenis, susijusius su naudojimosi VIISP elektroninėmis paslaugomis.",
+   "quote_english": "The purpose of personal data processing is to confirm the identity of VIISP users and e-service recipients, ensure the provision of VIISP services, and record VIISP users' data related to their use of VIISP e-services.",
+   "value": "VIISP (Valstybės informacinių išteklių sąveikumo platforma; State Information Resources Interoperability Platform)",
+   "published": "2021-08-09",
+   "title": "Dėl Valstybės informacinių išteklių sąveikumo platformos modernizavimo, VIISP nuostatų ir VIISP duomenų saugos nuostatų patvirtinimo (Nr. 4-886), as adopted",
+   "publisher": "Lietuvos Respublikos ekonomikos ir inovacijų ministerija (e-seimas.lrs.lt, Register of Legal Acts)",
+   "doc_type": "legislation",
+   "note": "Text of the order as adopted in 2021 on the official law portal, not the consolidated edition used earlier; the same regulation lists 'elektroninių paslaugų gavėjo tapatybės nustatymo data ir laikas' (date and time of identification of the e-service recipient) among the data VIISP stores.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "VIISP (Valstybės informacinių išteklių sąveikumo platforma)",
+    "reason": "The regulation says VIISP confirms the identity of e-service users and records their data on use of VIISP e-services, so VIISP is the system that holds these records."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:authentication_audit_log:operator",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/99d5f6b2f94811ebb4af84e751d2e0c9/",
+   "quote": "9 . VIISP valdytoja – Ekonomikos ir inovacijų ministerija. 10 . VIISP tvarkytojas – Informacinės visuomenės plėtros komitetas (toliau – Komitetas).",
+   "quote_english": "9. VIISP controller – Ministry of the Economy and Innovation. 10. VIISP processor (operator) – Information Society Development Committee (the Committee).",
+   "value": "Informacinės visuomenės plėtros komitetas (Information Society Development Committee), VIISP operator; controller Ekonomikos ir inovacijų ministerija (Ministry of the Economy and Innovation)",
+   "published": "2021-08-09",
+   "title": "Valstybės informacinių išteklių sąveikumo platformos nuostatai (Nr. 4-886), as adopted",
+   "publisher": "Lietuvos Respublikos ekonomikos ir inovacijų ministerija (e-seimas.lrs.lt)",
+   "doc_type": "legislation",
+   "note": "Text as adopted in 2021; check against the current consolidated edition, because the operator may have been reorganised since.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "VIISP (Valstybės informacinių išteklių sąveikumo platforma)",
+    "reason": "The quote names VIISP and its controller (Ministry of Economy and Innovation) and processor (Information Society Development Committee); the authentication role comes from the surrounding page, not from this quote, so it supports the name only weakly."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:civil_registry:register",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/TAIS.2507/",
+   "quote": "2 straipsnis. Lietuvos Respublikos gyventojų registras Gyventojų registras yra personalinė visų Respublikos piliečių, nuolat gyvenančių Lietuvos Respublikoje kitų valstybių piliečių ir asmenų be pilietybės apskaita duomenų banke pagal vieningą rodiklių sistemą.",
+   "quote_english": "Article 2. Population Register of the Republic of Lithuania. The Population Register is a personal record, kept in a data bank under a uniform indicator system, of all citizens of the Republic and of citizens of other states and stateless persons permanently residing in Lithuania.",
+   "value": "Lietuvos Respublikos gyventojų registras (Population Register of the Republic of Lithuania)",
+   "published": "1992-01-23",
+   "title": "Lietuvos Respublikos gyventojų registro įstatymas (I-2237), original text",
+   "publisher": "Lietuvos Respublikos Seimas (e-seimas.lrs.lt)",
+   "doc_type": "legislation",
+   "note": "This is the original 1992 text of the law. The law was rewritten from 2015 (XII-1297) and consolidated to 2025-06-01 under the same register name. Only the register name is taken from this old text.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Lietuvos Respublikos gyventojų registras (Population Register)",
+    "reason": "Article 2 names the Population Register of the Republic of Lithuania as the personal record of all citizens and permanent residents."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:electoral_roll:register",
+   "question": "Electoral roll entry (Who is entitled to vote where): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/44e06821075711edbfe9c72e552dd5bd/",
+   "quote": "Pagal Gyventojų registro duomenis yra sudaromas Asmenų, turinčių teisę rinkti, sąrašas, į kurį turi būti įrašytas kiekvienas asmuo, turintis teisę rinkti bent vienuose šiame kodekse nurodytuose rinkimuose",
+   "quote_english": "The List of Persons Entitled to Vote is compiled from Population Register data, and every person entitled to vote in at least one election specified in this Code must be entered in it",
+   "value": "Asmenų, turinčių teisę rinkti, sąrašas (List of Persons Entitled to Vote), compiled from Population Register data",
+   "published": "2022-07-19",
+   "title": "Lietuvos Respublikos rinkimų kodekso patvirtinimo, įsigaliojimo ir įgyvendinimo konstitucinis įstatymas (XIV-1381), with the Election Code, as adopted",
+   "publisher": "Lietuvos Respublikos Seimas (e-seimas.lrs.lt)",
+   "doc_type": "legislation",
+   "note": "Article 53 of the Election Code as adopted, on the official law portal at a different URL from the consolidated edition cited earlier.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Asmenų, turinčių teisę rinkti, sąrašas (list of persons entitled to vote), compiled from the Gyventojų registras",
+    "reason": "The Electoral Code says this list is compiled from Population Register data and must include everyone entitled to vote."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:electoral_management:register",
+   "question": "Election management and results (Candidate lists, polling logistics and results tabulation systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/44e06821075711edbfe9c72e552dd5bd/",
+   "quote": "Apygardos, savivaldybės rinkimų komisija patikrina, ar Vyriausiosios rinkimų komisijos informacinėje sistemoje skelbiami rinkimų apygardos rinkimų apylinkių rezultatai sutampa su rinkėjų balsų skaičiavimo protokolų duomenimis",
+   "quote_english": "The constituency or municipal electoral commission checks whether the polling-district results published in the Central Electoral Commission information system match the data of the vote-counting protocols",
+   "value": "Vyriausiosios rinkimų komisijos informacinė sistema (Central Electoral Commission information system), in which polling-district results are published",
+   "published": "2022-07-19",
+   "title": "Lietuvos Respublikos rinkimų kodeksas (XIV-1381), as adopted",
+   "publisher": "Lietuvos Respublikos Seimas (e-seimas.lrs.lt)",
+   "doc_type": "legislation",
+   "note": "The same Code also has the advance-voting sheet printed from this information system.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Vyriausiosios rinkimų komisijos informacinė sistema (Central Electoral Commission information system)",
+    "reason": "The quote says polling-district results are published in the Central Electoral Commission's information system and checked against the counting protocols."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:trust_services_pki:register",
+   "question": "State PKI and qualified trust services (Root and issuing certificate authorities for government, qualified signatures and seals): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.nsc.vrm.lt/downloads.htm",
+   "quote": "patikimumui nustatyti yra naudojami šie pagalbiniai sertifikatai: MD Root CA (galioja nuo 2025-08-26 iki 2040-08-26) MD CA (galioja nuo 2025-08-27 iki 2035-08-27)",
+   "quote_english": "the following auxiliary certificates are used to establish trust: MD Root CA (valid from 2025-08-26 to 2040-08-26) MD CA (valid from 2025-08-27 to 2035-08-27)",
+   "value": "MD Root CA (root) and MD CA (issuing CA) of the Migration Department",
+   "published": "2025",
+   "title": "Asmens tapatybės kortelė ir elektroninis parašas – Parašo įrankiai",
+   "publisher": "Migracijos departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos",
+   "doc_type": "official_page",
+   "note": "Newer than the earlier lead 'ADIC Root CA': from November 2025 the Migration Department took over qualified trust services from ADIC (the Identity Documents Personalisation Centre) under new root and issuing CAs.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "MD Root CA and MD CA",
+    "reason": "The page names MD Root CA and MD CA as the certificates used to validate signatures backed by Migration Department certificates on ID cards."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services (Root and issuing certificate authorities for government, qualified signatures and seals): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.nsc.vrm.lt/default_en.htm",
+   "quote": "Please be informed that the Migration Department with immediate effect is taking over the provision of qualified trust services from the Identity Documents Personalisation Centre under the Ministry of Interior of the Republic of Lithuania.",
+   "quote_english": "",
+   "value": "Migration Department (takes over qualified trust services from the Identity Documents Personalisation Centre)",
+   "published": "2025-11-14",
+   "title": "Lithuanian national identity cards and electronic signatures – About",
+   "publisher": "Migration Department under the Ministry of Interior of the Republic of Lithuania",
+   "doc_type": "official_page",
+   "note": "The same page says the Communications Regulatory Authority confirmed the Migration Department as a qualified trust service provider on 14-11-2025.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the Migration Department is taking over qualified trust services, which names an operator but no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:grid_control:register",
+   "question": "Electricity grid control (Transmission system operator control and market systems (SCADA/EMS)): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.litgrid.eu/naujienos/litgrid-pabaige-8-sinchronizacijos-projekta-elektros-perdavimo-tinkla-sustiprino-nauja-valdymo-sistema",
+   "quote": "Atnaujintą dispečerinio valdymo sistemą, kurioje jau veikia automatinio generacijos valdymo (AGV) modulis, „Litgrid“ įdiegė praėjusių metų spalį.",
+   "quote_english": "Litgrid installed the upgraded dispatch control system, in which the automatic generation control (AGC) module already runs, last October.",
+   "value": "dispečerinio valdymo sistema (dispatch control system) of Litgrid, with an automatic generation control (AGV) module",
+   "published": "2024-02-08",
+   "title": "„Litgrid“ pabaigė 8 sinchronizacijos projektą: elektros perdavimo tinklą sustiprino nauja valdymo sistema",
+   "publisher": "Litgrid AB",
+   "doc_type": "official_page",
+   "note": "A different Litgrid page from the earlier lead. The Litgrid system-control page itself names it 'Dispečerinio valdymo Sistema (angl. SCADA/EMS)'.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Litgrid's updated dispatch control system (dispečerinio valdymo sistema) with an automatic generation control (AGV) module",
+    "reason": "The quote describes Litgrid's updated dispatch control system with an AGC module, a generic description rather than a proper name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:grid_control:operator",
+   "question": "Electricity grid control (Transmission system operator control and market systems (SCADA/EMS)): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.litgrid.eu/naujienos/litgrid-pabaige-8-sinchronizacijos-projekta-elektros-perdavimo-tinkla-sustiprino-nauja-valdymo-sistema",
+   "quote": "Lietuvos elektros perdavimo sistemos operatorė „Litgrid“ baigė Automatinio generacijos valdymo sistemos diegimo projektą.",
+   "quote_english": "Lithuania's electricity transmission system operator Litgrid has completed the project to install the automatic generation control system.",
+   "value": "Litgrid (Lithuanian electricity transmission system operator)",
+   "published": "2024-02-08",
+   "title": "„Litgrid“ pabaigė 8 sinchronizacijos projektą",
+   "publisher": "Litgrid AB",
+   "doc_type": "official_page",
+   "note": "The operator's own announcement.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Automatinio generacijos valdymo sistema (Automatic Generation Control system) of Litgrid",
+    "reason": "The quote says TSO Litgrid finished deploying its Automatic Generation Control system, a generic system name for one grid-control part rather than the full SCADA/EMS."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:residence_permits:register",
+   "question": "Residence and migration status (Residence permits, asylum status and foreign-national registrations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/c22cab41181411e88a05839ea3846d8e/",
+   "quote": "2.2 . migracijos paslaugos – MIGRIS paslaugų gavėjams MIGRIS priemonėmis teikiamos paslaugos, susijusios su pilietybės, leidimų gyventi Lietuvos Respublikoje ir prieglobsčio procesais;",
+   "quote_english": "2.2. migration services – services provided to MIGRIS service recipients by means of MIGRIS, relating to citizenship, residence permits in the Republic of Lithuania and asylum procedures;",
+   "value": "MIGRIS (Lietuvos migracijos informacinė sistema; Lithuanian Migration Information System)",
+   "published": "2018-02-22",
+   "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo (Nr. 1V-149), as adopted",
+   "publisher": "Lietuvos Respublikos vidaus reikalų ministerija (e-seimas.lrs.lt)",
+   "doc_type": "legislation",
+   "note": "Text as adopted in 2018 (in force 2021). The consolidated edition of 2026-07-21, rewritten by 1V-187 of 2025, keeps the same definition 2.2.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "MIGRIS",
+    "reason": "The regulation defines migration services, covering citizenship, residence permits and asylum, as services provided through MIGRIS."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:residence_permits:operator",
+   "question": "Residence and migration status (Residence permits, asylum status and foreign-national registrations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/c22cab41181411e88a05839ea3846d8e/",
+   "quote": "13 . MIGRIS tvarkytojai, kurie yra ir MIGRIS asmens duomenų tvarkytojai, yra: 13.1 . Migracijos departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (toliau – Migracijos departamentas); 13.2 . Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos",
+   "quote_english": "13. The MIGRIS processors, which are also MIGRIS personal-data processors, are: 13.1. the Migration Department under the Ministry of the Interior; 13.2. the Information Technology and Communications Department under the Ministry of the Interior",
+   "value": "Migracijos departamentas (Migration Department) and Informatikos ir ryšių departamentas (IT and Communications Department), both under the Ministry of the Interior",
+   "published": "2018-02-22",
+   "title": "Lietuvos migracijos informacinės sistemos nuostatai (Nr. 1V-149), as adopted",
+   "publisher": "Lietuvos Respublikos vidaus reikalų ministerija (e-seimas.lrs.lt)",
+   "doc_type": "legislation",
+   "note": "The list continues with other bodies. Point 11 names the Ministry of the Interior as MIGRIS controller. The 2026 consolidated text has the same 13.1 and 13.2.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "MIGRIS",
+    "reason": "The quote names MIGRIS and its processors, the Migration Department and the Information Technology and Communications Department under the Ministry of the Interior."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:vehicle_licensing:register",
+   "question": "Vehicle & licensing (Vehicle registrations and driving licences): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.regitra.lt/en/services/management-of-register-data/register-of-road-vehicles/",
+   "quote": "The Joint Stock Company REGITRA is a management body for the Register of Road Vehicles of the Republic of Lithuania. The Ministry of the Interior is the leading Register management body.",
+   "quote_english": "",
+   "value": "Register of Road Vehicles of the Republic of Lithuania",
+   "published": "",
+   "title": "Register of Road Vehicles",
+   "publisher": "AB Regitra",
+   "doc_type": "official_page",
+   "note": "The operator's own English page. A sister page names the Register of Drivers of Road Vehicles of the Republic of Lithuania for driving licences.",
+   "review": {
+    "id": 11,
+    "quote_found": false,
+    "established": "",
+    "reason": "The page could not be checked: curl got a 'Request Rejected' page and WebFetch got a CAPTCHA page, so the quote could not be found."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LT:vehicle_licensing:operator",
+   "question": "Vehicle & licensing (Vehicle registrations and driving licences): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.regitra.lt/en/services/management-of-register-data/register-of-road-vehicles/",
+   "quote": "The Joint Stock Company REGITRA is a management body for the Register of Road Vehicles of the Republic of Lithuania. The Ministry of the Interior is the leading Register management body.",
+   "quote_english": "",
+   "value": "Joint Stock Company REGITRA (register management body); Ministry of the Interior (leading management body)",
+   "published": "",
+   "title": "Register of Road Vehicles",
+   "publisher": "AB Regitra",
+   "doc_type": "official_page",
+   "note": "Regitra became a fully state-owned joint-stock company on 1 July 2024, according to its About us page.",
+   "review": {
+    "id": 12,
+    "quote_found": false,
+    "established": "",
+    "reason": "The page could not be checked: curl got a 'Request Rejected' page and WebFetch got a CAPTCHA page, so the quote could not be found."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:LT:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:facial_biometric:register",
+   "status": "no_better_found",
+   "searched": "MIGRIS regulation as adopted (e-seimas rs/legalact c22cab…): facial image is listed in the MIGRIS data structure, but more than 60 words from the MIGRIS name. The biometric search system (24.9.1) appears only in the consolidated edition already cited. migracija.lrv.lt, e-tar.lt and the amending act 1V-187 could not be fetched (Cloudflare or JS)"
+  },
+  {
+   "claim": "record:LT:fingerprint_biometric:register",
+   "status": "no_better_found",
+   "searched": "Same as facial: the 2018 MIGRIS text lists fingerprints only in a long data list. The fingerprint biometric search system (24.9.2) appears only in the consolidated edition already cited. Migration Department and e-tar pages blocked"
+  },
+  {
+   "claim": "record:LT:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:vehicle_licensing:register",
+   "status": "found"
+  }
+ ]
+}

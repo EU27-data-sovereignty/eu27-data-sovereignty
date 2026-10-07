@@ -1,0 +1,37 @@
+{
+ "iso": "CZ",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:CZ:grid_control:register",
+   "question": "Electricity grid control (Transmission system operator control and market systems (SCADA/EMS)): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-sbirka.gov.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2010%2F79%2F2024-07-01/fragmenty?cisloStranky=0",
+   "quote": "(6) Automatizované systémy dispečerského řízení používané pro vydávání a předávání operativních pokynů technického dispečinku a pro předávání vstupních údajů jsou samostatnými technologickými systémy s vlastními zabezpečenými rozhraními na jiné informační systémy a technologie.",
+   "quote_english": "(6) Automated dispatch control systems used for issuing and transmitting operational instructions of the technical dispatch centre and for transmitting input data are separate technological systems with their own secured interfaces to other information systems and technologies.",
+   "value": "Automatizované systémy dispečerského řízení (automated dispatch control systems)",
+   "published": "2024-07-01",
+   "title": "Vyhláška č. 79/2010 Sb., o dispečerském řízení elektrizační soustavy a o předávání údajů pro dispečerské řízení (consolidated version from 2024-07-01)",
+   "publisher": "e-Sbírka (Ministry of the Interior of the Czech Republic, official law portal)",
+   "doc_type": "legislation",
+   "note": "The decree on dispatch control of the electricity system, on the official law portal, names the statutory category of system. The same decree assigns transmission-level dispatch to the 'technický dispečink provozovatele přenosové soustavy' (the TSO's technical dispatch centre). It does not name ČEPS or the product (industry sources name TRIS by ELEKTROSYSTEM; not T1/T2). ceps.cz has robots.txt 'Disallow: /', so no ČEPS page can be fetched by the pipeline.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Automatizované systémy dispečerského řízení (automated dispatch control systems), the generic statutory term in § 8(6) of Decree 79/2010 Coll.; no proper system name or operator",
+    "reason": "The quote appears verbatim as § 8 odst. 6 of vyhláška č. 79/2010 Sb. (fetched JSON, fragment id 7611345). It names only the generic legal category of automated dispatch control systems and says they must be separate technological systems with secured interfaces. It gives no specific named system and does not say who operates it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:CZ:grid_control:register",
+   "status": "found"
+  }
+ ]
+}

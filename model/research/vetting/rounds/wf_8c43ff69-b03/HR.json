@@ -1,0 +1,37 @@
+{
+ "iso": "HR",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:HR:judicial_criminal:register",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://gov.hr/hr/potvrda-iz-kaznene-evidencije/2485?lang=hr",
+   "quote": "Potvrda sadržava cjelovite podatke iz Kaznene evidencije za određenu fizičku ili pravnu osobu, a izdaje se u svrhu ostvarivanja prava u inozemstvu ili međunarodnoj organizaciji i za druge svrhe se ne može uporabiti",
+   "quote_english": "The certificate contains the complete data from the Criminal Record for a specific natural or legal person, and is issued for the purpose of exercising rights abroad or in an international organisation and cannot be used for other purposes",
+   "value": "Kaznena evidencija (Criminal Record)",
+   "published": "",
+   "title": "Potvrda iz kaznene evidencije",
+   "publisher": "gov.hr (Government of the Republic of Croatia, central state portal)",
+   "doc_type": "official_page",
+   "note": "The central state portal names the register and gives it a capital K; the same page says certificates are issued by the Ministarstvo pravosuđa, uprave i digitalne transformacije (Ministry of Justice, Administration and Digital Transformation). That supports the operator only indirectly. The rulebook currently in force is Pravilnik o kaznenoj evidenciji, NN 37/21 (https://narodne-novine.nn.hr/clanci/sluzbeni/2021_04_37_762.html), and the statute was last amended by NN 53/22 (ECRIS-TCN).",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Kaznena evidencija",
+    "reason": "The quote appears verbatim on the gov.hr page and names the register from which the certificate's data comes as \"Kaznena evidencija\" (the criminal records register); it names only a register, not court case files or a judgments system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:HR:judicial_criminal:register",
+   "status": "found"
+  }
+ ]
+}

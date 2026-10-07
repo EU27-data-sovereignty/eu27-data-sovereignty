@@ -1,0 +1,42 @@
+{
+ "iso": "CY",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:CY:trust_services_pki:register",
+   "question": "State PKI and qualified trust services (Root and issuing certificate authorities for government, qualified signatures and seals): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/nationalcatalogue_en/nationalcatalogue_en",
+   "quote": "The present list is the trusted list including information related to the qualified trust service providers which are supervised by Cyprus, together with information related to the qualified trust services provided by them",
+   "quote_english": "",
+   "value": "National Trusted List (the trusted list of qualified trust service providers supervised by Cyprus and their qualified trust services)",
+   "published": "",
+   "title": "National Trusted List",
+   "publisher": "Department of Electronic Communications, Deputy Ministry of Research, Innovation and Digital Policy (Republic of Cyprus)",
+   "doc_type": "official_page",
+   "note": "Fetched directly from the supervisory body's own site (a different URL from the earlier EU monitoring PDF); this answers only the qualified-trust-services half of the question. The state CSCA (CN=CSCA-CYPRUS, Civil Registry and Migration Department) is the government root for travel and ID documents, but csca.crmd.moi.gov.cy currently serves an expired TLS certificate, so it cannot be cited. JCC Payment Systems' CPS (pki.jcc.com.cy, 25 May 2026) shows that the national eID certificates are issued under its 'Certification Practice Statement (CPS) for Cyprus National Electronic Identity (eID)' by a private Cypriot QTSP (JCC eID CA under JCC Root CA G1).",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "National Trusted List",
+    "reason": "The quote appears verbatim on the page under the heading \"National Trusted List\". It describes Cyprus's trusted list of supervised qualified trust service providers and their services under Regulation (EU) No 910/2014, so it names the register: the National Trusted List. It does not name the government root or issuing CA systems."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:CY:facial_biometric:register",
+   "status": "no_better_found",
+   "searched": "WebSearch EN and GR (Civil Registry and Migration Department biometrics, 'Σύστημα Αρχείου Πληθυσμού' ΣΑΠ, facial image passport system). The gov.cy MOI pages (biometrics, passports, ID cards) and the DITS projects page (now redirecting to gov.cy) return 403 (Azure WAF) to fetchers. csca.crmd.moi.gov.cy has an expired TLS certificate and is the earlier URL anyway. A DEC eID decree PDF mentions 'σύστημα του αρχείου πληθυσμού', but not for facial images. cylaw and globalcit copies are excluded. A later pass could try a browser-rendered fetch of gov.cy/moi or of the DITS 'Έργα Πληροφορικής' page for 'Σύστημα Αρχείου Πληθυσμού (ΣΑΠ)'."
+  },
+  {
+   "claim": "record:CY:trust_services_pki:register",
+   "status": "found"
+  }
+ ]
+}

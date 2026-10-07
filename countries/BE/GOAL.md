@@ -50,7 +50,7 @@ Belgium described on its own measured characteristics. Each figure is the publis
 
 ## 3. Critical data holdings, by priority
 
-The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 20 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
+The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 21 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -67,28 +67,28 @@ The holdings Belgium cannot let depend on infrastructure a foreign state can com
 | High | State PKI and qualified trust services (tier 0) | Belgium Root CA (BRCA), the top of the government CA hierarchy[^s3][^s4] | The Belgian authorities are the certification service provider responsible for the Belgium Root CAs[^s3][^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation)[^s27] | Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Judicial & criminal justice (tier 1) | Centraal Strafregister (Central Criminal Register)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | Banque de données Nationale Générale (General National Database, BNG)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | Pensioenkadaster (Pension Register)[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | Pensioenkadaster (Pension Register)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | UBO-register (register of ultimate beneficial owners)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)[^s33] | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | UBO-register (register of ultimate beneficial owners)[^s33] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)[^s34] | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | Centraal Wapenregister (Central Weapons Register)[^s34] | een dienst van de Federale Politie (a service of the Federal Police)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Centraal Wapenregister (Central Weapons Register)[^s35] | een dienst van de Federale Politie (a service of the Federal Police)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | NBB Securities Settlement System (NBB-SSS)[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | ASTRID-radionetwerk (ASTRID TETRA radio network)[^s36] | ASTRID (naamloze vennootschap van publiek recht, public-law company)[^s37] | *Not yet sourced* | *Not stated in sources* | more than 2 million radio contacts per day[^s36] |
-| High | Crisis management and civil protection (tier 1) | BE-Alert (the government's alerting system)[^s38] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | more than 1 million registered addresses[^s38] |
+| High | Central bank systems (tier 1) | NBB Securities Settlement System (NBB-SSS)[^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | ASTRID-radionetwerk (ASTRID TETRA radio network)[^s37] | ASTRID (naamloze vennootschap van publiek recht, public-law company)[^s38] | *Not yet sourced* | *Not stated in sources* | more than 2 million radio contacts per day[^s37] |
+| High | Crisis management and civil protection (tier 1) | BE-Alert (the government's alerting system)[^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | more than 1 million registered addresses[^s39] |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)[^s39] | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)[^s40] | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
@@ -98,7 +98,7 @@ The holdings Belgium cannot let depend on infrastructure a foreign state can com
 
 ## 4. Foreign-dependency exposure
 
-Of the 19 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 20 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +106,7 @@ Of the 19 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 19 |
+| Not stated in sources | 20 |
 
 ## 5. Legal and institutional posture
 
@@ -135,7 +135,6 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 - Tax (tier 1)
 - Customs declarations (tier 1)
 - Statutory health insurance (tier 1)
-- Police information systems (tier 1)
 - Border and visa systems (tier 1)
 - Official gazette and legislation (tier 1)
 - Treasury and state accounts (tier 1)
@@ -154,7 +153,7 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -171,17 +170,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -211,8 +210,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -223,8 +222,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -267,7 +266,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -309,7 +308,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -333,6 +332,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -344,7 +344,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Belgium
 
-45 of 45 printed facts about Belgium pass.
+46 of 46 printed facts about Belgium pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -377,6 +377,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:BE:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:police_records:register | Police information systems: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:BE:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -428,18 +429,19 @@ None.
 [^s26]: Belgisch Staatsblad (copy published by etaamb.openjustice.be) — Koninklijk Besluit van 25/05/2005 tot bepaling van de…, 2005-05-25. Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten. <https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html>
 [^s27]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies 29/2018 van 21 maart 2018 (kadastrale documentatie), 2018-03-21. Advies 29/2018 van 21 maart 2018 (kadastrale documentatie). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf> ([archived](https://web.archive.org/web/20240921144846/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf))
 [^s28]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 73/2026 van 15 april 2026, 2026-04-15. Advies nr. 73/2026 van 15 april 2026. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-73-2026.pdf>
-[^s29]: Gegevensbeschermingsautoriteit — Advies nr. 121/2022 van 1 juli 2022, 2022-07-01. Advies nr. 121/2022 van 1 juli 2022. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf> ([archived](https://web.archive.org/web/20220706131107/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf))
-[^s30]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_ONP_SFP_CADASTRE. Datawarehouse | DWH_ONP_SFP_CADASTRE. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-onp-sfp-cadastre.html>
-[^s31]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 03/2023 van 20 januari 2023, 2023-01-20. Advies nr. 03/2023 van 20 januari 2023. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-03-2023.pdf>
-[^s32]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 81/2022 van 25 april 2022…, 2022-04-25. Advies nr. 81/2022 van 25 april 2022 (werkingsmodaliteiten UBO-register). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-81-2022.pdf>
-[^s33]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Geschillenkamer Beslissing ten gronde 56/2026 van 12…, 2026-03-12. Geschillenkamer Beslissing ten gronde 56/2026 van 12 maart 2026. <https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf> ([archived](https://web.archive.org/web/20260603114950/https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf))
-[^s34]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr 169/2019 van 8 november 2019, 2019-11-08. Advies nr 169/2019 van 8 november 2019. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf> ([archived](https://web.archive.org/web/20251008074530/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf))
-[^s35]: Nationale Bank van België — Het Securities Settlement System (NBB-SSS). Het Securities Settlement System (NBB-SSS). <https://www.nbb.be/nl/betalingen-en-effecten/het-securities-settlement-system-nbb-sss>
-[^s36]: ASTRID nv van publiek recht — Radiocommunicatie | ASTRID. Radiocommunicatie | ASTRID. <https://www.astrid.be/nl/diensten/radiocommunicatie> ([archived](https://web.archive.org/web/20250403085231/https://www.astrid.be/nl/diensten/radiocommunicatie))
-[^s37]: ASTRID nv van publiek recht — Organisatie | ASTRID. Organisatie | ASTRID. <https://www.astrid.be/nl/over-astrid/organisatie> ([archived](https://web.archive.org/web/20230131192154/https://www.astrid.be/nl/over-astrid/organisatie))
-[^s38]: Nationaal Crisiscentrum (NCCN) — Meer dan 1 miljoen geregistreerde adressen in BE-Alert, 2022. Meer dan 1 miljoen geregistreerde adressen in BE-Alert. <https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert>
-[^s39]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_AHOVOKS_LED. Datawarehouse | DWH_AHOVOKS_LED. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led> ([archived](https://web.archive.org/web/20260211053943/https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led))
+[^s29]: Organe de contrôle de l'information policière (COC) — Rapport du contrôle restreint de l'Organe de contrôle…, 2023. Rapport du contrôle restreint de l'Organe de contrôle ... traitements dans la BNG (DIO23001). <https://www.organedecontrole.be/files/DIO23001_F.pdf> ([archived](https://web.archive.org/web/20241006073052/https://www.organedecontrole.be/files/DIO23001_F.pdf))
+[^s30]: Gegevensbeschermingsautoriteit — Advies nr. 121/2022 van 1 juli 2022, 2022-07-01. Advies nr. 121/2022 van 1 juli 2022. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf> ([archived](https://web.archive.org/web/20220706131107/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf))
+[^s31]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_ONP_SFP_CADASTRE. Datawarehouse | DWH_ONP_SFP_CADASTRE. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-onp-sfp-cadastre.html>
+[^s32]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 03/2023 van 20 januari 2023, 2023-01-20. Advies nr. 03/2023 van 20 januari 2023. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-03-2023.pdf>
+[^s33]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 81/2022 van 25 april 2022…, 2022-04-25. Advies nr. 81/2022 van 25 april 2022 (werkingsmodaliteiten UBO-register). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-81-2022.pdf>
+[^s34]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Geschillenkamer Beslissing ten gronde 56/2026 van 12…, 2026-03-12. Geschillenkamer Beslissing ten gronde 56/2026 van 12 maart 2026. <https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf> ([archived](https://web.archive.org/web/20260603114950/https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf))
+[^s35]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr 169/2019 van 8 november 2019, 2019-11-08. Advies nr 169/2019 van 8 november 2019. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf> ([archived](https://web.archive.org/web/20251008074530/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf))
+[^s36]: Nationale Bank van België — Het Securities Settlement System (NBB-SSS). Het Securities Settlement System (NBB-SSS). <https://www.nbb.be/nl/betalingen-en-effecten/het-securities-settlement-system-nbb-sss>
+[^s37]: ASTRID nv van publiek recht — Radiocommunicatie | ASTRID. Radiocommunicatie | ASTRID. <https://www.astrid.be/nl/diensten/radiocommunicatie> ([archived](https://web.archive.org/web/20250403085231/https://www.astrid.be/nl/diensten/radiocommunicatie))
+[^s38]: ASTRID nv van publiek recht — Organisatie | ASTRID. Organisatie | ASTRID. <https://www.astrid.be/nl/over-astrid/organisatie> ([archived](https://web.archive.org/web/20230131192154/https://www.astrid.be/nl/over-astrid/organisatie))
+[^s39]: Nationaal Crisiscentrum (NCCN) — Meer dan 1 miljoen geregistreerde adressen in BE-Alert, 2022. Meer dan 1 miljoen geregistreerde adressen in BE-Alert. <https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert>
+[^s40]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_AHOVOKS_LED. Datawarehouse | DWH_AHOVOKS_LED. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led> ([archived](https://web.archive.org/web/20260211053943/https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led))
 
-**Evidence grades:** 5 Strong, 40 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 5 Strong, 41 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -49,7 +49,7 @@ Ireland described on its own measured characteristics. Each figure is the publis
 
 ## 3. Critical data holdings, by priority
 
-The holdings Ireland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 27 of 39 holding classes have a verified source; 9 have a sourced record count or data size.
+The holdings Ireland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 31 of 39 holding classes have a verified source; 9 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -66,38 +66,38 @@ The holdings Ireland cannot let depend on infrastructure a foreign state can com
 | High | Digital identity credentials (tier 0) | MyGovID[^s1] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | over 3.2 million people actively using their MyGovID account[^s1] |
 | High | State PKI and qualified trust services (tier 0) | ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection[^s18] | Revenue Commissioners act as Certification Authority for ROS digital certificates[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | National Land Register (folios of the Land Registry) and Registry of Deeds[^s19][^s20] | Tailte Éireann (civil service body under the Tailte Éireann Act 2022)[^s19] | *Not yet sourced* | *Not stated in sources* | 2.4 million folios with associated spatial data accessible via landdirect.ie[^s19][^s20] |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but…. It is withheld until the fact or its source is corrected and checked again* | An Garda Síochána[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Unified Case Management System[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but…. It is withheld until the fact or its source is corrected and checked again* | An Garda Síochána[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Intelligence services (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a…. It is withheld until the fact or its source is corrected and checked again* | Military Intelligence (Defence Forces)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | National Digital Radio Service (NDRS), TETRA network for first responders[^s22] | *Not yet sourced* | *Not yet sourced* | Non-EU provider[^s22] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State[^s23] | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | National Digital Radio Service (NDRS), TETRA network for first responders[^s23] | *Not yet sourced* | *Not yet sourced* | Non-EU provider[^s23] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State[^s24] | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | ROS database[^s2] | Revenue[^s2] | *Not yet sourced* | *Not stated in sources* | over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered[^s2] |
 | High | Customs declarations (tier 1) | Automated Import System (AIS), Automated Export System (AES) and New Computerised Transit System (NCTS)[^s2] | Revenue Commissioners[^s2] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN)[^s25] | HSE Primary Care Reimbursement Service (PCRS)[^s25] | *Not yet sourced* | *Not stated in sources* | 1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025[^s26] |
-| High | Business registry (tier 1) | Register of companies, business names and limited partnerships held by the Companies Registration Office[^s27] | Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies[^s28] | Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | National Vehicle and Driver File (NVDF)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)[^s31] | An Garda Síochána (applications decided by the local Superintendent)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s33] | Returning Officers per constituency[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s34] | Central Bank of Ireland[^s34][^s35] | *Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider'…. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | Business Object Model implementation (BOMi), the Department of Social Protection's main strategic system[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN)[^s27] | HSE Primary Care Reimbursement Service (PCRS)[^s27] | *Not yet sourced* | *Not stated in sources* | 1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025[^s28] |
+| High | Business registry (tier 1) | Register of companies, business names and limited partnerships held by the Companies Registration Office[^s29] | Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies[^s30] | Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | National Vehicle and Driver File (NVDF)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)[^s33] | An Garda Síochána (applications decided by the local Superintendent)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | core Human Resources Management System (HRMS) platform, PeopleSoft (National Shared Services Office)[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s36] | Returning Officers per constituency[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s37] | Central Bank of Ireland[^s37][^s38] | *Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider'…. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | National Control Centres (NCCs) of the transmission system operator[^s36][^s37] | EirGrid (transmission system operator)[^s38][^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | National Control Centres (NCCs) of the transmission system operator[^s39][^s40] | EirGrid (transmission system operator)[^s41][^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Not yet sourced* | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Health records (tier 2) | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)[^s39] | Health Service Executive (Health Identifiers Service)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | Computerised Infectious Disease Reporting (CIDR)[^s41] | Health Protection Surveillance Centre (HPSC); CIDR established 2004[^s42] | *Not yet sourced* | *Not stated in sources* | On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065)[^s42] |
+| High | Health records (tier 2) | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)[^s42] | Health Service Executive (Health Identifiers Service)[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | electronic Irish Statute Book (eISB)[^s44] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Computerised Infectious Disease Reporting (CIDR)[^s45] | Health Protection Surveillance Centre (HPSC); CIDR established 2004[^s46] | *Not yet sourced* | *Not stated in sources* | On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065)[^s46] |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 27 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 31 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -105,7 +105,7 @@ Of the 27 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 1 |
 | Mixed | 1 |
 | Non-EU provider | 2 |
-| Not stated in sources | 23 |
+| Not stated in sources | 27 |
 
 ## 5. Legal and institutional posture
 
@@ -133,10 +133,6 @@ Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and
 - Fingerprint biometric (tier 0)
 - Document issuance history (tier 0)
 - Authentication audit log (tier 0)
-- Benefits & pensions (tier 1)
-- Judicial & criminal justice (tier 1)
-- Official gazette and legislation (tier 1)
-- Government payroll and personnel (tier 1)
 - Crisis management and civil protection (tier 1)
 - Education (tier 1)
 
@@ -148,7 +144,7 @@ Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -165,17 +161,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -205,8 +201,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -217,8 +213,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -261,7 +257,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -303,7 +299,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -327,6 +323,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -338,7 +335,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Ireland
 
-62 of 62 printed facts about Ireland pass.
+66 of 66 printed facts about Ireland pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -370,6 +367,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:land_property:count | Land & property registry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:IE:police_records:operator | Police information systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:intelligence:operator | Intelligence services: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -381,6 +379,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:tax:count | Tax: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:customs:operator | Customs declarations: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:benefits_pensions:register | Benefits & pensions: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:IE:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:health_insurance:count | Statutory health insurance: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -393,6 +392,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:government_payroll:register | Government payroll and personnel: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:IE:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -401,6 +401,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:grid_control:operator | Electricity grid control: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:official_gazette:register | Official gazette and legislation: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:IE:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:public_health_surveillance:count | Public health surveillance: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -440,29 +441,33 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s18]: Revenue Commissioners — Tax and Duty Manual Part 38-06-01 Revenue Online Service…, 2025-10. Tax and Duty Manual Part 38-06-01 Revenue Online Service (ROS). <https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf> ([archived](https://web.archive.org/web/20260520131022/https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf))
 [^s19]: Tailte Éireann — Tailte Éireann Annual Report 2024, 2025. Tailte Éireann Annual Report 2024. <https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf> ([archived](https://web.archive.org/web/20260513220930/https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf))
 [^s20]: Tailte Éireann — Tailte Éireann Annual Report 2025, 2026-09. Tailte Éireann Annual Report 2025. <https://tailte.ie/wp-content/uploads/2026/09/Annual-Report-2025-Final-EN-GA-1.pdf>
-[^s21]: An Garda Síochána — Garda Information Services Centre (GISC). Garda Information Services Centre (GISC). <https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/> ([archived](https://web.archive.org/web/20260610071140/https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/))
-[^s22]: Motorola Solutions, Inc. — Motorola Solutions Acquires TETRA Ireland…, 2022-03-23. Motorola Solutions Acquires TETRA Ireland Communications, The Provider of Ireland's National Digital Radio Service. <https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html> ([archived](https://web.archive.org/web/20260711055831/https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html))
-[^s23]: Immigration Service Delivery, Department of Justice — Information on revocation of registered Irish Residence…. Information on revocation of registered Irish Residence Permissions. <https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/> ([archived](https://web.archive.org/web/20260518125209/https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/))
-[^s24]: An Garda Síochána — Immigration (GNIB) - Registration & Renewal of…. Immigration (GNIB) - Registration & Renewal of Immigration Permission. <https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/> ([archived](https://web.archive.org/web/20260917111236/https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/))
-[^s25]: Health Information and Quality Authority — Primary Care Reimbursement Service (PCRS). Primary Care Reimbursement Service (PCRS). <https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs>
-[^s26]: Health Service Executive (copy hosted by HRB National Drugs Library) — Primary Care Reimbursement Service Statistical Analysis…, 2026. Primary Care Reimbursement Service Statistical Analysis of Claims and Payments 2025. <https://www.drugsandalcohol.ie/46590/1/PCRS_Statistical_Analysis_of_Claims_and_Payments_2025.pdf>
-[^s27]: Department of Enterprise, Tourism and Employment — Companies Registration Office (CRO). Companies Registration Office (CRO). <https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html> ([archived](https://web.archive.org/web/20260526152748/https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html))
-[^s28]: Office of the Attorney General (Irish Statute Book) — S.I. No. 110 of 2019 European Union (Anti-Money…, 2019. S.I. No. 110 of 2019 European Union (Anti-Money Laundering: Beneficial Ownership of Corporate Entities) Regulations 2019. <https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print> ([archived](https://web.archive.org/web/20260613064358/https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print))
-[^s29]: Government of Ireland PSB Data Catalogue — National Vehicle and Driver Database. National Vehicle and Driver Database. <https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database> ([archived](https://web.archive.org/web/20260217001228/https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database))
-[^s30]: An Garda Síochána — Schengen Information System (SIS): When was it introduced?. Schengen Information System (SIS): When was it introduced?. <https://www.garda.ie/en/about-us/our-departments/garda-national-crime-security-intelligence-service1/schengen-information-system-sis-/when-was-it-introduced-.html>
-[^s31]: An Garda Síochána — Firearms Licensing. Firearms Licensing. <https://www.garda.ie/en/about-us/online-services/firearms-licensing/> ([archived](https://web.archive.org/web/20260917111136/https://www.garda.ie/en/about-us/online-services/firearms-licensing/))
-[^s32]: Office of the Comptroller and Auditor General — Report on the Accounts of the Public Services 2022,…, 2023. Report on the Accounts of the Public Services 2022, Chapter 6: Financial management shared services: implementation progress. <https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf>
-[^s33]: Department of Housing, Local Government and Heritage — Memorandum for the Guidance of Returning Officers,…, 2024. Memorandum for the Guidance of Returning Officers, General Election 2024. <https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf>
-[^s34]: Central Bank of Ireland — T2. T2. <https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2> ([archived](https://web.archive.org/web/20260315043823/https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2))
-[^s35]: Central Bank of Ireland — Annual Report 2025 and Annual Performance Statement…, 2026. Annual Report 2025 and Annual Performance Statement 2025-2026. <https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf> ([archived](https://web.archive.org/web/20260801021138/https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf))
-[^s36]: EirGrid plc — EirGrid Grid Code Version 14.3, 2025-03-25. EirGrid Grid Code Version 14.3. <https://cms.eirgrid.ie/sites/default/files/publications/GridCodeVersion14.3.pdf> ([archived](https://web.archive.org/web/20260828073337/https://cms.eirgrid.ie/sites/default/files/publications/GridCodeVersion14.3.pdf))
-[^s37]: EirGrid — National Control Centres. National Control Centres. <https://www.eirgrid.ie/grid/how-grid-works/national-control-centres>
-[^s38]: EirGrid — Did You Know? 10 fast facts about EirGrid. Did You Know? 10 fast facts about EirGrid. <https://www.eirgrid.ie/did-you-know> ([archived](https://web.archive.org/web/20260305052734/https://www.eirgrid.ie/did-you-know))
-[^s39]: HSE MyHealth@IE programme (hosted by Irish Institute of Pharmacy) — National Shared Care Record: Enabling Data, Enhancing…, 2026-06-10. National Shared Care Record: Enabling Data, Enhancing Care (MyHealth@IE programme webinar). <https://iiop.ie/sites/default/files/2026-06/NSCR%20Presentation_10%20June%202026_IIOPWebinar.pdf>
-[^s40]: Health Information and Quality Authority — National Register of Individual Health Identifiers. National Register of Individual Health Identifiers. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers>
-[^s41]: Health Protection Surveillance Centre (HSE) — Computerised Infectious Disease Reporting (CIDR). Computerised Infectious Disease Reporting (CIDR). <https://www.hpsc.ie/cidr/> ([archived](https://web.archive.org/web/20260911101522/https://www.hpsc.ie/cidr/))
-[^s42]: Health Information and Quality Authority — Computerised Infectious Disease Reporting (CIDR) system. Computerised Infectious Disease Reporting (CIDR) system. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr> ([archived](https://web.archive.org/web/20240704233334/https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr))
+[^s21]: Courts Service of Ireland — Courts Service Annual Report for 2025 published today, 2026-07-13. Courts Service Annual Report for 2025 published today. <https://www.courts.ie/news/courts-service-annual-report-for-2025-published-today> ([archived](https://web.archive.org/web/20260731081111/https://www.courts.ie/news/courts-service-annual-report-for-2025-published-today))
+[^s22]: An Garda Síochána — Garda Information Services Centre (GISC). Garda Information Services Centre (GISC). <https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/> ([archived](https://web.archive.org/web/20260610071140/https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/))
+[^s23]: Motorola Solutions, Inc. — Motorola Solutions Acquires TETRA Ireland…, 2022-03-23. Motorola Solutions Acquires TETRA Ireland Communications, The Provider of Ireland's National Digital Radio Service. <https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html> ([archived](https://web.archive.org/web/20260711055831/https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html))
+[^s24]: Immigration Service Delivery, Department of Justice — Information on revocation of registered Irish Residence…. Information on revocation of registered Irish Residence Permissions. <https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/> ([archived](https://web.archive.org/web/20260518125209/https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/))
+[^s25]: An Garda Síochána — Immigration (GNIB) - Registration & Renewal of…. Immigration (GNIB) - Registration & Renewal of Immigration Permission. <https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/> ([archived](https://web.archive.org/web/20260917111236/https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/))
+[^s26]: Department of Social Protection — Service Delivery Modernisation and BOMi Development…, 2021-03. Service Delivery Modernisation and BOMi Development Programmes. <https://assets.gov.ie/125816/5df543d8-ca27-44fd-ab3d-251940256c83.pdf> ([archived](https://web.archive.org/web/20240315210013/https://assets.gov.ie/125816/5df543d8-ca27-44fd-ab3d-251940256c83.pdf))
+[^s27]: Health Information and Quality Authority — Primary Care Reimbursement Service (PCRS). Primary Care Reimbursement Service (PCRS). <https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs>
+[^s28]: Health Service Executive (copy hosted by HRB National Drugs Library) — Primary Care Reimbursement Service Statistical Analysis…, 2026. Primary Care Reimbursement Service Statistical Analysis of Claims and Payments 2025. <https://www.drugsandalcohol.ie/46590/1/PCRS_Statistical_Analysis_of_Claims_and_Payments_2025.pdf>
+[^s29]: Department of Enterprise, Tourism and Employment — Companies Registration Office (CRO). Companies Registration Office (CRO). <https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html> ([archived](https://web.archive.org/web/20260526152748/https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html))
+[^s30]: Office of the Attorney General (Irish Statute Book) — S.I. No. 110 of 2019 European Union (Anti-Money…, 2019. S.I. No. 110 of 2019 European Union (Anti-Money Laundering: Beneficial Ownership of Corporate Entities) Regulations 2019. <https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print> ([archived](https://web.archive.org/web/20260613064358/https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print))
+[^s31]: Government of Ireland PSB Data Catalogue — National Vehicle and Driver Database. National Vehicle and Driver Database. <https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database> ([archived](https://web.archive.org/web/20260217001228/https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database))
+[^s32]: An Garda Síochána — Schengen Information System (SIS): When was it introduced?. Schengen Information System (SIS): When was it introduced?. <https://www.garda.ie/en/about-us/our-departments/garda-national-crime-security-intelligence-service1/schengen-information-system-sis-/when-was-it-introduced-.html>
+[^s33]: An Garda Síochána — Firearms Licensing. Firearms Licensing. <https://www.garda.ie/en/about-us/online-services/firearms-licensing/> ([archived](https://web.archive.org/web/20260917111136/https://www.garda.ie/en/about-us/online-services/firearms-licensing/))
+[^s34]: Office of the Comptroller and Auditor General — Report on the Accounts of the Public Services 2022,…, 2023. Report on the Accounts of the Public Services 2022, Chapter 6: Financial management shared services: implementation progress. <https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf>
+[^s35]: National Shared Services Office (NSSO) — National Shared Services Office Annual Report 2023, 2024. National Shared Services Office Annual Report 2023. <https://assets.nsso.gov.ie/documents/Annual_report_2023_Final1.pdf>
+[^s36]: Department of Housing, Local Government and Heritage — Memorandum for the Guidance of Returning Officers,…, 2024. Memorandum for the Guidance of Returning Officers, General Election 2024. <https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf>
+[^s37]: Central Bank of Ireland — T2. T2. <https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2> ([archived](https://web.archive.org/web/20260315043823/https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2))
+[^s38]: Central Bank of Ireland — Annual Report 2025 and Annual Performance Statement…, 2026. Annual Report 2025 and Annual Performance Statement 2025-2026. <https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf> ([archived](https://web.archive.org/web/20260801021138/https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf))
+[^s39]: EirGrid plc — EirGrid Grid Code Version 14.3, 2025-03-25. EirGrid Grid Code Version 14.3. <https://cms.eirgrid.ie/sites/default/files/publications/GridCodeVersion14.3.pdf> ([archived](https://web.archive.org/web/20260828073337/https://cms.eirgrid.ie/sites/default/files/publications/GridCodeVersion14.3.pdf))
+[^s40]: EirGrid — National Control Centres. National Control Centres. <https://www.eirgrid.ie/grid/how-grid-works/national-control-centres>
+[^s41]: EirGrid — Did You Know? 10 fast facts about EirGrid. Did You Know? 10 fast facts about EirGrid. <https://www.eirgrid.ie/did-you-know> ([archived](https://web.archive.org/web/20260305052734/https://www.eirgrid.ie/did-you-know))
+[^s42]: HSE MyHealth@IE programme (hosted by Irish Institute of Pharmacy) — National Shared Care Record: Enabling Data, Enhancing…, 2026-06-10. National Shared Care Record: Enabling Data, Enhancing Care (MyHealth@IE programme webinar). <https://iiop.ie/sites/default/files/2026-06/NSCR%20Presentation_10%20June%202026_IIOPWebinar.pdf>
+[^s43]: Health Information and Quality Authority — National Register of Individual Health Identifiers. National Register of Individual Health Identifiers. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers>
+[^s44]: European Union (N-Lex, Publications Office) — About the national database - Ireland (N-Lex). About the national database - Ireland (N-Lex). <https://n-lex.europa.eu/n-lex/info/info-ie/index> ([archived](https://web.archive.org/web/20250605112249/https://n-lex.europa.eu/n-lex/info/info-ie/index))
+[^s45]: Health Protection Surveillance Centre (HSE) — Computerised Infectious Disease Reporting (CIDR). Computerised Infectious Disease Reporting (CIDR). <https://www.hpsc.ie/cidr/> ([archived](https://web.archive.org/web/20260911101522/https://www.hpsc.ie/cidr/))
+[^s46]: Health Information and Quality Authority — Computerised Infectious Disease Reporting (CIDR) system. Computerised Infectious Disease Reporting (CIDR) system. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr> ([archived](https://web.archive.org/web/20240704233334/https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr))
 
-**Evidence grades:** 29 Strong, 33 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 32 Strong, 34 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

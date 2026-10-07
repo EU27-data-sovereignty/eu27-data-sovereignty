@@ -18,101 +18,101 @@ follow its register, so only the register is counted for it.
 
 ## Holdings: is the register known?
 
-681 of 1044 (state, class) pairs that are not
+732 of 1044 (state, class) pairs that are not
 established as absent have a known register.
 
 | | Have | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|
-| Tier 0 | 183 of 234 | 51 | 32 | 0 | 2 | 17 |
-| Tier 1 | 443 of 675 | 232 | 71 | 0 | 39 | 122 |
-| Tier 2 | 33 of 81 | 48 | 5 | 0 | 43 | 0 |
-| Tier 3 | 22 of 54 | 32 | 2 | 0 | 30 | 0 |
-| **All** | 681 of 1044 | 363 | 110 | 0 | 114 | 139 |
+| Tier 0 | 194 of 234 | 40 | 21 | 0 | 2 | 17 |
+| Tier 1 | 478 of 675 | 197 | 36 | 0 | 39 | 122 |
+| Tier 2 | 36 of 81 | 45 | 2 | 0 | 43 | 0 |
+| Tier 3 | 24 of 54 | 30 | 0 | 0 | 30 | 0 |
+| **All** | 732 of 1044 | 312 | 59 | 0 | 114 | 139 |
 
 ## Fields of the known holdings
 
 | | Have | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|
-| `holder` | 599 of 681 | 82 | 45 | 0 | 37 | 0 |
-| `legal_basis` | 268 of 681 | 413 | 128 | 0 | 285 | 0 |
-| `hosting` | 82 of 681 | 599 | 28 | 0 | 564 | 7 |
-| `foreign_dependency` | 56 of 681 | 625 | 28 | 0 | 581 | 16 |
-| `record_count` | 57 of 681 | 624 | 23 | 0 | 601 | 0 |
-| `data_size` | 0 of 681 | 681 | 0 | 0 | 681 | 0 |
+| `holder` | 616 of 732 | 116 | 71 | 0 | 45 | 0 |
+| `legal_basis` | 268 of 732 | 464 | 152 | 0 | 312 | 0 |
+| `hosting` | 82 of 732 | 650 | 42 | 0 | 601 | 7 |
+| `foreign_dependency` | 56 of 732 | 676 | 30 | 0 | 630 | 16 |
+| `record_count` | 58 of 732 | 674 | 29 | 0 | 645 | 0 |
+| `data_size` | 0 of 732 | 732 | 0 | 0 | 732 | 0 |
 
 ## Registers not yet found, by class
 
 | | Have | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|
-| `civil_registry` (tier 0) | 23 of 27 | 4 | 4 | 0 | 0 | 0 |
-| `facial_biometric` (tier 0) | 23 of 27 | 4 | 4 | 0 | 0 | 0 |
-| `fingerprint_biometric` (tier 0) | 11 of 18 | 7 | 6 | 0 | 0 | 1 |
-| `breeder_documents` (tier 0) | 22 of 27 | 5 | 2 | 0 | 0 | 3 |
+| `civil_registry` (tier 0) | 25 of 27 | 2 | 2 | 0 | 0 | 0 |
+| `facial_biometric` (tier 0) | 24 of 27 | 3 | 3 | 0 | 0 | 0 |
+| `fingerprint_biometric` (tier 0) | 13 of 18 | 5 | 4 | 0 | 0 | 1 |
+| `breeder_documents` (tier 0) | 23 of 27 | 4 | 1 | 0 | 0 | 3 |
 | `issuance_history` (tier 0) | 24 of 27 | 3 | 3 | 0 | 0 | 0 |
-| `digital_identity_credentials` (tier 0) | 23 of 27 | 4 | 3 | 0 | 0 | 1 |
+| `digital_identity_credentials` (tier 0) | 25 of 27 | 2 | 1 | 0 | 0 | 1 |
 | `authentication_audit_log` (tier 0) | 13 of 27 | 14 | 4 | 0 | 2 | 8 |
-| `electoral_roll` (tier 0) | 23 of 27 | 4 | 4 | 0 | 0 | 0 |
-| `trust_services_pki` (tier 0) | 21 of 27 | 6 | 2 | 0 | 0 | 4 |
+| `electoral_roll` (tier 0) | 25 of 27 | 2 | 2 | 0 | 0 | 0 |
+| `trust_services_pki` (tier 0) | 22 of 27 | 5 | 1 | 0 | 0 | 4 |
 | `residence_permits` (tier 1) | 22 of 27 | 5 | 2 | 0 | 1 | 2 |
-| `tax` (tier 1) | 17 of 27 | 10 | 3 | 0 | 1 | 6 |
+| `tax` (tier 1) | 18 of 27 | 9 | 2 | 0 | 1 | 6 |
 | `customs` (tier 1) | 18 of 27 | 9 | 1 | 0 | 2 | 6 |
-| `benefits_pensions` (tier 1) | 19 of 27 | 8 | 4 | 0 | 1 | 3 |
-| `health_insurance` (tier 1) | 20 of 27 | 7 | 1 | 0 | 0 | 6 |
-| `land_property` (tier 1) | 22 of 27 | 5 | 4 | 0 | 0 | 1 |
-| `business_registry` (tier 1) | 21 of 27 | 6 | 3 | 0 | 0 | 3 |
-| `beneficial_ownership` (tier 1) | 24 of 27 | 3 | 1 | 0 | 0 | 2 |
-| `vehicle_licensing` (tier 1) | 22 of 27 | 5 | 2 | 0 | 0 | 3 |
-| `judicial_criminal` (tier 1) | 20 of 27 | 7 | 6 | 0 | 0 | 1 |
-| `police_records` (tier 1) | 21 of 27 | 6 | 2 | 0 | 0 | 4 |
-| `border_control` (tier 1) | 21 of 27 | 6 | 2 | 0 | 2 | 2 |
-| `firearms_register` (tier 1) | 19 of 27 | 8 | 3 | 0 | 1 | 4 |
-| `official_gazette` (tier 1) | 18 of 27 | 9 | 6 | 0 | 1 | 2 |
-| `public_finance` (tier 1) | 18 of 27 | 9 | 3 | 0 | 1 | 5 |
-| `government_payroll` (tier 1) | 16 of 27 | 11 | 3 | 0 | 3 | 5 |
+| `benefits_pensions` (tier 1) | 20 of 27 | 7 | 3 | 0 | 1 | 3 |
+| `health_insurance` (tier 1) | 21 of 27 | 6 | 0 | 0 | 0 | 6 |
+| `land_property` (tier 1) | 26 of 27 | 1 | 0 | 0 | 0 | 1 |
+| `business_registry` (tier 1) | 23 of 27 | 4 | 1 | 0 | 0 | 3 |
+| `beneficial_ownership` (tier 1) | 25 of 27 | 2 | 0 | 0 | 0 | 2 |
+| `vehicle_licensing` (tier 1) | 23 of 27 | 4 | 1 | 0 | 0 | 3 |
+| `judicial_criminal` (tier 1) | 25 of 27 | 2 | 1 | 0 | 0 | 1 |
+| `police_records` (tier 1) | 23 of 27 | 4 | 0 | 0 | 0 | 4 |
+| `border_control` (tier 1) | 23 of 27 | 4 | 0 | 0 | 2 | 2 |
+| `firearms_register` (tier 1) | 20 of 27 | 7 | 2 | 0 | 1 | 4 |
+| `official_gazette` (tier 1) | 21 of 27 | 6 | 3 | 0 | 1 | 2 |
+| `public_finance` (tier 1) | 19 of 27 | 8 | 2 | 0 | 1 | 5 |
+| `government_payroll` (tier 1) | 18 of 27 | 9 | 1 | 0 | 3 | 5 |
 | `electoral_management` (tier 1) | 16 of 27 | 11 | 4 | 0 | 2 | 5 |
 | `central_bank` (tier 1) | 17 of 27 | 10 | 2 | 0 | 0 | 8 |
 | `defence_command` (tier 1) | 2 of 27 | 25 | 1 | 0 | 9 | 15 |
 | `intelligence` (tier 1) | 9 of 27 | 18 | 3 | 0 | 3 | 12 |
-| `emergency_communications` (tier 1) | 19 of 27 | 8 | 3 | 0 | 0 | 5 |
-| `crisis_management` (tier 1) | 21 of 27 | 6 | 3 | 0 | 0 | 3 |
-| `grid_control` (tier 1) | 13 of 27 | 14 | 2 | 0 | 3 | 9 |
-| `water_control` (tier 1) | 6 of 27 | 21 | 5 | 0 | 7 | 9 |
+| `emergency_communications` (tier 1) | 22 of 27 | 5 | 0 | 0 | 0 | 5 |
+| `crisis_management` (tier 1) | 23 of 27 | 4 | 1 | 0 | 0 | 3 |
+| `grid_control` (tier 1) | 14 of 27 | 13 | 1 | 0 | 3 | 9 |
+| `water_control` (tier 1) | 8 of 27 | 19 | 3 | 0 | 7 | 9 |
 | `education` (tier 1) | 22 of 27 | 5 | 2 | 0 | 2 | 1 |
-| `health_records` (tier 2) | 13 of 27 | 14 | 1 | 0 | 13 | 0 |
-| `public_health_surveillance` (tier 2) | 12 of 27 | 15 | 1 | 0 | 14 | 0 |
-| `statistics_microdata` (tier 2) | 8 of 27 | 19 | 3 | 0 | 16 | 0 |
-| `geospatial` (tier 3) | 15 of 27 | 12 | 1 | 0 | 11 | 0 |
-| `national_archives` (tier 3) | 7 of 27 | 20 | 1 | 0 | 19 | 0 |
+| `health_records` (tier 2) | 14 of 27 | 13 | 0 | 0 | 13 | 0 |
+| `public_health_surveillance` (tier 2) | 13 of 27 | 14 | 0 | 0 | 14 | 0 |
+| `statistics_microdata` (tier 2) | 9 of 27 | 18 | 2 | 0 | 16 | 0 |
+| `geospatial` (tier 3) | 16 of 27 | 11 | 0 | 0 | 11 | 0 |
+| `national_archives` (tier 3) | 8 of 27 | 19 | 0 | 0 | 19 | 0 |
 
 ## By state
 
 | State | Registers known | Hosting known | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|---|
 | AT | 30 of 38 | 4 of 30 | 153 | 6 | 0 | 143 | 4 |
-| BE | 19 of 38 | 2 of 19 | 111 | 7 | 0 | 98 | 6 |
+| BE | 20 of 38 | 2 of 20 | 116 | 7 | 0 | 103 | 6 |
 | BG | 31 of 39 | 4 of 31 | 140 | 13 | 0 | 126 | 1 |
-| HR | 29 of 39 | 3 of 29 | 135 | 10 | 0 | 123 | 2 |
+| HR | 30 of 39 | 3 of 30 | 139 | 10 | 0 | 127 | 2 |
 | CY | 29 of 38 | 4 of 29 | 125 | 6 | 0 | 111 | 8 |
 | CZ | 31 of 38 | 0 of 31 | 147 | 9 | 0 | 134 | 4 |
-| DK | 28 of 39 | 8 of 28 | 127 | 29 | 0 | 96 | 2 |
+| DK | 36 of 39 | 8 of 36 | 165 | 36 | 0 | 127 | 2 |
 | EE | 26 of 39 | 0 of 26 | 152 | 14 | 0 | 133 | 5 |
-| FI | 21 of 39 | 0 of 21 | 116 | 9 | 0 | 104 | 3 |
+| FI | 26 of 39 | 0 of 26 | 138 | 10 | 0 | 125 | 3 |
 | FR | 35 of 39 | 1 of 35 | 161 | 16 | 0 | 144 | 1 |
-| DE | 26 of 38 | 3 of 26 | 134 | 20 | 0 | 114 | 0 |
-| EL | 32 of 39 | 9 of 32 | 141 | 7 | 0 | 129 | 5 |
+| DE | 27 of 38 | 3 of 27 | 138 | 20 | 0 | 118 | 0 |
+| EL | 33 of 39 | 9 of 33 | 145 | 6 | 0 | 134 | 5 |
 | HU | 31 of 39 | 13 of 31 | 129 | 15 | 0 | 108 | 6 |
-| IE | 27 of 39 | 3 of 27 | 117 | 21 | 0 | 94 | 2 |
-| IT | 27 of 39 | 4 of 27 | 133 | 19 | 0 | 111 | 3 |
-| LV | 20 of 39 | 0 of 20 | 116 | 21 | 0 | 89 | 6 |
-| LT | 6 of 39 | 0 of 6 | 67 | 15 | 0 | 33 | 19 |
-| LU | 5 of 39 | 1 of 5 | 60 | 30 | 0 | 26 | 4 |
+| IE | 31 of 39 | 3 of 31 | 137 | 28 | 0 | 107 | 2 |
+| IT | 28 of 39 | 4 of 28 | 138 | 19 | 0 | 116 | 3 |
+| LV | 28 of 39 | 0 of 28 | 151 | 24 | 0 | 121 | 6 |
+| LT | 8 of 39 | 0 of 8 | 75 | 14 | 0 | 42 | 19 |
+| LU | 17 of 39 | 1 of 17 | 120 | 33 | 0 | 83 | 4 |
 | MT | 19 of 39 | 0 of 19 | 111 | 10 | 0 | 84 | 17 |
 | NL | 24 of 38 | 12 of 24 | 114 | 29 | 0 | 50 | 35 |
 | PL | 31 of 38 | 0 of 31 | 160 | 14 | 0 | 141 | 5 |
-| PT | 27 of 39 | 0 of 27 | 137 | 6 | 0 | 124 | 7 |
-| RO | 15 of 39 | 0 of 15 | 98 | 12 | 0 | 77 | 9 |
-| SK | 29 of 39 | 0 of 29 | 143 | 9 | 0 | 131 | 3 |
-| SI | 30 of 38 | 8 of 30 | 127 | 10 | 0 | 114 | 3 |
+| PT | 28 of 39 | 0 of 28 | 142 | 6 | 0 | 129 | 7 |
+| RO | 17 of 39 | 0 of 17 | 108 | 15 | 0 | 84 | 9 |
+| SK | 30 of 39 | 0 of 30 | 148 | 9 | 0 | 136 | 3 |
+| SI | 33 of 38 | 8 of 33 | 139 | 9 | 0 | 127 | 3 |
 | ES | 30 of 39 | 0 of 30 | 155 | 22 | 0 | 129 | 4 |
 | SE | 23 of 38 | 3 of 23 | 125 | 12 | 0 | 102 | 11 |
 

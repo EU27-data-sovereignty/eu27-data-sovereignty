@@ -50,55 +50,55 @@ Luxembourg described on its own measured characteristics. Each figure is the pub
 
 ## 3. Critical data holdings, by priority
 
-The holdings Luxembourg cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 5 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Luxembourg cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 17 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | RNPP, Registre National des Personnes Physiques (National Register of Natural Persons)[^s14] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | listes électorales (electoral lists)[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Land & property registry (tier 1) | Publicité Foncière, PF (Land Publicity integrated management system), linking ACT, AED and the notaries[^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | casier judiciaire national (national criminal record)[^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Fichier central (Central File) of the Police grand-ducale[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s15] | The ACD is the data controller[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s20] | The ACD is the data controller[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s17] | The SNCA handles putting road vehicles into circulation and driving licences[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Beneficial ownership register (tier 1) | Registre des bénéficiaires effectifs, RBE (Register of beneficial owners), managed by Luxembourg Business Registers (LBR)[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s23] | The SNCA handles putting road vehicles into circulation and driving licences[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | système d’entrée/de sortie (Entry/Exit System)[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | Central des secours d’urgences-112, CSU-112 (112 emergency call centre) of the CGDIS[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | *Disputed: sources disagree. Haut-Commissariat à la Protection nationale (HCPN) — La prévention et gestion de crises gives the value this report printed; Haut-Commissariat à la Protection nationale (HCPN) — Test du système d'alerte et d'information à la…, 2026-10-01 gives “LU-Alert (population alert and information system)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s19] | The CNS manages benefits for all private-sector insured persons and State workers[^s20] | The CCSS centralises and processes data on behalf of the social security institutions[^s21] | National infrastructure[^s21] | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Health records (tier 2) | DSP, Dossier de Soins Partagé (Shared Care Record)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s28] | The CNS manages benefits for all private-sector insured persons and State workers[^s29] | The CCSS centralises and processes data on behalf of the social security institutions[^s30] | National infrastructure[^s30] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Journal officiel du Grand-Duché de Luxembourg (Official Journal of the Grand Duchy of Luxembourg), published by the Service central de législation (SCL)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | Registre national des localités et des rues (National Register of Localities and Streets), set up by the ACT[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 5 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 17 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +106,7 @@ Of the 5 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 4 |
+| Not stated in sources | 16 |
 
 ## 5. Legal and institutional posture
 
@@ -131,32 +131,22 @@ Of the 5 verified holdings, how many sources state where the infrastructure is o
 
 Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
 - Facial biometric (tier 0)
 - Fingerprint biometric (tier 0)
 - Breeder document scans (tier 0)
 - Document issuance history (tier 0)
 - Authentication audit log (tier 0)
-- Electoral roll entry (tier 0)
 - State PKI and qualified trust services (tier 0)
 - Residence and migration status (tier 1)
 - Benefits & pensions (tier 1)
-- Land & property registry (tier 1)
 - Business registry (tier 1)
-- Beneficial ownership register (tier 1)
-- Judicial & criminal justice (tier 1)
-- Police information systems (tier 1)
-- Border and visa systems (tier 1)
 - Firearms register (tier 1)
-- Official gazette and legislation (tier 1)
 - Treasury and state accounts (tier 1)
 - Government payroll and personnel (tier 1)
 - Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
-- Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 - Education (tier 1)
@@ -169,7 +159,7 @@ Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -186,17 +176,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -226,8 +216,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -238,8 +228,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -282,7 +272,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -324,7 +314,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -348,6 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -359,7 +350,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Luxembourg
 
-21 of 21 printed facts about Luxembourg pass.
+32 of 32 printed facts about Luxembourg pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -373,17 +364,28 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | param:LU:elec_price_eur_mwh | param:LU:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:LU:renewables_pct | param:LU:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:LU:land_km2 | param:LU:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LU:civil_registry:register | Civil registry core: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LU:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LU:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LU:electoral_roll:register | Electoral roll entry: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LU:land_property:register | Land & property registry: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LU:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LU:police_records:register | Police information systems: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LU:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LU:tax:operator | Tax: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LU:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LU:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LU:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LU:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LU:border_control:register | Border and visa systems: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LU:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LU:health_records:register | Health records: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LU:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LU:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LU:health_insurance:hosting | Statutory health insurance: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:LU:health_insurance:foreign_dependency | Statutory health insurance: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LU:official_gazette:register | Official gazette and legislation: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LU:geospatial:register | Geospatial base data: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 
 ### Withheld after the fact check: Luxembourg
 
@@ -404,15 +406,26 @@ None.
 [^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
 [^s12]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s13]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s14]: LuxTrust — LuxTrust et INCERT scellent un partenariat stratégique…, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
-[^s15]: Administration des contributions directes — Règlement général sur la protection des données (RGPD). Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
-[^s16]: Administration des douanes et accises — eDouane - Services en ligne. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
-[^s17]: Société nationale de circulation automobile — Histoire de la SNCA. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
-[^s18]: Société nationale de circulation automobile — Missions et valeurs - SNCA. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
-[^s19]: Caisse nationale de santé — Affiliation. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
-[^s20]: Caisse nationale de santé — L'assurance maladie en bref. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
-[^s21]: Centre commun de la sécurité sociale — Attributions - Centre commun de la sécurité sociale, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))
+[^s14]: Commission nationale pour la protection des données (CNPD) — FAQ : Registre National des Personnes Physiques (RNPP). FAQ : Registre National des Personnes Physiques (RNPP). <https://cnpd.public.lu/fr/dossiers-thematiques/citoyennete/rnpp.html> ([archived](https://web.archive.org/web/20260911221708/https://cnpd.public.lu/fr/dossiers-thematiques/citoyennete/rnpp.html))
+[^s15]: LuxTrust — LuxTrust et INCERT scellent un partenariat stratégique…, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
+[^s16]: Site officiel des élections au Grand-Duché de Luxembourg — Bilan final des inscriptions pour les élections…, 2024-04-17. Bilan final des inscriptions pour les élections européennes du 9 juin 2024. <https://elections.public.lu/fr/actualites/2024/17-inscriptions-europennes.html> ([archived](https://web.archive.org/web/20260418132628/https://elections.public.lu/fr/actualites/2024/17-inscriptions-europennes.html))
+[^s17]: Administration du cadastre et de la topographie (ACT) — Registres fonciers, 2020-04-09. Registres fonciers. <https://act.public.lu/fr/espace-pro/pubfonc.html> ([archived](https://web.archive.org/web/20260324021452/https://act.public.lu/fr/espace-pro/pubfonc.html))
+[^s18]: Guichet.lu (Luxembourg government portal) — Extrait de casier judiciaire d'une personne physique, 2021-10-12. Extrait de casier judiciaire d'une personne physique. <https://guichet.public.lu/fr/citoyens/citoyennete/certificats-copies-actes-casier-judiciaire/extrait-casier-judiciaire/casier-judiciaire-pers-physique.html>
+[^s19]: Police grand-ducale — Protection des données. Protection des données. <https://police.public.lu/fr/support/protection-des-donnees-a-caractere-personnel.html> ([archived](https://web.archive.org/web/20260720123027/https://police.public.lu/fr/support/protection-des-donnees-a-caractere-personnel.html))
+[^s20]: Administration des contributions directes — Règlement général sur la protection des données (RGPD). Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
+[^s21]: Administration des douanes et accises — eDouane - Services en ligne. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
+[^s22]: Guichet.lu (Luxembourg government portal) — Déclaration des bénéficiaires au registre des…, 2019-09-02. Déclaration des bénéficiaires au registre des bénéficiaires effectifs. <https://guichet.public.lu/fr/entreprises/gestion-juridique-comptabilite/registre-commerce/registre-beneficiaires-effectifs/declaration-beneficiaires-rbe.html> ([archived](https://web.archive.org/web/20260521132908/https://guichet.public.lu/fr/entreprises/gestion-juridique-comptabilite/registre-commerce/registre-beneficiaires-effectifs/declaration-beneficiaires-rbe.html))
+[^s23]: Société nationale de circulation automobile — Histoire de la SNCA. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
+[^s24]: Société nationale de circulation automobile — Missions et valeurs - SNCA. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
+[^s25]: Police grand-ducale — Informations relatives au traitement des données à…, 2026-01. Informations relatives au traitement des données à caractère personnel dans le système d'entrée/de sortie. <https://police.public.lu/dam-assets/fr/aspects-legaux/ees-notice-dinformation-rgpd-fr-20260109.pdf>
+[^s26]: Corps grand-ducal d'incendie et de secours (CGDIS) — CSU-112. CSU-112. <https://112.public.lu/fr/organisation/csu.html> ([archived](https://web.archive.org/web/20260324071036/https://112.public.lu/fr/organisation/csu.html))
+[^s27]: Agence eSanté — Compte eSanté. Compte eSanté. <https://www.esante.lu/portal/fr/je-m-informe/compte-esante-337-472.html> ([archived](https://web.archive.org/web/20210727020800/https://www.esante.lu/portal/fr/je-m-informe/compte-esante-337-472.html))
+[^s28]: Caisse nationale de santé — Affiliation. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
+[^s29]: Caisse nationale de santé — L'assurance maladie en bref. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
+[^s30]: Centre commun de la sécurité sociale — Attributions - Centre commun de la sécurité sociale, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))
+[^s31]: Service central de législation, Ministère d'État — Service central de législation, 2024-09-17. Service central de législation. <https://scl.gouvernement.lu/fr.html> ([archived](https://web.archive.org/web/20260323222646/https://scl.gouvernement.lu/fr.html))
+[^s32]: Administration du cadastre et de la topographie (ACT) — Registre national des adresses. Registre national des adresses. <https://act.public.lu/fr/parcelles-residences/registre-adresses.html> ([archived](https://web.archive.org/web/20260622124822/https://act.public.lu/fr/parcelles-residences/registre-adresses.html))
 
-**Evidence grades:** 0 Strong, 21 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 31 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

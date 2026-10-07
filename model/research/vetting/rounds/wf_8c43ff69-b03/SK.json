@@ -1,0 +1,186 @@
+{
+ "iso": "SK",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:SK:authentication_audit_log:register",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.slovensko.sk/sk/ochrana-udajov",
+   "quote": "V module IAM v ÚPVS bude umožnené prihlasovanie prostredníctvom eIDAS Node pre zahraničné fyzické osoby používajúcich prostriedky elektronickej identifikácie notitifkované členským štátom EÚ.",
+   "quote_english": "In the IAM module of the ÚPVS, login via the eIDAS Node will be enabled for foreign natural persons using electronic identification means notified by an EU member state.",
+   "value": "modul IAM v ÚPVS (IAM module of the Central Public Administration Portal)",
+   "published": "",
+   "title": "Ochrana údajov",
+   "publisher": "Ústredný portál verejnej správy (slovensko.sk)",
+   "doc_type": "official_page",
+   "note": "Operator's own portal names the IAM module of ÚPVS as the login/authentication system; the page does not explicitly describe an authentication log, so this is the authentication system rather than a named audit-log register.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote is on the page, but it only says that the IAM module of ÚPVS will let foreign people log in through the eIDAS Node; it does not name any register or log that records who authenticated to which service and when."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SK:authentication_audit_log:operator",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.slovensko.sk/sk/ochrana-udajov",
+   "quote": "Správcom ústredného portálu je Ministerstvo investícií, regionálneho rozvoja a informatizácie SR. Prevádzkovateľom ústredného portálu je Národná agentúra pre sieťové a elektronické služby",
+   "quote_english": "The administrator of the central portal is the Ministry of Investments, Regional Development and Informatization of the SR. The operator of the central portal is the National Agency for Network and Electronic Services",
+   "value": "Národná agentúra pre sieťové a elektronické služby (National Agency for Network and Electronic Services, NASES)",
+   "published": "",
+   "title": "Ochrana údajov",
+   "publisher": "Ústredný portál verejnej správy (slovensko.sk)",
+   "doc_type": "official_page",
+   "note": "Operator of the central portal (ÚPVS) whose IAM module performs authentication; administrator (správca) is MIRRI.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote is on the page and names the administrator (Ministry of Investments, Regional Development and Informatization) and the operator (NASES) of the central portal ÚPVS; it does not name an authentication audit log or a register of authentication records."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SK:fingerprint_biometric:register",
+   "question": "Fingerprint biometric (Fingerprints captured for passports and ID cards where retained centrally): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.minv.sk/?cestovne-pasy&subor=560142",
+   "quote": "na účely tohto zákona sú biometrickými údajmi podoba tváre a odtlačky prstov v elektronickom čipe podľa osobitného predpisu.",
+   "quote_english": "for the purposes of this act, biometric data are the facial image and fingerprints in the electronic chip under a special regulation.",
+   "value": "odtlačky prstov v elektronickom čipe (fingerprints in the electronic chip of the travel document)",
+   "published": "2025-12-09",
+   "title": "Zákon č. 647/2007 Z. z. o cestovných dokladoch, konsolidované znenie platné od 9. 12. 2025",
+   "publisher": "Ministerstvo vnútra Slovenskej republiky (text from Slov-Lex)",
+   "doc_type": "legislation",
+   "note": "Consolidated act hosted by the Interior Ministry; §29(2) lists the contents of the central passport register (centrálna evidencia cestovných dokladov, kept by the Interior Ministry) as including facial image and signature but not fingerprints, so the act places fingerprints in the chip, not in a named central register.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears in the passport-law PDF and defines biometric data as the facial image and fingerprints stored in the document's electronic chip; it names no central register where fingerprints are kept."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SK:public_finance:register",
+   "question": "Treasury and state accounts (Budget execution, treasury payments and government accounting): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.pokladnica.sk/sk/informacny-system/informacny-system-SP",
+   "quote": "Prostredníctvom IS ŠP komunikujú klienti so ŠP elektronicky, jednoducho, rýchlo a bezpečne realizujú si svoje rozpočty, zakladajú a spravujú si svoje účty, vykonávajú tuzemské a cezhraničné platobné operácie",
+   "quote_english": "Through the IS ŠP, clients communicate with the ŠP electronically, simply, quickly and securely execute their budgets, open and manage their accounts, and carry out domestic and cross-border payment operations",
+   "value": "IS ŠP (Informačný systém Štátnej pokladnice; State Treasury information system)",
+   "published": "2022-06-01",
+   "title": "Informačný systém ŠP",
+   "publisher": "Štátna pokladnica",
+   "doc_type": "official_page",
+   "note": "Operator's own site; page heading is 'Informačný systém ŠP', and it notes external systems connect via an SAP PI interface (software, not hosting).",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "IS ŠP (Informačný systém Štátnej pokladnice)",
+    "reason": "The quote names IS ŠP, the State Treasury information system, as the system clients use to execute budgets, manage accounts and make payments, which answers the treasury-system question; the page heading is 'Informačný systém ŠP'."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SK:public_finance:operator",
+   "question": "Treasury and state accounts (Budget execution, treasury payments and government accounting): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.mfsr.sk/sk/ministerstvo/organizacie-posobnostou-mf-sr/organizacie-kapitoly-ministerstva-financii-slovenskej-republiky/statna-pokladnica/",
+   "quote": "Štátna pokladnica (ďalej len „ŠP“) je rozpočtová organizácia zriadená v zmysle zákona č. 291/2002 Z. z. o Štátnej pokladnici a o zmene a doplnení niektorých zákonov.",
+   "quote_english": "The State Treasury (hereinafter 'ŠP') is a budgetary organisation established under Act No. 291/2002 Coll. on the State Treasury and on amendments to certain acts.",
+   "value": "Štátna pokladnica (State Treasury), a budgetary organisation",
+   "published": "",
+   "title": "Štátna pokladnica",
+   "publisher": "Ministerstvo financií Slovenskej republiky",
+   "doc_type": "official_page",
+   "note": "Ministry of Finance page on the State Treasury, the body that runs IS ŠP.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote is on the page, with the quote marks in a different style, but it only describes Štátna pokladnica as a budgetary organisation set up under Act 291/2002; it names an organisation, not a register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SK:tax:register",
+   "question": "Tax (Tax assessments, returns and payment history for persons and companies): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.financnasprava.sk/sk/financna-sprava/organy-financnej-spravy/financne-riaditelstvo",
+   "quote": "vytvára, rozvíja a prevádzkuje informačné systémy finančnej správy; zámer vykonať činnosti týkajúce sa vytvárania a rozvoja informačných systémov finančnej správy predkladá ministerstvu financií",
+   "quote_english": "creates, develops and operates the information systems of the Financial Administration; submits to the Ministry of Finance its intention to carry out activities relating to the creation and development of the information systems of the Financial Administration",
+   "value": "informačné systémy finančnej správy (information systems of the Financial Administration)",
+   "published": "",
+   "title": "Finančné riaditeľstvo",
+   "publisher": "Finančná správa Slovenskej republiky",
+   "doc_type": "official_page",
+   "note": "Operator's own site, listing the Financial Directorate's competences; same name the earlier blocked statute URL gave.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the Financial Directorate creates and runs 'informačné systémy finančnej správy', which is a generic plural term for the financial administration's systems; it does not name a specific tax register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SK:tax:operator",
+   "question": "Tax (Tax assessments, returns and payment history for persons and companies): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.financnasprava.sk/sk/financna-sprava/ochrana-osobnych-udajov",
+   "quote": "Prevádzkovateľom informačných systémov finančnej správy, v ktorých sa spracúvajú osobné údaje, je Finančné riaditeľstvo",
+   "quote_english": "The operator of the information systems of the Financial Administration in which personal data are processed is the Financial Directorate",
+   "value": "Finančné riaditeľstvo (Financial Directorate of the Slovak Republic)",
+   "published": "",
+   "title": "Ochrana osobných údajov",
+   "publisher": "Finančná správa Slovenskej republiky",
+   "doc_type": "official_page",
+   "note": "Same page notes the customs CIS is operated by the Criminal Office of the Financial Administration as part of OLAF's AFIS platform; the tax systems are operated by the Financial Directorate.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names Finančné riaditeľstvo as the operator of the financial administration's information systems but uses only the generic plural term, so it does not name a specific register of tax assessments and returns."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:SK:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SK:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SK:intelligence:register",
+   "status": "no_better_found",
+   "searched": "sis.gov.sk pages (Úlohy, Charakteristika, OPII, zákon o SIS page that links only to the slov-lex SPA), SIS annual report 2023 PDF (no named records/system); WebSearch budget exhausted; slov-lex static portal not machine-fetchable"
+  },
+  {
+   "claim": "record:SK:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SK:tax:register",
+   "status": "found"
+  }
+ ]
+}

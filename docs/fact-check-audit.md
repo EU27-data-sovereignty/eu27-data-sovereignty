@@ -6,24 +6,24 @@
 
 ## Status
 
-**1424 of 1424 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **55** more are withheld because the check did not confirm them.
+**1490 of 1490 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **57** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 1424 |
+| claude-fable-5-1 | 1490 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
-| supported | 1424 |
+| supported | 1490 |
 | not supported | 0 |
 | unclear | 0 |
 
 | Author of the fact, as recorded | Facts |
 |---|---:|
-| claude-opus-5-5 | 36 |
+| claude-opus-5-5 | 92 |
 | program:fetch_eurostat.py | 162 |
-| unrecorded | 1226 |
+| unrecorded | 1236 |
 
 ## The rule
 
@@ -91,6 +91,7 @@ Facts the checker did not confirm as printed. Each is shown as disputed, with th
 | `record:IE:police_records:register` | claude-fable-5-1 | not supported | wf_72f99a66-4e9 | garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but neither describes it as a 'national incident and intelligence database'; 'intelligence' is added beyond the sources. |
 | `record:IE:public_finance:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the Exchequer's transfer to FMSS'. The source does not say the Exchequer is on FMSS. |
 | `record:IT:breeder_documents:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical '(births, marriages, deaths)' is an addition the cited sources do not state (art. 62 mentions birth and death declarations only as ANPR services, not as ANSC con |
+| `record:LT:trust_services_pki:operator` | claude-fable-5-1 | not supported | wf_b66a7125-0d9 | The RRT page is a register of qualified-certificate providers and lists the Migration Department as one registered provider (order of 13 Nov 2025) alongside VĮ Registrų centras (orders of 2017); it never mentions a state PKI or says the Migration Department operates it. The source therefore does not establish the Migration Department as 'the body that operates' state PKI and qualified trust servic |
 | `record:MT:border_control:operator` | claude-fable-5-1 | not supported | wf_72f99a66-4e9 | Both quotes are present and show the CVU as the central authority for visa policy and the body processing D-visas, but neither page says the CVU operates any border-control system; the CVU page treats 'border control authorities' as separate bodies. The source supports the visa half only, not the CVU as operator of 'border and visa systems' as printed. |
 | `record:PL:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central register. The source therefore documents time-limited storage in a central register, not the absence of one, so it does not support 'No central register' as print |
 | `record:PT:breeder_documents:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope the source states as 'not issued by the Portuguese civil registry', which is not the same thing, and 'paper originals' is likewise not in the text. |
@@ -100,6 +101,7 @@ Facts the checker did not confirm as printed. Each is shown as disputed, with th
 | `record:RO:central_bank:register` | claude-opus-5-5 | not supported | wf_8232a23d-013 | The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that wording does not appear anywhere on the fetched page. |
 | `record:SE:electoral_roll:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a limited 2026 feature for digitally marking received votes. Whether the electoral roll's infrastructure is the one Skatteverket operates is not stated by this source. |
 | `record:SI:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central register' is not what the page says. |
+| `record:SI:water_control:operator` | claude-fable-5-1 | not supported | wf_b66a7125-0d9 | The page says only that ARSO carries out the tasks of the state hydrological service (monitoring, forecasting and warning of hydrological conditions); it says nothing about operating water management control or the water cadastre, which the paired register fact places on the Direkcija za vode page. Hydrological service is a different scope from the printed 'water management control' operator. |
 
 ## Every disagreement on record
 
@@ -199,11 +201,14 @@ Each verdict other than *supported*, from every run, including those a later che
 | wf_e9645602-884 | `record:DE:digital_identity_credentials:hosting` | claude-fable-5-1 | not supported | The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the page; the page itself expands ITZBund as 'IT-Dienstleistungszentrum Berlin'. Only the added gloss fails. | current |
 | wf_e9645602-884 | `record:IE:central_bank:hosting` | claude-fable-5-1 | not supported | The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider' or a transition to a new provider, so that part of the printed statement is added. The Tier-3/active-active part alone would be supported. | current |
 | wf_e9645602-884 | `record:AT:facial_biometric:hosting` | claude-fable-5-1 | not supported | § 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the printed '(state-owned)' is added from outside the source. | current |
+| wf_b66a7125-0d9 | `record:LT:trust_services_pki:operator` | claude-fable-5-1 | not supported | The RRT page is a register of qualified-certificate providers and lists the Migration Department as one registered provider (order of 13 Nov 2025) alongside VĮ Registrų centras (orders of 2017); it never mentions a state PKI or says the Migration Department operates it. The source therefore does not establish the Migration Department as 'the body that operates' state PKI and qualified trust servic | current |
+| wf_b66a7125-0d9 | `record:SI:water_control:operator` | claude-fable-5-1 | not supported | The page says only that ARSO carries out the tasks of the state hydrological service (monitoring, forecasting and warning of hydrological conditions); it says nothing about operating water management control or the water cadastre, which the paired register fact places on the Direkcija za vode page. Hydrological service is a different scope from the printed 'water management control' operator. | current |
 
 ## Runs
 
 | Run | Date | Facts checked | By model | Verdicts | Commit | Bundle SHA-256 | Workflow SHA-256 |
 |---|---|---:|---|---|---|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 | 6ef6ead0f826 | fafffaab5a498ea7 | 2f780d07c1acd7ae |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 | 8291f70e01be | c66e3a7e23512f42 | 2f780d07c1acd7ae |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 | fa40304fce9e | 281207eb5d1c41fa | 2f780d07c1acd7ae |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 | 0683d7fabda3 | 0e95781076d86516 | 2f780d07c1acd7ae |

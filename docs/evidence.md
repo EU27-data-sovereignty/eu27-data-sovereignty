@@ -9,17 +9,17 @@
 
 | | Count |
 |---|---:|
-| Printed facts | 1424 |
-| Strong | 109 |
-| Standard | 1315 |
-| Gaps (values withheld) | 4296 |
-| Disputed (withheld: source changed, or sources disagree) | 76 |
+| Printed facts | 1490 |
+| Strong | 114 |
+| Standard | 1376 |
+| Gaps (values withheld) | 4227 |
+| Disputed (withheld: source changed, or sources disagree) | 79 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
-  "Strong" : 109
-  "Standard" : 1315
+  "Strong" : 114
+  "Standard" : 1376
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -36,8 +36,8 @@ How good is the best source behind each printed fact? Tiers are set per host in 
 ```mermaid
 pie showData
   title "Printed facts by best source tier"
-  "T1" : 651
-  "T2" : 643
+  "T1" : 673
+  "T2" : 687
   "T3" : 8
   "T4" : 122
 ```
@@ -45,11 +45,11 @@ pie showData
 | Tier | Kind of source | Facts |
 |---|---|---:|
 | T1 | eurostat | 162 |
-| T1 | official law portal | 474 |
-| T1 | statistics office | 15 |
+| T1 | official law portal | 495 |
+| T1 | statistics office | 16 |
 | T2 | audit office | 13 |
-| T2 | government or authority | 280 |
-| T2 | public body | 350 |
+| T2 | government or authority | 285 |
+| T2 | public body | 389 |
 | T3 | chamber of commerce | 2 |
 | T3 | company | 5 |
 | T3 | private foundation | 1 |
@@ -73,10 +73,10 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 | Condition not met | Facts |
 |---|---:|
 | Best source below T2 (e.g. an unofficial law mirror) | 147 |
-| Machine summary of a non-English quote, no figure to match | 886 |
-| No archived copy of exactly this URL | 623 |
+| Machine summary of a non-English quote, no figure to match | 942 |
+| No archived copy of exactly this URL | 645 |
 | Categorical: review agreed but was not blind | 164 |
-| A name in the value is not in the quote | 170 |
+| A name in the value is not in the quote | 173 |
 | Secondary source or statement of absence | 29 |
 | Quote matched loosely (punctuation) | 22 |
 
@@ -87,58 +87,58 @@ xychart-beta
   title "Printed facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 78
-  bar [65, 45, 46, 63, 64, 54, 61, 54, 60, 57, 43, 73, 60, 78, 62, 60, 21, 21, 49, 32, 63, 49, 49, 28, 45, 71, 51]
+  bar [65, 46, 46, 63, 64, 56, 71, 54, 62, 57, 51, 73, 62, 78, 66, 61, 24, 32, 62, 32, 63, 49, 50, 30, 45, 76, 52]
 ```
 
 ```mermaid
 xychart-beta
   title "Strong facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
-  y-axis "facts" 0 --> 29
-  bar [4, 5, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 13, 2, 1, 3, 1, 1, 6, 1]
+  y-axis "facts" 0 --> 32
+  bar [4, 5, 4, 4, 4, 1, 7, 3, 4, 0, 2, 6, 4, 2, 32, 1, 0, 1, 2, 13, 2, 1, 3, 1, 1, 6, 1]
 ```
 
 | State | Printed | Strong | Standard | Gaps |
 |---|---:|---:|---:|---:|
 | Austria (AT) | 65 | 4 | 61 | 147 |
-| Belgium (BE) | 45 | 5 | 40 | 167 |
+| Belgium (BE) | 46 | 5 | 41 | 166 |
 | Bulgaria (BG) | 46 | 4 | 42 | 170 |
 | Cyprus (CY) | 63 | 4 | 59 | 149 |
 | Czechia (CZ) | 64 | 4 | 60 | 148 |
-| Germany (DE) | 54 | 1 | 53 | 158 |
-| Denmark (DK) | 61 | 6 | 55 | 155 |
+| Germany (DE) | 56 | 1 | 55 | 156 |
+| Denmark (DK) | 71 | 7 | 64 | 145 |
 | Estonia (EE) | 54 | 3 | 51 | 162 |
-| Greece (EL) | 60 | 4 | 56 | 156 |
+| Greece (EL) | 62 | 4 | 58 | 154 |
 | Spain (ES) | 57 | 0 | 57 | 159 |
-| Finland (FI) | 43 | 2 | 41 | 173 |
+| Finland (FI) | 51 | 2 | 49 | 165 |
 | France (FR) | 73 | 6 | 67 | 143 |
-| Croatia (HR) | 60 | 4 | 56 | 156 |
+| Croatia (HR) | 62 | 4 | 58 | 154 |
 | Hungary (HU) | 78 | 2 | 76 | 138 |
-| Ireland (IE) | 62 | 29 | 33 | 154 |
-| Italy (IT) | 60 | 1 | 59 | 156 |
-| Lithuania (LT) | 21 | 0 | 21 | 195 |
-| Luxembourg (LU) | 21 | 0 | 21 | 195 |
-| Latvia (LV) | 49 | 2 | 47 | 167 |
+| Ireland (IE) | 66 | 32 | 34 | 150 |
+| Italy (IT) | 61 | 1 | 60 | 155 |
+| Lithuania (LT) | 24 | 0 | 24 | 192 |
+| Luxembourg (LU) | 32 | 1 | 31 | 184 |
+| Latvia (LV) | 62 | 2 | 60 | 154 |
 | Malta (MT) | 32 | 13 | 19 | 184 |
 | Netherlands (NL) | 63 | 2 | 61 | 149 |
 | Poland (PL) | 49 | 1 | 48 | 163 |
-| Portugal (PT) | 49 | 3 | 46 | 167 |
-| Romania (RO) | 28 | 1 | 27 | 188 |
+| Portugal (PT) | 50 | 3 | 47 | 166 |
+| Romania (RO) | 30 | 1 | 29 | 186 |
 | Sweden (SE) | 45 | 1 | 44 | 167 |
-| Slovenia (SI) | 71 | 6 | 65 | 141 |
-| Slovakia (SK) | 51 | 1 | 50 | 165 |
+| Slovenia (SI) | 76 | 6 | 70 | 136 |
+| Slovakia (SK) | 52 | 1 | 51 | 164 |
 
 ## By kind of fact
 
 | Kind | Printed | Strong | Standard |
 |---|---:|---:|---:|
-| Register or system | 626 | 46 | 580 |
-| Operator | 359 | 31 | 328 |
+| Register or system | 676 | 51 | 625 |
+| Operator | 374 | 31 | 343 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
 | Sovereignty indicator | 126 | 6 | 120 |
 | Hosting | 67 | 4 | 63 |
 | Infrastructure dependency | 43 | 2 | 41 |
-| Record count | 41 | 20 | 21 |
+| Record count | 42 | 20 | 22 |
 
 ## Disputed facts
 
@@ -200,6 +200,8 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `record:IE:water_control:operator` (IE): Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)
 - `record:IE:water_control:count` (IE): Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)
 - `record:IT:breeder_documents:register` (IT): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again
+- `record:LT:trust_services_pki:operator` (LT): Disputed: the fact check (claude-fable-5-1, run wf_b66a7125-0d9) did not confirm this: The RRT page is a register of qualified-certificate providers and lists the Migration Department as one registered provider (order of 13 Nov 2025) alongside VĮ Registrų centras (orders of 2017); it never mentions a state PKI or says the…. It is withheld until the fact or its source is corrected and checked again
+- `record:LU:crisis_management:register` (LU): Disputed: sources disagree. Haut-Commissariat à la Protection nationale (HCPN) — La prévention et gestion de crises gives the value this report printed; Haut-Commissariat à la Protection nationale (HCPN) — Test du système d'alerte et d'information à la…, 2026-10-01 gives “LU-Alert (population alert and information system)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `indicator:MT:C1` (MT): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
 - `indicator:MT:C2` (MT): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
 - `record:MT:border_control:operator` (MT): Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both quotes are present and show the CVU as the central authority for visa policy and the body processing D-visas, but neither page says the CVU operates any border-control system; the CVU page treats 'border control authorities' as…. It is withheld until the fact or its source is corrected and checked again
@@ -219,6 +221,7 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `record:SE:fingerprint_biometric:register` (SE): Disputed: sources disagree. Sveriges riksdag (Svensk författningssamling) — Passlag (1978:302), 1978 gives the value this report printed; Regeringskansliet (SFS) — Lag (2018:1693) om polisens behandling av…, 2026 gives “Biometriregister (biometric registers) of suspects, convicted persons and traces, kept by Polismyndigheten”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:SE:electoral_roll:foreign_dependency` (SE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a…. It is withheld until the fact or its source is corrected and checked again
 - `record:SI:fingerprint_biometric:register` (SI): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central…. It is withheld until the fact or its source is corrected and checked again
+- `record:SI:water_control:operator` (SI): Disputed: the fact check (claude-fable-5-1, run wf_b66a7125-0d9) did not confirm this: The page says only that ARSO carries out the tasks of the state hydrological service (monitoring, forecasting and warning of hydrological conditions); it says nothing about operating water management control or the water cadastre, which…. It is withheld until the fact or its source is corrected and checked again
 - `record:SK:trust_services_pki:operator` (SK): Disputed: sources disagree. Národná agentúra pre sieťové a elektronické služby (SNCA) — Certifikačná autorita gives the value this report printed; Národná agentúra pre sieťové a elektronické služby — Kvalifikované dôveryhodné služby gives “NASES (Národná agentúra pre sieťové a elektronické služby), operator of SNCA”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 
 ## Help needed
@@ -227,33 +230,33 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 
 | State | Languages | Gaps | Not reached by agents | Sources a machine could not fetch | Reviewers |
 |---|---|---:|---:|---:|---:|
-| Lithuania (LT) | lt | 195 | 0 | 0 | 0 |
-| Luxembourg (LU) | de, fr, lb | 195 | 5 | 65 | 0 |
-| Romania (RO) | ro | 188 | 10 | 33 | 0 |
+| Lithuania (LT) | lt | 192 | 0 | 0 | 0 |
+| Romania (RO) | ro | 186 | 10 | 33 | 0 |
+| Luxembourg (LU) | de, fr, lb | 184 | 5 | 65 | 0 |
 | Malta (MT) | en, mt | 184 | 0 | 0 | 0 |
-| Finland (FI) | fi, sv | 173 | 10 | 0 | 0 |
 | Bulgaria (BG) | bg | 170 | 21 | 16 | 0 |
-| Belgium (BE) | de, fr, nl | 167 | 6 | 6 | 0 |
-| Latvia (LV) | lv | 167 | 0 | 29 | 0 |
-| Portugal (PT) | pt | 167 | 0 | 2 | 0 |
 | Sweden (SE) | sv | 167 | 0 | 0 | 0 |
-| Slovakia (SK) | sk | 165 | 0 | 6 | 0 |
+| Belgium (BE) | de, fr, nl | 166 | 6 | 6 | 0 |
+| Portugal (PT) | pt | 166 | 0 | 2 | 0 |
+| Finland (FI) | fi, sv | 165 | 10 | 0 | 0 |
+| Slovakia (SK) | sk | 164 | 0 | 6 | 0 |
 | Poland (PL) | pl | 163 | 0 | 0 | 0 |
 | Estonia (EE) | et | 162 | 4 | 0 | 0 |
 | Spain (ES) | es | 159 | 10 | 0 | 0 |
-| Germany (DE) | de | 158 | 7 | 1 | 0 |
-| Greece (EL) | el | 156 | 26 | 6 | 0 |
-| Croatia (HR) | hr | 156 | 28 | 0 | 0 |
-| Italy (IT) | it | 156 | 6 | 4 | 0 |
-| Denmark (DK) | da | 155 | 0 | 0 | 0 |
-| Ireland (IE) | en, ga | 154 | 28 | 29 | 0 |
+| Germany (DE) | de | 156 | 7 | 1 | 0 |
+| Italy (IT) | it | 155 | 6 | 4 | 0 |
+| Greece (EL) | el | 154 | 26 | 6 | 0 |
+| Croatia (HR) | hr | 154 | 28 | 0 | 0 |
+| Latvia (LV) | lv | 154 | 0 | 29 | 0 |
+| Ireland (IE) | en, ga | 150 | 28 | 29 | 0 |
 | Cyprus (CY) | el, tr | 149 | 0 | 7 | 0 |
 | Netherlands (NL) | nl | 149 | 0 | 10 | 0 |
 | Czechia (CZ) | cs | 148 | 0 | 6 | 0 |
 | Austria (AT) | de | 147 | 0 | 0 | 0 |
+| Denmark (DK) | da | 145 | 0 | 0 | 0 |
 | France (FR) | fr | 143 | 40 | 4 | 0 |
-| Slovenia (SI) | sl | 141 | 0 | 0 | 0 |
 | Hungary (HU) | hu | 138 | 0 | 4 | 0 |
+| Slovenia (SI) | sl | 136 | 0 | 0 | 0 |
 
 ## Agent runs
 
@@ -263,6 +266,7 @@ Each vetting run leaves a manifest (`model/research/vetting/runs/`): the hashes 
 |---|---|---:|---|---:|---|
 | wf_1c6b8bb6-450 | claude-opus-5-5 | 1017 | 238 / 363 / 26 | 10 | `b38aee676549` |
 | wf_41009054-f6b | claude-opus-5-5 | 20 | 1 / 12 / 0 | 0 | `4bfecf6007ec` |
+| wf_8c43ff69-b03 | claude-opus-5-5 | 144 | 3 / 61 / 0 | 1 | `03db7944318f` |
 
 ## How the checks run
 

@@ -1,0 +1,290 @@
+{
+ "iso": "RO",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:RO:breeder_documents:register",
+   "question": "Breeder document scans (Birth certificates, naturalisation decrees and other documents that establish identity): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://dgep.mai.gov.ro/1-an-de-la-operationalizarea-siieasc-la-nivel-national/",
+   "quote": "s-a împlinit un an de la operaționalizarea, la nivel național, a Sistemului Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC ), proiect strategic",
+   "quote_english": "one year has passed since the national roll-out of the Integrated IT System for Issuing Civil Status Documents (SIIEASC), a strategic project",
+   "value": "Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă – SIIEASC (Integrated IT System for Issuing Civil Status Documents)",
+   "published": "2026-04-03",
+   "title": "1 an de la operaționalizarea SIIEASC la nivel național",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "DGEP's new site (dgep.mai.gov.ro, the old depabd.mai.gov.ro now redirects here) announces SIIEASC, which holds the electronic archive of civil status acts; a different URL from the unfetchable depabd one.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)",
+    "reason": "The page text matches the quote apart from whitespace inside the parenthesis ('(SIIEASC</strong>)'). It names SIIEASC as the national system for issuing civil status documents, but it does not mention scans of breeder documents."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:breeder_documents:count",
+   "question": "Breeder document scans (Birth certificates, naturalisation decrees and other documents that establish identity): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://dgep.mai.gov.ro/1-an-de-la-operationalizarea-siieasc-la-nivel-national/",
+   "quote": "În ceea ce privește actele de stare civilă stocate în arhiva electronică, precizăm că au fost validate 2.926.784 acte de stare civilă dintre care 2.083.926 acte de naștere",
+   "quote_english": "As regards the civil status records stored in the electronic archive, 2,926,784 civil status records have been validated, of which 2,083,926 birth records",
+   "value": "2.926.784 acte de stare civilă (civil status records) validated in the SIIEASC electronic archive",
+   "published": "2026-04-03",
+   "title": "1 an de la operationalizarea SIIEASC la nivel național",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "Count of digitised civil status records validated in the electronic archive as of the one-year mark (31 March 2026); not the total historical stock.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim, but it only gives counts of validated records in an unnamed 'arhiva electronică', so it does not name the register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:civil_registry:register",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://dgep.mai.gov.ro/istoric-institutie/",
+   "quote": "înfiinţarea Registrului Naţional de Evidenţă a Persoanelor ca principală parte componentă a Sistemului Naţional Informatic de Evidenţă a Populaţiei.",
+   "quote_english": "the establishment of the National Register of Persons Records as the main component of the National IT System for Population Records.",
+   "value": "Registrul Naţional de Evidenţă a Persoanelor (National Register of Persons Records), main component of the Sistemul Naţional Informatic de Evidenţă a Populaţiei",
+   "published": "",
+   "title": "Istoric instituție",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "DGEP's history page on its new domain; the old depabd.mai.gov.ro pages meta-refresh here.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Registrul Naţional de Evidenţă a Persoanelor (RNEP), the main component of the Sistemul Naţional Informatic de Evidenţă a Populaţiei",
+    "reason": "The quote appears verbatim on the DGEP history page and names the national population register and the system it belongs to."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:issuance_history:register",
+   "question": "Document issuance history (Which passports and ID cards were issued to whom, and their revocation state): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://pasapoarte.mai.gov.ro/wp-content/uploads/2021/02/ORDIN-nr.-288-din-20-decembrie-2011.pdf",
+   "quote": "d) constituie, administrează, valorifică şi actualizează Registrul naţional de evidenţă a paşapoartelor simple, denumit în continuare RNEPS, şi furnizează, la cerere, date din cuprinsul acestuia, în condiţiile legii;",
+   "quote_english": "d) establishes, administers, uses and updates the National Register of Simple Passports, hereinafter RNEPS, and supplies data from it on request, under the law;",
+   "value": "Registrul naţional de evidenţă a paşapoartelor simple – RNEPS (National Register of Simple Passports)",
+   "published": "2021-02-17",
+   "title": "Ordin nr. 288 din 20 decembrie 2011 pentru aprobarea Regulamentului de organizare şi funcţionare a Direcţiei Generale de Paşapoarte (consolidated)",
+   "publisher": "Direcția Generală de Pașapoarte (MAI)",
+   "doc_type": "legislation",
+   "note": "Art. 11 of the DGP organisation regulation lists this among the attributions of the Direcţia Generală de Paşapoarte (the operator); it covers passports only, not ID cards; consolidated text is a CTCE copy hosted by DGP itself.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Registrul naţional de evidenţă a paşapoartelor simple (RNEPS)",
+    "reason": "The quote appears verbatim in Article 11(d) of the extracted text of the order, among the duties of the Direcţia generală de paşapoarte. It names the passport register (covering ordinary passports only)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:firearms_register:register",
+   "question": "Firearms register (Licensed firearms and their holders): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://politiaromana.ro/files/pages_files/LEGEA_295_din_2004_actualizata.pdf",
+   "quote": "(1) În cadrul Inspectoratului General al Poliţiei Române funcţionează Registrul Naţional al Armelor, ca sistem complex de prelucrare a datelor cu privire la evidenţa armelor şi a componentelor esenţiale, a deţinătorilor de arme",
+   "quote_english": "(1) The National Firearms Register operates within the General Inspectorate of the Romanian Police, as a complex data-processing system for records of firearms and essential components, of firearm holders",
+   "value": "Registrul Naţional al Armelor (National Firearms Register)",
+   "published": "2026-03-19",
+   "title": "Legea nr. 295/2004 privind regimul armelor, componentelor esențiale şi al muniţiilor (republicată, consolidated)",
+   "publisher": "Inspectoratul General al Poliţiei Române",
+   "doc_type": "legislation",
+   "note": "Art. 97 of Law 295/2004 as consolidated to 19-03-2026, hosted by the Romanian Police; the same article also establishes the eARM online platform.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Registrul Naţional al Armelor",
+    "reason": "The quote appears verbatim in the text extracted from the Law 295/2004 PDF. It names the national firearms register, which records firearms and their holders and runs within the IGPR."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:firearms_register:operator",
+   "question": "Firearms register (Licensed firearms and their holders): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://politiaromana.ro/files/pages_files/LEGEA_295_din_2004_actualizata.pdf",
+   "quote": "(1) În cadrul Inspectoratului General al Poliţiei Române funcţionează Registrul Naţional al Armelor, ca sistem complex de prelucrare a datelor cu privire la evidenţa armelor şi a componentelor esenţiale, a deţinătorilor de arme",
+   "quote_english": "(1) The National Firearms Register operates within the General Inspectorate of the Romanian Police, as a complex data-processing system for records of firearms and essential components, of firearm holders",
+   "value": "Inspectoratul General al Poliţiei Române (General Inspectorate of the Romanian Police)",
+   "published": "2026-03-19",
+   "title": "Legea nr. 295/2004 privind regimul armelor, componentelor esențiale şi al muniţiilor (republicată, consolidated)",
+   "publisher": "Inspectoratul General al Poliţiei Române",
+   "doc_type": "legislation",
+   "note": "Operator of the National Firearms Register per Art. 97(1).",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Registrul Naţional al Armelor",
+    "reason": "This is the same quote and document as item 4. It appears verbatim and names the national firearms register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:judicial_criminal:register",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.politiaromana.ro/ro/politia-romana/unitati-centrale/directia-cazier-judiciar-statistica-si-evidente-operative",
+   "quote": "Principalele atribuţii ale Direcţiei Cazier Judiciar, Statistică şi Evidenţe Operative: Organizează, în condiţiile legii, cazierul judiciar pentru ţinerea evidenţei persoanelor fizice şi juridice condamnate",
+   "quote_english": "Main attributions of the Directorate for Criminal Records, Statistics and Operative Records: organises, under the law, the criminal record for keeping records of natural and legal persons convicted",
+   "value": "cazierul judiciar (criminal record), organised by the Direcţia Cazier Judiciar, Statistică şi Evidenţe Operative (Directorate for Criminal Records, Statistics and Operative Records)",
+   "published": "",
+   "title": "Direcţia Cazier Judiciar, Statistică şi Evidenţe Operative",
+   "publisher": "Poliția Română (IGPR)",
+   "doc_type": "official_page",
+   "note": "Covers criminal records only, not court case files or judgments; also establishes the operator.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Cazierul judiciar",
+    "reason": "The quote appears verbatim on the police directorate page and names the criminal record register (cazierul judiciar). It covers criminal records only, not court case files."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://monitoruloficial.ro/wp-content/uploads/2022/06/L202_1998.pdf",
+   "quote": "Art. 1. — Monitorul Oficial al României este publicația oficială a statului român, în care se publică actele prevăzute de Constituție, de prezenta lege și de alte acte normative.",
+   "quote_english": "Art. 1. — The Official Gazette of Romania is the official publication of the Romanian state, in which the acts provided for by the Constitution, this law and other normative acts are published.",
+   "value": "Monitorul Oficial al României (Official Gazette of Romania)",
+   "published": "2017-07-03",
+   "title": "Legea nr. 202/1998 privind organizarea Monitorului Oficial al României (republicată, M. Of. Partea I nr. 511/2017)",
+   "publisher": "Regia Autonomă „Monitorul Oficial”",
+   "doc_type": "legislation",
+   "note": "Republished law text as it appeared in the Official Gazette, hosted by the gazette's publisher.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Monitorul Oficial al României",
+    "reason": "Art. 1 appears verbatim in the extracted text of Law 202/1998, apart from line breaks. It names the official gazette where legal acts are published."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:official_gazette:operator",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://monitoruloficial.ro/wp-content/uploads/2022/06/L202_1998.pdf",
+   "quote": "Art. 18. — Regia Autonomă „Monitorul Oficial” editează Monitorul Oficial al României atât în format tipărit, cât și în format electronic.",
+   "quote_english": "Art. 18. — The Autonomous Company 'Monitorul Oficial' publishes the Official Gazette of Romania in both printed and electronic format.",
+   "value": "Regia Autonomă „Monitorul Oficial” (Autonomous Company 'Monitorul Oficial')",
+   "published": "2017-07-03",
+   "title": "Legea nr. 202/1998 privind organizarea Monitorului Oficial al României (republicată, M. Of. Partea I nr. 511/2017)",
+   "publisher": "Regia Autonomă „Monitorul Oficial”",
+   "doc_type": "legislation",
+   "note": "Operator that produces the gazette in print and electronic form; it works under the Government through the General Secretariat of the Government per Art. 3.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Monitorul Oficial al României",
+    "reason": "Art. 18 appears verbatim in the extracted text, apart from line breaks. It names the gazette, which the Regia Autonomă 'Monitorul Oficial' publishes in print and electronic form."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:public_finance:register",
+   "question": "Treasury and state accounts (Budget execution, treasury payments and government accounting): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://mfinante.gov.ro/web/forexepublic/punct-unic-de-acces",
+   "quote": "Ați accesat Portalul FOREXEBUG al Ministerului Finanțelor! Bun venit! Pentru accesarea funcționalităților Punctului Unic de Acces, este necesară autentificarea.",
+   "quote_english": "You have accessed the FOREXEBUG Portal of the Ministry of Finance! Welcome! Authentication is required to access the functions of the Single Point of Access.",
+   "value": "Portalul FOREXEBUG (FOREXEBUG portal) of the Ministerul Finanțelor",
+   "published": "",
+   "title": "Punct unic de acces - ForexePublic",
+   "publisher": "Ministerul Finanțelor",
+   "doc_type": "official_page",
+   "note": "The same page states that budget commitment execution reports (Execuție Angajamente Bugetare) are sent to public institutions through it; it is a reporting portal rather than the treasury ledger itself. This subpage URL differs from the earlier cited root.",
+   "review": {
+    "id": 9,
+    "quote_found": false,
+    "established": "",
+    "reason": "The page could not be fetched: WebFetch and curl both failed with ECONNRESET or a connection error several times, so the quote could not be verified. A FOREXEBUG portal login page would not by itself establish the treasury system in any case."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:benefits_pensions:register",
+   "question": "Benefits & pensions (Entitlements, contributions and payment history for social security and state pensions): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.cnpp.ro/comunicat-noul-sistem-informatic-integrat-al-casei-nationale-de-pensii-publice/",
+   "quote": "Casa Națională de Pensii Publice începe modernizarea sistemului informatic integrat",
+   "quote_english": "The National Public Pension House begins modernising the integrated IT system",
+   "value": "sistemul informatic integrat (integrated IT system) of Casa Națională de Pensii Publice",
+   "published": "2024-05-17",
+   "title": "Comunicat noul sistem informatic integrat al Casei Naționale de Pensii Publice",
+   "publisher": "Casa Națională de Pensii Publice",
+   "doc_type": "official_page",
+   "note": "A generic system name, not a formally named register; an earlier attempt with the same value failed blind review, so this may again be judged too generic. The release also says HG 496/2024 funds a new integrated system.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim in the CNPP press release of 17.05.2024. It refers only generically to modernising CNPP's 'sistemul informatic integrat', with no proper name for the pensions register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:RO:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:fingerprint_biometric:register",
+   "status": "no_better_found",
+   "searched": "carteadeidentitate.gov.ro home/utile/FAQ (only says two fingerprints are captured), dgep.mai.gov.ro CEI and data-protection pages, pasapoarte.mai.gov.ro data-protection page and PDF, politiaromana.ro INC page; only the 4AFIS2AFIS project page (the earlier URL) names national fingerprint systems; legislatie.just.ro unreachable"
+  },
+  {
+   "claim": "record:RO:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:public_finance:register",
+   "status": "found"
+  }
+ ]
+}

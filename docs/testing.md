@@ -32,7 +32,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 9 | PDFs compile and are inspected | 28 PDFs build; `book/check_pdfs.py` checks each one: disclaimer, both appendices, country named, fonts embedded, size budget, and the 4 previews (needs poppler; CI installs it) |
 | 10–13 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
 | 14 | Production build | `vite build` succeeds |
-| 15 | Size budget | gzipped: data bundle ≤ 900 KB, all JavaScript ≤ 400 KB |
+| 15 | Size budget | gzipped: data bundle ≤ 1,100 KB (900 KB until 2026-10-06), all JavaScript ≤ 400 KB |
 | 16 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
 | 17 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |

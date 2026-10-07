@@ -50,7 +50,7 @@ Slovakia described on its own measured characteristics. Each figure is the publi
 
 ## 3. Critical data holdings, by priority
 
-The holdings Slovakia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 29 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
+The holdings Slovakia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 30 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -80,25 +80,25 @@ The holdings Slovakia cannot let depend on infrastructure a foreign state can co
 | High | Vehicle & licensing (tier 1) | Evidencia vozidiel (vehicle register), an information system of the Police Force[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | Police Force records on undesirable persons, border-control data on foreigners and illegal stay[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | Police Force information system on firearms licences, holders and registered weapons[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office[^s28] | Government Office of the Slovak Republic (Úrad vlády SR)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | IS ŠP (Informačný systém Štátnej pokladnice; State Treasury information system)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office[^s29] | Government Office of the Slovak Republic (Úrad vlády SR)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Election management and results (tier 1) | Register kandidátov a kandidátnych listín (Register of candidates and candidate lists), created and operated by the Ministry of Interior[^s16] | Election results are processed through the information system of the Statistical Office of the Slovak Republic[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | Coordination centres receive 112 calls, eCall and SMS emergency communications[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Informačný systém krízového riadenia štátu (state crisis management information system)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Dispatch control of the transmission system, incl. defence and restoration plan in a blackout[^s32] | SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail)[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | Coordination centres receive 112 calls, eCall and SMS emergency communications[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Informačný systém krízového riadenia štátu (state crisis management information system)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Dispatch control of the transmission system, incl. defence and restoration plan in a blackout[^s33] | SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | Centrálny register (central register of children, pupils and students) under the School Act[^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre[^s35] | National Health Information Centre (NCZI, 'národné centrum')[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Slov-Lex, the public administration information system administered and operated by the Ministry of Justice[^s36] | The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Centrálny register (central register of children, pupils and students) under the School Act[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre[^s36] | National Health Information Centre (NCZI, 'národné centrum')[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Slov-Lex, the public administration information system administered and operated by the Ministry of Justice[^s37] | The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities[^s37] | The Electronic Archive also archives structured data and data from Ministry of Interior production systems[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities[^s38] | The Electronic Archive also archives structured data and data from Ministry of Interior production systems[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Register adries (Address Register), administered by the Ministry of Interior[^s38] | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Register adries (Address Register), administered by the Ministry of Interior[^s39] | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 29 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 30 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +106,7 @@ Of the 29 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 29 |
+| Not stated in sources | 30 |
 
 ## 5. Legal and institutional posture
 
@@ -135,7 +135,6 @@ Tier 0 and 1 holdings for Slovakia without a verified source yet. Corrections an
 - Authentication audit log (tier 0)
 - Tax (tier 1)
 - Customs declarations (tier 1)
-- Treasury and state accounts (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
 - Water management control (tier 1)
@@ -148,7 +147,7 @@ Tier 0 and 1 holdings for Slovakia without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -165,17 +164,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -205,8 +204,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -217,8 +216,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -261,7 +260,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -303,7 +302,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -327,6 +326,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -338,7 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Slovakia
 
-51 of 51 printed facts about Slovakia pass.
+52 of 52 printed facts about Slovakia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -375,6 +375,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SK:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SK:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SK:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SK:public_finance:register | Treasury and state accounts: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:SK:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SK:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SK:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -427,19 +428,20 @@ None.
 [^s25]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o registri partnerov verejného sektora 315/2016. Zákon o registri partnerov verejného sektora 315/2016. <https://zakony.judikaty.info/predpis/zakon-315/2016> ([archived](https://web.archive.org/web/20240522091210/https://zakony.judikaty.info/predpis/zakon-315/2016))
 [^s26]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o cestnej premávke 8/2009. Zákon o cestnej premávke 8/2009. <https://zakony.judikaty.info/predpis/zakon-8/2009> ([archived](https://web.archive.org/web/20240225121954/https://zakony.judikaty.info/predpis/zakon-8/2009))
 [^s27]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o strelných zbraniach a strelive 190/2003. Zákon o strelných zbraniach a strelive 190/2003. <https://zakony.judikaty.info/predpis/zakon-190/2003> ([archived](https://web.archive.org/web/20240521050240/https://zakony.judikaty.info/predpis/zakon-190/2003))
-[^s28]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o štátnej službe 55/2017. Zákon o štátnej službe 55/2017. <https://zakony.judikaty.info/predpis/zakon-55/2017>
-[^s29]: Národná banka Slovenska — Platobné systémy. Platobné systémy. <https://nbs.sk/platby/platobne-systemy/> ([archived](https://web.archive.org/web/20260617103250/https://nbs.sk/platby/platobne-systemy/))
-[^s30]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o integrovanom záchrannom systéme 129/2002. Zákon o integrovanom záchrannom systéme 129/2002. <https://zakony.judikaty.info/predpis/zakon-129/2002> ([archived](https://web.archive.org/web/20250624004629/https://zakony.judikaty.info/predpis/zakon-129/2002))
-[^s31]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o riadení štátu v krízových situáciách mimo času…. Zákon o riadení štátu v krízových situáciách mimo času vojny a vojnového stavu 387/2002. <https://zakony.judikaty.info/predpis/zakon-387/2002>
-[^s32]: Slovenská elektrizačná prenosová sústava, a. s. — Dispečing. Dispečing. <https://www.sepsas.sk/pre-partnerov/dispecing/> ([archived](https://web.archive.org/web/20260614225618/https://www.sepsas.sk/pre-partnerov/dispecing/))
-[^s33]: Slovenská elektrizačná prenosová sústava, a. s. — O spoločnosti. O spoločnosti. <https://www.sepsas.sk/o-nas/o-spolocnosti/> ([archived](https://web.archive.org/web/20260516114637/https://www.sepsas.sk/o-nas/o-spolocnosti/))
-[^s34]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o výchove a vzdelávaní (školský zákon) 245/2008. Zákon o výchove a vzdelávaní (školský zákon) 245/2008. <https://zakony.judikaty.info/predpis/zakon-245/2008> ([archived](https://web.archive.org/web/20240715115213/https://zakony.judikaty.info/predpis/zakon-245/2008))
-[^s35]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o národnom zdravotníckom informačnom systéme 153/2013. Zákon o národnom zdravotníckom informačnom systéme 153/2013. <https://zakony.judikaty.info/predpis/zakon-153/2013> ([archived](https://web.archive.org/web/20250624093444/https://zakony.judikaty.info/predpis/zakon-153/2013))
-[^s36]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o tvorbe právnych predpisov a o Zbierke zákonov…. Zákon o tvorbe právnych predpisov a o Zbierke zákonov Slovenskej republiky 400/2015. <https://zakony.judikaty.info/predpis/zakon-400/2015> ([archived](https://web.archive.org/web/20250624015208/https://zakony.judikaty.info/predpis/zakon-400/2015))
-[^s37]: Ministerstvo vnútra Slovenskej republiky — Elektronický archív Slovenska MV SR. Elektronický archív Slovenska MV SR. <https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr>
-[^s38]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o registri adries 125/2015. Zákon o registri adries 125/2015. <https://zakony.judikaty.info/predpis/zakon-125/2015> ([archived](https://web.archive.org/web/20210228034237/https://zakony.judikaty.info/predpis/zakon-125/2015))
-[^s39]: Úrad geodézie, kartografie a katastra Slovenskej republiky — Výročná správa ÚGKK SR za rok 2025, 2026. Výročná správa ÚGKK SR za rok 2025. <https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf> ([archived](https://web.archive.org/web/20260609112750/https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf))
+[^s28]: Štátna pokladnica — Informačný systém ŠP, 2022-06-01. Informačný systém ŠP. <https://www.pokladnica.sk/sk/informacny-system/informacny-system-SP> ([archived](https://web.archive.org/web/20260222135232/https://www.pokladnica.sk/sk/informacny-system/informacny-system-SP))
+[^s29]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o štátnej službe 55/2017. Zákon o štátnej službe 55/2017. <https://zakony.judikaty.info/predpis/zakon-55/2017>
+[^s30]: Národná banka Slovenska — Platobné systémy. Platobné systémy. <https://nbs.sk/platby/platobne-systemy/> ([archived](https://web.archive.org/web/20260617103250/https://nbs.sk/platby/platobne-systemy/))
+[^s31]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o integrovanom záchrannom systéme 129/2002. Zákon o integrovanom záchrannom systéme 129/2002. <https://zakony.judikaty.info/predpis/zakon-129/2002> ([archived](https://web.archive.org/web/20250624004629/https://zakony.judikaty.info/predpis/zakon-129/2002))
+[^s32]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o riadení štátu v krízových situáciách mimo času…. Zákon o riadení štátu v krízových situáciách mimo času vojny a vojnového stavu 387/2002. <https://zakony.judikaty.info/predpis/zakon-387/2002>
+[^s33]: Slovenská elektrizačná prenosová sústava, a. s. — Dispečing. Dispečing. <https://www.sepsas.sk/pre-partnerov/dispecing/> ([archived](https://web.archive.org/web/20260614225618/https://www.sepsas.sk/pre-partnerov/dispecing/))
+[^s34]: Slovenská elektrizačná prenosová sústava, a. s. — O spoločnosti. O spoločnosti. <https://www.sepsas.sk/o-nas/o-spolocnosti/> ([archived](https://web.archive.org/web/20260516114637/https://www.sepsas.sk/o-nas/o-spolocnosti/))
+[^s35]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o výchove a vzdelávaní (školský zákon) 245/2008. Zákon o výchove a vzdelávaní (školský zákon) 245/2008. <https://zakony.judikaty.info/predpis/zakon-245/2008> ([archived](https://web.archive.org/web/20240715115213/https://zakony.judikaty.info/predpis/zakon-245/2008))
+[^s36]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o národnom zdravotníckom informačnom systéme 153/2013. Zákon o národnom zdravotníckom informačnom systéme 153/2013. <https://zakony.judikaty.info/predpis/zakon-153/2013> ([archived](https://web.archive.org/web/20250624093444/https://zakony.judikaty.info/predpis/zakon-153/2013))
+[^s37]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o tvorbe právnych predpisov a o Zbierke zákonov…. Zákon o tvorbe právnych predpisov a o Zbierke zákonov Slovenskej republiky 400/2015. <https://zakony.judikaty.info/predpis/zakon-400/2015> ([archived](https://web.archive.org/web/20250624015208/https://zakony.judikaty.info/predpis/zakon-400/2015))
+[^s38]: Ministerstvo vnútra Slovenskej republiky — Elektronický archív Slovenska MV SR. Elektronický archív Slovenska MV SR. <https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr>
+[^s39]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o registri adries 125/2015. Zákon o registri adries 125/2015. <https://zakony.judikaty.info/predpis/zakon-125/2015> ([archived](https://web.archive.org/web/20210228034237/https://zakony.judikaty.info/predpis/zakon-125/2015))
+[^s40]: Úrad geodézie, kartografie a katastra Slovenskej republiky — Výročná správa ÚGKK SR za rok 2025, 2026. Výročná správa ÚGKK SR za rok 2025. <https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf> ([archived](https://web.archive.org/web/20260609112750/https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf))
 
-**Evidence grades:** 1 Strong, 50 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 51 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

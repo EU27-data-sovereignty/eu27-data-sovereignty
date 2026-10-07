@@ -1,0 +1,337 @@
+{
+ "iso": "DK",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:DK:digital_identity_credentials:register",
+   "question": "Digital identity credentials (The national eID scheme's accounts, credentials and assurance levels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://digst.dk/it-loesninger/mitid/om-mitid/",
+   "quote": "MitID er Danmarks digitale ID. Med det beviser du, hvem du er på nettet fx når du skal overføre penge i netbank eller logge på borger.dk.",
+   "quote_english": "MitID is Denmark's digital ID. With it you prove who you are online, e.g. when transferring money in online banking or logging in to borger.dk.",
+   "value": "MitID (Denmark's digital ID)",
+   "published": "",
+   "title": "Om MitID",
+   "publisher": "Digitaliseringsstyrelsen",
+   "doc_type": "official_page",
+   "note": "Page of the agency responsible for MitID; replaces the retsinformation XML lead whose quote could not be found.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "MitID",
+    "reason": "The quote states MitID is Denmark's digital ID used to prove identity online, naming the national eID system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:digital_identity_credentials:count",
+   "question": "Digital identity credentials (The national eID scheme's accounts, credentials and assurance levels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://digst.dk/it-loesninger/mitid/om-mitid/",
+   "quote": "MitID er en af de største omlægninger af det digitale Danmark nogensinde og ca. 5 mio. brugere har skulle tage en ny digital løsning i brug.",
+   "quote_english": "MitID is one of the largest transitions of digital Denmark ever, and approx. 5 million users have had to adopt a new digital solution.",
+   "value": "ca. 5 mio. brugere (approx. 5 million users)",
+   "published": "",
+   "title": "Om MitID",
+   "publisher": "Digitaliseringsstyrelsen",
+   "doc_type": "official_page",
+   "note": "Count of users who migrated to MitID; undated page, so treat as approximate.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "MitID",
+    "reason": "The quote names MitID as a digital solution with about 5 million users, which identifies the eID system, though it is less direct than item 0."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:electoral_roll:register",
+   "question": "Electoral roll entry (Who is entitled to vote where): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.valg.im.dk/vaelgere/hvordan-stemmer-jeg",
+   "quote": "For at kunne stemme til folketingsvalg, valg til Europa-Parlamentet, kommunale og regionale valg og landsdækkende folkeafstemninger skal du være optaget på valglisten.",
+   "quote_english": "To vote in general elections, European Parliament elections, municipal and regional elections and national referendums you must be entered on the electoral roll.",
+   "value": "valglisten (the electoral roll)",
+   "published": "",
+   "title": "Hvordan stemmer jeg?",
+   "publisher": "Økonomi- og Indenrigsministeriet (valg.im.dk)",
+   "doc_type": "official_page",
+   "note": "Competent ministry's election site; the same page says entry depends on CPR registration.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "valglisten",
+    "reason": "The quote says voters must be on the valgliste to vote; page context says it is derived from CPR registration by municipality."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:benefits_pensions:register",
+   "question": "Benefits & pensions (Entitlements, contributions and payment history for social security and state pensions): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.atp.dk/en/our-tasks/processing-welfare-benefits/udbetaling-danmark",
+   "quote": "Udbetaling Danmark is the authority responsible for the collection, disbursement and control of a number of public benefits.",
+   "quote_english": "",
+   "value": "Udbetaling Danmark (the authority responsible for collection, disbursement and control of public benefits)",
+   "published": "",
+   "title": "Udbetaling Danmark",
+   "publisher": "ATP",
+   "doc_type": "official_page",
+   "note": "ATP runs Udbetaling Danmark's administration; the same page says the state and municipalities pay ATP's costs for the tasks. It names an authority, not a register.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names Udbetaling Danmark as the authority that handles benefits, but names no register or system, so strictly it gives no system name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:business_registry:register",
+   "question": "Business registry (Legal entities, officers and filings): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://erhvervsstyrelsen.dk/det-centrale-virksomhedsregister-cvr",
+   "quote": "Siden 1999 har det Centrale Virksomhedsregister (CVR) været det autoritative register for grunddata om alle registrerede virksomheder.",
+   "quote_english": "Since 1999 the Central Business Register (CVR) has been the authoritative register for basic data on all registered businesses.",
+   "value": "det Centrale Virksomhedsregister (CVR) (Central Business Register)",
+   "published": "2026-08-24",
+   "title": "Det Centrale Virksomhedsregister (CVR)",
+   "publisher": "Erhvervsstyrelsen",
+   "doc_type": "official_page",
+   "note": "The operator's own page, updated 24 August 2026.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Det Centrale Virksomhedsregister (CVR)",
+    "reason": "The quote names CVR as the authoritative register for basic data on all registered businesses."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:land_property:register",
+   "question": "Land & property registry (Title, ownership, mortgages and cadastral parcels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://lifeindenmark.borger.dk/actionpage?selfserviceid=55e49bf5-c72a-4d3b-a209-489129a8fa70",
+   "quote": "The Land Register (in Danish: Tingbogen) is a public register which records certain rights to real property, cooperative housing, chattels, vehicles and the like.",
+   "quote_english": "",
+   "value": "Tingbogen (the Land Register)",
+   "published": "",
+   "title": "Access the digital Land Register",
+   "publisher": "Life in Denmark (borger.dk, Digitaliseringsstyrelsen)",
+   "doc_type": "official_page",
+   "note": "domstol.dk (Tinglysningsretten) blocks machine fetches with a Cloudflare challenge, so this uses the official citizen portal instead; the lifeindenmark.borger.dk host may need classifying in authorities.csv.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Tingbogen (the Land Register)",
+    "reason": "The quote names Tingbogen as the public register that records rights over real property."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.civilstyrelsen.dk/sagsomraader/retsinformation/lovtidende",
+   "quote": "Lovtidende indeholder således først og fremmest de love, som vedtages af Folketinget, og de bekendtgørelser, ministerierne udsteder med hjemmel i lov. Lovtidende er fra 1. januar 2008 en elektronisk publikation.",
+   "quote_english": "Lovtidende thus contains above all the laws adopted by the Folketing and the executive orders the ministries issue under statutory authority. From 1 January 2008 Lovtidende is an electronic publication.",
+   "value": "Lovtidende (Law Gazette), an electronic publication from 1 January 2008",
+   "published": "",
+   "title": "Lovtidende",
+   "publisher": "Civilstyrelsen",
+   "doc_type": "official_page",
+   "note": "Page of the agency that publishes Lovtidende; it also cites the Lovtidende Act (LBK 1098/2016).",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Lovtidende",
+    "reason": "The quote names Lovtidende as the publication of laws and executive orders, electronic since 1 January 2008; the passage is contiguous on the page (checked in the raw HTML)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:tax:register",
+   "question": "Tax (Tax assessments, returns and payment history for persons and companies): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://skat.dk/erhverv/guides-og-webinarer-til-start-ups/start-up-med-skat/for-selskaber/ansatte/del-3-indberet-loen-og-betal-skat",
+   "quote": "Alle arbejdsgivere skal indberette lønoplysninger i Skattestyrelsens system eIndkomst.",
+   "quote_english": "All employers must report wage information in the Danish Tax Agency's system eIndkomst.",
+   "value": "eIndkomst (Skattestyrelsen's system for wage information)",
+   "published": "",
+   "title": "Del 3: Indberet løn og betal skat",
+   "publisher": "Skattestyrelsen (skat.dk)",
+   "doc_type": "official_page",
+   "note": "Operator's own page. It names the income register, not the whole tax-assessment system.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "eIndkomst",
+    "reason": "The quote names eIndkomst as the Skattestyrelsen system where employers report wage data, which is part of the tax holdings."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:water_control:register",
+   "question": "Water management control (Flood defence, water board and drinking-water control systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.geus.dk/produkter-ydelser-og-faciliteter/data-og-kort/national-boringsdatabase-jupiter",
+   "quote": "Jupiter er GEUS' landsdækkende database for grundvands-, drikkevands-, råstof-, miljø- og geotekniske data. Databasen er den fællesoffentlige database på området og indgår i Danmarks Miljøportal.",
+   "quote_english": "Jupiter is GEUS' nationwide database for groundwater, drinking water, raw material, environmental and geotechnical data. The database is the joint public database in the field and forms part of Danmarks Miljøportal.",
+   "value": "Jupiter (GEUS' national database for groundwater and drinking-water data)",
+   "published": "",
+   "title": "National boringsdatabase (Jupiter)",
+   "publisher": "GEUS",
+   "doc_type": "official_page",
+   "note": "Operator's own page; it covers drinking-water and groundwater data, not flood defence.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Jupiter",
+    "reason": "The quote names Jupiter as GEUS's national database for groundwater and drinking-water data; it is a data register, not a control system for flood defence."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:water_control:operator",
+   "question": "Water management control (Flood defence, water board and drinking-water control systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.geus.dk/produkter-ydelser-og-faciliteter/data-og-kort/national-boringsdatabase-jupiter",
+   "quote": "Jupiter er GEUS' landsdækkende database for grundvands-, drikkevands-, råstof-, miljø- og geotekniske data. Databasen er den fællesoffentlige database på området og indgår i Danmarks Miljøportal.",
+   "quote_english": "Jupiter is GEUS' nationwide database for groundwater, drinking water, raw material, environmental and geotechnical data. The database is the joint public database in the field and forms part of Danmarks Miljøportal.",
+   "value": "GEUS (Geological Survey of Denmark and Greenland)",
+   "published": "",
+   "title": "National boringsdatabase (Jupiter)",
+   "publisher": "GEUS",
+   "doc_type": "official_page",
+   "note": "The quote calls Jupiter GEUS' database; Danmarks Miljøportal handles support for the reporting services.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Jupiter",
+    "reason": "This is the same quote as item 8: it names GEUS's Jupiter groundwater/drinking-water database (a data register, not an operational control system)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:water_control:count",
+   "question": "Water management control (Flood defence, water board and drinking-water control systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.geus.dk/produkter-ydelser-og-faciliteter/data-og-kort/national-boringsdatabase-jupiter",
+   "quote": "Derudover indeholder databasen information om mere end 35.000 vandindvindingsanlæg (vandværker, markvandingsanlæg m.v.)",
+   "quote_english": "In addition the database holds information on more than 35,000 water abstraction plants (waterworks, field irrigation plants etc.)",
+   "value": "more than 35.000 vandindvindingsanlæg (water abstraction plants)",
+   "published": "",
+   "title": "National boringsdatabase (Jupiter)",
+   "publisher": "GEUS",
+   "doc_type": "official_page",
+   "note": "The same page also gives more than 418,000 boreholes.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Jupiter",
+    "reason": "The quote says only 'databasen' and gives a count of over 35,000 water abstraction plants; the name Jupiter comes from the surrounding page context, not the quote itself."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:statistics_microdata:register",
+   "question": "Statistical microdata (National statistics institute microdata and census files): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.dst.dk/da/TilSalg/data-til-forskning/generelt-om-data",
+   "quote": "Danmarks Datavindue har samlet en lang række historiske registerdata i en grunddatabank.",
+   "quote_english": "Danmarks Datavindue has collected a wide range of historical register data in a basic data bank.",
+   "value": "grunddatabank (basic data bank) of Danmarks Datavindue, Danmarks Statistik",
+   "published": "",
+   "title": "Generelt om data",
+   "publisher": "Danmarks Statistik",
+   "doc_type": "statistics",
+   "note": "The national statistics office's own page; Danmarks Datavindue is its microdata access unit.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Danmarks Datavindue (grunddatabank)",
+    "reason": "The quote names Danmarks Datavindue and its grunddatabank of historical register data; it does not name DST's main research microdata service."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:DK:national_archives:register",
+   "question": "National archives (digital) (Digitally transferred government records under archive law): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.rigsarkivet.dk/aflever-data/statslige-myndigheder/aflever-it-systemer-fra-statslige-myndigheder/",
+   "quote": "Når I afleverer et it-system til Rigsarkivet, afleverer I et udtræk af data og eventuelle dokumenter fra systemet. Udtrækket kaldes en arkiveringsversion.",
+   "quote_english": "When you transfer an IT system to Rigsarkivet, you transfer an extract of data and any documents from the system. The extract is called an archival version.",
+   "value": "arkiveringsversion (archival version) transferred to Rigsarkivet (Danish National Archives)",
+   "published": "",
+   "title": "Aflever it-systemer fra statslige myndigheder",
+   "publisher": "Rigsarkivet",
+   "doc_type": "official_page",
+   "note": "Operator's own page on digital transfer of state IT systems.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "arkiveringsversion",
+    "reason": "The quote names the archival version format in which IT systems are delivered to Rigsarkivet, not a named register or system; both sentences were confirmed in the raw HTML."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:DK:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:statistics_microdata:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DK:national_archives:register",
+   "status": "found"
+  }
+ ]
+}

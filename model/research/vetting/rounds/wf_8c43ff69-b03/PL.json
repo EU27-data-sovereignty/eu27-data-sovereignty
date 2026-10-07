@@ -1,0 +1,59 @@
+{
+ "iso": "PL",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:PL:authentication_audit_log:register",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.html",
+   "quote": "2. Węzeł krajowy jest rozwiązaniem organizacyjno-technicznym umożliwiającym uwierzytelnianie użytkownika systemu teleinformatycznego, korzystającego z usługi online, z wykorzystaniem środka identyfikacji elektronicznej",
+   "quote_english": "2. The national node is an organisational and technical solution enabling the authentication of a user of an ICT system using an online service, by means of an electronic identification means",
+   "value": "Węzeł krajowy (national node [for electronic identification], login.gov.pl), the system through which users authenticate to online public services",
+   "published": "2024",
+   "title": "Obwieszczenie ... w sprawie ogłoszenia jednolitego tekstu ustawy o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2024 poz. 1725)",
+   "publisher": "Sejm RP (ELI API, Dziennik Ustaw)",
+   "doc_type": "legislation",
+   "note": "Art. 21a ust. 1 pkt 1 of the same consolidated text gives the full name 'węzeł krajowy identyfikacji elektronicznej'; the act names the authentication system but not a separately named audit-log register, and Art. 21p ust. 1 pkt 5 puts the duty to record accountability/non-repudiation information on each connected eID-system operator, so this is the system name rather than a named log register.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim (Art. 21a ust. 2), but it only defines the węzeł krajowy as the system that performs authentication; it says nothing about keeping records of who authenticated to which service and when, so it does not establish the name of an authentication audit log."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PL:authentication_audit_log:operator",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.html",
+   "quote": "5. Funkcjonowanie węzła krajowego zapewnia minister właściwy do spraw informatyzacji. 6. Minister właściwy do spraw informatyzacji przetwarza dane osobowe osób, którym wydano środki identyfikacji elektronicznej",
+   "quote_english": "5. The functioning of the national node is ensured by the minister competent for computerisation. 6. The minister competent for computerisation processes personal data of persons to whom electronic identification means were issued",
+   "value": "minister właściwy do spraw informatyzacji (the minister competent for computerisation) operates the national node",
+   "published": "2024",
+   "title": "Obwieszczenie ... w sprawie ogłoszenia jednolitego tekstu ustawy o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2024 poz. 1725)",
+   "publisher": "Sejm RP (ELI API, Dziennik Ustaw)",
+   "doc_type": "legislation",
+   "note": "Art. 21a ust. 5-6; this is an operator finding for the same holding, and the claim id is inferred from the register gap's pattern.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim (Art. 21a ust. 5-6), but it names the minister who runs the node and lists the identity data processed for authentication (name, PESEL, birth date and so on); it describes no log of authentication events and names no such register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:PL:authentication_audit_log:register",
+   "status": "found"
+  }
+ ]
+}

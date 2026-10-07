@@ -1,0 +1,85 @@
+{
+ "iso": "EL",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:EL:business_registry:register",
+   "question": "Business registry (Legal entities, officers and filings): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://gge.mindev.gov.gr/tomeas-emporiou/thesmiko-plasio-gemh-genikes-plhrofories/",
+   "quote": "1. Το Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) είναι το εθνικό μητρώο εμπορικής δημοσιότητας, στο οποίο πραγματοποιείται η δημοσιότητα πράξεων, στοιχείων ή δηλώσεων των υπόχρεων προσώπων.",
+   "quote_english": "1. The General Commercial Registry (G.E.MI.) is the national register of commercial publicity, in which the publicity of acts, data or declarations of obligated persons takes place.",
+   "value": "Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) (General Commercial Registry)",
+   "published": "2024-12",
+   "title": "Θεσμικό πλαίσιο ΓΕΜΗ - Γενικές πληροφορίες (Law 4919/2022, Article 15, as amended)",
+   "publisher": "Γενική Γραμματεία Εμπορίου, Υπουργείο Ανάπτυξης (General Secretariat of Commerce, Ministry of Development)",
+   "doc_type": "official_page",
+   "note": "Competent ministry's consolidated text of Law 4919/2022 Art. 15 (amendments shown up to Law 5164/2024); fetchable replacement for the e-nomothesia and mitos leads.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) — General Commercial Registry",
+    "reason": "The quote appears verbatim (Article 15 para 1) and directly names Γ.Ε.ΜΗ. as the national register of commercial publicity."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:EL:business_registry:operator",
+   "question": "Business registry (Legal entities, officers and filings): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://gge.mindev.gov.gr/tomeas-emporiou/thesmiko-plasio-gemh-genikes-plhrofories/",
+   "quote": "Συστήνεται και λειτουργεί στην Κεντρική Ένωση Επιμελητηρίων Ελλάδας (Κ.Ε.Ε.Ε.), Τμήμα Υποστήριξης και Ανάπτυξης των Πληροφοριακών Συστημάτων Γ.Ε.ΜΗ. και Υ.Μ.Σ..",
+   "quote_english": "A Department for Support and Development of the G.E.MI. and One-Stop-Shop Information Systems is established and operates within the Central Union of Chambers of Greece (K.E.E.E.).",
+   "value": "Κεντρική Ένωση Επιμελητηρίων Ελλάδας (Κ.Ε.Ε.Ε.), Τμήμα Υποστήριξης και Ανάπτυξης των Πληροφοριακών Συστημάτων Γ.Ε.ΜΗ. και Υ.Μ.Σ. (Central Union of Chambers of Greece, Department for Support and Development of the GEMI and One-Stop-Shop Information Systems)",
+   "published": "2024-12",
+   "title": "Θεσμικό πλαίσιο ΓΕΜΗ - Γενικές πληροφορίες (Law 4919/2022, Article 20)",
+   "publisher": "Γενική Γραμματεία Εμπορίου, Υπουργείο Ανάπτυξης (General Secretariat of Commerce, Ministry of Development)",
+   "doc_type": "official_page",
+   "note": "Operator of the GEMI information systems per Art. 20 of Law 4919/2022; the same page (Art. 5) names this department as data controller. Question copied from the register gap since no separate operator gap was given.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Πληροφοριακά Συστήματα Γ.Ε.ΜΗ. (G.E.MI. information systems)",
+    "reason": "The quote appears verbatim (Article 20 para 1). Its subject is a department of the Central Union of Chambers of Greece (K.E.E.E.), so it names the register only indirectly, as the 'G.E.MI. information systems' that department supports; it is better evidence of the operator than of the register's name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:EL:water_control:register",
+   "question": "Water management control (Flood defence, water board and drinking-water control systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.eydap.gr/en/TheCompany/Water/DistributionNetwork/",
+   "quote": "the water supply network is monitored on a 24-hour basis from execute remote control system (SCADA) for the monitoring of the functioning of the WTP, network, storage tanks , water pumping stations and major nodal points in the network.",
+   "quote_english": "",
+   "value": "remote control system (SCADA) monitoring the EYDAP water supply network",
+   "published": "",
+   "title": "EYDAP - Drinking water distribution network",
+   "publisher": "EYDAP S.A. (Athens Water Supply and Sewerage Company)",
+   "doc_type": "official_page",
+   "note": "Operator's own English page (different URL from the Greek lead); covers only EYDAP's Athens/Attica network, not a national system, and is a generic description rather than a named register. Same paragraph states the system includes 100 posts of continuous monitoring.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "SCADA remote control system (EYDAP water supply network)",
+    "reason": "The quote appears verbatim on EYDAP's distribution-network page; it describes the network's monitoring system only generically as a 'remote control system (SCADA)', with no proper name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:EL:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:water_control:register",
+   "status": "found"
+  }
+ ]
+}

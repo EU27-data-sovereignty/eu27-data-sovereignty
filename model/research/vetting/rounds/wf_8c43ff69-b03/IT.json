@@ -1,0 +1,37 @@
+{
+ "iso": "IT",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:IT:fingerprint_biometric:register",
+   "question": "Fingerprint biometric (Fingerprints captured for passports and ID cards where retained centrally): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.gazzettaufficiale.it/do/atto/serie_generale/caricaPdf?cdimg=15A0980900100010110001&dgu=2015-12-30&art.dataPubblicazioneGazzetta=2015-12-30&art.codiceRedazionale=15A09809&art.num=1&art.tiposerie=SG",
+   "quote": "conservata nella banca dati del CP-CIE e di SSCE solamente per il tempo strettamente necessario alla produzione della CIE",
+   "quote_english": "kept in the database of the CP-CIE and of the SSCE only for the time strictly necessary to produce the CIE",
+   "value": "No permanent central register: fingerprint images are held in the banca dati del CP-CIE e di SSCE (database of the CIE production centre and of the CNSD services system) only for the time strictly necessary to produce the CIE",
+   "published": "2015-12-30",
+   "title": "Decreto 23 dicembre 2015 - Modalita' tecniche di emissione della Carta d'identita' elettronica (Allegato, 4.4.1.2 Dati biometrici secondari: le impronte digitali)",
+   "publisher": "Gazzetta Ufficiale della Repubblica Italiana, Serie generale n. 302 (Ministero dell'interno)",
+   "doc_type": "legislation",
+   "note": "Official gazette text of the interministerial CIE decree; the same bullet list goes on to say the image is 'memorizzata esclusivamente sul microprocessore RF' (stored only on the card chip). The decree defines CP-CIE as the CIE production centre and SSCE as the CNSD (Ministero dell'interno) services system for the emission circuit. The PDF is a scanned-layout gazette page, so a machine check needs text extraction (pdftotext).",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "CP-CIE and SSCE databases (the CIE production and issuance-circuit systems), holding fingerprints only temporarily until the CIE is produced, not as a permanent central register",
+    "reason": "The quotation appears verbatim in the Gazzetta Ufficiale decree text (Dec 30, 2015, on the electronic identity card). It names the CP-CIE database and SSCE as the places where the fingerprint image is kept, but only for as long as it takes to produce the card. Fingerprints are stored permanently only on the card chip, so the quote names a temporary system and does not show a central retention register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:IT:fingerprint_biometric:register",
+   "status": "found"
+  }
+ ]
+}

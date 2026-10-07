@@ -1,0 +1,195 @@
+{
+ "iso": "IE",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:IE:benefits_pensions:register",
+   "question": "Benefits & pensions (Entitlements, contributions and payment history for social security and state pensions): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://assets.gov.ie/125816/5df543d8-ca27-44fd-ab3d-251940256c83.pdf",
+   "quote": "The SDM programme is supported through a series of information and communications technology (ICT) projects to add new and improve existing functionality on its main strategic system (Business Object Model implementation – BOMi).",
+   "quote_english": "",
+   "value": "Business Object Model implementation (BOMi), the Department of Social Protection's main strategic system",
+   "published": "2021-03",
+   "title": "Service Delivery Modernisation and BOMi Development Programmes",
+   "publisher": "Department of Social Protection",
+   "doc_type": "official_page",
+   "note": "The PDF behind the gov.ie publication page the earlier search cited. That page could not be fetched; this assets.gov.ie copy can be.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Business Object Model implementation (BOMi)",
+    "reason": "The quote appears verbatim in the PDF (section 1.1.2) and names BOMi as the main strategic system of the SDM programme, which the context places within social welfare service delivery."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:education:register",
+   "question": "Education (Student records, diplomas and qualifications): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://s3-eu-west-1.amazonaws.com/govieassets/71060/caa6365a4e9f41f28d9b870696806298.pdf",
+   "quote": "In respect of students at primary and post-primary, the schools return the data on the students enrolled in their schools to the Department via the Primary and Post-Primary Online. Databases (POD & P-POD)",
+   "quote_english": "",
+   "value": "POD & P-POD (Primary and Post-Primary Online Databases)",
+   "published": "2024-01",
+   "title": "2023 Privacy Notice Department of Education (Updated January 2024)",
+   "publisher": "Department of Education",
+   "doc_type": "official_page",
+   "note": "This is the Department's own privacy notice, stored in gov.ie's 'govieassets' S3 bucket. The host s3-eu-west-1.amazonaws.com may need its own entry in authorities.csv. The stray period after 'Online' is in the source.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Primary Online Database (POD) and Post-Primary Online Database (P-POD)",
+    "reason": "The quote appears verbatim and names POD and P-POD as the databases through which schools return student enrolment data to the Department."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:government_payroll:register",
+   "question": "Government payroll and personnel (Civil service and armed forces payroll and personnel records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://assets.nsso.gov.ie/documents/Annual_report_2023_Final1.pdf",
+   "quote": "In 2023, Enterprise ICT successfully delivered the upgrade to our core Human Resources Management System (HRMS) platform, PeopleSoft, to 44 of our clients.",
+   "quote_english": "",
+   "value": "core Human Resources Management System (HRMS) platform, PeopleSoft (National Shared Services Office)",
+   "published": "2024",
+   "title": "National Shared Services Office Annual Report 2023",
+   "publisher": "National Shared Services Office (NSSO)",
+   "doc_type": "annual_report",
+   "note": "NSSO's 2023 annual report names its core HR system. The same report says its ERP systems run in a 'hybrid cloud environment' but does not name a provider. Armed forces payroll is not covered here.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Human Resources Management System (HRMS) on PeopleSoft",
+    "reason": "The quote appears verbatim in the NSSO 2023 annual report and names the core HRMS platform, PeopleSoft, which was upgraded for 44 client bodies."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:judicial_criminal:register",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.courts.ie/news/courts-service-annual-report-for-2025-published-today",
+   "quote": "She highlighted the growing use of the Unified Case Management System, which is replacing approximately 150 legacy information technology systems and providing a single digital platform for court operations, online filing and improved access to information.",
+   "quote_english": "",
+   "value": "Unified Case Management System",
+   "published": "2026-07-13",
+   "title": "Courts Service Annual Report for 2025 published today",
+   "publisher": "Courts Service of Ireland",
+   "doc_type": "official_page",
+   "note": "The Courts Service's own announcement of its 2025 annual report, newer than the 2024 report the earlier search cited. The same page says 500 staff used UCMS across 7 areas of work. It does not cover criminal records, which are held by An Garda Síochána.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Unified Case Management System",
+    "reason": "The quote appears verbatim on the Courts Service news page and names the Unified Case Management System as the single digital platform for court operations."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://n-lex.europa.eu/n-lex/info/info-ie/index",
+   "quote": "Irish legislation can be accessed via the electronic Irish Statute Book web site (eISB) which is produced and maintained by the Office of the Attorney General.",
+   "quote_english": "",
+   "value": "electronic Irish Statute Book (eISB)",
+   "published": "",
+   "title": "About the national database - Ireland (N-Lex)",
+   "publisher": "European Union (N-Lex, Publications Office)",
+   "doc_type": "eu_document",
+   "note": "An EU page describing Ireland's legislation database. irishstatutebook.ie itself returned 403 to the fetcher.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "electronic Irish Statute Book (eISB)",
+    "reason": "The quote appears verbatim on the N-Lex Ireland page and names the eISB, maintained by the Office of the Attorney General, as the place where Irish legislation is accessed."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:official_gazette:operator",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://n-lex.europa.eu/n-lex/info/info-ie/index",
+   "quote": "Irish legislation can be accessed via the electronic Irish Statute Book web site (eISB) which is produced and maintained by the Office of the Attorney General.",
+   "quote_english": "",
+   "value": "Office of the Attorney General",
+   "published": "",
+   "title": "About the national database - Ireland (N-Lex)",
+   "publisher": "European Union (N-Lex, Publications Office)",
+   "doc_type": "eu_document",
+   "note": "Operator of the eISB, added as a separate operator finding for the same holding.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "electronic Irish Statute Book (eISB)",
+    "reason": "This item is identical to item 4: the quote appears verbatim and names the eISB as the legislation database."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.irisoifigiuil.ie/welcome/",
+   "quote": "Iris Oifigiúil is the official means used by the Government for announcing appointments to public offices and publishing proclamations, statutory instruments, appointment of receivers to companies, etc.",
+   "quote_english": "",
+   "value": "Iris Oifigiúil",
+   "published": "",
+   "title": "Iris Oifigiúil - Welcome",
+   "publisher": "Iris Oifigiúil (Government of Ireland)",
+   "doc_type": "official_page",
+   "note": "The gazette's own /welcome/ page. The earlier search cited the site root, which is a different URL. The page source writes ú as the HTML entity &uacute;.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Iris Oifigiúil",
+    "reason": "The quote appears verbatim on the Iris Oifigiúil welcome page and names Iris Oifigiúil as the Government's official means of publishing proclamations and statutory instruments."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:IE:issuance_history:register",
+   "status": "no_better_found",
+   "searched": "Fetched the DFA general Data Privacy Notice PDF on assets.ireland.ie: it names no passport register or system. dfa.ie's passport privacy page redirects (301). No passport system name found on any fetchable T1/T2 page."
+  },
+  {
+   "claim": "record:IE:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:crisis_management:register",
+   "status": "no_better_found",
+   "searched": "Fetched the EU civil-protection page on Ireland: it names the OEP but not the NECC. The OEP preparedness booklet on assets.gov.ie gives the NECC only as a postal address. gov.ie and emergencyplanning.ie pages were not reached. Web search budget ran out."
+  },
+  {
+   "claim": "record:IE:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:official_gazette:register",
+   "status": "found"
+  }
+ ]
+}

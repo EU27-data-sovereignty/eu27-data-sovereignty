@@ -104,7 +104,9 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
    - measure the error rate.
 4. Decide on the mobile app and the foundation. The app's store accounts and Supabase wait for the
    foundation.
-5. **The data plan, step 1: find as much data as we can.** The gap list is `docs/gaps.md`. The hosting wave's
+5. **The data plan, step 1: find as much data as we can.** Cheapest gaps first (owner, 2026-10-06): a free
+   retry pass, then a $45 wave on the registers found but not verified. Registers known: 675 → 732 of 1,044. Pairs
+   recorded: 684 → 741 of 1,053 (70%). 59 registers remain "claimed, not verified". The gap list is `docs/gaps.md`. The hosting wave's
    pilot (NL) filled 12 of 44 gaps for $6.40. **The full wave** covers 1,227 hosting and dependency gaps in 27
    states. Estimated cost, scaled from the pilot: research $150–250, plus about $50 to fact-check what it
    finds. It waits for the owner's OK.

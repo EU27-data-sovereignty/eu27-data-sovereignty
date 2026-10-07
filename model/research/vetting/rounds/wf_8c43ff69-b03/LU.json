@@ -1,0 +1,878 @@
+{
+ "iso": "LU",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:LU:breeder_documents:register",
+   "question": "Breeder document scans (Birth certificates, naturalisation decrees and other documents that establish identity): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://guichet.public.lu/fr/citoyens/citoyennete/certificats-copies-actes-casier-judiciaire/certificats-copies-actes/etat-civil/acte-naissance.html",
+   "quote": "Un acte de naissance est un acte dressé par l’officier de l’état civil de la commune où la personne est née. Il s’agit d’un document officiel qui atteste la naissance d’une personne. L’original est toujours conservé par la commune où la personne est née",
+   "quote_english": "A birth certificate is an act drawn up by the civil registrar of the municipality where the person was born. It is an official document attesting the birth of a person. The original is always kept by the municipality where the person was born",
+   "value": "acte de naissance (birth certificate) drawn up by the officier de l'état civil (civil registrar) of the commune of birth; the original is kept by that commune",
+   "published": "",
+   "title": "Acte de naissance",
+   "publisher": "Guichet.lu (Luxembourg government portal, CTIE)",
+   "doc_type": "official_page",
+   "note": "Legilux could not be fetched (robots.txt disallows data.legilux /eli/*, and legilux.public.lu is a JS app); this official portal page states where birth certificates are kept, but does not name a central scan register.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the birth certificate (acte de naissance) as a document kept by the commune of birth, but it names no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:civil_registry:register",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://cnpd.public.lu/fr/dossiers-thematiques/citoyennete/rnpp.html",
+   "quote": "Le RNPP est un registre introduit par la loi modifiée du 19 juin 2013 relative à l’identification des personnes physiques",
+   "quote_english": "The RNPP is a register introduced by the amended law of 19 June 2013 on the identification of natural persons",
+   "value": "RNPP, Registre National des Personnes Physiques (National Register of Natural Persons)",
+   "published": "",
+   "title": "FAQ : Registre National des Personnes Physiques (RNPP)",
+   "publisher": "Commission nationale pour la protection des données (CNPD)",
+   "doc_type": "official_page",
+   "note": "Data protection regulator's FAQ; page title gives the full name Registre National des Personnes Physiques (RNPP).",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "RNPP",
+    "reason": "The quote names the RNPP as the register introduced by the law of 19 June 2013 on the identification of natural persons."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:civil_registry:operator",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://cnpd.public.lu/fr/dossiers-thematiques/citoyennete/rnpp.html",
+   "quote": "Le RNPP est géré et maintenu par le Centre des technologies de l’information de l’Etat (CTIE), sous l’autorité du ministère de la Digitalisation",
+   "quote_english": "The RNPP is managed and maintained by the State Information Technology Centre (CTIE), under the authority of the Ministry of Digitalisation",
+   "value": "Centre des technologies de l’information de l’Etat, CTIE (State Information Technology Centre), under the Ministry of Digitalisation",
+   "published": "",
+   "title": "FAQ : Registre National des Personnes Physiques (RNPP)",
+   "publisher": "Commission nationale pour la protection des données (CNPD)",
+   "doc_type": "official_page",
+   "note": "Operator of the RNPP, stated by the national data protection authority.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "RNPP",
+    "reason": "The quote names the RNPP and says that CTIE manages it, so the register name is RNPP."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:civil_registry:count",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.chd.lu/en/node/2226",
+   "quote": "En 2023, 2,58 millions de personnes étaient inscrites au Registre national des personnes physiques (RNPP)",
+   "quote_english": "In 2023, 2.58 million people were registered in the National Register of Natural Persons (RNPP)",
+   "value": "2,58 millions de personnes (2.58 million persons) registered in 2023",
+   "published": "2024-03-20",
+   "title": "2,58 millions de personnes sont inscrites au Registre national des personnes physiques (RNPP)",
+   "publisher": "Chambre des Députés du Grand-Duché de Luxembourg",
+   "doc_type": "official_page",
+   "note": "Figures presented by CTIE representatives to the parliamentary Petitions Committee on 20 March 2024.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Registre national des personnes physiques (RNPP)",
+    "reason": "The quote gives the register's full name and abbreviation, with 2.58 million people registered in 2023."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:electoral_roll:register",
+   "question": "Electoral roll entry (Who is entitled to vote where): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://elections.public.lu/fr/actualites/2024/17-inscriptions-europennes.html",
+   "quote": "Pour garantir un suivi rapproché de l'évolution des inscriptions sur les listes électorales, le ministère de la Famille, des Solidarités, du Vivre ensemble et de l'Accueil a collaboré étroitement avec le Centre des technologies de l'information de l'État (CTIE)",
+   "quote_english": "To closely monitor registrations on the electoral lists, the Ministry of Family, Solidarity, Living Together and Reception worked closely with the State Information Technology Centre (CTIE)",
+   "value": "listes électorales (electoral lists)",
+   "published": "2024-04-17",
+   "title": "Bilan final des inscriptions pour les élections européennes du 9 juin 2024",
+   "publisher": "Site officiel des élections au Grand-Duché de Luxembourg",
+   "doc_type": "official_page",
+   "note": "Official elections site names the electoral lists and shows CTIE supplies registration statistics; it does not say who keeps the lists.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "listes électorales",
+    "reason": "The quote names only the generic electoral lists and says the ministry worked with CTIE; it gives no specific system name beyond 'listes électorales'."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:facial_biometric:operator",
+   "question": "Facial biometric (Facial images captured for identity documents): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html",
+   "quote": "la production et la personnalisation de documents administratifs sécurisés et le traitement des données biométriques y relatives",
+   "quote_english": "the production and personalisation of secure administrative documents and the processing of the related biometric data",
+   "value": "Centre des technologies de l'information de l'État, CTIE (State Information Technology Centre) processes the biometric data for secure documents",
+   "published": "2021-07-20",
+   "title": "Attributions",
+   "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+   "doc_type": "official_page",
+   "note": "Operator only; no official, fetchable page found naming the biometric register itself (legilux not fetchable).",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes CTIE's task of producing secure documents and processing the related biometric data, but it names no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:fingerprint_biometric:operator",
+   "question": "Fingerprint biometric (Fingerprints captured for passports and ID cards where retained centrally): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html",
+   "quote": "la production et la personnalisation de documents administratifs sécurisés et le traitement des données biométriques y relatives",
+   "quote_english": "the production and personalisation of secure administrative documents and the processing of the related biometric data",
+   "value": "Centre des technologies de l'information de l'État, CTIE (State Information Technology Centre) processes the biometric data for secure documents",
+   "published": "2021-07-20",
+   "title": "Attributions",
+   "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+   "doc_type": "official_page",
+   "note": "Operator only; the page does not say whether fingerprints are retained centrally or name a register.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote mentions biometric data processing in general, with no named fingerprint register or system and no statement that fingerprints are held centrally."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:issuance_history:operator",
+   "question": "Document issuance history (Which passports and ID cards were issued to whom, and their revocation state): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html",
+   "quote": "la production et la personnalisation de documents administratifs sécurisés et le traitement des données biométriques y relatives",
+   "quote_english": "the production and personalisation of secure administrative documents and the processing of the related biometric data",
+   "value": "Centre des technologies de l'information de l'État, CTIE (State Information Technology Centre) produces and personalises secure administrative documents",
+   "published": "2021-07-20",
+   "title": "Attributions",
+   "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+   "doc_type": "official_page",
+   "note": "Operator only; the 'registre des cartes d'identité' name could not be confirmed on a fetchable official page.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote covers document production and personalisation, but it names no issuance-history register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:register",
+   "question": "Beneficial ownership register (Ultimate beneficial owners of legal entities): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://guichet.public.lu/fr/entreprises/gestion-juridique-comptabilite/registre-commerce/registre-beneficiaires-effectifs/declaration-beneficiaires-rbe.html",
+   "quote": "Il est en charge de la gestion : du Registre de commerce et des sociétés (RCS) ; du Recueil électronique des sociétés et associations (RESA) ; du Registre des bénéficiaires effectifs (RBE) qui est opérationnel depuis le 1 er mars 2019.",
+   "quote_english": "It is in charge of managing: the Trade and Companies Register (RCS); the Electronic Compendium of Companies and Associations (RESA); the Register of Beneficial Owners (RBE), operational since 1 March 2019.",
+   "value": "Registre des bénéficiaires effectifs, RBE (Register of beneficial owners), managed by Luxembourg Business Registers (LBR)",
+   "published": "2019-09-02",
+   "title": "Déclaration des bénéficiaires au registre des bénéficiaires effectifs",
+   "publisher": "Guichet.lu (Luxembourg government portal)",
+   "doc_type": "official_page",
+   "note": "'Il' refers to Luxembourg Business Registers (LBR), named in the preceding sentence.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Registre des bénéficiaires effectifs (RBE)",
+    "reason": "The quote names the RBE, operational since 1 March 2019, as a register that LBR manages."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:operator",
+   "question": "Beneficial ownership register (Ultimate beneficial owners of legal entities): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://guichet.public.lu/fr/entreprises/gestion-juridique-comptabilite/registre-commerce/registre-beneficiaires-effectifs/declaration-beneficiaires-rbe.html",
+   "quote": "Le Luxembourg Business Registers (LBR) est un GIE (groupement d’intérêt économique) avec pour membres : l’État, la Chambre de Commerce et la Chambre des Métiers.",
+   "quote_english": "Luxembourg Business Registers (LBR) is an EIG (economic interest grouping) whose members are the State, the Chamber of Commerce and the Chamber of Trades.",
+   "value": "Luxembourg Business Registers (LBR), an economic interest grouping of the State, the Chamber of Commerce and the Chamber of Trades",
+   "published": "2019-09-02",
+   "title": "Déclaration des bénéficiaires au registre des bénéficiaires effectifs",
+   "publisher": "Guichet.lu (Luxembourg government portal)",
+   "doc_type": "official_page",
+   "note": "Operator of RBE and RCS.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the legal form and members of LBR (an organisation), but it names no beneficial ownership register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:benefits_pensions:register",
+   "question": "Benefits & pensions (Entitlements, contributions and payment history for social security and state pensions): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://ccss.public.lu/fr/ccss/attributions.html",
+   "quote": "L’institution de sécurité sociale dénommée « Centre commun de la sécurité sociale » a pour missions : l’affiliation des assurés d’après les dispositions y relatives en matière de sécurité sociale",
+   "quote_english": "The social security institution called 'Joint Social Security Centre' has as its missions: the affiliation of insured persons under the relevant social security provisions",
+   "value": "affiliation of insured persons by the Centre commun de la sécurité sociale, CCSS (Joint Social Security Centre)",
+   "published": "",
+   "title": "Attributions - CCSS",
+   "publisher": "Centre commun de la sécurité sociale (CCSS)",
+   "doc_type": "official_page",
+   "note": "Operator's own site; names the affiliation function and the operator but not a formal file name.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the institution CCSS and its affiliation mission, not a register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:benefits_pensions:operator",
+   "question": "Benefits & pensions (Entitlements, contributions and payment history for social security and state pensions): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://ccss.public.lu/fr/ccss/attributions.html",
+   "quote": "la centralisation et le traitement informatique des données pour le compte des différentes institutions de sécurité sociale, du Fonds national de solidarité",
+   "quote_english": "the centralisation and IT processing of data on behalf of the various social security institutions, of the National Solidarity Fund",
+   "value": "Centre commun de la sécurité sociale, CCSS (Joint Social Security Centre) centralises and processes the data of the social security institutions",
+   "published": "",
+   "title": "Attributions - CCSS",
+   "publisher": "Centre commun de la sécurité sociale (CCSS)",
+   "doc_type": "official_page",
+   "note": "Same page also says CCSS provides the IT infrastructure and operations for the social security institutions.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes centralised data processing by an unnamed institution for the social security bodies, and gives no name for a register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:border_control:register",
+   "question": "Border and visa systems (National parts of SIS, VIS and Entry/Exit, visa and border-crossing records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://police.public.lu/dam-assets/fr/aspects-legaux/ees-notice-dinformation-rgpd-fr-20260109.pdf",
+   "quote": "des informations concernant vos entrées sur le territoire des États membres et vos sorties de celui-ci, et, s’il y a lieu, des informations indiquant si l’entrée vous a été refusée, sont enregistrées dans le système d’entrée/de sortie.",
+   "quote_english": "information on your entries into and exits from the territory of the Member States and, where relevant, whether entry was refused, is recorded in the Entry/Exit System.",
+   "value": "système d’entrée/de sortie (Entry/Exit System)",
+   "published": "2026-01",
+   "title": "Informations relatives au traitement des données à caractère personnel dans le système d'entrée/de sortie",
+   "publisher": "Police grand-ducale",
+   "doc_type": "official_page",
+   "note": "Same notice names the controllers: Direction générale de l'immigration, Police grand-ducale and the Foreign Affairs ministry (visa authority).",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "système d'entrée/de sortie (Entry/Exit System)",
+    "reason": "The quote says that entry and exit records are stored in the système d'entrée/de sortie."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:border_control:operator",
+   "question": "Border and visa systems (National parts of SIS, VIS and Entry/Exit, visa and border-crossing records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://police.public.lu/dam-assets/fr/publications/2026/protections-donnes-sis/flyer-information-particuliers-sis.pdf",
+   "quote": "Au Luxembourg, le responsable de traitement du SIS est la Police grand-ducale, représentée par son Directeur Général.",
+   "quote_english": "In Luxembourg, the controller of the SIS is the Grand-Ducal Police, represented by its Director General.",
+   "value": "Police grand-ducale (Grand-Ducal Police) is the controller of the SIS in Luxembourg",
+   "published": "2026",
+   "title": "Droits des citoyens en lien avec le Système d'information Schengen",
+   "publisher": "Police grand-ducale",
+   "doc_type": "official_page",
+   "note": "Controller of the national SIS part.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "SIS",
+    "reason": "The quote names the SIS and says the Police grand-ducale is its controller in Luxembourg."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:business_registry:register",
+   "question": "Business registry (Legal entities, officers and filings): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://guichet.public.lu/fr/entreprises/gestion-juridique-comptabilite/registre-commerce/depots-publications/immatriculation-entreprise-publication-rcs.html",
+   "quote": "La gestion du RCS est confiée à Luxembourg Business Registers (LBR).",
+   "quote_english": "Management of the RCS is entrusted to Luxembourg Business Registers (LBR).",
+   "value": "RCS, managed by Luxembourg Business Registers (LBR)",
+   "published": "",
+   "title": "Immatriculation de l’entreprise et publications au RCS",
+   "publisher": "Guichet.lu (Luxembourg government portal)",
+   "doc_type": "official_page",
+   "note": "Short quote; the full name 'Registre de commerce et des sociétés (RCS)' is in the RBE page quote from the same portal.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "RCS",
+    "reason": "The quote names the RCS, which is managed by LBR."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:crisis_management:register",
+   "question": "Crisis management and civil protection (National crisis centre systems, alerting and continuity plans): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://hcpn.gouvernement.lu/fr/service/attributions/missions-nationales/prevention-gestion-crises.html",
+   "quote": "de veiller à la mise en place et au fonctionnement du Centre national de crise.",
+   "quote_english": "to ensure the set-up and operation of the National Crisis Centre.",
+   "value": "Centre national de crise (National Crisis Centre), run under the Haut-Commissariat à la Protection nationale",
+   "published": "",
+   "title": "La prévention et gestion de crises",
+   "publisher": "Haut-Commissariat à la Protection nationale (HCPN)",
+   "doc_type": "official_page",
+   "note": "The quote is in the list of HCPN's crisis-management tasks; the agency's own page.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Centre national de crise",
+    "reason": "The quote names the Centre national de crise as the national crisis centre; it is a body or facility rather than an IT system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:crisis_management:register",
+   "question": "Crisis management and civil protection (National crisis centre systems, alerting and continuity plans): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://hcpn.gouvernement.lu/fr/actualites.gouvernement2024%2Bfr%2Bactualites%2Btoutes_actualites%2Bcommuniques%2B2026%2B10-octobre%2B01-test-lu-alert.html",
+   "quote": "la mise en oeuvre de sa stratégie de test du système d'alerte et d'information à la population \"LU-Alert\"",
+   "quote_english": "the implementation of its strategy for testing the population alert and information system 'LU-Alert'",
+   "value": "LU-Alert (population alert and information system)",
+   "published": "2026-10-01",
+   "title": "Test du système d'alerte et d'information à la population \"LU-Alert\"",
+   "publisher": "Haut-Commissariat à la Protection nationale (HCPN)",
+   "doc_type": "official_page",
+   "note": "Names the national public-alerting system, tested 5 October 2026.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "LU-Alert",
+    "reason": "The quote names LU-Alert as the system for alerting and informing the population."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:electoral_management:register",
+   "question": "Election management and results (Candidate lists, polling logistics and results tabulation systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://elections.public.lu/dam-assets/fr/elections-europeennes/2024/20240617-elec-ue-pv-recensement-gnral.pdf",
+   "quote": "Le bureau est chargé du recensement général des scrutins de la circonscription unique",
+   "quote_english": "The office is responsible for the general count of the votes of the single constituency",
+   "value": "bureau principal ... chargé du recensement général des scrutins (main electoral office responsible for the general count of votes)",
+   "published": "2024-06-17",
+   "title": "Procès-verbal du recensement général, élections européennes du 9 juin 2024",
+   "publisher": "Site officiel des élections au Grand-Duché de Luxembourg",
+   "doc_type": "official_page",
+   "note": "Scanned PDF of the official count minutes; text extracted with pdftotext. It names the counting body, not an IT tabulation system; the minutes say provisional results on the official site differed slightly from the official count.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the duties of the counting office and names no system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio (112/PSAP systems, emergency dispatch and TETRA/public-safety networks): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://112.public.lu/fr/organisation/csu.html",
+   "quote": "Le central des secours d’urgences-112 (CSU-112) du CGDIS qui se trouve dans les locaux du Centre National d’Incendie et de Secours (CNIS) est l’unique point d’entrée pour les appels de secours.",
+   "quote_english": "The CGDIS emergency call centre 112 (CSU-112), located in the National Fire and Rescue Centre (CNIS), is the single entry point for emergency calls.",
+   "value": "Central des secours d’urgences-112, CSU-112 (112 emergency call centre) of the CGDIS",
+   "published": "",
+   "title": "CSU-112",
+   "publisher": "Corps grand-ducal d'incendie et de secours (CGDIS)",
+   "doc_type": "official_page",
+   "note": "Operator's own site.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "CSU-112 (central des secours d'urgences-112)",
+    "reason": "The quote names the CSU-112 of CGDIS as the single entry point for emergency calls."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:emergency_communications:count",
+   "question": "Emergency calls and public-safety radio (112/PSAP systems, emergency dispatch and TETRA/public-safety networks): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://112.public.lu/fr/organisation/csu.html",
+   "quote": "Sont traités chaque jour en moyenne 1461 appels, dont 720 appels de secours 112 découlant sur 196 interventions.",
+   "quote_english": "On average 1461 calls are handled each day, of which 720 are 112 emergency calls leading to 196 interventions.",
+   "value": "1461 calls per day on average",
+   "published": "",
+   "title": "CSU-112",
+   "publisher": "Corps grand-ducal d'incendie et de secours (CGDIS)",
+   "doc_type": "official_page",
+   "note": "No reference year stated on the page.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives only daily call statistics and names no system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:firearms_register:operator",
+   "question": "Firearms register (Licensed firearms and their holders): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://mj.gouvernement.lu/fr/service-citoyens/armes-prohibees.html",
+   "quote": "Le guichet du Service Armes est ouvert au public du lundi au vendredi de 8h30 à 11h30 et de 14h30 à 16h00 (sauf jours fériés). p.a. Ministère de la Justice",
+   "quote_english": "The Weapons Service counter is open to the public Monday to Friday from 8:30 to 11:30 and 14:30 to 16:00 (except public holidays). c/o Ministry of Justice",
+   "value": "Service Armes (Weapons Service), Ministère de la Justice (Ministry of Justice)",
+   "published": "2026-06-12",
+   "title": "Armes prohibées",
+   "publisher": "Ministère de la Justice",
+   "doc_type": "official_page",
+   "note": "Operator only; the page shows the service issues weapon permits but does not name the register.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives the opening hours of the Service Armes desk and names no firearms register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:government_payroll:operator",
+   "question": "Government payroll and personnel (Civil service and armed forces payroll and personnel records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://cgpo.gouvernement.lu/fr.html",
+   "quote": "Le Centre de gestion du personnel et de l'organisation de l'État (CGPO) est l'organisme central de gestion du personnel étatique.",
+   "quote_english": "The State Personnel and Organisation Management Centre (CGPO) is the central body for managing State personnel.",
+   "value": "Centre de gestion du personnel et de l'organisation de l'État, CGPO (State Personnel and Organisation Management Centre)",
+   "published": "",
+   "title": "Centre de gestion du personnel et de l'organisation de l'État",
+   "publisher": "CGPO",
+   "doc_type": "official_page",
+   "note": "Same page: CGPO handles pay calculation, careers and pension files of State staff; it does not name a system.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the CGPO as the central personnel management body, not a payroll or personnel system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:intelligence:operator",
+   "question": "Intelligence services (Intelligence holdings and case files): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://sre.gouvernement.lu/fr/le-sre/supervision.html",
+   "quote": "Le directeur du SRE est responsable du traitement des données à caractère personnel, dont la finalité est l'exercice des missions du SRE.",
+   "quote_english": "The director of the SRE is the controller of personal data processed for the purpose of carrying out the SRE's missions.",
+   "value": "Service de renseignement de l'État, SRE (State Intelligence Service); its director is the data controller",
+   "published": "",
+   "title": "Supervision",
+   "publisher": "Service de renseignement de l'État (SRE)",
+   "doc_type": "official_page",
+   "note": "Operator only; no named intelligence file found on a fetchable official page.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the SRE director as data controller, but it names no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:judicial_criminal:register",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://guichet.public.lu/fr/citoyens/citoyennete/certificats-copies-actes-casier-judiciaire/extrait-casier-judiciaire/casier-judiciaire-pers-physique.html",
+   "quote": "Résumé : Le casier judiciaire contient les condamnations prononcées au Luxembourg et peut contenir celles prononcées à l'étranger. Un extrait du casier judiciaire est une copie du casier judiciaire national.",
+   "quote_english": "Summary: The criminal record contains convictions handed down in Luxembourg and may contain those handed down abroad. An extract of the criminal record is a copy of the national criminal record.",
+   "value": "casier judiciaire national (national criminal record)",
+   "published": "2021-10-12",
+   "title": "Extrait de casier judiciaire d'une personne physique",
+   "publisher": "Guichet.lu (Luxembourg government portal)",
+   "doc_type": "official_page",
+   "note": "Official portal; covers criminal records only, not court case files.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "casier judiciaire national",
+    "reason": "The quote names the national criminal record (casier judiciaire national)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:land_property:register",
+   "question": "Land & property registry (Title, ownership, mortgages and cadastral parcels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://act.public.lu/fr/espace-pro/pubfonc.html",
+   "quote": "La mise en place du système de gestion intégré , relatif à la Publicité Foncière (PF) relie entre eux l'administration du cadastre et de la topographie (ACT), l'administration de l'enregistrement et des domaines (AED) et le notariat",
+   "quote_english": "The integrated management system for Land Publicity (PF) links the Cadastre and Topography Administration (ACT), the Registration and Estates Administration (AED) and the notaries",
+   "value": "Publicité Foncière, PF (Land Publicity integrated management system), linking ACT, AED and the notaries",
+   "published": "2020-04-09",
+   "title": "Registres fonciers",
+   "publisher": "Administration du cadastre et de la topographie (ACT)",
+   "doc_type": "official_page",
+   "note": "Operator's own site; the page title is 'Registres fonciers' (land registers).",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "système de gestion intégré relatif à la Publicité Foncière (PF)",
+    "reason": "The quote names the integrated Publicité Foncière system that links ACT, AED and the notaries."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:land_property:hosting",
+   "question": "Land & property registry (Title, ownership, mortgages and cadastral parcels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://act.public.lu/fr/espace-pro/pubfonc.html",
+   "quote": "Ce système informatique a été conçu selon les règles d'architecture prescrites par le centre des technologies de l'information de l'Etat",
+   "quote_english": "This IT system was designed according to the architecture rules prescribed by the State Information Technology Centre",
+   "value": "designed to architecture rules of the centre des technologies de l'information de l'Etat (CTIE)",
+   "published": "2020-04-09",
+   "title": "Registres fonciers",
+   "publisher": "Administration du cadastre et de la topographie (ACT)",
+   "doc_type": "official_page",
+   "note": "States only that CTIE architecture rules were followed, not where the system is hosted; do not read as hosting evidence.",
+   "organisations": [
+    {
+     "name": "centre des technologies de l'information de l'Etat",
+     "role": "processor",
+     "seat": "LU",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote refers only to 'ce système informatique' and its CTIE architecture rules, without naming it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://scl.gouvernement.lu/fr.html",
+   "quote": "Le Service central de législation (SCL) du ministère d'État assure l'édition du Journal officiel du Grand-Duché de Luxembourg et la consolidation de la législation.",
+   "quote_english": "The Central Legislation Service (SCL) of the Ministry of State publishes the Official Journal of the Grand Duchy of Luxembourg and consolidates legislation.",
+   "value": "Journal officiel du Grand-Duché de Luxembourg (Official Journal of the Grand Duchy of Luxembourg), published by the Service central de législation (SCL)",
+   "published": "2024-09-17",
+   "title": "Service central de législation",
+   "publisher": "Service central de législation, Ministère d'État",
+   "doc_type": "official_page",
+   "note": "Publisher's own government page; also gives the operator (SCL).",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Journal officiel du Grand-Duché de Luxembourg",
+    "reason": "The quote says that the SCL publishes the Journal officiel du Grand-Duché de Luxembourg."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:police_records:register",
+   "question": "Police information systems (Investigations, wanted persons and national police databases): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://police.public.lu/fr/support/protection-des-donnees-a-caractere-personnel.html",
+   "quote": "La durée de conservation des données à caractère personnel dans le Fichier central est définie à l’article 43 quinquies §9 et suivants de la loi modifiée du 18 juillet 2018 sur la Police grand-ducale.",
+   "quote_english": "The retention period of personal data in the Central File is set by Article 43 quinquies §9 et seq. of the amended law of 18 July 2018 on the Grand-Ducal Police.",
+   "value": "Fichier central (Central File) of the Police grand-ducale",
+   "published": "",
+   "title": "Protection des données",
+   "publisher": "Police grand-ducale",
+   "doc_type": "official_page",
+   "note": "Operator's own data-protection page.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Fichier central",
+    "reason": "The quote names the police's Fichier central and its retention rules under the Police law."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:public_finance:register",
+   "question": "Treasury and state accounts (Budget execution, treasury payments and government accounting): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://tresorerie.public.lu/fr/administration/missions.html",
+   "quote": "Le département Comptabilité et Paiements de l'État assure : la tenue journalière de la comptabilité de l'État en centralisant l'intégralité des mouvements bilantaires et de pertes & profits",
+   "quote_english": "The State Accounting and Payments department ensures the daily keeping of the State accounts, centralising all balance-sheet and profit-and-loss movements",
+   "value": "comptabilité de l'État (State accounts), kept by the Comptabilité et Paiements de l'État department of the Trésorerie de l'État",
+   "published": "",
+   "title": "Missions",
+   "publisher": "Trésorerie de l'État",
+   "doc_type": "official_page",
+   "note": "Operator's own site; no IT system name is given.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the accounting tasks of a department and names no system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:residence_permits:operator",
+   "question": "Residence and migration status (Residence permits, asylum status and foreign-national registrations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://maint.gouvernement.lu/fr/le-ministere/dgim.html",
+   "quote": "Le Département Étrangers traite les demandes en relation avec la libre circulation des personnes (citoyens de l’Union européenne et les membres de leur famille) et avec l'entrée et le séjour des ressortissants de pays tiers.",
+   "quote_english": "The Foreigners Department handles applications relating to free movement of persons (EU citizens and their family members) and to entry and residence of third-country nationals.",
+   "value": "Département Étrangers (Foreigners Department) of the Direction générale de l'immigration",
+   "published": "",
+   "title": "Direction générale de l'immigration",
+   "publisher": "Ministère des Affaires intérieures",
+   "doc_type": "official_page",
+   "note": "Operator only; the 'fichier des étrangers' name could not be confirmed on a fetchable official page.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the caseload of the Département Étrangers and names no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:water_control:register",
+   "question": "Water management control (Flood defence, water board and drinking-water control systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://eau.gouvernement.lu/fr/domaines-activite/inondations.html",
+   "quote": "Les informations actuelles et les bulletins de crues ainsi que les niveaux d’eau actuels sont disponibles sur le site dédié www.inondations.lu",
+   "quote_english": "Current information, flood bulletins and current water levels are available on the dedicated site www.inondations.lu",
+   "value": "www.inondations.lu (flood bulletins and water levels site of the Administration de la gestion de l'eau)",
+   "published": "",
+   "title": "Inondations fluviales",
+   "publisher": "Administration de la gestion de l'eau (AGE)",
+   "doc_type": "official_page",
+   "note": "The preceding sentence says the AGE is the competent authority for flood information; the page also lists a 'Service de prévision des crues' (flood forecasting service).",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote points only to the public flood-information website inondations.lu, which is not a named control system or register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:health_records:register",
+   "question": "Health records (National electronic health record or summary care record): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.esante.lu/portal/fr/je-m-informe/compte-esante-337-472.html",
+   "quote": "Quels sont les services disponibles? DSP (Dossier de Soins Partagé) CVE (Carnet de Vaccination Electronique)",
+   "quote_english": "Which services are available? DSP (Shared Care Record) CVE (Electronic Vaccination Record)",
+   "value": "DSP, Dossier de Soins Partagé (Shared Care Record)",
+   "published": "",
+   "title": "Compte eSanté",
+   "publisher": "Agence eSanté",
+   "doc_type": "official_page",
+   "note": "Operator's own portal (Agence eSanté).",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "DSP (Dossier de Soins Partagé)",
+    "reason": "The quote lists the DSP as a service of the eSanté account, with the vaccination record listed separately."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:statistics_microdata:register",
+   "question": "Statistical microdata (National statistics institute microdata and census files): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://statistiques.public.lu/fr/publications/recensement/histoire-et-apercu.html",
+   "quote": "Cette publication est la première d’une série qui présentera au cours des prochains mois les résultats du recensement de la population de 2021.",
+   "quote_english": "This publication is the first in a series that will present the results of the 2021 population census over the coming months.",
+   "value": "recensement de la population de 2021 (2021 population census)",
+   "published": "",
+   "title": "Recensement - Histoire et aperçu",
+   "publisher": "STATEC",
+   "doc_type": "statistics",
+   "note": "The same page says the 2021 census combined questionnaire data with data from several administrative registers; it names the census file, not a microdata access system.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote mentions the publication of the 2021 census results, but it names no microdata system or register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LU:geospatial:register",
+   "question": "Geospatial base data (Topographic maps, orthophotos and address/building base registers): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://act.public.lu/fr/parcelles-residences/registre-adresses.html",
+   "quote": "Une base de donnée centralisée des adresses officielles du Luxembourg, appelée \"Registre national des localités et des rues\" a été mis en place par l'administration du cadastre et de la topographie (ACT)",
+   "quote_english": "A centralised database of Luxembourg's official addresses, called the 'National Register of Localities and Streets', was set up by the Cadastre and Topography Administration (ACT)",
+   "value": "Registre national des localités et des rues (National Register of Localities and Streets), set up by the ACT",
+   "published": "",
+   "title": "Registre national des adresses",
+   "publisher": "Administration du cadastre et de la topographie (ACT)",
+   "doc_type": "official_page",
+   "note": "Operator's own site; the page also says it supplies addresses to the RNPP.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "Registre national des localités et des rues",
+    "reason": "The quote names the central address register that ACT set up."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:LU:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:facial_biometric:register",
+   "status": "found",
+   "searched": "only an operator finding (CTIE attributions); guichet.public.lu ID-card page and mae.gouvernement.lu passport page do not name a biometric register; legilux not machine-fetchable"
+  },
+  {
+   "claim": "record:LU:fingerprint_biometric:register",
+   "status": "found",
+   "searched": "only an operator finding (CTIE attributions); guichet ID-card page mentions fingerprints but no central register"
+  },
+  {
+   "claim": "record:LU:issuance_history:register",
+   "status": "found",
+   "searched": "only an operator finding (CTIE); 'registre des cartes d'identité' not found on a fetchable official page"
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:firearms_register:register",
+   "status": "found",
+   "searched": "only an operator finding (Service Armes, mj.gouvernement.lu); no register name on a fetchable page"
+  },
+  {
+   "claim": "record:LU:government_payroll:register",
+   "status": "found",
+   "searched": "only an operator finding (CGPO home page); no system name given"
+  },
+  {
+   "claim": "record:LU:intelligence:register",
+   "status": "found",
+   "searched": "only an operator finding (SRE supervision page); SRE missions and FAQ pages name no file"
+  },
+  {
+   "claim": "record:LU:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:residence_permits:register",
+   "status": "found",
+   "searched": "only an operator finding (DGIM page on maint.gouvernement.lu); 'fichier des étrangers' not found on a fetchable page"
+  },
+  {
+   "claim": "record:LU:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:health_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:statistics_microdata:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:geospatial:register",
+   "status": "found"
+  }
+ ]
+}

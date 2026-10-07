@@ -49,55 +49,55 @@ Latvia described on its own measured characteristics. Each figure is the publish
 
 ## 3. Critical data holdings, by priority
 
-The holdings Latvia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 20 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Latvia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 28 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Fizisko personu reģistrs (Register of Natural Persons), the single system for registering and identifying natural persons[^s17] | The controller and holder of the Register is PMLP (Office of Citizenship and Migration Affairs)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | Civil status register entries are held on paper in one copy and electronically in the Register of Natural Persons[^s18] | Registry offices keep paper civil status entries for 100 years, then transfer them to the National Archives of Latvia[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Biometrijas datu apstrādes sistēma (Biometric Data Processing System)[^s18] | Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Biometric Data Processing System, managed and held by the Information Centre of the Ministry of the Interior[^s19] | Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Civil status register entries are held on paper in one copy and electronically in the Register of Natural Persons[^s20] | Registry offices keep paper civil status entries for 100 years, then transfer them to the National Archives of Latvia[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Invalid (revoked, lost) identity documents are entered in the state information system 'Register of Invalid Documents'[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | LVRTC provides four eID means: eID card, eParaksts card, eParaksts card+ and eParaksts mobile[^s20] | The Digital Security Supervisory Committee has qualified and supervises two eID providers: Smart-ID and the state company LVRTC[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Voter Register Law establishes the Voter Register and the Electronic Online Voter Register[^s21] | PMLP processes the data in, and is the controller of, the Voter Register[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Invalid (revoked, lost) identity documents are entered in the state information system 'Register of Invalid Documents'[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | LVRTC provides four eID means: eID card, eParaksts card, eParaksts card+ and eParaksts mobile[^s22] | The Digital Security Supervisory Committee has qualified and supervises two eID providers: Smart-ID and the state company LVRTC[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Voter Register Law establishes the Voter Register and the Electronic Online Voter Register[^s23] | PMLP processes the data in, and is the controller of, the Voter Register[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | Valsts vienotā datorizētā zemesgrāmata (State Unified Computerised Land Register)[^s22] | Tiesu administrācija (Court Administration)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | TIS is the state information system for case management and proceedings of all courts, including the Supreme Court and the Constitutional Court[^s23] | The Punishment Register is a state information system controlled and held by the Interior Ministry Information Centre[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Cabinet regulations define the data held in the Integrated Interior Information System for locating persons, property and documents[^s25] | The system's controller and holder is the Interior Ministry Information Centre[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Valsts vienotā datorizētā zemesgrāmata (State Unified Computerised Land Register)[^s24] | Tiesu administrācija (Court Administration)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | TIS is the state information system for case management and proceedings of all courts, including the Supreme Court and the Constitutional Court[^s25] | The Punishment Register is a state information system controlled and held by the Interior Ministry Information Centre[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Cabinet regulations define the data held in the Integrated Interior Information System for locating persons, property and documents[^s27] | The system's controller and holder is the Interior Ministry Information Centre[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | The Register of Natural Persons records residence permits, EU registration certificates and permanent residence certificates[^s17] | Asylum Law: PMLP maintains the Register of Asylum Seekers[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Law on Taxes and Fees: VID communicates with taxpayers through its Electronic Declaration System (EDS)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | Customs documents go through EU central customs systems, the Electronic Customs Data Processing System, or the VID EDS[^s28] | Under Union Customs Code Article 5, the customs administration of Latvia is the State Revenue Service[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | SAIS is the state information system holding social insurance data used to record insured persons and to grant and pay benefits and pensions[^s29] | The controller of SAIS is the Agency (State Social Insurance Agency)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Komercreģistrs (Commercial Register)[^s30] | Uzņēmumu reģistrs (Register of Enterprises), under the Minister for Justice[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Beneficial owner information held by Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises)[^s31] | Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises of the Republic of Latvia)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | transportlīdzekļu un to vadītāju valsts reģistrs (State Register of Vehicles and Drivers)[^s32] | Valsts akciju sabiedrība "Ceļu satiksmes drošības direkcija" (state joint-stock company Road Traffic Safety Directorate, CSDD)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | ePakalpojums Maksājumi (Treasury Payments e-service)[^s33] | Valsts kase (State Treasury)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | The Register of Natural Persons records residence permits, EU registration certificates and permanent residence certificates[^s17] | Asylum Law: PMLP maintains the Register of Asylum Seekers[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Law on Taxes and Fees: VID communicates with taxpayers through its Electronic Declaration System (EDS)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Customs documents go through EU central customs systems, the Electronic Customs Data Processing System, or the VID EDS[^s30] | Under Union Customs Code Article 5, the customs administration of Latvia is the State Revenue Service[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | SAIS is the state information system holding social insurance data used to record insured persons and to grant and pay benefits and pensions[^s31] | The controller of SAIS is the Agency (State Social Insurance Agency)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | veselības aprūpes pakalpojumu saņēmēju datubāze (health care service recipients database), maintained by the Service[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Komercreģistrs (Commercial Register)[^s33] | Uzņēmumu reģistrs (Register of Enterprises), under the Minister for Justice[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Beneficial owner information held by Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises)[^s34] | Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises of the Republic of Latvia)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | transportlīdzekļu un to vadītāju valsts reģistrs (State Register of Vehicles and Drivers)[^s35] | Valsts akciju sabiedrība "Ceļu satiksmes drošības direkcija" (state joint-stock company Road Traffic Safety Directorate, CSDD)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | nacionālā vīzu informācijas sistēma (national visa information system)[^s36][^s37] | Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Ieroču reģistrs (Weapons Register)[^s38] | Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | ePakalpojums Maksājumi (Treasury Payments e-service)[^s40] | Valsts kase (State Treasury)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Centrālā resursu vadības sistēma (Central Resource Management System), used by Valsts kase[^s42] | Valsts kase (State Treasury), provider of the Personāla lietvedības informācijas sistēma (Personnel Records Information System) service[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | ārkārtas situāciju valsts elektronisko sakaru tīkls (state electronic communications network for emergency situations)[^s43] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | valsts agrīnās brīdināšanas sistēma (state early warning system)[^s44] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | VIIS includes the student and graduate registers and the register of recognition statements for foreign qualifications[^s35] | The controller of VIIS is the Ministry of Education and Science[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | VIIS includes the student and graduate registers and the register of recognition statements for foreign qualifications[^s45] | The controller of VIIS is the Ministry of Education and Science[^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | “Latvijas Vēstnesis” (official publication of the Republic of Latvia)[^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | Surveillance data are received and processed in the EPID system, including data from the Latvian Digital Health Centre's systems[^s37] | SPKC keeps the records of infectious diseases and laboratory-confirmed pathogens[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | “Latvijas Vēstnesis” (official publication of the Republic of Latvia)[^s46] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Surveillance data are received and processed in the EPID system, including data from the Latvian Digital Health Centre's systems[^s47] | SPKC keeps the records of infectious diseases and laboratory-confirmed pathogens[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | The base geospatial data include administrative boundaries and the geospatial information of the State Address Register[^s38] | Geospatial Information Law: LĢIA, under the Ministry of Defence, implements state policy in geodesy, cartography and geospatial information[^s39][^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | The base geospatial data include administrative boundaries and the geospatial information of the State Address Register[^s48] | Geospatial Information Law: LĢIA, under the Ministry of Defence, implements state policy in geodesy, cartography and geospatial information[^s49][^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 20 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 28 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -105,7 +105,7 @@ Of the 20 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 20 |
+| Not stated in sources | 28 |
 
 ## 5. Legal and institutional posture
 
@@ -130,20 +130,12 @@ Of the 20 verified holdings, how many sources state where the infrastructure is 
 
 Tier 0 and 1 holdings for Latvia without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
 - Authentication audit log (tier 0)
 - State PKI and qualified trust services (tier 0)
-- Statutory health insurance (tier 1)
-- Border and visa systems (tier 1)
-- Firearms register (tier 1)
-- Government payroll and personnel (tier 1)
 - Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
-- Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 
@@ -155,7 +147,7 @@ Tier 0 and 1 holdings for Latvia without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -172,17 +164,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -212,8 +204,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -224,8 +216,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -268,7 +260,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -310,7 +302,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -334,6 +326,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -345,7 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Latvia
 
-49 of 49 printed facts about Latvia pass.
+62 of 62 printed facts about Latvia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -363,6 +356,10 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | param:LV:land_km2 | param:LV:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:facial_biometric:register | Facial biometric: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:facial_biometric:operator | Facial biometric: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LV:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -383,14 +380,23 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:LV:customs:operator | Customs declarations: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:health_insurance:register | Statutory health insurance: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LV:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:border_control:register | Border and visa systems: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:border_control:operator | Border and visa systems: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:firearms_register:register | Firearms register: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LV:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:government_payroll:register | Government payroll and personnel: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:government_payroll:operator | Government payroll and personnel: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:LV:crisis_management:register | Crisis management and civil protection: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:LV:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:LV:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -422,29 +428,39 @@ None.
 [^s15]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s16]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
 [^s17]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Fizisko personu reģistra likums. Fizisko personu reģistra likums. <https://likumi.lv/ta/id/296185> ([archived](https://web.archive.org/web/20260920214621/https://likumi.lv/ta/id/296185))
-[^s18]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Civilstāvokļa aktu reģistrācijas likums. Civilstāvokļa aktu reģistrācijas likums. <https://likumi.lv/ta/id/253442> ([archived](https://web.archive.org/web/20260907140710/https://likumi.lv/ta/id/253442))
-[^s19]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Personu apliecinošu dokumentu likums. Personu apliecinošu dokumentu likums. <https://likumi.lv/ta/id/243484> ([archived](https://web.archive.org/web/20260921064509/https://likumi.lv/ta/id/243484))
-[^s20]: Aizsardzības ministrija — Elektroniskā identifikācija. Elektroniskā identifikācija. <https://www.mod.gov.lv/lv/kiberdrosiba/digitalas-drosibas-uzraudzibas-komiteja/elektroniska-identifikacija>
-[^s21]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Vēlētāju reģistra likums. Vēlētāju reģistra likums. <https://likumi.lv/ta/id/83681> ([archived](https://web.archive.org/web/20250623071345/https://likumi.lv/ta/id/83681))
-[^s22]: Latvijas Vēstnesis (likumi.lv) — Zemesgrāmatu likums. Zemesgrāmatu likums. <https://likumi.lv/ta/id/60460> ([archived](https://web.archive.org/web/20260415062613/https://likumi.lv/ta/id/60460))
-[^s23]: Ministru kabinets / Likumi.lv — Tiesu informatīvās sistēmas noteikumi. Tiesu informatīvās sistēmas noteikumi. <https://likumi.lv/ta/id/284905>
-[^s24]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Sodu reģistra likums. Sodu reģistra likums. <https://likumi.lv/ta/id/261384> ([archived](https://web.archive.org/web/20260823151729/https://likumi.lv/ta/id/261384))
-[^s25]: Ministru kabinets / Likumi.lv — Noteikumi par integrētajā iekšlietu informācijas sistēmā…. Noteikumi par integrētajā iekšlietu informācijas sistēmā iekļaujamām ziņām personas, mantas vai dokumenta atrašanās vietas vai cilvēka personības noskaidrošanai vai neatpazīta cilvēka līķa identificēšanai. <https://likumi.lv/ta/id/312122> ([archived](https://web.archive.org/web/20241104215536/https://likumi.lv/ta/id/312122))
-[^s26]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Patvēruma likums. Patvēruma likums. <https://likumi.lv/ta/id/278986> ([archived](https://web.archive.org/web/20250624200825/https://likumi.lv/ta/id/278986))
-[^s27]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Par nodokļiem un nodevām. Par nodokļiem un nodevām. <https://likumi.lv/ta/id/33946> ([archived](https://web.archive.org/web/20260312042603/https://likumi.lv/ta/id/33946))
-[^s28]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Muitas likums. Muitas likums. <https://likumi.lv/ta/id/283024> ([archived](https://web.archive.org/web/20260210002446/https://likumi.lv/ta/id/283024))
-[^s29]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Par valsts sociālo apdrošināšanu. Par valsts sociālo apdrošināšanu. <https://likumi.lv/ta/id/45466> ([archived](https://web.archive.org/web/20260308035439/https://likumi.lv/ta/id/45466))
-[^s30]: Latvijas Vēstnesis (likumi.lv) — Par Latvijas Republikas Uzņēmumu reģistru. Par Latvijas Republikas Uzņēmumu reģistru. <https://likumi.lv/ta/id/72847> ([archived](https://web.archive.org/web/20260114002018/https://likumi.lv/ta/id/72847))
-[^s31]: Latvijas Vēstnesis (likumi.lv) — Noziedzīgi iegūtu līdzekļu legalizācijas un terorisma un…. Noziedzīgi iegūtu līdzekļu legalizācijas un terorisma un proliferācijas finansēšanas novēršanas likums. <https://likumi.lv/ta/id/178987> ([archived](https://web.archive.org/web/20251114030209/https://likumi.lv/ta/id/178987))
-[^s32]: Latvijas Vēstnesis (likumi.lv) — Ceļu satiksmes likums. Ceļu satiksmes likums. <https://likumi.lv/ta/id/45467> ([archived](https://web.archive.org/web/20260608045334/https://likumi.lv/ta/id/45467))
-[^s33]: Valsts kase — Norēķini, 2026-05-14. Norēķini. <https://www.kase.gov.lv/pakalpojumi/norekini>
-[^s34]: Valsts kase — Par mums, 2024-03-11. Par mums. <https://www.kase.gov.lv/valsts-kase/par-mums> ([archived](https://web.archive.org/web/20260612014819/https://www.kase.gov.lv/valsts-kase/par-mums))
-[^s35]: Ministru kabinets / Likumi.lv — Valsts izglītības informācijas sistēmas noteikumi. Valsts izglītības informācijas sistēmas noteikumi. <https://likumi.lv/ta/id/307796> ([archived](https://web.archive.org/web/20250614053013/https://likumi.lv/ta/id/307796))
-[^s36]: Latvijas Vēstnesis — Oficiālais izdevums. Oficiālais izdevums. <https://www.vestnesis.lv/oficialais-izdevums> ([archived](https://web.archive.org/web/20260818235707/https://www.vestnesis.lv/oficialais-izdevums))
-[^s37]: Ministru kabinets / Likumi.lv — Infekcijas slimību reģistrācijas kārtība. Infekcijas slimību reģistrācijas kārtība. <https://likumi.lv/ta/id/20667> ([archived](https://web.archive.org/web/20260315234430/https://likumi.lv/ta/id/20667))
-[^s38]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Ģeotelpiskās informācijas likums. Ģeotelpiskās informācijas likums. <https://likumi.lv/ta/id/202999>
-[^s39]: Latvijas Ģeotelpiskās informācijas aģentūra — Par mums. Par mums. <https://www.lgia.gov.lv/lv/par-mums> ([archived](https://web.archive.org/web/20260422142445/https://www.lgia.gov.lv/lv/par-mums))
+[^s18]: Latvijas Vēstnesis (likumi.lv) — Biometrijas datu apstrādes sistēmas likums. Biometrijas datu apstrādes sistēmas likums. <https://likumi.lv/ta/id/193111> ([archived](https://web.archive.org/web/20260615194705/https://likumi.lv/ta/id/193111))
+[^s19]: Valsts valodas centrs / likumi.lv — Biometric Data Processing System Law (official English…. Biometric Data Processing System Law (official English translation). <https://likumi.lv/ta/en/en/id/193111>
+[^s20]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Civilstāvokļa aktu reģistrācijas likums. Civilstāvokļa aktu reģistrācijas likums. <https://likumi.lv/ta/id/253442> ([archived](https://web.archive.org/web/20260907140710/https://likumi.lv/ta/id/253442))
+[^s21]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Personu apliecinošu dokumentu likums. Personu apliecinošu dokumentu likums. <https://likumi.lv/ta/id/243484> ([archived](https://web.archive.org/web/20260921064509/https://likumi.lv/ta/id/243484))
+[^s22]: Aizsardzības ministrija — Elektroniskā identifikācija. Elektroniskā identifikācija. <https://www.mod.gov.lv/lv/kiberdrosiba/digitalas-drosibas-uzraudzibas-komiteja/elektroniska-identifikacija>
+[^s23]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Vēlētāju reģistra likums. Vēlētāju reģistra likums. <https://likumi.lv/ta/id/83681> ([archived](https://web.archive.org/web/20250623071345/https://likumi.lv/ta/id/83681))
+[^s24]: Latvijas Vēstnesis (likumi.lv) — Zemesgrāmatu likums. Zemesgrāmatu likums. <https://likumi.lv/ta/id/60460> ([archived](https://web.archive.org/web/20260415062613/https://likumi.lv/ta/id/60460))
+[^s25]: Ministru kabinets / Likumi.lv — Tiesu informatīvās sistēmas noteikumi. Tiesu informatīvās sistēmas noteikumi. <https://likumi.lv/ta/id/284905>
+[^s26]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Sodu reģistra likums. Sodu reģistra likums. <https://likumi.lv/ta/id/261384> ([archived](https://web.archive.org/web/20260823151729/https://likumi.lv/ta/id/261384))
+[^s27]: Ministru kabinets / Likumi.lv — Noteikumi par integrētajā iekšlietu informācijas sistēmā…. Noteikumi par integrētajā iekšlietu informācijas sistēmā iekļaujamām ziņām personas, mantas vai dokumenta atrašanās vietas vai cilvēka personības noskaidrošanai vai neatpazīta cilvēka līķa identificēšanai. <https://likumi.lv/ta/id/312122> ([archived](https://web.archive.org/web/20241104215536/https://likumi.lv/ta/id/312122))
+[^s28]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Patvēruma likums. Patvēruma likums. <https://likumi.lv/ta/id/278986> ([archived](https://web.archive.org/web/20250624200825/https://likumi.lv/ta/id/278986))
+[^s29]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Par nodokļiem un nodevām. Par nodokļiem un nodevām. <https://likumi.lv/ta/id/33946> ([archived](https://web.archive.org/web/20260312042603/https://likumi.lv/ta/id/33946))
+[^s30]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Muitas likums. Muitas likums. <https://likumi.lv/ta/id/283024> ([archived](https://web.archive.org/web/20260210002446/https://likumi.lv/ta/id/283024))
+[^s31]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Par valsts sociālo apdrošināšanu. Par valsts sociālo apdrošināšanu. <https://likumi.lv/ta/id/45466> ([archived](https://web.archive.org/web/20260308035439/https://likumi.lv/ta/id/45466))
+[^s32]: Saeima / likumi.lv — Veselības aprūpes finansēšanas likums, 2024. Veselības aprūpes finansēšanas likums. <https://likumi.lv/ta/id/296188-veselibas-aprupes-finansesanas-likums>
+[^s33]: Latvijas Vēstnesis (likumi.lv) — Par Latvijas Republikas Uzņēmumu reģistru. Par Latvijas Republikas Uzņēmumu reģistru. <https://likumi.lv/ta/id/72847> ([archived](https://web.archive.org/web/20260114002018/https://likumi.lv/ta/id/72847))
+[^s34]: Latvijas Vēstnesis (likumi.lv) — Noziedzīgi iegūtu līdzekļu legalizācijas un terorisma un…. Noziedzīgi iegūtu līdzekļu legalizācijas un terorisma un proliferācijas finansēšanas novēršanas likums. <https://likumi.lv/ta/id/178987> ([archived](https://web.archive.org/web/20251114030209/https://likumi.lv/ta/id/178987))
+[^s35]: Latvijas Vēstnesis (likumi.lv) — Ceļu satiksmes likums. Ceļu satiksmes likums. <https://likumi.lv/ta/id/45467> ([archived](https://web.archive.org/web/20260608045334/https://likumi.lv/ta/id/45467))
+[^s36]: Ministru kabinets / likumi.lv — Vīzu noteikumi (Cabinet Regulation No 676). Vīzu noteikumi (Cabinet Regulation No 676). <https://likumi.lv/ta/id/235770-vizu-noteikumi> ([archived](https://web.archive.org/web/20260519013019/https://likumi.lv/ta/id/235770-vizu-noteikumi))
+[^s37]: Saeima / likumi.lv — Šengenas informācijas sistēmas darbības likums. Šengenas informācijas sistēmas darbības likums. <https://likumi.lv/ta/id/159481-sengenas-informacijas-sistemas-darbibas-likums>
+[^s38]: Saeima / likumi.lv — Ieroču aprites likums, 2026. Ieroču aprites likums. <https://likumi.lv/ta/id/305818-ierocu-aprites-likums> ([archived](https://web.archive.org/web/20260907182139/https://likumi.lv/ta/id/305818-ierocu-aprites-likums))
+[^s39]: Latvijas Vēstnesis (likumi.lv) — Ieroču aprites likums. Ieroču aprites likums. <https://likumi.lv/ta/id/305818> ([archived](https://web.archive.org/web/20260907182052/https://likumi.lv/ta/id/305818))
+[^s40]: Valsts kase — Norēķini, 2026-05-14. Norēķini. <https://www.kase.gov.lv/pakalpojumi/norekini>
+[^s41]: Valsts kase — Par mums, 2024-03-11. Par mums. <https://www.kase.gov.lv/valsts-kase/par-mums> ([archived](https://web.archive.org/web/20260612014819/https://www.kase.gov.lv/valsts-kase/par-mums))
+[^s42]: Ministru kabinets / likumi.lv — Kārtība, kādā Valsts kase sniedz pakalpojumus valsts…, 2024-10. Kārtība, kādā Valsts kase sniedz pakalpojumus valsts pārvaldes vienotā pakalpojumu centra ietvaros (MK noteikumi Nr. 653). <https://likumi.lv/ta/id/355802-kartiba-kada-valsts-kase-sniedz-pakalpojumus-valsts-parvaldes-vienota-pakalpojumu-centra-ietvaros-unkartiba-un-apjoms>
+[^s43]: Saeima / likumi.lv — Elektronisko sakaru likums, 2026. Elektronisko sakaru likums. <https://likumi.lv/ta/id/334345> ([archived](https://web.archive.org/web/20260806175404/https://likumi.lv/ta/id/334345))
+[^s44]: Saeima / likumi.lv — Civilās aizsardzības un katastrofas pārvaldīšanas likums. Civilās aizsardzības un katastrofas pārvaldīšanas likums. <https://likumi.lv/ta/id/282333>
+[^s45]: Ministru kabinets / Likumi.lv — Valsts izglītības informācijas sistēmas noteikumi. Valsts izglītības informācijas sistēmas noteikumi. <https://likumi.lv/ta/id/307796> ([archived](https://web.archive.org/web/20250614053013/https://likumi.lv/ta/id/307796))
+[^s46]: Latvijas Vēstnesis — Oficiālais izdevums. Oficiālais izdevums. <https://www.vestnesis.lv/oficialais-izdevums> ([archived](https://web.archive.org/web/20260818235707/https://www.vestnesis.lv/oficialais-izdevums))
+[^s47]: Ministru kabinets / Likumi.lv — Infekcijas slimību reģistrācijas kārtība. Infekcijas slimību reģistrācijas kārtība. <https://likumi.lv/ta/id/20667> ([archived](https://web.archive.org/web/20260315234430/https://likumi.lv/ta/id/20667))
+[^s48]: Saeima / Likumi.lv (VSIA Latvijas Vēstnesis) — Ģeotelpiskās informācijas likums. Ģeotelpiskās informācijas likums. <https://likumi.lv/ta/id/202999>
+[^s49]: Latvijas Ģeotelpiskās informācijas aģentūra — Par mums. Par mums. <https://www.lgia.gov.lv/lv/par-mums> ([archived](https://web.archive.org/web/20260422142445/https://www.lgia.gov.lv/lv/par-mums))
 
-**Evidence grades:** 2 Strong, 47 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 2 Strong, 60 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

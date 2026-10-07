@@ -1,0 +1,137 @@
+{
+ "iso": "BE",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:BE:electoral_roll:register",
+   "question": "Electoral roll entry (Who is entitled to vote where): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=fr&la=F&table_name=loi&cn=1894041230",
+   "quote": "la liste des électeurs inscrits aux registres de la population mentionne le nom, les prénoms, la date de naissance, la résidence principale et le numéro d'identification",
+   "quote_english": "the list of electors registered in the population registers states the surname, first names, date of birth, main residence and identification number",
+   "value": "liste des électeurs inscrits aux registres de la population (list of electors registered in the population registers)",
+   "published": "",
+   "title": "Code électoral (Art. 10), consolidated text",
+   "publisher": "SPF Justice, Moniteur belge / Justel",
+   "doc_type": "legislation",
+   "note": "Official consolidated Electoral Code on the Justel portal (Art. 10 §2); §1 says the municipal college of mayor and aldermen draws up this list on the 80th day before the election. The page has amendment markers ([2 ...]) around this text; plain curl gets 'Request Rejected' but WebFetch retrieved it.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "liste des électeurs (the list of electors, drawn from the population registers)",
+    "reason": "curl got a bot-challenge page, but WebFetch read the Electoral Code text and found the quote verbatim in Art. 10 §2; it names the list of electors and its fields, nothing more specific."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:BE:electoral_management:register",
+   "question": "Election management and results (Candidate lists, polling logistics and results tabulation systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://elections.fgov.be/informations-generales/logiciel-electoral",
+   "quote": "MARTINE est une plateforme utilisée par différents acteurs durant le processus électoral.",
+   "quote_english": "MARTINE is a platform used by various actors during the electoral process.",
+   "value": "MARTINE (platform used during the electoral process)",
+   "published": "",
+   "title": "Logiciel électoral",
+   "publisher": "SPF Intérieur, Direction des Élections",
+   "doc_type": "official_page",
+   "note": "The same page says a key part of MARTINE is the electronic transmission of results from the canton main offices to the central authority on election day; it does not name who hosts it.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "MARTINE",
+    "reason": "The elections.fgov.be page has the sentence verbatim and calls MARTINE the platform used in the electoral process, notably to send results electronically to the central authority."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:BE:intelligence:register",
+   "question": "Intelligence services (Intelligence holdings and case files): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://ocam.belgium.be/entree-en-vigueur-de-la-loi-bdc-t-e-r/",
+   "quote": "La loi du 29 mars 2024, portant création de la banque de données commune « Terrorisme, Extrémisme, Processus de Radicalisation » (BDC T.E.R.), est désormais en vigueur.",
+   "quote_english": "The law of 29 March 2024 creating the common database 'Terrorism, Extremism, Radicalisation Process' (CDB T.E.R.) is now in force.",
+   "value": "banque de données commune « Terrorisme, Extrémisme, Processus de Radicalisation » (BDC T.E.R.) (common database Terrorism, Extremism, Radicalisation Process)",
+   "published": "2024-10-01",
+   "title": "Entrée en vigueur de la loi BDC T.E.R.",
+   "publisher": "OCAM (Organe de coordination pour l'analyse de la menace)",
+   "doc_type": "official_page",
+   "note": "OCAM's own site; this is a joint database shared by intelligence, police and other services, not the intelligence services' own case files. WebFetch failed on the TLS certificate chain, but curl fetched the page.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "BDC T.E.R. (banque de données commune « Terrorisme, Extrémisme, Processus de Radicalisation »)",
+    "reason": "The OCAM page has the quote verbatim and names the common database set up by the law of 29 March 2024; the quote names the database but does not say it belongs to the intelligence services as such."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:BE:police_records:register",
+   "question": "Police information systems (Investigations, wanted persons and national police databases): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.organedecontrole.be/files/DIO23001_F.pdf",
+   "quote": "La Banque de données Nationale Générale. Il s’agit de la banque de données policière qui contient les données visées à l’article 44/5 de la LFP et",
+   "quote_english": "The General National Database. This is the police database that contains the data referred to in Article 44/5 of the Police Function Act and",
+   "value": "Banque de données Nationale Générale (General National Database, BNG)",
+   "published": "2023",
+   "title": "Rapport du contrôle restreint de l'Organe de contrôle ... traitements dans la BNG (DIO23001)",
+   "publisher": "Organe de contrôle de l'information policière (COC)",
+   "doc_type": "audit_report",
+   "note": "Report of the police information supervisory body, a different URL from the earlier CON23005_NL cite; the value here is the BNG alone, without the basic databases.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Banque de données Nationale Générale (BNG)",
+    "reason": "The quote appears verbatim in the Organe de contrôle PDF, where it is a footnote defining the BNG as the police database holding the data in art. 44/5 LFP."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:BE:police_records:operator",
+   "question": "Police information systems (Investigations, wanted persons and national police databases): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.organedecontrole.be/files/DIO23001_F.pdf",
+   "quote": "est le ministre de l’Intérieur. Pour le traitement de ces données à caractère personnel et informations en matière de police judiciaire, le responsable du traitement est le ministre de la Justice.",
+   "quote_english": "is the Minister of the Interior. For processing these personal data and information in judicial police matters, the controller is the Minister of Justice.",
+   "value": "ministre de l’Intérieur (Minister of the Interior, for administrative police) and ministre de la Justice (Minister of Justice, for judicial police) as data controllers",
+   "published": "2023",
+   "title": "Rapport du contrôle restreint de l'Organe de contrôle ... traitements dans la BNG (DIO23001)",
+   "publisher": "Organe de contrôle de l'information policière (COC)",
+   "doc_type": "audit_report",
+   "note": "These are the formal data controllers for the BNG and basic databases under Art. 44/4 of the Police Function Act, not the technical operator. The integrated police (GPI) runs the systems.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim, but it only names the data controllers (the Ministers of the Interior and Justice); the BNG name is in the text before it, not in the quote."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:BE:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:intelligence:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:police_records:register",
+   "status": "found"
+  }
+ ]
+}

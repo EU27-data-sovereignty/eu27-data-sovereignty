@@ -50,7 +50,7 @@ Portugal described on its own measured characteristics. Each figure is the publi
 
 ## 3. Critical data holdings, by priority
 
-The holdings Portugal cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 27 of 39 holding classes have a verified source; 4 have a sourced record count or data size.
+The holdings Portugal cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 28 of 39 holding classes have a verified source; 4 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -90,15 +90,15 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | High | Water management control (tier 1) | The national water authority establishes and maintains the national water resources information system[^s41][^s42] | APA, I.P. is the national water authority exercising the powers of the Water Law[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Education (tier 1) | Qualification diplomas and certificates under the National Qualifications System are made available in SIGO[^s43][^s44] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | Diário da República (Official Journal of the Portuguese Republic)[^s45] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | National reference geographic database products include topographic mapping and orthophoto mapping[^s45] | DGT gathers territorial geographic information in the National Territorial Information System (SNIT)[^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | National reference geographic database products include topographic mapping and orthophoto mapping[^s46] | DGT gathers territorial geographic information in the National Territorial Information System (SNIT)[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 27 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 28 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +106,7 @@ Of the 27 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 27 |
+| Not stated in sources | 28 |
 
 ## 5. Legal and institutional posture
 
@@ -134,7 +134,6 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 - Tax (tier 1)
 - Police information systems (tier 1)
 - Firearms register (tier 1)
-- Official gazette and legislation (tier 1)
 - Government payroll and personnel (tier 1)
 - Election management and results (tier 1)
 - Central bank systems (tier 1)
@@ -148,7 +147,7 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -165,17 +164,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -205,8 +204,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -217,8 +216,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -261,7 +260,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -303,7 +302,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -327,6 +326,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -338,7 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Portugal
 
-49 of 49 printed facts about Portugal pass.
+50 of 50 printed facts about Portugal pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -389,6 +389,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:PT:water_control:register | Water management control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:water_control:operator | Water management control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:education:register | Education: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
+| record:PT:official_gazette:register | Official gazette and legislation: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:PT:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
@@ -448,8 +449,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s42]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º), 2005. Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis> ([archived](https://web.archive.org/web/20250712012849/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis))
 [^s43]: Direção-Geral da Educação (Ministério da Educação) — Modelos de diplomas e de certificados em formato eletrónico. Modelos de diplomas e de certificados em formato eletrónico. <https://www.dge.mec.pt/noticias/modelos-de-diplomas-e-de-certificados-em-formato-eletronico> ([archived](https://web.archive.org/web/20260214042656/https://www.dge.mec.pt/noticias/modelos-de-diplomas-e-de-certificados-em-formato-eletronico))
 [^s44]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 396/2007, de 31 de Dezembro – Sistema…, 2007. Decreto-Lei n.º 396/2007, de 31 de Dezembro – Sistema Nacional de Qualificações (art. 7.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis> ([archived](https://web.archive.org/web/20221206135358/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis))
-[^s45]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT, 2019. Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis>
+[^s45]: gov.pt (Portuguese Government services portal, AMA) — Consultar o Diário da República online, 2026-09-03. Consultar o Diário da República online. <https://www.gov.pt/servicos/consultar-o-diario-da-republica>
+[^s46]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT, 2019. Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis>
 
-**Evidence grades:** 3 Strong, 46 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 3 Strong, 47 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

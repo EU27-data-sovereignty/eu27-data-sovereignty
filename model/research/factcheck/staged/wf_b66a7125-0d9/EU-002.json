@@ -1,0 +1,310 @@
+{
+ "run": "wf_b66a7125-0d9",
+ "prepared": "2026-10-06-6400d8b4",
+ "batch": "EU-002",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:LV:firearms_register:operator",
+   "fact_sha256": "2022f98ebf0065e809f55218481b3328be7aa98b74ee8b3baee025ccced81732",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ieroču aprites likums text on likumi.lv says verbatim 'Ieroču reģistra turētājs un pārzinis ir Iekšlietu ministrijas Informācijas centrs', naming the Information Centre of the Ministry of the Interior as holder and controller of the Weapons Register, which is the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/305818"
+  },
+  {
+   "claim": "record:LV:firearms_register:register",
+   "fact_sha256": "c81efcf78ad8441f46904ddf6a258a908920a29bd2d3befa6cf5f4c40453345b",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The statute names 'Ieroču reģistrs' (Weapons Register) in the quoted paragraphs (2) and (3); the printed register name matches the source exactly.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/305818-ierocu-aprites-likums"
+  },
+  {
+   "claim": "record:LV:emergency_communications:register",
+   "fact_sha256": "dba460171745bca25ff15c9622fea7b78bb029402939ebe6d207f163da1dcc98",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Elektronisko sakaru likums defines 'ārkārtas situāciju valsts elektronisko sakaru tīkls' as the network used for information flow in emergency situations and a state of exception; the printed name and translation match. Note the quote is a statutory definition and does not mention 112 calls or radio specifically, only emergency-situation state communications.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/334345"
+  },
+  {
+   "claim": "record:LV:government_payroll:operator",
+   "fact_sha256": "5eba5ac44395779d2833d07b92d17a3411ea371515f8780d9b19d91cb09f19e0",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Point 30 of the Cabinet regulation says Valsts kase provides the Personāla lietvedības informācijas sistēmas pakalpojumu for personnel data recording; the printed operator and system name match the source. The regulation covers accounting and personnel records services; 'payroll' is not named as such.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/355802-kartiba-kada-valsts-kase-sniedz-pakalpojumus-valsts-parvaldes-vienota-pakalpojumu-centra-ietvaros-unkartiba-un-apjoms"
+  },
+  {
+   "claim": "record:LV:government_payroll:register",
+   "fact_sha256": "0ff3021ac8f7a657bd79e4fc3dd7a1871da7e5d3e5a2e27669793a8674609d3f",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Point 2 says Valsts kase provides its services (accounting and the personnel records system service, points 2.1-2.2) electronically 'izmantojot Centrālo resursu vadības sistēmu', so the Central Resource Management System used by the Treasury is what the source names.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/355802-kartiba-kada-valsts-kase-sniedz-pakalpojumus-valsts-parvaldes-vienota-pakalpojumu-centra-ietvaros-unkartiba-un-apjoms"
+  },
+  {
+   "claim": "record:IE:official_gazette:register",
+   "fact_sha256": "520e28868c4f21e5360021461e078b3c05f57530dc753e08cba0336c3caadf73",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The N-Lex Ireland page states Irish legislation is accessed via 'the electronic Irish Statute Book web site (eISB)', matching the printed name and acronym.",
+   "quote_found": true,
+   "checked_url": "https://n-lex.europa.eu/n-lex/info/info-ie/index"
+  },
+  {
+   "claim": "record:HR:judicial_criminal:operator",
+   "fact_sha256": "bc638c99880e8ea2555faeb1e040dfd018baf6b21d9b3e31f70883abedf746ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Narodne novine text says 'Kaznenu evidenciju ustrojava i vodi ministarstvo nadležno za pravosuđe', i.e. the ministry responsible for justice sets up and keeps the criminal record, which is the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_143_3030.html"
+  },
+  {
+   "claim": "record:FI:land_property:operator",
+   "fact_sha256": "c753afbc42fb74d984ef736bc67a9ea924f6833403ad5854fe84eb2daf21469b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The consolidated Act 453/2002 XML says Maanmittauslaitos is responsible for establishing, administering, maintaining and developing the kiinteistötietojärjestelmä, supporting the National Land Survey as operator.",
+   "quote_found": true,
+   "checked_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2002/453/fin@20190103"
+  },
+  {
+   "claim": "record:LU:border_control:register",
+   "fact_sha256": "bec32b5b378ca5c69cb677d7db1b821c141d6965a310aca0eb81d40e45f8e3ed",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Police grand-ducale GDPR notice (PDF) says entry/exit information 'sont enregistrées dans le système d'entrée/de sortie', which is the printed system name (Entry/Exit System).",
+   "quote_found": true,
+   "checked_url": "https://police.public.lu/dam-assets/fr/aspects-legaux/ees-notice-dinformation-rgpd-fr-20260109.pdf"
+  },
+  {
+   "claim": "record:LU:police_records:register",
+   "fact_sha256": "104b78a25706f90844431c0983e8c4688c9f152154bdc506eaf2d16b9d1f7178",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The police data-protection page refers to retention of personal data 'dans le Fichier central' under the law of 18 July 2018 on the Police grand-ducale, supporting 'Fichier central of the Police grand-ducale'.",
+   "quote_found": true,
+   "checked_url": "https://police.public.lu/fr/support/protection-des-donnees-a-caractere-personnel.html"
+  },
+  {
+   "claim": "record:LT:trust_services_pki:operator",
+   "fact_sha256": "57d9424dac643a6264de9c23dd0b8b2f693ece46765026dcb9c7344964c5b22b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The RRT page is a register of qualified-certificate providers and lists the Migration Department as one registered provider (order of 13 Nov 2025) alongside VĮ Registrų centras (orders of 2017); it never mentions a state PKI or says the Migration Department operates it. The source therefore does not establish the Migration Department as 'the body that operates' state PKI and qualified trust servic",
+   "quote_found": true,
+   "checked_url": "https://rrt.lt/veiklos-sritys/skaitmenine-erdve/patikimumo-uztikrinimo-paslaugos/kvalifikuoti-sertifikatai"
+  },
+  {
+   "claim": "record:LU:official_gazette:register",
+   "fact_sha256": "5692c953aff2f52ab0c7b60466cd3459efdb08a582f36ac2ff2b1a830bf09939",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SCL homepage says the Service central de législation 'assure l'édition du Journal officiel du Grand-Duché de Luxembourg', matching both the journal name and its publisher as printed.",
+   "quote_found": true,
+   "checked_url": "https://scl.gouvernement.lu/fr.html"
+  },
+  {
+   "claim": "record:DK:tax:register",
+   "fact_sha256": "19082ef0ec293e3bf9f12e7d763b327acbd5c1328f96ddf8900b1daa42ba01dd",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "skat.dk says all employers must report wage information 'i Skattestyrelsens system eIndkomst', which is exactly the printed description of eIndkomst as Skattestyrelsen's system for wage information.",
+   "quote_found": true,
+   "checked_url": "https://skat.dk/erhverv/guides-og-webinarer-til-start-ups/start-up-med-skat/for-selskaber/ansatte/del-3-indberet-loen-og-betal-skat"
+  },
+  {
+   "claim": "record:FI:public_health_surveillance:register",
+   "fact_sha256": "dd152d3f54871221fa9389eae70e43d55511b0a7f62a64ee44ac21066eb5618c",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Direct curl returned 403, but WebFetch of the live page found the sentence verbatim in the Tilastokuvaus section: THL maintains the 'valtakunnallista tartuntatautirekisteriä' under the Communicable Diseases Act, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://thl.fi/data-ja-tilastot/infektiotaudit/tartuntatautitilanne"
+  },
+  {
+   "claim": "record:IE:judicial_criminal:register",
+   "fact_sha256": "514ba541352b3a6350e3e4f31d2824bed5eb1bffe41759118df3a63edfe29a4b",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Courts Service news item names the 'Unified Case Management System' as the single digital platform for court operations replacing about 150 legacy systems, supporting the printed system name.",
+   "quote_found": true,
+   "checked_url": "https://www.courts.ie/news/courts-service-annual-report-for-2025-published-today"
+  },
+  {
+   "claim": "record:DK:statistics_microdata:register",
+   "fact_sha256": "4cc73edc9a60798cfc24dd54780e91cdd111ba5e8c06e0d508cb92f6b86a472a",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page on dst.dk (Danmarks Statistik's site, under 'Data til forskning og analyse') says 'Danmarks Datavindue har samlet en lang række historiske registerdata i en grunddatabank', supporting the grunddatabank of Danmarks Datavindue at Danmarks Statistik.",
+   "quote_found": true,
+   "checked_url": "https://www.dst.dk/da/TilSalg/data-til-forskning/generelt-om-data"
+  },
+  {
+   "claim": "record:LU:health_records:register",
+   "fact_sha256": "9dacff65590fdc385b5f0cd4de4e92b6eda73db519f0c729e2c0055fcbba284d",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The esante.lu page lists 'DSP (Dossier de Soins Partagé)' among the available services, matching the printed name and expansion.",
+   "quote_found": true,
+   "checked_url": "https://www.esante.lu/portal/fr/je-m-informe/compte-esante-337-472.html"
+  },
+  {
+   "claim": "record:IT:fingerprint_biometric:register",
+   "fact_sha256": "3bed087b623fee85081c08b518db9586d5dedd66bb5a5caef0cacc91e02fc2e5",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Gazzetta Ufficiale decree (PDF) says the fingerprint image is 'non memorizzata in loco', 'conservata nella banca dati del CP-CIE e di SSCE solamente per il tempo strettamente necessario alla produzione della CIE' and stored only on the card chip; its definitions j) and x) give CP-CIE as the CIE production centre and SSCE as the CNSD services system, so the printed expansions and the 'no perman",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/do/atto/serie_generale/caricaPdf?cdimg=15A0980900100010110001&dgu=2015-12-30&art.dataPubblicazioneGazzetta=2015-12-30&art.codiceRedazionale=15A09809&art.num=1&art.tiposerie=SG"
+  },
+  {
+   "claim": "record:DE:land_property:operator",
+   "fact_sha256": "cfb7a717df7c4a029962d939ddd065914967b095f4af1ef1a245ef422ea60d3f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "GBO § 1(1) says the Grundbücher 'werden von den Amtsgerichten geführt (Grundbuchämter)', which is the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/gbo/__1.html"
+  },
+  {
+   "claim": "record:DE:land_property:register",
+   "fact_sha256": "4886255081d56659a9caae0247227541ebd0d58a13f6d68e9325475c7786a412",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "GBO § 2 refers to plots designated 'im Grundbuch', naming the land register as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/gbo/__2.html"
+  },
+  {
+   "claim": "record:DK:water_control:register",
+   "fact_sha256": "90df2bb020f52e68c8afe00bda3b37b3978fbd8f0535dcf26ac99812feca6694",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "GEUS says 'Jupiter er GEUS' landsdækkende database for grundvands-, drikkevands-...data', supporting Jupiter as GEUS' national groundwater and drinking-water database as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.geus.dk/produkter-ydelser-og-faciliteter/data-og-kort/national-boringsdatabase-jupiter"
+  },
+  {
+   "claim": "record:PT:official_gazette:register",
+   "fact_sha256": "d7eb79c439f493b6d9a25cbe54bfad08214e241c40a00124df5060bb94e2a5f0",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "gov.pt describes the 'Diário da República, o jornal oficial da república portuguesa', matching the printed name and gloss.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.pt/servicos/consultar-o-diario-da-republica"
+  },
+  {
+   "claim": "record:SI:water_control:operator",
+   "fact_sha256": "73361e059a6f7633d9a2888a3258871cda47ffa66e34d3b69759ecbf10eb25cf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page says only that ARSO carries out the tasks of the state hydrological service (monitoring, forecasting and warning of hydrological conditions); it says nothing about operating water management control or the water cadastre, which the paired register fact places on the Direkcija za vode page. Hydrological service is a different scope from the printed 'water management control' operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/agencija-za-okolje/o-agenciji/drzavna-hidroloska-sluzba/"
+  },
+  {
+   "claim": "record:SI:water_control:register",
+   "fact_sha256": "db478c205d6dccf62a0eec99bc819ab87455f38ba4ecfa6dbeeff14e6e72818e",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Direkcija za vode page says 'Vodni kataster je uradna evidenca s področja upravljanja voda, vzpostavljena na podlagi Zakona o vodah', supporting the water cadastre as the official water-management register as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/direkcija-za-vode/"
+  },
+  {
+   "claim": "record:SI:judicial_criminal:operator",
+   "fact_sha256": "37fd1df540fa00e7ed57181a384d774c336d555f1fc761f60cbd8ba9031ef6de",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "gov.si says 'Ministrstvo za pravosodje ... upravlja kazensko evidenco', naming the Ministry of Justice as manager of the criminal record, the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/teme/kazenskopravne-evidence/"
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:operator",
+   "fact_sha256": "a29438f6a7909de862b202d18e4ff198557263ebffc783b6f8d380c80de96e44",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "gov.si says the register of registered motor vehicles and trailers and the computerised driver register 'vodi Ministrstvo za infrastrukturo', which is the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/teme/tehnicni-pregled-in-registracija-vozil/"
+  },
+  {
+   "claim": "record:SI:judicial_criminal:register",
+   "fact_sha256": "b7bf72af93d443c3d695e749cb28a6d3fea2b29974c675b2060380bd4d8085c8",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The service page refers to an extract 'iz kazenske evidence' issued by the Ministry of Justice, naming the criminal record as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/zbirke/storitve/izpis-iz-kazenske-evidence-evidence-vzgojnih-ukrepov-in-evidence-izbrisanih-obsodb-za-kazniva-dejanja-zoper-spolno-nedotakljivost-potrdilo-o-nekaznovanosti/"
+  },
+  {
+   "claim": "record:LT:grid_control:operator",
+   "fact_sha256": "851029358593d361c0cd8b8e2f2078d9b315d46433918e998ecce74712f4c50a",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both Litgrid pages describe 'Litgrid, Lietuvos elektros perdavimo sistemos operatorė', managing electricity flows and the system's stable operation; the second cited page (news item) also contains its quote verbatim. The printed operator matches.",
+   "quote_found": true,
+   "checked_url": "https://www.litgrid.eu/apie-litgrid"
+  },
+  {
+   "claim": "record:LT:grid_control:register",
+   "fact_sha256": "4795c189b27ddfc2fc61af17a6ab6b6e35f0595fa8f08c69296bc9459c9b26d4",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Litgrid news item says Litgrid installed the upgraded 'dispečerinio valdymo sistemą, kurioje jau veikia automatinio generacijos valdymo (AGV) modulis', matching the printed system and module.",
+   "quote_found": true,
+   "checked_url": "https://www.litgrid.eu/naujienos/litgrid-pabaige-8-sinchronizacijos-projekta-elektros-perdavimo-tinkla-sustiprino-nauja-valdymo-sistema"
+  },
+  {
+   "claim": "record:FI:land_property:register",
+   "fact_sha256": "666c3671de7840d8e326197be4064421e4133b18977e02d5920a75068a33aefc",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NLS page says 'Kiinteistötietojärjestelmä (KTJ) sisältää kiinteistörekisterin ja lainhuuto- ja kiinnitysrekisterin' and that Maanmittauslaitos maintains it, supporting the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.maanmittauslaitos.fi/asioi-verkossa/kiinteistotietopalvelu"
+  }
+ ]
+}

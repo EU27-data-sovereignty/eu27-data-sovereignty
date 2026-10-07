@@ -1,0 +1,63 @@
+{
+ "iso": "ES",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:ES:digital_identity_credentials:register",
+   "question": "Digital identity credentials (The national eID scheme's accounts, credentials and assurance levels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://clave.gob.es/clave/que-es",
+   "quote": "Cl@ve es un sistema orientado a unificar y simplificar el acceso electrónico de los ciudadanos a los servicios públicos.",
+   "quote_english": "Cl@ve is a system aimed at unifying and simplifying citizens' electronic access to public services.",
+   "value": "Cl@ve (Cl@ve system for citizens' electronic access to public services)",
+   "published": "",
+   "title": "¿Qué es Cl@ve?",
+   "publisher": "Gobierno de España (Cl@ve official site)",
+   "doc_type": "official_page",
+   "note": "The operator's own official site for the system, a different URL from the earlier BOE resolution; the next paragraph on the same page calls it a common platform for identification, authentication and electronic signature.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Cl@ve",
+    "reason": "The quote appears verbatim on the Cl@ve page and names Cl@ve as the system for citizens' electronic identification and access to public services, which answers the name of the eID system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:ES:customs:register",
+   "question": "Customs declarations (Import and export declarations and duty assessments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://sede.agenciatributaria.gob.es/Sede/aduanas/novedades/2023/mayo/4/disponible-guia-tecnica-sistema-importacion-transitoria.html",
+   "quote": "Con la apertura de esta opción, se inicia la ventana de migración de los Operadores Económicos al sistema de importación adaptada al CAU",
+   "quote_english": "With the opening of this option, the migration window begins for Economic Operators to the import system adapted to the UCC",
+   "value": "sistema de importación adaptada al CAU (import system adapted to the Union Customs Code)",
+   "published": "2023-05-04",
+   "title": "Disponible la guía técnica del Sistema Importación Adaptado al Código Aduanero de la Unión (CAU). Opción transitoria",
+   "publisher": "Agencia Estatal de Administración Tributaria (AEAT)",
+   "doc_type": "official_page",
+   "note": "The operator (AEAT, Departamento de Aduanas) names its import declaration system. The page headline calls it 'Sistema Importación Adaptado al Código Aduanero de la Unión (CAU)'. This covers import declarations only, not the export system.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim, but 'sistema de importación adaptada al CAU' only describes an import system adapted to the Union Customs Code during a migration window; it gives no proper name for the customs declarations register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:ES:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:customs:register",
+   "status": "found"
+  }
+ ]
+}

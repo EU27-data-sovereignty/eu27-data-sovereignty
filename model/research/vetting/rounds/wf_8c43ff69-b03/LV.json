@@ -1,0 +1,532 @@
+{
+ "iso": "LV",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:LV:facial_biometric:register",
+   "question": "Facial biometric (Facial images captured for identity documents): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/193111",
+   "quote": "3.pants. Biometrijas datu apstrādes sistēma ir valsts informācijas sistēma, kuras pārzinis un turētājs ir Iekšlietu ministrijas Informācijas centrs.",
+   "quote_english": "Section 3. The Biometric Data Processing System is a state information system whose controller and holder is the Information Centre of the Ministry of the Interior.",
+   "value": "Biometrijas datu apstrādes sistēma (Biometric Data Processing System)",
+   "published": "",
+   "title": "Biometrijas datu apstrādes sistēmas likums",
+   "publisher": "Saeima / Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "Official consolidated law; Section 1 of the same law defines biometric data as including the digital facial image, and Section 6 lists the facial digital image among the data held. The Information Centre may since have been renamed Iekšlietu digitālais centrs (not verified on this page).",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Biometrijas datu apstrādes sistēma (Biometric Data Processing System)",
+    "reason": "Section 3 names the Biometric Data Processing System as a state information system run by the Interior Ministry Information Centre; the law covers biometric data including facial images for identity documents."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:facial_biometric:operator",
+   "question": "Facial biometric (Facial images captured for identity documents): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/193111",
+   "quote": "3.pants. Biometrijas datu apstrādes sistēma ir valsts informācijas sistēma, kuras pārzinis un turētājs ir Iekšlietu ministrijas Informācijas centrs.",
+   "quote_english": "Section 3. The Biometric Data Processing System is a state information system whose controller and holder is the Information Centre of the Ministry of the Interior.",
+   "value": "Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)",
+   "published": "",
+   "title": "Biometrijas datu apstrādes sistēmas likums",
+   "publisher": "Saeima / Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "Operator of the facial-image system, stated in the statute.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Biometrijas datu apstrādes sistēma (Biometric Data Processing System)",
+    "reason": "Same verbatim Section 3 text naming the Biometric Data Processing System."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:register",
+   "question": "Fingerprint biometric (Fingerprints captured for passports and ID cards where retained centrally): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/en/en/id/193111",
+   "quote": "Section 3. The Biometric Data Processing System is a State Information System the manager and holder of which is the Information Centre of the Ministry of the Interior.",
+   "quote_english": "",
+   "value": "Biometric Data Processing System, managed and held by the Information Centre of the Ministry of the Interior",
+   "published": "",
+   "title": "Biometric Data Processing System Law (official English translation)",
+   "publisher": "Valsts valodas centrs / likumi.lv",
+   "doc_type": "legislation",
+   "note": "The official translation on the law portal, a different URL from the earlier Latvian one. Cabinet Regulation No 234 (https://likumi.lv/ta/id/266013) para 7 says that when an identity document is issued, two fingerprint images are entered in the system.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Biometric Data Processing System",
+    "reason": "The English translation of Section 3 names the Biometric Data Processing System, the state system for biometric data such as fingerprints."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "question": "Border and visa systems (National parts of SIS, VIS and Entry/Exit, visa and border-crossing records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/235770-vizu-noteikumi",
+   "quote": "1.4. nacionālajā vīzu informācijas sistēmā (turpmāk – nacionālā vīzu sistēma) iekļaujamās informācijas apjomu; 1.5. Vīzu informācijas sistēmas (turpmāk – ES vīzu sistēma) un nacionālās vīzu sistēmas izmantošanas kārtību;",
+   "quote_english": "1.4. the scope of information to be included in the national visa information system (national visa system); 1.5. the procedure for using the Visa Information System (EU visa system) and the national visa system;",
+   "value": "nacionālā vīzu informācijas sistēma (national visa information system)",
+   "published": "",
+   "title": "Vīzu noteikumi (Cabinet Regulation No 676)",
+   "publisher": "Ministru kabinets / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Consolidated regulation in force. Elsewhere it uses the abbreviation NVIS and says visa data are kept there for five years.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Nacionālā vīzu informācijas sistēma (national visa system), alongside the EU Visa Information System",
+    "reason": "The visa regulations name the national visa information system and the EU Visa Information System."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "question": "Border and visa systems (National parts of SIS, VIS and Entry/Exit, visa and border-crossing records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/159481-sengenas-informacijas-sistemas-darbibas-likums",
+   "quote": "(1) Sistēmas tehnisko darbību Latvijā nodrošina Iekšlietu ministrijas Informācijas centrs (turpmāk — Centrs). (2) Attiecībā uz Sistēmas Latvijas valsts daļu Centrs pilda Sistēmas pārziņa funkcijas",
+   "quote_english": "(1) The technical operation of the System in Latvia is ensured by the Information Centre of the Ministry of the Interior (the Centre). (2) For the Latvian national part of the System, the Centre performs the functions of the System's controller",
+   "value": "Latvian national part of the Schengen Information System (Sistēmas Latvijas valsts daļa), controlled by Iekšlietu ministrijas Informācijas centrs",
+   "published": "",
+   "title": "Šengenas informācijas sistēmas darbības likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Section 1 point 2 of the same law defines 'Sistēma' as the Schengen Information System; this covers the national SIS part of the holding.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Šengenas informācijas sistēma (Schengen Information System), Latvian national part",
+    "reason": "In this law, 'Sistēma' is defined as the Schengen Information System, and the quote describes its Latvian national part, run by the Interior Ministry Information Centre."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:border_control:operator",
+   "question": "Border and visa systems (National parts of SIS, VIS and Entry/Exit, visa and border-crossing records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/159481-sengenas-informacijas-sistemas-darbibas-likums",
+   "quote": "(1) Sistēmas tehnisko darbību Latvijā nodrošina Iekšlietu ministrijas Informācijas centrs (turpmāk — Centrs). (2) Attiecībā uz Sistēmas Latvijas valsts daļu Centrs pilda Sistēmas pārziņa funkcijas",
+   "quote_english": "(1) The technical operation of the System in Latvia is ensured by the Information Centre of the Ministry of the Interior (the Centre). (2) For the Latvian national part of the System, the Centre performs the functions of the System's controller",
+   "value": "Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)",
+   "published": "",
+   "title": "Šengenas informācijas sistēmas darbības likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Operator of the national SIS part.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Šengenas informācijas sistēma (Schengen Information System), Latvian national part",
+    "reason": "Same verbatim text; the law defines 'Sistēma' as the Schengen Information System."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:central_bank:register",
+   "question": "Central bank systems (Central bank accounts, national payment infrastructure and reserves records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.bank.lv/en/operational-areas/payment-systems/eks",
+   "quote": "The Electronic Clearing System is the payment system of Latvijas Banka, which ensures the processing of customer retail payments across the SEPA area",
+   "quote_english": "",
+   "value": "Electronic Clearing System (EKS), the payment system of Latvijas Banka",
+   "published": "2026-10-06",
+   "title": "Electronic Clearing System EKS",
+   "publisher": "Latvijas Banka",
+   "doc_type": "official_page",
+   "note": "The operator's own English page, a different URL from the earlier Latvian one; the page says 'Updated 06.10.2026'.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Electronic Clearing System (EKS)",
+    "reason": "The page names the Electronic Clearing System as Latvijas Banka's retail payment system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:central_bank:operator",
+   "question": "Central bank systems (Central bank accounts, national payment infrastructure and reserves records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.bank.lv/en/operational-areas/payment-systems/eks",
+   "quote": "The Electronic Clearing System is the payment system of Latvijas Banka, which ensures the processing of customer retail payments across the SEPA area",
+   "quote_english": "",
+   "value": "Latvijas Banka",
+   "published": "2026-10-06",
+   "title": "Electronic Clearing System EKS",
+   "publisher": "Latvijas Banka",
+   "doc_type": "official_page",
+   "note": "Operator of EKS.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Electronic Clearing System (EKS)",
+    "reason": "Same verbatim text naming Latvijas Banka's Electronic Clearing System."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:central_bank:register",
+   "question": "Central bank systems (Central bank accounts, national payment infrastructure and reserves records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.bank.lv/en/operational-areas/credit-register",
+   "quote": "The Credit register is a repository of credit history and guarantees information in Latvijas Banka – how individuals and firms fulfil their obligations to the finance companies.",
+   "quote_english": "",
+   "value": "Credit register of Latvijas Banka",
+   "published": "",
+   "title": "Credit register",
+   "publisher": "Latvijas Banka",
+   "doc_type": "official_page",
+   "note": "A second central-bank holding, on the bank's own English page.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Credit Register (Kredītu reģistrs) of Latvijas Banka",
+    "reason": "The quote names Latvijas Banka's Credit Register; it is a credit-history register held by the central bank, not a payment or reserves system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:crisis_management:register",
+   "question": "Crisis management and civil protection (National crisis centre systems, alerting and continuity plans): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/282333",
+   "quote": "8) valsts agrīnās brīdināšanas sistēma — autonomi funkcionējoša tehnoloģiska sistēma vai šādu sistēmu kopums, kas nodrošina agrīno brīdināšanu;",
+   "quote_english": "8) state early warning system: an autonomously functioning technological system, or a set of such systems, that provides early warning;",
+   "value": "valsts agrīnās brīdināšanas sistēma (state early warning system)",
+   "published": "",
+   "title": "Civilās aizsardzības un katastrofas pārvaldīšanas likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Statutory name of the national alerting system. The same law (Section 15) names the Valsts civilās aizsardzības plāns (State Civil Protection Plan) as the national continuity and planning document.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Valsts agrīnās brīdināšanas sistēma (state early warning system)",
+    "reason": "The law's definitions name the state early warning system, which falls under alerting."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:crisis_management:register",
+   "question": "Crisis management and civil protection (National crisis centre systems, alerting and continuity plans): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/282333",
+   "quote": "(1) Valsts civilās aizsardzības plāns, sadarbības teritorijas civilās aizsardzības plāns, paaugstinātas bīstamības objekta civilās aizsardzības plāns un objekta civilās aizsardzības plāns ir dokumenti, kuri sagatavoti, ņemot vērā risku novērtējumu",
+   "quote_english": "(1) The State Civil Protection Plan, the cooperation-territory civil protection plan, the high-risk-object civil protection plan and the object civil protection plan are documents prepared taking the risk assessment into account",
+   "value": "Valsts civilās aizsardzības plāns (State Civil Protection Plan)",
+   "published": "",
+   "title": "Civilās aizsardzības un katastrofas pārvaldīšanas likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "The same value as the earlier lead, now on the official law portal (the earlier vugd.gov.lv page could not be fetched).",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Valsts civilās aizsardzības plāns (State civil protection plan)",
+    "reason": "The quote names civil protection plans, which are documents and not an IT system; only the plan's name is established."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:electoral_management:register",
+   "question": "Election management and results (Candidate lists, polling logistics and results tabulation systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.lrvk.gov.lv/lv/getrevisionfile/29673-M53tvBk0I1hfy-ezsNSJejKLw_KzDr6l.pdf",
+   "quote": "CVK 2021. gadā, organizējot iepirkumus Vēlēšanu vadības sistēmas (turpmāk – VVS) tehniskās pavadīšanas un lietotāju atbalsta pakalpojumu divu vēlēšanu nodrošināšanai",
+   "quote_english": "In 2021, when the CVK organised procurements for technical maintenance and user support of the Election Management System (VVS) for two elections",
+   "value": "Vēlēšanu vadības sistēma (VVS) (Election Management System)",
+   "published": "2022",
+   "title": "Par Centrālās vēlēšanu komisijas 2021. gada pārskatu (revīzijas ziņojums)",
+   "publisher": "Valsts kontrole (State Audit Office of Latvia)",
+   "doc_type": "audit_report",
+   "note": "Audit-office report from 2022. VVS may since have been superseded by the VDAA Election Platform / VEL IS named in the earlier lead, which this source cannot confirm.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Vēlēšanu vadības sistēma (VVS, Election Management System)",
+    "reason": "The State Audit Office report names the Central Election Commission's Election Management System (VVS)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:electoral_management:foreign_dependency",
+   "question": "Election management and results (Candidate lists, polling logistics and results tabulation systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.lrvk.gov.lv/lv/getrevisionfile/29673-M53tvBk0I1hfy-ezsNSJejKLw_KzDr6l.pdf",
+   "quote": "Tāpat konstatēts, ka vēlēšanu laikā, kad VVS izmanto liels skaits lietotāju, to izvieto uz speciāli tam piemērotas drošas tehnikas LVRTC datu centros",
+   "quote_english": "It was also found that during elections, when VVS is used by a large number of users, it is deployed on specially adapted secure equipment in LVRTC data centres",
+   "value": "national",
+   "published": "2022",
+   "title": "Par Centrālās vēlēšanu komisijas 2021. gada pārskatu (revīzijas ziņojums)",
+   "publisher": "Valsts kontrole (State Audit Office of Latvia)",
+   "doc_type": "audit_report",
+   "note": "LVRTC (Latvijas Valsts radio un televīzijas centrs) is a Latvian state-owned company. The report adds that outside election periods the system is archived and taken off these resources.",
+   "organisations": [
+    {
+     "name": "LVRTC",
+     "role": "host",
+     "seat": "LV",
+     "sector": "state_owned"
+    },
+    {
+     "name": "CVK",
+     "role": "operator",
+     "seat": "LV",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Vēlēšanu vadības sistēma (VVS)",
+    "reason": "The quote refers to VVS, which the same report defines as the Election Management System, and says it is hosted in LVRTC data centres during elections."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:LV:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio (112/PSAP systems, emergency dispatch and TETRA/public-safety networks): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/334345",
+   "quote": "6) ārkārtas situāciju valsts elektronisko sakaru tīkls — elektronisko sakaru tīkls, kas tiek izveidots un izmantots informācijas aprites nodrošināšanai ārkārtas situācijās un izņēmuma stāvokļa laikā, kā arī aizsargātās informācijas pārraidīšanai;",
+   "quote_english": "6) emergency-situations state electronic communications network: an electronic communications network established and used to ensure the flow of information in emergency situations and during a state of exception, and to transmit protected information;",
+   "value": "ārkārtas situāciju valsts elektronisko sakaru tīkls (state electronic communications network for emergency situations)",
+   "published": "2026",
+   "title": "Elektronisko sakaru likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Statutory public-safety network; consolidated text includes 2026 amendments. It does not name a 112 dispatch information system.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Ārkārtas situāciju valsts elektronisko sakaru tīkls (state electronic communications network for emergency situations)",
+    "reason": "The law defines a named state emergency communications network, which counts as a public-safety network."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio (112/PSAP systems, emergency dispatch and TETRA/public-safety networks): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/334345",
+   "quote": "(1) Valsts ugunsdzēsības un glābšanas dienests īsteno valsts politiku vienotā ārkārtas palīdzības izsaukuma numura \"112\" un ārkārtas zvana (eZvana) jomā, tai skaitā nodrošina ārkārtas gadījumu saziņas un ārkārtas zvana (eZvana) saņemšanu.",
+   "quote_english": "(1) The State Fire and Rescue Service implements state policy for the single emergency number \"112\" and eCall, including ensuring the receipt of emergency communications and eCalls.",
+   "value": "Valsts ugunsdzēsības un glābšanas dienests (State Fire and Rescue Service) receives 112 emergency communications",
+   "published": "2026",
+   "title": "Elektronisko sakaru likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Names the 112 PSAP operator; the value carries the number 112 that is in the quote.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the State Fire and Rescue Service runs the 112 and eCall policy and call reception, but names no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:firearms_register:register",
+   "question": "Firearms register (Licensed firearms and their holders): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/305818-ierocu-aprites-likums",
+   "quote": "(2) Ieroču reģistra turētājs un pārzinis ir Iekšlietu ministrijas Informācijas centrs. (3) Iekšlietu ministrijas Informācijas centrs Ieroču reģistrā iekļautās ziņas par šaujamieročiem",
+   "quote_english": "(2) The holder and controller of the Weapons Register is the Information Centre of the Ministry of the Interior. (3) The Information Centre of the Ministry of the Interior [deletes] the information on firearms included in the Weapons Register",
+   "value": "Ieroču reģistrs (Weapons Register)",
+   "published": "2026",
+   "title": "Ieroču aprites likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Weapons Circulation Law, Section 87 (consolidated with amendments in force 20.01.2026); Cabinet Regulation No 76 'Ieroču reģistra noteikumi' governs the register.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Ieroču reģistrs (Weapons Register)",
+    "reason": "The Weapons Circulation Law names the Weapons Register and its holder, the Interior Ministry Information Centre."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:firearms_register:operator",
+   "question": "Firearms register (Licensed firearms and their holders): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/305818-ierocu-aprites-likums",
+   "quote": "(2) Ieroču reģistra turētājs un pārzinis ir Iekšlietu ministrijas Informācijas centrs. (3) Iekšlietu ministrijas Informācijas centrs Ieroču reģistrā iekļautās ziņas par šaujamieročiem",
+   "quote_english": "(2) The holder and controller of the Weapons Register is the Information Centre of the Ministry of the Interior. (3) The Information Centre of the Ministry of the Interior [deletes] the information on firearms included in the Weapons Register",
+   "value": "Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)",
+   "published": "2026",
+   "title": "Ieroču aprites likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Statutory holder and controller of the register.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Ieroču reģistrs (Weapons Register)",
+    "reason": "Same verbatim text naming the Weapons Register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:government_payroll:register",
+   "question": "Government payroll and personnel (Civil service and armed forces payroll and personnel records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/355802-kartiba-kada-valsts-kase-sniedz-pakalpojumus-valsts-parvaldes-vienota-pakalpojumu-centra-ietvaros-unkartiba-un-apjoms",
+   "quote": "Valsts kase valsts pārvaldes vienotā pakalpojumu centra ietvaros valsts budžeta iestādēm un budžeta nefinansētām iestādēm (turpmāk – pakalpojumu saņēmējs) elektroniski, izmantojot Centrālo resursu vadības sistēmu (turpmāk – sistēma)",
+   "quote_english": "Within the state administration's single service centre, the Treasury [provides services] electronically to state budget institutions and non-budget-funded institutions (service recipients), using the Central Resource Management System (the system)",
+   "value": "Centrālā resursu vadības sistēma (Central Resource Management System), used by Valsts kase",
+   "published": "2024-10",
+   "title": "Kārtība, kādā Valsts kase sniedz pakalpojumus valsts pārvaldes vienotā pakalpojumu centra ietvaros (MK noteikumi Nr. 653)",
+   "publisher": "Ministru kabinets / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Covers civil-service accounting and personnel for institutions that joined the Treasury's single service centre, not the armed forces. Chapter IV of the same regulation names the 'Personāla lietvedības informācijas sistēmas pakalpojums' (personnel records information system service).",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Centrālā resursu vadības sistēma (Central Resource Management System)",
+    "reason": "The Treasury's shared service centre uses the Central Resource Management System; in context it delivers accounting and personnel-records services, though the quote does not say payroll."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:government_payroll:operator",
+   "question": "Government payroll and personnel (Civil service and armed forces payroll and personnel records): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/355802-kartiba-kada-valsts-kase-sniedz-pakalpojumus-valsts-parvaldes-vienota-pakalpojumu-centra-ietvaros-unkartiba-un-apjoms",
+   "quote": "Valsts kase personāla datu uzskaitei un elektronisku personāla dokumentu un informācijas apritei pakalpojumu saņēmējam nodrošina Personāla lietvedības informācijas sistēmas pakalpojumu.",
+   "quote_english": "For recording personnel data and for the flow of electronic personnel documents and information, the Treasury provides the service recipient with the Personnel Records Information System service.",
+   "value": "Valsts kase (State Treasury), provider of the Personāla lietvedības informācijas sistēma (Personnel Records Information System) service",
+   "published": "2024-10",
+   "title": "Kārtība, kādā Valsts kase sniedz pakalpojumus valsts pārvaldes vienotā pakalpojumu centra ietvaros (MK noteikumi Nr. 653)",
+   "publisher": "Ministru kabinets / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Personnel records, not payroll calculation as such.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Personāla lietvedības informācijas sistēma (Personnel Records Management Information System)",
+    "reason": "The quote names the system the Treasury provides for personnel data and personnel documents."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:health_insurance:register",
+   "question": "Statutory health insurance (Enrolment and entitlement records of the statutory health insurance scheme): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/296188-veselibas-aprupes-finansesanas-likums",
+   "quote": "(1) Persona iegūst tiesības saņemt veselības aprūpes pakalpojumus valsts obligātās veselības apdrošināšanas ietvaros ar dienu, kad tā iekļauta dienesta uzturētajā veselības aprūpes pakalpojumu saņēmēju datubāzē.",
+   "quote_english": "(1) A person acquires the right to receive health care services under the state compulsory health insurance from the day they are included in the health care service recipients database maintained by the Service.",
+   "value": "veselības aprūpes pakalpojumu saņēmēju datubāze (health care service recipients database), maintained by the Service",
+   "published": "2024",
+   "title": "Veselības aprūpes finansēšanas likums",
+   "publisher": "Saeima / likumi.lv",
+   "doc_type": "legislation",
+   "note": "Section 13 of the Health Care Financing Law. The same law defines 'dienests' as Nacionālais veselības dienests (National Health Service). This matches the earlier lead's Pakalpojumu saņēmēju reģistrs.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Veselības aprūpes pakalpojumu saņēmēju datubāze (database of health care service recipients)",
+    "reason": "Entitlement under compulsory health insurance starts when a person is entered in the service's database of health care service recipients."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:LV:authentication_audit_log:register",
+   "question": "Authentication audit log (Records of who authenticated to which public service and when): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://viss.gov.lv/-/media/Files/VRAA/Dokumentacija/Koplietosanas_komponentes/Vienotas_pieteiksanas_modulis/Administrativie_dokumenti/vpm_pakalpojuma_sniegsanas_prasibas.ashx",
+   "quote": "Valsts digitālās attīstības aģentūras (turpmāk Aģentūra), Vienotās pieteikšanas moduļa – VPM autentifikācijas sistēmā, jāizpildās visām minētajām prasībām",
+   "quote_english": "[to join] the authentication system of the State Digital Development Agency (the Agency), the Unified Login Module (VPM), all the listed requirements must be met",
+   "value": "Vienotās pieteikšanās modulis (VPM) autentifikācijas sistēma (Unified Login Module authentication system) of Valsts digitālās attīstības aģentūra",
+   "published": "",
+   "title": "VPM pakalpojuma sniegšanas prasības",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA), VISS portal",
+   "doc_type": "official_page",
+   "note": "Names the central authentication system, not an audit log as such; the same document requires that data exchange be auditable. A blind reviewer earlier did not reach 'VPM', so this needs review.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the VPM (Vienotās pieteikšanas modulis) authentication system, but says nothing about recording or logging who authenticated, so no audit log is established."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:LV:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:health_insurance:register",
+   "status": "found"
+  }
+ ]
+}

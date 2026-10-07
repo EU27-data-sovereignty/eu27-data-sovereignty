@@ -1,0 +1,281 @@
+{
+ "iso": "FI",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:FI:digital_identity_credentials:register",
+   "question": "Digital identity credentials (The national eID scheme's accounts, credentials and assurance levels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/tunnistus",
+   "quote": "valtion hallintoviranomaisten ja virastojen, laitosten ja liikelaitosten sekä kunnallisten viranomaisten tulee tarjota lakisääteisiin palveluihin liittyvä tunnistautuminen Suomi.fi-tunnistus -palvelulla.",
+   "quote_english": "state administrative authorities and agencies, institutions and enterprises, and municipal authorities must provide identification for statutory services with the Suomi.fi-tunnistus service.",
+   "value": "Suomi.fi-tunnistus (Suomi.fi identification service)",
+   "published": "",
+   "title": "Tunnistus",
+   "publisher": "Digi- ja väestötietovirasto (DVV)",
+   "doc_type": "official_page",
+   "note": "Suomi.fi-tunnistus is the common public-administration identification broker (credentials: bank IDs, mobile certificates, DVV certificate cards); the reviewer may prefer it over the earlier 'Varmennetietojärjestelmä', but it is a broker rather than a credential register.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Suomi.fi-tunnistus (Suomi.fi e-Identification)",
+    "reason": "The quote on dvv.fi names Suomi.fi-tunnistus as the service public authorities must use to authenticate users for statutory services; it names the identification system but not the individual credential register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio (112/PSAP systems, emergency dispatch and TETRA/public-safety networks): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://112.fi/ekasikirja-tietojarjestelmat",
+   "quote": "ERICA on valtakunnallinen ja hätäkeskustoimintaan osallistuvien toimijoiden yhteiskäytössä oleva hätäkeskustietojärjestelmä, joka mahdollistaa yhdenmukaisen 112-palvelun ja verkottuneen toiminnan kaikkialla Suomessa.",
+   "quote_english": "ERICA is a nationwide emergency response centre information system shared by the actors participating in emergency centre operations, enabling a uniform 112 service and networked operation everywhere in Finland.",
+   "value": "Hätäkeskustietojärjestelmä ERICA (ERICA emergency response centre information system)",
+   "published": "",
+   "title": "Tietojärjestelmät",
+   "publisher": "Hätäkeskuslaitos (Emergency Response Centre Agency)",
+   "doc_type": "official_page",
+   "note": "Operator's own site; names the system the earlier Finlex link could not be machine-fetched for.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "ERICA (hätäkeskustietojärjestelmä, the national emergency response centre information system)",
+    "reason": "The quote names ERICA as the national emergency centre information system shared by the agencies that take part in emergency centre operations, which supports a uniform 112 service across Finland."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:judicial_criminal:register",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.oikeusrekisterikeskus.fi/en/registers/criminal-records/",
+   "quote": "The Legal Register Centre (LRC) serves as the controller of the criminal records. Information from the criminal records may only be disclosed for the purposes provided in the Criminal Records Act.",
+   "quote_english": "",
+   "value": "criminal records",
+   "published": "",
+   "title": "Criminal records",
+   "publisher": "Oikeusrekisterikeskus (Legal Register Centre)",
+   "doc_type": "official_page",
+   "note": "Operator's own official page (English version of rikosrekisteri).",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Criminal records (rikosrekisteri), controlled by the Legal Register Centre",
+    "reason": "The quote names 'the criminal records' as a register under the Criminal Records Act, with the Legal Register Centre as its controller."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:judicial_criminal:operator",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.oikeusrekisterikeskus.fi/en/registers/criminal-records/",
+   "quote": "The Legal Register Centre (LRC) serves as the controller of the criminal records. Information from the criminal records may only be disclosed for the purposes provided in the Criminal Records Act.",
+   "quote_english": "",
+   "value": "Legal Register Centre (LRC)",
+   "published": "",
+   "title": "Criminal records",
+   "publisher": "Oikeusrekisterikeskus (Legal Register Centre)",
+   "doc_type": "official_page",
+   "note": "Operator finding for the same holding: the LRC is the controller of the criminal records.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Criminal records (rikosrekisteri), controlled by the Legal Register Centre",
+    "reason": "This item repeats item 2 with the same quote and page, so it establishes the same criminal records register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:land_property:register",
+   "question": "Land & property registry (Title, ownership, mortgages and cadastral parcels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.maanmittauslaitos.fi/asioi-verkossa/kiinteistotietopalvelu",
+   "quote": "Kiinteistötietojärjestelmä (KTJ) sisältää kiinteistörekisterin ja lainhuuto- ja kiinnitysrekisterin. Myös yksityistierekisteri on osa Kiinteistötietojärjestelmää. Maanmittauslaitos hallinnoi ja ylläpitää Kiinteistötietojärjestelmää ja vastaa sen tietopalvelusta.",
+   "quote_english": "The Land Information System (KTJ) contains the cadastre and the register of titles and mortgages. The private road register is also part of the Land Information System. The National Land Survey administers and maintains the Land Information System and is responsible for its information service.",
+   "value": "Kiinteistötietojärjestelmä (KTJ) (Land Information System)",
+   "published": "",
+   "title": "Kiinteistötietopalvelu organisaatioasiakkaille",
+   "publisher": "Maanmittauslaitos (National Land Survey of Finland)",
+   "doc_type": "official_page",
+   "note": "Operator's own page; replaces the unfetchable Finlex links.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Kiinteistötietojärjestelmä (KTJ, Real Estate Information System)",
+    "reason": "The quote names KTJ as the system holding the real estate register and the title and mortgage register, and says Maanmittauslaitos administers and maintains it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:land_property:operator",
+   "question": "Land & property registry (Title, ownership, mortgages and cadastral parcels): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.maanmittauslaitos.fi/asioi-verkossa/kiinteistotietopalvelu",
+   "quote": "Kiinteistötietojärjestelmä (KTJ) sisältää kiinteistörekisterin ja lainhuuto- ja kiinnitysrekisterin. Myös yksityistierekisteri on osa Kiinteistötietojärjestelmää. Maanmittauslaitos hallinnoi ja ylläpitää Kiinteistötietojärjestelmää ja vastaa sen tietopalvelusta.",
+   "quote_english": "The Land Information System (KTJ) contains the cadastre and the register of titles and mortgages. The private road register is also part of the Land Information System. The National Land Survey administers and maintains the Land Information System and is responsible for its information service.",
+   "value": "Maanmittauslaitos (National Land Survey of Finland)",
+   "published": "",
+   "title": "Kiinteistötietopalvelu organisaatioasiakkaille",
+   "publisher": "Maanmittauslaitos (National Land Survey of Finland)",
+   "doc_type": "official_page",
+   "note": "Operator finding for the same holding.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Kiinteistötietojärjestelmä (KTJ, Real Estate Information System)",
+    "reason": "This item repeats item 4 with the same quote and page, so it establishes KTJ."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://oikeusministerio.fi/en/-/uudistunut-finlex-on-avautunut-kayttoon-27.2.2025",
+   "quote": "Finlexissä julkaistaan Suomen säädöskokoelma, ministeriöiden ja valtion muiden viranomaisten määräyskokoelmat sekä työehtosopimusaineistoja.",
+   "quote_english": "Finlex publishes the Statute Book of Finland, the regulation collections of ministries and other state authorities, and collective agreement material.",
+   "value": "Suomen säädöskokoelma (Statute Book of Finland)",
+   "published": "2025-02-27",
+   "title": "Uudistunut Finlex on avautunut käyttöön 27.2.2025",
+   "publisher": "Oikeusministeriö (Ministry of Justice)",
+   "doc_type": "official_page",
+   "note": "Ministry of Justice release; the same page states Finlex is owned by the Ministry and maintained by the Legal Register Centre.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Finlex",
+    "reason": "The quote says Finlex publishes the Finnish statute collection (Suomen säädöskokoelma) and the regulation collections of the authorities."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:official_gazette:operator",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://oikeusministerio.fi/en/-/uudistunut-finlex-on-avautunut-kayttoon-27.2.2025",
+   "quote": "Finlexin omistaa oikeusministeriö ja palvelua ylläpitää Oikeusrekisterikeskus.",
+   "quote_english": "Finlex is owned by the Ministry of Justice and the service is maintained by the Legal Register Centre.",
+   "value": "oikeusministeriö (Ministry of Justice) owns Finlex; Oikeusrekisterikeskus (Legal Register Centre) maintains it",
+   "published": "2025-02-27",
+   "title": "Uudistunut Finlex on avautunut käyttöön 27.2.2025",
+   "publisher": "Oikeusministeriö (Ministry of Justice)",
+   "doc_type": "official_page",
+   "note": "Operator finding for the publication service (Finlex) through which the Statute Book is published; quote is 7 words, short of the 8-word minimum, so it may need the preceding sentence.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Finlex",
+    "reason": "The quote names Finlex as a service owned by the Ministry of Justice and maintained by the Legal Register Centre, but on its own it does not say that Finlex carries the authentic text of laws."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:public_health_surveillance:register",
+   "question": "Public health surveillance (Notifiable disease, vaccination and pandemic surveillance registers): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://thl.fi/data-ja-tilastot/infektiotaudit/tartuntatautitilanne",
+   "quote": "THL ylläpitää valtakunnallista tartuntatautirekisteriä tartuntatautilakiin ja -asetukseen perustuen.",
+   "quote_english": "THL maintains the national infectious diseases register based on the Communicable Diseases Act and Decree.",
+   "value": "valtakunnallinen tartuntatautirekisteri (national infectious diseases register)",
+   "published": "2026-04-28",
+   "title": "Tartuntatautitilanne",
+   "publisher": "Terveyden ja hyvinvoinnin laitos (THL)",
+   "doc_type": "official_page",
+   "note": "Operator's own page, updated 2026-04-28.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Valtakunnallinen tartuntatautirekisteri (National Infectious Diseases Register), maintained by THL",
+    "reason": "The quote says THL maintains the national infectious diseases register under the Communicable Diseases Act and Decree."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:public_health_surveillance:operator",
+   "question": "Public health surveillance (Notifiable disease, vaccination and pandemic surveillance registers): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://thl.fi/data-ja-tilastot/infektiotaudit/tartuntatautitilanne",
+   "quote": "THL ylläpitää valtakunnallista tartuntatautirekisteriä tartuntatautilakiin ja -asetukseen perustuen.",
+   "quote_english": "THL maintains the national infectious diseases register based on the Communicable Diseases Act and Decree.",
+   "value": "THL (Finnish Institute for Health and Welfare)",
+   "published": "2026-04-28",
+   "title": "Tartuntatautitilanne",
+   "publisher": "Terveyden ja hyvinvoinnin laitos (THL)",
+   "doc_type": "official_page",
+   "note": "Operator finding for the same holding.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Valtakunnallinen tartuntatautirekisteri (National Infectious Diseases Register), maintained by THL",
+    "reason": "This item repeats item 8 with the same quote and page, so it establishes the national infectious diseases register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FI:statistics_microdata:register",
+   "question": "Statistical microdata (National statistics institute microdata and census files): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://stat.fi/fi/palvelut/palvelut-tutkijoille/ohjeet-tutkijoille/kun-suunnittelet-tutkimuksen-tekemista",
+   "quote": "Suurin osa yksikkötason tutkimusaineistoista on saatavilla käyttöön vain pseudonymisoituina Tilastokeskuksen FIONA-etäkäyttöjärjestelmässä.",
+   "quote_english": "Most unit-level research datasets are available for use only in pseudonymised form in Statistics Finland's FIONA remote access system.",
+   "value": "Tilastokeskuksen FIONA-etäkäyttöjärjestelmä (Statistics Finland's FIONA remote access system)",
+   "published": "",
+   "title": "Kun suunnittelet tutkimuksen tekemistä",
+   "publisher": "Tilastokeskus (Statistics Finland)",
+   "doc_type": "official_page",
+   "note": "Names the system holding Statistics Finland's microdata, closer to the question than the business register found earlier; an alternative is the business and establishment register stated at https://stat.fi/meta/kas/yritysrekisteri.html.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "FIONA (Statistics Finland remote access system)",
+    "reason": "The quote names Statistics Finland's FIONA remote access system as where most unit-level research data is available, in pseudonymised form only; it is an access system, not a named microdata register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:FI:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:statistics_microdata:register",
+   "status": "found"
+  }
+ ]
+}

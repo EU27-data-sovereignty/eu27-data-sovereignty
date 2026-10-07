@@ -1,0 +1,90 @@
+{
+ "run": "wf_b66a7125-0d9",
+ "prepared": "2026-10-06-6400d8b4",
+ "batch": "EU-003",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:LT:trust_services_pki:register",
+   "fact_sha256": "be157a78386c007af93d2b3238bb83bb93814b3c301ddb1d7004c855a9805661",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page (Migration Department's signature-tools site) says that to establish the trust of signatures certified by a certificate issued by the Migracijos departamentas, the auxiliary certificates MD Root CA (2025-08-26 to 2040-08-26) and MD CA (2025-08-27 to 2035-08-27) are used. The names and their attribution to the Migration Department are on the page; the parenthetical roles '(root)' and '(iss",
+   "quote_found": true,
+   "checked_url": "https://www.nsc.vrm.lt/downloads.htm"
+  },
+  {
+   "claim": "record:FI:judicial_criminal:operator",
+   "fact_sha256": "499a863565a7179555516fcb2e3ccac4a0ea54c6c7dee3885e5125e850868813",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The LRC page states 'The Legal Register Centre (LRC) serves as the controller of the criminal records', and the Finlex consolidated Rikosrekisterilaki 770/1993 §1 says verbatim 'Rikosrekisterin rekisterinpitäjä on Oikeusrekisterikeskus.' Both quotes found; both name Oikeusrekisterikeskus / Legal Register Centre as the body responsible for the criminal records.",
+   "quote_found": true,
+   "checked_url": "https://www.oikeusrekisterikeskus.fi/en/registers/criminal-records/"
+  },
+  {
+   "claim": "record:FI:judicial_criminal:register",
+   "fact_sha256": "0d201e540b19cad44440b4a56c928b3f051d1f1b9b157f4acaa8af86c5d353a9",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the LRC's 'Criminal records' register page and the quote names 'the criminal records' as the register whose controller is the LRC; the printed register name matches.",
+   "quote_found": true,
+   "checked_url": "https://www.oikeusrekisterikeskus.fi/en/registers/criminal-records/"
+  },
+  {
+   "claim": "record:BE:police_records:register",
+   "fact_sha256": "940a6a9378292ea9ae499272994a61c439629225ab5a52ed584e6239e1b43007",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Organe de contrôle report DIO23001 (29-page PDF) contains the quote verbatim in a footnote: 'La Banque de données Nationale Générale. Il s'agit de la banque de données policière qui contient les données visées à l'article 44/5 de la LFP', and the document uses the abbreviation BNG throughout (e.g. 'les personnes qui ont accès à la BNG'). Name, abbreviation and 'police database' scope match the",
+   "quote_found": true,
+   "checked_url": "https://www.organedecontrole.be/files/DIO23001_F.pdf"
+  },
+  {
+   "claim": "record:SK:public_finance:register",
+   "fact_sha256": "c59d1baec0c4a76b98d4b8ce70c5e5b5413030636298b9e946bc86dafbb4f29c",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The State Treasury (Štátna pokladnica) page titled 'Informačný systém ŠP' contains the quote verbatim and describes IS ŠP as the system through which clients execute budgets, manage accounts and make payments with the ŠP. The expansion 'Informačný systém Štátnej pokladnice' follows from the page heading 'Informačný systém ŠP' on the Štátna pokladnica site; the English gloss is a translation.",
+   "quote_found": true,
+   "checked_url": "https://www.pokladnica.sk/sk/informacny-system/informacny-system-SP"
+  },
+  {
+   "claim": "record:DK:tax:operator",
+   "fact_sha256": "9216a327ee2bdba9d5e892ad547d2f5a3fde66b65e6ba0174c02c9a44f013f70",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The XML is LBK 1054/2025, 'Bekendtgørelse af lov om et indkomstregister' (Indkomstregisterloven), and § 7 stk. 4 reads verbatim 'Told- og skatteforvaltningen har terminaladgang til indkomstregisteret ... med henblik på drift og administration af indkomstregisteret', i.e. the customs and tax administration operates and administers the income register. That supports Told- og skatteforvaltningen as t",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/1054/xml"
+  },
+  {
+   "claim": "record:DK:national_archives:register",
+   "fact_sha256": "5f6c18e5fccfacc110631969dddc4cf75fdc59cd0b6de38479e4f596a7ce84a3",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Rigsarkivet's page on transferring IT systems from state authorities says verbatim that when you transfer an IT system to Rigsarkivet you transfer an extract of data and documents, and 'Udtrækket kaldes en arkiveringsversion', with the format fixed by bekendtgørelse nr. 128 of 2020. The printed name 'arkiveringsversion transferred to Rigsarkivet' matches; 'Danish National Archives' is a translatio",
+   "quote_found": true,
+   "checked_url": "https://www.rigsarkivet.dk/aflever-data/statslige-myndigheder/aflever-it-systemer-fra-statslige-myndigheder/"
+  },
+  {
+   "claim": "record:DK:electoral_roll:register",
+   "fact_sha256": "c9d76320eda4429ddba99b3c9765f12ff34968d6721d9f0bdd9c6a25eb12e9a3",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ministry's election page contains the quote verbatim: to vote in Folketing, EP, municipal/regional elections and national referendums 'skal du være optaget på valglisten', and has a section 'Optagelse på valglisten'. The printed register name 'valglisten (the electoral roll)' matches.",
+   "quote_found": true,
+   "checked_url": "https://www.valg.im.dk/vaelgere/hvordan-stemmer-jeg"
+  }
+ ]
+}

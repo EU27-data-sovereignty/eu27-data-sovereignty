@@ -7,6 +7,30 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Changed: the cheapest gaps: 51 more registers known, 70% of all pairs; $45 of research
+
+- **The wave.** `--wave unverified` (`wf_8c43ff69-b03`) took the 110 registers a research run had found but could
+  not verify. One Opus 5.5 researcher per state (22) used each earlier attempt as a lead and cited a different,
+  fetchable URL, and one blind Opus 5.5 reviewer per state checked it. It returned 144 findings: 98 registers, 39
+  operators, 5 counts, and 2 on hosting.
+- **The admission.** The usual rules applied: T1/T2, the quote found in the fetched page, and the blind
+  reviewer's agreement. **51 registers were filled:** 732 of the 1,044 pairs not established as absent now have a
+  known register (681 before), and 741 of 1,053 pairs are recorded (70%; 690 before). Record claims sourced rose
+  to 1,618, from 1,549. The rest failed review or verification and stay as gaps with this pass counted.
+- **New hosts.** 50 were classified. Five are T1: the Belgian, Lithuanian and Romanian law portals or gazettes,
+  and the Finnish and Luxembourg statistics offices. 44 are T2 public bodies. `s3-eu-west-1.amazonaws.com` is T3:
+  anyone can host files there, so the host cannot vouch for a government source.
+- **The fact check** (`wf_b66a7125-0d9`, Fable 5.1). 66 of 68 confirmed. 2 are withheld with the checker's
+  reasons: the operator of Lithuania's state PKI, and of Slovenia's water control. In each, the source names the
+  body but not that it runs the system. 1,490 of 1,490 printed facts pass. The floors rose: `FACT_FLOOR` 1,490,
+  records 1,618, register 741.
+- **Cost, measured from the transcripts:** about **$45**, above the $15–30 estimate. Each of the 43 agents carries
+  a fixed cost, and several states had only 1 or 2 gaps. The next wave should pool small states into batches, as
+  the fact check does. The cost is in the run manifest.
+- **The size budget was raised.** The data bundle reached 915 KB gzipped, over its 900 KB budget. It is now 1,100 KB,
+  with the reason recorded in `test.sh`. Finding more data grows the bundle, and the lasting fix is a per-country
+  split.
+
 ### Changed: a free retry recovers 6 registers and 26 sourced claims; the cheapest gaps go to a wave
 
 - **The order.** The owner chose the cheapest gaps first: the 116 registers a research run had found but could not

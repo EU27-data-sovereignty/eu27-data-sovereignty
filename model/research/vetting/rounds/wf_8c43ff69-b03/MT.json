@@ -1,0 +1,20 @@
+{
+ "iso": "MT",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [],
+ "outcomes": [
+  {
+   "claim": "record:MT:central_bank:register",
+   "status": "no_better_found",
+   "searched": "Web search for Central Bank of Malta TARGET2-Malta/T2 (found centralbankmalta.org/target2, /payment_systems, AR-2024 PDF, but all return HTTP 403 to WebFetch and curl); Central Bank of Malta Act Cap. 204 on legislation.mt (fetchable; names only the Central Credit Register in art. 24, the value already rejected, and art. 34 names no payment system); ECB T2 page (does not name the Malta component). Search budget was exhausted before trying EUR-Lex TARGET guidelines or CBM directives on legislation.mt."
+  },
+  {
+   "claim": "record:MT:water_control:register",
+   "status": "no_better_found",
+   "searched": "Web search for WSC SCADA/control room; wsc.com.mt pages return 403 to curl (the earlier URL is not allowed again); the WSC GIS article names only GIS/ArcGIS/SAP ERP, not a control system; the only SCADA source (GE Cimplicity) is a RACOM vendor case study (not T1/T2). Search budget was exhausted before trying Energy and Water Agency, NAO Malta or TED notices."
+  }
+ ]
+}

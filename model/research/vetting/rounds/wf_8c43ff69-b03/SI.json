@@ -1,0 +1,94 @@
+{
+ "iso": "SI",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:SI:judicial_criminal:register",
+   "question": "Judicial & criminal justice (Criminal records, court case files and judgments): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/zbirke/storitve/izpis-iz-kazenske-evidence-evidence-vzgojnih-ukrepov-in-evidence-izbrisanih-obsodb-za-kazniva-dejanja-zoper-spolno-nedotakljivost-potrdilo-o-nekaznovanosti/",
+   "quote": "Ministrstvo za pravosodje izda potrdilo oziroma izpisek iz kazenske evidence najkasneje v 15 dneh od prejema zahtevka.",
+   "quote_english": "The Ministry of Justice issues a certificate or extract from the criminal record within 15 days of receiving the request at the latest.",
+   "value": "kazenska evidenca (criminal record)",
+   "published": "",
+   "title": "Izpis iz kazenske evidence, evidence vzgojnih ukrepov in evidence izbrisanih obsodb za kazniva dejanja zoper spolno nedotakljivost (Potrdilo o (ne)kaznovanosti)",
+   "publisher": "Ministrstvo za pravosodje (GOV.SI)",
+   "doc_type": "official_page",
+   "note": "Ministry of Justice service page, a different URL from the earlier topic page; the same page says the Pravilnik o kazenskih evidencah covers three criminal-law registers (kazenska evidenca, evidenca vzgojnih ukrepov, evidenca izbrisanih obsodb za kazniva dejanja zoper spolno nedotakljivost), and that the Ministry issues the extracts, which points to it as operator.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Kazenska evidenca (criminal records register)",
+    "reason": "The quote appears verbatim within a longer sentence in the 'Rok izdaje' section (preceded by 'Skladno s 34. a členom Zakona o splošnem upravnem postopku'), and names the kazenska evidenca from which the Ministry of Justice issues extracts; it covers criminal records only, not court case files or judgments."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:register",
+   "question": "Vehicle & licensing (Vehicle registrations and driving licences): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://e-uprava.gov.si/podrocja/promet/vozniki-in-vozila/registracija-vozila.html",
+   "quote": "Registracija vozila je vpis podatkov o vozilu, lastniku / uporabniku vozila in registrski označbi v evidenco registriranih vozil.",
+   "quote_english": "Vehicle registration is the entry of data on the vehicle, the vehicle's owner/user and the registration plate into the register of registered vehicles.",
+   "value": "evidenca registriranih vozil (register of registered vehicles)",
+   "published": "",
+   "title": "Registracija vozila",
+   "publisher": "eUprava (Republika Slovenija)",
+   "doc_type": "official_page",
+   "note": "Official state eUprava portal, a different URL from the earlier one; covers only the vehicle side, and no driving-licence register name was found on a fetchable official page.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Evidenca registriranih vozil (register of registered vehicles)",
+    "reason": "The sentence appears verbatim and names the evidenca registriranih vozil as the register that vehicle registration entries go into; it says nothing about driving licences."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SI:water_control:register",
+   "question": "Water management control (Flood defence, water board and drinking-water control systems): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/direkcija-za-vode/",
+   "quote": "Vodni kataster je uradna evidenca s področja upravljanja voda, vzpostavljena na podlagi Zakona o vodah.",
+   "quote_english": "The water cadastre is the official register in the field of water management, established under the Water Act.",
+   "value": "Vodni kataster (water cadastre)",
+   "published": "",
+   "title": "Direkcija Republike Slovenije za vode",
+   "publisher": "Direkcija RS za vode (GOV.SI)",
+   "doc_type": "official_page",
+   "note": "Home page of the Slovenian Water Agency; the water cadastre is the official water-management register, not a flood-defence or drinking-water control system as such, so the reviewer should judge whether it fits the holding.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Vodni kataster (water cadastre)",
+    "reason": "The sentence appears verbatim in the Vodni kataster section and calls it the official register for water management under the Water Act, though it does not specifically describe flood defence or drinking-water control systems."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:SI:defence_command:register",
+   "status": "no_better_found",
+   "searched": "gov.si site search (informacijski sistem Slovenske vojske, sistem poveljevanja in kontrole); General Staff, Force Command and MoD 'o-ministrstvu' pages: they name only the EKIS unit, not a C2/logistics system. The WebSearch budget was exhausted, so no TED or procurement search was possible."
+  },
+  {
+   "claim": "record:SI:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:water_control:register",
+   "status": "found"
+  }
+ ]
+}

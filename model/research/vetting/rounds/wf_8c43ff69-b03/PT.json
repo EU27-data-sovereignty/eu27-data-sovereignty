@@ -1,0 +1,59 @@
+{
+ "iso": "PT",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:PT:official_gazette:register",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.gov.pt/servicos/consultar-o-diario-da-republica",
+   "quote": "Informações e possibilidade de realizar online a consulta de diplomas no Diário da República, o jornal oficial da república portuguesa.",
+   "quote_english": "Information and the possibility to consult legal instruments online in the Diário da República, the official journal of the Portuguese Republic.",
+   "value": "Diário da República (Official Journal of the Portuguese Republic)",
+   "published": "2026-09-03",
+   "title": "Consultar o Diário da República online",
+   "publisher": "gov.pt (Portuguese Government services portal, AMA)",
+   "doc_type": "official_page",
+   "note": "Government services portal page (updated 03.09.2026) names the Diário da República as the official journal; different URL from the earlier INCM page.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Diário da República",
+    "reason": "The quote appears verbatim on the page and names the Diário da República as Portugal's official journal, which is where laws and regulations are consulted."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:official_gazette:operator",
+   "question": "Official gazette and legislation (Authentic text of laws and regulations): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.gov.pt/servicos/consultar-o-diario-da-republica",
+   "quote": "O serviço \"Consultar o Diário da República online\" é da responsabilidade da entidade Imprensa Nacional - Casa da Moeda.",
+   "quote_english": "The service \"Consult the Diário da República online\" is the responsibility of the entity Imprensa Nacional - Casa da Moeda.",
+   "value": "Imprensa Nacional - Casa da Moeda (National Printing Office and Mint)",
+   "published": "2026-09-03",
+   "title": "Consultar o Diário da República online",
+   "publisher": "gov.pt (Portuguese Government services portal, AMA)",
+   "doc_type": "official_page",
+   "note": "Operator of the same holding; INCM's own page (https://incm.pt/site/incm-sobre-nos/) also lists 'a edição do Diário da República' among its essential services and describes INCM as a wholly state-owned company.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Diário da República",
+    "reason": "The quote appears verbatim on the page and names the service 'Consultar o Diário da República online'; the Imprensa Nacional - Casa da Moeda is given as the entity responsible for the service, and the question asks for the register's name, not its operator."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:PT:official_gazette:register",
+   "status": "found"
+  }
+ ]
+}

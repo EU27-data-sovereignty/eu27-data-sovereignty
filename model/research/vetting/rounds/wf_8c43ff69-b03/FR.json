@@ -1,0 +1,85 @@
+{
+ "iso": "FR",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:FR:education:register",
+   "question": "Education (Student records, diplomas and qualifications): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000046891661",
+   "quote": "dénommé « Répertoire national des identifiants élèves, étudiants et apprentis » (RNIE)",
+   "quote_english": "named 'National register of pupil, student and apprentice identifiers' (RNIE)",
+   "value": "Répertoire national des identifiants élèves, étudiants et apprentis (RNIE) (National register of pupil, student and apprentice identifiers)",
+   "published": "2023-01-05",
+   "title": "Arrêté du 18 octobre 2022 portant création d'un traitement de données à caractère personnel dénommé « Répertoire national des identifiants élèves, étudiants et apprentis » (RNIE)",
+   "publisher": "Légifrance (Secrétariat général du Gouvernement)",
+   "doc_type": "legislation",
+   "note": "Article 1 of the arrêté on the official law portal, LODA consolidated view (a different URL from the earlier JORF one); WebFetch reached it, but Légifrance has blocked machine fetches before, so the verifier may need the rendered or retry path. The quote is shortened to avoid a singular/plural variant in 'donnée(s)'.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Répertoire national des identifiants élèves, étudiants et apprentis (RNIE)",
+    "reason": "The decree of 18 October 2022 (its title and Article 1) creates a processing named « Répertoire national des identifiants élèves, étudiants et apprentis » (RNIE), so the quote gives the register's name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FR:tax:register",
+   "question": "Tax (Tax assessments, returns and payment history for persons and companies): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000505655",
+   "quote": "La direction générale des finances publiques est autorisée à mettre en œuvre un traitement automatisé d'informations nominatives sous l'appellation ILIAD (informatisation de l'inspection d'assiette et de documentation).",
+   "quote_english": "The Directorate-General of Public Finances is authorised to operate an automated processing of personal information under the name ILIAD (computerisation of the assessment and documentation inspection).",
+   "value": "ILIAD (informatisation de l'inspection d'assiette et de documentation) (computerisation of the tax assessment and documentation inspection)",
+   "published": "2017-07-05",
+   "title": "Arrêté du 25 juillet 1988 autorisant la création d'un traitement automatisé relatif à l'informatisation des inspections d'assiette et de documentation",
+   "publisher": "Légifrance (Secrétariat général du Gouvernement)",
+   "doc_type": "legislation",
+   "note": "Article 1 of the consolidated arrêté, last updated 2017-07-05. Article 2 says ILIAD manages income tax, housing tax, CSG and CRDS. A Cour des comptes report from 2019 is said to expect ILIAD to become obsolete around 2025, but I could not fetch it (connection refused), so this is unverified. Légifrance may block machine fetches.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "ILIAD (informatisation de l'inspection d'assiette et de documentation)",
+    "reason": "Under the decree of 25 July 1988, the DGFiP runs a processing named ILIAD, whose purpose is managing the taxpayer's tax file, so the quote gives the system's name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:FR:tax:operator",
+   "question": "Tax (Tax assessments, returns and payment history for persons and companies): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000505655",
+   "quote": "La direction générale des finances publiques est autorisée à mettre en œuvre un traitement automatisé d'informations nominatives sous l'appellation ILIAD (informatisation de l'inspection d'assiette et de documentation).",
+   "quote_english": "The Directorate-General of Public Finances is authorised to operate an automated processing of personal information under the name ILIAD (computerisation of the assessment and documentation inspection).",
+   "value": "direction générale des finances publiques (Directorate-General of Public Finances)",
+   "published": "2017-07-05",
+   "title": "Arrêté du 25 juillet 1988 autorisant la création d'un traitement automatisé relatif à l'informatisation des inspections d'assiette et de documentation",
+   "publisher": "Légifrance (Secrétariat général du Gouvernement)",
+   "doc_type": "legislation",
+   "note": "Operator of the ILIAD processing, from the same holding's Article 1. This is an extra operator finding for the tax register gap.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "ILIAD (informatisation de l'inspection d'assiette et de documentation)",
+    "reason": "This item has the same URL and quote as item 1: the quote appears verbatim and names the tax system as ILIAD."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:FR:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:tax:register",
+   "status": "found"
+  }
+ ]
+}

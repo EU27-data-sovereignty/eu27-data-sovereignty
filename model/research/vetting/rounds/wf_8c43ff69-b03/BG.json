@@ -1,0 +1,59 @@
+{
+ "iso": "BG",
+ "run": "wf_8c43ff69-b03",
+ "date": "2026-10-06",
+ "workflow_sha256": "03db7944318fb9638b7e3ea1026e67d0b9bba438aed42ff771dbba228dfb437a",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:BG:civil_registry:register",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.grao.bg/nbd/access-terms.html",
+   "quote": "Условия за достъп до Регистъра на населението – Национална база данни „Население“ (РН – НБД „Население“) през Internet",
+   "quote_english": "Conditions for access to the Population Register – National Database \"Population\" (PR – NDB \"Population\") via the Internet",
+   "value": "Регистър на населението – Национална база данни „Население“ (Population Register – National Database \"Population\")",
+   "published": "",
+   "title": "Условия за достъп - Главна дирекция \"Гражданска регистрация и административно обслужване\"",
+   "publisher": "Министерство на регионалното развитие и благоустройството, ГД \"Гражданска регистрация и административно обслужване\"",
+   "doc_type": "official_page",
+   "note": "Operator's own official site (GD GRAO, MRRB), a different page from the unfetchable esgraon.html lead; the same page states access is governed by the Civil Registration Act.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Регистър на населението – Национална база данни „Население“ (РН – НБД „Население“) (Population Register – National Database \"Population\")",
+    "reason": "The quote is the page heading on grao.bg and names the register directly. It does not say who operates it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:BG:civil_registry:operator",
+   "question": "Civil registry core (Births, deaths, marriages, residence and the national person identifier): the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.grao.bg/en/esgraon.html",
+   "quote": "National level – the Ministry of Regional Development and Public Works, through the “Civil Registration and Administrative Services” General Directorate, keeps a population register – the National Population Database",
+   "quote_english": "",
+   "value": "Ministry of Regional Development and Public Works, through the \"Civil Registration and Administrative Services\" General Directorate",
+   "published": "",
+   "title": "USCRASP - Civil Registration and Administrative Services General Directorate",
+   "publisher": "Ministry of Regional Development and Public Works, Civil Registration and Administrative Services General Directorate",
+   "doc_type": "official_page",
+   "note": "English version of the operator's ESGRAON page (a different URL from the earlier Bulgarian lead); it also names the National Electronic Register of Civil Status certificates and the Register of Personal Identification Numbers kept at national level.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "National Population Database (population register)",
+    "reason": "The quote appears verbatim on the page and names the population register as the National Population Database. It also says the Ministry of Regional Development and Public Works keeps it through the GRAO General Directorate."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:BG:civil_registry:register",
+   "status": "found"
+  }
+ ]
+}

@@ -50,7 +50,7 @@ Greece described on its own measured characteristics. Each figure is the publish
 
 ## 3. Critical data holdings, by priority
 
-The holdings Greece cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 32 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
+The holdings Greece cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 33 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -72,33 +72,33 @@ The holdings Greece cannot let depend on infrastructure a foreign state can comp
 | High | Benefits & pensions (tier 1) | ATLAS: digital pension award system of e-EFKA, whose database holds insurance-period data digitised from former IKA archives[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
 | High | Statutory health insurance (tier 1) | Electronic prescription system installed and operated at ΗΔΥΚΑ (IDIKA) for the social-insurance funds[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | Cadastre Information System (ΣΠΕΚ), into which legacy mortgage-registry archives are being digitised[^s31] | Hellenic Cadastre (Ελληνικό Κτηματολόγιο), public-law entity supervised by the Minister of Environment and Energy[^s32][^s33] | Hellenic Cadastre operates its own Data Center and Disaster Recovery Center (upgrade planned)[^s34] | National infrastructure[^s34] | *Not yet measured* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ)[^s35][^s36][^s37] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) (General Commercial Registry)[^s35] | Κεντρική Ένωση Επιμελητηρίων Ελλάδας (Κ.Ε.Ε.Ε.), Τμήμα Υποστήριξης και Ανάπτυξης των Πληροφοριακών Συστημάτων Γ.Ε.ΜΗ. και Υ.Μ.Σ. (Central Union of Chambers of Greece, Department for Support and Development of the GEMI and One-Stop-Shop Information Systems)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ)[^s36][^s37][^s38] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Vehicle & licensing (tier 1) | Driving licences and police ID cards are drawn into the Gov.gr Wallet from the respective registers in which they are held[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Central information system of the Hellenic Police with its files and databases, protected by the Police IT Directorate[^s38][^s39] | *Not yet sourced* | The Hellenic Police IT Directorate designs the computerised information systems and creates and supports their technical infrastructure[^s39] | National infrastructure[^s39] | *Not yet measured* |
-| High | Border and visa systems (tier 1) | πληροφοριακό σύστημα της εθνικής αρχής στο πλαίσιο της σύμβασης SCHENGEN (information system of the national authority under the Schengen Convention)[^s38] | Hellenic Police handles requests submitted through the national SIRENE bureau[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file)[^s40] | Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας (State Security Directorate, Hellenic Police Headquarters)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP[^s41] | *Not yet sourced* | G-Cloud project plans infrastructure for systems hosted in the data centre and disaster site of the Ministry of Finance and AADE[^s10] | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Central Human Resources Management System for the Greek public administration, from appointment to retirement[^s42] | Payroll rules to be applied centrally by the Single Payment Authority (Ενιαία Αρχή Πληρωμής, ΕΑΠ)[^s43] | *Not yet sourced* | *Not stated in sources* | At least 680,000 paid staff in 3,500 wider-public-sector bodies[^s43] |
+| High | Police information systems (tier 1) | Central information system of the Hellenic Police with its files and databases, protected by the Police IT Directorate[^s39][^s40] | *Not yet sourced* | The Hellenic Police IT Directorate designs the computerised information systems and creates and supports their technical infrastructure[^s40] | National infrastructure[^s40] | *Not yet measured* |
+| High | Border and visa systems (tier 1) | πληροφοριακό σύστημα της εθνικής αρχής στο πλαίσιο της σύμβασης SCHENGEN (information system of the national authority under the Schengen Convention)[^s39] | Hellenic Police handles requests submitted through the national SIRENE bureau[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file)[^s41] | Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας (State Security Directorate, Hellenic Police Headquarters)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP[^s42] | *Not yet sourced* | G-Cloud project plans infrastructure for systems hosted in the data centre and disaster site of the Ministry of Finance and AADE[^s10] | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Central Human Resources Management System for the Greek public administration, from appointment to retirement[^s43] | Payroll rules to be applied centrally by the Single Payment Authority (Ενιαία Αρχή Πληρωμής, ΕΑΠ)[^s44] | *Not yet sourced* | *Not stated in sources* | At least 680,000 paid staff in 3,500 wider-public-sector bodies[^s44] |
 | High | Election management and results (tier 1) | Courts of first instance compile detailed preference-vote results and send them in print or electronically to the Ministry of the Interior[^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Crisis management and civil protection (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | EMS (Energy Management System)[^s44][^s45] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | EMS (Energy Management System)[^s45][^s46] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | MySchool[^s46] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Tax (tier 1) | Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis[^s47] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s48] | *Not yet measured* |
-| Standard | Customs declarations (tier 1) | ICISnet — integrated customs information system of AADE[^s49] | *Not yet sourced* | ICISnet is hosted on ΓΓΠΣΔΔ infrastructure[^s50] | National infrastructure[^s50] | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Government Gazette (Εφημερίδα της Κυβερνήσεως, ΦΕΚ): printed and electronic edition and citizens' access to published texts[^s51] | National Printing Office (Εθνικό Τυπογραφείο), a public service under the Presidency of the Government, publishes the Government Gazette (ΦΕΚ) in print and electronically[^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Health records (tier 2) | National Electronic Health Record (ΕΗΦΥ): a central point for storing and managing medical data[^s52] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s53] | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | EODY core functions include epidemiological surveillance and provision of epidemiological data[^s54] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | Digitisation of all physical holdings of the General State Archives (ΓΑΚ) and migration of data from related information systems[^s55] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | MySchool[^s47] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Tax (tier 1) | Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis[^s48] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s49] | *Not yet measured* |
+| Standard | Customs declarations (tier 1) | ICISnet — integrated customs information system of AADE[^s50] | *Not yet sourced* | ICISnet is hosted on ΓΓΠΣΔΔ infrastructure[^s51] | National infrastructure[^s51] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Government Gazette (Εφημερίδα της Κυβερνήσεως, ΦΕΚ): printed and electronic edition and citizens' access to published texts[^s52] | National Printing Office (Εθνικό Τυπογραφείο), a public service under the Presidency of the Government, publishes the Government Gazette (ΦΕΚ) in print and electronically[^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Health records (tier 2) | National Electronic Health Record (ΕΗΦΥ): a central point for storing and managing medical data[^s53] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s54] | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | EODY core functions include epidemiological surveillance and provision of epidemiological data[^s55] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | Digitisation of all physical holdings of the General State Archives (ΓΑΚ) and migration of data from related information systems[^s56] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 32 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 33 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +106,7 @@ Of the 32 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 26 |
+| Not stated in sources | 27 |
 
 ## 5. Legal and institutional posture
 
@@ -131,7 +131,6 @@ Of the 32 verified holdings, how many sources state where the infrastructure is 
 
 Tier 0 and 1 holdings for Greece without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Business registry (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
@@ -146,7 +145,7 @@ Tier 0 and 1 holdings for Greece without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1490 facts are printed, 4227 values are withheld as gaps, and 79 are withheld as disputed.
 
 ### How sources were found
 
@@ -163,17 +162,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 6 |
+| below_T2 | 8 |
 | corrected_withheld | 6 |
-| corroborated | 275 |
-| disputed | 11 |
-| filled_gap | 367 |
-| holding_not_established | 38 |
-| no_better_found | 486 |
+| corroborated | 278 |
+| disputed | 12 |
+| filled_gap | 436 |
+| holding_not_established | 24 |
+| no_better_found | 496 |
 | not_reached | 201 |
-| not_verified | 173 |
-| review_disagreed | 177 |
-| same_source | 14 |
+| not_verified | 197 |
+| review_disagreed | 235 |
+| same_source | 15 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -203,8 +202,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
-| T2 competent public body or audit office | 643 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 673 |
+| T2 competent public body or audit office | 687 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -215,8 +214,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1315 |
+| Strong | 114 |
+| Standard | 1376 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1424 of 1424 printed facts pass the fact check.
+In this build, 1490 of 1490 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
+In this build, 1490 of 1490 printed facts pass, and 57 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -325,6 +324,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_b66a7125-0d9 | 2026-10-06 | 68 | claude-fable-5-1: 68 | supported: 66; not supported: 2 |
 | wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
@@ -336,7 +336,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Greece
 
-60 of 60 printed facts about Greece pass.
+62 of 62 printed facts about Greece pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -372,6 +372,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:EL:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:land_property:hosting | Land & property registry: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:EL:land_property:foreign_dependency | Land & property registry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:business_registry:register | Business registry: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
+| record:EL:business_registry:operator | Business registry: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_b66a7125-0d9 |
 | record:EL:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -444,28 +446,29 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s32]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4512/2018, άρθρο 1, 2018-01-17. Νόμος 4512/2018, άρθρο 1. <https://api.et.gr/apiLAW/1/2018/4512/pdf>
 [^s33]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4512/2018, 2018-01-16. Νόμος 4512/2018. <https://www.lawspot.gr/nomothesia/nomos-4512-2018/>
 [^s34]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Αναβάθμιση εξοπλισμού Κέντρου Δεδομένων (Data Center)…, 2023-12-01. Αναβάθμιση εξοπλισμού Κέντρου Δεδομένων (Data Center) και Εφεδρικού Κέντρου Δεδομένων Κτηματολογίου. <https://digitalstrategy.gov.gr/project/anavathmisi_exoplismoy_ktimatologioy_gia_leitoyrgia_se_eikoniko_perivallon_virtualization> ([archived](https://web.archive.org/web/20251119054015/https://digitalstrategy.gov.gr/project/anavathmisi_exoplismoy_ktimatologioy_gia_leitoyrgia_se_eikoniko_perivallon_virtualization))
-[^s35]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4557/2018, άρθρο 20 παρ. 4, 2018-07-30. Νόμος 4557/2018, άρθρο 20 παρ. 4. <https://api.et.gr/apiLAW/1/2018/4557/pdf>
-[^s36]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4557/2018, 2018-07-30. Νόμος 4557/2018. <https://www.lawspot.gr/nomothesia/nomos-4557-2018/>
-[^s37]: Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ), Υπουργείο Εσωτερικών — Κεντρικό Μητρώο Πραγματικών Δικαιούχων - Εθνικό Μητρώο…, 2026-09-29. Κεντρικό Μητρώο Πραγματικών Δικαιούχων - Εθνικό Μητρώο Διοικητικών Διαδικασιών. <https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%9A%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C_%CE%9C%CE%B7%CF%84%CF%81%CF%8E%CE%BF_%CE%A0%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%94%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%8D%CF%87%CF%89%CE%BD> ([archived](https://web.archive.org/web/20260418223455/https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%9A%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C_%CE%9C%CE%B7%CF%84%CF%81%CF%8E%CE%BF_%CE%A0%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%94%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%8D%CF%87%CF%89%CE%BD))
-[^s38]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4249/2014 (Αναδιοργάνωση της Ελληνικής…, 2014-03. Νόμος 4249/2014 (Αναδιοργάνωση της Ελληνικής Αστυνομίας), Διεύθυνση Πληροφορικής. <https://api.et.gr/apiLAW/1/2014/4249/pdf>
-[^s39]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4249/2014, 2014-03-23. Νόμος 4249/2014. <https://www.lawspot.gr/nomothesia/nomos-4249-2014/>
-[^s40]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4678/2020 (τροποποίηση ν. 2168/1993, ενσωμάτωση…, 2020-03-20. Νόμος 4678/2020 (τροποποίηση ν. 2168/1993, ενσωμάτωση Οδηγίας (ΕΕ) 2017/853), άρθρο 28 παρ. 4 ν. 2168/1993. <https://api.et.gr/apiLAW/1/2020/4678/pdf>
-[^s41]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Κεντρικό και Ενιαίο Σύστημα Δημοσιονομικής Πολιτικής…, 2023-12-01. Κεντρικό και Ενιαίο Σύστημα Δημοσιονομικής Πολιτικής (Government ERP). <https://digitalstrategy.gov.gr/project/government_erp> ([archived](https://web.archive.org/web/20260413112148/https://digitalstrategy.gov.gr/project/government_erp))
-[^s42]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Κεντρικό Σύστημα Διαχείρισης Ανθρώπινου Δυναμικού, 2023-12-01. Κεντρικό Σύστημα Διαχείρισης Ανθρώπινου Δυναμικού. <https://digitalstrategy.gov.gr/project/kentriko_systima_diacheirisis_anthropinoy_dynamikoy> ([archived](https://web.archive.org/web/20260413104530/https://digitalstrategy.gov.gr/project/kentriko_systima_diacheirisis_anthropinoy_dynamikoy))
-[^s43]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Μισθοδοσία, 2023-12-01. Μισθοδοσία. <https://digitalstrategy.gov.gr/project/misthodosia> ([archived](https://web.archive.org/web/20260413121425/https://digitalstrategy.gov.gr/project/misthodosia))
-[^s44]: IPTO (ΑΔΜΗΕ) — Event at the National Control Center in Kryoneri, 2019-12. Event at the National Control Center in Kryoneri. <https://www.admie.gr/en/nea/ekdiloseis/egkainia-psifiakoy-kentroy-eleghoy-sto-kryoneri>
-[^s45]: ΑΔΜΗΕ (IPTO, Independent Power Transmission Operator) — ΜΕΤΑΓΩΓΗ ΣΥΣΤΗΜΑΤΟΣ EMS, 2017-05-30. ΜΕΤΑΓΩΓΗ ΣΥΣΤΗΜΑΤΟΣ EMS. <https://www.admie.gr/anakoinoseis/enimerosi/metagogi-systimatos-ems>
-[^s46]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού) — Ψηφιακές Υπηρεσίες MySchool, 2023-12-01. Ψηφιακές Υπηρεσίες MySchool. <https://digitalstrategy.gov.gr/project/myschool> ([archived](https://web.archive.org/web/20240416211029/https://digitalstrategy.gov.gr/project/myschool))
-[^s47]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού…, 2023-12-01. Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Φορολογίας της ΑΑΔΕ. <https://digitalstrategy.gov.gr/project/anaptyxi_neoy_enopoiimenoy_olokliromenoy_pliroforiakoy_systimatos_forologias_tis_aade>
-[^s48]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4389/2016, 2016-05-27. Νόμος 4389/2016. <https://www.lawspot.gr/nomothesia/nomos-4389-2016/>
-[^s49]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού…, 2023-12-01. Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Τελωνείων της ΑΑΔΕ (ICISnet). <https://digitalstrategy.gov.gr/project/icisnet>
-[^s50]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Αναβάθμιση διαθεσιμότητας, εφεδρείας, ασφάλειας…, 2023-12-01. Αναβάθμιση διαθεσιμότητας, εφεδρείας, ασφάλειας δεδομένων, που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ. <https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd> ([archived](https://web.archive.org/web/20260514161810/https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd))
-[^s51]: Εθνικό Τυπογραφείο — Αποστολή - Εθνικό Τυπογραφείο. Αποστολή - Εθνικό Τυπογραφείο. <https://et.gr/yphresia/mission/> ([archived](https://web.archive.org/web/20260514100450/https://et.gr/yphresia/mission/))
-[^s52]: Υπουργείο Υγείας — Εθνικός Ηλεκτρονικός Φάκελος Υγείας. Εθνικός Ηλεκτρονικός Φάκελος Υγείας. <https://www.ehealthrecord.gov.gr/ehfy-overview-details>
-[^s53]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Σύστημα Διακυβέρνησης Δεδομένων για τον Τομέα της Υγείας, 2023-12-01. Σύστημα Διακυβέρνησης Δεδομένων για τον Τομέα της Υγείας. <https://digitalstrategy.gov.gr/project/systima_diakyvernisis_dedomenon_gia_ton_tomea_tis_ygeias> ([archived](https://web.archive.org/web/20260413103817/https://digitalstrategy.gov.gr/project/systima_diakyvernisis_dedomenon_gia_ton_tomea_tis_ygeias))
-[^s54]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4633/2019, 2019-10-16. Νόμος 4633/2019. <https://www.lawspot.gr/nomothesia/nomos-4633-2019/> ([archived](https://web.archive.org/web/20260121092729/https://www.lawspot.gr/nomothesia/nomos-4633-2019/))
-[^s55]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ψηφιοποίηση των Γενικών Αρχείων του Κράτους, 2023-12-01. Ψηφιοποίηση των Γενικών Αρχείων του Κράτους. <https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys> ([archived](https://web.archive.org/web/20260413121410/https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys))
+[^s35]: Γενική Γραμματεία Εμπορίου, Υπουργείο Ανάπτυξης (General Secretariat of Commerce, Ministry of Development) — Θεσμικό πλαίσιο ΓΕΜΗ - Γενικές πληροφορίες (Law…, 2024-12. Θεσμικό πλαίσιο ΓΕΜΗ - Γενικές πληροφορίες (Law 4919/2022, Article 15, as amended). <https://gge.mindev.gov.gr/tomeas-emporiou/thesmiko-plasio-gemh-genikes-plhrofories/> ([archived](https://web.archive.org/web/20261005221710/https://gge.mindev.gov.gr/tomeas-emporiou/thesmiko-plasio-gemh-genikes-plhrofories/))
+[^s36]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4557/2018, άρθρο 20 παρ. 4, 2018-07-30. Νόμος 4557/2018, άρθρο 20 παρ. 4. <https://api.et.gr/apiLAW/1/2018/4557/pdf>
+[^s37]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4557/2018, 2018-07-30. Νόμος 4557/2018. <https://www.lawspot.gr/nomothesia/nomos-4557-2018/>
+[^s38]: Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ), Υπουργείο Εσωτερικών — Κεντρικό Μητρώο Πραγματικών Δικαιούχων - Εθνικό Μητρώο…, 2026-09-29. Κεντρικό Μητρώο Πραγματικών Δικαιούχων - Εθνικό Μητρώο Διοικητικών Διαδικασιών. <https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%9A%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C_%CE%9C%CE%B7%CF%84%CF%81%CF%8E%CE%BF_%CE%A0%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%94%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%8D%CF%87%CF%89%CE%BD> ([archived](https://web.archive.org/web/20260418223455/https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%9A%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C_%CE%9C%CE%B7%CF%84%CF%81%CF%8E%CE%BF_%CE%A0%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%94%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%8D%CF%87%CF%89%CE%BD))
+[^s39]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4249/2014 (Αναδιοργάνωση της Ελληνικής…, 2014-03. Νόμος 4249/2014 (Αναδιοργάνωση της Ελληνικής Αστυνομίας), Διεύθυνση Πληροφορικής. <https://api.et.gr/apiLAW/1/2014/4249/pdf>
+[^s40]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4249/2014, 2014-03-23. Νόμος 4249/2014. <https://www.lawspot.gr/nomothesia/nomos-4249-2014/>
+[^s41]: Εθνικό Τυπογραφείο (Government Gazette, api.et.gr) — Νόμος 4678/2020 (τροποποίηση ν. 2168/1993, ενσωμάτωση…, 2020-03-20. Νόμος 4678/2020 (τροποποίηση ν. 2168/1993, ενσωμάτωση Οδηγίας (ΕΕ) 2017/853), άρθρο 28 παρ. 4 ν. 2168/1993. <https://api.et.gr/apiLAW/1/2020/4678/pdf>
+[^s42]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Κεντρικό και Ενιαίο Σύστημα Δημοσιονομικής Πολιτικής…, 2023-12-01. Κεντρικό και Ενιαίο Σύστημα Δημοσιονομικής Πολιτικής (Government ERP). <https://digitalstrategy.gov.gr/project/government_erp> ([archived](https://web.archive.org/web/20260413112148/https://digitalstrategy.gov.gr/project/government_erp))
+[^s43]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Κεντρικό Σύστημα Διαχείρισης Ανθρώπινου Δυναμικού, 2023-12-01. Κεντρικό Σύστημα Διαχείρισης Ανθρώπινου Δυναμικού. <https://digitalstrategy.gov.gr/project/kentriko_systima_diacheirisis_anthropinoy_dynamikoy> ([archived](https://web.archive.org/web/20260413104530/https://digitalstrategy.gov.gr/project/kentriko_systima_diacheirisis_anthropinoy_dynamikoy))
+[^s44]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Μισθοδοσία, 2023-12-01. Μισθοδοσία. <https://digitalstrategy.gov.gr/project/misthodosia> ([archived](https://web.archive.org/web/20260413121425/https://digitalstrategy.gov.gr/project/misthodosia))
+[^s45]: IPTO (ΑΔΜΗΕ) — Event at the National Control Center in Kryoneri, 2019-12. Event at the National Control Center in Kryoneri. <https://www.admie.gr/en/nea/ekdiloseis/egkainia-psifiakoy-kentroy-eleghoy-sto-kryoneri>
+[^s46]: ΑΔΜΗΕ (IPTO, Independent Power Transmission Operator) — ΜΕΤΑΓΩΓΗ ΣΥΣΤΗΜΑΤΟΣ EMS, 2017-05-30. ΜΕΤΑΓΩΓΗ ΣΥΣΤΗΜΑΤΟΣ EMS. <https://www.admie.gr/anakoinoseis/enimerosi/metagogi-systimatos-ems>
+[^s47]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού) — Ψηφιακές Υπηρεσίες MySchool, 2023-12-01. Ψηφιακές Υπηρεσίες MySchool. <https://digitalstrategy.gov.gr/project/myschool> ([archived](https://web.archive.org/web/20240416211029/https://digitalstrategy.gov.gr/project/myschool))
+[^s48]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού…, 2023-12-01. Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Φορολογίας της ΑΑΔΕ. <https://digitalstrategy.gov.gr/project/anaptyxi_neoy_enopoiimenoy_olokliromenoy_pliroforiakoy_systimatos_forologias_tis_aade>
+[^s49]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4389/2016, 2016-05-27. Νόμος 4389/2016. <https://www.lawspot.gr/nomothesia/nomos-4389-2016/>
+[^s50]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού…, 2023-12-01. Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Τελωνείων της ΑΑΔΕ (ICISnet). <https://digitalstrategy.gov.gr/project/icisnet>
+[^s51]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Αναβάθμιση διαθεσιμότητας, εφεδρείας, ασφάλειας…, 2023-12-01. Αναβάθμιση διαθεσιμότητας, εφεδρείας, ασφάλειας δεδομένων, που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ. <https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd> ([archived](https://web.archive.org/web/20260514161810/https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd))
+[^s52]: Εθνικό Τυπογραφείο — Αποστολή - Εθνικό Τυπογραφείο. Αποστολή - Εθνικό Τυπογραφείο. <https://et.gr/yphresia/mission/> ([archived](https://web.archive.org/web/20260514100450/https://et.gr/yphresia/mission/))
+[^s53]: Υπουργείο Υγείας — Εθνικός Ηλεκτρονικός Φάκελος Υγείας. Εθνικός Ηλεκτρονικός Φάκελος Υγείας. <https://www.ehealthrecord.gov.gr/ehfy-overview-details>
+[^s54]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Σύστημα Διακυβέρνησης Δεδομένων για τον Τομέα της Υγείας, 2023-12-01. Σύστημα Διακυβέρνησης Δεδομένων για τον Τομέα της Υγείας. <https://digitalstrategy.gov.gr/project/systima_diakyvernisis_dedomenon_gia_ton_tomea_tis_ygeias> ([archived](https://web.archive.org/web/20260413103817/https://digitalstrategy.gov.gr/project/systima_diakyvernisis_dedomenon_gia_ton_tomea_tis_ygeias))
+[^s55]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4633/2019, 2019-10-16. Νόμος 4633/2019. <https://www.lawspot.gr/nomothesia/nomos-4633-2019/> ([archived](https://web.archive.org/web/20260121092729/https://www.lawspot.gr/nomothesia/nomos-4633-2019/))
+[^s56]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ψηφιοποίηση των Γενικών Αρχείων του Κράτους, 2023-12-01. Ψηφιοποίηση των Γενικών Αρχείων του Κράτους. <https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys> ([archived](https://web.archive.org/web/20260413121410/https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys))
 
-**Evidence grades:** 4 Strong, 56 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 58 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

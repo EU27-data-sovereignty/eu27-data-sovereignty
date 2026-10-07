@@ -222,9 +222,11 @@ ok "build succeeded"
 step "Size budget"
 # What a reader downloads, gzipped (#92): the data bundle (826 KB on 2026-10-02) and all JavaScript (342 KB,
 # 236 KB of it the map outline). Raising a budget is a decision with its reason, like a coverage floor.
+# 900 -> 1,100 KB on 2026-10-06: the data plan's step 1 (find as much data as we can) took the bundle to 915 KB
+# with 51 more registers. The lasting fix is a per-country split (docs/plans/mobile-app.md), not more headroom.
 python3 - <<'PY'
 import gzip, pathlib, sys
-budget = {"data bundle": (pathlib.Path("public/data/eu27.json"), 900_000),
+budget = {"data bundle": (pathlib.Path("public/data/eu27.json"), 1_100_000),
           "JavaScript": (sorted(pathlib.Path("dist/assets").glob("*.js")), 400_000)}
 over = []
 for name, (paths, limit) in budget.items():
