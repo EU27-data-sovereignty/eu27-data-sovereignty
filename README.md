@@ -279,8 +279,49 @@ Each country's own institutions are already in the dataset rather than duplicate
 - `certification_scheme` — the national cloud assurance regime and its authority
   (ANSSI for SecNumCloud, BSI for C5, CCN for ENS, ACN in Italy, NÚKIB in Czechia, Traficom in Finland)
 
-Read them per country in that country's `GOAL.md` §10 and §11, or across all 27 in
-`countries/SUMMARY.md`.
+Read them per country in that country's `GOAL.md` §5 (legal and institutional posture). Each one
+prints as *Not yet sourced* until it is checked against the governing instrument, so today most of
+them are withheld. `countries/SUMMARY.md` gives the per-state verification counts.
+
+### What an official can act on today
+
+*Reviewed 2026-10-06. The figures below are as of that date. The live ones are in
+[`docs/evidence.md`](docs/evidence.md) and [`docs/gaps.md`](docs/gaps.md), which are generated from
+the data.*
+
+**Usable now: an inventory to check your own records against.** Each country document lists that
+state's critical data holdings, ranked by a declared rule. For each holding it gives the register and
+operating agency where a checked source names them, and for some states named outsourcing contracts
+(the Netherlands has the most). The most useful thing an official can do with it today is to check
+their own country's entry and correct it.
+
+**Not usable yet as a basis for policy or procurement:**
+- **Where data runs is mostly unknown.** Of 732 holdings with a known register, hosting is sourced
+  for 82, foreign dependency for 56, and data size for none. Every placement is therefore Low
+  confidence (#77).
+- **Legal and institutional posture is withheld.** The governing instrument, certification,
+  classification and procurement route are unsourced for most states, so no legal lever can be
+  pointed to yet.
+- **Nothing is prescriptive.** There are no recommendations, options, costs, timelines or owners.
+  Part of this is by design:
+  - no state is benchmarked against another (#72)
+  - capacity is not sized until it can be measured per state (#73)
+  - the ranking has groups, not scores (#10, #77)
+- **Nothing has been human-verified.** EU-wide, 1,492 facts are printed and 4,227 values are withheld
+  as gaps. A fact is a lead to its cited source, not an established finding.
+
+**What would make it actionable**, ranked by impact:
+1. Sourced hosting and dependency for tier 0 and tier 1 holdings (`ROADMAP.md`, "Next — raise
+   confidence", item 1).
+2. A human sampling audit that measures the error rate.
+3. Sourced legal posture: the instrument, the certification regime and the procurement route per
+   state.
+4. A generic "what sovereign hosting requires" section: options and preconditions per holding tier,
+   derived per state, never scaled from another (#72).
+5. The policy owner per holding (the responsible ministry or the NIS2 competent authority), not only
+   the operating agency.
+6. A corrections URL printed in every PDF and markdown output. Today only the web app links to the
+   issue form, and the static outputs say "the repository's issue template" without an address.
 
 ### A note on timing
 
