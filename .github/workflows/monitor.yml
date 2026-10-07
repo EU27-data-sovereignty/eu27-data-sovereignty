@@ -1,8 +1,9 @@
 name: Monitor
 
 # Weekly, read-only checks of what can change without a commit (#92): the live site (routes, PDFs, headers,
-# noindex, redirect, TLS certificate, served bundle), and whether Eurostat has published new vintages. A
-# failure fails the run and is written to the run summary; it opens no issue and changes nothing.
+# noindex, redirect, TLS certificate, served bundle), whether Eurostat has published new vintages, and whether a
+# cited source has gone or lost a quote (#98). A failure fails the run and is written to the run summary; it
+# opens no issue and changes nothing.
 on:
   schedule:
     - cron: "17 6 * * 1"   # Mondays 06:17 UTC: the live site and data sources
@@ -26,6 +27,37 @@ jobs:
         run: python3 model/smoke.py --site https://eu27.cloud --bundle web/public/data/eu27.json --summary "$GITHUB_STEP_SUMMARY"
       - name: Eurostat vintages (reported, never applied)
         run: python3 model/fetch_eurostat.py --check | tee -a "$GITHUB_STEP_SUMMARY"
+
+  sources:
+    # Every source behind a printed fact, re-fetched politely (serial, robots.txt obeyed) and its quotes looked for
+    # again (#83). It fails on a source that newly disputes its facts: gone (404/410) or a quote no longer found.
+    # A refusal never fails it. Nothing is committed: the owner re-runs ./run.sh recheck locally and commits, and
+    # the CSV and fetch manifest of this run are kept as an artifact for 90 days.
+    name: Cited sources still say what we quote
+    if: github.event.schedule != '41 7 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      # PDF sources are read with pdftotext; without it every PDF quote would look vanished.
+      - name: pdftotext
+        run: sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Re-fetch every cited source
+        run: |
+          set -o pipefail
+          python3 model/research.py recheck --check | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Keep this run's evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: recheck
+          path: |
+            model/research/recheck.csv
+            model/fetch_manifest.csv
+          retention-days: 90
 
   ask:
     # One fixed question, daily (#92): the answer must stream, cite at least one claim and finish. Until the

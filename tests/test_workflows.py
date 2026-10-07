@@ -123,8 +123,7 @@ class Deploy(unittest.TestCase):
         self.assertIn("npm audit --audit-level=high --prefix web", GATE)
 
     def test_ci_installs_the_test_packages_by_hash(self):
-        for wf in (CI, GATE):
-            self.assertIn("pip install --require-hashes -r requirements-dev.txt", wf)
+        self.assertIn("pip install --require-hashes -r requirements-dev.txt", GATE)
         reqs = (ROOT / "requirements-dev.txt").read_text()
         for line in reqs.splitlines():
             if line and not line.startswith(("#", " ")):
@@ -157,6 +156,36 @@ class Deploy(unittest.TestCase):
         self.assertIn("python3 model/smoke.py", monitor)
         self.assertRegex(monitor, r"schedule:\n\s+- cron: ")
         self.assertNotIn("issues: write", monitor)              # read-only: it opens nothing
+
+    def test_ci_is_the_gate_on_pull_requests_and_nothing_else(self):
+        # #98: a second, weaker copy of the model checks on push, and a second gitleaks, were removed. A push to
+        # main runs the gate in deploy.yml; secrets are scanned on every push and pull request by security.yml.
+        self.assertRegex(CI, r"\non:\n  pull_request:\n")
+        self.assertNotIn("push:", CI)
+        self.assertNotIn("unittest discover", CI)
+        self.assertNotIn("gitleaks-reusable", CI)
+        security = (ROOT / ".github" / "workflows" / "security.yml").read_text()
+        self.assertIn(OWN_REUSABLE + "security-reusable.yml@main", security)
+        self.assertRegex(security, r"on: \[push, pull_request")
+
+    def test_pull_requests_report_the_fact_check(self):
+        # #98: on a pull request the fact-check gate runs and warns, but does not fail: the deploy enforces it.
+        model_job = GATE.split("\n  model:\n")[1].split("\n  web:\n")[0]
+        report = model_job.split("if: ${{ !inputs.factcheck }}\n", 1)[1]
+        self.assertIn("set -o pipefail", report)
+        self.assertIn("if ! python3 model/factcheck.py gate", report)
+        self.assertIn("::warning title=Fact check due::", report)
+
+    def test_the_weekly_monitor_rechecks_every_cited_source(self):
+        # #98: read-only, polite, and failing only on a source that newly disputes its facts (#83).
+        monitor = (ROOT / ".github" / "workflows" / "monitor.yml").read_text()
+        job = monitor.split("\n  sources:\n")[1].split("\n  ask:\n")[0]
+        self.assertIn("if: github.event.schedule != '41 7 * * *'", job)
+        self.assertIn("poppler-utils", job)                   # without pdftotext every PDF quote looks gone
+        self.assertIn("python3 model/research.py recheck --check", job)
+        self.assertIn("set -o pipefail", job)
+        self.assertRegex(job, r"if: always\(\)\n        uses: actions/upload-artifact@[0-9a-f]{40}")
+        self.assertNotIn("contents: write", monitor)
 
     def test_only_main_deploys(self):
         self.assertRegex(DEPLOY, r"push:\n\s+branches: \[main\]\n")

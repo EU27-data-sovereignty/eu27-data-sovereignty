@@ -1,24 +1,16 @@
 name: CI
 
+# Pull requests only (#98). A push to main runs the same gate in deploy.yml, and secrets are scanned on every push
+# and pull request by security.yml (gitleaks over the full history, then the security gate).
 on:
-  push:
-    branches: [main]
   pull_request:
 
-# The job checks out the repo, runs stdlib Python and reads the diff. It never
-# writes to the repository, so the default read/write GITHUB_TOKEN is more scope
-# than it needs.
+# The gate checks out the repo and reads it. It never writes to the repository, so the default read/write
+# GITHUB_TOKEN is more scope than it needs.
 permissions:
   contents: read
 
 jobs:
-  # Full-history secret scan with the shared ruleset, so a .gitleaks.toml added to
-  # this repo cannot allowlist its way past it. The local commit/push gate runs the
-  # same tool over added lines; this is the half that sees history and runs on a
-  # machine that is not the author's. Policy: dotfiles/docs/policy/security-and-privacy.md.
-  gitleaks:
-    uses: pieteradejong/dotfiles/.github/workflows/gitleaks-reusable.yml@main
-
   # The full gate on every pull request (#92), so a pull request is not first tested by the production
   # deploy: the same parallel jobs as deploy.yml (gate.yml), without the PDFs, which only shipping needs.
   gate:
@@ -27,32 +19,3 @@ jobs:
     uses: ./.github/workflows/gate.yml
     with:
       pdf: false
-
-  model:
-    name: Model and data integrity
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
-        with:
-          python-version: "3.14"
-
-      - name: Test-only Python packages (hashed)
-        run: python3 -m pip install --require-hashes -r requirements-dev.txt
-      # The model is stdlib-only by design; only the tests use hypothesis (requirements-dev.txt, #92).
-      - name: Run tests
-        run: python3 -m unittest discover -s tests -v
-
-      - name: Generated files are up to date with the model
-        run: |
-          # Read the pinned date from .build-epoch, the single source the three shell
-          # scripts also use. Hardcoding it here once already broke CI when the epoch
-          # was bumped and this copy was missed.
-          export SOURCE_DATE_EPOCH="$(cat .build-epoch)"
-          python3 model/generate_countries.py > /dev/null
-          python3 model/export_json.py > /dev/null
-          if ! git diff --quiet; then
-            echo "::error::Generated files are stale. Run the generator and commit the result."
-            git diff --stat
-            exit 1
-          fi

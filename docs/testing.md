@@ -5,14 +5,15 @@ check is shown to **fail first**, on a deliberately broken input, before it is t
 
 ## Where the checks run
 
-The whole pipeline, its timings and the proposed speed-ups are in [`process.md`](process.md).
+The whole pipeline, its timings and the proposed speed-ups are in [`process.md`](process.md). Every CI/CD workflow, job and check, by event, is in [`ci-cd.md`](ci-cd.md).
 
 | When | What runs | Where it is defined |
 |---|---|---|
 | Before every commit you make | `./test.sh` (all stages below); the security gate on commit | `test.sh` |
-| On every pull request | the gate without PDFs, `npm audit --audit-level=high` (root and `web/`), gitleaks, Python tests | `.github/workflows/ci.yml`, calling `gate.yml` |
+| On every pull request | the gate without PDFs, `npm audit --audit-level=high` (root and `web/`), and `factcheck.py gate` reported as a warning, not a failure (#98) | `.github/workflows/ci.yml`, calling `gate.yml` |
+| On every push and pull request | gitleaks over the full history, then the security gate | `.github/workflows/security.yml`, calling dotfiles' `security-reusable.yml` |
 | On every push to `main` (a production deploy) | the gate with PDFs and `factcheck.py gate`, then the deploy of the gate's own build and `model/smoke.py` | `.github/workflows/deploy.yml`, calling `gate.yml` |
-| Every Monday, 06:17 UTC | `model/smoke.py` against the live site, and `fetch_eurostat.py --check` for new vintages | `.github/workflows/monitor.yml` |
+| Every Monday, 06:17 UTC | `model/smoke.py` against the live site, `fetch_eurostat.py --check` for new vintages, and `research.py recheck --check`: every cited source re-fetched; fails on one newly gone or missing a quote (#98) | `.github/workflows/monitor.yml` |
 | Every day, 07:41 UTC | `model/ask_smoke.py`: one fixed question to the live `/ask`, which must answer with a citation | `.github/workflows/monitor.yml` |
 | Before a release, by hand | the fact-check stability sample (`factcheck.py prepare --sample 50`) and mutation testing (below) | `docs/fact-check.md`, this file |
 | Before trusting a checkout or a release | `./run.sh reproduce`: a fresh clone of HEAD, every output regenerated, then `./test.sh --no-e2e` | `model/reproduce.py` |

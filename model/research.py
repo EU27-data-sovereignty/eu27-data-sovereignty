@@ -5,7 +5,8 @@ Admit researched claims about critical holdings only after checking them against
     python3 model/research.py verify [--iso DE ...]   # fetch, hash, find the quote, look up an archive
     python3 model/research.py admit                    # write verified claims into the registers
     python3 model/research.py report                   # coverage per country, from verification.csv
-    python3 model/research.py recheck [--source ID]    # re-fetch every source behind a printed fact (#83)
+    python3 model/research.py recheck [--source ID] [--check]   # re-fetch every source behind a printed fact (#83);
+                                                                 # --check: exit 1 on a new gone/quote_vanished (#98)
     python3 model/research.py verify --rendered        # retry quotes not found in served HTML, rendered
 
 Why this file exists
@@ -348,8 +349,20 @@ def load_recheck() -> dict[str, dict[str, str]]:
         return {r["source_id"]: r for r in csv.DictReader(fh)}
 
 
-def recheck(only: list[str] | None = None) -> int:
-    """Re-fetch every source behind a printed fact and check its quotes are still there."""
+def new_disputes(before: dict[str, dict[str, str]], after: dict[str, dict[str, str]]) -> list[dict[str, str]]:
+    """Sources whose outcome now disputes their facts and did not in the committed rows (#98).
+
+    Only `gone` and `quote_vanished` count: `unreachable` is a refusal, not evidence of change, and a
+    weekly CI runner is refused more often than a laptop is."""
+    return [r for sid, r in sorted(after.items())
+            if r["outcome"] in DISPUTING and before.get(sid, {}).get("outcome") not in DISPUTING]
+
+
+def recheck(only: list[str] | None = None, check: bool = False) -> int:
+    """Re-fetch every source behind a printed fact and check its quotes are still there.
+
+    With check, also compare against the rows as they were before this run, print the sources that newly
+    dispute their facts as a markdown table, and return 1 if there are any (monitor.yml, #98)."""
     import provenance  # noqa: PLC0415
     import evidence  # noqa: PLC0415
 
@@ -361,6 +374,7 @@ def recheck(only: list[str] | None = None) -> int:
         if src and src["doc_type"] != "dataset" and provenance.supported(c, reg, params):
             by_source.setdefault(c["source_id"], []).append(c)
     rows = load_recheck()
+    committed = {sid: dict(r) for sid, r in rows.items()}
     fresh = []
 
     def save() -> None:
@@ -409,7 +423,16 @@ def recheck(only: list[str] | None = None) -> int:
     for r in rows.values():
         counts[r["outcome"]] = counts.get(r["outcome"], 0) + 1
     print(" ".join(f"{k}={v}" for k, v in sorted(counts.items())))
-    return 0
+    if not check:
+        return 0
+    new = new_disputes(committed, rows)
+    print(f"\n{len(new)} source(s) newly dispute their facts (gone or quote_vanished) since the committed recheck.")
+    if new:
+        print("\n| Source | Outcome | HTTP | Claims whose quote is missing |\n|---|---|---|---|")
+        for r in new:
+            print(f"| `{r['source_id']}` | {r['outcome']} | {r['http_status']} | {r['claims_missing'] or 'all'} |")
+        print("\nRe-run `./run.sh recheck` locally, then `./run.sh data`, and commit: the facts above are then shown as disputed.")
+    return 1 if new else 0
 
 
 # --------------------------------------------------------------------------- #
@@ -639,12 +662,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("command", choices=["verify", "admit", "report", "recheck"])
     ap.add_argument("--iso", action="append")
     ap.add_argument("--source", action="append", help="recheck: only these source ids")
+    ap.add_argument("--check", action="store_true", help="recheck: exit 1 if a source newly disputes its facts")
     ap.add_argument("--rendered", action="store_true", help="verify: retry not-found quotes in a headless browser")
     args = ap.parse_args(argv)
     if args.command == "verify" and args.rendered:
         return verify_rendered()
     if args.command == "recheck":
-        return recheck(args.source)
+        return recheck(args.source, args.check)
     if args.command == "verify":
         return verify([i.upper() for i in args.iso] if args.iso else None)
     if args.command == "admit":

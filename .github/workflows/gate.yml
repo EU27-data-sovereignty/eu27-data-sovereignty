@@ -49,6 +49,15 @@ jobs:
       - name: Fact-check gate
         if: inputs.factcheck
         run: python3 model/factcheck.py gate
+      # On a pull request the same check is reported, not enforced (#98): branches stay unblocked, and the deploy
+      # enforces it. This makes "the deploy will fail" visible before the merge rather than after it.
+      - name: Fact-check status (reported; the deploy enforces it)
+        if: ${{ !inputs.factcheck }}
+        run: |
+          set -o pipefail
+          if ! python3 model/factcheck.py gate | tee -a "$GITHUB_STEP_SUMMARY"; then
+            echo "::warning title=Fact check due::Printed facts are not yet checked by a second model. Run /factcheck before merging; the deploy will fail otherwise."
+          fi
 
   web:
     name: Web app (./test.sh --only web)

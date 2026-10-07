@@ -51,6 +51,36 @@ class Matching(unittest.TestCase):
         self.assertEqual(research.match("BMG", self.text()), "too_short")
 
 
+class RecheckCheck(unittest.TestCase):
+    """`recheck --check` fails only on a source that newly disputes its facts (#98)."""
+
+    @staticmethod
+    def rows(**outcomes):
+        return {sid: {"source_id": sid, "outcome": o} for sid, o in outcomes.items()}
+
+    def test_a_source_that_is_newly_gone_or_lost_a_quote_is_reported(self):
+        before = self.rows(a="unchanged", b="changed_quotes_present")
+        after = self.rows(a="gone", b="quote_vanished")
+        self.assertEqual([r["source_id"] for r in research.new_disputes(before, after)], ["a", "b"])
+
+    def test_a_source_already_disputed_in_the_committed_rows_is_not_new(self):
+        before = self.rows(a="gone", b="quote_vanished")
+        after = self.rows(a="quote_vanished", b="gone")
+        self.assertEqual(research.new_disputes(before, after), [])
+
+    def test_a_refusal_is_not_evidence_of_change(self):
+        before = self.rows(a="unchanged")
+        self.assertEqual(research.new_disputes(before, self.rows(a="unreachable")), [])
+
+    def test_a_source_never_rechecked_before_counts_when_it_is_gone(self):
+        self.assertEqual(len(research.new_disputes({}, self.rows(new="gone"))), 1)
+
+    def test_the_cli_takes_check(self):
+        import inspect
+        self.assertIn("check", inspect.signature(research.recheck).parameters)
+        self.assertIn("recheck(args.source, args.check)", inspect.getsource(research.main))
+
+
 class ArchivedCopies(unittest.TestCase):
     def test_a_snapshot_of_the_same_url_is_accepted(self):
         self.assertTrue(research.snapshot_matches(

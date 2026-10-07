@@ -5,6 +5,20 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-07
+
+### Changed: CI checks once, reports the fact check on pull requests, and rechecks every cited source weekly (#98)
+
+- **Pull requests.** `ci.yml` runs only the gate, on pull requests. Its duplicate Python job, whose staleness check
+  covered 2 of 5 generators, and its duplicate gitleaks job are removed; `deploy.yml` and `security.yml` cover both.
+- **The fact check, before the merge.** A pull request's gate now runs `factcheck.py gate` and warns, without
+  failing, when the deploy's fact check would fail.
+- **Cited sources, weekly.** The Monday monitor runs `research.py recheck --check`: every source behind a printed
+  fact is re-fetched, and the run fails if one is newly gone or lost a quote. It commits nothing; the owner re-runs
+  `./run.sh recheck` locally. The run's CSV and fetch manifest are kept for 90 days.
+- **Documented.** `docs/ci-cd.md`: every workflow, job and check by event, the data integrity checks, the
+  supply-chain rules, these changes and their known limits.
+
 ## 2026-10-06
 
 ### Changed: the cheapest gaps: 51 more registers known, 70% of all pairs; $45 of research

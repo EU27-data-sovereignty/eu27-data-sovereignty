@@ -2488,3 +2488,59 @@ smoke checks. The PDF job (3:59) is now the critical path.
 
 *Would change if:* the parallel jobs' setup time outweighs the saving (each job installs its own
 dependencies); or GitHub artifacts prove unreliable enough that a deploy fails for want of one.
+
+### 98. CI checks once, reports the fact check on pull requests, and rechecks every cited source weekly
+**Decision.** 2026-10-07, on the owner's go-ahead after a review of the CI/CD checks.
+- **`ci.yml` runs on pull requests only**, and only the gate (`gate.yml`, without PDFs). Its `model` job and its
+  `gitleaks` job are removed. A push to `main` runs the full gate in `deploy.yml`; secrets are scanned on every
+  push and pull request by `security.yml` (`security-reusable.yml`: gitleaks over the full history, then the
+  security gate).
+- **The fact check is reported on pull requests.** When `gate.yml` runs without `factcheck`, its model job runs
+  `factcheck.py gate`, writes the result to the run summary and raises a `::warning` if it would fail. The step
+  does not fail the job. The deploy still enforces the gate (#87).
+- **A weekly source recheck.** `monitor.yml`'s new `sources` job runs `research.py recheck --check` on Mondays.
+  It re-fetches every source behind a printed fact (#83) and fails if a source is newly `gone` or
+  `quote_vanished` against the committed `recheck.csv`. A refusal (`unreachable`) never fails it. It commits
+  nothing, and it keeps the run's `recheck.csv` and fetch manifest as an artifact for 90 days.
+
+**Problem.** Four gaps found on 2026-10-07:
+- On a push to `main`, `ci.yml`'s `model` job re-ran the Python tests next to the deploy's gate. Its staleness
+  check ran 2 of the 5 generators and failed on any diff in the tree, so it was a weaker copy of a check that
+  already ran.
+- A pull request with an unchecked printed fact went green. It failed only when pushed to `main`, which is the
+  production deploy.
+- Nothing re-fetched cited sources unless the owner ran `./run.sh recheck`. The last committed recheck was
+  2026-09-30, and it covered 691 of today's 1,257 sources.
+- gitleaks ran twice per push, once through `gitleaks-reusable.yml`, which the dotfiles policy (§9) calls
+  superseded.
+
+**Alternatives considered.**
+- **One gate per event, a reported fact check, and a read-only weekly recheck (chosen).**
+- **Keep `ci.yml`'s `model` job and make its staleness check match `test.sh`.** *Why not:* on a push to `main` it
+  would duplicate the deploy's gate job for job, and two copies of one check drift apart, as this one already had.
+- **Enforce the fact check on pull requests.** *Why not:* a branch must stay unblocked while facts are being
+  researched (#87). A pull request is where unchecked facts are expected; only shipping them is not.
+- **Let the weekly job commit the recheck result.** *Why not:* `recheck.csv` decides which facts are shown as
+  disputed. A CI job writing evidence to `main` with no one reviewing it would be a deploy nobody approved. It would
+  also give the job `contents: write`, which no workflow here has.
+- **Fail the weekly job on `unreachable` too.** *Why not:* GitHub's runner addresses are refused more often than
+  a laptop's, and #83 already rules that a refusal is not evidence of change. It would fail every week.
+
+**Closes off.** A second copy of the model checks in `ci.yml`, a second gitleaks run, and a scheduled job that
+writes to the repository. `tests/test_workflows.py` fails on any of them, and on a monitor without the recheck.
+
+**Verified:** in part, locally on 2026-10-07:
+- `python3 -m unittest tests.test_workflows tests.test_research` passes 40 tests. Run against the previous
+  `ci.yml`, `gate.yml`, `monitor.yml` and `research.py`, the 8 new tests fail (2 failures, 6 errors).
+- `actionlint .github/workflows/*.yml` reports nothing.
+- `research.py recheck --check --source interoperable-europe-ec-europa-eu:92a5c57c6a` (404, committed as `gone`)
+  exits 0. With its committed row changed to `unchanged`, the same command exits 1 and prints it in the table.
+  Both runs' file changes were reverted.
+- `factcheck.py gate` today: 1490 of 1490 printed facts pass, so the pull-request step would print no warning.
+
+NOT YET in CI: the first pull request showing the fact-check step, and the first `sources` run (by
+`workflow_dispatch` or on a Monday), its duration and its artifact.
+
+*Would change if:* the weekly recheck regularly exceeds its 120-minute timeout (1,257 sources at 1.5 s apart);
+or GitHub runners are refused by so many hosts that the recheck covers too few sources to mean anything. Then it
+would run from a machine the owner controls.

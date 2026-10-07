@@ -48,7 +48,8 @@ python3 model/research.py verify [--iso XX]   # fetch, hash, quote-check staged 
 python3 model/research.py admit        # write verified + reviewed claims into the registers
 python3 model/research.py report       # verification outcomes per state
 ./run.sh admit [--check]               # research then vetting admission; --check: registers reproduce (#84)
-./run.sh recheck                       # re-fetch every source behind a printed fact; resumable (#83)
+./run.sh recheck [--check]             # re-fetch every source behind a printed fact; resumable (#83)
+                                       # --check: exit 1 on a source newly gone or missing a quote (weekly in CI, #98)
 ./run.sh retry                         # not-found quotes: served page in its charset, then rendered; admit
 ./run.sh eurostat check|adopt COL=PERIOD   # Eurostat vintages; pins are data (model/eurostat_pins.csv)
 ./run.sh vet prepare|stage|hosts|verify|admit|report|manifest   # vetting run; the agent step is /vet

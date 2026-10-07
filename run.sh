@@ -62,7 +62,7 @@ show_help() {
     echo
     echo -e "${GREEN}Evidence (docs/vetting.md; each step is one command)${NC}"
     echo "  admit [--check]  Admit verified research, then vetting; --check proves the registers reproduce"
-    echo "  recheck          Re-fetch every source behind a printed fact (resumable)"
+    echo "  recheck [--check] Re-fetch every source behind a printed fact (resumable); --check: fail on a new dispute"
     echo "  retry            Retry not-found quotes (served page in its charset, then rendered), then admit"
     echo "  eurostat check   Pull at the pinned periods and report; writes nothing"
     echo "  eurostat adopt COL=PERIOD ...   Move pins, apply, register the vintage"
