@@ -132,7 +132,7 @@ Four findings, none of them a disclosure. **All four were closed on 2026-09-08:*
 | 2 | `.github/workflows/ci.yml` declares no `permissions:` block and inherits the default `GITHUB_TOKEN` scope, though the job runs stdlib Python and needs read only | **Closed 2026-09-08.** Added, with a comment saying why the job needs nothing more | Low-medium |
 | 3 | `ROADMAP.md` still described the four 2026-09-04 findings as open after `f03fde7` closed them, and still pointed named individuals at `paper_book/contacts/` after #45 moved them to a private repo | Fixed in this pass | Low |
 
-**Informational.** `pieter.a.dejong@gmail.com` appears as committer on all 21 commits and is permanently
+**Informational.** A personal (non-noreply) email address appears as committer on all 21 commits and is permanently
 public. This matches `chokepoints-globe` and is presumably deliberate; it is noted only because
 `~/dev/CLAUDE.md` calls it out, and because it cannot be scrubbed without rewriting history.
 
