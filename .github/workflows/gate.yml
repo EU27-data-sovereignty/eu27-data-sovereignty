@@ -116,7 +116,7 @@ jobs:
           mv "$RUNNER_TEMP/typst-x86_64-unknown-linux-musl/typst" "$HOME/.local/bin/typst"
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Install poppler (to inspect the compiled PDFs)
-        run: sudo apt-get install -y --no-install-recommends poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Compile and inspect the PDFs
         run: PDF_OUT="$RUNNER_TEMP/pdfs" ./test.sh --only pdf
       # The PDFs deploy.yml ships are these, compiled and inspected here (optimisation 1).

@@ -44,7 +44,7 @@ jobs:
           python-version: "3.14"
       # PDF sources are read with pdftotext; without it every PDF quote would look vanished.
       - name: pdftotext
-        run: sudo apt-get install -y --no-install-recommends poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Re-fetch every cited source
         run: |
           set -o pipefail
