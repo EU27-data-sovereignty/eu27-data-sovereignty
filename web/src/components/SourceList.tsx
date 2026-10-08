@@ -10,16 +10,19 @@ export function SourceList({
   bundle,
   numbers,
   claims,
+  hidden,
 }: {
   bundle: Bundle
   numbers: Map<string, number>
   claims: Map<string, string[]>
+  /** Sources a filter on the page has hidden; they stay in the list, so numbering never shifts. */
+  hidden?: Set<string>
 }) {
   if (numbers.size === 0) return null
   const ordered = [...numbers.entries()].sort((a, b) => a[1] - b[1])
   return (
     <section id="sources" className="mt-12 border-t border-[var(--color-border)] pt-6">
-      <h2 className="mb-2 text-lg font-semibold text-[var(--color-accent-text)]">Sources</h2>
+      <h2 className="mb-2 font-display text-2xl font-bold tracking-tight">Sources</h2>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         Each source is listed once. The hash identifies the exact document that was fetched; the
         quote under each claim is text found in it by machine, in its original language, then a
@@ -28,7 +31,7 @@ export function SourceList({
       <p className="mb-4 max-w-3xl text-xs text-[var(--color-fg-muted)]">
         Evidence grades. {bundle.notice.grade_rule}
       </p>
-      <ol className="space-y-4 text-sm">
+      <ol className="space-y-3 text-sm">
         {ordered.map(([sid, n]) => {
           const s = bundle.sources[sid]
           if (!s) return null
@@ -36,7 +39,8 @@ export function SourceList({
             <li
               key={sid}
               id={`src-${n}`}
-              className="scroll-mt-4 rounded [overflow-wrap:anywhere] target:bg-[var(--color-bg-emphasis)]"
+              hidden={hidden?.has(sid)}
+              className="scroll-mt-4 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 [overflow-wrap:anywhere] target:border-[var(--color-eu-gold)] target:bg-[var(--color-bg-emphasis)] sm:p-5"
             >
               <div>
                 <span className="mr-2 font-semibold text-[var(--color-accent-text)]">[{n}]</span>
@@ -57,12 +61,15 @@ export function SourceList({
                 ) : null}
                 {s.notes ? <span className="text-[var(--color-fg-muted)]"> {s.notes}.</span> : null}
               </div>
-              <ul className="mt-1 space-y-1 pl-8">
+              <ul className="mt-3 space-y-3">
                 {(claims.get(sid) ?? []).map(claim =>
                   (bundle.claims[claim] ?? [])
                     .filter(c => c.source_id === sid)
                     .map(c => (
-                      <li key={claim + c.locator}>
+                      <li
+                        key={claim + c.locator}
+                        className="border-l-[3px] border-[var(--color-eu-gold)] pl-4"
+                      >
                         <code className="text-xs text-[var(--color-fg-muted)]">{claim}</code>
                         <div className="text-[var(--color-fg-secondary)]">
                           {c.original ? (

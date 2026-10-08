@@ -18,7 +18,7 @@ export function FactCheck({ bundle }: { bundle: Bundle }) {
   }
   const name = code ? bundle.documents[code]?.name : undefined
   return (
-    <MethodFrame title={`Fact check${name ? `: ${name}` : ''}`}>
+    <MethodFrame title={`Fact check${name ? `: ${name}` : ''}`} sections={doc.sections}>
       {name && (
         <p className="mb-4 text-sm">
           <Link to={`/country/${code}`} className="underline">

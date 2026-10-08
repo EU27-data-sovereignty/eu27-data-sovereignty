@@ -95,7 +95,9 @@ test.describe('data actually renders', () => {
 
   test('countries sort by verified holdings and link to their PDF', async ({ page }) => {
     await page.goto('/countries')
-    await expect(page.locator('tbody tr')).toHaveCount(27)
+    await expect(
+      page.getByRole('list', { name: 'Member states' }).getByRole('listitem'),
+    ).toHaveCount(27)
     await page.getByRole('button', { name: /Holdings verified/ }).click()
     await expect(page.getByRole('link', { name: 'PDF' }).first()).toHaveAttribute(
       'href',
