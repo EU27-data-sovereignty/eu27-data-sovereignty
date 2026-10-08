@@ -391,7 +391,7 @@ class Appendix(unittest.TestCase):
     def test_the_web_poster_and_ask_carry_it(self):
         web = ROOT / "web" / "src"
         self.assertIn('path="fact-check/:iso"', (web / "App.tsx").read_text(encoding="utf-8"))
-        self.assertIn('href="/fact-check"', (web / "components" / "ProvenanceBanner.tsx").read_text(encoding="utf-8"))
+        self.assertIn('href="/fact-check"', (web / "components" / "ProvenanceNotice.tsx").read_text(encoding="utf-8"))
         self.assertIn("/fact-check/${code}", (web / "pages" / "Country.tsx").read_text(encoding="utf-8"))
         self.assertIn("bundle.factcheck.lines[code]", (web / "pages" / "Poster.tsx").read_text(encoding="utf-8"))
         self.assertEqual(sorted(BUNDLE["factcheck"]["lines"]), sorted(BUNDLE["documents"]))

@@ -133,20 +133,13 @@ function docSpans(iso: string): Span[] {
 test.describe('evidence rules (#82, #83)', () => {
   test('every page says the findings are machine-checked, not human-verified', async ({ page }) => {
     await page.goto('/country/DE')
-    if (test.info().project.name.startsWith('iphone')) {
-      // On a phone the banner shows its first sentence on every page, the rest one tap away (#92).
-      const lead = BUNDLE.provenance.slice(0, BUNDLE.provenance.indexOf('. ') + 1)
-      await expect(page.getByText(lead, { exact: true }).first()).toBeVisible()
-      await page.getByText('Read the full notice').click()
-      await expect(
-        page.locator('details').getByText('Treat each fact as a lead', { exact: false }),
-      ).toBeVisible()
-    } else {
-      await expect(page.getByText(BUNDLE.provenance, { exact: false }).first()).toBeVisible()
-    }
+    // The notice heads the footer of every page, in full at every width.
+    await expect(
+      page.locator('footer').getByText(BUNDLE.provenance, { exact: false }),
+    ).toBeVisible()
     for (const route of ['/', '/methodology']) {
       await page.goto(route)
-      // exact: the banner on every page also contains the disclaimer, inside longer text; this
+      // exact: the footer notice on every page also contains the disclaimer, inside longer text; this
       // checks the page's own statement of it.
       await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
     }
@@ -168,9 +161,6 @@ test.describe('evidence rules (#82, #83)', () => {
     const rows = table.rows
     await expect(page.getByText(rows[0]![0]!.t, { exact: true })).toBeVisible()
     await page.goto('/')
-    if (test.info().project.name.startsWith('iphone')) {
-      await page.getByText('Read the full notice').click() // the banner's links, one tap away on a phone
-    }
     await page.getByRole('link', { name: 'How every fact was checked' }).click()
     await expect(page).toHaveURL(/\/fact-check$/)
     await expect(page.getByText('not by a person', { exact: false }).first()).toBeVisible()

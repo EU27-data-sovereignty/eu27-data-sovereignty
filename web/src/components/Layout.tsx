@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
-import { ProvenanceBanner } from './ProvenanceBanner'
+import { ProvenanceNotice } from './ProvenanceNotice'
 import { useTheme } from '@/utils/theme'
 
 const NAV = [
@@ -26,8 +26,6 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
       >
         Skip to content
       </a>
-
-      <ProvenanceBanner generated={generated} provenance={provenance} />
 
       <header className="no-print border-b border-[var(--color-border)] px-4 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2">
@@ -84,27 +82,31 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
         <Outlet />
       </main>
 
-      <footer className="no-print mt-12 border-t border-[var(--color-border)] px-4 py-6 text-xs text-[var(--color-fg-secondary)]">
+      {/* The footer prints its provenance notice; the rest of it is screen-only. */}
+      <footer className="mt-12 border-t border-[var(--color-border)] px-4 py-6 text-xs text-[var(--color-fg-secondary)]">
         <div className="mx-auto max-w-6xl">
-          <NavLink
-            to="/"
-            end
-            aria-label="EU27.CLOUD, European Union Data Sovereignty Initiative"
-            className="mb-4 flex items-center gap-3"
-          >
-            <img src="/brand/badge.png" alt="" className="h-12 w-12" />
-            <img src="/brand/lockup.png" alt="" className="logo-light h-10 w-auto" />
-            <img src="/brand/lockup-white.png" alt="" className="logo-dark h-10 w-auto" />
-          </NavLink>
-          MIT licensed. Independent research, not affiliated with any government or EU body.
-          Corrections and sources welcome via{' '}
-          <a
-            className="underline"
-            href="https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=data-correction.yml"
-          >
-            the corrections form
-          </a>
-          .
+          <ProvenanceNotice generated={generated} provenance={provenance} />
+          <div className="no-print">
+            <NavLink
+              to="/"
+              end
+              aria-label="EU27.CLOUD, European Union Data Sovereignty Initiative"
+              className="mb-4 flex items-center gap-3"
+            >
+              <img src="/brand/badge.png" alt="" className="h-12 w-12" />
+              <img src="/brand/lockup.png" alt="" className="logo-light h-10 w-auto" />
+              <img src="/brand/lockup-white.png" alt="" className="logo-dark h-10 w-auto" />
+            </NavLink>
+            MIT licensed. Independent research, not affiliated with any government or EU body.
+            Corrections and sources welcome via{' '}
+            <a
+              className="underline"
+              href="https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=data-correction.yml"
+            >
+              the corrections form
+            </a>
+            .
+          </div>
         </div>
       </footer>
     </div>
