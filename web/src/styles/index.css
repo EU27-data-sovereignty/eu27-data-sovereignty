@@ -35,6 +35,34 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
+
+  /* The page bands carry the EU silhouette artwork on the night navy it was drawn on. */
+  .band-map {
+    background: var(--color-night) url('/brand/hero-bg.webp') 60% 42% / cover no-repeat;
+  }
+
+  /* The wordmark and lockup ship in navy and in white; each theme shows its own. */
+  .logo-dark {
+    display: none;
+  }
+
+  :root[data-theme='dark'] .logo-light {
+    display: none;
+  }
+
+  :root[data-theme='dark'] .logo-dark {
+    display: inline-block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .logo-light {
+      display: none;
+    }
+
+    :root:not([data-theme='light']) .logo-dark {
+      display: inline-block;
+    }
+  }
 }
 
 /* Print: the /poster and /country routes are printed to PDF by headless Chrome. */

@@ -50,7 +50,7 @@ representation is a bug in that representation.
    never shown as a fact; it is a gap, set in muted italics. `document.py --check` enforces this.
 3. **The caveat travels with the artefact (#25).** Anything that can be shared on its own carries
    its own provenance line.
-4. **No state emblems, flags, crowns or official-looking wordmarks (#47, #76).** Country flag emoji
+4. **No state emblems, flags, crowns or official-looking wordmarks (#47, #76; the web app is excepted by #99).** Country flag emoji
    are permitted **only** in the markdown index.
 5. **Byte-reproducible output (#15, #34).** Nothing reads the wall clock; the build date comes from
    `.build-epoch` via `SOURCE_DATE_EPOCH`. Re-running with no input change produces a zero diff.

@@ -40,9 +40,9 @@ BUNDLE = ROOT / "web" / "public" / "data" / "eu27.json"
 BUILD = BOOK / "build"
 
 TITLE = "Sovereign Data Centres for the EU-27"
-# The project's goal, stated as a goal: sizing is withdrawn until holdings are measured (#73), so no
-# plan is claimed as finished.
-SUBTITLE = "Toward a well-sourced plan for every EU member state: which critical government data to hold at home, and the sovereign data centres to hold it"
+# The project's goal, as the web front page states it (#91, #99): a framework, not a finished plan, since
+# sizing is withdrawn until holdings are measured (#73).
+SUBTITLE = "A research-backed framework for every EU member state: which critical government data should remain within national borders—and which sovereign data centres should host it."
 
 _SPECIAL = re.compile(r"([#@$\\<>*_`~\[\]])")
 

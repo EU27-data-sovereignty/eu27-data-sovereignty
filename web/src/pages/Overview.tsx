@@ -8,7 +8,7 @@ function Stat({ label, value, sub }: { label: string; value: string; sub: string
   return (
     <div className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-3">
       <div className="text-xs text-[var(--color-fg-secondary)]">{label}</div>
-      <div className="font-serif text-[length:var(--text-stat)] leading-tight tabular-nums">
+      <div className="font-display text-[length:var(--text-stat)] leading-tight font-bold tabular-nums">
         {value}
       </div>
       <div className="text-xs text-[var(--color-fg-muted)]">{sub}</div>
@@ -46,12 +46,12 @@ export function Overview({ bundle }: { bundle: Bundle }) {
       {/* The report cover, as the front page's header (#91). */}
       <PageBand
         hero
-        kicker="EU-27 · Independent research"
+        kicker="EU-27 · Independent Research"
         title={<>Sovereign Data Centres for the EU{'\u2011'}27</>}
       >
-        <p className="mt-4 font-serif text-lg sm:text-2xl">
-          Toward a well-sourced plan for every EU member state: which critical government data to
-          hold at home, and the sovereign data centres to hold it
+        <p className="mt-4 max-w-3xl text-lg text-white/85 sm:text-xl">
+          A research-backed framework for every EU member state: which critical government data
+          should remain within national borders—and which sovereign data centres should host it.
         </p>
       </PageBand>
       <p className="mb-6 max-w-3xl text-[var(--color-fg-secondary)]">
