@@ -29,6 +29,14 @@ function RangeBar({ p, order }: { p: Placement; order: GroupId[] }) {
   )
 }
 
+/** Indicator findings as pills; the word stays, so colour is never the only cue. */
+const PILL: Record<string, string> = {
+  Yes: 'rounded-full bg-[var(--color-eu-blue)] px-2.5 py-0.5 text-xs font-semibold text-white',
+  Partly:
+    'rounded-full border border-[var(--color-eu-blue)] px-2.5 py-0.5 text-xs font-semibold text-[var(--color-accent-text)]',
+  No: 'rounded-full border-2 border-[var(--color-rank-5)] px-2.5 py-0.5 text-xs font-semibold',
+}
+
 const CHIP: Record<Placement['confidence'], string> = {
   High: 'border-solid',
   Medium: 'border-dashed',
@@ -89,7 +97,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand kicker="EU-27 · Ranking by published rule" title="Data-sovereignty ranking" />
-      <p className="mb-2 max-w-3xl border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
+      <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
         {sov.guardrail}
       </p>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
@@ -111,9 +119,9 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             type="button"
             aria-pressed={filter === c}
             onClick={() => setFilter(c)}
-            className={`rounded border px-2 py-0.5 ${
+            className={`rounded border px-3 py-1 ${
               filter === c
-                ? 'border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-fg-on-accent)]'
+                ? 'border-[var(--color-eu-blue)] bg-[var(--color-eu-blue)] text-white'
                 : 'border-[var(--color-border)]'
             }`}
           >
@@ -129,8 +137,16 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
               .filter(([, p]) => p.group === g.id)
               .sort((a, b) => names[a[0]]!.localeCompare(names[b[0]]!))
             return (
-              <div key={g.id} className="mb-3 border-b border-[var(--color-border)] pb-2">
-                <h2 className="mb-1 flex items-center gap-2 text-sm font-semibold">
+              <div
+                key={g.id}
+                className="relative mb-2.5 overflow-hidden rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] py-3.5 pr-4 pl-5"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-y-0 left-0 w-1"
+                  style={{ background: GROUP_FILL[g.id] }}
+                />
+                <h2 className="mb-2 flex items-center gap-2 font-display text-base font-bold">
                   <span
                     aria-hidden="true"
                     className="inline-block h-3 w-3"
@@ -148,7 +164,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                         type="button"
                         onClick={() => setSelected(iso)}
                         aria-pressed={selected === iso}
-                        className={`flex items-center gap-1.5 rounded border-2 border-[var(--color-border)] bg-[var(--color-bg-card)] px-1.5 py-0.5 text-xs ${CHIP[p.confidence]} ${
+                        className={`flex items-center gap-1.5 rounded border-2 border-[var(--color-border)] bg-[var(--color-bg-emphasis)] px-2 py-1 text-sm hover:border-[var(--color-eu-gold)] ${CHIP[p.confidence]} ${
                           selected === iso ? 'border-[var(--color-accent)]' : ''
                         }`}
                       >
@@ -184,9 +200,9 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
       {sel && selected ? (
         <section
           aria-live="polite"
-          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4"
+          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-eu-gold)] sm:p-6"
         >
-          <h2 className="font-display font-bold text-xl">{names[selected]}</h2>
+          <h2 className="font-display text-2xl font-bold">{names[selected]}</h2>
           <p className="mb-2 text-sm">
             <strong>{labels[sel.group]}</strong> · {sel.confidence} confidence · could still reach{' '}
             {labels[sel.range[0]!]}
@@ -213,11 +229,11 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         <h2 className="mb-2 font-display font-bold text-xl text-[var(--color-accent-text)]">
           The indicators
         </h2>
-        <div className="scroll-x">
+        <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
           <table className="w-full min-w-[40rem] border-collapse text-sm">
             <thead>
-              <tr className="border-b-2 border-[var(--color-accent)] bg-[var(--color-bg-emphasis)]">
-                <th scope="col" className="px-2 py-1.5 text-left">
+              <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
+                <th scope="col" className="px-3.5 py-2.5 text-left">
                   <button type="button" onClick={() => setSortBy('name')} className="font-semibold">
                     State{sortBy === 'name' ? ' ▾' : ''}
                   </button>
@@ -226,7 +242,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                   <th
                     key={ind.id}
                     scope="col"
-                    className="px-2 py-1.5 text-left"
+                    className="px-3.5 py-2.5 text-left"
                     title={ind.question}
                   >
                     <button
@@ -243,8 +259,8 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             </thead>
             <tbody>
               {gridRows.map(r => (
-                <tr key={r.iso} className="border-b border-[var(--color-border)]">
-                  <th scope="row" className="px-2 py-1.5 text-left font-normal">
+                <tr key={r.iso} className="border-t border-[var(--color-border)]">
+                  <th scope="row" className="px-3.5 py-2.5 text-left font-normal">
                     <Link
                       to={`/country/${r.iso}`}
                       className="text-[var(--color-accent-text)] underline"
@@ -253,8 +269,10 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                     </Link>
                   </th>
                   {r.cells.map((cell, i) => (
-                    <td key={i} className="px-2 py-1.5">
-                      <SpanView span={cell} numbers={numbers} bundle={bundle} />
+                    <td key={i} className="px-3.5 py-2.5">
+                      <span className={PILL[cell.t] ?? ''}>
+                        <SpanView span={cell} numbers={numbers} bundle={bundle} />
+                      </span>
                     </td>
                   ))}
                 </tr>

@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import type { Block, Bundle, Document, Span } from '@/data/types'
 
 /**
@@ -73,7 +75,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
     case 'callout':
       return (
         <div
-          className={`mb-3 max-w-3xl border-l-4 px-3 py-2 text-sm ${
+          className={`mb-4 max-w-3xl rounded border-l-4 px-4 py-3 text-sm ${
             block.tone === 'gap'
               ? 'border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)]'
               : block.tone === 'method'
@@ -98,19 +100,19 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
       return (
         // Focusable, so a keyboard user can scroll a table wider than the page (WCAG 2.1.1).
         <div
-          className="scroll-x mb-4"
+          className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] mb-5"
           tabIndex={0}
           role="region"
           aria-label={block.columns.map(c => c.t).join(', ')}
         >
           <table className="w-full min-w-[32rem] border-collapse text-sm">
             <thead>
-              <tr className="border-b-2 border-[var(--color-accent)] bg-[var(--color-bg-emphasis)]">
+              <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
                 {block.columns.map((c, i) => (
                   <th
                     key={i}
                     scope="col"
-                    className={`px-2 py-1.5 font-semibold ${block.align?.[i] === 'right' ? 'text-right' : 'text-left'}`}
+                    className={`px-3.5 py-2.5 font-semibold ${block.align?.[i] === 'right' ? 'text-right' : 'text-left'}`}
                   >
                     {c.t}
                   </th>
@@ -119,14 +121,14 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
             </thead>
             <tbody>
               {block.rows.map((row, r) => (
-                <tr key={r} className="border-b border-[var(--color-border)] align-top">
+                <tr key={r} className="border-t border-[var(--color-border)] align-top">
                   {row.map((cell, i) => {
                     const Cell = i === 0 ? 'th' : 'td'
                     return (
                       <Cell
                         key={i}
                         scope={i === 0 ? 'row' : undefined}
-                        className={`px-2 py-1.5 ${i === 0 ? 'font-normal' : ''} ${
+                        className={`px-3.5 py-2.5 ${i === 0 ? 'font-normal' : ''} ${
                           block.align?.[i] === 'right' ? 'text-right tabular-nums' : 'text-left'
                         }`}
                       >
@@ -147,21 +149,31 @@ export function DocumentView({
   doc,
   bundle,
   numbers,
+  tables = {},
 }: {
   doc: Document
   bundle: Bundle
   numbers: Map<string, number>
+  /** A page's own layout for one section's table, by section id; it must render the same spans. */
+  tables?: Record<string, (block: Extract<Block, { type: 'table' }>) => ReactNode>
 }) {
   return (
     <>
       {doc.sections.map((s, i) => (
         <section key={s.id} id={s.id} className="mb-10 scroll-mt-4">
-          <h2 className="mb-3 border-b-2 border-[var(--color-highlight)] pb-1 font-display font-bold text-xl text-[var(--color-accent-text)]">
-            {i + 1}. {s.title}
+          <h2 className="mb-4 font-display text-2xl font-bold tracking-tight">
+            <span className="mb-1 block font-sans text-xs font-semibold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
+              Section {i + 1}
+            </span>
+            {s.title}
           </h2>
-          {s.blocks.map((b, j) => (
-            <BlockView key={j} block={b} bundle={bundle} numbers={numbers} />
-          ))}
+          {s.blocks.map((b, j) =>
+            b.type === 'table' && tables[s.id] ? (
+              <div key={j}>{tables[s.id]!(b)}</div>
+            ) : (
+              <BlockView key={j} block={b} bundle={bundle} numbers={numbers} />
+            ),
+          )}
         </section>
       ))}
     </>

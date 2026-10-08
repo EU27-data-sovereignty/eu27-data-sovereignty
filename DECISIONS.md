@@ -2567,6 +2567,14 @@ and record it here rather than drop its official-looking parts. The web app (`we
   every EU member state: which critical government data should remain within national borders—and which sovereign
   data centres should host it."
 
+- **Page layouts** follow the mockup, rendered from the bundle as before: a tile map of the 27 beside the front
+  page's title (`web/src/charts/TileMap.tsx`), progress meters, entry cards and a question box that hands its text
+  to `/ask` as router state; Countries as cards with bars and tier 0 dots; Critical holdings by tier with domain
+  filters; the ranking's groups as a ladder and its findings as pills; Hosting as cards grouped by state with a
+  dependency filter (`HostingCards`, the table's own spans through `DocumentView`'s new `tables` hook); Sources
+  with tier and grade distributions and filters that hide entries without renumbering them; Ask beside its
+  examples; method pages with a contents list. No page states a fact the bundle does not.
+
 The design was reviewed as a static mockup first (`mockups/eu27-redesign/`).
 
 **Problem.** The site had no visual identity of its own: a serif text title, flat EU-blue bands and no logo or
@@ -2597,8 +2605,12 @@ prescriptive tone than #72/#73/#77 chose; it is the requester's wording.
 - The dev server, viewed in a browser: Overview and Methodology in dark mode, Overview in light mode; the method
   band is teal-tinted; the logo switches with the theme.
 
-NOT YET: the full gate with PDFs (`typst` is not installed on the machine that made this change), the Playwright
-e2e run and the live `/ask` check. CI runs them on the pull request and the deploy.
+- Layouts, the same day: `npx playwright test e2e/app.spec.ts --project=chrome` passes 59 tests, including the
+  axe checks in both themes and no sideways scroll at 375 px; one test now finds the 27 country cards instead of
+  table rows. The macOS visual baselines (`e2e/visual.spec.ts-snapshots/`) were regenerated and pass.
+
+NOT YET: the PDFs (`typst` is not installed on the machine that made this change), Firefox, WebKit and the phone
+projects, and the live `/ask` check. CI runs them before the deploy.
 
 *Would change if:* the European Commission or a reader objects that the badge or lockup implies EU endorsement; or
 the project owner decides #50's reasoning outweighs the brand. Then the badge is replaced by a mark without stars,

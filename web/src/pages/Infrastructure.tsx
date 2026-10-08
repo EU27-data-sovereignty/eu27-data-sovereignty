@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import { DocumentView } from '@/components/DocumentView'
+import { HostingCards } from '@/components/HostingCards'
 import { PageBand } from '@/components/PageBand'
 import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
@@ -30,7 +31,14 @@ export function Infrastructure({ bundle }: { bundle: Bundle }) {
         </Link>
         .
       </p>
-      <DocumentView doc={doc} bundle={bundle} numbers={numbers} />
+      <DocumentView
+        doc={doc}
+        bundle={bundle}
+        numbers={numbers}
+        tables={{
+          hosting: block => <HostingCards block={block} bundle={bundle} numbers={numbers} />,
+        }}
+      />
       <SourceList bundle={bundle} numbers={numbers} claims={claims} />
     </article>
   )

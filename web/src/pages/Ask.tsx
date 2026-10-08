@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { SourceList } from '@/components/SourceList'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
+import { CARD } from '@/components/ui'
 
 const MAX = 500
 
@@ -24,7 +26,9 @@ type Status = 'idle' | 'asking' | 'done' | 'error'
  * jumps to the same source card the rest of the site uses: quote, URL, hash, archived copy.
  */
 export function Ask({ bundle }: { bundle: Bundle }) {
-  const [question, setQuestion] = useState('')
+  // A question typed into the front page's search box arrives as router state, never in the URL.
+  const passed = (useLocation().state as { question?: string } | null)?.question ?? ''
+  const [question, setQuestion] = useState(passed.slice(0, MAX))
   const [segments, setSegments] = useState<Segment[]>([])
   const [status, setStatus] = useState<Status>('idle')
   const [message, setMessage] = useState('')
@@ -117,99 +121,113 @@ export function Ask({ bundle }: { bundle: Bundle }) {
   }
 
   return (
-    <article className="max-w-3xl">
-      <PageBand kicker="EU-27 · Ask" title="Ask about data sovereignty in the EU" />
-      <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
-        Answers come only from this project’s sourced findings, with a citation for every fact. When
-        the findings don’t cover a question, the answer says so.
-      </p>
+    <article>
+      <PageBand kicker="EU-27 · Ask" title="Ask about data sovereignty in the EU">
+        <p className="mt-3 max-w-3xl text-white/85">
+          Answers come only from this project’s sourced findings, with a citation for every fact.
+          When the findings don’t cover a question, the answer says so.
+        </p>
+      </PageBand>
 
-      <form
-        onSubmit={e => {
-          e.preventDefault()
-          if (question.trim()) void ask(question.trim())
-        }}
-      >
-        <label htmlFor="question" className="mb-1 block text-sm font-semibold">
-          Your question
-        </label>
-        <textarea
-          id="question"
-          value={question}
-          maxLength={MAX}
-          rows={3}
-          onChange={e => setQuestion(e.target.value)}
-          // 16 px: iPhone Safari zooms the whole page into any field set smaller (#92).
-          className="w-full rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 text-base"
-        />
-        <div className="mt-1 flex items-center justify-between text-xs text-[var(--color-fg-muted)]">
-          <span>
-            {question.length} / {MAX}
-          </span>
-          <button
-            type="submit"
-            disabled={status === 'asking' || !question.trim()}
-            className="rounded bg-[var(--color-accent)] px-3 py-1.5 text-sm font-semibold text-[var(--color-fg-on-accent)] disabled:opacity-50"
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="min-w-0">
+          <form
+            onSubmit={e => {
+              e.preventDefault()
+              if (question.trim()) void ask(question.trim())
+            }}
           >
-            {status === 'asking' ? 'Answering…' : 'Ask'}
-          </button>
-        </div>
-      </form>
+            <label htmlFor="question" className="sr-only">
+              Your question
+            </label>
+            <div
+              className={`${CARD} p-1.5 transition-colors focus-within:border-[var(--color-eu-gold)]`}
+            >
+              <textarea
+                id="question"
+                value={question}
+                maxLength={MAX}
+                rows={4}
+                placeholder="Ask about a member state, a holding or the ranking"
+                onChange={e => setQuestion(e.target.value)}
+                // 16 px: iPhone Safari zooms the whole page into any field set smaller (#92).
+                className="w-full resize-y bg-transparent p-3 text-base outline-none placeholder:text-[var(--color-fg-muted)]"
+              />
+              <div className="flex items-center justify-between gap-3 px-3 pb-1.5">
+                <span className="text-xs text-[var(--color-fg-muted)] tabular-nums">
+                  {question.length} / {MAX}
+                </span>
+                <button
+                  type="submit"
+                  disabled={status === 'asking' || !question.trim()}
+                  className="rounded bg-[var(--color-eu-gold)] px-5 py-2 text-sm font-semibold text-[var(--color-eu-deep)] disabled:opacity-50"
+                >
+                  {status === 'asking' ? 'Answering…' : 'Ask'}
+                </button>
+              </div>
+            </div>
+          </form>
 
-      <p className="mt-2 text-xs text-[var(--color-fg-muted)]">
-        Your question is sent to Anthropic’s API to generate the answer. This site does not store
-        it. Answers may be incomplete: they reflect only what has been verified so far.
-      </p>
-
-      <section aria-label="Example questions" className="mt-4">
-        <h2 className="mb-1 text-sm font-semibold">Try</h2>
-        <ul className="flex flex-wrap gap-2">
-          {EXAMPLES.map(q => (
-            <li key={q}>
-              <button
-                type="button"
-                onClick={() => setQuestion(q)}
-                className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] px-2 py-1 text-left text-xs hover:border-[var(--color-accent)]"
-              >
-                {q}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section aria-live="polite" aria-label="Answer" className="mt-6">
-        {status === 'error' ? (
-          <p className="rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
-            {message}
+          <p className="mt-2.5 max-w-2xl text-xs text-[var(--color-fg-muted)]">
+            Your question is sent to Anthropic’s API to generate the answer. This site does not
+            store it. Answers may be incomplete: they reflect only what has been verified so far.
           </p>
-        ) : null}
-        {segments.length ? (
-          <div className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 leading-relaxed whitespace-pre-wrap">
-            {segments.map((s, i) =>
-              'text' in s ? (
-                <span key={i}>{s.text}</span>
-              ) : (
-                <sup key={i} className="ml-0.5">
-                  {s.cite.map(n => (
-                    <a
-                      key={n}
-                      href={`#src-${n}`}
-                      className="text-[var(--color-accent-text)] no-underline hover:underline"
-                      aria-label={`Source ${n}`}
-                    >
-                      [{n}]
-                    </a>
-                  ))}
-                </sup>
-              ),
-            )}
-            {status === 'asking' ? <span className="text-[var(--color-fg-muted)]"> …</span> : null}
-          </div>
-        ) : status === 'asking' ? (
-          <p className="text-sm text-[var(--color-fg-muted)]">Reading the sourced findings…</p>
-        ) : null}
-      </section>
+
+          <section aria-live="polite" aria-label="Answer" className="mt-6">
+            {status === 'error' ? (
+              <p className="rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
+                {message}
+              </p>
+            ) : null}
+            {segments.length ? (
+              <div className={`${CARD} p-5 leading-relaxed whitespace-pre-wrap sm:p-6`}>
+                {segments.map((s, i) =>
+                  'text' in s ? (
+                    <span key={i}>{s.text}</span>
+                  ) : (
+                    <sup key={i} className="ml-0.5">
+                      {s.cite.map(n => (
+                        <a
+                          key={n}
+                          href={`#src-${n}`}
+                          className="font-semibold text-[var(--color-accent-text)] no-underline hover:underline"
+                          aria-label={`Source ${n}`}
+                        >
+                          [{n}]
+                        </a>
+                      ))}
+                    </sup>
+                  ),
+                )}
+                {status === 'asking' ? (
+                  <span className="text-[var(--color-fg-muted)]"> …</span>
+                ) : null}
+              </div>
+            ) : status === 'asking' ? (
+              <p className="text-sm text-[var(--color-fg-muted)]">Reading the sourced findings…</p>
+            ) : null}
+          </section>
+        </div>
+
+        <section aria-label="Example questions">
+          <h2 className="mb-2.5 text-xs font-semibold tracking-[0.12em] text-[var(--color-accent-text)] uppercase">
+            Try
+          </h2>
+          <ul>
+            {EXAMPLES.map(q => (
+              <li key={q} className="border-t border-[var(--color-border)]">
+                <button
+                  type="button"
+                  onClick={() => setQuestion(q)}
+                  className="block w-full py-3 text-left text-sm text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]"
+                >
+                  {q} <span className="text-[var(--color-accent-text)]">→</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
 
       <SourceList bundle={bundle} numbers={numbers} claims={claims} />
     </article>

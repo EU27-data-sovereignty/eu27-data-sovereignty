@@ -17,6 +17,10 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Front-page subtitle**, on the web and the report cover: "A research-backed framework for every EU member
   state: which critical government data should remain within national borders—and which sovereign data centres
   should host it."
+- **Page layouts.** The front page puts a tile map of the 27 beside its title, with progress meters, entry cards
+  and a question box. Countries become cards; Critical holdings group by tier with domain filters; the ranking
+  becomes a ladder; Hosting groups its rows as cards by state with a dependency filter; Sources gains tier and
+  grade distributions with search and filters; Ask sits beside its examples; method pages get a contents list.
 
 ## 2026-10-07
 
