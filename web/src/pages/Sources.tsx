@@ -27,12 +27,15 @@ function Split({ title, parts }: { title: string; parts: [string, number, string
       </div>
       <dl className="grid gap-1.5 text-sm">
         {parts.map(([label, n, fill]) => (
-          <div
-            key={label}
-            className="grid grid-cols-[12px_minmax(0,1fr)_auto] items-center gap-2.5"
-          >
-            <span className="h-3 w-3 rounded-sm" style={{ background: fill }} />
-            <dt className="text-[var(--color-fg-secondary)]">{label}</dt>
+          <div key={label} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2.5">
+            <dt className="flex items-center gap-2.5 text-[var(--color-fg-secondary)]">
+              <span
+                className="h-3 w-3 shrink-0 rounded-sm"
+                style={{ background: fill }}
+                aria-hidden="true"
+              />
+              {label}
+            </dt>
             <dd className="font-semibold tabular-nums">{n.toLocaleString('en')}</dd>
           </div>
         ))}
