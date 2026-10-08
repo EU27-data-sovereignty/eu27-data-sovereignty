@@ -6,10 +6,10 @@
   The *why* behind staging, the domain and the pipeline lives in DECISIONS.md #50, #80 and #81; this file is the how.
 -->
 
-**Live:** https://eu27.cloud (fallback: https://sovereign-data-centers.vercel.app). It is `noindex` and not
+**Live:** https://eu27.cloud (fallback: https://eu27-data-sovereignty.vercel.app). It is `noindex` and not
 announced; see the staging below. Since 2026-10-02 it is served at eu27.cloud and deployed from `main` by
 GitHub Actions; the first automatic deploy is in the log below.
-**Vercel project:** `pieteradejongs-projects/sovereign-data-centers`
+**Vercel project:** `pieteradejongs-projects/eu27-data-sovereignty`
 (`prj_rZ7Xh4QyhwGBG6Or7ZuAlMgLZzD5`, team `team_oAI3Rv2rxJ353sqF76ie872M`). The local link is in `.vercel/project.json`.
 
 ```
@@ -147,7 +147,7 @@ differ, the site is stale:
 ```sh
 curl -sS https://eu27.cloud/data/eu27.json | shasum -a 256
 shasum -a 256 web/public/data/eu27.json
-vercel ls sovereign-data-centers        # newest production deploy and its age
+vercel ls eu27-data-sovereignty        # newest production deploy and its age
 ```
 
 Every `Deploy` run does this check itself, as the last step of its smoke test. The bundle only catches data changes. A UI-only change leaves it unchanged, so also compare the newest
@@ -192,7 +192,7 @@ The daily monitor (`monitor.yml`) notices a lapsed key only after `/ask` is down
 through a terminal or a chat. Earlier keys were exposed by pasting them into a chat and onto a command line, and
 had to be revoked.
 1. In the Anthropic Console, **Settings → API keys → Create key**, in the `eu27` workspace.
-2. In Vercel, **sovereign-data-centers → Settings → Environment Variables → `ANTHROPIC_API_KEY` → ⋯ → Edit**.
+2. In Vercel, **eu27-data-sovereignty → Settings → Environment Variables → `ANTHROPIC_API_KEY` → ⋯ → Edit**.
    Paste the key, keep **Production** ticked and **Sensitive** on, and click **Save**. Skip Vercel's Redeploy
    button: a remote build has no typst (#71).
 3. Redeploy from GitHub Actions: push to `main`, or `gh workflow run Deploy`. The deploy job's last step,

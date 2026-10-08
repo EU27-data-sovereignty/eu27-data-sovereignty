@@ -2615,3 +2615,37 @@ projects, and the live `/ask` check. CI runs them before the deploy.
 *Would change if:* the European Commission or a reader objects that the badge or lockup implies EU endorsement; or
 the project owner decides #50's reasoning outweighs the brand. Then the badge is replaced by a mark without stars,
 the favicon by one without flags, and the lockup's tagline by a neutral line.
+
+### 100. The repository, the Vercel project and the working directory are all named `eu27-data-sovereignty`
+**Decision.** 2026-10-08, at the owner's request. The GitHub repo `EU27-data-sovereignty/sovereign-data-centers`
+becomes `EU27-data-sovereignty/eu27-data-sovereignty`. The Vercel project `sovereign-data-centers` becomes
+`eu27-data-sovereignty`; the project ID does not change, so `deploy.yml` is unaffected. The local directory
+becomes `~/dev/projects/eu27-data-sovereignty`. Every live link (`model/contrib.py` `REPO`, and through it the
+bundle's review and submit links; the user agents in `model/fetch.py` and `model/smoke.py`; `Layout.tsx`;
+`CONTRIBUTING.md`; `LICENSE-DATA`) points at the new repo. Before this they pointed at
+`pieteradejong/sovereign-data-centers`, the location before the move to the org, and worked only through
+GitHub's redirects.
+
+**Problem.** The project covers government data holdings and the sovereignty of their hosting, not data centres
+alone. Its name matched neither the org (`EU27-data-sovereignty`) nor the site (`eu27.cloud`), and its public
+links depended on two chained redirects.
+
+**Alternatives considered.**
+- **Rename the repo, the Vercel project and the directory together, and fix the links (chosen).**
+- **Keep `sovereign-data-centers`.** *Why not:* the name describes a narrower project than this one, and differs
+  from the org and the site.
+- **Rename the repo only, and keep relying on redirects.** *Why not:* a redirect breaks the moment anyone creates
+  a repo at the old name, and the issue links in the bundle are how citizens submit sources (#85).
+- **Also rename the private `sovereign-data-centers-contacts` repo.** *Why not:* nothing depends on its name, and
+  it is checked out at `contacts/` regardless.
+
+**Closes off.** The old fallback URL `sovereign-data-centers.vercel.app` as the documented one, and new links to
+the old repo name. History (the deploy table in `DEPLOYMENT.md`, earlier entries here and in `CHANGELOG.md`) keeps
+the old names, because it records what was true then.
+
+**Verified:** NOT YET. The tree side is checked by `./test.sh` and `git grep -n 'pieteradejong/sovereign-data-centers'`
+returning only this entry and the changelog's. The repo rename, the Vercel rename and its domains, and the first deploy under the new names
+are verified after they are carried out, by `gh repo view`, the Vercel project's domain list, `curl -sSI` on
+`eu27.cloud` and on the new `.vercel.app` URL, and a green `Deploy` run.
+
+*Would change if:* the project's scope narrows back to hosting infrastructure alone, or the org is renamed.

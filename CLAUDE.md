@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Project instructions for AI assistants working in `sovereign-data-centers`. The workspace rules in
+Project instructions for AI assistants working in `eu27-data-sovereignty`. The workspace rules in
 `~/dev/CLAUDE.md` apply as well: the security gate, noreply identity, exact pins, and confirming before
 push or deploy.
 

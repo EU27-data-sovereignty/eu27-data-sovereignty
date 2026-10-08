@@ -39,7 +39,7 @@ ROUTES = ["/", "/countries", "/country/DE", "/country/NL", "/holdings", "/holdin
           "/sovereignty", "/ask", "/methodology", "/fact-check", "/fact-check/DE"]
 ISOS = ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "HR", "HU", "IE", "IT", "LT",
         "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"]
-AGENT = "eu27-smoke/1 (+https://github.com/pieteradejong/sovereign-data-centers)"
+AGENT = "eu27-smoke/1 (+https://github.com/EU27-data-sovereignty/eu27-data-sovereignty)"
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):

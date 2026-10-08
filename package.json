@@ -1,5 +1,5 @@
 {
-  "name": "sovereign-data-centers-api",
+  "name": "eu27-data-sovereignty-api",
   "private": true,
   "version": "0.1.0",
   "description": "Vercel Functions for the site (/api/ask, DECISIONS.md #78). The web app has its own package.json in web/.",

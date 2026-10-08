@@ -7,6 +7,14 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-08
 
+### Changed: the project is renamed `eu27-data-sovereignty`, and its issue links point at the current repo (#100)
+
+- **Names.** The GitHub repo is `EU27-data-sovereignty/eu27-data-sovereignty` and the Vercel project is
+  `eu27-data-sovereignty` (fallback `https://eu27-data-sovereignty.vercel.app`). `eu27.cloud` is unchanged.
+- **Links.** The "review this fact", "submit a source" and "report a correction" links, the user agent of the
+  source fetcher and of the smoke test, `CONTRIBUTING.md` and `LICENSE-DATA` now name the new repo. Before, they
+  named `pieteradejong/sovereign-data-centers` and worked only through GitHub's redirects.
+
 ### Changed: the web app takes the EU27.CLOUD brand (#99)
 
 - **Header and footer.** The EU27.CLOUD badge and wordmark in the header, the full lockup in the footer, light and

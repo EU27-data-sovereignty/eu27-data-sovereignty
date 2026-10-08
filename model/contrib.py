@@ -42,7 +42,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "model"))
 
-REPO = "pieteradejong/sovereign-data-centers"
+REPO = "EU27-data-sovereignty/eu27-data-sovereignty"
 CONTRIB = ROOT / "model" / "research" / "contrib"
 SUBMISSIONS = CONTRIB / "submissions"
 REVIEWS = CONTRIB / "reviews"

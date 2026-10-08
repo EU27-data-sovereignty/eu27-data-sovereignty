@@ -12,7 +12,7 @@ Every fact is footnoted to its source (#75), and every number in it was found in
 
 ## Live site
 
-**https://eu27.cloud** (also at https://sovereign-data-centers.vercel.app)
+**https://eu27.cloud** (also at https://eu27-data-sovereignty.vercel.app)
 
 Deliberately **not indexed** by search engines while the research is incomplete, and not yet announced. The site, the EU-27
 report (`/eu27-report.pdf`) and the 27 country reports (`/report/<ISO>.pdf`) show a value only when a
@@ -24,7 +24,7 @@ Corrections are welcome — there is a data-correction issue template.
 
 ## Deployment
 
-Live at **https://eu27.cloud**, served by the Vercel project `pieteradejongs-projects/sovereign-data-centers`.
+Live at **https://eu27.cloud**, served by the Vercel project `pieteradejongs-projects/eu27-data-sovereignty`.
 
 **A push to `main` deploys to production.** `.github/workflows/deploy.yml` runs the full gate (`./test.sh`),
 builds the site, the EU-27 report and the 27 country PDFs on the runner, uploads the result prebuilt, and

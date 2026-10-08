@@ -101,7 +101,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             Corrections and sources welcome via{' '}
             <a
               className="underline"
-              href="https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=data-correction.yml"
+              href="https://github.com/EU27-data-sovereignty/eu27-data-sovereignty/issues/new?template=data-correction.yml"
             >
               the corrections form
             </a>

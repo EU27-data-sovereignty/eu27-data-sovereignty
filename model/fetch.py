@@ -50,7 +50,7 @@ FIELDS = ["iso", "kind", "key", "url", "http_status", "content_type", "bytes", "
 # Says who is asking and points at the project, so an administrator who sees this in a log can
 # find out what it is rather than guess. Identifying yourself is the cheapest courtesy there is.
 UA = (
-    "sovereign-data-centers/1.0 (research; +https://github.com/pieteradejong/sovereign-data-centers) "
+    "eu27-data-sovereignty/1.0 (research; +https://github.com/EU27-data-sovereignty/eu27-data-sovereignty) "
     "python-urllib"
 )
 TIMEOUT = 30

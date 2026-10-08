@@ -60981,8 +60981,8 @@
   ]
  },
  "contribute": {
-  "review": "https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=review-fact.yml&title=%5Breview%5D%20{claim}&claim={claim}",
-  "submit": "https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=submit-source.yml&title=%5Bsource%5D%20&country={iso}"
+  "review": "https://github.com/EU27-data-sovereignty/eu27-data-sovereignty/issues/new?template=review-fact.yml&title=%5Breview%5D%20{claim}&claim={claim}",
+  "submit": "https://github.com/EU27-data-sovereignty/eu27-data-sovereignty/issues/new?template=submit-source.yml&title=%5Bsource%5D%20&country={iso}"
  },
  "countries": {
   "AT": {

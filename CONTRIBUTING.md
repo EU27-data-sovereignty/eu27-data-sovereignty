@@ -8,7 +8,7 @@ There are two ways to help. Neither needs any code.
 
 ## 1. Submit a source
 
-**[Submit a source](https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=submit-source.yml)**,
+**[Submit a source](https://github.com/EU27-data-sovereignty/eu27-data-sovereignty/issues/new?template=submit-source.yml)**,
 or use the *Submit a source* link on any country page. Submit:
 - a source for a value the report withholds;
 - a better source for a printed fact;
