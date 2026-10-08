@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Overview Mockup</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.hero{background:var(--night) url(hero-bg.webp) 60% center/cover no-repeat;color:#fff;border-bottom:4px solid var(--gold)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);padding-block:clamp(40px,7vw,80px);align-items:center}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-top:14px}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:700}
+.lede{font-size:1.14rem;color:var(--on-night);max-width:34em;margin-top:20px}
+.ask{margin-top:28px;display:flex;background:#fff;border-radius:10px;padding:6px;max-width:520px;box-shadow:0 10px 30px rgba(0,0,30,.35)}
+.ask input{flex:1;min-width:0;border:0;background:none;font:1rem var(--sans);padding:10px 12px;color:#00205a;outline:none}
+.ask button{border:0;background:var(--eu);color:#fff;font:600 .92rem var(--sans);padding:10px 18px;border-radius:10px;cursor:pointer}
+.ask-hint{font-size:.82rem;color:var(--on-night-faint);margin-top:10px}
+.ask-hint a{color:#fff;text-decoration:underline dotted}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn-ghost{color:#fff;border:1px solid rgba(255,255,255,.28)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.map{background:rgba(17,26,46,.62);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:clamp(14px,2.4vw,22px)}
+.map-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.map-head .eyebrow{color:var(--on-night)}
+.map .seg{background:rgba(255,255,255,.08);border:0}
+.map .seg button{color:var(--on-night);font-size:.78rem;padding:5px 10px}
+.map .seg button[aria-pressed="true"]{background:var(--eu);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.tile{aspect-ratio:1;max-width:100%;border:0;border-radius:10px;font:700 clamp(.66rem,1.3vw,.82rem) var(--sans);letter-spacing:.04em;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;transition:transform .15s;padding:0}
+.tile small{font-weight:500;font-size:.72em;opacity:.8}
+.tile:hover{transform:translateY(-2px)}
+.tile[aria-pressed="true"]{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold)}
+.legend{display:flex;align-items:center;gap:10px;font-size:.75rem;color:var(--on-night-faint);margin-top:12px}
+.legend .lb{flex:0 1 140px;height:8px;border-radius:4px;background:linear-gradient(90deg,rgba(255,255,255,.1),var(--gold))}
+.detail{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:end}
+.detail h3{font-size:1.5rem;color:#fff}
+.detail .meta{font-size:.84rem;color:var(--on-night)}
+.detail a{color:var(--gold);font-weight:600;font-size:.88rem;text-decoration:none;white-space:nowrap}
+.dots{display:flex;gap:4px;margin-top:6px}
+.dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.18)}
+.dots i.on{background:var(--gold)}
+.caveat{font-size:.75rem;color:var(--on-night-faint);margin-top:12px}
+.pending{display:inline-flex;font-size:.75rem;font-weight:600;color:var(--gold-text);background:color-mix(in srgb,var(--gold) 14%,transparent);padding:3px 9px;border-radius:999px;align-self:flex-start;margin-top:8px}
+.paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.path{display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:10px;border:1px solid var(--line);background:var(--surface);text-decoration:none;color:var(--fg);transition:border-color .15s,transform .15s}
+.path:hover{border-color:var(--eu);box-shadow:inset 0 3px 0 var(--gold);transform:translateY(-2px)}
+.path .q{font-size:.8rem;color:var(--gold-text);font-weight:600}
+.path h3{font-size:1.45rem}
+.path p{color:var(--muted);font-size:.94rem}
+.path .go{margin-top:auto;padding-top:8px;color:var(--link);font-weight:600;font-size:.88rem}
+.more{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.more a{font-size:.88rem;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.more a:hover{color:#fff;background:var(--eu);border-color:var(--eu)}
+.report{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(24px,4vw,44px)}
+.report h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-top:8px}
+.report .eyebrow{color:var(--gold-text)}
+.report > div > p{color:var(--muted);margin-top:12px}
+.toc{list-style:none;padding:0;margin:18px 0 22px;display:grid;gap:6px;font-size:.92rem}
+.toc li{display:flex;gap:10px;color:var(--muted)}
+.toc li::before{content:"";width:6px;height:6px;margin-top:.6em;border-radius:50%;background:var(--gold);flex:none}
+.covers{position:relative;height:250px}
+.cover{position:absolute;width:52%;max-width:200px;aspect-ratio:1/1.414;border-radius:6px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 30px rgba(0,0,20,.35);font-family:var(--display)}
+.cover.a{left:6%;top:18px;transform:rotate(-6deg);background:#fff;color:#00205a;border-top:8px solid var(--eu)}
+.cover.b{left:40%;top:0;transform:rotate(4deg);background:var(--eu);color:#fff;border-bottom:6px solid var(--gold)}
+.cover .t{font-size:1.05rem;line-height:1.15;font-weight:600}
+.cover .s{font-family:var(--sans);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+@media (max-width:900px){.hero .wrap,.report{grid-template-columns:1fr}.paths{grid-template-columns:1fr}.covers{height:220px}}
+@media (max-width:640px){.grid{gap:3px}.tile small{display:none}}
+</style>
+</head>
+<body data-page="index.html">
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">EU-27 · Independent Research</div>
+      <h1>Sovereign Data Centres for the EU-27</h1>
+      <p class="lede">A research-backed framework for every EU member state: which critical government data should remain within national borders—and which sovereign data centres should host it.</p>
+      <form class="ask" id="askForm" role="search" action="ask.html">
+        <label for="askInput" class="sr">Ask a question</label>
+        <input id="askInput" name="q" type="text" placeholder="Who operates Germany’s population register?" autocomplete="off">
+        <button type="submit">Ask</button>
+      </form>
+      <div class="ask-hint">Or browse <a href="ranking.html">the ranking</a> · <a href="holdings.html">all 39 holdings</a></div>
+      <div class="ctas">
+        <a class="btn btn-gold" href="countries.html">Explore the 27 states →</a>
+        <a class="btn btn-ghost" href="#report">Read the EU-27 report (PDF)</a>
+      </div>
+    </div>
+    <div class="map">
+      <div class="map-head">
+        <span class="eyebrow">Verified evidence by state</span>
+        <div class="seg" role="group" aria-label="Metric">
+          <button type="button" data-m="h" aria-pressed="true">Holdings</button>
+          <button type="button" data-m="t" aria-pressed="false">Tier 0</button>
+          <button type="button" data-m="f" aria-pressed="false">Facts</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="legend"><span>Less evidence</span><span class="lb"></span><span>More</span></div>
+      <div class="detail" id="detail" aria-live="polite"></div>
+      <p class="caveat">Counts of verified evidence, not a ranking of how sovereign a state is.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Where the research stands</div><h2>Two thirds of the map is sourced</h2></div>
+        <p>Every fact is footnoted. Where no checked source exists yet, the value is withheld and the gap stays visible.</p>
+      </div>
+      <div class="meters">
+        <div class="meter"><span class="label">Critical holdings verified</span><span class="big num">684 <span>/ 1053</span></span><div class="track"><b style="width:65%"></b></div><span class="sub">27 states × 39 holding classes</span></div>
+        <div class="meter"><span class="label">Tier 0 holdings verified</span><span class="big num">192 <span>/ 243</span></span><div class="track"><b style="width:79%"></b></div><span class="sub">The identity spine every state runs on</span></div>
+        <div class="meter"><span class="label">Sourced claims</span><span class="big num">1,408</span><div class="track"><b style="width:100%"></b></div><span class="sub">From 1,012 checked sources</span></div>
+        <div class="meter"><span class="label">Countries sized</span><span class="big num">0 <span>/ 27</span></span><span class="pending">● Waiting on measured holdings</span><span class="sub">Sizing starts once holdings are measured</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div><div class="eyebrow">Start where your question is</div><h2>Three ways in</h2></div></div>
+      <div class="paths">
+        <a class="path" href="countries.html"><span class="q">“What about my country?”</span><h3>Countries</h3><p>All 27 member states, sortable, each with its own report and footnoted sources.</p><span class="go">Browse countries →</span></a>
+        <a class="path" href="holdings.html"><span class="q">“Who holds the population register?”</span><h3>Critical holdings</h3><p>One kind of holding, such as tax, health or land records, compared across every member state.</p><span class="go">Compare holdings →</span></a>
+        <a class="path" href="sources.html"><span class="q">“Where does this claim come from?”</span><h3>Sources</h3><p>Every checked source, with the quoted passage and each claim it supports.</p><span class="go">Trace sources →</span></a>
+      </div>
+      <div class="more"><a href="ranking.html">Data-sovereignty ranking</a><a href="hosting.html">Where registers are hosted</a><a href="ask.html">Ask a question</a><a href="fact-check.html">How every fact was checked</a><a href="methodology.html">Methodology</a></div>
+    </div>
+  </section>
+
+  <section class="block" id="report">
+    <div class="wrap">
+      <div class="report">
+        <div>
+          <div class="eyebrow">The full report</div>
+          <h2>All 27 member states in one document</h2>
+          <p>With a table of contents, footnoted sources and a source appendix. Each country is also available as its own PDF.</p>
+          <ul class="toc"><li>Data-sovereignty ranking</li><li>27 country chapters, from Austria to Sweden</li><li>Methodology appendix</li><li>Source appendix with 1,012 checked sources</li></ul>
+          <div class="ctas" style="margin-top:0"><a class="btn btn-gold" href="https://eu27.cloud/eu27-report.pdf">Open EU-27 report</a><a class="btn btn-line" href="countries.html">Pick a country PDF</a></div>
+        </div>
+        <div class="covers" aria-hidden="true">
+          <div class="cover a"><img src="badge.png" alt="" style="width:46px;height:46px"><span class="s">EU27.CLOUD · Report</span><span class="t">Sovereign Data Centres for the EU‑27</span><span class="s">2026 edition</span></div>
+          <div class="cover b"><span class="s">Country chapter</span><span class="t">Germany</span><span class="s">27 of 39 holdings verified</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="notice"><div class="ico">i</div><div><h3>Machine-checked, not yet human-verified</h3><p>Automated agents found these sources and checked them mechanically; no person has reviewed the findings yet. English wording of non-English sources is machine-translated. Treat each fact as a lead to its cited source. Spotted something wrong? <a href="https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=data-correction.yml">Open a correction</a>.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<script src="site.js"></script>
+<script>
+const {countries,pos}=EU27,by=Object.fromEntries(countries.map(c=>[c.iso,c])),MAX={h:39,t:9,f:78};
+let metric="h",sel="DE";
+const grid=document.getElementById("grid");
+for(let r=0;r<7;r++)for(let c=0;c<7;c++){
+  const iso=Object.keys(pos).find(k=>pos[k][0]===c&&pos[k][1]===r);
+  if(!iso){grid.appendChild(document.createElement("span"));continue}
+  const b=document.createElement("button");b.type="button";b.className="tile";b.dataset.iso=iso;
+  b.addEventListener("click",()=>{sel=iso;paint()});grid.appendChild(b);
+}
+function paint(){
+  grid.querySelectorAll(".tile").forEach(b=>{
+    const d=by[b.dataset.iso],v=d[metric]/MAX[metric];
+    b.style.background=`color-mix(in oklab, #ffcc00 ${Math.round(12+v*88)}%, rgba(255,255,255,.06))`;
+    b.style.color=v>.55?"#00205a":"#fff";
+    b.innerHTML=`${d.iso}<small class="num">${metric==="f"?d.f:d[metric]+"/"+MAX[metric]}</small>`;
+    b.setAttribute("aria-label",`${d.name}: ${d.h} of 39 holdings, ${d.t} of 9 tier 0, ${d.f} sourced facts`);
+    b.setAttribute("aria-pressed",b.dataset.iso===sel);
+  });
+  const d=by[sel];
+  document.getElementById("detail").innerHTML=`<div><h3>${d.name}</h3><div class="meta num">${d.h} of 39 holdings verified · ${d.f} sourced facts</div><div class="dots" title="${d.t} of 9 tier 0 holdings">${Array.from({length:9},(_,i)=>`<i class="${i<d.t?"on":""}"></i>`).join("")}</div></div><a href="countries.html#${d.iso}">Open country →</a>`;
+}
+document.querySelectorAll(".map .seg button").forEach(b=>b.addEventListener("click",()=>{metric=b.dataset.m;document.querySelectorAll(".map .seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));paint()}));
+paint();
+document.getElementById("askForm").addEventListener("submit",e=>{e.preventDefault();try{localStorage.setItem("eu27-ask",document.getElementById("askInput").value)}catch(_){}location.href="ask.html"});
+</script>
+</body>
+</html>

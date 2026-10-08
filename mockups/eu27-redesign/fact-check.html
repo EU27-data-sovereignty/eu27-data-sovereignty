@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Fact Check</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.pair{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:center}
+.model{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;text-align:center}
+.model .role{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.model code{display:block;font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:.95rem;margin-top:6px;color:var(--fg)}
+.arrow{font-size:1.4rem;color:var(--gold-text)}
+.gate{display:flex;align-items:center;gap:14px;margin-top:16px;background:color-mix(in srgb,var(--ok) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--ok) 40%,var(--line));border-radius:10px;padding:14px 18px;font-size:.92rem}
+.gate b{color:var(--ok)}
+.runs td code{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:.8rem;color:var(--link)}
+.vbar{display:flex;height:8px;border-radius:4px;overflow:hidden;min-width:120px;background:var(--surface-2)}
+.vbar span{display:block}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.w0{color:var(--faint)}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+@media (max-width:560px){.pair{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}}
+</style>
+</head>
+<body data-page="fact-check.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">Method · How this was made</div>
+  <h1>Fact check</h1>
+  <p class="lede">Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. A fact it does not confirm is withheld until corrected and checked again.</p>
+  <div class="facts"><div><b class="num">1,408 / 1,408</b><span>printed facts pass</span></div><div><b class="num">56</b><span>withheld after the check</span></div><div><b class="num">7</b><span>check runs</span></div></div>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">The two-model rule</div><h2>No model checks its own work</h2></div><p>The check is made by a second model, not by a person.</p></div>
+  <div class="pair">
+    <div class="model"><div class="role">Fact written by</div><code>claude-opus-5-5</code></div><div class="arrow" aria-hidden="true">⇄</div><div class="model"><div class="role">Checked by</div><code>claude-fable-5-1</code></div>
+  </div>
+  <p class="faint" style="font-size:.86rem;margin-top:10px">And the reverse. Anything else (unrecorded, a person, a program) is checked by claude-fable-5-1. A batch is refused if the checker reports a different model than the one asked for, or wrote a fact in it.</p>
+  <div class="gate"><b>● Deploy gate</b><span>A production deploy is refused unless every printed fact has a current “supported” verdict. A verdict lapses if the claim, its question, its printed text or any citation changes.</span></div>
+</div></section>
+
+<section class="block"><div class="wrap two">
+  <div>
+    <div class="sec-head"><div><div class="eyebrow">Fact-check runs</div><h2>Every run, newest first</h2></div></div>
+    <div class="tbl-wrap runs"><table><thead><tr><th>Run</th><th>Date</th><th class="r">Checked</th><th>Verdicts</th></tr></thead><tbody id="runs"></tbody></table></div>
+    <div class="key" style="display:flex;gap:14px;font-size:.8rem;color:var(--muted);margin-top:10px;flex-wrap:wrap"><span><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--ok)"></i> Supported</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--bad)"></i> Not supported</span><span><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--gold)"></i> Unclear</span></div>
+  </div>
+  <div>
+    <div class="sec-head"><div><div class="eyebrow">By member state</div><h2>Withheld after the check</h2></div></div>
+    <div class="tbl-wrap"><table><thead><tr><th>State</th><th class="r">Printed</th><th class="r">Withheld</th></tr></thead><tbody id="states"></tbody></table></div>
+  </div>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script>
+const RUNS=[["wf_f7d14e4d-412","6 Oct",14,14,0,0],["wf_e9645602-884","6 Oct",60,56,4,0],["wf_72f99a66-4e9","3 Oct",31,25,6,0],["wf_f14edd00-71f","2 Oct",12,11,1,0],["wf_5fd3e22d-b86","2 Oct",27,27,0,0],["wf_da123db1-a4e","2 Oct",1360,1281,46,33],["wf_074137f6-b8e","1 Oct",30,28,2,0]];
+document.getElementById("runs").innerHTML=RUNS.map(([id,d,n,s,x,u])=>`<tr><td><code>${id}</code></td><td>${d}</td><td class="r num">${n.toLocaleString("en")}</td><td><div class="vbar" title="${s} supported, ${x} not supported, ${u} unclear"><span style="flex:${s};background:var(--ok)"></span><span style="flex:${x};background:var(--bad)"></span><span style="flex:${u};background:var(--gold)"></span></div></td></tr>`).join("");
+// Printed facts per state on the fact-check page
+const P={AT:65,BE:43,BG:46,HR:60,CY:63,CZ:64,DK:61,EE:53,FI:33,FR:73,DE:54,EL:60,HU:78,IE:62,IT:60,LV:49,LT:21,LU:21,MT:32,NL:63,PL:49,PT:49,RO:28,SK:51,SI:68,ES:57,SE:45};
+document.getElementById("states").innerHTML=[...EU27.countries].sort((a,b)=>b.w-a.w||a.name.localeCompare(b.name)).map(c=>`<tr><td>${c.name}</td><td class="r num">${P[c.iso]}</td><td class="r num ${c.w?"":"w0"}">${c.w?`<span class="chip gold">${c.w}</span>`:"0"}</td></tr>`).join("");
+</script>
+</body>
+</html>

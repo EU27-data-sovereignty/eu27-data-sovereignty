@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Ask</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.composer{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;transition:border-color .15s}
+.composer:focus-within{border-color:var(--gold)}
+.composer textarea{width:100%;min-height:110px;resize:vertical;border:0;background:none;color:var(--fg);font:1.05rem/1.5 var(--sans);padding:14px 16px;outline:none}
+.composer .bar2{display:flex;justify-content:space-between;align-items:center;padding:6px 8px 6px 16px;gap:12px}
+.composer .count{font-size:.8rem;color:var(--faint)}
+.privacy{font-size:.82rem;color:var(--faint);margin-top:10px;max-width:60ch}
+.answer{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,3vw,26px)}
+.answer .qq{font-family:var(--display);font-size:1.3rem;font-weight:600}
+.answer .body{margin-top:12px;color:var(--fg);max-width:68ch}
+.answer .body p+p{margin-top:10px}
+sup a{font-size:.72rem;font-weight:700;color:var(--gold-text);text-decoration:none;padding:0 2px}
+.cites{margin-top:16px;border-top:1px solid var(--line);padding-top:12px;font-size:.84rem;color:var(--muted);display:grid;gap:6px}
+.cites b{color:var(--gold-text)}
+.note{margin-top:14px;font-size:.82rem;color:var(--faint)}
+.try h3{font-family:var(--sans);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+.try button{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);color:var(--muted);font:.92rem/1.45 var(--sans);padding:11px 0;cursor:pointer}
+.try button:hover{color:var(--fg)}
+.try button::after{content:" →";color:var(--link)}
+.thinking{display:flex;gap:6px;margin-top:6px}
+.thinking i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:p 1s infinite alternate}
+.thinking i:nth-child(2){animation-delay:.2s}.thinking i:nth-child(3){animation-delay:.4s}
+@keyframes p{from{opacity:.2}to{opacity:1}}
+@media (max-width:860px){.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="ask.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">EU-27 · Ask</div>
+  <h1>Ask about data sovereignty in the EU</h1>
+  <p class="lede">Answers come only from this project’s sourced findings, with a citation for every fact. When the findings don’t cover a question, the answer says so.</p>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="layout">
+    <div>
+      <form id="f">
+        <label for="q" class="sr">Your question</label>
+        <div class="composer">
+          <textarea id="q" maxlength="500" placeholder="Ask about a member state, a holding or the ranking"></textarea>
+          <div class="bar2"><span class="count num" id="n">0 / 500</span><button class="btn btn-gold" type="submit">Ask</button></div>
+        </div>
+      </form>
+      <p class="privacy">Your question is sent to Anthropic’s API to generate the answer. This site does not store it. Answers reflect only what has been verified so far.</p>
+      <div id="out">
+        <div class="answer">
+          <div class="eyebrow faint">Example answer</div>
+          <div class="qq" style="margin-top:6px">Who keeps Germany’s Central Register of Foreign Nationals?</div>
+          <div class="body">
+            <p>The Federal Office for Migration and Refugees (BAMF) keeps the register as the register authority. The Federal Office of Administration (BVA) processes the stored data on BAMF’s behalf and under its instructions.<sup><a href="sources.html">[2]</a></sup></p>
+            <p>The register consists of a general data stock and a separately kept visa file.<sup><a href="sources.html">[2]</a></sup> The findings do not yet say where its infrastructure runs.</p>
+          </div>
+          <div class="cites"><span><b>[2]</b> § 1 AZR-Gesetz, gesetze-im-internet.de · T1 official law portal · Standard</span></div>
+        </div>
+      </div>
+    </div>
+    <aside class="try">
+      <h3>Try</h3>
+      <button type="button">Which member states have a law keeping government data under national jurisdiction?</button>
+      <button type="button">Who operates Germany’s population register, and under which law?</button>
+      <button type="button">Which holdings are still unverified for Estonia?</button>
+      <button type="button">How does the data-sovereignty ranking work, and how confident is it?</button>
+      <button type="button">Is it known where Belgium’s critical registers are hosted?</button>
+      <button type="button">What does “not demonstrated” mean in the ranking?</button>
+    </aside>
+  </div>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script>
+const q=document.getElementById("q"),n=document.getElementById("n"),out=document.getElementById("out");
+const upd=()=>n.textContent=q.value.length+" / 500";
+q.oninput=upd;
+document.querySelectorAll(".try button").forEach(b=>b.onclick=()=>{q.value=b.textContent;upd();q.focus()});
+try{const h=localStorage.getItem("eu27-ask");if(h){q.value=h;upd();localStorage.removeItem("eu27-ask")}}catch(e){}
+document.getElementById("f").addEventListener("submit",e=>{
+  e.preventDefault();const t=q.value.trim();if(!t)return;
+  const esc=t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  out.innerHTML=`<div class="answer"><div class="qq">${esc}</div><div class="thinking" aria-label="Answering"><i></i><i></i><i></i></div></div>`;
+  setTimeout(()=>{out.innerHTML=`<div class="answer"><div class="qq">${esc}</div><div class="body"><p>On the live site, the answer to this question appears here, drawn only from the sourced findings, with a numbered citation after every fact.</p></div><p class="note">This is a design mockup, so no question is sent anywhere.</p></div>`},900);
+});
+</script>
+</body>
+</html>

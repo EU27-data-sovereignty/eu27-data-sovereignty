@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Critical Holdings</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:28px}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.tier b{font-family:var(--display);font-size:1.6rem;font-weight:600}
+.tier .lbl{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text);font-weight:600}
+.tier p{font-size:.84rem;color:var(--muted);margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chips button{font:500 .8rem var(--sans);padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer;text-transform:capitalize}
+.chips button[aria-pressed="true"]{background:var(--eu);border-color:var(--eu);color:#fff}
+.tgroup td{background:var(--surface-2);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--gold-text)}
+.dom{text-transform:capitalize}
+td.name{font-weight:500}
+.low .bar .t b{background:color-mix(in srgb,var(--gold) 45%,var(--surface-2))}
+@media (max-width:800px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body data-page="holdings.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">EU-27 · Critical holdings</div>
+  <h1>Critical holdings</h1>
+  <p class="lede">The 39 kinds of government data holding this project inventories, in tier order. Tier 0 is the identity spine; tier 1 the legal, fiscal and security state.</p>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="tiers">
+    <div class="tier"><div class="lbl">Tier 0</div><b class="num">9</b><p>Identity spine: civil registry, biometrics, eID, PKI</p></div>
+    <div class="tier"><div class="lbl">Tier 1</div><b class="num">25</b><p>Legal, fiscal and security state</p></div>
+    <div class="tier"><div class="lbl">Tier 2</div><b class="num">3</b><p>Health records, surveillance, statistics</p></div>
+    <div class="tier"><div class="lbl">Tier 3</div><b class="num">2</b><p>Geospatial base data, digital archives</p></div>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Filter by domain"></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Holding</th><th>Domain</th><th>States verified</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <p class="faint" style="font-size:.84rem;margin-top:12px">Faded bars: fewer than half the member states verified. A gap means not yet sourced, never that the holding does not exist.</p>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script>
+const H=`Civil registry core|identity|0|23
+Facial biometric|identity|0|23
+Fingerprint biometric|identity|0|20
+Breeder document scans|identity|0|22
+Document issuance history|identity|0|24
+Digital identity credentials|identity|0|23
+Authentication audit log|identity|0|13
+Electoral roll entry|identity|0|23
+State PKI and qualified trust services|identity|0|21
+Residence and migration status|identity|1|22
+Tax|fiscal|1|17
+Customs declarations|fiscal|1|18
+Benefits & pensions|social|1|19
+Statutory health insurance|social|1|20
+Land & property registry|property|1|22
+Business registry|economy|1|21
+Beneficial ownership register|economy|1|24
+Vehicle & licensing|transport|1|21
+Judicial & criminal justice|justice|1|20
+Police information systems|justice|1|21
+Border and visa systems|justice|1|21
+Firearms register|justice|1|19
+Official gazette and legislation|governance|1|18
+Treasury and state accounts|governance|1|18
+Government payroll and personnel|governance|1|16
+Election management and results|governance|1|15
+Central bank systems|finance|1|17
+Defence command and logistics|security|1|2
+Intelligence services|security|1|8
+Emergency calls and public-safety radio|security|1|19
+Crisis management and civil protection|security|1|20
+Electricity grid control|infrastructure|1|13
+Water management control|infrastructure|1|6
+Education|education|1|21
+Health records|health|2|13
+Public health surveillance|health|2|11
+Statistical microdata|statistics|2|8
+Geospatial base data|property|3|15
+National archives (digital)|governance|3|7`.split("\n").map(l=>{const [n,d,t,v]=l.split("|");return {n,d,t:+t,v:+v}});
+const TN=["Tier 0 · identity spine","Tier 1 · legal, fiscal and security state","Tier 2","Tier 3"];
+const doms=["all",...new Set(H.map(h=>h.d))];
+let dom="all";
+const chips=document.getElementById("chips");
+chips.innerHTML=doms.map(d=>`<button type="button" data-d="${d}" aria-pressed="${d==="all"}">${d==="all"?"All domains":d}</button>`).join("");
+chips.querySelectorAll("button").forEach(b=>b.onclick=()=>{dom=b.dataset.d;chips.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+function render(){
+  let out="",last=-1;
+  H.filter(h=>dom==="all"||h.d===dom).forEach(h=>{
+    if(h.t!==last){out+=`<tr class="tgroup"><td colspan="3">${TN[h.t]}</td></tr>`;last=h.t}
+    out+=`<tr class="${h.v<14?"low":""}"><td class="name">${h.n}</td><td class="dom faint">${h.d}</td><td><div class="bar"><div class="t"><b style="width:${h.v/27*100}%"></b></div><span class="num">${h.v} of 27</span></div></td></tr>`;
+  });
+  document.getElementById("rows").innerHTML=out;
+}
+render();
+</script>
+</body>
+</html>
