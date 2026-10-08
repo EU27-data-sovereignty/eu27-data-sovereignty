@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Countries</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:12px;scroll-margin-top:80px;transition:border-color .15s}
+.card:hover,.card:target{border-color:var(--gold)}
+.card header{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card h3{font-size:1.3rem}
+.iso{font-size:.74rem;font-weight:700;letter-spacing:.08em;color:var(--faint)}
+.row{display:grid;grid-template-columns:7.5em 1fr;align-items:center;gap:10px;font-size:.84rem;color:var(--muted)}
+.row .bar{min-width:0}
+.dots{display:flex;gap:4px}
+.dots i{width:11px;height:11px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line)}
+.dots i.on{background:var(--gold);border-color:var(--gold)}
+.card footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;font-size:.84rem}
+.card footer a{font-weight:600;text-decoration:none}
+.nores{color:var(--faint);padding:24px 0}
+</style>
+</head>
+<body data-page="countries.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">EU-27 · Member states</div>
+  <h1>Countries</h1>
+  <p class="lede">Each member state analysed on its own fundamentals. The figures count verified evidence; they are not a ranking of how sovereign a state is.</p>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="toolbar">
+    <label for="q" class="sr">Find a country</label>
+    <input id="q" class="field" type="search" placeholder="Find a country" style="flex:1 1 220px">
+    <div class="seg" role="group" aria-label="Sort by" id="sort">
+      <button type="button" data-s="name" aria-pressed="true">A–Z</button>
+      <button type="button" data-s="h" aria-pressed="false">Holdings</button>
+      <button type="button" data-s="t" aria-pressed="false">Tier 0</button>
+      <button type="button" data-s="f" aria-pressed="false">Facts</button>
+    </div>
+  </div>
+  <div class="cards" id="cards"></div>
+  <p class="nores" id="nores" hidden>No member state matches that name.</p>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script>
+let sortBy="name";
+const q=document.getElementById("q");
+function render(){
+  const term=q.value.trim().toLowerCase();
+  const list=EU27.countries.filter(c=>!term||c.name.toLowerCase().includes(term)||c.iso.toLowerCase()===term)
+    .sort((a,b)=>sortBy==="name"?a.name.localeCompare(b.name):b[sortBy]-a[sortBy]);
+  document.getElementById("nores").hidden=list.length>0;
+  document.getElementById("cards").innerHTML=list.map(c=>`<article class="card" id="${c.iso}">
+    <header><h3>${c.name}</h3><span class="iso">${c.iso}</span></header>
+    <div class="row"><span>Holdings</span><div class="bar"><div class="t"><b style="width:${c.h/39*100}%"></b></div><span class="num">${c.h} / 39</span></div></div>
+    <div class="row"><span>Tier 0</span><div class="dots" title="${c.t} of 9 tier 0 holdings verified">${Array.from({length:9},(_,i)=>`<i class="${i<c.t?"on":""}"></i>`).join("")}</div></div>
+    <div class="row"><span>Sourced facts</span><span class="num" style="color:var(--fg);font-weight:600">${c.f}</span></div>
+    <footer><span class="faint">${c.w?c.w+" withheld after fact check":"Nothing withheld"}</span><a href="https://eu27.cloud/countries">Report PDF →</a></footer>
+  </article>`).join("");
+}
+q.addEventListener("input",render);
+document.querySelectorAll("#sort button").forEach(b=>b.onclick=()=>{sortBy=b.dataset.s;document.querySelectorAll("#sort button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+render();
+if(location.hash){const el=document.querySelector(location.hash);if(el)el.scrollIntoView({block:"center"})}
+</script>
+</body>
+</html>

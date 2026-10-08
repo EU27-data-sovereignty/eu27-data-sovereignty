@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Sources</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-bottom:32px}
+.stack{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:14px 0 12px;gap:2px}
+.stack span{display:block}
+.legend{display:grid;gap:6px;font-size:.86rem}
+.legend div{display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;color:var(--muted)}
+.legend i{width:12px;height:12px;border-radius:3px}
+.legend b{color:var(--fg);font-variant-numeric:tabular-nums}
+.src{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;display:grid;gap:14px}
+.src + .src{margin-top:12px}
+.src header{display:flex;gap:14px;align-items:baseline}
+.src .n{font:600 .82rem var(--sans);color:var(--gold-text)}
+.src h3{font-size:1.15rem}
+.src .meta{font-size:.8rem;color:var(--faint);word-break:break-all}
+.hash{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:.74rem;color:var(--faint);word-break:break-all}
+.claim{border-left:3px solid var(--gold);padding:4px 0 4px 16px;display:grid;gap:8px}
+.claim .key{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:.74rem;color:var(--link)}
+.claim blockquote{margin:0;font-family:var(--serif);font-size:1.05rem;line-height:1.5;color:var(--fg)}
+.claim .tr{font-size:.88rem;color:var(--muted)}
+.checks{display:flex;flex-wrap:wrap;gap:6px}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="sources.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">EU-27 · Evidence</div>
+  <h1>Sources</h1>
+  <p class="lede">A source is admitted only after its document was fetched, its SHA-256 recorded and the quoted text found in it. Failures stay out and are recorded in the repository.</p>
+  <div class="facts"><div><b class="num">1,012</b><span>checked sources</span></div><div><b class="num">1,408</b><span>claims they support</span></div><div><b class="num">109</b><span>graded Strong</span></div></div>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="split">
+    <div class="panel">
+      <div class="eyebrow" style="color:var(--gold-text)">Best source behind each fact</div>
+      <div class="stack" aria-hidden="true"><span style="flex:634;background:var(--gold)"></span><span style="flex:644;background:color-mix(in srgb,var(--gold) 55%,var(--surface-2))"></span><span style="flex:8;background:var(--link)"></span><span style="flex:122;background:var(--faint)"></span></div>
+      <div class="legend">
+        <div><i style="background:var(--gold)"></i>T1 · authoritative original (law portal, statistics office)<b>634</b></div>
+        <div><i style="background:color-mix(in srgb,var(--gold) 55%,var(--surface-2))"></i>T2 · competent public body or audit office<b>644</b></div>
+        <div><i style="background:var(--link)"></i>T3 · other institution or company<b>8</b></div>
+        <div><i style="background:var(--faint)"></i>T4 · secondary (press, encyclopedia, law mirror)<b>122</b></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow" style="color:var(--gold-text)">Evidence grade</div>
+      <div class="stack" aria-hidden="true"><span style="flex:109;background:var(--ok)"></span><span style="flex:1299;background:color-mix(in srgb,var(--ok) 35%,var(--surface-2))"></span></div>
+      <div class="legend">
+        <div><i style="background:var(--ok)"></i>Strong · T1/T2, exact quote, archived copy<b>109</b></div>
+        <div><i style="background:color-mix(in srgb,var(--ok) 35%,var(--surface-2))"></i>Standard · every required check passed but one<b>1,299</b></div>
+        <div><i style="border:1px dashed var(--faint)"></i>Verified · confirmed by a person, two-person rule<b>0</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head"><div><div class="eyebrow">Each source listed once</div><h2>Browse all 1,012 sources</h2></div><p>The hash identifies the exact document fetched. Each quote is shown in its original language, then a machine translation, then the checks the claim passed.</p></div>
+  <div class="toolbar">
+    <label for="q" class="sr">Search sources</label>
+    <input id="q" class="field" type="search" placeholder="Search titles, publishers, quotes or holdings" style="flex:1 1 280px">
+    <label for="c" class="sr">Country</label>
+    <select id="c" class="field"><option value="">All countries</option></select>
+    <label for="tier" class="sr">Source tier</label>
+    <select id="tier" class="field"><option value="">All tiers</option><option value="1">T1 authoritative original</option><option value="2">T2 public body</option><option value="3">T3 institution or company</option><option value="4">T4 secondary</option></select>
+    <label for="g" class="sr">Grade</label>
+    <select id="g" class="field"><option value="">All grades</option><option>Strong</option><option>Standard</option></select>
+  </div>
+  <p class="faint num" id="count" aria-live="polite" style="font-size:.86rem;margin-bottom:12px"></p>
+  <div id="list"></div>
+  <div style="display:flex;justify-content:center;margin-top:20px"><button class="btn btn-line" id="more" type="button">Show 20 more</button></div>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script src="sources-data.js"></script>
+<script>
+const esc=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const host=u=>{try{return new URL(u).hostname.replace(/^www\./,"")}catch(e){return ""}};
+const S=SOURCES.map((s,i)=>{const [c,t,p,d,u,a,h,m,f,k]=s;return {n:i+1,c,t,p,d,u,a,h,m,f,k,
+  tiers:new Set(k.map(x=>String(x[5]))),grades:new Set(k.map(x=>x[4])),
+  hay:[t,p,u,...k.flatMap(x=>[x[1],x[2],x[3],x[0]])].join(" ").toLowerCase()}});
+const q=document.getElementById("q"),cs=document.getElementById("c"),ts=document.getElementById("tier"),gs=document.getElementById("g");
+[...new Set(S.flatMap(s=>s.c))].sort((a,b)=>(SRC_NAMES[a]||a).localeCompare(SRC_NAMES[b]||b)).forEach(c=>cs.add(new Option(SRC_NAMES[c]||c,c)));
+let shown=20,rows=S;
+function claim(x){
+  const [key,label,orig,tr,grade,tier,checks,val]=x;
+  return `<div class="claim"><span class="key">${esc(label)} <span class="faint">· ${esc(key)}</span></span>
+    <blockquote>${esc(orig)}</blockquote>${tr?`<p class="tr">Machine translation: ${esc(tr)}</p>`:""}
+    ${val&&val.length<80?`<p class="tr">Printed value: <strong style="color:var(--fg)">${esc(val)}</strong></p>`:""}
+    <div class="checks"><span class="chip ${grade==="Strong"?"ok":""}">${grade}</span>${checks.map(i=>{const [t,c]=SRC_CHECKS[i];return `<span class="chip ${c==="t"?"gold":c==="g"?"ok":c==="b"?"bad":""}">${esc(t)}</span>`}).join("")}</div></div>`;
+}
+function card(s){
+  return `<article class="src"><header><span class="n">[${s.n}]</span><div><h3>${esc(s.t||"Untitled")}</h3>
+    <div class="meta">${esc([s.p,s.d,host(s.u),s.f&&"fetched "+s.f].filter(Boolean).join(" · "))} · <a href="${esc(s.u)}" target="_blank" rel="noopener">Open source</a>${s.a?` · <a href="${esc(s.a)}" target="_blank" rel="noopener">Archived copy</a>`:""}</div></div></header>
+    ${s.h?`<div class="hash">sha256 ${s.h} · ${esc(s.m)}</div>`:""}
+    ${s.k.map(claim).join("")}</article>`;
+}
+function filter(){
+  const term=q.value.trim().toLowerCase();
+  rows=S.filter(s=>(!cs.value||s.c.includes(cs.value))&&(!ts.value||s.tiers.has(ts.value))&&(!gs.value||s.grades.has(gs.value))&&(!term||s.hay.includes(term)));
+  shown=20;draw();
+}
+function draw(){
+  const n=rows.reduce((a,s)=>a+s.k.length,0);
+  document.getElementById("count").textContent=rows.length?`Showing ${Math.min(shown,rows.length).toLocaleString("en")} of ${rows.length.toLocaleString("en")} source${rows.length===1?"":"s"} (${n.toLocaleString("en")} citation${n===1?"":"s"})`:"";
+  document.getElementById("list").innerHTML=rows.length?rows.slice(0,shown).map(card).join(""):'<p class="faint">No source matches these filters.</p>';
+  const m=document.getElementById("more");m.hidden=shown>=rows.length;m.textContent=`Show ${Math.min(20,rows.length-shown)} more`;
+}
+document.getElementById("more").onclick=()=>{shown+=20;draw()};
+let tm;q.oninput=()=>{clearTimeout(tm);tm=setTimeout(filter,150)};
+[cs,ts,gs].forEach(el=>el.onchange=filter);
+filter();
+</script>
+</body>
+</html>

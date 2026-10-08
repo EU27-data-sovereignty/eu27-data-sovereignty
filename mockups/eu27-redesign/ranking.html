@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Ranking</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.ladder{display:grid;gap:10px}
+.rung{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:20px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;position:relative;overflow:hidden}
+.rung::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}
+.rung h3{font-size:1.2rem}
+.rung .cnt{font-size:.8rem;color:var(--faint);margin-top:4px}
+.states{display:flex;flex-wrap:wrap;gap:6px}
+.st{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);font-size:.86rem;cursor:pointer;color:var(--fg);font-family:var(--sans)}
+.st:hover,.st[aria-pressed="true"]{border-color:var(--gold)}
+.st i{font-style:normal;font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:1px 6px;border-radius:4px}
+.conf-Low{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--faint) 35%,transparent) 0 3px,transparent 3px 6px);color:var(--muted)}
+.conf-Medium{background:color-mix(in srgb,var(--gold) 25%,transparent);color:var(--gold-text)}
+.conf-High{background:var(--gold);color:#00205a}
+.empty{color:var(--faint);font-size:.88rem;font-style:italic}
+.dimmed{opacity:.25}
+.explain{margin-top:16px}
+.explain h3{font-size:1.4rem}
+.matrix td,.matrix th{text-align:center;padding:9px 8px}
+.matrix td:first-child,.matrix th:first-child{text-align:left;padding-left:14px;white-space:nowrap}
+.cell{display:inline-block;width:26px;height:26px;border-radius:6px;vertical-align:middle;font-size:.7rem;font-weight:700;line-height:26px}
+.c-Y{background:var(--ok);color:#06210f}
+.c-P{background:color-mix(in srgb,var(--ok) 35%,transparent);color:var(--fg)}
+.c-N{background:var(--bad);color:#2a0606}
+.c-D{background:repeating-linear-gradient(135deg,var(--gold) 0 3px,transparent 3px 7px);border:1px solid var(--gold)}
+.c-U{border:1px dashed var(--faint)}
+.key{display:flex;flex-wrap:wrap;gap:14px;font-size:.82rem;color:var(--muted);margin-top:14px}
+.key span{display:inline-flex;align-items:center;gap:7px}
+.key .cell{width:16px;height:16px}
+@media (max-width:700px){.rung{grid-template-columns:1fr;gap:10px}}
+</style>
+</head>
+<body data-page="ranking.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">EU-27 · Ranking by published rule</div>
+  <h1>Data-sovereignty ranking</h1>
+  <p class="lede">States are placed in groups by a published rule, not scored. An input without a checked source counts as not demonstrated, so most placements today reflect research that is not finished.</p>
+  <div class="facts"><div><b class="num">1</b><span>secured in law</span></div><div><b class="num">25</b><span>not demonstrated</span></div><div><b class="num">1</b><span>dependent on non-EU providers</span></div></div>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="sec-head">
+    <div><div class="eyebrow">The five groups</div><h2>Where each state lands</h2></div>
+    <div class="seg" role="group" aria-label="Filter by confidence" id="conf">
+      <button type="button" data-c="All" aria-pressed="true">All</button><button type="button" data-c="High" aria-pressed="false">High</button><button type="button" data-c="Medium" aria-pressed="false">Medium</button><button type="button" data-c="Low" aria-pressed="false">Low</button>
+    </div>
+  </div>
+  <div class="ladder" id="ladder"></div>
+  <div class="panel explain" id="explain" aria-live="polite"></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">The seven indicators</div><h2>What the rule reads</h2></div><p>Each cell is backed by footnoted sources in the state’s report. A dashed cell is a gap, never a “no”.</p></div>
+  <div class="tbl-wrap"><table class="matrix"><thead><tr><th>State</th><th title="Jurisdiction requirement">Jurisdiction<br>law</th><th>Classification<br>in law</th><th>Sovereign cloud<br>certification</th><th>State trust<br>anchor</th><th>State<br>eID</th><th>Gov. data<br>centres</th><th>Gov. cloud<br>running</th></tr></thead><tbody id="mx"></tbody></table></div>
+  <div class="key"><span><i class="cell c-Y"></i>Yes</span><span><i class="cell c-P"></i>Partly</span><span><i class="cell c-N"></i>No</span><span><i class="cell c-D"></i>Disputed, withheld</span><span><i class="cell c-U"></i>Not yet sourced</span></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="panel prose">
+    <p><strong>How confidence works.</strong> Confidence is how many groups a state could still reach if every unknown resolved for or against it: one group is High, two Medium, three or more Low. Within a group, states are alphabetical; the order carries no meaning.</p>
+    <p><a href="methodology.html">Read the placement rule in full →</a></p>
+  </div>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script>
+const GROUPS=[
+ ["Sovereign in law and in practice","A statute keeps government data under national or EU jurisdiction, and the practice test holds.","var(--ok)"],
+ ["Sovereign in practice, not secured in law","At least 75% of verified tier 0/1 holdings on national or EU infrastructure, state-controlled trust anchor and eID, own data centres or cloud. No statute.","color-mix(in srgb,var(--ok) 55%,var(--line))"],
+ ["Secured in law, not yet in practice","A statute exists; the practice test is not yet shown.","var(--gold)"],
+ ["Not demonstrated","Neither test is shown by checked sources yet.","var(--faint)"],
+ ["Dependent on non-EU providers","A source shows a tier 0 or 1 holding, eID or trust anchor outside state or EU control.","var(--bad)"]];
+// indicators: jurisdiction, classification, certification, trust anchor, eID, data centres, gov cloud
+const IND="AT -Y-PYYY|BE -Y-YYYY|BG ---YDYY|HR PY-YYYY|CY -Y-DDDD|CZ PYYYYYY|DK PP-YPYY|EE -Y-PYYY|FI PY-YYYY|FR -YYYYYY|DE PY-YYYY|EL -Y-YYYY|HU PYNDDDD|IE -D-DYYY|IT YYPYYY-|LV PY-YYYY|LT P--YYYY|LU ---YYYY|MT ---YYDD|NL -YNYYYN|PL -Y-YY-Y|PT PY--YYD|RO -Y-YY-P|SK ---YYYY|SI -Y-YYYY|ES PY-YYYY|SE -Y-DDYY";
+const ind=Object.fromEntries(IND.split("|").map(s=>[s.slice(0,2),s.slice(3)]));
+const conf=iso=>iso==="IE"?"High":iso==="DK"?"Medium":"Low";
+const group=iso=>iso==="IT"?2:iso==="IE"?4:3;
+const C=Object.fromEntries(EU27.countries.map(c=>[c.iso,c]));
+const NAME={Y:"Yes",P:"Partly",N:"No",D:"Disputed",["-"]:"Not yet sourced"};
+const LABELS=["Jurisdiction requirement","Classification in law","Sovereign cloud certification","State-controlled trust anchor","State-controlled eID","Government data centres","Government cloud in operation"];
+let sel="IT",filter="All";
+function render(){
+  document.getElementById("ladder").innerHTML=GROUPS.map(([t,d,c],gi)=>{
+    const s=EU27.countries.filter(x=>group(x.iso)===gi);
+    return `<div class="rung" style="--c:${c}"><div><h3>${t}</h3><div class="cnt">${s.length} state${s.length===1?"":"s"} · ${d}</div></div><div class="states">${s.length?s.map(x=>`<button type="button" class="st${filter!=="All"&&conf(x.iso)!==filter?" dimmed":""}" data-iso="${x.iso}" aria-pressed="${x.iso===sel}">${x.name}<i class="conf-${conf(x.iso)}">${conf(x.iso)}</i></button>`).join(""):'<span class="empty">No state placed here yet</span>'}</div></div>`}).join("");
+  document.querySelectorAll(".st").forEach(b=>b.onclick=()=>{sel=b.dataset.iso;render()});
+  const v=ind[sel],c=C[sel],g=GROUPS[group(sel)][0];
+  const unknown=[...v].filter(x=>x==="-"||x==="D").length;
+  document.getElementById("explain").innerHTML=`<div class="eyebrow" style="color:var(--gold-text)">Why ${c.name} is here</div><h3 style="margin-top:6px">${g}</h3><p class="muted" style="margin-top:8px;max-width:70ch">${unknown} of 7 indicators are open (not yet sourced or disputed). ${conf(sel)==="High"?"Its placement is already settled by what is sourced.":`As they are settled, ${c.name} could still move to another group.`} Confidence: <strong>${conf(sel)}</strong>.</p><div class="key" style="margin-top:12px">${[...v].map((x,i)=>`<span><i class="cell c-${x==="-"?"U":x}"></i>${LABELS[i]}: ${NAME[x]}</span>`).join("")}</div>`;
+  document.getElementById("mx").innerHTML=EU27.countries.map(x=>`<tr><td><button type="button" class="st" style="padding:2px 6px;border:0;background:none" data-iso="${x.iso}">${x.name}</button></td>${[...ind[x.iso]].map((k,i)=>`<td><span class="cell c-${k==="-"?"U":k}" title="${LABELS[i]}: ${NAME[k]}"></span></td>`).join("")}</tr>`).join("");
+  document.querySelectorAll("#mx .st").forEach(b=>b.onclick=()=>{sel=b.dataset.iso;render();document.getElementById("explain").scrollIntoView({behavior:"smooth",block:"center"})});
+}
+document.querySelectorAll("#conf button").forEach(b=>b.onclick=()=>{filter=b.dataset.c;document.querySelectorAll("#conf button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+render();
+</script>
+</body>
+</html>
