@@ -65,6 +65,19 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
     [bundle],
   )
   const labels = Object.fromEntries(sov.groups.map(g => [g.id, g.label]))
+  // Each group's rule, in the methodology's own words (model/methodology.py), not restated here.
+  const rule = useMemo(() => {
+    const out: Record<string, string> = {}
+    for (const sec of bundle.methodology.sections)
+      for (const b of sec.blocks)
+        if (b.type === 'list')
+          for (const item of b.items) {
+            const text = item.map(x => x.t).join(' ')
+            const g = sov.groups.find(x => text.startsWith(`${x.label}: `))
+            if (g) out[g.id] = text.slice(g.label.length + 2)
+          }
+    return out
+  }, [bundle, sov])
   const order = sov.groups.map(g => g.id)
   const visible = Object.entries(sov.placements).filter(
     ([, p]) => filter === 'All' || p.confidence === filter,
@@ -96,7 +109,16 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <PageBand kicker="EU-27 · Ranking by published rule" title="Data-sovereignty ranking" />
+      <PageBand
+        kicker="EU-27 · Ranking by published rule"
+        title="Data-sovereignty ranking"
+        facts={sov.groups
+          .map(
+            g => [g, Object.values(sov.placements).filter(p => p.group === g.id).length] as const,
+          )
+          .filter(([, n]) => n > 0)
+          .map(([g, n]) => [String(n), g.label])}
+      />
       <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
         {sov.guardrail}
       </p>
@@ -104,7 +126,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         States are placed in groups by a published rule, not scored. An input without a checked
         source counts as not demonstrated. The bar beside each state shows the groups it could still
         reach once its open evidence is settled; that range is its confidence.{' '}
-        <Link to="/methodology" className="underline">
+        <Link to="/methodology#m-calculations" className="underline">
           The rule in full
         </Link>
         .
@@ -157,6 +179,11 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                     ({members.length})
                   </span>
                 </h2>
+                {rule[g.id] ? (
+                  <p className="mb-2.5 max-w-xl text-sm text-[var(--color-fg-muted)] first-letter:uppercase">
+                    {rule[g.id]}
+                  </p>
+                ) : null}
                 <ul className="flex flex-wrap gap-1.5">
                   {members.map(([iso, p]) => (
                     <li key={iso}>
@@ -280,6 +307,25 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             </tbody>
           </table>
         </div>
+        <ul
+          aria-label="Key"
+          className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[var(--color-fg-secondary)]"
+        >
+          {(['Yes', 'Partly', 'No'] as const).map(k => (
+            <li key={k}>
+              <span className={PILL[k]}>{k}</span>
+            </li>
+          ))}
+          <li>
+            <em className="text-[var(--color-fg-muted)]">Not yet sourced</em>: a gap, never a no
+          </li>
+          <li>
+            <em className="border-b border-dashed border-[var(--color-highlight)] text-[var(--color-fg-muted)]">
+              Disputed
+            </em>
+            : withheld until corrected and checked again
+          </li>
+        </ul>
       </section>
       <SourceList bundle={bundle} numbers={numbers} claims={claims} />
     </article>

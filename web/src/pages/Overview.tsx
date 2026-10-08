@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 import { TileMap } from '@/charts/TileMap'
+import { CORRECTIONS_URL } from '@/data/contribute'
 import { coverage, factCounts } from '@/data/sources'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
@@ -124,6 +125,16 @@ export function Overview({ bundle }: { bundle: Bundle }) {
             Ask
           </button>
         </form>
+        <p className="mt-2.5 text-sm text-white/65">
+          Or browse{' '}
+          <Link to="/sovereignty" className="text-white underline decoration-dotted">
+            the ranking
+          </Link>{' '}
+          ·{' '}
+          <Link to="/holdings" className="text-white underline decoration-dotted">
+            all {bundle.holding_classes.length} holdings
+          </Link>
+        </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             to="/countries"
@@ -282,7 +293,12 @@ export function Overview({ bundle }: { bundle: Bundle }) {
         >
           i
         </span>
-        <p className="text-sm font-medium">{bundle.notice.disclaimer}</p>
+        <p className="text-sm font-medium">
+          <span>{bundle.notice.disclaimer}</span>{' '}
+          <a className="text-[var(--color-accent-text)] underline" href={CORRECTIONS_URL}>
+            Open a correction
+          </a>
+        </p>
       </aside>
     </article>
   )

@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
 import { ProvenanceNotice } from './ProvenanceNotice'
+import { CORRECTIONS_URL } from '@/data/contribute'
 import { useTheme } from '@/utils/theme'
 
 const NAV = [
@@ -99,10 +100,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             </NavLink>
             MIT licensed. Independent research, not affiliated with any government or EU body.
             Corrections and sources welcome via{' '}
-            <a
-              className="underline"
-              href="https://github.com/EU27-data-sovereignty/eu27-data-sovereignty/issues/new?template=data-correction.yml"
-            >
+            <a className="underline" href={CORRECTIONS_URL}>
               the corrections form
             </a>
             .

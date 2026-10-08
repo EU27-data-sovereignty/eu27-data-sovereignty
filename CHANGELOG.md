@@ -29,6 +29,11 @@ What changed and when. Reasoning for the choices behind these changes lives in
   and a question box. Countries become cards; Critical holdings group by tier with domain filters; the ranking
   becomes a ladder; Hosting groups its rows as cards by state with a dependency filter; Sources gains tier and
   grade distributions with search and filters; Ask sits beside its examples; method pages get a contents list.
+- **Mockup gaps closed.** Source entries become cards: a readable label for each claim, the quote set apart, and
+  its grade and checks as chips, 20 sources at a time. Hosting gains its figures in the header, legend cards that
+  filter, a search box and a tier filter. The ranking shows its group counts in the header, each group's rule in
+  the methodology's words, and a key under the indicator grid. The front page adds browse links under the question
+  box and a correction link on the notice.
 
 ## 2026-10-07
 

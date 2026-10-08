@@ -2573,7 +2573,9 @@ and record it here rather than drop its official-looking parts. The web app (`we
   filters; the ranking's groups as a ladder and its findings as pills; Hosting as cards grouped by state with a
   dependency filter (`HostingCards`, the table's own spans through `DocumentView`'s new `tables` hook); Sources
   with tier and grade distributions and filters that hide entries without renumbering them; Ask beside its
-  examples; method pages with a contents list. No page states a fact the bundle does not.
+  examples; method pages with a contents list. No page states a fact the bundle does not. The ranking's line under
+  each group is the methodology's own rule text (`model/methodology.py`), found by the group's label, not
+  restated in the web app.
 
 The design was reviewed as a static mockup first (`mockups/eu27-redesign/`).
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { SpanView } from './DocumentView'
-import { CARD, FIELD, Segmented } from './ui'
+import { CARD, FIELD } from './ui'
 import type { Block, Bundle, Span } from '@/data/types'
 
 type Dep = 'national' | 'eu' | 'mixed' | 'none' | 'disputed'
@@ -24,6 +24,14 @@ const CHIP: Record<Dep, string> = {
   none: 'border-[var(--color-border)] text-[var(--color-fg-muted)]',
   disputed:
     'border-[var(--color-eu-gold)]/60 text-[var(--color-accent-text)] bg-[repeating-linear-gradient(135deg,color-mix(in_srgb,var(--color-eu-gold)_25%,transparent)_0_3px,transparent_3px_6px)]',
+}
+
+const NOTE: Record<Dep, string> = {
+  national: 'A source says the system runs on state infrastructure.',
+  eu: 'Run by a provider or platform based elsewhere in the EU.',
+  mixed: 'National data centres with cloud access where required.',
+  none: 'The source names the system but not where it runs.',
+  disputed: 'The fact check could not confirm it; withheld until rechecked.',
 }
 
 const LABEL: Record<Dep, string> = {
@@ -49,11 +57,19 @@ export function HostingCards({
 }) {
   const [state, setState] = useState('')
   const [dep, setDep] = useState<Dep | 'any'>('any')
+  const [query, setQuery] = useState('')
+  const [tier, setTier] = useState('')
   const heads = block.columns.map(c => c.t)
   const rows = block.rows.map(r => ({ cells: r, dep: depOf(r[5]) }))
   const states = [...new Set(rows.map(r => r.cells[0]!.t))]
+  const tierOf = (r: (typeof rows)[0]) => /\(tier (\d)\)/.exec(r.cells[1]!.t)?.[1] ?? ''
+  const term = query.trim().toLowerCase()
   const shown = rows.filter(
-    r => (!state || r.cells[0]!.t === state) && (dep === 'any' || r.dep === dep),
+    r =>
+      (!state || r.cells[0]!.t === state) &&
+      (dep === 'any' || r.dep === dep) &&
+      (!tier || tierOf(r) === tier) &&
+      (!term || r.cells.some(c => c.t.toLowerCase().includes(term))),
   )
   const counts = Object.fromEntries(
     (Object.keys(LABEL) as Dep[]).map(d => [d, rows.filter(r => r.dep === d).length]),
@@ -61,7 +77,47 @@ export function HostingCards({
 
   return (
     <div className="mb-6">
+      <div
+        role="group"
+        aria-label="Infrastructure dependency"
+        className="mb-5 grid grid-cols-2 gap-2.5 md:grid-cols-3 lg:grid-cols-5"
+      >
+        {(Object.keys(LABEL) as Dep[]).map(d => (
+          <button
+            key={d}
+            type="button"
+            aria-pressed={dep === d}
+            onClick={() => setDep(dep === d ? 'any' : d)}
+            className={`${CARD} flex flex-col gap-1.5 p-3.5 text-left text-sm text-[var(--color-fg-secondary)] hover:border-[var(--color-fg-muted)] ${
+              dep === d
+                ? 'border-[var(--color-eu-gold)] shadow-[inset_0_0_0_1px_var(--color-eu-gold)]'
+                : ''
+            }`}
+          >
+            <span
+              className={`self-start rounded-full border px-2.5 py-0.5 text-xs font-semibold ${CHIP[d]}`}
+            >
+              {LABEL[d]}
+            </span>
+            <span className="font-display text-2xl leading-none font-bold text-[var(--color-fg-primary)] tabular-nums">
+              {counts[d]}
+            </span>
+            <span>{NOTE[d]}</span>
+          </button>
+        ))}
+      </div>
       <div className="mb-4 flex flex-wrap items-center gap-3">
+        <label htmlFor="hosting-search" className="sr-only">
+          Search registers, operators or providers
+        </label>
+        <input
+          id="hosting-search"
+          type="search"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          placeholder="Search registers, operators or providers"
+          className={`${FIELD} min-w-0 flex-[1_1_16rem]`}
+        />
         <label htmlFor="hosting-state" className="sr-only">
           Member state
         </label>
@@ -76,17 +132,22 @@ export function HostingCards({
             <option key={s}>{s}</option>
           ))}
         </select>
-        <Segmented<Dep | 'any'>
-          label="Infrastructure dependency"
-          value={dep}
-          onChange={setDep}
-          options={[
-            ['any', 'Any'],
-            ...(Object.keys(LABEL) as Dep[])
-              .filter(d => counts[d])
-              .map(d => [d, `${LABEL[d]} (${counts[d]})`] as [Dep, string]),
-          ]}
-        />
+        <label htmlFor="hosting-tier" className="sr-only">
+          Tier
+        </label>
+        <select
+          id="hosting-tier"
+          value={tier}
+          onChange={e => setTier(e.target.value)}
+          className={FIELD}
+        >
+          <option value="">All tiers</option>
+          {['0', '1', '2', '3'].map(t => (
+            <option key={t} value={t}>
+              Tier {t}
+            </option>
+          ))}
+        </select>
         <span aria-live="polite" className="text-sm text-[var(--color-fg-muted)] tabular-nums">
           {shown.length} of {rows.length} rows
         </span>

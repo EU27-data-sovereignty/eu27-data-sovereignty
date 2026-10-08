@@ -16,10 +16,20 @@ export function Infrastructure({ bundle }: { bundle: Bundle }) {
   const doc = bundle.infrastructure
   const numbers = numberSources([doc], bundle)
   const claims = claimsBySource([doc], bundle)
+  const table = doc.sections.find(s => s.id === 'hosting')?.blocks.find(b => b.type === 'table')
+  const hosting = table?.type === 'table' ? table.rows : []
 
   return (
     <article>
-      <PageBand kicker="EU-27 · Key infrastructure" title={doc.name} />
+      <PageBand
+        kicker="EU-27 · Key infrastructure"
+        title={doc.name}
+        facts={[
+          [String(hosting.filter(r => r[4]?.role === 'fact').length), 'hosting facts printed'],
+          [String(hosting.filter(r => r[4]?.role === 'disputed').length), 'withheld as disputed'],
+          [`${new Set(hosting.map(r => r[0]!.t)).size} of 27`, 'states with any sourced hosting'],
+        ]}
+      />
       <p className="mb-6 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         {bundle.notice.disclaimer} The same overview is in the{' '}
         <a className="underline" href="/eu27-report.pdf">

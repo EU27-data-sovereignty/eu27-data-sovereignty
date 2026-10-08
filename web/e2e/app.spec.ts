@@ -175,9 +175,10 @@ test.describe('evidence rules (#82, #83)', () => {
     await expect(
       page.getByRole('link', { name: new RegExp(`Evidence: ${fact.g}$`) }).first(),
     ).toBeVisible()
-    // Source 1 is the first fact's first source: its entry shows that claim's grade and checks.
+    // Source 1 is the first fact's first source: its entry shows that claim's grade and checks, each as
+    // its own chip (#99 layout).
     const entry = page.locator('#src-1')
-    await expect(entry).toContainText(`${cite.grade}:`)
+    await expect(entry.getByText(cite.grade, { exact: true }).first()).toBeVisible()
     await expect(entry).toContainText(cite.checklist[0]!)
   })
 
