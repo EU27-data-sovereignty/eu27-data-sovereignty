@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Methodology</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.doc{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;align-items:start}
+.toc{position:sticky;top:84px;display:grid;gap:2px;font-size:.88rem}
+.toc a{color:var(--muted);text-decoration:none;padding:6px 10px;border-left:2px solid var(--line)}
+.toc a:hover{color:var(--fg);border-color:var(--gold)}
+.doc section{padding-bottom:44px;scroll-margin-top:84px}
+.doc h2{font-size:1.8rem;margin-bottom:14px}
+.doc h2 small{font-family:var(--sans);font-size:.8rem;color:var(--gold-text);font-weight:600;display:block;margin-bottom:6px;letter-spacing:.1em}
+.pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:20px 0}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;position:relative}
+.step b{display:block;font-family:var(--display);font-size:1.05rem}
+.step span{font-size:.8rem;color:var(--muted)}
+.step em{font-style:normal;font-size:.7rem;font-weight:700;color:var(--gold-text)}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.mini .tbl-wrap td,.mini .tbl-wrap th{padding:8px 12px}
+.rule{display:grid;gap:8px;margin-top:16px;counter-reset:r}
+.rule div{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.92rem;color:var(--muted)}
+.rule div::before{counter-increment:r;content:counter(r);width:26px;height:26px;border-radius:50%;background:var(--eu);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+.rule strong{color:var(--fg)}
+.formula{font-family:var(--display);font-size:1.25rem;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-top:14px;line-height:1.5}
+.formula .g{color:var(--gold-text)}
+@media (max-width:900px){.doc{grid-template-columns:1fr}.toc{position:static;display:flex;flex-wrap:wrap}.toc a{border-left:0;border:1px solid var(--line);border-radius:999px}.pipe{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body data-page="methodology.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">Method · How this was made</div>
+  <h1>Methodology</h1>
+  <p class="lede">Generated from the code and data that produced the report. Every rule below is the rule the build runs, and every number is counted from the files it reads.</p>
+  <div class="facts"><div><b class="num">1,408</b><span>facts printed</span></div><div><b class="num">4,312</b><span>values withheld as gaps</span></div><div><b class="num">76</b><span>withheld as disputed</span></div></div>
+</div></header>
+
+<main><section class="block"><div class="wrap doc">
+  <nav class="toc" aria-label="On this page"><a href="#what">What this is</a><a href="#found">How sources were found</a><a href="#printed">What must hold</a><a href="#tiers">Source tiers</a><a href="#calc">Calculations</a><a href="#place">Placement rule</a></nav>
+  <div>
+    <section id="what"><h2><small>1</small>What this is, and what it is not</h2>
+      <div class="notice"><div class="ico">i</div><div><h3>Machine-checked, not human-verified</h3><p>Automated agents found these sources and checked them mechanically; no person has reviewed the findings. Treat each fact as a lead to its cited source, not as established.</p></div></div>
+    </section>
+
+    <section id="found"><h2><small>2</small>How sources were found</h2>
+      <p class="prose">Research agents, one per member state, looked for each critical holding and indicator. Each claim needed a verbatim quote of 8 to 60 words from an exact URL. Nothing an agent returned was used until it passed the mechanical checks.</p>
+      <div class="pipe">
+        <div class="step"><em>STEP 1</em><b>Research</b><span>One agent per state, quote + URL</span></div>
+        <div class="step"><em>STEP 2</em><b>Quote check</b><span>Fetched, hashed, quote matched</span></div>
+        <div class="step"><em>STEP 3</em><b>Vetting</b><span>Better or newer source sought; blind review</span></div>
+        <div class="step"><em>STEP 4</em><b>Fact check</b><span>A different model confirms each fact</span></div>
+        <div class="step"><em>ONGOING</em><b>Recheck</b><span>Sources re-fetched; vanished quotes withheld</span></div>
+      </div>
+      <div class="mini">
+        <div class="tbl-wrap"><table><thead><tr><th>First quote check</th><th class="r">Claims</th></tr></thead><tbody><tr><td>Exact</td><td class="r num">2,138</td></tr><tr><td>Loose</td><td class="r num">20</td></tr><tr><td>Not found</td><td class="r num">107</td></tr><tr><td>Fetch failed</td><td class="r num">251</td></tr></tbody></table></div>
+        <div class="tbl-wrap"><table><thead><tr><th>Latest recheck</th><th class="r">Sources</th></tr></thead><tbody><tr><td>Unchanged</td><td class="r num">306</td></tr><tr><td>Changed, quotes present</td><td class="r num">373</td></tr><tr><td>Unreachable</td><td class="r num">6</td></tr><tr><td>Quote vanished</td><td class="r num">3</td></tr><tr><td>Gone</td><td class="r num">3</td></tr></tbody></table></div>
+        <div class="tbl-wrap"><table><thead><tr><th>Vetting outcome</th><th class="r">Items</th></tr></thead><tbody><tr><td>No better found</td><td class="r num">486</td></tr><tr><td>Filled gap</td><td class="r num">377</td></tr><tr><td>Corroborated</td><td class="r num">264</td></tr><tr><td>Not reached</td><td class="r num">201</td></tr><tr><td>Review disagreed</td><td class="r num">177</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section id="printed"><h2><small>3</small>What must hold for a fact to be printed</h2>
+      <div class="prose"><p><strong>Researched claims.</strong> The cited page was downloaded, its SHA-256 recorded, and the quoted text found by literal matching. Every number and date in the printed value appears in the original-language quote.</p><p><strong>Eurostat figures.</strong> Read from a pinned dataset through its API and compared with the table cell, within 0.5%.</p><p><strong>Categorical findings.</strong> Admitted only when a second, independent automated reviewer reached the same value from the same quote.</p><p>A value no checked source supports is withheld and shown as a gap. A gap means not yet sourced, never that the thing does not exist.</p></div>
+    </section>
+
+    <section id="tiers"><h2><small>4</small>Source tiers and grades</h2>
+      <div class="mini">
+        <div class="tbl-wrap"><table><thead><tr><th>Tier</th><th class="r">Facts</th></tr></thead><tbody><tr><td>T1 authoritative original</td><td class="r num">634</td></tr><tr><td>T2 competent public body</td><td class="r num">644</td></tr><tr><td>T3 other institution</td><td class="r num">8</td></tr><tr><td>T4 secondary</td><td class="r num">122</td></tr></tbody></table></div>
+        <div class="tbl-wrap"><table><thead><tr><th>Grade</th><th class="r">Facts</th></tr></thead><tbody><tr><td>Verified</td><td class="r num">0</td></tr><tr><td>Strong</td><td class="r num">109</td></tr><tr><td>Standard</td><td class="r num">1,299</td></tr></tbody></table></div>
+      </div>
+      <p class="prose" style="margin-top:14px">There is no numeric confidence score: nothing has calibrated one. <a href="sources.html">See the grades applied to each source →</a></p>
+    </section>
+
+    <section id="calc"><h2><small>5</small>Priority of a holding</h2>
+      <div class="formula">Priority = <span class="g">consequence of loss</span> (0–3) + <span class="g">difficulty of rebuilding</span> (0–2) + <span class="g">exposure to non-EU providers</span> (0–2)</div>
+      <p class="prose" style="margin-top:12px">Critical is 6 or more; High is 4 or 5. Infrastructure exposure counts only holdings whose source says where they run. Silence counts as not stated, never as national.</p>
+    </section>
+
+    <section id="place"><h2><small>6</small>Data-sovereignty placement</h2>
+      <p class="prose">An input without a checked source counts as not demonstrated, never as sovereign and never as dependent. Each state is placed by the first rule it meets:</p>
+      <div class="rule">
+        <div><span><strong>Dependent on non-EU providers.</strong> A tier 0 or 1 holding on non-EU infrastructure, or an eID or trust anchor outside state or EU control.</span></div>
+        <div><span><strong>Sovereign in law and in practice.</strong> A statute, plus at least 75% of verified tier 0/1 holdings on national or EU infrastructure, state-controlled trust anchor and eID, and its own data centres or cloud.</span></div>
+        <div><span><strong>Sovereign in practice, not secured in law.</strong> The practice test, without the statute.</span></div>
+        <div><span><strong>Secured in law, not yet in practice.</strong> The statute, without the practice test.</span></div>
+        <div><span><strong>Not demonstrated.</strong> Neither.</span></div>
+      </div>
+      <p class="prose" style="margin-top:14px"><a href="ranking.html">See where each state lands →</a></p>
+    </section>
+  </div>
+</div></section></main>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU-27 Hosting</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Libertinus+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.legendrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px}
+.lg{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font:inherit;font-size:.84rem;color:var(--muted);text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
+.lg:hover{border-color:var(--faint)}
+.lg[aria-pressed="true"]{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.lg b{font-family:var(--display);font-size:1.8rem;line-height:1;color:var(--fg);font-weight:600}
+.lg .chip{align-self:flex-start}
+.state-h{display:flex;align-items:baseline;gap:12px;margin:28px 0 10px}
+.state-h:first-child{margin-top:0}
+.state-h h2{font-size:1.5rem}
+.state-h span{font-size:.82rem;color:var(--faint)}
+.list{display:grid;gap:10px}
+.item{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr) auto;gap:18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.item .hold{font-weight:600;font-size:.95rem}
+.item .tier{font-size:.7rem;font-weight:700;color:var(--gold-text);letter-spacing:.06em;margin-top:2px}
+.kv{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:6px 12px;font-size:.88rem;margin:0}
+.kv dt{color:var(--faint)}
+.kv dd{margin:0;color:var(--fg)}
+.kv dd.gap{color:var(--faint);font-style:italic}
+.kv dd.dis{color:var(--gold-text)}
+details{margin-top:4px}
+details summary{cursor:pointer;font-size:.8rem;color:var(--link)}
+details p{font-size:.84rem;color:var(--muted);margin-top:6px;max-width:70ch}
+.chip.dis{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--gold) 30%,transparent) 0 3px,transparent 3px 6px);color:var(--gold-text);border-color:color-mix(in srgb,var(--gold) 50%,transparent)}
+.chip.mixed{color:var(--link);border-color:color-mix(in srgb,var(--link) 50%,transparent)}
+.count{font-size:.86rem;color:var(--muted);margin-left:auto}
+@media (max-width:960px){.legendrow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.item{grid-template-columns:1fr;gap:10px}}
+@media (max-width:520px){.legendrow{grid-template-columns:repeat(2,minmax(0,1fr))}.count{margin-left:0}}
+</style>
+</head>
+<body data-page="hosting.html">
+<header class="phead"><div class="wrap">
+  <div class="eyebrow">EU-27 · Key infrastructure</div>
+  <h1>Where key registers are hosted, and by whom</h1>
+  <p class="lede">Every holding whose hosting a checked source states. A holding not listed has no sourced hosting yet: a gap in the evidence, not a finding that it is hosted nationally.</p>
+  <div class="facts" id="facts"></div>
+</div></header>
+
+<main>
+<section class="block"><div class="wrap">
+  <div class="legendrow" id="legend" role="group" aria-label="Filter by infrastructure dependency"></div>
+  <div class="toolbar">
+    <label for="q" class="sr">Search</label>
+    <input id="q" class="field" type="search" placeholder="Search registers, operators or providers" style="flex:1 1 240px">
+    <label for="st" class="sr">Member state</label>
+    <select id="st" class="field"><option value="">All member states</option></select>
+    <label for="tr" class="sr">Tier</label>
+    <select id="tr" class="field"><option value="">All tiers</option><option value="0">Tier 0</option><option value="1">Tier 1</option><option value="2">Tier 2</option><option value="3">Tier 3</option></select>
+    <span class="count num" id="count" aria-live="polite"></span>
+  </div>
+  <div id="list"></div>
+</div></section>
+</main>
+
+<script src="site.js"></script>
+<script src="hosting-data.js"></script>
+<script>
+const DEP={ok:["ok","National infrastructure","A source says the system runs on state infrastructure."],gold:["gold","EU provider","Run by a provider or platform based elsewhere in the EU."],mixed:["mixed","Mixed","National data centres with cloud access where required."],none:["","Not stated","The source names the system but not where it runs."],dis:["dis","Disputed","The fact check could not confirm it; withheld."]};
+const depOf=v=>v.startsWith("!")?"dis":v==="National infrastructure"?"ok":v==="EU provider"?"gold":v==="Mixed"?"mixed":"none";
+const R=HOSTING.map(([s,h,reg,op,host,dep])=>{const m=h.match(/^(.*) \(tier (\d)\)$/);return {s,h:m[1],t:m[2],reg,op,host,dep,d:depOf(dep)}});
+const esc=x=>x.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const states=[...new Set(R.map(r=>r.s))];
+document.getElementById("facts").innerHTML=`<div><b class="num">${R.filter(r=>!r.host.startsWith("!")).length}</b><span>hosting facts printed</span></div><div><b class="num">${R.filter(r=>r.host.startsWith("!")).length}</b><span>withheld after fact check</span></div><div><b class="num">${states.length} of 27</b><span>member states with any sourced hosting</span></div>`;
+const st=document.getElementById("st"),tr=document.getElementById("tr"),q=document.getElementById("q");
+states.forEach(s=>st.add(new Option(s,s)));
+let dep="";
+const legend=document.getElementById("legend");
+legend.innerHTML=Object.entries(DEP).map(([k,[c,l,d]])=>`<button type="button" class="lg" data-d="${k}" aria-pressed="false"><span class="chip ${c}">${l}</span><b class="num">${R.filter(r=>r.d===k).length}</b><span>${d}</span></button>`).join("");
+legend.querySelectorAll(".lg").forEach(b=>b.onclick=()=>{dep=dep===b.dataset.d?"":b.dataset.d;legend.querySelectorAll(".lg").forEach(x=>x.setAttribute("aria-pressed",x.dataset.d===dep));render()});
+function cell(v){
+  if(v==="Not yet sourced")return `<dd class="gap">Not yet sourced</dd>`;
+  if(v.startsWith("!"))return `<dd class="dis">Withheld after fact check<details><summary>Checker’s reason</summary><p>${esc(v.slice(1))}</p></details></dd>`;
+  return `<dd>${esc(v)}</dd>`;
+}
+function render(){
+  const term=q.value.trim().toLowerCase();
+  const rows=R.filter(r=>(!st.value||r.s===st.value)&&(!tr.value||r.t===tr.value)&&(!dep||r.d===dep)&&(!term||[r.s,r.h,r.reg,r.op,r.host].join(" ").toLowerCase().includes(term)));
+  document.getElementById("count").textContent=`${rows.length} of ${R.length} rows`;
+  if(!rows.length){document.getElementById("list").innerHTML='<p class="faint">No rows match these filters.</p>';return}
+  let out="";
+  [...new Set(rows.map(r=>r.s))].forEach(s=>{
+    const rs=rows.filter(r=>r.s===s);
+    out+=`<div class="state-h"><h2>${s}</h2><span>${rs.length} holding${rs.length===1?"":"s"}</span></div><div class="list">`+rs.map(r=>`<article class="item">
+      <div><div class="hold">${esc(r.h)}</div><div class="tier">TIER ${r.t}</div></div>
+      <dl class="kv"><dt>Register</dt>${cell(r.reg)}<dt>Operator</dt>${cell(r.op)}<dt>Hosting</dt>${cell(r.host)}${r.d==="dis"?`<dt>Dependency</dt>${cell(r.dep)}`:""}</dl>
+      <span class="chip ${DEP[r.d][0]}">${DEP[r.d][1]}</span></article>`).join("")+`</div>`;
+  });
+  document.getElementById("list").innerHTML=out;
+}
+[q,st,tr].forEach(el=>el.addEventListener(el===q?"input":"change",render));
+render();
+</script>
+</body>
+</html>
