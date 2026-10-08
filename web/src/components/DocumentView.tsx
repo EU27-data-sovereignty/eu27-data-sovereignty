@@ -156,7 +156,7 @@ export function DocumentView({
     <>
       {doc.sections.map((s, i) => (
         <section key={s.id} id={s.id} className="mb-10 scroll-mt-4">
-          <h2 className="mb-3 border-b-2 border-[var(--color-highlight)] pb-1 font-serif text-xl text-[var(--color-accent-text)]">
+          <h2 className="mb-3 border-b-2 border-[var(--color-highlight)] pb-1 font-display font-bold text-xl text-[var(--color-accent-text)]">
             {i + 1}. {s.title}
           </h2>
           {s.blocks.map((b, j) => (

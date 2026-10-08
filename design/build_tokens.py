@@ -74,6 +74,11 @@ def css(tokens: dict) -> str:
     # The print serif, for display type on the web too: the site and the PDFs share one voice.
     serif = ", ".join(f'"{n}"' if " " in n else n for n in tokens["type"]["print_family"]) + ", serif"
     lines += [f"  --font-serif: {serif};"]
+    # The EU27.CLOUD display sans, for headings and the page bands.
+    display = ", ".join(f'"{n}"' if " " in n else n for n in tokens["type"]["display_family"])
+    lines += [f"  --font-display: {display};"]
+    # Tailwind's `rounded` reads --radius.
+    lines += [f"  --radius: {tokens['shape']['radius_px']}px;"]
     lines += ["}", ""]
     dark_block = [f"    --color-{kebab(k)}: {v};" for k, v in dark.items()]
     lines += ["@layer base {", "  @media (prefers-color-scheme: dark) {",

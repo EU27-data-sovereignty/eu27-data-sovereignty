@@ -31,7 +31,24 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
 
       <header className="no-print border-b border-[var(--color-border)] px-4 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2">
-          <span className="font-serif text-lg">EU-27 Sovereign Data Centres</span>
+          <NavLink
+            to="/"
+            end
+            aria-label="EU27.CLOUD home"
+            className="flex shrink-0 items-center gap-2.5"
+          >
+            <img src="/brand/badge.png" alt="" className="h-13 w-13 sm:h-[76px] sm:w-[76px]" />
+            <img
+              src="/brand/wordmark.png"
+              alt="EU27.CLOUD"
+              className="logo-light h-[17px] w-auto"
+            />
+            <img
+              src="/brand/wordmark-white.png"
+              alt="EU27.CLOUD"
+              className="logo-dark h-[17px] w-auto"
+            />
+          </NavLink>
           <nav aria-label="Main" className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
             {NAV.map(n => (
               <NavLink
@@ -50,12 +67,15 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
               </NavLink>
             ))}
           </nav>
+          {/* Shows the mode it switches to: a sun while dark, a moon while light. */}
           <button
             type="button"
             onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-            className="ml-auto rounded border border-[var(--color-border)] px-2 py-1 text-xs"
+            aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={mode === 'dark' ? 'Light mode' : 'Dark mode'}
+            className="ml-auto grid h-9 w-9 place-items-center rounded-full border border-[var(--color-border)] text-[var(--color-fg-secondary)] hover:border-[var(--color-eu-gold)] hover:text-[var(--color-accent-text)]"
           >
-            {mode === 'dark' ? 'Light' : 'Dark'} mode
+            {mode === 'dark' ? <SunIcon /> : <MoonIcon />}
           </button>
         </div>
       </header>
@@ -66,6 +86,16 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
 
       <footer className="no-print mt-12 border-t border-[var(--color-border)] px-4 py-6 text-xs text-[var(--color-fg-secondary)]">
         <div className="mx-auto max-w-6xl">
+          <NavLink
+            to="/"
+            end
+            aria-label="EU27.CLOUD, European Union Data Sovereignty Initiative"
+            className="mb-4 flex items-center gap-3"
+          >
+            <img src="/brand/badge.png" alt="" className="h-12 w-12" />
+            <img src="/brand/lockup.png" alt="" className="logo-light h-10 w-auto" />
+            <img src="/brand/lockup-white.png" alt="" className="logo-dark h-10 w-auto" />
+          </NavLink>
           MIT licensed. Independent research, not affiliated with any government or EU body.
           Corrections and sources welcome via{' '}
           <a
@@ -78,5 +108,40 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
         </div>
       </footer>
     </div>
+  )
+}
+
+function SunIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" />
+    </svg>
+  )
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinejoin="round"
+    >
+      <path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z" />
+    </svg>
   )
 }

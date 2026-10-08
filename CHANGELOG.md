@@ -5,6 +5,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-08
+
+### Changed: the web app takes the EU27.CLOUD brand (#99)
+
+- **Header and footer.** The EU27.CLOUD badge and wordmark in the header, the full lockup in the footer, light and
+  dark variants; a sun/moon theme toggle; a favicon set.
+- **Page bands.** The EU silhouette artwork on night navy, with a gold rule; method pages tinted method teal (#88).
+- **Palette and type.** Dark theme rebased on night navy `#0A0F1D` with gold links; EU blue and gold as highlight
+  and accent; Montserrat headings, self-hosted; 10 px corners. All from `design/tokens.json`.
+- **Front-page subtitle**, on the web and the report cover: "A research-backed framework for every EU member
+  state: which critical government data should remain within national borders—and which sovereign data centres
+  should host it."
+
 ## 2026-10-07
 
 ### Changed: CI checks once, reports the fact check on pull requests, and rechecks every cited source weekly (#98)

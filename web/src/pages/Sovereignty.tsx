@@ -186,7 +186,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           aria-live="polite"
           className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4"
         >
-          <h2 className="font-serif text-xl">{names[selected]}</h2>
+          <h2 className="font-display font-bold text-xl">{names[selected]}</h2>
           <p className="mb-2 text-sm">
             <strong>{labels[sel.group]}</strong> · {sel.confidence} confidence · could still reach{' '}
             {labels[sel.range[0]!]}
@@ -210,7 +210,9 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
       ) : null}
 
       <section aria-label="Indicators">
-        <h2 className="mb-2 font-serif text-xl text-[var(--color-accent-text)]">The indicators</h2>
+        <h2 className="mb-2 font-display font-bold text-xl text-[var(--color-accent-text)]">
+          The indicators
+        </h2>
         <div className="scroll-x">
           <table className="w-full min-w-[40rem] border-collapse text-sm">
             <thead>

@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
 
 /**
- * The page header every page opens with, after the PDF report's cover and chapter bands (#91): EU blue,
- * a gold kicker, the title in the print serif and a gold rule. Method pages use the method teal, with a
- * pale teal kicker (gold on teal is under 4.5:1). Colours are brand tokens, the same in both themes.
+ * The page header every page opens with (#91, restyled by #99): the EU silhouette artwork on night navy,
+ * a gold kicker, the title in the EU27.CLOUD display sans and a gold rule. Method pages keep the method
+ * teal for their kicker and rule (#88). Colours are brand tokens, the same in both themes.
  */
 export function PageBand({
   kicker,
@@ -21,8 +21,11 @@ export function PageBand({
   const method = tone === 'method'
   return (
     <header
-      className={`mb-6 overflow-hidden rounded text-white ${
-        method ? 'bg-[var(--color-method-deep)]' : 'bg-[var(--color-eu-blue)]'
+      className={`band-map mb-6 overflow-hidden rounded text-white ${
+        // Method pages tint the artwork method teal, so how-we-know pages stay set apart (#88).
+        method
+          ? 'shadow-[inset_0_0_0_100vmax_color-mix(in_srgb,var(--color-method-deep)_62%,transparent)]'
+          : ''
       }`}
     >
       <div
@@ -36,7 +39,7 @@ export function PageBand({
           {kicker}
         </p>
         <h1
-          className={`font-serif leading-tight font-normal ${
+          className={`font-display leading-tight font-bold tracking-tight ${
             hero ? 'text-4xl sm:text-6xl' : 'text-3xl sm:text-4xl'
           }`}
         >
