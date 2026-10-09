@@ -1,4 +1,5 @@
 import { DocumentView } from '@/components/DocumentView'
+import { methodBlocks } from '@/utils/methodBlocks'
 import { MethodFrame } from '@/components/MethodFrame'
 import type { Bundle } from '@/data/types'
 
@@ -9,7 +10,12 @@ import type { Bundle } from '@/data/types'
 export function Methodology({ bundle }: { bundle: Bundle }) {
   return (
     <MethodFrame title="Methodology" sections={bundle.methodology.sections}>
-      <DocumentView doc={bundle.methodology} bundle={bundle} numbers={new Map()} />
+      <DocumentView
+        doc={bundle.methodology}
+        bundle={bundle}
+        numbers={new Map()}
+        blocks={methodBlocks(bundle)}
+      />
       <p className="text-sm text-[var(--color-fg-muted)]">{bundle.national_data_note}</p>
     </MethodFrame>
   )

@@ -34,6 +34,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
   filter, a search box and a tier filter. The ranking shows its group counts in the header, each group's rule in
   the methodology's words, and a key under the indicator grid. The front page adds browse links under the question
   box and a correction link on the notice.
+- **Methodology and fact-check graphics.** Count tables become bar charts; the priority rule becomes a formula; the
+  placement rules a numbered ladder; who checks whom a set of pairs; how a check runs a timeline; each fact-check
+  run gets a verdict bar; the per-state table gets totals and bars. All drawn from the documents' own data.
 
 ## 2026-10-07
 

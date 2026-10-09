@@ -2576,6 +2576,11 @@ and record it here rather than drop its official-looking parts. The web app (`we
   examples; method pages with a contents list. No page states a fact the bundle does not. The ranking's line under
   each group is the methodology's own rule text (`model/methodology.py`), found by the group's label, not
   restated in the web app.
+- **Method graphics.** The methodology and fact-check pages draw their own blocks through `DocumentView`'s
+  `blocks` hook (`web/src/utils/methodBlocks.tsx`, `components/MethodGraphics.tsx`): count tables as bars, the
+  priority rule as a formula cut from its own text, the placement rules as a numbered ladder, the writer/checker
+  table as pairs, the check steps as a timeline, each run's verdicts as a bar, and the per-state table's own
+  columns summed into tiles. The PDFs keep the plain tables; the words and numbers are the generated documents'.
 
 The design was reviewed as a static mockup first (`mockups/eu27-redesign/`).
 

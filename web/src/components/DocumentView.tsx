@@ -150,12 +150,18 @@ export function DocumentView({
   bundle,
   numbers,
   tables = {},
+  blocks,
 }: {
   doc: Document
   bundle: Bundle
   numbers: Map<string, number>
   /** A page's own layout for one section's table, by section id; it must render the same spans. */
   tables?: Record<string, (block: Extract<Block, { type: 'table' }>) => ReactNode>
+  /**
+   * A page's own drawing of any block, given its section id; undefined keeps the default. It may only
+   * draw what the block already holds -- a chart of a table's numbers, never a new sentence.
+   */
+  blocks?: (block: Block, section: string) => ReactNode | undefined
 }) {
   return (
     <>
@@ -167,13 +173,12 @@ export function DocumentView({
             </span>
             {s.title}
           </h2>
-          {s.blocks.map((b, j) =>
-            b.type === 'table' && tables[s.id] ? (
-              <div key={j}>{tables[s.id]!(b)}</div>
-            ) : (
-              <BlockView key={j} block={b} bundle={bundle} numbers={numbers} />
-            ),
-          )}
+          {s.blocks.map((b, j) => {
+            if (b.type === 'table' && tables[s.id]) return <div key={j}>{tables[s.id]!(b)}</div>
+            const own = blocks?.(b, s.id)
+            if (own !== undefined) return <div key={j}>{own}</div>
+            return <BlockView key={j} block={b} bundle={bundle} numbers={numbers} />
+          })}
         </section>
       ))}
     </>
