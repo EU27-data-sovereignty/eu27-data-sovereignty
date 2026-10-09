@@ -36,15 +36,25 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             aria-label="EU27.CLOUD home"
             className="flex shrink-0 items-center gap-2.5"
           >
-            <img src="/brand/badge.png" alt="" className="h-13 w-13 sm:h-[76px] sm:w-[76px]" />
+            <img
+              src="/brand/badge.png"
+              alt=""
+              width={320}
+              height={320}
+              className="h-13 w-13 sm:h-[76px] sm:w-[76px]"
+            />
             <img
               src="/brand/wordmark.png"
               alt="EU27.CLOUD"
+              width={600}
+              height={83}
               className="logo-light h-[17px] w-auto"
             />
             <img
               src="/brand/wordmark-white.png"
               alt="EU27.CLOUD"
+              width={600}
+              height={83}
               className="logo-dark h-[17px] w-auto"
             />
           </NavLink>
@@ -94,9 +104,21 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
               aria-label="EU27.CLOUD, European Union Data Sovereignty Initiative"
               className="mb-4 flex items-center gap-3"
             >
-              <img src="/brand/badge.png" alt="" className="h-12 w-12" />
-              <img src="/brand/lockup.png" alt="" className="logo-light h-10 w-auto" />
-              <img src="/brand/lockup-white.png" alt="" className="logo-dark h-10 w-auto" />
+              <img src="/brand/badge.png" alt="" width={320} height={320} className="h-12 w-12" />
+              <img
+                src="/brand/lockup.png"
+                alt=""
+                width={900}
+                height={172}
+                className="logo-light h-10 w-auto"
+              />
+              <img
+                src="/brand/lockup-white.png"
+                alt=""
+                width={900}
+                height={172}
+                className="logo-dark h-10 w-auto"
+              />
             </NavLink>
             MIT licensed. Independent research, not affiliated with any government or EU body.
             Corrections and sources welcome via{' '}

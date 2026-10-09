@@ -270,7 +270,9 @@ export function Overview({ bundle }: { bundle: Bundle }) {
                 <img
                   src={`/previews/report-${name}.png`}
                   alt={`Page from the EU-27 report: ${caption}`}
-                  loading="lazy"
+                  // Not lazy: a missing preview is removed below, and removing it while a reader (or a test)
+                  // scrolls past would shift the page under their tap. Loading up front settles it first.
+                  decoding="async"
                   width={910}
                   height={1286}
                   className="h-auto w-full rounded border border-[var(--color-border)] shadow-sm transition-shadow hover:shadow-md"

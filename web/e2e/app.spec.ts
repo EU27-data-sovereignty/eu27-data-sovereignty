@@ -149,6 +149,8 @@ test.describe('evidence rules (#82, #83)', () => {
     page,
   }) => {
     await page.goto('/country/DE')
+    // Web fonts swap in after the data renders and reflow the page; tap once they have settled.
+    await page.evaluate(() => document.fonts.ready)
     await page.getByRole('link', { name: 'fact check for Germany' }).click()
     await expect(page).toHaveURL(/\/fact-check\/DE$/)
     await expect(
@@ -161,6 +163,7 @@ test.describe('evidence rules (#82, #83)', () => {
     const rows = table.rows
     await expect(page.getByText(rows[0]![0]!.t, { exact: true })).toBeVisible()
     await page.goto('/')
+    await page.evaluate(() => document.fonts.ready)
     await page.getByRole('link', { name: 'How every fact was checked' }).click()
     await expect(page).toHaveURL(/\/fact-check$/)
     await expect(page.getByText('not by a person', { exact: false }).first()).toBeVisible()
