@@ -2332,3 +2332,6 @@ Whatever the route, the same four moves open it, and none costs much:
 
 When the follow-on lands, the snapshot tables here become a pointer to the generated overview and only the
 strategies stay authored (#101).
+
+The working log of the session that produced this note, with the decisions, the research run, the counts and the
+problems met, is [`docs/plans/national-ai-log.md`](docs/plans/national-ai-log.md).
