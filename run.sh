@@ -63,6 +63,7 @@ show_help() {
     echo -e "${GREEN}Evidence (docs/vetting.md; each step is one command)${NC}"
     echo "  admit [--check]  Admit verified research, then vetting; --check proves the registers reproduce"
     echo "  recheck [--check] Re-fetch every source behind a printed fact (resumable); --check: fail on a new dispute"
+    echo "  national-ai check|links  The authored note NATIONAL-AI-STRATEGIES.md: check its contract, or refetch its URLs into the link register"
     echo "  retry            Retry not-found quotes (served page in its charset, then rendered), then admit"
     echo "  eurostat check   Pull at the pinned periods and report; writes nothing"
     echo "  eurostat adopt COL=PERIOD ...   Move pins, apply, register the vintage"
@@ -197,6 +198,15 @@ case "${1:-dev}" in
         ;;
     recheck)
         python3 model/research.py recheck "${@:2}"
+        ;;
+    national-ai)
+        # The authored note on a citizen-grade foundation model per state (#101): check its contract, or
+        # fetch every URL it cites once and rewrite the link register (network; polite).
+        case "${2:-check}" in
+            check) python3 model/national_ai_note.py check ;;
+            links) python3 model/national_ai_note.py links ;;
+            *) print_error "usage: ./run.sh national-ai check | links"; exit 1 ;;
+        esac
         ;;
     retry)
         python3 model/research.py verify --rendered && python3 model/reproduce.py admit

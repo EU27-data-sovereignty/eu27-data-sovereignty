@@ -61,6 +61,7 @@ python3 model/research.py report       # verification outcomes per state
 python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
 python3 model/gaps.py [--csv out.csv]  # docs/gaps.md: every gap and how often it was searched (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
+./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#101)
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
@@ -140,3 +141,7 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `foreign_dependency`, including labels the report withholds (TODO.md). Don't build new counts that way.
 - **The mobile reader is stale** (schema-1 bundle). Don't copy the new bundle into it without the
   schema-2 port.
+- **`NATIONAL-AI-STRATEGIES.md` is authored, not generated** (#101). It is never read by the model, the book, the web
+  app or `/ask`; `tests/test_national_ai.py` fails if any of them names it. Edit it by hand, keep every snapshot cell
+  sourced with an access date or marked **[unverified]**, put no cost figure in a strategy, no ranking language anywhere,
+  and run `./run.sh national-ai links` after adding or changing a URL so the link register matches.

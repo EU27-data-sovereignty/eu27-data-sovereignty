@@ -2649,3 +2649,49 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
 `eu27.cloud` and on the new `.vercel.app` URL, and a green `Deploy` run.
 
 *Would change if:* the project's scope narrows back to hosting infrastructure alone, or the org is renamed.
+
+### 101. National AI strategies per state are an authored note, held to the frontier-model standard, never rendered and never ranked
+**Decision.** 2026-10-10, at the owner's request. `NATIONAL-AI-STRATEGIES.md`, at the repository root, works out
+for each of the 27 member states a strategy for a foundation AI model that is *good enough for its citizens*, not
+frontier. It is an authored note in the sense of #44: not generated, not in the bundle, the web app, the PDFs or
+`/ask`; `run.sh data` never touches it. Every factual claim in it carries the URL it came from and the access date,
+and a claim not confirmed from a fetched page is marked **[unverified]**, the convention of `docs/plans/stichting.md`.
+Cost and time bands are given once, per route, labelled reconstructed order-of-magnitude, never per state (#72).
+States are grouped by the route recommended for them, alphabetical within a group, and the note says in the same
+place that the groups are a recommendation and not a ranking (#10, #77). Its per-state snapshots are the seed for a
+later sourced run that would turn the building blocks into reviewed indicators (`ROADMAP.md` § Planned).
+
+**Problem.** The project's only treatment of national AI models was the model half of `FEASIBILITY-RANKING.md`, which
+was written from memory, ranked the 27, and was superseded by #77 with its model half still "Not started". #59's
+*Would change if* anticipated the facts being sourced. The owner wants the question explored for every state first,
+in one document, before any of it is admitted as printed fact.
+
+**Alternatives considered.**
+- **An authored note at the root, one file for all 27, cited or marked unverified, route groups but no order (chosen).**
+- **Render it through the content model as a per-state section and an EU-27 overview.** *Why not:* every printed value
+  needs a fetched, hashed, quote-checked citation and an agreeing independent review before it prints (#79, #82, #87);
+  that is the right end state, but it admits yes/partial/no facts, not a strategy, and the owner asked for the
+  exploration first. Kept as the planned follow-on.
+- **Extend `FEASIBILITY-RANKING.md`.** *Why not:* it is superseded, it ranks, and its model half has no sources; a
+  reader would take the new material for part of the old ranking.
+- **One note per state under `countries/<ISO>/`, like `NL/FRONTIER-MODEL.md`.** *Why not:* the owner asked for one
+  document, and the routes, the language clusters and the EU vehicles are shared material that would be copied 27
+  times or live nowhere.
+- **Per-state cost figures.** *Why not:* #72 forbids scaling one state from another, and the only costed case is NL's;
+  a per-state figure would be NL's figure with a different population.
+
+**Closes off.** An order or score over the 27 in this note or anything derived from it; a per-state cost or capacity
+figure (#73); quoting the note as a finding of the model (it carries the same caveat wording as #44's note); and
+adding the note to any generated output without the sourced follow-on.
+
+**Verified:** 2026-10-10. `./run.sh national-ai links` wrote `docs/national-ai-strategies-links.csv`: 393 URLs,
+387 answered, 6 did not (four `gov.ie` pages refusing automated requests, two pages gone), each on a
+line marked **[unverified]**. `./run.sh national-ai check` printed `27 states, 393 URLs (387 answered at the
+last link check), 223 unverified marks, 36,795 words, 0 problems`. `tests/test_national_ai.py` and
+`tests/test_docs.py` pass; `./test.sh --only model` recorded in `CHANGELOG.md`. The second-model review in
+`docs/plans/national-ai-strategies-factcheck-<date>.md` is the owner's call and has not run.
+
+*Would change if:* the sourced follow-on lands and the snapshots become reviewed indicators, at which point the
+snapshot tables here become a pointer to the generated overview and only the strategies stay authored; or a reader
+shows that a route grouping is being read as a ranking, in which case the groups are dissolved into the per-state
+entries.

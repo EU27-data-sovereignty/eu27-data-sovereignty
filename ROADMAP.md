@@ -223,6 +223,15 @@ the project, point DNS, and let the apex redirect settle. The domain is delibera
 Size each state from its own measured holdings with the kept capacity engine, once enough classes have a
 sourced count or size. Each constant stays a declared `assumption:` claim.
 
+### Then — national AI as reviewed indicators (#101)
+`NATIONAL-AI-STRATEGIES.md` explores, per state, the route to a citizen-grade foundation model; its snapshots are
+authored and cited, not admitted. The sourced version: five yes/partial/no indicators with `dimension=ai` in
+`model/indicators.csv` (AI Factory host, EuroHPC system on national soil, Gigafactory bid or selection,
+state-funded national model, strategy in force), kept out of `sovereignty.group()`; a per-state section and a
+#95-style copied-span EU-27 overview; a checked-in research-and-review workflow staging into
+`model/research/ai/`; admission, floors and `/factcheck`; a `/national-ai` page. The note's snapshot tables then
+become a pointer to the generated overview.
+
 ### Then — `gov_employment_k`
 Withheld on every page as "under review": for 9 of 27 states it matches no year of the official series.
 It no longer drives any figure (#72), so the fix is to source it or drop it.

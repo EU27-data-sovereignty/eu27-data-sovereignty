@@ -199,8 +199,8 @@ the body, not only in a header, for the same reason the country briefs do.
 |---|---|
 | Ranking drafted, both halves, all 27 states | ✅ 2026-09-13 |
 | Recorded as a bounded exception to #10 | ✅ `DECISIONS.md` #59 |
-| Model-half facts sourced (AI Factories, national models, Gigafactory bids) | ⬜ Not started |
-| Confirm the intended meaning of "sovereign data models" | ⬜ Open |
-| Re-rank after sourcing, and record what moved | ⬜ Waits on the step above |
+| Model-half facts sourced (AI Factories, national models, Gigafactory bids) | ⬜ Not started as ledger rows. The authored exploration is `NATIONAL-AI-STRATEGIES.md` (#101); the sourced run is planned in `ROADMAP.md` |
+| Confirm the intended meaning of "sovereign data models" | ✅ 2026-10-10: sovereign AI models, as read here (#101) |
+| Re-rank after sourcing, and record what moved | ⬜ Superseded with the note: the project no longer ranks (#77). `NATIONAL-AI-STRATEGIES.md` groups by route and orders nothing |
 
 Progress on these is tracked in `ROADMAP.md`, and changes to this note are logged in `CHANGELOG.md`.

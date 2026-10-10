@@ -149,6 +149,9 @@ CHANGELOG.md                 what changed and when
 VERIFICATION.md              the source-verification workstream: schema, tiered rule, where it stands
 FEASIBILITY-RANKING.md       authored note: EU-27 ranked on feasibility of sovereign data centers plus
                              sovereign AI models, in four groups; model half unsourced (#59)
+NATIONAL-AI-STRATEGIES.md    authored note: for each member state, a strategy for a foundation model good
+                             enough for its citizens; the routes, the EU vehicles, the language clusters;
+                             cited or marked unverified, grouped by route, never ranked (#101)
 DISTRIBUTION-AND-TRUST.md    authored note: what sovereign infrastructure can borrow from CDN
                              architecture, and the encryption, accountability and auditability
                              that wide distribution depends on (#64)
@@ -214,6 +217,52 @@ Standard library only. The capacity engine still reproduces the xlsx it was buil
 7. **Ask.** `/ask` answers questions from the sourced findings only, citing every fact; questions go to the
    Anthropic API and are not stored (#78).
 
+## National AI strategies: a foundation model good enough for each state's citizens
+
+[`NATIONAL-AI-STRATEGIES.md`](NATIONAL-AI-STRATEGIES.md) is an authored note (#101), written 2026-10-10, that
+asks a question adjacent to the model's: what would give each member state a foundation AI model that is *good
+enough for its citizens*, and what is the shortest defensible path to it. Not frontier parity, which
+[`countries/NL/FRONTIER-MODEL.md`](countries/NL/FRONTIER-MODEL.md) (#44) shows no state reaches alone.
+
+**What it contains.** A bar of six testable properties (every official language; deployable under national and EU
+law; continuity the state controls; defensible provenance; a cost the state can carry; evaluation owned
+nationally); four routes (adapt an open-weight base on a national corpus; pool with the language community or an
+EU vehicle; build a national mid-scale programme; procure frontier access with terms); the building blocks and
+what each means; the EU vehicles as of October 2026; one entry per member state in a fixed template (snapshot,
+what good enough means there, the recommended strategy, what it need not do, the main blocker, sources); the
+language clusters; the states grouped by recommended route; caveats.
+
+**The decisions it rests on, and what each forbids.**
+
+| Decision | What it settles for the note |
+|---|---|
+| #101 | It is authored, never rendered, cited or marked **[unverified]**, grouped by route and never ranked; the sourced follow-on is planned |
+| #44 | Authored notes on AI are held to a lower evidentiary standard than the model and must say so; AI is a separate ask from the government cloud |
+| #72 | Each state on its own fundamentals: no figure scaled from another state, so cost and time bands are given once per route, labelled **[reconstructed]**, never per state |
+| #10, #77 | No score, no order: the route groups are alphabetical inside and say in the same place that they are not a ranking |
+| #73 | No capacity or cost estimate per state |
+| #25 | The public repo is a publication channel, so the caveats are in the body, not only in a header |
+| #59 | Superseded with `FEASIBILITY-RANKING.md`; its model half was never sourced, and the note does not quote it as a finding |
+
+**How it was made.** Seven research agents (one for the EU vehicles, six for country clusters) collected the
+snapshots on 2026-10-10 with a URL and access date on every claim, official sources first (EuroHPC JU, the
+Commission, the funding ministry, the body running a programme). The strategies are the author's analysis and say
+so. `./run.sh national-ai links` fetched every cited URL once into
+[`docs/national-ai-strategies-links.csv`](docs/national-ai-strategies-links.csv); a URL that did not answer 200
+sits on a line marked **[unverified]**.
+
+**What the gate checks.** The note is prose, so `./test.sh` checks what it can refuse (`model/national_ai_note.py`,
+`tests/test_national_ai.py`): the header wording and the #101 citation; exactly one entry per state, alphabetical by
+English name, with the six subsections and the eleven snapshot rows; every snapshot cell sourced with an access
+date or marked unverified; every URL in the link register, with non-200 ones marked; no ranking language outside
+the sentences that say it ranks nothing; no currency figure inside a strategy; **[reconstructed]** only in the band
+table; every state once in the route groups, alphabetical inside; and no file in `model/`, `book/`, `api/`,
+`web/src/` or `mobile/` naming the note. `./run.sh national-ai check` prints the counts.
+
+**What it is not.** Not machine-checked by the evidence pipeline (#82, #87), not reviewed by a person, not in the
+bundle, the site, the PDFs or `/ask`. The sourced follow-on, reviewed yes/partial/no indicators per state in
+their own section and overview, is in [`ROADMAP.md`](ROADMAP.md) § Planned.
+
 ## What the evidence shows so far
 
 `countries/SUMMARY.md` and the Overview page give the live figures: how many holdings are verified per
@@ -238,6 +287,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-10-01 | Bottom-up: citizens submit sources and check facts through public forms; a fact is verified by a person only under a two-person rule; contributor terms and editorial policy; the legal entity deferred | #85–#86 |
 | 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file; the methodology and fact-check appendices in every asset, marked in a method teal | #87–#88 |
 | 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
+| 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #101 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

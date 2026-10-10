@@ -24,12 +24,14 @@ ROOT = Path(__file__).resolve().parent.parent
 DECISIONS = ROOT / "DECISIONS.md"
 
 HEADING = re.compile(r"^### (\d+)\. ", re.M)
-# `#41` but not the `#898781` of a hex colour: one or two digits, then a non-word char.
-REFERENCE = re.compile(r"(?<![\w#])#(\d{1,2})(?![0-9A-Za-z])")
+# `#41` or `#101` but not the `#898781` of a hex colour: one to three digits, then a non-word char.
+# Widened from two digits when #101 landed (2026-10-10); a six-digit hex still fails the lookahead.
+REFERENCE = re.compile(r"(?<![\w#])#(\d{1,3})(?![0-9A-Za-z])")
 
 # Files that cite decisions by number. Country briefs are generated and cite none.
 CITING = ["README.md", "ROADMAP.md", "PROGRESS.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md",
-          "FEASIBILITY-RANKING.md", "DISTRIBUTION-AND-TRUST.md", "VERIFICATION.md", "DEPLOYMENT.md",
+          "FEASIBILITY-RANKING.md", "NATIONAL-AI-STRATEGIES.md", "DISTRIBUTION-AND-TRUST.md",
+          "VERIFICATION.md", "DEPLOYMENT.md",
           "METHOD.md", "CLAUDE.md", "TODO.md", "artifacts/STYLE.md", "model/research/README.md",
           "SOURCES.md", "DECISIONS.md", ".gitignore",
           "model/README.md", "book/README.md",

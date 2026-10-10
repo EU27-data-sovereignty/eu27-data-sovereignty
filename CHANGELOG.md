@@ -5,6 +5,29 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-10
+
+### Added: `NATIONAL-AI-STRATEGIES.md`, a strategy per member state for a citizen-grade foundation model (#101)
+
+- **What it is.** An authored note at the root, beside `FEASIBILITY-RANKING.md`: the bar ("good enough for citizens",
+  six testable properties, none of them frontier parity), four routes (adapt an open-weight base, pool with the
+  language community or an EU vehicle, build a national mid-scale programme, procure frontier access with terms), the
+  building blocks, one entry per state in a fixed template, the language clusters, the EU vehicles, and states
+  grouped by recommended route with no order inside a group.
+- **How it was made.** Seven research agents (one for the EU vehicles, six for country clusters) collected the
+  snapshots with a URL and access date on every claim; the strategies are the author's analysis and say so. A link
+  check ran over every cited URL; claims not confirmed from a fetched page are marked **[unverified]**.
+  The link check of 2026-10-10 answered for 387 of 393 cited URLs; the 6 that did not
+  (four Irish government pages that refuse automated requests, two pages gone) are marked. The note carries
+  223 unverified marks over 36,795 words.
+- **Checked.** `./test.sh --only model` passed on 2026-10-10 (346 tests), including the new step "The national-AI
+  note keeps its contract" and `tests/test_national_ai.py`.
+- **Not rendered.** Nothing in the bundle, the web app, the PDFs or `/ask` changes. The sourced follow-on (reviewed
+  indicators per state) is planned in `ROADMAP.md`.
+- **Bookkeeping.** `tests/test_docs.py` now checks decision references of one to three digits (the `TODO.md` item is
+  closed) and lists the note among the citing files; `FEASIBILITY-RANKING.md`'s status table points at the note and
+  records that "sovereign data models" was read as sovereign AI models.
+
 ## 2026-10-08
 
 ### Changed: the project is renamed `eu27-data-sovereignty`, and its issue links point at the current repo (#100)

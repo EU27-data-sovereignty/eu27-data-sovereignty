@@ -99,6 +99,15 @@ step "Every fact shown is sourced"
 # An unsourced value is a gap, never a fact. This is the gate the author asked for: unimpeachable.
 python3 model/document.py --check
 ok "every fact in all 27 documents resolves to a checked source"
+
+# -----------------------------------------------------------------------------
+step "The national-AI note keeps its contract"
+# NATIONAL-AI-STRATEGIES.md is authored prose (#101), so the gate checks what it can refuse: one entry per
+# state in the fixed template, every snapshot cell sourced or marked unverified, every URL in the committed
+# link register, no ranking language, no cost inside a strategy, and nothing rendering it. The counts go in
+# front of whoever runs the gate, like the ledger above.
+python3 model/national_ai_note.py check
+ok "27 entries, every cell sourced or marked, every link registered"
 fi
 
 if in_group web; then

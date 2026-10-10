@@ -104,7 +104,7 @@ Open
       report withholds. Count printed facts only, diff the placements, and record the decision
 - [ ] Operators as entities (#96, `docs/hosting-operators.md`): schema, staging, review and admission;
       then the backfill from the 71 hosting quotes, computed operator views and the derived dependency
-- [ ] Widen the decision-reference regex in `tests/test_docs.py` (1–2 digits) before decision #100
+- [x] **Done 2026-10-10** — the decision-reference regex in `tests/test_docs.py` matches 1–3 digits (#101)
 - [ ] Decide how classified holdings (defence, intelligence) count in the ranking: exclusion or unknown
 - [ ] Rendering fetch for JavaScript pages (FI, PT, LT, CY) and a retry route for refused sites
       (LU, LV, RO, IE)

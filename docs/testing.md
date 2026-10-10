@@ -57,7 +57,7 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
 ## The Python suite, by subject
 
 - **Content and evidence:** `test_evidence`, `test_methodology`, `test_provenance`, `test_sources`,
-  `test_research`, `test_vetting`, `test_national_data`, `test_sovereignty`, `test_model`, `test_book`,
+  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereignty`, `test_model`, `test_book`,
   `test_ask_corpus`, `test_emoji`, `test_institutions`, `test_gaps`.
 - **The fact check:** `test_factcheck`. It covers the rule, the hash, stage refusals, the gate, withholding,
   the appendix in every asset, the runbook's commands and the ledger replay.
