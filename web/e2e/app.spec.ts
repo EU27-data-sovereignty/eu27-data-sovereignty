@@ -150,12 +150,15 @@ test.describe('evidence rules (#82, #83)', () => {
     await expect(
       page.locator('footer').getByText(BUNDLE.provenance, { exact: false }),
     ).toBeVisible()
-    for (const route of ['/', '/methodology']) {
-      await page.goto(route)
-      // exact: the footer notice on every page also contains the disclaimer, inside longer text; this
-      // checks the page's own statement of it.
-      await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
-    }
+    // The front page relies on the footer's notice alone: its own copy of it was removed as a duplicate (#101).
+    await page.goto('/')
+    await expect(
+      page.locator('footer').getByText(BUNDLE.notice.disclaimer, { exact: false }),
+    ).toBeVisible()
+    await page.goto('/methodology')
+    // exact: the footer notice on every page also contains the disclaimer, inside longer text; this
+    // checks the page's own statement of it.
+    await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
   })
 
   test('every page links the fact check, and a country lists the verdict on each of its facts (#87)', async ({
@@ -307,6 +310,19 @@ test.describe('ask', () => {
     await expect(page.getByText('According to the sourced data')).toBeVisible()
     await page.getByRole('link', { name: 'Source 1' }).click()
     await expect(page.locator('#src-1')).toContainText(claim)
+  })
+
+  test('a question asked on the front page is answered on the Ask page', async ({ page }) => {
+    await page.route('**/api/ask', route =>
+      route.fulfill({ status: 200, contentType: 'text/event-stream', body: stream }),
+    )
+    await page.goto('/')
+    await expect(page.getByRole('heading', { name: 'Hello, Europe' })).toBeVisible()
+    await page.getByLabel('Ask any question').fill('Who runs the tax register?')
+    await page.getByRole('button', { name: 'Ask', exact: true }).click()
+    await expect(page).toHaveURL(/\/ask$/)
+    await expect(page.getByLabel('Your question')).toHaveValue('Who runs the tax register?')
+    await expect(page.getByText('According to the sourced data')).toBeVisible()
   })
 
   test('a rate-limited request shows a clear message', async ({ page }) => {

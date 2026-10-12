@@ -1,21 +1,14 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import { SourceList } from '@/components/SourceList'
+import { ASK_EXAMPLES, ASK_MAX } from '@/data/ask'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
 import { BUTTON, CARD } from '@/components/ui'
 
-const MAX = 500
-
-const EXAMPLES = [
-  'Which member states have a law keeping government data under national jurisdiction?',
-  'Who operates Germany’s population register, and under which law?',
-  'Which holdings are still unverified for Estonia?',
-  'How does the data-sovereignty ranking work, and how confident is it?',
-  'Is it known where Belgium’s critical registers are hosted?',
-  'What does "not demonstrated" mean in the ranking?',
-]
+const MAX = ASK_MAX
+const EXAMPLES = ASK_EXAMPLES
 
 type Segment = { text: string } | { cite: number[] }
 type Status = 'idle' | 'asking' | 'done' | 'error'
@@ -119,6 +112,19 @@ export function Ask({ bundle }: { bundle: Bundle }) {
       setStatus('error')
     }
   }
+
+  // A question asked on the front page is asked here at once: the reader pressed Ask there, under the same
+  // notice about where the question goes. Only on arrival, so editing the box never sends anything by itself.
+  // Deferred a tick, so a remount (React's strict mode) cancels the first request instead of doubling it.
+  useEffect(() => {
+    if (!passed.trim()) return
+    const timer = setTimeout(() => void ask(passed.trim().slice(0, MAX)), 0)
+    return () => {
+      clearTimeout(timer)
+      abort.current?.abort()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <article>

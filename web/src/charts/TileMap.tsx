@@ -59,7 +59,8 @@ const STEPS = [
 ]
 
 /**
- * The 27 as a tile map on the front page, shaded blue by how much verified evidence each has (#99, #101).
+ * The 27 as a tile map, shaded blue by how much verified evidence each has (#99, #101). Not on any page at
+ * present: it left the front page when the Ask box became that page's main act, and is kept here for reuse.
  * Shade is never the only cue: each tile prints its number, and its label reads it out. It counts
  * evidence; it is not a ranking of how sovereign a state is (#77).
  */

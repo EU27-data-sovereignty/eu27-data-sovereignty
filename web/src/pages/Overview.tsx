@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { TileMap } from '@/charts/TileMap'
-import { CORRECTIONS_URL } from '@/data/contribute'
-import { coverage, factCounts } from '@/data/sources'
+import { ASK_EXAMPLES, ASK_MAX } from '@/data/ask'
+import { coverage } from '@/data/sources'
 import type { Bundle } from '@/data/types'
 import { AudienceSelector } from '@/components/AudienceSelector'
 import { Hero } from '@/components/Hero'
-import { BUTTON, BUTTON_OUTLINE, CARD, SectionHead } from '@/components/ui'
+import { BUTTON, CARD, SectionHead } from '@/components/ui'
 
 /** One headline number with a bar for its share, or a pending chip when there is nothing to show yet. */
 function Meter({
@@ -78,15 +77,7 @@ export function Overview({ bundle }: { bundle: Bundle }) {
   const tier0Total = covs.reduce((n, c) => n + c.tier0Total, 0)
   const sources = Object.keys(bundle.sources).length
   const claims = Object.keys(bundle.claims).length
-  const tiles = countries.map((c, i) => ({
-    iso: c.iso2,
-    name: c.name,
-    holdings: covs[i]!.verified,
-    holdingsTotal: covs[i]!.total,
-    tier0: covs[i]!.tier0,
-    tier0Total: covs[i]!.tier0Total,
-    facts: bundle.documents[c.iso2] ? factCounts(bundle.documents[c.iso2]!).facts : 0,
-  }))
+  const go = (q: string) => navigate('/ask', { state: { question: q.trim() } })
 
   return (
     <article>
@@ -95,64 +86,81 @@ export function Overview({ bundle }: { bundle: Bundle }) {
       <AudienceSelector />
 
       <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
-        {/* What the hero held before #101, unchanged in function: the question box, the 27, the evidence. */}
-        <section
-          aria-label="Ask and explore"
-          className="mb-12 grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14"
-        >
-          <div className="min-w-0">
-            <p className="text-sm font-bold tracking-[0.16em] text-[var(--color-accent-text)] uppercase">
-              EU-27 · Independent Research
-            </p>
-            <h2 className="mt-3 font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-              Sovereign Data Centres for the EU{'\u2011'}27
-            </h2>
-            <p className="mt-4 max-w-xl text-lg text-[var(--color-fg-secondary)]">
-              A research-backed framework for every EU member state: which critical government data
-              should remain within national borders—and which sovereign data centres should host it.
-            </p>
-            <form
-              role="search"
-              className="mt-6 flex max-w-xl rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-1.5 focus-within:border-[var(--color-accent-text)]"
-              onSubmit={e => {
-                e.preventDefault()
-                navigate('/ask', { state: { question: question.trim() } })
+        {/* The front page's main act (#101): ask anything, in your own words. */}
+        <section aria-labelledby="ask-heading" className="mx-auto mb-14 max-w-3xl text-center">
+          <h2
+            id="ask-heading"
+            className="font-display text-4xl leading-tight font-extrabold tracking-tight sm:text-6xl"
+          >
+            Hello, Europe
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-fg-secondary)] sm:text-xl">
+            Whatever is on your mind about EU Data Sovereignty, ask any question here.
+          </p>
+          <form
+            role="search"
+            className="mt-8 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 text-left shadow-[0_8px_30px_rgb(11_27_63/0.08)] focus-within:border-[var(--color-accent-text)]"
+            onSubmit={e => {
+              e.preventDefault()
+              if (question.trim()) go(question)
+            }}
+          >
+            <label htmlFor="overview-ask" className="sr-only">
+              Ask any question
+            </label>
+            <textarea
+              id="overview-ask"
+              value={question}
+              maxLength={ASK_MAX}
+              rows={3}
+              onChange={e => setQuestion(e.target.value)}
+              onKeyDown={e => {
+                // Enter asks, as in a chat box; Shift+Enter starts a new line.
+                if (e.key === 'Enter' && !e.shiftKey && question.trim()) {
+                  e.preventDefault()
+                  go(question)
+                }
               }}
-            >
-              <label htmlFor="overview-ask" className="sr-only">
-                Ask a question
-              </label>
-              <input
-                id="overview-ask"
-                value={question}
-                onChange={e => setQuestion(e.target.value)}
-                placeholder="Who operates Germany’s population register?"
-                className="min-w-0 flex-1 bg-transparent px-3 py-2 text-base outline-none placeholder:text-[var(--color-fg-muted)]"
-              />
-              <button type="submit" className={BUTTON}>
+              placeholder="Ask anything, in your own words…"
+              // 16 px and up: iPhone Safari zooms the whole page into any field set smaller (#92).
+              className="w-full resize-none bg-transparent px-4 pt-3 text-lg outline-none placeholder:text-[var(--color-fg-muted)]"
+            />
+            <div className="flex items-center justify-between gap-3 px-4 pb-2">
+              <span className="text-xs text-[var(--color-fg-muted)] tabular-nums">
+                {question.length} / {ASK_MAX}
+              </span>
+              <button
+                type="submit"
+                disabled={!question.trim()}
+                className={`${BUTTON} px-7 text-base disabled:opacity-50`}
+              >
                 Ask
               </button>
-            </form>
-            <p className="mt-2.5 text-sm text-[var(--color-fg-muted)]">
-              Or browse{' '}
-              <Link to="/sovereignty" className="underline">
-                the ranking
-              </Link>{' '}
-              ·{' '}
-              <Link to="/holdings" className="underline">
-                all {bundle.holding_classes.length} holdings
-              </Link>
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link to="/countries" className={BUTTON}>
-                Explore the 27 states →
-              </Link>
-              <a href="/eu27-report.pdf" className={BUTTON_OUTLINE}>
-                Read the full report
-              </a>
             </div>
+          </form>
+          <p className="mx-auto mt-3 max-w-2xl text-xs text-[var(--color-fg-muted)]">
+            Your question is sent to Anthropic’s API to generate the answer. This site does not
+            store it. Answers come only from this project’s sourced findings, with a citation for
+            every fact.
+          </p>
+          <div className="mt-7">
+            <p className="mb-3 text-xs font-bold tracking-[0.16em] text-[var(--color-accent-text)] uppercase">
+              Or start from one of these
+            </p>
+            <ul className="flex flex-wrap justify-center gap-2">
+              {ASK_EXAMPLES.map(q => (
+                <li key={q}>
+                  <button
+                    type="button"
+                    onClick={() => go(q)}
+                    className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-card)] px-4 py-2 text-left text-sm text-[var(--color-fg-secondary)] hover:border-[var(--color-accent-text)] hover:text-[var(--color-fg-primary)]"
+                  >
+                    {q}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
-          <TileMap states={tiles} />
         </section>
 
         <p className="mb-10 max-w-3xl text-[var(--color-fg-secondary)]">
@@ -291,21 +299,6 @@ export function Overview({ bundle }: { bundle: Bundle }) {
             ))}
           </ul>
         </section>
-
-        <aside className="grid grid-cols-[auto_minmax(0,1fr)] gap-4 rounded border border-[var(--color-border)] bg-[var(--color-bg-emphasis)] p-5">
-          <span
-            aria-hidden="true"
-            className="grid h-8 w-8 place-items-center rounded-full bg-[var(--color-eu-blue)] font-display font-bold text-white"
-          >
-            i
-          </span>
-          <p className="text-sm font-medium">
-            <span>{bundle.notice.disclaimer}</span>{' '}
-            <a className="text-[var(--color-accent-text)] underline" href={CORRECTIONS_URL}>
-              Open a correction
-            </a>
-          </p>
-        </aside>
       </div>
     </article>
   )

@@ -2683,6 +2683,11 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
   method-teal band (#88). Tables get a `#EEF1F8` header with navy text and a 2 px blue rule. Links are brand blue,
   navy on hover, underlined in gold. A disputed value's dashed rule is `#9AA8C4`.
 
+- **Amended the same day.** The front page's first section under the band is the Ask box alone ("Hello, Europe"),
+  free-form, and a question asked there is sent on arrival at `/ask`. The tile map, the dataset's title and
+  subtitle and the page's own copy of the machine-checked notice leave the front page; the footer's notice on
+  every page (#82, #83) is what remains of it there. `TileMap` is kept unused.
+
 **Problem.** #99's look (night navy, bright EU gold, the silhouette artwork behind every band) was a first brand
 pass. The landing design that followed is light, quieter with gold, set in one typeface, and opens the front page
 on who the reader is rather than on the dataset.

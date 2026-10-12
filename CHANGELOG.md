@@ -7,6 +7,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Changed: the front page opens its content on a free-form Ask box (#101)
+
+- **"Hello, Europe".** Under the audience selector, the first section is now the question box: the headline, the
+  line "Whatever is on your mind about EU Data Sovereignty, ask any question here.", a large text box (Enter asks,
+  Shift+Enter starts a new line), the note on where a question is sent, and the six example questions as buttons.
+- **One step.** A question asked there is sent on arrival at the Ask page instead of waiting for a second press.
+  The same notice about Anthropic's API is shown under the box on the front page.
+- **Removed from the front page.** The tile map of the 27 ("Verified evidence by state"), the old title and
+  subtitle, and the two buttons beside them. `TileMap` stays in `web/src/charts/` for reuse; no page shows it.
+- **Removed as a duplicate.** The front page's own "Machine-checked, not human-verified" box: the footer of every
+  page carries that notice (#82, #83). The browser test now checks the footer's notice on the front page.
+- **Shared.** The example questions and the 500-character limit live in `web/src/data/ask.ts`.
+
 ### Fixed: the tile map's labels keep their contrast (#101)
 
 - **What failed.** The first deploy of the landing design stopped on the front page's accessibility test in
