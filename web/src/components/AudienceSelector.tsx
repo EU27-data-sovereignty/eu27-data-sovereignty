@@ -2,11 +2,9 @@ import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
-export type EntryMode = 'role' | 'need'
+import { AUDIENCE_GUIDES, TASK_GUIDES } from '@/data/guides'
 
-/** The six audiences of the landing design, in its order. `id` is what a later content panel keys on. */
-export type AudienceId =
-  'ministries' | 'procurement' | 'parliaments' | 'cyber' | 'eu-institutions' | 'operators'
+export type EntryMode = 'role' | 'need'
 
 const STROKE = {
   fill: 'none',
@@ -32,10 +30,9 @@ const STARS = [
   [11.5, 6.7],
 ] as const
 
-const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[] = [
+const AUDIENCE_ICONS: { id: string; icon: ReactNode }[] = [
   {
     id: 'ministries',
-    label: ['Ministries &', 'government CIOs'],
     icon: (
       <path
         d="M5 13L18 6l13 7z M6 13h24 M9 16v11 M15 16v11 M21 16v11 M27 16v11 M6 27h24 M4 30.5h28"
@@ -45,7 +42,6 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
   {
     id: 'procurement',
-    label: ['Procurement &', 'cloud strategy'],
     icon: (
       <>
         <path d="M3 7h4.5l3.5 15h16.5l3-11H9" {...STROKE} />
@@ -56,7 +52,6 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
   {
     id: 'parliaments',
-    label: ['Parliaments &', 'audit courts'],
     icon: (
       <path
         d="M18 4v3 M9 15a9 7 0 0 1 18 0z M7 15h22 M10 18v9 M14.7 18v9 M19.3 18v9 M24 18v9 M7 27h22 M5 30.5h26"
@@ -66,7 +61,6 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
   {
     id: 'cyber',
-    label: ['Cyber agencies', '& CISOs'],
     icon: (
       <>
         <path d="M18 3.5l12 4.5v9c0 7.5-5.2 12.5-12 15.5C11.2 29.5 6 24.5 6 17V8z" {...STROKE} />
@@ -77,7 +71,6 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
   {
     id: 'eu-institutions',
-    label: ['EU institutions'],
     icon: (
       <g fill="var(--color-eu-gold)">
         {STARS.map(([x, y]) => (
@@ -92,7 +85,6 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
   {
     id: 'operators',
-    label: ['Operators', 'investors & press'],
     icon: (
       <path
         d="M5 31h27 M7 31v-8h4.5v8 M15 31v-12h4.5v12 M23 31v-16h4.5v16 M5 18l8-7 5 4 11-10 M24 5h5v5"
@@ -102,26 +94,10 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
 ]
 
-/** A section of a country report a task opens at; Countries reads it from the link's state. */
-export type ReportSection = 'exposure' | 'holdings' | 'gaps'
-
-/**
- * The six tasks behind "I need to…" (#101), from the use cases written for decision makers. Each leads to
- * the page that serves it today. Three of them live inside a country's report, so they go to Countries and
- * say which section to open once a state is chosen.
- */
-const NEEDS: {
-  id: string
-  label: [string, string]
-  to: string
-  section?: ReportSection
-  icon: ReactNode
-}[] = [
+/** The six tasks' icons, by guide slug (data/guides.ts holds their labels and pages). */
+const TASK_ICONS: { id: string; icon: ReactNode }[] = [
   {
     id: 'exposure',
-    label: ['Check my country’s', 'exposure'],
-    to: '/countries',
-    section: 'exposure',
     icon: (
       <>
         <path
@@ -136,9 +112,6 @@ const NEEDS: {
   },
   {
     id: 'migrate',
-    label: ['Decide what to', 'migrate first'],
-    to: '/countries',
-    section: 'holdings',
     icon: (
       <>
         <path d="M14 9h17 M14 18h17 M14 27h17" {...STROKE} />
@@ -152,8 +125,6 @@ const NEEDS: {
   },
   {
     id: 'tender',
-    label: ['Write tender criteria', 'that hold up'],
-    to: '/sovereignty#indicators',
     icon: (
       <>
         <path d="M9 4h13l6 6v22H9z M22 4v6h6" {...STROKE} />
@@ -163,9 +134,6 @@ const NEEDS: {
   },
   {
     id: 'questions',
-    label: ['Turn gaps into', 'formal questions'],
-    to: '/countries',
-    section: 'gaps',
     icon: (
       <>
         <path d="M5 7h26v18H17l-7 6v-6H5z" {...STROKE} />
@@ -178,8 +146,6 @@ const NEEDS: {
   },
   {
     id: 'compare',
-    label: ['Compare how peers', 'host a register'],
-    to: '/holdings',
     icon: (
       <>
         <rect x="5" y="6" width="11" height="24" rx="1.5" {...STROKE} />
@@ -193,8 +159,6 @@ const NEEDS: {
   },
   {
     id: 'cut-off',
-    label: ['Plan for a', 'provider cut-off'],
-    to: '/infrastructure',
     icon: (
       <>
         <path
@@ -277,23 +241,16 @@ function Label({ lines }: { lines: [string, string?] }) {
 }
 
 /**
- * The selector band under the hero (#101). "I am…" lists six audiences: one can be marked, and `onSelect`
- * reports it, but no page exists for an audience yet and none is invented here. "I need to…" lists six tasks,
- * each a link to the page that serves it today.
+ * The selector band under the hero (#101, #102). The toggle chooses between six audiences ("I am…") and
+ * six tasks ("I need to…"); each is a link to its guide page, whose words live in data/guides.ts. The
+ * icons are kept here, by slug.
  */
-export function AudienceSelector({
-  onSelect,
-}: {
-  onSelect?: (choice: { mode: EntryMode; audience: AudienceId | null }) => void
-}) {
+export function AudienceSelector() {
   const [mode, setMode] = useState<EntryMode>('role')
-  const [audience, setAudience] = useState<AudienceId | null>(null)
-
-  const choose = (next: { mode: EntryMode; audience: AudienceId | null }) => {
-    setMode(next.mode)
-    setAudience(next.audience)
-    onSelect?.(next)
-  }
+  const [guides, icons, base] =
+    mode === 'role'
+      ? ([AUDIENCE_GUIDES, AUDIENCE_ICONS, '/for'] as const)
+      : ([TASK_GUIDES, TASK_ICONS, '/how'] as const)
 
   return (
     <section aria-label="Choose your entry point" className="bg-[var(--color-band)]">
@@ -314,7 +271,7 @@ export function AudienceSelector({
               <button
                 type="button"
                 aria-pressed={mode === s.mode}
-                onClick={() => choose({ mode: s.mode, audience })}
+                onClick={() => setMode(s.mode)}
                 className={`on-navy inline-flex min-h-11 items-center justify-center gap-3 rounded-[9px] px-4 text-base whitespace-nowrap sm:min-w-[190px] sm:px-6 ${
                   mode === s.mode
                     ? 'bg-[var(--color-eu-gold)] font-bold text-[var(--color-eu-deep)]'
@@ -330,40 +287,21 @@ export function AudienceSelector({
           ))}
         </div>
 
-        <div
-          role="group"
-          aria-label="Entry points"
+        <nav
+          aria-label={mode === 'role' ? 'Guides by audience' : 'Guides by task'}
           className="mt-[26px] grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-2.5"
         >
-          {mode === 'role'
-            ? AUDIENCES.map(a => (
-                <button
-                  key={a.id}
-                  type="button"
-                  aria-pressed={audience === a.id}
-                  onClick={() => choose({ mode, audience: audience === a.id ? null : a.id })}
-                  className={`${CHIP} ${
-                    audience === a.id
-                      ? 'border-[var(--color-eu-gold)] bg-[var(--color-navy-hover)]'
-                      : 'border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]'
-                  }`}
-                >
-                  <Icon>{a.icon}</Icon>
-                  <Label lines={a.label} />
-                </button>
-              ))
-            : NEEDS.map(n => (
-                <Link
-                  key={n.id}
-                  to={n.to}
-                  state={n.section ? { section: n.section } : undefined}
-                  className={`${CHIP} border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]`}
-                >
-                  <Icon>{n.icon}</Icon>
-                  <Label lines={n.label} />
-                </Link>
-              ))}
-        </div>
+          {guides.map(g => (
+            <Link
+              key={g.slug}
+              to={`${base}/${g.slug}`}
+              className={`${CHIP} border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]`}
+            >
+              <Icon>{icons.find(x => x.id === g.slug)?.icon}</Icon>
+              <Label lines={g.label} />
+            </Link>
+          ))}
+        </nav>
       </div>
     </section>
   )

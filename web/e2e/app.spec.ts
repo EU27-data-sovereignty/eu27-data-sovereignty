@@ -62,6 +62,8 @@ const ROUTES = [
   '/methodology',
   '/fact-check',
   '/fact-check/DE',
+  '/for/ministries',
+  '/how/exposure',
 ]
 
 test.describe('data actually renders', () => {
@@ -288,26 +290,47 @@ test.describe('ranking', () => {
   })
 })
 
-test.describe('entry points (#101)', () => {
-  test('"I need to…" swaps the audiences for six tasks, each leading to its page', async ({
+test.describe('entry points (#101, #102)', () => {
+  const GUIDES = [
+    ...['ministries', 'procurement', 'parliaments', 'cyber', 'eu-institutions', 'operators'].map(
+      s => `/for/${s}`,
+    ),
+    ...['exposure', 'migrate', 'tender', 'questions', 'compare', 'cut-off'].map(s => `/how/${s}`),
+  ]
+
+  test('the toggle swaps six audiences for six tasks, each linked to its guide', async ({
     page,
   }) => {
     await page.goto('/')
-    const entries = page.getByRole('group', { name: 'Entry points' })
-    await expect(entries.getByRole('button')).toHaveCount(6)
+    const audiences = page.getByRole('navigation', { name: 'Guides by audience' })
+    await expect(audiences.getByRole('link')).toHaveCount(6)
     await page.getByRole('button', { name: /I need to/ }).click()
-    await expect(entries.getByRole('link')).toHaveCount(6)
-    await entries.getByRole('link', { name: /Compare how peers host a register/ }).click()
-    await expect(page).toHaveURL(/\/holdings$/)
-    await expect(page.getByRole('heading', { name: 'Critical holdings', level: 1 })).toBeVisible()
+    const tasks = page.getByRole('navigation', { name: 'Guides by task' })
+    await expect(tasks.getByRole('link')).toHaveCount(6)
+    await tasks.getByRole('link', { name: /Compare how peers host a register/ }).click()
+    await expect(page).toHaveURL(/\/how\/compare$/)
+    await expect(
+      page.getByRole('heading', { name: 'Compare how peers host a register', level: 1 }),
+    ).toBeVisible()
   })
 
-  test('a task that lives in a country report opens the chosen country at that section', async ({
+  test('every guide renders its steps and figures counted from the bundle', async ({ page }) => {
+    for (const route of GUIDES) {
+      await page.goto(route)
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+      expect(await page.locator('ol > li').count(), route).toBeGreaterThanOrEqual(3)
+      // A figure that failed to compute would print NaN or "undefined".
+      await expect(page.locator('dl dd').first()).toBeVisible()
+      for (const value of await page.locator('dl dd').allTextContents())
+        expect(value, route).toMatch(/^[\d,]+( of [\d,]+)?$/)
+    }
+  })
+
+  test('a guide step that lives in a country report opens the chosen country at that section', async ({
     page,
   }) => {
-    await page.goto('/')
-    await page.getByRole('button', { name: /I need to/ }).click()
-    await page.getByRole('link', { name: /Turn gaps into formal questions/ }).click()
+    await page.goto('/how/questions')
+    await page.getByRole('link', { name: /Choose a country/ }).click()
     await expect(page).toHaveURL(/\/countries$/)
     const title = BUNDLE.documents.DE!.sections.find(s => s.id === 'gaps')!.title
     await expect(page.getByRole('status')).toContainText(title)

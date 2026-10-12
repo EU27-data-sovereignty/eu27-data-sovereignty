@@ -36,7 +36,11 @@ sys.path.insert(0, str(ROOT / "book"))
 # Every route a reader can open; tests/test_smoke.py keeps it a superset of the e2e ROUTES.
 ROUTES = ["/", "/countries", "/country/DE", "/country/NL", "/holdings", "/holdings/civil_registry",
           "/infrastructure", "/sources",
-          "/sovereignty", "/ask", "/methodology", "/fact-check", "/fact-check/DE"]
+          "/sovereignty", "/ask", "/methodology", "/fact-check", "/fact-check/DE",
+          # The twelve guides behind the front page's selector (#102).
+          "/for/ministries", "/for/procurement", "/for/parliaments", "/for/cyber", "/for/eu-institutions",
+          "/for/operators", "/how/exposure", "/how/migrate", "/how/tender", "/how/questions", "/how/compare",
+          "/how/cut-off"]
 ISOS = ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "HR", "HU", "IE", "IT", "LT",
         "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"]
 AGENT = "eu27-smoke/1 (+https://github.com/EU27-data-sovereignty/eu27-data-sovereignty)"

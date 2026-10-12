@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 import { coverage, factCounts, spans } from '@/data/sources'
 import type { Bundle } from '@/data/types'
-import type { ReportSection } from '@/components/AudienceSelector'
+import type { ReportSection } from '@/data/guides'
 import { PageBand } from '@/components/PageBand'
 import { CARD, Dots, FIELD, Bar, Segmented } from '@/components/ui'
 
@@ -16,7 +16,7 @@ type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 export function Countries({ bundle }: { bundle: Bundle }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('name')
-  // A task chosen on the front page ("I need to…") names the section of the report to open (#101).
+  // A guide's step may name the section of the report to open once a state is chosen (#102).
   const section = (useLocation().state as { section?: ReportSection } | null)?.section
   // Its heading, in the report's own words, from any country's document.
   const sectionTitle = section

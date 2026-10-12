@@ -7,6 +7,20 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Added: a guide page behind every selector button (#102)
+
+- **Twelve pages.** `/for/…` for the six audiences under "I am…" (ministries and CIOs, procurement, parliaments
+  and audit courts, cyber agencies, EU institutions, operators, investors and press) and `/how/…` for the six
+  tasks under "I need to…". Each has an introduction, numbered steps that link to the pages where the sourced
+  facts are, figures from the data, and a list of what the site does not do yet; audience pages also say when
+  the site helps and what a reader takes away.
+- **Figures are counted, not written.** Each is computed from the dataset as the page loads and links to where
+  it can be checked.
+- **Selector.** Both lists are now links to these guides; an audience can no longer be "marked", and a task opens
+  its guide before the destination page.
+- **Source of the words.** Drafted from the note "Benefits and Use Cases for Decision Makers"; its fixed numbers,
+  named findings and two unsourced comparisons were left out. The text lives in `web/src/data/guides.ts`.
+
 ### Changed: "I need to…" lists six tasks, each linked to its page (#101)
 
 - **The toggle now changes the options.** Under "I need to…" the six audience buttons give way to six tasks:

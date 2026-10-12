@@ -6,10 +6,12 @@
  */
 import { render, renderHook, act, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import { describe, expect, it, beforeEach, vi } from 'vitest'
+import { describe, expect, it, beforeEach } from 'vitest'
 
 import { AudienceSelector } from '../components/AudienceSelector'
 import { DocumentView } from '../components/DocumentView'
+import { FIGURES } from '../data/guideFigures'
+import { AUDIENCE_GUIDES, TASK_GUIDES } from '../data/guides'
 import { PageBand } from '../components/PageBand'
 import type { Bundle, Document } from '../data/types'
 import { useTheme } from '../utils/theme'
@@ -80,12 +82,17 @@ describe('DocumentView', () => {
 })
 
 describe('AudienceSelector', () => {
-  const selector = (onSelect?: Parameters<typeof AudienceSelector>[0]['onSelect']) =>
+  const selector = () =>
     render(
       <MemoryRouter>
-        <AudienceSelector onSelect={onSelect} />
+        <AudienceSelector />
       </MemoryRouter>,
     )
+  const links = (name: string) =>
+    [...screen.getByRole('navigation', { name }).querySelectorAll('a')].map(a => [
+      a.textContent?.replace(/\s+/g, ' ').trim(),
+      a.getAttribute('href'),
+    ])
 
   it('opens on "I am…" and switches the toggle with real pressed buttons', () => {
     selector()
@@ -98,36 +105,49 @@ describe('AudienceSelector', () => {
     expect(need).toHaveAttribute('aria-pressed', 'true')
   })
 
-  it('offers the six audiences as buttons and reports a choice, without opening anything', () => {
-    const onSelect = vi.fn()
-    selector(onSelect)
-    const entries = screen.getByRole('group', { name: 'Entry points' })
-    expect(entries.querySelectorAll('button')).toHaveLength(6)
-    fireEvent.click(screen.getByRole('button', { name: /EU institutions/ }))
-    expect(onSelect).toHaveBeenCalledWith({ mode: 'role', audience: 'eu-institutions' })
-    expect(screen.getByRole('button', { name: /EU institutions/ })).toHaveAttribute(
-      'aria-pressed',
-      'true',
-    )
+  it('links each of the six audiences to its guide', () => {
+    selector()
+    expect(links('Guides by audience')).toEqual([
+      ['Ministries & government CIOs', '/for/ministries'],
+      ['Procurement & cloud strategy', '/for/procurement'],
+      ['Parliaments & audit courts', '/for/parliaments'],
+      ['Cyber agencies & CISOs', '/for/cyber'],
+      ['EU institutions', '/for/eu-institutions'],
+      ['Operators investors & press', '/for/operators'],
+    ])
   })
 
-  it('swaps the audiences for six tasks under "I need to…", each a link to its page', () => {
+  it('swaps them for six tasks under "I need to…", each linked to its guide', () => {
     selector()
     fireEvent.click(screen.getByRole('button', { name: /I need to/ }))
-    const entries = screen.getByRole('group', { name: 'Entry points' })
-    expect(entries.querySelectorAll('button')).toHaveLength(0)
-    const links = [...entries.querySelectorAll('a')].map(a => [
-      a.textContent?.replace(/\s+/g, ' ').trim(),
-      a.getAttribute('href'),
+    expect(links('Guides by task')).toEqual([
+      ['Check my country’s exposure', '/how/exposure'],
+      ['Decide what to migrate first', '/how/migrate'],
+      ['Write tender criteria that hold up', '/how/tender'],
+      ['Turn gaps into formal questions', '/how/questions'],
+      ['Compare how peers host a register', '/how/compare'],
+      ['Plan for a provider cut-off', '/how/cut-off'],
     ])
-    expect(links).toEqual([
-      ['Check my country’s exposure', '/countries'],
-      ['Decide what to migrate first', '/countries'],
-      ['Write tender criteria that hold up', '/sovereignty#indicators'],
-      ['Turn gaps into formal questions', '/countries'],
-      ['Compare how peers host a register', '/holdings'],
-      ['Plan for a provider cut-off', '/infrastructure'],
-    ])
+  })
+})
+
+describe('guides', () => {
+  it('gives every guide steps, figures that exist, and related guides that exist', () => {
+    for (const [guides, others] of [
+      [AUDIENCE_GUIDES, TASK_GUIDES],
+      [TASK_GUIDES, AUDIENCE_GUIDES],
+    ] as const) {
+      expect(guides).toHaveLength(6)
+      for (const g of guides) {
+        expect(g.steps.length, g.slug).toBeGreaterThanOrEqual(3)
+        for (const id of g.figures) expect(FIGURES, g.slug).toHaveProperty(id)
+        for (const slug of g.related)
+          expect(
+            others.map(o => o.slug),
+            g.slug,
+          ).toContain(slug)
+      }
+    }
   })
 })
 

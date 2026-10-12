@@ -2739,3 +2739,54 @@ than #72/#73/#77 chose. The PDFs' covers and rules change colour with the brand 
 *Would change if:* an audience or "I need to…" gets real content, which makes the selector a navigation and may
 move the dataset sections again; or the star disc draws an objection that the site implies EU endorsement, in
 which case the disc goes and #76 applies to the web app again.
+
+### 102. Twelve guide pages behind the front-page selector: advice in a data file, figures counted from the bundle
+**Decision.** 2026-10-12, at the request of Marco Buhlmann. Every button of the front page's selector now opens
+a page: `/for/:slug` for the six audiences under "I am…", `/how/:slug` for the six tasks under "I need to…".
+- **Words.** `web/src/data/guides.ts` holds each guide's title, lede, the situations it is for, its steps, what a
+  reader takes away and what the site does not do yet. They were drafted from the requester's note "Benefits and
+  Use Cases for Decision Makers" (2026-10-09). `web/src/pages/Guide.tsx` renders any of them.
+- **Figures.** A guide prints no number of its own. `web/src/data/guideFigures.ts` counts each figure from the
+  bundle when the page renders, from the spans the reports print, so a value the fact check withheld is not
+  counted; each figure links to the page where it can be checked.
+- **Links, not findings.** Every step is a link to an existing page. Steps that need a country carry the report
+  section to open (`exposure`, `holdings`, `gaps`) as router state through Countries.
+- **Left out of the note.** Its "data anchors" (named findings with fixed numbers), its cost comparison with a
+  consultancy assessment and its remark on competing assessments: fixed numbers go stale against the dataset, and
+  the last two have no checked source.
+- **The selector** (`AudienceSelector`) no longer marks an audience; both lists are links, and "I need to…" opens
+  a guide first rather than the destination page, as it did for a few hours under #101.
+
+**Problem.** The six audience buttons opened nothing, and the six task buttons jumped straight to a page without
+saying why. A reader arriving as "a procurement lead" had no account of what the site does for them.
+
+**Alternatives considered.**
+- **Guide text in a data file, one renderer, computed figures (chosen).** The words can be edited in one place
+  without touching layout, and no number is typed by hand.
+- **Generate the guides in `model/document.py` as documents, like the methodology.** *Why not:* a guide is advice
+  on using the site, with links between pages, not a report with claims; the content model has no link or
+  figure block, and adding them would touch the PDF and brief renderers for pages that only the web shows.
+- **Copy the note's findings and numbers onto the pages.** *Why not:* a number typed into a page is a second
+  source (#74), stale as soon as the data moves: on the day this was built the note said 37 tier 0 holdings had
+  sourced hosting and the dataset said 30. One of its named findings was withheld as disputed by the fact check.
+- **Keep the task buttons as direct links and write pages for the audiences only.** *Why not:* the request was
+  content behind every button, and a task page can say what the site does not yet do for that task.
+
+**Closes off.** The web app now carries prose that no test ties to a source: the guides are this project's
+advice, in its own voice, and say more about purpose ("decide what to migrate first", "criteria that hold up")
+than #72/#73/#77 chose for the reports. They are kept apart from findings (no fact spans, no footnotes, a
+"what the site does not do" list on every page), but a reader may still take them as the project's position.
+`tests/test_evidence.py`'s overstatement check reads `.tsx` files only, so it does not read `guides.ts`.
+
+**Verified:** locally on 2026-10-12:
+- `./test.sh --no-pdf --no-e2e --no-live` exits 0.
+- In `web/`: format, lint and type-check report nothing; 55 unit tests pass, among them that every guide has at
+  least three steps, only figures that exist and only related guides that exist.
+- `model/smoke.py`'s route list, which the deploy opens on the live site, names all twelve guides.
+- Playwright: all twelve routes render a heading, their steps and figures matching `N` or `N of M`; a step opens
+  Germany's report at `#gaps`; `/for/ministries` and `/how/exposure` are in the accessibility and 375 px route
+  lists.
+
+*Would change if:* the guides start to carry claims a reader could cite as findings, in which case they move into
+the content model with sources; or the project owner judges the advice too prescriptive for #77, in which case
+the wording is cut back to what each page shows.

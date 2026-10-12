@@ -8,6 +8,7 @@ import { Ask } from './pages/Ask'
 import { Countries } from './pages/Countries'
 import { Country } from './pages/Country'
 import { FactCheck } from './pages/FactCheck'
+import { Guide } from './pages/Guide'
 import { Holding, HoldingsIndex } from './pages/Holdings'
 import { Infrastructure } from './pages/Infrastructure'
 import { Methodology } from './pages/Methodology'
@@ -66,6 +67,9 @@ export function App() {
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
         <Route path="fact-check" element={<FactCheck bundle={bundle} />} />
         <Route path="fact-check/:iso" element={<FactCheck bundle={bundle} />} />
+        {/* The guides behind the front page's selector (#102): an audience, or a task. */}
+        <Route path="for/:slug" element={<Guide bundle={bundle} kind="for" />} />
+        <Route path="how/:slug" element={<Guide bundle={bundle} kind="how" />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
