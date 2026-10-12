@@ -15,7 +15,7 @@ export function SpanView({ span, numbers, bundle }: SpanProps) {
   }
   if (span.role === 'disputed') {
     return (
-      <em className="border-b border-dashed border-[var(--color-highlight)] text-[var(--color-fg-muted)]">
+      <em className="border-b border-dashed border-[var(--color-gap-mark)] text-[var(--color-fg-muted)]">
         {span.t}
       </em>
     )
@@ -77,7 +77,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
         <div
           className={`mb-4 max-w-3xl rounded border-l-4 px-4 py-3 text-sm ${
             block.tone === 'gap'
-              ? 'border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)]'
+              ? 'border-[var(--color-gap-mark)] bg-[var(--color-bg-emphasis)]'
               : block.tone === 'method'
                 ? 'border-[var(--color-method)] bg-[var(--color-method-wash)]'
                 : 'border-[var(--color-accent)] bg-[var(--color-bg-emphasis)]'
@@ -107,7 +107,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
         >
           <table className="w-full min-w-[32rem] border-collapse text-sm">
             <thead>
-              <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
+              <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
                 {block.columns.map((c, i) => (
                   <th
                     key={i}

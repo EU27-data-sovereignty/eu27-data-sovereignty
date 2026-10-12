@@ -2550,6 +2550,8 @@ or GitHub runners are refused by so many hosts that the recheck covers too few s
 would run from a machine the owner controls.
 
 ### 99. The web app takes the EU27.CLOUD brand: badge, wordmark, map bands and a night-navy palette
+**Superseded in part by #101** (2026-10-12): the palette, type, header and front-page top are replaced by the
+landing design. The page layouts, the method graphics and the exception to #76 stand.
 **Decision.** 2026-10-08, at the request of Marco Buhlmann (repository admin), who chose to ship the design as is
 and record it here rather than drop its official-looking parts. The web app (`web/`) now shows:
 - **Brand marks.** The EU27.CLOUD badge (a "27" inside a ring of stars) and wordmark in the header, the full lockup
@@ -2656,3 +2658,68 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
 `eu27.cloud` and on the new `.vercel.app` URL, and a green `Deploy` run.
 
 *Would change if:* the project's scope narrows back to hosting infrastructure alone, or the org is renamed.
+
+### 101. The web app takes the landing design: a light navy-and-gold palette, Manrope, a new hero and an audience selector
+**Decision.** 2026-10-12, at the request of Marco Buhlmann, from a written brief and a static reference page
+(`reference.html`, kept outside the repository). The web app now shows:
+- **Tokens** (`design/tokens.json`, generated). Brand blue `#1E3A8A`, navy `#0B1B3F`, gold `#F2C230`; light page
+  `#F4F6FA`, body text `#374151`, borders `#D1D5DB`; dark page `#0B1B3F`, cards `#13265A`, text `#E6EAF3`. New
+  tokens: `navy_surface`, `navy_border`, `navy_hover`, `icon_on_navy` (brand) and `hero_from`, `hero_to`, `band`,
+  `map_fill`, `gap_mark` (per theme). `night` is removed. No value of the #99 palette remains in `web/`.
+- **Gold** only in the hero underline, the active toggle segment, the EU-institutions icon, the audience buttons'
+  hover and selected border, link underlines and focus rings on navy. Bars, meters, chips and buttons that were
+  gold are brand blue (`accent_text`, `eu_blue`).
+- **Type.** One family, Manrope (`@fontsource/manrope` 5.3.0, self-hosted; Latin, Latin Extended, Greek and
+  Cyrillic). `--font-sans`, `--font-serif` and `--font-display` all resolve to it. Montserrat and Libertinus Serif
+  leave the web app; the PDFs keep their print family.
+- **Header.** White, 68 px, a soft shadow: the badge (62 px), a divider, the wordmark with its tagline (36 px),
+  the nine existing navigation links, an "EN" language button that does nothing yet, and the theme toggle.
+- **Front page.** A hero ("Navigate Cloud Sovereignty", "Understand. Comply. Decide. Stay sovereign.") over a pale
+  gradient with a dot texture, the EU silhouette, a circle outline and a blue disc with twelve gold stars. Under
+  it, an audience selector band: an "I am… / I need to…" toggle and six audience buttons (`AudienceSelector`).
+  The selector records a choice (`onSelect`) and opens nothing: no page or panel exists for an audience yet. The
+  question box, the tile map of the 27 and the evidence meters move below the band, unchanged in function.
+- **Every other page.** `PageBand` takes the hero's gradient, dots and silhouette; method pages are a solid
+  method-teal band (#88). Tables get a `#EEF1F8` header with navy text and a 2 px blue rule. Links are brand blue,
+  navy on hover, underlined in gold. A disputed value's dashed rule is `#9AA8C4`.
+
+**Problem.** #99's look (night navy, bright EU gold, the silhouette artwork behind every band) was a first brand
+pass. The landing design that followed is light, quieter with gold, set in one typeface, and opens the front page
+on who the reader is rather than on the dataset.
+
+**Alternatives considered.**
+- **Restyle through the tokens and rebuild the header and front-page top (chosen).** Every colour still comes
+  from `design/tokens.json`, so the contrast check and the "no hex in a component" test keep holding.
+- **Load Manrope from Google Fonts, as the reference page does.** *Why not:* the site's Content-Security-Policy
+  allows fonts from its own origin only (`vercel.json`), so the font would be blocked.
+- **Change only the web CSS and leave `tokens.json` alone.** *Why not:* #74 makes `tokens.json` the one source;
+  a web-only palette is the fork `tests/test_tokens.py` exists to stop. The cost is that the PDFs and the mobile
+  constants take the new brand colours too.
+- **Add the reference's navigation (About, Cloud Sovereignty, Resources, News & Events, Contact).** *Why not:*
+  those pages do not exist; the brief says to keep the working links and ask before adding placeholder routes.
+- **Write content for "I need to…" and for each audience.** *Why not:* out of the brief's scope, and a renderer
+  that writes content becomes a second source (#74).
+
+**Closes off.** The #99 palette and its two typefaces on the web. The front page no longer opens on the dataset's
+title and subtitle; they sit one screen down, as a section heading. The hero's flag disc is a ring of twelve
+stars on blue, which #76 forbade and #99 excepted for the web app only: the exception now covers the EU flag
+motif itself, and the footer's "not affiliated with any government or EU body" is still the only counter to it.
+The hero's wording ("Comply", "Decide") and the audience labels are the requester's and say more about purpose
+than #72/#73/#77 chose. The PDFs' covers and rules change colour with the brand tokens, without a redesign.
+
+**Verified:** locally on 2026-10-12:
+- `python3 design/build_tokens.py --check` exits 0 and every WCAG pair in `tokens.json` passes, including the
+  brief's own checks (brand blue on the selector band, body and accent text on the hero).
+- No hex value of the #99 palette is left in `web/src` or `web/index.html` (grep).
+- In `web/`: format, lint and type-check report nothing; 53 unit tests pass, two of them new, for the selector's
+  toggle and its six buttons.
+- Compared with the reference at 1440 px in a browser, in both themes; at 390 px the navigation wraps, the
+  headline scales down, the toggle stays on one line, the audience buttons fall to two columns and the page does
+  not scroll sideways.
+
+NOT YET: the PDFs with the new brand colours (`typst` is not installed on the machine that made this change); CI
+compiles them before the deploy.
+
+*Would change if:* an audience or "I need to…" gets real content, which makes the selector a navigation and may
+move the dataset sections again; or the star disc draws an objection that the site implies EU endorsement, in
+which case the disc goes and #76 applies to the web app again.

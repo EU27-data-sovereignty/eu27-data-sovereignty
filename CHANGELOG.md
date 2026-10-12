@@ -5,6 +5,21 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-12
+
+### Changed: the web app takes the landing design (#101)
+
+- **Front page.** A new hero ("Navigate Cloud Sovereignty") and, under it, an audience selector band: an
+  "I am… / I need to…" toggle and six audience buttons. The selector records a choice and opens nothing yet. The
+  question box, the tile map of the 27 and the evidence meters sit below the band.
+- **Header.** White with a soft shadow: the badge, the wordmark with its tagline, the existing navigation, an "EN"
+  language button (inactive for now) and the theme toggle.
+- **Palette and type.** Brand blue `#1E3A8A`, navy `#0B1B3F` and a deeper gold `#F2C230`, light by default with a
+  navy dark mode, all from `design/tokens.json`. One typeface, Manrope, self-hosted. Gold is kept for the hero
+  underline, the selector band, link underlines and focus rings on navy.
+- **Every page.** Page bands take the hero's gradient and EU silhouette; tables, chips, bars and buttons take the
+  new tokens. The PDFs and the mobile constants take the new brand colours through the same tokens.
+
 ## 2026-10-08
 
 ### Changed: the project is renamed `eu27-data-sovereignty`, and its issue links point at the current repo (#100)

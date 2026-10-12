@@ -20,7 +20,7 @@ function checkKind(item: string): 'tier' | 'pass' | 'short' | 'plain' {
 }
 
 const CHECK = {
-  tier: 'border-transparent bg-[var(--color-eu-gold)]/15 text-[var(--color-accent-text)]',
+  tier: 'border-transparent bg-[var(--color-bg-emphasis)] text-[var(--color-accent-text)]',
   pass: 'border-[var(--color-eu-blue)]/40 text-[var(--color-fg-primary)]',
   short: 'border-dashed border-[var(--color-rank-5)] text-[var(--color-fg-primary)]',
   plain: 'border-[var(--color-border)] text-[var(--color-fg-secondary)]',
@@ -88,7 +88,7 @@ export function SourceList({
               key={sid}
               id={`src-${n}`}
               hidden={hidden?.has(sid)}
-              className="scroll-mt-4 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 [overflow-wrap:anywhere] target:border-[var(--color-eu-gold)] target:bg-[var(--color-bg-emphasis)] sm:p-5"
+              className="scroll-mt-4 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 [overflow-wrap:anywhere] target:border-[var(--color-accent-text)] target:bg-[var(--color-bg-emphasis)] sm:p-5"
             >
               <div className="flex items-baseline gap-3">
                 <span className="font-semibold text-[var(--color-accent-text)] tabular-nums">
@@ -125,7 +125,7 @@ export function SourceList({
                     .map(c => (
                       <li
                         key={claim + c.locator}
-                        className="grid gap-2 border-l-[3px] border-[var(--color-eu-gold)] pl-4"
+                        className="grid gap-2 border-l-[3px] border-[var(--color-accent-text)] pl-4"
                       >
                         <span className="text-xs font-semibold text-[var(--color-accent-text)]">
                           {claimLabel(bundle, claim)}{' '}
@@ -150,7 +150,7 @@ export function SourceList({
                             className={`rounded-full px-2.5 py-0.5 font-semibold ${
                               c.grade === 'Standard'
                                 ? 'border border-[var(--color-border)]'
-                                : 'bg-[var(--color-eu-gold)] text-[var(--color-eu-deep)]'
+                                : 'bg-[var(--color-eu-blue)] text-white'
                             }`}
                           >
                             {c.grade}

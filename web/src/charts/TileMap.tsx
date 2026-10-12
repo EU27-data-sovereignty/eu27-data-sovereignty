@@ -47,7 +47,7 @@ export interface TileState {
 type Metric = 'holdings' | 'tier0' | 'facts'
 
 /**
- * The 27 as a tile map on the front page, shaded gold by how much verified evidence each has (#99).
+ * The 27 as a tile map on the front page, shaded blue by how much verified evidence each has (#99, #101).
  * Shade is never the only cue: each tile prints its number, and its label reads it out. It counts
  * evidence; it is not a ranking of how sovereign a state is (#77).
  */
@@ -71,12 +71,16 @@ export function TileMap({ states }: { states: TileState[] }) {
   const s = by[sel] ?? states[0]!
 
   return (
-    <div className="rounded border border-white/10 bg-[var(--color-night)]/60 p-4 backdrop-blur-[3px] sm:p-5">
+    <div className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 sm:p-5">
       <div className="mb-3.5 flex flex-wrap items-center justify-between gap-3">
-        <span className="text-xs font-semibold tracking-[0.14em] text-white/75 uppercase">
+        <span className="text-xs font-bold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
           Verified evidence by state
         </span>
-        <div role="group" aria-label="Measure" className="flex rounded bg-white/10 p-0.5">
+        <div
+          role="group"
+          aria-label="Measure"
+          className="flex rounded bg-[var(--color-bg-emphasis)] p-0.5"
+        >
           {(
             [
               ['holdings', 'Holdings'],
@@ -90,7 +94,9 @@ export function TileMap({ states }: { states: TileState[] }) {
               aria-pressed={metric === m}
               onClick={() => setMetric(m)}
               className={`rounded px-2.5 py-1 text-xs font-medium ${
-                metric === m ? 'bg-[var(--color-eu-blue)] text-white' : 'text-white/75'
+                metric === m
+                  ? 'bg-[var(--color-eu-blue)] text-white'
+                  : 'text-[var(--color-fg-secondary)]'
               }`}
             >
               {label}
@@ -111,10 +117,10 @@ export function TileMap({ states }: { states: TileState[] }) {
               onClick={() => setSel(t.iso)}
               aria-label={`${t.name}: ${t.holdings} of ${t.holdingsTotal} holdings verified, ${t.tier0} of ${t.tier0Total} tier 0, ${t.facts} sourced facts`}
               className={`flex aspect-square flex-col items-center justify-center rounded text-[0.66rem] font-bold tracking-wide transition-transform hover:-translate-y-0.5 sm:text-xs ${
-                share > 0.55 ? 'text-[var(--color-night)]' : 'text-white'
-              } ${sel === t.iso ? 'ring-2 ring-white' : ''}`}
+                share > 0.55 ? 'text-[var(--color-bg-card)]' : 'text-[var(--color-fg-primary)]'
+              } ${sel === t.iso ? 'ring-2 ring-[var(--color-accent)] ring-offset-2 ring-offset-[var(--color-bg-card)]' : ''}`}
               style={{
-                background: `color-mix(in oklab, var(--color-eu-gold) ${Math.round(12 + share * 88)}%, rgb(255 255 255 / 0.06))`,
+                background: `color-mix(in oklab, var(--color-accent-text) ${Math.round(8 + share * 92)}%, var(--color-bg-emphasis))`,
               }}
             >
               {t.iso}
@@ -125,18 +131,18 @@ export function TileMap({ states }: { states: TileState[] }) {
           )
         })}
       </div>
-      <div className="mt-3 flex items-center gap-2.5 text-xs text-white/60">
+      <div className="mt-3 flex items-center gap-2.5 text-xs text-[var(--color-fg-muted)]">
         <span>Less evidence</span>
-        <span className="h-2 w-32 rounded bg-gradient-to-r from-white/10 to-[var(--color-eu-gold)]" />
+        <span className="h-2 w-32 rounded bg-gradient-to-r from-[var(--color-bg-emphasis)] to-[var(--color-accent-text)]" />
         <span>More</span>
       </div>
       <div
         aria-live="polite"
-        className="mt-3.5 flex flex-wrap items-end justify-between gap-3 border-t border-white/10 pt-3.5"
+        className="mt-3.5 flex flex-wrap items-end justify-between gap-3 border-t border-[var(--color-border)] pt-3.5"
       >
         <div>
-          <p className="font-display text-xl font-bold text-white">{s.name}</p>
-          <p className="text-sm text-white/75 tabular-nums">
+          <p className="font-display text-xl font-bold">{s.name}</p>
+          <p className="text-sm text-[var(--color-fg-secondary)] tabular-nums">
             {s.holdings} of {s.holdingsTotal} holdings verified · {s.facts} sourced facts
           </p>
           <div className="mt-1.5">
@@ -149,12 +155,12 @@ export function TileMap({ states }: { states: TileState[] }) {
         </div>
         <Link
           to={`/country/${s.iso}`}
-          className="text-sm font-semibold whitespace-nowrap text-[var(--color-eu-gold)] hover:underline"
+          className="text-sm font-semibold whitespace-nowrap text-[var(--color-accent-text)] hover:underline"
         >
           Open country →
         </Link>
       </div>
-      <p className="mt-3 text-xs text-white/55">
+      <p className="mt-3 text-xs text-[var(--color-fg-muted)]">
         Counts of verified evidence, not a ranking of how sovereign a state is.
       </p>
     </div>

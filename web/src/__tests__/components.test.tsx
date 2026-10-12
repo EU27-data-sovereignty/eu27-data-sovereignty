@@ -1,12 +1,13 @@
 /**
  * The components every page is built from (#92). The content rules are the model's (model/document.py);
  * these check that the renderers keep them: a fact carries its numbered source, a gap and a disputed value
- * never read as a fact, a wide table can be scrolled by keyboard, and every page header carries its kicker
- * and a single h1.
+ * never read as a fact, a wide table can be scrolled by keyboard, every page header carries its kicker
+ * and a single h1, and the audience selector is real buttons that report their choice (#101).
  */
-import { render, renderHook, act, screen } from '@testing-library/react'
-import { describe, expect, it, beforeEach } from 'vitest'
+import { render, renderHook, act, screen, fireEvent } from '@testing-library/react'
+import { describe, expect, it, beforeEach, vi } from 'vitest'
 
+import { AudienceSelector } from '../components/AudienceSelector'
 import { DocumentView } from '../components/DocumentView'
 import { PageBand } from '../components/PageBand'
 import type { Bundle, Document } from '../data/types'
@@ -74,6 +75,32 @@ describe('DocumentView', () => {
     render(<DocumentView doc={doc} bundle={bundle} numbers={new Map()} />)
     const region = screen.getByRole('region', { name: 'Holding, Register' })
     expect(region).toHaveAttribute('tabindex', '0')
+  })
+})
+
+describe('AudienceSelector', () => {
+  it('opens on "I am…" and switches the toggle with real pressed buttons', () => {
+    render(<AudienceSelector />)
+    const group = screen.getByRole('group', { name: 'Choose entry by' })
+    const [role, need] = [...group.querySelectorAll('button')]
+    expect(role).toHaveAttribute('aria-pressed', 'true')
+    expect(need).toHaveAttribute('aria-pressed', 'false')
+    fireEvent.click(need!)
+    expect(role).toHaveAttribute('aria-pressed', 'false')
+    expect(need).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  it('offers the six audiences as buttons and reports a choice, without opening anything', () => {
+    const onSelect = vi.fn()
+    render(<AudienceSelector onSelect={onSelect} />)
+    const entries = screen.getByRole('group', { name: 'Entry points' })
+    expect(entries.querySelectorAll('button')).toHaveLength(6)
+    fireEvent.click(screen.getByRole('button', { name: /EU institutions/ }))
+    expect(onSelect).toHaveBeenCalledWith({ mode: 'role', audience: 'eu-institutions' })
+    expect(screen.getByRole('button', { name: /EU institutions/ })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    )
   })
 })
 

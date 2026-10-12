@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
+import type { Locator, Page } from '@playwright/test'
 
 import type { Bundle, Span } from '../src/data/types'
 
@@ -130,6 +131,18 @@ function docSpans(iso: string): Span[] {
   return out
 }
 
+/**
+ * Wait until a page has stopped moving before a tap far down it. The app renders after it has fetched the
+ * bundle, and only then asks for its web fonts and images; either can reflow the page between Playwright
+ * scrolling to a link and tapping it, and the tap then misses. So: the link exists (the page has rendered),
+ * the network is quiet (images in or removed), the fonts are in.
+ */
+async function settled(page: Page, link: Locator) {
+  await link.waitFor()
+  await page.waitForLoadState('networkidle')
+  await page.evaluate(() => document.fonts.ready)
+}
+
 test.describe('evidence rules (#82, #83)', () => {
   test('every page says the findings are machine-checked, not human-verified', async ({ page }) => {
     await page.goto('/country/DE')
@@ -149,8 +162,7 @@ test.describe('evidence rules (#82, #83)', () => {
     page,
   }) => {
     await page.goto('/country/DE')
-    // Web fonts swap in after the data renders and reflow the page; tap once they have settled.
-    await page.evaluate(() => document.fonts.ready)
+    await settled(page, page.getByRole('link', { name: 'fact check for Germany' }))
     await page.getByRole('link', { name: 'fact check for Germany' }).click()
     await expect(page).toHaveURL(/\/fact-check\/DE$/)
     await expect(
@@ -163,7 +175,7 @@ test.describe('evidence rules (#82, #83)', () => {
     const rows = table.rows
     await expect(page.getByText(rows[0]![0]!.t, { exact: true })).toBeVisible()
     await page.goto('/')
-    await page.evaluate(() => document.fonts.ready)
+    await settled(page, page.getByRole('link', { name: 'How every fact was checked' }))
     await page.getByRole('link', { name: 'How every fact was checked' }).click()
     await expect(page).toHaveURL(/\/fact-check$/)
     await expect(page.getByText('not by a person', { exact: false }).first()).toBeVisible()

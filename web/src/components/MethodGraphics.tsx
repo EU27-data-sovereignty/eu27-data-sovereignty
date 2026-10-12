@@ -230,7 +230,7 @@ export function Steps({ block }: { block: List }) {
 const VERDICT_FILL: Record<string, string> = {
   supported: 'var(--color-method)',
   'not supported': 'var(--color-rank-5)',
-  unclear: 'var(--color-eu-gold)',
+  unclear: 'var(--color-rank-3)',
 }
 
 /** A table drawn as usual, with a bar beside the cells of named columns. */

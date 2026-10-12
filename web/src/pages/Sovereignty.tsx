@@ -119,7 +119,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           .filter(([, n]) => n > 0)
           .map(([g, n]) => [String(n), g.label])}
       />
-      <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
+      <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
         {sov.guardrail}
       </p>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
@@ -191,7 +191,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                         type="button"
                         onClick={() => setSelected(iso)}
                         aria-pressed={selected === iso}
-                        className={`flex items-center gap-1.5 rounded border-2 border-[var(--color-border)] bg-[var(--color-bg-emphasis)] px-2 py-1 text-sm hover:border-[var(--color-eu-gold)] ${CHIP[p.confidence]} ${
+                        className={`flex items-center gap-1.5 rounded border-2 border-[var(--color-border)] bg-[var(--color-bg-emphasis)] px-2 py-1 text-sm hover:border-[var(--color-accent-text)] ${CHIP[p.confidence]} ${
                           selected === iso ? 'border-[var(--color-accent)]' : ''
                         }`}
                       >
@@ -227,7 +227,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
       {sel && selected ? (
         <section
           aria-live="polite"
-          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-eu-gold)] sm:p-6"
+          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-accent-text)] sm:p-6"
         >
           <h2 className="font-display text-2xl font-bold">{names[selected]}</h2>
           <p className="mb-2 text-sm">
@@ -259,7 +259,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
           <table className="w-full min-w-[40rem] border-collapse text-sm">
             <thead>
-              <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
+              <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
                 <th scope="col" className="px-3.5 py-2.5 text-left">
                   <button type="button" onClick={() => setSortBy('name')} className="font-semibold">
                     State{sortBy === 'name' ? ' ▾' : ''}
@@ -320,7 +320,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             <em className="text-[var(--color-fg-muted)]">Not yet sourced</em>: a gap, never a no
           </li>
           <li>
-            <em className="border-b border-dashed border-[var(--color-highlight)] text-[var(--color-fg-muted)]">
+            <em className="border-b border-dashed border-[var(--color-gap-mark)] text-[var(--color-fg-muted)]">
               Disputed
             </em>
             : withheld until corrected and checked again

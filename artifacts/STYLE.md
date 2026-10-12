@@ -12,18 +12,23 @@ star (#74, #76).
 
 ## Colour
 
-EU blue and gold, and nothing that reads as official.
+Brand blue, navy and a deeper gold, from the EU27.CLOUD landing design (#101). On the web, gold is kept for the
+hero underline, the selector band, link underlines and focus rings on navy.
 
 | Token | Light | Dark | Use |
 |---|---|---|---|
-| `eu_blue` (brand) | `#003399` | — | Accent and cover |
-| `eu_gold` (brand) | `#FFCC00` | — | Rules, highlights, the selected state; **never text on white** |
-| `accent` | `#003399` | `#FFCC00` | Buttons, focus rings, header rules |
-| `accent_text` | `#003399` | `#A9C0FF` | Links and accented text |
-| `fg_on_accent` | `#FFFFFF` | `#0A0F1E` | Text on an accent fill |
-| `fg_primary` / `fg_secondary` / `fg_muted` | `#14171F` / `#454C5E` / `#5A6173` | `#FFFFFF` / `#C6CCDB` / `#9AA3B8` | Body, secondary, captions and gaps |
-| `bg_page` / `bg_card` / `bg_emphasis` | `#F6F7FA` / `#FFFFFF` / `#EAF0FB` | `#0A0F1E` / `#111A31` / `#18264A` | Surfaces |
-| `rank_1` … `rank_5` | blue ramp, then amber `#B07800` | lighter ramp, amber `#E0A100` | The five ranking groups, best to worst (#77) |
+| `eu_blue` (brand) | `#1E3A8A` | — | Eyebrows, links, filled buttons and selected states |
+| `eu_gold` (brand) | `#F2C230` | — | The hero underline, the active toggle, link underlines; **never text on white** |
+| `eu_deep` (brand) | `#0B1B3F` | — | Primary ink in light mode, the page in dark mode |
+| `navy_surface` / `navy_border` / `navy_hover` (brand) | `#13265A` / `#2A3F7A` / `#18306B` | — | The audience selector's buttons, the same in both themes |
+| `accent` | `#1E3A8A` | `#F2C230` | Focus rings and selected outlines |
+| `accent_text` | `#1E3A8A` | `#C9D5F2` | Links, accented text, bars |
+| `fg_on_accent` | `#FFFFFF` | `#0B1B3F` | Text on an accent fill |
+| `fg_primary` / `fg_secondary` / `fg_muted` | `#0B1B3F` / `#374151` / `#4B5563` | `#E6EAF3` / `#C9D5F2` / `#AFBBDA` | Headings, body, captions and gaps |
+| `bg_page` / `bg_card` / `bg_emphasis` | `#F4F6FA` / `#FFFFFF` / `#EEF1F8` | `#0B1B3F` / `#13265A` / `#18306B` | Surfaces; `bg_emphasis` is the table header |
+| `hero_from` → `hero_to` / `band` / `map_fill` | `#EEF2F9` → `#E3E9F4` / `#DDE1E9` / `#DCE0E7` | `#13265A` → `#0B1B3F` / `#0F2150` / `#1E2E5C` | The hero gradient, the selector band, the EU silhouette |
+| `gap_mark` | `#9AA8C4` | `#9AA8C4` | The dashed rule under a disputed value; the hero's dot texture |
+| `rank_1` … `rank_5` | blue ramp, then amber `#A16A00` | lighter ramp, amber `#E5AC1F` | The five ranking groups, best to worst (#77) |
 
 - **No emblem.** No circle of stars, no flag, no crown, no official wordmark on any artefact (#47, #50,
   #76). Country flag emoji appear only in the markdown index (`countries/SUMMARY.md`).

@@ -39,7 +39,7 @@ export function Countries({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand kicker="EU-27 · Member states" title="Countries">
-        <p className="mt-3 max-w-3xl text-white/85">
+        <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
           Each member state analysed on its own fundamentals. The cards count verified evidence;
           they are not a ranking of how sovereign a state is.
         </p>
@@ -75,7 +75,7 @@ export function Countries({ bundle }: { bundle: Bundle }) {
         {rows.map(({ c, cov, facts, withheld }) => (
           <li
             key={c.iso2}
-            className={`${CARD} flex flex-col gap-3 p-5 transition-colors hover:border-[var(--color-eu-gold)]`}
+            className={`${CARD} flex flex-col gap-3 p-5 transition-colors hover:border-[var(--color-accent-text)]`}
           >
             <div className="flex items-baseline justify-between gap-3">
               <h2 className="font-display text-xl font-bold">

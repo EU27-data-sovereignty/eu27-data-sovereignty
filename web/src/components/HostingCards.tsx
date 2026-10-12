@@ -19,11 +19,11 @@ function depOf(cell: Span | undefined): Dep {
 
 const CHIP: Record<Dep, string> = {
   national: 'bg-[var(--color-eu-blue)] text-white border-[var(--color-eu-blue)]',
-  eu: 'bg-[var(--color-eu-gold)]/15 text-[var(--color-accent-text)] border-transparent',
+  eu: 'bg-[var(--color-bg-emphasis)] text-[var(--color-accent-text)] border-transparent',
   mixed: 'border-[var(--color-eu-blue)] text-[var(--color-accent-text)]',
   none: 'border-[var(--color-border)] text-[var(--color-fg-muted)]',
   disputed:
-    'border-[var(--color-eu-gold)]/60 text-[var(--color-accent-text)] bg-[repeating-linear-gradient(135deg,color-mix(in_srgb,var(--color-eu-gold)_25%,transparent)_0_3px,transparent_3px_6px)]',
+    'border-[var(--color-gap-mark)] text-[var(--color-accent-text)] bg-[repeating-linear-gradient(135deg,color-mix(in_srgb,var(--color-gap-mark)_35%,transparent)_0_3px,transparent_3px_6px)]',
 }
 
 const NOTE: Record<Dep, string> = {
@@ -90,7 +90,7 @@ export function HostingCards({
             onClick={() => setDep(dep === d ? 'any' : d)}
             className={`${CARD} flex flex-col gap-1.5 p-3.5 text-left text-sm text-[var(--color-fg-secondary)] hover:border-[var(--color-fg-muted)] ${
               dep === d
-                ? 'border-[var(--color-eu-gold)] shadow-[inset_0_0_0_1px_var(--color-eu-gold)]'
+                ? 'border-[var(--color-accent-text)] shadow-[inset_0_0_0_1px_var(--color-accent-text)]'
                 : ''
             }`}
           >
