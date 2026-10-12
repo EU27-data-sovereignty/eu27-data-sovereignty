@@ -7,7 +7,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
-### Changed: a member state's page is at its code, `eu27.cloud/de` (#103)
+### Changed: a member state's page is at its code, `eu27.cloud/de` (#105)
 
 - **What changed.** The country page moved from `/country/DE` to `/de`: the bundle's ISO code, lower-case, as a
   top-level path (`/el` for Greece, as Eurostat keys it). `/country/<ISO>` answers with a permanent redirect in
@@ -19,9 +19,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
   links on `/countries`; the smoke and e2e route lists moved with it. The three `/country/DE` visual baselines
   were renamed to `/de`, unchanged.
 - **Why.** The owner asked for one address per country that a reader can type. A subdomain per state was
-  rejected (#103).
+  rejected (#105).
 
-### Added: `SOVEREIGN-APPLIANCE.md`, an authored note on state-owned data boxes in facilities that already exist (#102)
+### Added: `SOVEREIGN-APPLIANCE.md`, an authored note on state-owned data boxes in facilities that already exist (#104)
 
 - **What it is.** An authored note at the root, beside `DISTRIBUTION-AND-TRUST.md` (#64): the physical unit that note
   left unnamed. A sealed, state-owned, state-keyed appliance for the tier 0 and tier 1 record, racked in facilities
@@ -50,7 +50,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-10
 
-### Added: `NATIONAL-AI-STRATEGIES.md`, a strategy per member state for a citizen-grade foundation model (#101)
+### Added: `NATIONAL-AI-STRATEGIES.md`, a strategy per member state for a citizen-grade foundation model (#103)
 
 - **What it is.** An authored note at the root, beside `FEASIBILITY-RANKING.md`: the bar ("good enough for citizens",
   six testable properties, none of them frontier parity), four routes (adapt an open-weight base, pool with the

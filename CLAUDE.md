@@ -61,8 +61,8 @@ python3 model/research.py report       # verification outcomes per state
 python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
 python3 model/gaps.py [--csv out.csv]  # docs/gaps.md: every gap and how often it was searched (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
-./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#101)
-./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#102)
+./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#103)
+./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
@@ -134,7 +134,7 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **Pin every action by SHA** in `.github/workflows/`, and checksum any downloaded binary
   (`tests/test_workflows.py`).
 - **SPA rewrite.** It must target `/index` under `cleanUrls` (`tests/test_vercel_config.py`).
-- **A member state is at its code: `/de`, `/el`** (#103). Build every country link with `countryPath` in
+- **A member state is at its code: `/de`, `/el`** (#105). Build every country link with `countryPath` in
   `web/src/utils/routes.ts`; `/country/:iso` is a redirect, and no new top-level route may be two letters
   (`tests/test_vercel_config.py`). Static segments rank ahead of `:iso`, so `/ask` is never read as a country.
 - **zsh.** `echo ====` breaks, because a leading `=` is command expansion; use `echo '---'`.
@@ -145,11 +145,11 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `foreign_dependency`, including labels the report withholds (TODO.md). Don't build new counts that way.
 - **The mobile reader is stale** (schema-1 bundle). Don't copy the new bundle into it without the
   schema-2 port.
-- **`NATIONAL-AI-STRATEGIES.md` is authored, not generated** (#101). It is never read by the model, the book, the web
+- **`NATIONAL-AI-STRATEGIES.md` is authored, not generated** (#103). It is never read by the model, the book, the web
   app or `/ask`; `tests/test_national_ai.py` fails if any of them names it. Edit it by hand, keep every snapshot cell
   sourced with an access date or marked **[unverified]**, put no cost figure in a strategy, no ranking language anywhere,
   and run `./run.sh national-ai links` after adding or changing a URL so the link register matches.
-- **`SOVEREIGN-APPLIANCE.md` is authored, not generated** (#102), under the same contract shape: never read by the model,
+- **`SOVEREIGN-APPLIANCE.md` is authored, not generated** (#104), under the same contract shape: never read by the model,
   the book, the web app or `/ask` (`tests/test_sovereign_appliance.py`); no ranking language, no currency figure anywhere,
   a member state named only in its Precedents and Sources sections and there only with a URL and access date or
   **[unverified]**; `./run.sh appliance links` after adding or changing a URL.

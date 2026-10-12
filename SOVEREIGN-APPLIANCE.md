@@ -7,7 +7,7 @@ stated here: nothing in it is sourced to `VERIFICATION.md`'s bar for the model's
 not engaged rather than met, and nothing here has been machine-checked by the project's evidence pipeline (#82,
 #87) or verified by a person. Every page it cites carries the URL and the access date; a page that did not answer
 an automated request is marked **[unverified]** on its line. The bounded exception that lets an authored note
-exist at all is #59; #102 records why this one was written and what it may not contain.
+exist at all is #59; #104 records why this one was written and what it may not contain.
 
 **It ranks nothing.** No member state is scored or ordered (#10, #77). No member state is named outside the
 [Precedents](#precedents) section, and there only with a cited page. No cost figure, no site count and no latency
@@ -305,7 +305,7 @@ hosting pass could ask.
 | Step | State |
 |---|---|
 | Note drafted: the unit, the facility classes, the differences from the commercial precedent, the security model, the treaty precedent, the host contract | ✅ 2026-10-12 |
-| Recorded as an authored note under #59's conditions | ✅ `DECISIONS.md` #102 |
+| Recorded as an authored note under #59's conditions | ✅ `DECISIONS.md` #104 |
 | `colocated_appliance` added to the planned hosting model enum | ✅ `docs/hosting-operators.md` |
 | Second-model review of the quotations against their pages (#87's rule applied to prose) | ⬜ Not run |
 | Operators as entities, with the facility's owner as a link | ⬜ `docs/hosting-operators.md` (#96), planned |

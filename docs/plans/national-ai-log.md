@@ -3,7 +3,7 @@
 A log of the work behind [`NATIONAL-AI-STRATEGIES.md`](../../NATIONAL-AI-STRATEGIES.md), newest first, in the
 shape of [`stichting-log.md`](stichting-log.md). Each entry records who or what produced it, what the owner asked,
 what was decided and why, what changed, how it was checked, and what is still open. The decision of record is
-`DECISIONS.md` #101; this log is the working narrative behind it, not a second copy.
+`DECISIONS.md` #103; this log is the working narrative behind it, not a second copy.
 
 ## 2026-10-10, later — the second-model review, applied
 
@@ -92,7 +92,7 @@ README markdown file."
      `FEASIBILITY-RANKING.md` (superseded by #77 because it ranked and was unsourced); one file per state under
      `countries/<ISO>/` (the cross-state sections need one place, and the owner asked for one file).
    - *Verified:* `tests/test_national_ai.py` fails if `model/`, `book/`, `api/`, `web/src/` or `mobile/` names the
-     note. Recorded as `DECISIONS.md` #101.
+     note. Recorded as `DECISIONS.md` #103.
 2. **"Good enough for citizens" is six testable properties, none of them frontier parity.** B1 every official
    and recognised language; B2 deployable by public services under national and EU law; B3 continuity that does
    not depend on one foreign vendor (open weights, escrow or co-ownership); B4 data provenance the state can
@@ -128,8 +128,8 @@ README markdown file."
    rows, at least three sources per entry, and the link register being current). The second-model review of the
    claims against their pages is a separate, costed step left to the owner.
 9. **Decision references of one to three digits.** `tests/test_docs.py` `REFERENCE` was `#(\d{1,2})` and would
-   have skipped #101; widened to `#(\d{1,3})` with the hex-colour guard kept. Closes the `TODO.md` item.
-10. **Bookkeeping in the same commit.** `DECISIONS.md` #101 with all seven parts; `CHANGELOG.md` entry; a README
+   have skipped #103; widened to `#(\d{1,3})` with the hex-colour guard kept. Closes the `TODO.md` item.
+10. **Bookkeeping in the same commit.** `DECISIONS.md` #103 with all seven parts; `CHANGELOG.md` entry; a README
     section and Changelog-table row; `CLAUDE.md` command and gotcha; `ROADMAP.md` § Planned for the sourced
     follow-on; `FEASIBILITY-RANKING.md` status rows pointing at the note; `docs/testing.md` listing the new
     test module.
@@ -154,7 +154,7 @@ README markdown file."
 | `docs/national-ai-strategies-links.csv` | New. The link register. |
 | `test.sh`, `run.sh` | A step "The national-AI note keeps its contract" in the model group; the `national-ai` command. |
 | `tests/test_docs.py` | Three-digit decision references; the note listed among the citing files. |
-| `DECISIONS.md` | #101. |
+| `DECISIONS.md` | #103. |
 | `CHANGELOG.md`, `README.md` | The 2026-10-10 entry; the section "National AI strategies" with its decisions table, how it was made, what the gate checks and what it is not; the Layout line and Changelog-table row. |
 | `CLAUDE.md`, `ROADMAP.md`, `FEASIBILITY-RANKING.md`, `TODO.md`, `docs/testing.md` | Command and gotcha; the planned follow-on; status rows; the ticked regex item; the test module listed. |
 

@@ -2,7 +2,7 @@
 
 The fact check of [`NATIONAL-AI-STRATEGIES.md`](../../NATIONAL-AI-STRATEGIES.md) by a model that did not write it,
 in the pattern of [`stichting-factcheck-2026-10-08.md`](stichting-factcheck-2026-10-08.md). Committed as evidence, not
-summarised. The decisions behind the note are `DECISIONS.md` #101; the working log is
+summarised. The decisions behind the note are `DECISIONS.md` #103; the working log is
 [`national-ai-log.md`](national-ai-log.md).
 
 **Produced by.** Six Claude Opus 5.5 (`claude-opus-5-5`) subagents, launched from the Claude Fable 5.1 session

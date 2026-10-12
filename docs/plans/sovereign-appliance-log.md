@@ -3,7 +3,7 @@
 A log of the work behind [`SOVEREIGN-APPLIANCE.md`](../../SOVEREIGN-APPLIANCE.md), newest first, in the shape of
 [`national-ai-log.md`](national-ai-log.md). Each entry records who or what produced it, what the owner asked, what was
 decided and why, what changed, how it was checked, and what is still open. The decision of record is `DECISIONS.md`
-#102; this log is the working narrative behind it, not a second copy.
+#104; this log is the working narrative behind it, not a second copy.
 
 ## 2026-10-12 — the note written, checked and registered
 
@@ -21,10 +21,10 @@ internet infra". Asked what to produce: a new authored note.
 ### Decisions
 
 1. **A new note, not an extension of `DISTRIBUTION-AND-TRUST.md`.** That note's own caveats are no numbers, no
-   member-state names and no test; the box needs sizing figures, a quoted treaty and a checker. Recorded as #102
+   member-state names and no test; the box needs sizing figures, a quoted treaty and a checker. Recorded as #104
    with the rejected alternatives.
-2. **The #101 contract shape, stricter in two places.** A checker, a committed link register, a gate step and a test,
-   as for `NATIONAL-AI-STRATEGIES.md`. Stricter: no currency figure anywhere (the #101 note allows bands in one
+2. **The #103 contract shape, stricter in two places.** A checker, a committed link register, a gate step and a test,
+   as for `NATIONAL-AI-STRATEGIES.md`. Stricter: no currency figure anywhere (the #103 note allows bands in one
    section), and no member state named outside `## Precedents` and `## Sources`, where each paragraph or list item
    naming one must carry a URL with an access date or **[unverified]**. The name match is a prefix with a left word
    boundary, so "Estonian" and "Luxembourgish" count.
@@ -37,9 +37,9 @@ internet infra". Asked what to produce: a new authored note.
    PDF with the agreement's English text annexed, and the Conseil d'État publishes its opinion. The Legilux page is
    rendered by script and holds no text for a fetcher. The Riigi Teataja URL is cited as the Estonian publication and
    marked **[unverified]**, with the sentence saying the quotations are from the dossier.
-5. **Reuse the #101 checker's generic parts rather than copy them.** `load_links` and `write_links` in
+5. **Reuse the #103 checker's generic parts rather than copy them.** `load_links` and `write_links` in
    `model/national_ai_note.py` took `path` and `note` parameters with the old defaults; the ranking and money
-   patterns, the URL probe and `states()` are imported. The #101 tests pass unchanged.
+   patterns, the URL probe and `states()` are imported. The #103 tests pass unchanged.
 6. **Record `colocated_appliance` in the #96 design, build nothing.** One value in the planned `model` enum of
    `docs/hosting-operators.md`, with the note as the argument behind it.
 7. **No figure of the note's own.** Every number is quoted from `TIER0-TIER1-SIZING.md` or a cited page. The
@@ -68,7 +68,7 @@ internet infra". Asked what to produce: a new authored note.
 | `test.sh`, `run.sh` | the gate step "The sovereign-appliance note keeps its contract"; `appliance check\|links` |
 | `CLAUDE.md` | the command and the gotcha |
 | `docs/hosting-operators.md` | `colocated_appliance` in the planned `model` enum |
-| `DECISIONS.md`, `CHANGELOG.md`, `README.md`, `ROADMAP.md` | #102; the entry; the layout line, item 4 and a section; the distribution item's unit |
+| `DECISIONS.md`, `CHANGELOG.md`, `README.md`, `ROADMAP.md` | #104; the entry; the layout line, item 4 and a section; the distribution item's unit |
 
 ### Verification
 
@@ -83,17 +83,17 @@ internet infra". Asked what to produce: a new authored note.
 ### Still unverified
 
 - The second-model review of the quotations against their pages (#87's rule applied to prose) has not run. The
-  note's status table and #102 say so.
+  note's status table and #104 say so.
 - The Riigi Teataja page: cited, not read.
 - Whether the agreement's inviolability clauses could be reproduced for a cage in a commercial facility is a legal
   question the note leaves open (caveat 4).
 
 ### Follow-ups for the owner (not done here)
 
-- Commit. When this entry was written another session was editing the same checkout for #103 (the `/de` route),
+- Commit. When this entry was written another session was editing the same checkout for #105 (the `/de` route),
   with staged renames in the index and its own hunks in `CHANGELOG.md`, `DECISIONS.md`, `CLAUDE.md` and
   `README.md` next to this work's. A plain commit would take both; the gate must run on whatever is committed, so
-  the two are separated by hand (or #103 is committed first and this work on top of it).
+  the two are separated by hand (or #105 is committed first and this work on top of it).
 
 - Run the second-model review (`/factcheck`'s rule, by hand for prose) over the eight quotations.
 - Decide whether the box becomes the unit when distribution is modelled (`ROADMAP.md`, item 6 of that block).

@@ -223,7 +223,7 @@ the project, point DNS, and let the apex redirect settle. The domain is delibera
 Size each state from its own measured holdings with the kept capacity engine, once enough classes have a
 sourced count or size. Each constant stays a declared `assumption:` claim.
 
-### Then — national AI as reviewed indicators (#101)
+### Then — national AI as reviewed indicators (#103)
 `NATIONAL-AI-STRATEGIES.md` explores, per state, the route to a citizen-grade foundation model; its snapshots are
 authored and cited, not admitted. The sourced version: five yes/partial/no indicators with `dimension=ai` in
 `model/indicators.csv` (AI Factory host, EuroHPC system on national soil, Gigafactory bid or selection,
@@ -258,7 +258,7 @@ result." This item is about changing that.
    or `mobile/__tests__/parity.test.ts` fails.
 5. **Test it.** The engine has only the spreadsheet reproduction test today; a second topology needs
    its own invariants.
-6. **Give the second topology a unit.** `SOVEREIGN-APPLIANCE.md` (#102) proposes the box: a rack or two of
+6. **Give the second topology a unit.** `SOVEREIGN-APPLIANCE.md` (#104) proposes the box: a rack or two of
    flash holding the tier 0/1 record, state-owned and state-keyed, in a facility the state does not run. If
    distribution is ever modelled, that is the unit to size, and the note deliberately gives it no figure.
 

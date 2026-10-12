@@ -201,7 +201,7 @@ case "${1:-dev}" in
         python3 model/research.py recheck "${@:2}"
         ;;
     national-ai)
-        # The authored note on a citizen-grade foundation model per state (#101): check its contract, or
+        # The authored note on a citizen-grade foundation model per state (#103): check its contract, or
         # fetch every URL it cites once and rewrite the link register (network; polite).
         case "${2:-check}" in
             check) python3 model/national_ai_note.py check ;;
@@ -210,7 +210,7 @@ case "${1:-dev}" in
         esac
         ;;
     appliance)
-        # The authored note on state-owned data boxes in existing facilities (#102): check its contract, or
+        # The authored note on state-owned data boxes in existing facilities (#104): check its contract, or
         # fetch every URL it cites once and rewrite the link register (network; polite).
         case "${2:-check}" in
             check) python3 model/sovereign_appliance_note.py check ;;

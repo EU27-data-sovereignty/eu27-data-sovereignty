@@ -151,7 +151,7 @@ FEASIBILITY-RANKING.md       authored note: EU-27 ranked on feasibility of sover
                              sovereign AI models, in four groups; model half unsourced (#59)
 NATIONAL-AI-STRATEGIES.md    authored note: for each member state, a strategy for a foundation model good
                              enough for its citizens; the routes, the EU vehicles, the language clusters;
-                             cited or marked unverified, grouped by route, never ranked (#101)
+                             cited or marked unverified, grouped by route, never ranked (#103)
 DISTRIBUTION-AND-TRUST.md    authored note: what sovereign infrastructure can borrow from CDN
                              architecture, and the encryption, accountability and auditability
                              that wide distribution depends on (#64)
@@ -161,7 +161,7 @@ Python is the source of truth. The markdown briefs, the PDFs, the web app and th
 content model (`model/document.py`), so they cannot disagree with each other (#74).
 SOVEREIGN-APPLIANCE.md       authored note: a state-owned, state-keyed appliance for the tier 0/1 record,
                              racked in facilities that already exist on the national network; the host
-                             contract and the one treaty precedent, cited or marked unverified (#102)
+                             contract and the one treaty precedent, cited or marked unverified (#104)
 
 ## Running
 
@@ -222,7 +222,7 @@ Standard library only. The capacity engine still reproduces the xlsx it was buil
 
 ## National AI strategies: a foundation model good enough for each state's citizens
 
-[`NATIONAL-AI-STRATEGIES.md`](NATIONAL-AI-STRATEGIES.md) is an authored note (#101), written 2026-10-10, that
+[`NATIONAL-AI-STRATEGIES.md`](NATIONAL-AI-STRATEGIES.md) is an authored note (#103), written 2026-10-10, that
 asks a question adjacent to the model's: what would give each member state a foundation AI model that is *good
 enough for its citizens*, and what is the shortest defensible path to it. Not frontier parity, which
 [`countries/NL/FRONTIER-MODEL.md`](countries/NL/FRONTIER-MODEL.md) (#44) shows no state reaches alone.
@@ -239,7 +239,7 @@ language clusters; the states grouped by recommended route; caveats.
 
 | Decision | What it settles for the note |
 |---|---|
-| #101 | It is authored, never rendered, cited or marked **[unverified]**, grouped by route and never ranked; the sourced follow-on is planned |
+| #103 | It is authored, never rendered, cited or marked **[unverified]**, grouped by route and never ranked; the sourced follow-on is planned |
 | #44 | Authored notes on AI are held to a lower evidentiary standard than the model and must say so; AI is a separate ask from the government cloud |
 | #72 | Each state on its own fundamentals: no figure scaled from another state, so cost and time bands are given once per route, labelled **[reconstructed]**, never per state |
 | #10, #77 | No score, no order: the route groups are alphabetical inside and say in the same place that they are not a ranking |
@@ -255,7 +255,7 @@ so. `./run.sh national-ai links` fetched every cited URL once into
 sits on a line marked **[unverified]**.
 
 **What the gate checks.** The note is prose, so `./test.sh` checks what it can refuse (`model/national_ai_note.py`,
-`tests/test_national_ai.py`): the header wording and the #101 citation; exactly one entry per state, alphabetical by
+`tests/test_national_ai.py`): the header wording and the #103 citation; exactly one entry per state, alphabetical by
 English name, with the six subsections and the eleven snapshot rows; every snapshot cell sourced with an access
 date or marked unverified; every URL in the link register, with non-200 ones marked; no ranking language outside
 the sentences that say it ranks nothing; no currency figure inside a strategy; **[reconstructed]** only in the band
@@ -268,7 +268,7 @@ their own section and overview, is in [`ROADMAP.md`](ROADMAP.md) § Planned.
 
 ## The sovereign appliance: state-owned data boxes in facilities that already exist
 
-[`SOVEREIGN-APPLIANCE.md`](SOVEREIGN-APPLIANCE.md) is an authored note (#102), written 2026-10-12, that gives
+[`SOVEREIGN-APPLIANCE.md`](SOVEREIGN-APPLIANCE.md) is an authored note (#104), written 2026-10-12, that gives
 [`DISTRIBUTION-AND-TRUST.md`](DISTRIBUTION-AND-TRUST.md) (#64) the physical unit it left unnamed: a sealed, state-owned,
 state-keyed appliance holding the tier 0 and tier 1 record (text, identifiers and numbers; a rack or two of flash
 by [`TIER0-TIER1-SIZING.md`](TIER0-TIER1-SIZING.md)'s estimate), racked in facilities that already exist on the
@@ -284,7 +284,7 @@ Estonia–Luxembourg hosting agreement, quoted article by article from the Luxem
 minimum host contract; what it adds to the repository; caveats.
 
 **What the gate checks.** The note is prose, so `./test.sh` checks what it can refuse (`model/sovereign_appliance_note.py`,
-`tests/test_sovereign_appliance.py`): the header wording with #59 and #102 and "It ranks nothing."; the named sections;
+`tests/test_sovereign_appliance.py`): the header wording with #59 and #104 and "It ranks nothing."; the named sections;
 no ranking language; no currency figure anywhere; no member state named outside `## Precedents` and `## Sources`, and
 there only in a paragraph or list item that carries a URL with an access date or **[unverified]**; every URL in
 [`docs/sovereign-appliance-links.csv`](docs/sovereign-appliance-links.csv), with non-answering ones marked; and no
@@ -315,7 +315,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-10-01 | Bottom-up: citizens submit sources and check facts through public forms; a fact is verified by a person only under a two-person rule; contributor terms and editorial policy; the legal entity deferred | #85–#86 |
 | 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file; the methodology and fact-check appendices in every asset, marked in a method teal | #87–#88 |
 | 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
-| 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #101 |
+| 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #103 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a
@@ -395,7 +395,7 @@ their own country's entry and correct it.
 3. Sourced legal posture: the instrument, the certification regime and the procurement route per
    state.
 4. A generic "what sovereign hosting requires" section: options and preconditions per holding tier,
-   derived per state, never scaled from another (#72). `SOVEREIGN-APPLIANCE.md` (#102) argues one option for
+   derived per state, never scaled from another (#72). `SOVEREIGN-APPLIANCE.md` (#104) argues one option for
    the tier 0/1 spine as an authored note, with no figure and no state outside its sourced precedent.
 5. The policy owner per holding (the responsible ministry or the NIS2 competent authority), not only
    the operating agency.

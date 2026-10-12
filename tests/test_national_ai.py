@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-`NATIONAL-AI-STRATEGIES.md` keeps its contract (#101): one entry per state in a fixed template, every snapshot
+`NATIONAL-AI-STRATEGIES.md` keeps its contract (#103): one entry per state in a fixed template, every snapshot
 cell sourced or marked unverified, every URL in the committed link register, no ranking language, no cost in a
 strategy, never rendered. The note is prose; these are the parts of it a build can refuse.
 
@@ -77,7 +77,7 @@ class TheChecker(unittest.TestCase):
     @classmethod
     def build(cls) -> str:
         ordered = sorted(cls.names.items(), key=lambda kv: kv[1])
-        body = ("# T\n\nAuthored note. Not generated. See #101. It ranks nothing.\n\n---\n\n## 2. The routes\n\nR1 **[reconstructed]**\n\n"
+        body = ("# T\n\nAuthored note. Not generated. See #103. It ranks nothing.\n\n---\n\n## 2. The routes\n\nR1 **[reconstructed]**\n\n"
                 "## 3. The building blocks\n\n## 5. The twenty-seven\n\n")
         for iso, name in ordered:
             body += cls.entry(iso, name)

@@ -63,7 +63,7 @@ const ROUTES = [
   '/fact-check/DE',
 ]
 
-test.describe('a member state lives at its code (#103)', () => {
+test.describe('a member state lives at its code (#105)', () => {
   test('the old /country/<ISO> path lands on /<iso>', async ({ page }) => {
     await page.goto('/country/DE')
     await expect(page).toHaveURL(/\/de$/)

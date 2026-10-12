@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-The contract of `SOVEREIGN-APPLIANCE.md`, the authored note on state-owned data boxes in existing facilities (#102).
+The contract of `SOVEREIGN-APPLIANCE.md`, the authored note on state-owned data boxes in existing facilities (#104).
 
 The note is prose, so the gate cannot check its facts the way it checks the model's. What it can check, and
 `tests/test_sovereign_appliance.py` does through this module:
 
-- the header carries the authored-note wording, cites #59 (the bounded exception) and #102, and says it ranks nothing;
+- the header carries the authored-note wording, cites #59 (the bounded exception) and #104, and says it ranks nothing;
 - the sections the contract names are present;
 - no ranking language outside the sentence that says it ranks nothing (#10, #77);
-- no currency figure anywhere (#72, #73), stricter than #101's note, which allows bands in one section;
+- no currency figure anywhere (#72, #73), stricter than #103's note, which allows bands in one section;
 - no member state is named outside `## Precedents` and `## Sources`, and there every paragraph or list item that
   names one carries a URL with an access date or is marked **[unverified]**;
 - every URL in the note is in the committed link register `docs/sovereign-appliance-links.csv`, and a URL that did
   not answer (no 2xx or 3xx) sits on a line marked **[unverified]**;
 - nothing in the model, the book, the web app or `/ask` reads the note.
 
-The generic parts (the ranking and money patterns, the URL probe, the link register) are `national_ai_note`'s (#101).
+The generic parts (the ranking and money patterns, the URL probe, the link register) are `national_ai_note`'s (#103).
 
     python3 model/sovereign_appliance_note.py check   # the summary the gate prints; exit 1 on any failure
     python3 model/sovereign_appliance_note.py links   # fetch every URL once and rewrite the link register (network)
@@ -33,7 +33,7 @@ import national_ai_note as nai  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 NOTE = ROOT / "SOVEREIGN-APPLIANCE.md"
 LINKS = ROOT / "docs" / "sovereign-appliance-links.csv"
-DECISION = "#102"
+DECISION = "#104"
 EXCEPTION = "#59"
 RANKS_NOTHING = "It ranks nothing."
 

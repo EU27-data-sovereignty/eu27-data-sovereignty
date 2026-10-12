@@ -2650,7 +2650,7 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
 
 *Would change if:* the project's scope narrows back to hosting infrastructure alone, or the org is renamed.
 
-### 101. National AI strategies per state are an authored note, held to the frontier-model standard, never rendered and never ranked
+### 103. National AI strategies per state are an authored note, held to the frontier-model standard, never rendered and never ranked
 **Decision.** 2026-10-10, at the owner's request. `NATIONAL-AI-STRATEGIES.md`, at the repository root, works out
 for each of the 27 member states a strategy for a foundation AI model that is *good enough for its citizens*, not
 frontier. It is an authored note in the sense of #44: not generated, not in the bundle, the web app, the PDFs or
@@ -2699,16 +2699,16 @@ snapshot tables here become a pointer to the generated overview and only the str
 shows that a route grouping is being read as a ranking, in which case the groups are dissolved into the per-state
 entries.
 
-### 102. The sovereign appliance is an authored note, held to the #101 contract, with member states named only where sourced
+### 104. The sovereign appliance is an authored note, held to the #103 contract, with member states named only where sourced
 **Decision.** 2026-10-12, at the owner's request. `SOVEREIGN-APPLIANCE.md`, at the repository root, proposes the physical
 unit `DISTRIBUTION-AND-TRUST.md` (#64) left unnamed: a state-owned, state-keyed appliance holding the tier 0 and tier 1
 record, racked in facilities that already exist on the national internet infrastructure (commercial colocation,
 exchange points, operators' points of presence, government rooms), with the host supplying a cage, power and a port and
 holding no logical access. It is an authored note under #59's four conditions and in the sense of #44: not generated,
 not in the bundle, the web app, the PDFs or `/ask`; `run.sh data` never touches it. It is held to the contract shape
-of #101 rather than #64's test-less one: a checker (`model/sovereign_appliance_note.py`), a committed link register
+of #103 rather than #64's test-less one: a checker (`model/sovereign_appliance_note.py`), a committed link register
 (`docs/sovereign-appliance-links.csv`), a gate step and `tests/test_sovereign_appliance.py`. Two rules are stricter than
-#101's: no currency figure anywhere, and no member state named outside the note's `## Precedents` and `## Sources`
+#103's: no currency figure anywhere, and no member state named outside the note's `## Precedents` and `## Sources`
 sections, where every paragraph or list item that names one carries a URL with an access date or is marked
 **[unverified]**. The note's one precedent is the 2017 Estonia–Luxembourg hosting agreement, quoted from the Luxembourg
 parliamentary dossier. The planned hosting-model enum in `docs/hosting-operators.md` (#96) gains the value
@@ -2727,7 +2727,7 @@ for auditability, and an untested note that names a state is the kind of prose a
   the new material for part of the old argument.
 - **A schema change only, the `colocated_appliance` value in #96's design.** *Why not:* an enum value with no argument
   behind it; the design doc would carry a hosting model nothing in the repository explains.
-- **No checker, as #64 was written.** *Why not:* #101 showed the checker costs one module and one test, and this note
+- **No checker, as #64 was written.** *Why not:* #103 showed the checker costs one module and one test, and this note
   names a member state, which #64 avoided precisely because nothing checked it.
 - **Make distribution a modelled dimension now, with the box as the unit.** *Why not:* #64's "What the model would have
   to change" is unbuilt and capacity is withdrawn until it can be measured per state (#73); any site or replica count
@@ -2755,7 +2755,7 @@ has rows or is dropped from the enum; or a state publishes an appliance programm
 which point the claim moves into the sourcing ledger and the note becomes a pointer; or the second-model review
 finds a quotation the cited page does not support, in which case the line is corrected or marked.
 
-### 103. A member state's page is its code as a top-level path, `/de`, not a subdomain
+### 105. A member state's page is its code as a top-level path, `/de`, not a subdomain
 **Decision.** 2026-10-12, at the owner's request. The web app serves each member state at
 `https://eu27.cloud/<iso>`, the bundle's ISO code in lower case (`/de`, `/fr`, `/el`; Greece is `EL` because the
 registers key on Eurostat's codes). `/country/<ISO>`, the route since the first deploy, is a permanent redirect
@@ -2783,7 +2783,7 @@ capitalise, and the posters and PDFs that travel alone need a short address to p
 **Closes off.** Any future two-letter top-level route (`/en` for a language switch, `/eu` for the overview):
 the segment is a country or nothing. Any output that prints `/country/<ISO>` as the address.
 
-**Verified:** 2026-10-12. `npx playwright test e2e/app.spec.ts --project chrome -g "#103"`: `4 passed`
+**Verified:** 2026-10-12. `npx playwright test e2e/app.spec.ts --project chrome -g "#105"`: `4 passed`
 (the old path lands on `/de`; `/EL` redirects to `/el`; `/uk` is not found; `/countries` links 27 code
 paths and none under `/country/`). `python3 -m unittest tests.test_vercel_config tests.test_smoke`:
 `Ran 14 tests, OK`. `tsc --noEmit`, `eslint .`, `prettier --check .` and `vitest run` (51 tests) pass in

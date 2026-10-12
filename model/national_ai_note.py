@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-The contract of `NATIONAL-AI-STRATEGIES.md`, the authored note on a citizen-grade foundation model per state (#101).
+The contract of `NATIONAL-AI-STRATEGIES.md`, the authored note on a citizen-grade foundation model per state (#103).
 
 The note is prose, so the gate cannot check its facts the way it checks the model's. What it can check, and
 `tests/test_national_ai.py` does through this module:
 
-- the header carries the authored-note wording and cites #101;
+- the header carries the authored-note wording and cites #103;
 - section 5 holds exactly one entry per member state, alphabetical by English name, each with the fixed
   subsections and the eleven snapshot rows;
 - every snapshot cell has a source (a URL with an access date) or is marked **[unverified]**;
@@ -37,7 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NOTE = ROOT / "NATIONAL-AI-STRATEGIES.md"
 LINKS = ROOT / "docs" / "national-ai-strategies-links.csv"
 PARAMS = ROOT / "model" / "eu27_parameters.csv"
-DECISION = "#101"
+DECISION = "#103"
 
 UNVERIFIED = "**[unverified]**"
 RECONSTRUCTED = "**[reconstructed]**"
@@ -158,7 +158,7 @@ def route_groups(body: str) -> dict[str, list[str]]:
 
 
 def load_links(path: Path = LINKS) -> dict[str, dict[str, str]]:
-    """The committed link register, url -> row. `path` lets a sibling note's checker reuse this (#102)."""
+    """The committed link register, url -> row. `path` lets a sibling note's checker reuse this (#104)."""
     if not path.exists():
         return {}
     with path.open(newline="", encoding="utf-8") as fh:
@@ -263,7 +263,7 @@ def problems(body: str | None = None) -> list[str]:
                 continue
             if p.is_file() and p.suffix in (".py", ".ts", ".tsx", ".typ") and p.name != Path(__file__).name:
                 if NOTE.name in p.read_text(encoding="utf-8", errors="ignore"):
-                    out.append(f"{p.relative_to(ROOT)} reads the note; it is never rendered (#101)")
+                    out.append(f"{p.relative_to(ROOT)} reads the note; it is never rendered (#103)")
     return out
 
 
@@ -340,7 +340,7 @@ def probe(u: str) -> tuple[str, str, str]:
 
 def write_links(note: Path = NOTE, path: Path = LINKS) -> int:
     """Fetch every URL in the note once and rewrite the register. Polite: six at a time, one request each.
-    `note` and `path` let a sibling note's checker reuse this (#102); the defaults are this note's."""
+    `note` and `path` let a sibling note's checker reuse this (#104); the defaults are this note's."""
     today = dt.date.today().isoformat()
     todo = urls(note.read_text(encoding="utf-8"))
     with ThreadPoolExecutor(max_workers=6) as ex:

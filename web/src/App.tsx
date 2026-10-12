@@ -19,7 +19,7 @@ import { Sovereignty } from './pages/Sovereignty'
 import { countryPath } from './utils/routes'
 
 /**
- * A member state lives at its own top-level path, `/de` (#103). The code is the bundle's key, so a
+ * A member state lives at its own top-level path, `/de` (#105). The code is the bundle's key, so a
  * segment that is not one of the 27 falls through to the not-found page, and an upper-case code is
  * redirected to the one canonical spelling.
  */
@@ -30,7 +30,7 @@ function CountryAtRoot({ bundle }: { bundle: Bundle }) {
   return <Country bundle={bundle} />
 }
 
-/** The pre-#103 path. Vercel 308s it before the app loads; this covers `vite preview` and in-app links. */
+/** The pre-#105 path. Vercel 308s it before the app loads; this covers `vite preview` and in-app links. */
 function LegacyCountry() {
   const { iso = '' } = useParams()
   return <Navigate to={countryPath(iso)} replace />

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-`SOVEREIGN-APPLIANCE.md` keeps its contract (#102): the authored-note header, the named sections, no ranking
+`SOVEREIGN-APPLIANCE.md` keeps its contract (#104): the authored-note header, the named sections, no ranking
 language, no currency figure, member states named only in Precedents and Sources and there only with a source,
 every URL in the committed link register, never rendered. The note is prose; these are the parts a build can refuse.
 
@@ -21,7 +21,7 @@ import sovereign_appliance_note as note  # noqa: E402
 
 GOOD = """# T
 
-Authored note. Not generated. The exception is #59; #102 records it. It ranks nothing.
+Authored note. Not generated. The exception is #59; #104 records it. It ranks nothing.
 
 ---
 
@@ -116,7 +116,7 @@ class TheChecker(unittest.TestCase):
         self.assertEqual(self.problems(GOOD), [])
 
     def test_a_header_without_the_decision_fails(self):
-        self.assertTrue(any("header" in p for p in self.problems(GOOD.replace("#102 records it", "nothing records it"))))
+        self.assertTrue(any("header" in p for p in self.problems(GOOD.replace("#104 records it", "nothing records it"))))
 
     def test_a_missing_section_fails(self):
         self.assertTrue(any("missing section: ## Caveats" in p for p in self.problems(GOOD.replace("## Caveats", "## Notes"))))

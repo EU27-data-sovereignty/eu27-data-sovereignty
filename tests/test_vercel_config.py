@@ -34,22 +34,22 @@ class Routing(unittest.TestCase):
 
 
     def test_old_country_path_redirects_to_the_code(self):
-        # A member state lives at `/de` since #103. The old `/country/DE` was printed and shared, so Vercel
+        # A member state lives at `/de` since #105. The old `/country/DE` was printed and shared, so Vercel
         # answers it with a permanent redirect before the app loads; the app's own redirect covers `vite preview`.
         rule = next((r for r in CONFIG.get("redirects", []) if r["source"] == "/country/:iso"), None)
-        self.assertIsNotNone(rule, "/country/:iso must redirect (#103)")
+        self.assertIsNotNone(rule, "/country/:iso must redirect (#105)")
         self.assertEqual(rule["destination"], "/:iso")
         self.assertTrue(rule.get("permanent"))
 
     def test_no_route_claims_a_two_letter_segment(self):
-        # Every top-level two-letter path is a country (#103); a redirect or rewrite source that is one would
+        # Every top-level two-letter path is a country (#105); a redirect or rewrite source that is one would
         # shadow a member state.
         for r in CONFIG.get("redirects", []) + CONFIG.get("rewrites", []):
             seg = r["source"].strip("/").split("/")[0]
             self.assertFalse(len(seg) == 2 and seg.isalpha(), f"{r['source']} shadows a country page")
 
     def test_the_app_builds_every_country_link_through_the_helper(self):
-        # `countryPath` in web/src/utils/routes.ts is the one place that knows the shape (#103). A literal
+        # `countryPath` in web/src/utils/routes.ts is the one place that knows the shape (#105). A literal
         # `/country/` or a hand-built `/${iso}` elsewhere in the app would drift from it on the next change.
         offenders = []
         for f in sorted((ROOT / "web" / "src").rglob("*.ts*")):
@@ -58,7 +58,7 @@ class Routing(unittest.TestCase):
             text = f.read_text(encoding="utf-8")
             if "/country/" in text or "`/${" in text:
                 offenders.append(str(f.relative_to(ROOT)))
-        self.assertEqual(offenders, [], "country links must come from countryPath (#103)")
+        self.assertEqual(offenders, [], "country links must come from countryPath (#105)")
 
 
 class Headers(unittest.TestCase):

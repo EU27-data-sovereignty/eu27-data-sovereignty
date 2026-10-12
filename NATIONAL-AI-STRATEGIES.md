@@ -5,7 +5,7 @@
 to the standard of the model's printed facts: every factual claim below carries the URL it was read from and the
 access date, and a claim that could not be confirmed from a fetched page is marked **[unverified]**. The strategy
 in each entry is the author's analysis and says so. Nothing here has been machine-checked by the project's evidence
-pipeline (#82, #87) or verified by a person. Decision #101 records why it is written this way.
+pipeline (#82, #87) or verified by a person. Decision #103 records why it is written this way.
 
 **It ranks nothing.** States are grouped near the end by the route recommended for them; inside a group they are
 alphabetical and the order carries no meaning (#10, #77). It gives no per-state cost or capacity figure (#72, #73).
@@ -2346,7 +2346,7 @@ Whatever the route, the same four moves open it, and none costs much:
 | The sourced follow-on: reviewed yes/partial/no indicators per state in their own section and overview | ⬜ Planned, `ROADMAP.md` § Planned |
 
 When the follow-on lands, the snapshot tables here become a pointer to the generated overview and only the
-strategies stay authored (#101).
+strategies stay authored (#103).
 
 The working log of the session that produced this note, with the decisions, the research run, the counts and the
 problems met, is [`docs/plans/national-ai-log.md`](docs/plans/national-ai-log.md).

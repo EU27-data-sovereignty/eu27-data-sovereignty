@@ -102,7 +102,7 @@ ok "every fact in all 27 documents resolves to a checked source"
 
 # -----------------------------------------------------------------------------
 step "The national-AI note keeps its contract"
-# NATIONAL-AI-STRATEGIES.md is authored prose (#101), so the gate checks what it can refuse: one entry per
+# NATIONAL-AI-STRATEGIES.md is authored prose (#103), so the gate checks what it can refuse: one entry per
 # state in the fixed template, every snapshot cell sourced or marked unverified, every URL in the committed
 # link register, no ranking language, no cost inside a strategy, and nothing rendering it. The counts go in
 # front of whoever runs the gate, like the ledger above.
@@ -111,7 +111,7 @@ ok "27 entries, every cell sourced or marked, every link registered"
 
 # -----------------------------------------------------------------------------
 step "The sovereign-appliance note keeps its contract"
-# SOVEREIGN-APPLIANCE.md is authored prose (#102): the header wording, the named sections, no ranking language,
+# SOVEREIGN-APPLIANCE.md is authored prose (#104): the header wording, the named sections, no ranking language,
 # no currency figure, member states named only in Precedents and Sources and there only with a source, every URL
 # in the committed link register, and nothing rendering it.
 python3 model/sovereign_appliance_note.py check
