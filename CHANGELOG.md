@@ -7,6 +7,11 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Added: the logo at the top of the README
+
+- `README.md` opens with the EU27.CLOUD badge and wordmark, linked to the site. The wordmark switches to its
+  white version when GitHub is in dark mode. Both images are the ones the web app ships (`web/public/brand/`).
+
 ### Added: a guide page behind every selector button (#102)
 
 - **Twelve pages.** `/for/…` for the six audiences under "I am…" (ministries and CIOs, procurement, parliaments
