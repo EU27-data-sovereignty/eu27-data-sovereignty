@@ -5,6 +5,35 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-12
+
+### Added: `SOVEREIGN-APPLIANCE.md`, an authored note on state-owned data boxes in facilities that already exist (#102)
+
+- **What it is.** An authored note at the root, beside `DISTRIBUTION-AND-TRUST.md` (#64): the physical unit that note
+  left unnamed. A sealed, state-owned, state-keyed appliance for the tier 0 and tier 1 record, racked in facilities
+  that already exist on the national internet infrastructure, with the host supplying a cage, power and a port and
+  holding no logical access. It covers the commercial precedent and the one part of it that transfers, what the box
+  holds in phase one, the four facility classes, what changes for a writable confidential register, the security
+  model, the 2017 Estonia–Luxembourg hosting agreement as the treaty precedent, the minimum host contract, and what
+  it adds to the repository. It ranks nothing and carries no figure of its own.
+- **How it was made.** Written by Claude Fable 5.1 in one session at the owner's request, from the project's own notes
+  and eight fetched pages: the streaming company's published overview and appliance pages, the Luxembourg Chamber of
+  Deputies' consolidated dossier 7185 (which annexes the agreement's English text), the Conseil d'État's opinion on
+  the approving bill, and the two IETF RFCs on remote attestation and transparency logs. The Estonian gazette page
+  refused every automated request and is marked **[unverified]**; the quotations are from the Luxembourg dossier.
+- **Checked.** `./run.sh appliance links` on 2026-10-12: 8 URLs, 7 answered, 1 did not. `./run.sh appliance check`:
+  13 sections, 8 URLs, 4 unverified marks, 4,165 words, 0 problems. `./test.sh --only model` passed on 2026-10-12 (364 tests) with
+  the new step "The sovereign-appliance note keeps its contract" and `tests/test_sovereign_appliance.py` (16 tests).
+  The second-model review of the quotations has not run; the note's status table says so.
+- **Not rendered.** Nothing in the bundle, the web app, the PDFs or `/ask` changes, and the test fails if any of them
+  names the note.
+- **Bookkeeping.** `model/national_ai_note.py`'s `load_links` and `write_links` take path parameters so the new checker
+  reuses them (defaults unchanged; its 15 tests pass). `tests/test_docs.py` lists the note among the citing files and `docs/testing.md` the test module;
+  `test.sh` and `run.sh appliance check|links` gain their entries; `CLAUDE.md` gains the command and the gotcha;
+  `docs/hosting-operators.md`'s planned `model` enum gains `colocated_appliance`; `ROADMAP.md`'s distribution item
+  gains the box as its unit; the README lists and describes the note. The working log is
+  `docs/plans/sovereign-appliance-log.md`.
+
 ## 2026-10-10
 
 ### Added: `NATIONAL-AI-STRATEGIES.md`, a strategy per member state for a citizen-grade foundation model (#101)

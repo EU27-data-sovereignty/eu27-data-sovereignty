@@ -258,6 +258,9 @@ result." This item is about changing that.
    or `mobile/__tests__/parity.test.ts` fails.
 5. **Test it.** The engine has only the spreadsheet reproduction test today; a second topology needs
    its own invariants.
+6. **Give the second topology a unit.** `SOVEREIGN-APPLIANCE.md` (#102) proposes the box: a rack or two of
+   flash holding the tier 0/1 record, state-owned and state-keyed, in a facility the state does not run. If
+   distribution is ever modelled, that is the unit to size, and the note deliberately gives it no figure.
 
 **Gated on:** capacity from holdings (above), since capacity is withdrawn until then (#73), and on
 wanting a second topology in the model at all, which is a product decision.

@@ -108,6 +108,14 @@ step "The national-AI note keeps its contract"
 # front of whoever runs the gate, like the ledger above.
 python3 model/national_ai_note.py check
 ok "27 entries, every cell sourced or marked, every link registered"
+
+# -----------------------------------------------------------------------------
+step "The sovereign-appliance note keeps its contract"
+# SOVEREIGN-APPLIANCE.md is authored prose (#102): the header wording, the named sections, no ranking language,
+# no currency figure, member states named only in Precedents and Sources and there only with a source, every URL
+# in the committed link register, and nothing rendering it.
+python3 model/sovereign_appliance_note.py check
+ok "sections present, states sourced where named, every link registered"
 fi
 
 if in_group web; then

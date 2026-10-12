@@ -2698,3 +2698,60 @@ marks over 393 URLs.
 snapshot tables here become a pointer to the generated overview and only the strategies stay authored; or a reader
 shows that a route grouping is being read as a ranking, in which case the groups are dissolved into the per-state
 entries.
+
+### 102. The sovereign appliance is an authored note, held to the #101 contract, with member states named only where sourced
+**Decision.** 2026-10-12, at the owner's request. `SOVEREIGN-APPLIANCE.md`, at the repository root, proposes the physical
+unit `DISTRIBUTION-AND-TRUST.md` (#64) left unnamed: a state-owned, state-keyed appliance holding the tier 0 and tier 1
+record, racked in facilities that already exist on the national internet infrastructure (commercial colocation,
+exchange points, operators' points of presence, government rooms), with the host supplying a cage, power and a port and
+holding no logical access. It is an authored note under #59's four conditions and in the sense of #44: not generated,
+not in the bundle, the web app, the PDFs or `/ask`; `run.sh data` never touches it. It is held to the contract shape
+of #101 rather than #64's test-less one: a checker (`model/sovereign_appliance_note.py`), a committed link register
+(`docs/sovereign-appliance-links.csv`), a gate step and `tests/test_sovereign_appliance.py`. Two rules are stricter than
+#101's: no currency figure anywhere, and no member state named outside the note's `## Precedents` and `## Sources`
+sections, where every paragraph or list item that names one carries a URL with an access date or is marked
+**[unverified]**. The note's one precedent is the 2017 Estonia–Luxembourg hosting agreement, quoted from the Luxembourg
+parliamentary dossier. The planned hosting-model enum in `docs/hosting-operators.md` (#96) gains the value
+`colocated_appliance`; nothing is built for it.
+
+**Problem.** The owner's concept, boxes that fit into data centres that already exist and are custom-made for text,
+identity and numbers, had no home. #64 argues the topology and names encryption, key custody and audit as its
+preconditions, but deliberately contains no figures, no names and no physical unit, and has no test. #96's planned
+schema has no value for state-owned hardware in a facility the state does not run. The project rule is to optimise
+for auditability, and an untested note that names a state is the kind of prose a reader could mistake for a finding.
+
+**Alternatives considered.**
+- **A new authored note under #59, with a checker, a link register and a gate step, states named only in two sourced sections (chosen).**
+- **Extend `DISTRIBUTION-AND-TRUST.md`.** *Why not:* its contract is no numbers, no member-state names and no test, stated
+  in its own caveats; a concrete unit with a quoted treaty and sizing figures breaks all three, and a reader would take
+  the new material for part of the old argument.
+- **A schema change only, the `colocated_appliance` value in #96's design.** *Why not:* an enum value with no argument
+  behind it; the design doc would carry a hosting model nothing in the repository explains.
+- **No checker, as #64 was written.** *Why not:* #101 showed the checker costs one module and one test, and this note
+  names a member state, which #64 avoided precisely because nothing checked it.
+- **Make distribution a modelled dimension now, with the box as the unit.** *Why not:* #64's "What the model would have
+  to change" is unbuilt and capacity is withdrawn until it can be measured per state (#73); any site or replica count
+  would be invented.
+- **Name no state at all, as #64 does.** *Why not:* the only real government instance of owner hardware in another
+  party's facility is a named bilateral agreement with a published text; describing it without naming it would be
+  less checkable, not more. The constraint is that the name sits only where the source does.
+
+**Closes off.** Any figure in the note not quoted from `TIER0-TIER1-SIZING.md` or a cited page, so no site count,
+replica count, latency or cost; naming a member state outside `## Precedents` and `## Sources`; rendering the note or
+reading it from the model, the book, the web app or `/ask`; and quoting it as a finding of the model (it carries the
+same caveat wording as #64's note).
+
+**Verified:** 2026-10-12. `./run.sh appliance links` wrote `docs/sovereign-appliance-links.csv`: 8 URLs, 7 answered,
+1 did not (the Estonian gazette page, which answered 403 to every agent tried), on a line marked **[unverified]**.
+`./run.sh appliance check` printed `13 sections, 8 URLs (7 answered at the last link check), 4 unverified marks,
+4,165 words, 0 problems`. `tests/test_sovereign_appliance.py` (16 tests, including the checker refusing a synthetic
+note with ranking language, a currency figure, a state named outside the allowed sections, an unsourced state in
+Precedents, a dead link, an unregistered URL and a renderer naming the note), `tests/test_national_ai.py` (15, unchanged
+after `load_links` and `write_links` took path parameters) and `tests/test_docs.py` pass; `./test.sh --only model`
+recorded in `CHANGELOG.md`. The second-model review of the quotations has NOT YET run; the note's status table says so.
+
+*Would change if:* #96 lands and real hosting rows exist to classify, at which point `colocated_appliance` either
+has rows or is dropped from the enum; or a state publishes an appliance programme that can be cited per holding, at
+which point the claim moves into the sourcing ledger and the note becomes a pointer; or the second-model review
+finds a quotation the cited page does not support, in which case the line is corrected or marked.
+

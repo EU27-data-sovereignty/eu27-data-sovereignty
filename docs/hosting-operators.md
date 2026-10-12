@@ -30,7 +30,7 @@ Separate tables, not new columns on `national_data.csv`:
 | File | Columns |
 |---|---|
 | `model/organisations.csv` | `org_id` (slug), `name`, `seat` (ISO-2, or a non-EU country code), `sector` ∈ {state, state_owned, private, eu_body, intergovernmental}, `url` |
-| `model/hosting.csv` | `iso`, `record_class`, `role` ∈ {operator, processor, host, cloud}, `org_id`, `model` ∈ {own_dc, state_shared_service, outsourced_operation, public_cloud, private_cloud}, `location` ∈ {in_country, eu, non_eu} |
+| `model/hosting.csv` | `iso`, `record_class`, `role` ∈ {operator, processor, host, cloud}, `org_id`, `model` ∈ {own_dc, state_shared_service, outsourced_operation, public_cloud, private_cloud, colocated_appliance}, `location` ∈ {in_country, eu, non_eu} |
 | `model/org_links.csv` | `child`, `relation` ∈ {owned_by, subsidiary_of, controlled_by}, `parent` |
 
 ## Claims

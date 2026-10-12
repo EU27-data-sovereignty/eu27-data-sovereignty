@@ -157,10 +157,11 @@ def route_groups(body: str) -> dict[str, list[str]]:
     return out
 
 
-def load_links() -> dict[str, dict[str, str]]:
-    if not LINKS.exists():
+def load_links(path: Path = LINKS) -> dict[str, dict[str, str]]:
+    """The committed link register, url -> row. `path` lets a sibling note's checker reuse this (#102)."""
+    if not path.exists():
         return {}
-    with LINKS.open(newline="", encoding="utf-8") as fh:
+    with path.open(newline="", encoding="utf-8") as fh:
         return {r["url"]: r for r in csv.DictReader(fh)}
 
 
@@ -337,14 +338,15 @@ def probe(u: str) -> tuple[str, str, str]:
     return u, status, err
 
 
-def write_links() -> int:
-    """Fetch every URL in the note once and rewrite the register. Polite: six at a time, one request each."""
+def write_links(note: Path = NOTE, path: Path = LINKS) -> int:
+    """Fetch every URL in the note once and rewrite the register. Polite: six at a time, one request each.
+    `note` and `path` let a sibling note's checker reuse this (#102); the defaults are this note's."""
     today = dt.date.today().isoformat()
-    todo = urls(text())
+    todo = urls(note.read_text(encoding="utf-8"))
     with ThreadPoolExecutor(max_workers=6) as ex:
         results = sorted(ex.map(probe, todo))
-    LINKS.parent.mkdir(exist_ok=True)
-    with LINKS.open("w", newline="", encoding="utf-8") as fh:
+    path.parent.mkdir(exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, lineterminator="\n")
         w.writerow(["url", "status", "error", "checked"])
         for u, status, err in results:
@@ -352,7 +354,7 @@ def write_links() -> int:
     bad = [r for r in results if not answered(r[1])]
     for u, status, err in bad:
         print(f"{status:>3} {err:<20} {u}")
-    print(f"{len(results)} URLs, {len(results) - len(bad)} answered, {len(bad)} did not -> {LINKS.relative_to(ROOT)}")
+    print(f"{len(results)} URLs, {len(results) - len(bad)} answered, {len(bad)} did not -> {path.relative_to(ROOT)}")
     return 0
 
 

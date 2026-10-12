@@ -159,6 +159,9 @@ DISTRIBUTION-AND-TRUST.md    authored note: what sovereign infrastructure can bo
 
 Python is the source of truth. The markdown briefs, the PDFs, the web app and the posters all render one
 content model (`model/document.py`), so they cannot disagree with each other (#74).
+SOVEREIGN-APPLIANCE.md       authored note: a state-owned, state-keyed appliance for the tier 0/1 record,
+                             racked in facilities that already exist on the national network; the host
+                             contract and the one treaty precedent, cited or marked unverified (#102)
 
 ## Running
 
@@ -262,6 +265,31 @@ table; every state once in the route groups, alphabetical inside; and no file in
 **What it is not.** Not machine-checked by the evidence pipeline (#82, #87), not reviewed by a person, not in the
 bundle, the site, the PDFs or `/ask`. The sourced follow-on, reviewed yes/partial/no indicators per state in
 their own section and overview, is in [`ROADMAP.md`](ROADMAP.md) § Planned.
+
+## The sovereign appliance: state-owned data boxes in facilities that already exist
+
+[`SOVEREIGN-APPLIANCE.md`](SOVEREIGN-APPLIANCE.md) is an authored note (#102), written 2026-10-12, that gives
+[`DISTRIBUTION-AND-TRUST.md`](DISTRIBUTION-AND-TRUST.md) (#64) the physical unit it left unnamed: a sealed, state-owned,
+state-keyed appliance holding the tier 0 and tier 1 record (text, identifiers and numbers; a rack or two of flash
+by [`TIER0-TIER1-SIZING.md`](TIER0-TIER1-SIZING.md)'s estimate), racked in facilities that already exist on the
+national internet infrastructure. The host supplies a cage, power and a port and never has logical access.
+
+**What it contains.** The idea; what one streaming company's content-delivery appliance does and the one part of it
+that transfers (the owner builds, fills, monitors and repairs the box; the host supplies space, power and a port);
+what the box holds in phase one and what it does not; the four facility classes and what each offers and lacks; the
+three things that change when the payload is a writable, confidential register; the security model of the box
+(attestation before key release, sealed storage with keys held elsewhere, no local console, tamper response, a
+witnessed tamper-evident access log, reproducible builds, read-only replicas); the one precedent, the 2017
+Estonia–Luxembourg hosting agreement, quoted article by article from the Luxembourg parliamentary dossier; the
+minimum host contract; what it adds to the repository; caveats.
+
+**What the gate checks.** The note is prose, so `./test.sh` checks what it can refuse (`model/sovereign_appliance_note.py`,
+`tests/test_sovereign_appliance.py`): the header wording with #59 and #102 and "It ranks nothing."; the named sections;
+no ranking language; no currency figure anywhere; no member state named outside `## Precedents` and `## Sources`, and
+there only in a paragraph or list item that carries a URL with an access date or **[unverified]**; every URL in
+[`docs/sovereign-appliance-links.csv`](docs/sovereign-appliance-links.csv), with non-answering ones marked; and no
+file in `model/`, `book/`, `api/`, `web/src/` or `mobile/` naming the note. `./run.sh appliance check` prints the counts.
+It adds the value `colocated_appliance` to the planned hosting-model enum of `docs/hosting-operators.md` (#96).
 
 ## What the evidence shows so far
 
@@ -367,7 +395,8 @@ their own country's entry and correct it.
 3. Sourced legal posture: the instrument, the certification regime and the procurement route per
    state.
 4. A generic "what sovereign hosting requires" section: options and preconditions per holding tier,
-   derived per state, never scaled from another (#72).
+   derived per state, never scaled from another (#72). `SOVEREIGN-APPLIANCE.md` (#102) argues one option for
+   the tier 0/1 spine as an authored note, with no figure and no state outside its sourced precedent.
 5. The policy owner per holding (the responsible ministry or the NIS2 competent authority), not only
    the operating agency.
 6. A corrections URL printed in every PDF and markdown output. Today only the web app links to the

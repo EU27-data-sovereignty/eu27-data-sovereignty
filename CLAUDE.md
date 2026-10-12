@@ -62,6 +62,7 @@ python3 model/evidence_report.py       # docs/evidence.md, charts of grades and 
 python3 model/gaps.py [--csv out.csv]  # docs/gaps.md: every gap and how often it was searched (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
 ./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#101)
+./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#102)
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
@@ -145,3 +146,7 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   app or `/ask`; `tests/test_national_ai.py` fails if any of them names it. Edit it by hand, keep every snapshot cell
   sourced with an access date or marked **[unverified]**, put no cost figure in a strategy, no ranking language anywhere,
   and run `./run.sh national-ai links` after adding or changing a URL so the link register matches.
+- **`SOVEREIGN-APPLIANCE.md` is authored, not generated** (#102), under the same contract shape: never read by the model,
+  the book, the web app or `/ask` (`tests/test_sovereign_appliance.py`); no ranking language, no currency figure anywhere,
+  a member state named only in its Precedents and Sources sections and there only with a URL and access date or
+  **[unverified]**; `./run.sh appliance links` after adding or changing a URL.

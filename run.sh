@@ -64,6 +64,7 @@ show_help() {
     echo "  admit [--check]  Admit verified research, then vetting; --check proves the registers reproduce"
     echo "  recheck [--check] Re-fetch every source behind a printed fact (resumable); --check: fail on a new dispute"
     echo "  national-ai check|links  The authored note NATIONAL-AI-STRATEGIES.md: check its contract, or refetch its URLs into the link register"
+    echo "  appliance check|links    The authored note SOVEREIGN-APPLIANCE.md: check its contract, or refetch its URLs into the link register"
     echo "  retry            Retry not-found quotes (served page in its charset, then rendered), then admit"
     echo "  eurostat check   Pull at the pinned periods and report; writes nothing"
     echo "  eurostat adopt COL=PERIOD ...   Move pins, apply, register the vintage"
@@ -206,6 +207,15 @@ case "${1:-dev}" in
             check) python3 model/national_ai_note.py check ;;
             links) python3 model/national_ai_note.py links ;;
             *) print_error "usage: ./run.sh national-ai check | links"; exit 1 ;;
+        esac
+        ;;
+    appliance)
+        # The authored note on state-owned data boxes in existing facilities (#102): check its contract, or
+        # fetch every URL it cites once and rewrite the link register (network; polite).
+        case "${2:-check}" in
+            check) python3 model/sovereign_appliance_note.py check ;;
+            links) python3 model/sovereign_appliance_note.py links ;;
+            *) print_error "usage: ./run.sh appliance check | links"; exit 1 ;;
         esac
         ;;
     retry)
