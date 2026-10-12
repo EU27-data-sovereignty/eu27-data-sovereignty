@@ -61,7 +61,13 @@ class Disclaimer(unittest.TestCase):
 
     def test_the_web_app_shows_it(self):
         pages = {p.name: p.read_text(encoding="utf-8") for p in (ROOT / "web" / "src").rglob("*.tsx")}
-        self.assertIn("notice.disclaimer", pages["Overview.tsx"])
+        # Every page, the front page included, shows it in the footer: the provenance text, which contains the
+        # disclaimer word for word, printed by ProvenanceNotice inside Layout. The front page's own copy of it
+        # was removed as a duplicate (#101), so the footer is what this holds in place.
+        self.assertIn(BUNDLE["notice"]["disclaimer"], BUNDLE["provenance"])
+        self.assertIn("{provenance}", pages["ProvenanceNotice.tsx"])
+        self.assertIn("<ProvenanceNotice", pages["Layout.tsx"])
+        self.assertIn("provenance={provenance}", pages["Layout.tsx"])
         self.assertIn("bundle.methodology", pages["Methodology.tsx"])   # which opens with it (test_methodology)
         self.assertIn("not human-verified", pages["Poster.tsx"])
 

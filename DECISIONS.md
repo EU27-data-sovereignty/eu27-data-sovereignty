@@ -2686,7 +2686,9 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
 - **Amended the same day.** The front page's first section under the band is the Ask box alone ("Hello, Europe"),
   free-form, and a question asked there is sent on arrival at `/ask`. The tile map, the dataset's title and
   subtitle and the page's own copy of the machine-checked notice leave the front page; the footer's notice on
-  every page (#82, #83) is what remains of it there. `TileMap` is kept unused.
+  every page (#82, #83) is what remains of it there, and `tests/test_evidence.py` now checks that footer notice
+  (the provenance text contains the disclaimer word for word) rather than `Overview.tsx`. `TileMap` is kept
+  unused.
 
 **Problem.** #99's look (night navy, bright EU gold, the silhouette artwork behind every band) was a first brand
 pass. The landing design that followed is light, quieter with gold, set in one typeface, and opens the front page

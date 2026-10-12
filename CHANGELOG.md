@@ -19,6 +19,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Removed as a duplicate.** The front page's own "Machine-checked, not human-verified" box: the footer of every
   page carries that notice (#82, #83). The browser test now checks the footer's notice on the front page.
 - **Shared.** The example questions and the 500-character limit live in `web/src/data/ask.ts`.
+- **The first deploy of this failed** on `tests/test_evidence.py`, which looked for the disclaimer in
+  `Overview.tsx`. The test now holds the footer's notice in place instead: the provenance text contains the
+  disclaimer word for word, `ProvenanceNotice` prints it, and `Layout` renders it on every page.
 
 ### Fixed: the tile map's labels keep their contrast (#101)
 
