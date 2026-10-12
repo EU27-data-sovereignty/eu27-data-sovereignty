@@ -76,7 +76,7 @@ Deliberately different from the Dutch artwork above, per `DECISIONS.md` #47:
 
 ## `countries/<ISO>/<ISO>-briefing.pdf` — 27 files
 
-Same pipeline, printed from the app's `/country/:iso` route. Same provenance and same reproducibility —
+Same pipeline, printed from the app's `/<iso>` route (`/de`, #103). Same provenance and same reproducibility —
 with one extra step. Chrome stamps the wall-clock time into `/CreationDate` and `/ModDate`, so the
 exporter rewrites both to the pinned `.build-epoch` afterwards (#34, #53); without that, re-running it
 produced 27 spurious diffs against tracked files. `/Creator` and `/Producer` still name the local Chrome

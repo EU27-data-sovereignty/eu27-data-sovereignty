@@ -8,6 +8,7 @@ import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
 import type { Bundle, Document, GroupId, Placement, Span } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
+import { countryPath } from '@/utils/routes'
 
 type Confidence = 'All' | Placement['confidence']
 
@@ -219,7 +220,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
               </li>
             ))}
           </ul>
-          <Link to={`/country/${selected}`} className="text-sm underline">
+          <Link to={countryPath(selected)} className="text-sm underline">
             Full analysis of {names[selected]}
           </Link>
         </section>
@@ -262,7 +263,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                 <tr key={r.iso} className="border-t border-[var(--color-border)]">
                   <th scope="row" className="px-3.5 py-2.5 text-left font-normal">
                     <Link
-                      to={`/country/${r.iso}`}
+                      to={countryPath(r.iso)}
                       className="text-[var(--color-accent-text)] underline"
                     >
                       {names[r.iso]}

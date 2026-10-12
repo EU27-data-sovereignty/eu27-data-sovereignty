@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Dots } from '@/components/ui'
+import { countryPath } from '@/utils/routes'
 
 /** Each state as one tile, placed roughly where it lies: [column, row] on a 7 × 7 grid. */
 const POS: Record<string, [number, number]> = {
@@ -148,7 +149,7 @@ export function TileMap({ states }: { states: TileState[] }) {
           </div>
         </div>
         <Link
-          to={`/country/${s.iso}`}
+          to={countryPath(s.iso)}
           className="text-sm font-semibold whitespace-nowrap text-[var(--color-eu-gold)] hover:underline"
         >
           Open country →

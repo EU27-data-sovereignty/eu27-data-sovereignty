@@ -33,6 +33,34 @@ class Routing(unittest.TestCase):
                              f"under cleanUrls index.html is served at /index; a rewrite to {dest} 404s")
 
 
+    def test_old_country_path_redirects_to_the_code(self):
+        # A member state lives at `/de` since #103. The old `/country/DE` was printed and shared, so Vercel
+        # answers it with a permanent redirect before the app loads; the app's own redirect covers `vite preview`.
+        rule = next((r for r in CONFIG.get("redirects", []) if r["source"] == "/country/:iso"), None)
+        self.assertIsNotNone(rule, "/country/:iso must redirect (#103)")
+        self.assertEqual(rule["destination"], "/:iso")
+        self.assertTrue(rule.get("permanent"))
+
+    def test_no_route_claims_a_two_letter_segment(self):
+        # Every top-level two-letter path is a country (#103); a redirect or rewrite source that is one would
+        # shadow a member state.
+        for r in CONFIG.get("redirects", []) + CONFIG.get("rewrites", []):
+            seg = r["source"].strip("/").split("/")[0]
+            self.assertFalse(len(seg) == 2 and seg.isalpha(), f"{r['source']} shadows a country page")
+
+    def test_the_app_builds_every_country_link_through_the_helper(self):
+        # `countryPath` in web/src/utils/routes.ts is the one place that knows the shape (#103). A literal
+        # `/country/` or a hand-built `/${iso}` elsewhere in the app would drift from it on the next change.
+        offenders = []
+        for f in sorted((ROOT / "web" / "src").rglob("*.ts*")):
+            if f.name == "routes.ts" or "__tests__" in f.parts:
+                continue
+            text = f.read_text(encoding="utf-8")
+            if "/country/" in text or "`/${" in text:
+                offenders.append(str(f.relative_to(ROOT)))
+        self.assertEqual(offenders, [], "country links must come from countryPath (#103)")
+
+
 class Headers(unittest.TestCase):
     def test_csp_applies_to_every_path(self):
         everywhere = [h for block in CONFIG["headers"] if block["source"] == "/(.*)"

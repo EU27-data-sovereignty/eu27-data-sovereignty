@@ -50,8 +50,8 @@ function firstSourceTitle(iso: string): string {
 const ROUTES = [
   '/',
   '/countries',
-  '/country/DE',
-  '/country/NL',
+  '/de',
+  '/nl',
   '/holdings',
   '/holdings/civil_registry',
   '/infrastructure',
@@ -62,6 +62,36 @@ const ROUTES = [
   '/fact-check',
   '/fact-check/DE',
 ]
+
+test.describe('a member state lives at its code (#103)', () => {
+  test('the old /country/<ISO> path lands on /<iso>', async ({ page }) => {
+    await page.goto('/country/DE')
+    await expect(page).toHaveURL(/\/de$/)
+    await expect(page.getByRole('heading', { level: 1, name: 'Germany' })).toBeVisible()
+  })
+
+  test('an upper-case code is redirected to the lower-case one', async ({ page }) => {
+    await page.goto('/EL')
+    await expect(page).toHaveURL(/\/el$/)
+    await expect(page.getByRole('heading', { level: 1, name: 'Greece' })).toBeVisible()
+  })
+
+  test('a two-letter segment that is not a member state is not found', async ({ page }) => {
+    await page.goto('/uk')
+    await expect(page.getByRole('heading', { level: 1, name: 'Page not found' })).toBeVisible()
+  })
+
+  test('every country link on the countries page points at a code path', async ({ page }) => {
+    await page.goto('/countries')
+    await expect(page.getByRole('link', { name: 'Germany' })).toBeVisible()
+    const hrefs = await page
+      .locator('main a[href]')
+      .evaluateAll(as => as.map(a => a.getAttribute('href')!))
+    const codes = hrefs.filter(h => /^\/[a-z]{2}$/.test(h))
+    expect(new Set(codes).size).toBe(Object.keys(BUNDLE.documents).length)
+    expect(hrefs.some(h => h.startsWith('/country/'))).toBe(false)
+  })
+})
 
 test.describe('data actually renders', () => {
   test('overview reports the state of the evidence from the bundle', async ({ page }) => {
@@ -74,7 +104,7 @@ test.describe('data actually renders', () => {
   test('a country page shows a sourced fact with a footnote that lands on its source', async ({
     page,
   }) => {
-    await page.goto('/country/DE')
+    await page.goto('/de')
     await expect(page.getByRole('heading', { name: 'Germany', level: 1 })).toBeVisible()
     const fact = firstFact('DE')
     await expect(page.getByText(fact).first()).toBeVisible()
@@ -88,7 +118,7 @@ test.describe('data actually renders', () => {
   })
 
   test('a value with no checked source is shown as a gap, not a fact', async ({ page }) => {
-    await page.goto('/country/DE')
+    await page.goto('/de')
     await expect(page.locator('main').getByText('Not yet verified').first()).toBeVisible()
     await expect(page.locator('main').getByText('Not yet sized').first()).toBeVisible()
   })
@@ -132,7 +162,7 @@ function docSpans(iso: string): Span[] {
 
 test.describe('evidence rules (#82, #83)', () => {
   test('every page says the findings are machine-checked, not human-verified', async ({ page }) => {
-    await page.goto('/country/DE')
+    await page.goto('/de')
     // The notice heads the footer of every page, in full at every width.
     await expect(
       page.locator('footer').getByText(BUNDLE.provenance, { exact: false }),
@@ -148,7 +178,7 @@ test.describe('evidence rules (#82, #83)', () => {
   test('every page links the fact check, and a country lists the verdict on each of its facts (#87)', async ({
     page,
   }) => {
-    await page.goto('/country/DE')
+    await page.goto('/de')
     await page.getByRole('link', { name: 'fact check for Germany' }).click()
     await expect(page).toHaveURL(/\/fact-check\/DE$/)
     await expect(
@@ -171,7 +201,7 @@ test.describe('evidence rules (#82, #83)', () => {
   }) => {
     const fact = docSpans('DE').find(sp => sp.role === 'fact')!
     const cite = BUNDLE.claims[fact.c![0]!]![0]!
-    await page.goto('/country/DE')
+    await page.goto('/de')
     await expect(
       page.getByRole('link', { name: new RegExp(`Evidence: ${fact.g}$`) }).first(),
     ).toBeVisible()
@@ -187,7 +217,7 @@ test.describe('evidence rules (#82, #83)', () => {
     const iso = Object.keys(BUNDLE.documents).find(i =>
       docSpans(i).some(sp => sp.c?.some(c => BUNDLE.claims[c]?.some(x => x.gloss))),
     )!
-    await page.goto(`/country/${iso}`)
+    await page.goto(`/${iso.toLowerCase()}`)
     await expect(page.getByText('Machine translation:').first()).toBeVisible()
   })
 
@@ -205,7 +235,7 @@ test.describe('evidence rules (#82, #83)', () => {
     const original = row[i]!.t
     row[i] = { t: DISPUTE, role: 'disputed', c: row[i]!.c }
     await page.route('**/data/eu27.json', route => route.fulfill({ json: bundle }))
-    await page.goto('/country/DE')
+    await page.goto('/de')
     const cell = page.locator('td, th').filter({ hasText: DISPUTE })
     await expect(cell).toBeVisible()
     await expect(cell).not.toContainText(original)
@@ -217,7 +247,7 @@ test.describe('contributing (#85)', () => {
   test('every fact has a prefilled "Check this fact" link to the review form', async ({ page }) => {
     const fact = docSpans('DE').find(sp => sp.role === 'fact')!
     const claim = fact.c![0]!
-    await page.goto('/country/DE')
+    await page.goto('/de')
     const link = page.locator('#src-1').getByRole('link', { name: 'Check this fact' }).first()
     await expect(link).toBeVisible()
     const href = await link.getAttribute('href')
@@ -227,7 +257,7 @@ test.describe('contributing (#85)', () => {
   })
 
   test('a country page invites a source for its withheld values', async ({ page }) => {
-    await page.goto('/country/LU')
+    await page.goto('/lu')
     const link = page.getByRole('link', { name: 'Submit a source' })
     await expect(link).toHaveAttribute('href', /template=submit-source\.yml.*country=LU/)
   })
@@ -344,7 +374,7 @@ test.describe('accessibility in dark mode (#92)', () => {
 
 test.describe('print (#92)', () => {
   test('printing a country page drops the navigation and keeps the findings', async ({ page }) => {
-    await page.goto('/country/DE')
+    await page.goto('/de')
     await page.emulateMedia({ media: 'print' })
     await expect(page.getByRole('navigation', { name: 'Main' })).toBeHidden()
     await expect(page.getByRole('heading', { name: 'Germany', exact: true })).toBeVisible()
@@ -357,7 +387,7 @@ test.describe('responsive', () => {
     page,
   }) => {
     await page.setViewportSize({ width: 375, height: 800 })
-    await page.goto('/country/DE')
+    await page.goto('/de')
     await expect(page.locator('tbody tr').first()).toBeVisible()
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth - document.documentElement.clientWidth,

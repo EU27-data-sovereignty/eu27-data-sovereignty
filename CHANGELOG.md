@@ -7,6 +7,20 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Changed: a member state's page is at its code, `eu27.cloud/de` (#103)
+
+- **What changed.** The country page moved from `/country/DE` to `/de`: the bundle's ISO code, lower-case, as a
+  top-level path (`/el` for Greece, as Eurostat keys it). `/country/<ISO>` answers with a permanent redirect in
+  `vercel.json` and, for `vite preview` and in-app links, in the router; `/DE` redirects to `/de`; a two-letter
+  segment that is not one of the 27 is not found. Every country link in the app is built by one helper,
+  `web/src/utils/routes.ts`.
+- **Checked.** `tests/test_vercel_config.py` asserts the redirect and that no redirect or rewrite claims a
+  two-letter segment; four new Playwright tests cover the old path, the upper-case code, an unknown code and the
+  links on `/countries`; the smoke and e2e route lists moved with it. The three `/country/DE` visual baselines
+  were renamed to `/de`, unchanged.
+- **Why.** The owner asked for one address per country that a reader can type. A subdomain per state was
+  rejected (#103).
+
 ### Added: `SOVEREIGN-APPLIANCE.md`, an authored note on state-owned data boxes in facilities that already exist (#102)
 
 - **What it is.** An authored note at the root, beside `DISTRIBUTION-AND-TRUST.md` (#64): the physical unit that note

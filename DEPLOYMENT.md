@@ -27,7 +27,7 @@ The site is static except for one function, `/api/ask` (#78). There is no databa
 | Output | `web/dist` | Vite. `dist/` is never committed (#24) |
 | PDFs | `/eu27-report.pdf`, `/report/<ISO>.pdf` | The EU-27 report and the 27 country reports, typeset from the content model with footnoted sources (#74, #75). Built into `web/dist/`, never committed (#41). `/briefs/<ISO>.pdf` redirects to `/report/<ISO>.pdf` (#76) |
 | Data | `web/public/data/eu27.json` → `/data/eu27.json` | Tracked; CI asserts it is fresh. It is the app's only network fetch |
-| Routing | `rewrites: /(.*) → /index` | SPA. `cleanUrls`, no trailing slash. Under `cleanUrls` the build output serves `index.html` at `/index`, so that is the only destination that works in a prebuilt deploy. `/index.html` 404s every deep link (it did until 2026-09-27), and `/` 404s even the home page when prebuilt. `tests/test_vercel_config.py` asserts this |
+| Routing | `rewrites: /(.*) → /index` | SPA. `cleanUrls`, no trailing slash. Under `cleanUrls` the build output serves `index.html` at `/index`, so that is the only destination that works in a prebuilt deploy. `/index.html` 404s every deep link (it did until 2026-09-27), and `/` 404s even the home page when prebuilt. `tests/test_vercel_config.py` asserts this. A member state is at its code, `/de` (#103); `/country/:iso` is a permanent redirect to `/:iso`, and no redirect or rewrite source may be a bare two-letter segment |
 | Headers | `vercel.json` `headers` | Strict CSP (`default-src 'self'`, no inline scripts, `frame-ancestors 'none'`), `nosniff`, `X-Frame-Options: DENY`, restrictive `Permissions-Policy` |
 | Caching | `/data/*` → `public, max-age=300, must-revalidate` | Five minutes, so a redeploy shows up quickly |
 | Indexing | `web/public/robots.txt` disallows everything, and `X-Robots-Tag: noindex` on every path | Removing both is stage 2 (#80) |
@@ -54,7 +54,7 @@ flowchart TD
     T --> B["vercel pull → PREBUILT_SITE=1 vercel build --prod<br/>packages the gate's build, no rebuild"]
     B --> H["tree sha256 of .vercel/output/static<br/>must equal the gate's build"]
     H --> D["vercel deploy --prebuilt --prod<br/>uploads .vercel/output only"]
-    D --> S["smoke test https://eu27.cloud<br/>/ · /country/DE · /eu27-report.pdf · robots · noindex · bundle hash"]
+    D --> S["smoke test https://eu27.cloud<br/>/ · /de · /eu27-report.pdf · robots · noindex · bundle hash"]
     S -- mismatch --> X2[Run fails: investigate the live site]
     S -- passes --> L[Run summary: deployment · commit · bundle hash · site tree hash]
 ```

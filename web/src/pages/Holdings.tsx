@@ -8,6 +8,7 @@ import { SourceList } from '@/components/SourceList'
 import type { Bundle, Document, Span } from '@/data/types'
 import { claimsBySource, numberSources } from '@/data/sources'
 import { NotFound } from './NotFound'
+import { countryPath } from '@/utils/routes'
 
 const TIER_NOTE: Record<number, string> = {
   0: 'The identity spine: civil registry, biometrics, eID, PKI',
@@ -182,7 +183,7 @@ export function Holding({ bundle }: { bundle: Bundle }) {
               <tr key={r.iso} className="border-t border-[var(--color-border)] align-top">
                 <th scope="row" className="px-3.5 py-2.5 text-left font-normal">
                   <Link
-                    to={`/country/${r.iso}`}
+                    to={countryPath(r.iso)}
                     className="text-[var(--color-accent-text)] underline"
                   >
                     {r.name}

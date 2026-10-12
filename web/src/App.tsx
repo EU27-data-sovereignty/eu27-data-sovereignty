@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useParams } from 'react-router-dom'
 
 import { Layout } from './components/Layout'
 import { loadBundle } from './data/load'
@@ -16,6 +16,25 @@ import { Overview } from './pages/Overview'
 import { Poster } from './pages/Poster'
 import { Sources } from './pages/Sources'
 import { Sovereignty } from './pages/Sovereignty'
+import { countryPath } from './utils/routes'
+
+/**
+ * A member state lives at its own top-level path, `/de` (#103). The code is the bundle's key, so a
+ * segment that is not one of the 27 falls through to the not-found page, and an upper-case code is
+ * redirected to the one canonical spelling.
+ */
+function CountryAtRoot({ bundle }: { bundle: Bundle }) {
+  const { iso = '' } = useParams()
+  if (!(iso.toUpperCase() in bundle.documents)) return <NotFound />
+  if (iso !== iso.toLowerCase()) return <Navigate to={countryPath(iso)} replace />
+  return <Country bundle={bundle} />
+}
+
+/** The pre-#103 path. Vercel 308s it before the app loads; this covers `vite preview` and in-app links. */
+function LegacyCountry() {
+  const { iso = '' } = useParams()
+  return <Navigate to={countryPath(iso)} replace />
+}
 
 export function App() {
   const [bundle, setBundle] = useState<Bundle | null>(null)
@@ -62,10 +81,12 @@ export function App() {
         <Route path="sovereignty" element={<Sovereignty bundle={bundle} />} />
         <Route path="ask" element={<Ask bundle={bundle} />} />
         <Route path="map" element={<Sovereignty bundle={bundle} />} />
-        <Route path="country/:iso" element={<Country bundle={bundle} />} />
+        <Route path="country/:iso" element={<LegacyCountry />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
         <Route path="fact-check" element={<FactCheck bundle={bundle} />} />
         <Route path="fact-check/:iso" element={<FactCheck bundle={bundle} />} />
+        {/* Static segments above rank ahead of this one, so `/ask` is never read as a country. */}
+        <Route path=":iso" element={<CountryAtRoot bundle={bundle} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

@@ -34,7 +34,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "book"))
 
 # Every route a reader can open; tests/test_smoke.py keeps it a superset of the e2e ROUTES.
-ROUTES = ["/", "/countries", "/country/DE", "/country/NL", "/holdings", "/holdings/civil_registry",
+ROUTES = ["/", "/countries", "/de", "/nl", "/holdings", "/holdings/civil_registry",
           "/infrastructure", "/sources",
           "/sovereignty", "/ask", "/methodology", "/fact-check", "/fact-check/DE"]
 ISOS = ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "HR", "HU", "IE", "IT", "LT",

@@ -5,6 +5,7 @@ import { coverage, factCounts, spans } from '@/data/sources'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
 import { CARD, Dots, FIELD, Bar, Segmented } from '@/components/ui'
+import { countryPath } from '@/utils/routes'
 
 type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 
@@ -79,7 +80,7 @@ export function Countries({ bundle }: { bundle: Bundle }) {
           >
             <div className="flex items-baseline justify-between gap-3">
               <h2 className="font-display text-xl font-bold">
-                <Link to={`/country/${c.iso2}`} className="hover:underline">
+                <Link to={countryPath(c.iso2)} className="hover:underline">
                   {c.name}
                 </Link>
               </h2>

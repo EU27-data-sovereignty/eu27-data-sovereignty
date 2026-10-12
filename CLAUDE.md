@@ -134,6 +134,9 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **Pin every action by SHA** in `.github/workflows/`, and checksum any downloaded binary
   (`tests/test_workflows.py`).
 - **SPA rewrite.** It must target `/index` under `cleanUrls` (`tests/test_vercel_config.py`).
+- **A member state is at its code: `/de`, `/el`** (#103). Build every country link with `countryPath` in
+  `web/src/utils/routes.ts`; `/country/:iso` is a redirect, and no new top-level route may be two letters
+  (`tests/test_vercel_config.py`). Static segments rank ahead of `:iso`, so `/ask` is never read as a country.
 - **zsh.** `echo ====` breaks, because a leading `=` is command expansion; use `echo '---'`.
 - **Holdings-table columns are looked up by name.** The overview (`document.holdings_rows`) and
   `/holdings/<class>` read the columns by their label, so renaming a column label changes both. `ask_corpus`

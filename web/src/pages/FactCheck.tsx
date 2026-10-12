@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { DocumentView } from '@/components/DocumentView'
 import { MethodFrame } from '@/components/MethodFrame'
 import type { Bundle } from '@/data/types'
+import { countryPath } from '@/utils/routes'
 
 /**
  * How every printed fact was checked by the model that did not write it (#87): the EU-27 appendix at
@@ -19,9 +20,9 @@ export function FactCheck({ bundle }: { bundle: Bundle }) {
   const name = code ? bundle.documents[code]?.name : undefined
   return (
     <MethodFrame title={`Fact check${name ? `: ${name}` : ''}`} sections={doc.sections}>
-      {name && (
+      {name && code && (
         <p className="mb-4 text-sm">
-          <Link to={`/country/${code}`} className="underline">
+          <Link to={countryPath(code)} className="underline">
             Back to {name}
           </Link>{' '}
           ·{' '}

@@ -6,7 +6,7 @@
  */
 import { expect, test } from '@playwright/test'
 
-const PAGES = ['/', '/country/DE', '/methodology', '/fact-check/DE']
+const PAGES = ['/', '/de', '/methodology', '/fact-check/DE']
 
 test.skip(
   ({ browserName }) => browserName !== 'chromium' || process.platform !== 'darwin',
@@ -35,7 +35,7 @@ for (const scheme of ['light', 'dark'] as const) {
   })
 }
 
-for (const route of ['/', '/country/DE']) {
+for (const route of ['/', '/de']) {
   test(`${route} at 375 px`, async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 })
     await page.goto(route)

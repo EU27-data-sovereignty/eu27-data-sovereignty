@@ -2755,3 +2755,41 @@ has rows or is dropped from the enum; or a state publishes an appliance programm
 which point the claim moves into the sourcing ledger and the note becomes a pointer; or the second-model review
 finds a quotation the cited page does not support, in which case the line is corrected or marked.
 
+### 103. A member state's page is its code as a top-level path, `/de`, not a subdomain
+**Decision.** 2026-10-12, at the owner's request. The web app serves each member state at
+`https://eu27.cloud/<iso>`, the bundle's ISO code in lower case (`/de`, `/fr`, `/el`; Greece is `EL` because the
+registers key on Eurostat's codes). `/country/<ISO>`, the route since the first deploy, is a permanent redirect
+in `vercel.json` and in the router; an upper-case code redirects to the lower-case one; a two-letter segment
+that is not one of the 27 is not found. Every link to a country page is built by `countryPath` in
+`web/src/utils/routes.ts`. No other top-level route may be a bare two-letter segment:
+`tests/test_vercel_config.py` fails on a redirect or rewrite source that is one, and the router lists the
+static routes before `:iso` so that `/ask` and `/map` keep their meaning.
+
+**Problem.** The owner wants an address per country that can be said aloud and typed, for outreach to each
+state's offices (`OUTREACH.md`). `/country/DE` carries a word a reader has to remember and a code they have to
+capitalise, and the posters and PDFs that travel alone need a short address to print.
+
+**Alternatives considered.**
+- **A top-level path per code, lower case, old path redirected (chosen).**
+- **A subdomain per state, `de.eu27.cloud`.** *Why not:* twenty-seven hostnames on one Vercel project need a
+  wildcard certificate and DNS record, a second CSP origin for the bundle fetch or a copy of the bundle per
+  host, and a redirect for every cross-country link; the smoke test (#92) and `/ask` would have to know the
+  host; and the owner's example was a path, `eu27.cloud/de`.
+- **Keep `/country/<ISO>` and add `/<iso>` as an alias.** *Why not:* two addresses for one page split the
+  links that readers share and the visual baselines, and the app would still print the long one somewhere.
+- **Upper-case codes, `/DE`.** *Why not:* a typed address is lower case by habit, and two spellings of one page
+  need one to be canonical anyway; the redirect makes it the lower-case one.
+
+**Closes off.** Any future two-letter top-level route (`/en` for a language switch, `/eu` for the overview):
+the segment is a country or nothing. Any output that prints `/country/<ISO>` as the address.
+
+**Verified:** 2026-10-12. `npx playwright test e2e/app.spec.ts --project chrome -g "#103"`: `4 passed`
+(the old path lands on `/de`; `/EL` redirects to `/el`; `/uk` is not found; `/countries` links 27 code
+paths and none under `/country/`). `python3 -m unittest tests.test_vercel_config tests.test_smoke`:
+`Ran 14 tests, OK`. `tsc --noEmit`, `eslint .`, `prettier --check .` and `vitest run` (51 tests) pass in
+`web/`. Not yet verified on the live site: the Vercel redirect answers only after the next production deploy;
+`model/smoke.py` checks `/de` and `/nl` from then on.
+
+*Would change if:* the site gains a language switch or any other two-letter top-level route, in which case
+the countries move under a prefix again and this entry is superseded; or a state's code changes in the
+registers, in which case the old code joins the redirect list.

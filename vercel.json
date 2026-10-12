@@ -28,6 +28,9 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }]
     }
   ],
-  "redirects": [{ "source": "/briefs/:iso.pdf", "destination": "/report/:iso.pdf", "permanent": true }],
+  "redirects": [
+    { "source": "/briefs/:iso.pdf", "destination": "/report/:iso.pdf", "permanent": true },
+    { "source": "/country/:iso", "destination": "/:iso", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index" }]
 }
