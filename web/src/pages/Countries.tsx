@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { coverage, factCounts, spans } from '@/data/sources'
 import type { Bundle } from '@/data/types'
+import type { ReportSection } from '@/components/AudienceSelector'
 import { PageBand } from '@/components/PageBand'
 import { CARD, Dots, FIELD, Bar, Segmented } from '@/components/ui'
 
@@ -15,6 +16,13 @@ type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 export function Countries({ bundle }: { bundle: Bundle }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('name')
+  // A task chosen on the front page ("I need to…") names the section of the report to open (#101).
+  const section = (useLocation().state as { section?: ReportSection } | null)?.section
+  // Its heading, in the report's own words, from any country's document.
+  const sectionTitle = section
+    ? Object.values(bundle.documents)[0]?.sections.find(s => s.id === section)?.title
+    : undefined
+  const report = (iso: string) => `/country/${iso}${sectionTitle ? `#${section}` : ''}`
 
   const rows = useMemo(() => {
     const all = Object.values(bundle.countries).map(c => {
@@ -44,6 +52,14 @@ export function Countries({ bundle }: { bundle: Bundle }) {
           they are not a ranking of how sovereign a state is.
         </p>
       </PageBand>
+      {sectionTitle ? (
+        <p
+          role="status"
+          className="mb-5 rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm font-medium"
+        >
+          Choose a member state to open its report at “{sectionTitle}”.
+        </p>
+      ) : null}
       <div className="mb-5 flex flex-wrap items-center gap-3">
         <label htmlFor="country-search" className="sr-only">
           Find a country
@@ -79,7 +95,7 @@ export function Countries({ bundle }: { bundle: Bundle }) {
           >
             <div className="flex items-baseline justify-between gap-3">
               <h2 className="font-display text-xl font-bold">
-                <Link to={`/country/${c.iso2}`} className="hover:underline">
+                <Link to={report(c.iso2)} className="hover:underline">
                   {c.name}
                 </Link>
               </h2>

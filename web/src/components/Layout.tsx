@@ -1,4 +1,5 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom'
 
 import { ProvenanceNotice } from './ProvenanceNotice'
 import { CORRECTIONS_URL } from '@/data/contribute'
@@ -18,7 +19,22 @@ const NAV = [
 
 export function Layout({ generated, provenance }: { generated: string; provenance: string }) {
   const [mode, setMode] = useTheme()
-  const home = useLocation().pathname === '/'
+  const { pathname, hash } = useLocation()
+  const home = pathname === '/'
+
+  // A client-side route change neither scrolls to a #section nor returns to the top, as a page load would.
+  // Do both, one frame later, once the new page has rendered. Back and forward keep the browser's own
+  // restored position.
+  const back = useNavigationType() === 'POP'
+  useEffect(() => {
+    if (back && !hash) return
+    const frame = requestAnimationFrame(() => {
+      const target = hash ? document.getElementById(hash.slice(1)) : null
+      if (target) target.scrollIntoView()
+      else window.scrollTo(0, 0)
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [pathname, hash, back])
 
   return (
     <div className="min-h-screen">

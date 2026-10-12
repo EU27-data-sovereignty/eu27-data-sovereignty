@@ -7,6 +7,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Changed: "I need to…" lists six tasks, each linked to its page (#101)
+
+- **The toggle now changes the options.** Under "I need to…" the six audience buttons give way to six tasks:
+  Check my country's exposure, Decide what to migrate first, Write tender criteria that hold up, Turn gaps into
+  formal questions, Compare how peers host a register, Plan for a provider cut-off.
+- **Where they lead.** Tender criteria opens the indicator grid on the ranking page; peer comparison opens
+  Critical holdings; provider cut-off opens Hosting. Exposure, migration order and gaps live inside a country's
+  report, so they open Countries with a line saying which section comes next, and a country then opens at
+  "Foreign-dependency exposure", "Critical data holdings, by priority" or "Research still open".
+- **"I am…" is unchanged:** its six audiences can be marked and lead nowhere yet.
+- **Navigation.** Moving to another page now starts at its top, or at the linked section; Back and Forward keep
+  the browser's own position.
+
 ### Changed: the front page opens its content on a free-form Ask box (#101)
 
 - **"Hello, Europe".** Under the audience selector, the first section is now the question box: the headline, the

@@ -252,7 +252,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         </section>
       ) : null}
 
-      <section aria-label="Indicators">
+      <section id="indicators" aria-label="Indicators" className="scroll-mt-6">
         <h2 className="mb-2 font-display font-bold text-xl text-[var(--color-accent-text)]">
           The indicators
         </h2>

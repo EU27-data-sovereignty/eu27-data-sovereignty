@@ -2690,6 +2690,13 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
   (the provenance text contains the disclaimer word for word) rather than `Overview.tsx`. `TileMap` is kept
   unused.
 
+- **"I need to…" gets its content.** Six tasks, worded by the requester from a note on use cases for decision
+  makers, each a link to the page that serves it today (`NEEDS` in `AudienceSelector`): the indicator grid,
+  Critical holdings, Hosting, and, for the three tasks that live inside a country report, Countries with the
+  section to open carried as router state. The labels "exposure" and "migrate first" are the requester's choice
+  over a softer wording; the pages they open still count evidence and prescribe nothing (#77). "I am…" still
+  opens nothing.
+
 **Problem.** #99's look (night navy, bright EU gold, the silhouette artwork behind every band) was a first brand
 pass. The landing design that followed is light, quieter with gold, set in one typeface, and opens the front page
 on who the reader is rather than on the dataset.

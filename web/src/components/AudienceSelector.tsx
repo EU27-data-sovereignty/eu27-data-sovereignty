@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 
 export type EntryMode = 'role' | 'need'
 
@@ -101,6 +102,112 @@ const AUDIENCES: { id: AudienceId; label: [string, string?]; icon: ReactNode }[]
   },
 ]
 
+/** A section of a country report a task opens at; Countries reads it from the link's state. */
+export type ReportSection = 'exposure' | 'holdings' | 'gaps'
+
+/**
+ * The six tasks behind "I need to…" (#101), from the use cases written for decision makers. Each leads to
+ * the page that serves it today. Three of them live inside a country's report, so they go to Countries and
+ * say which section to open once a state is chosen.
+ */
+const NEEDS: {
+  id: string
+  label: [string, string]
+  to: string
+  section?: ReportSection
+  icon: ReactNode
+}[] = [
+  {
+    id: 'exposure',
+    label: ['Check my country’s', 'exposure'],
+    to: '/countries',
+    section: 'exposure',
+    icon: (
+      <>
+        <path
+          d="M15 5c-4.4 0-8 3.4-8 7.7C7 18.500 15 26 15 26s8-7.5 8-13.300C23 8.400 19.400 5 15 5z"
+          {...STROKE}
+        />
+        <circle cx="15" cy="12.5" r="2.6" {...STROKE} />
+        <circle cx="25.500" cy="25.500" r="4.200" {...STROKE} />
+        <path d="M28.600 28.600l3.400 3.400" {...STROKE} />
+      </>
+    ),
+  },
+  {
+    id: 'migrate',
+    label: ['Decide what to', 'migrate first'],
+    to: '/countries',
+    section: 'holdings',
+    icon: (
+      <>
+        <path d="M14 9h17 M14 18h17 M14 27h17" {...STROKE} />
+        <path
+          d="M4.500 7.500l2-1.500v6 M4 16.200c1.500-1.400 4-.6 4 1.200 0 1.400-2 2.200-4 3.800h4.200 M4.200 24.800c1.500-.9 3.800-.4 3.800 1.100 0 1-1 1.500-2 1.500 1.200 0 2.200.6 2.200 1.700 0 1.700-2.700 2.100-4.200 1"
+          {...STROKE}
+          strokeWidth={1.5}
+        />
+      </>
+    ),
+  },
+  {
+    id: 'tender',
+    label: ['Write tender criteria', 'that hold up'],
+    to: '/sovereignty#indicators',
+    icon: (
+      <>
+        <path d="M9 4h13l6 6v22H9z M22 4v6h6" {...STROKE} />
+        <path d="M13.500 21l3.500 3.500 6.500-7.500" {...STROKE} />
+      </>
+    ),
+  },
+  {
+    id: 'questions',
+    label: ['Turn gaps into', 'formal questions'],
+    to: '/countries',
+    section: 'gaps',
+    icon: (
+      <>
+        <path d="M5 7h26v18H17l-7 6v-6H5z" {...STROKE} />
+        <path
+          d="M14.500 13.200a3.500 3.300 0 1 1 5 3c-1.100.7-1.500 1.300-1.500 2.300 M18 21.600v.2"
+          {...STROKE}
+        />
+      </>
+    ),
+  },
+  {
+    id: 'compare',
+    label: ['Compare how peers', 'host a register'],
+    to: '/holdings',
+    icon: (
+      <>
+        <rect x="5" y="6" width="11" height="24" rx="1.5" {...STROKE} />
+        <rect x="20" y="6" width="11" height="24" rx="1.5" {...STROKE} />
+        <path
+          d="M8.500 12h4 M8.500 17h4 M8.500 22h4 M23.500 12h4 M23.500 17h4 M23.500 22h4"
+          {...STROKE}
+        />
+      </>
+    ),
+  },
+  {
+    id: 'cut-off',
+    label: ['Plan for a', 'provider cut-off'],
+    to: '/infrastructure',
+    icon: (
+      <>
+        <path
+          d="M15 21l-3.500 3.500a4.900 4.900 0 0 1-7-7L8 14 M21 15l3.500-3.500a4.900 4.900 0 0 1 7 7L28 22"
+          {...STROKE}
+          transform="translate(-0.500 0)"
+        />
+        <path d="M14 8l1 3.500 M8 14l3.500 1 M22 28l-1-3.500 M28 22l-3.500-1" {...STROKE} />
+      </>
+    ),
+  },
+]
+
 const SEGMENTS: { mode: EntryMode; label: string; icon: ReactNode }[] = [
   {
     mode: 'role',
@@ -136,10 +243,43 @@ const SEGMENTS: { mode: EntryMode; label: string; icon: ReactNode }[] = [
   },
 ]
 
+const CHIP =
+  'on-navy flex min-h-[70px] items-center gap-3.5 rounded-[18px] border px-4 py-2.5 text-left text-sm leading-[1.35] font-medium text-white transition-colors hover:border-[var(--color-eu-gold)] hover:bg-[var(--color-navy-hover)]'
+
+function Icon({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+      aria-hidden="true"
+      className="flex-none text-[var(--color-icon-on-navy)]"
+    >
+      {children}
+    </svg>
+  )
+}
+
+/** A label in one or two lines; the break is forced only where the buttons are wide enough for it. */
+function Label({ lines }: { lines: [string, string?] }) {
+  return (
+    <span>
+      {lines[0]}
+      {lines[1] ? (
+        <>
+          {' '}
+          <br className="hidden sm:block" />
+          {lines[1]}
+        </>
+      ) : null}
+    </span>
+  )
+}
+
 /**
- * The audience selector band under the hero (#101). This pass it is a control without a destination: the
- * toggle switches its own state and an audience can be marked, but no content panel exists yet, and none
- * is invented here. `onSelect` and the returned state are the hooks a later panel attaches to.
+ * The selector band under the hero (#101). "I am…" lists six audiences: one can be marked, and `onSelect`
+ * reports it, but no page exists for an audience yet and none is invented here. "I need to…" lists six tasks,
+ * each a link to the page that serves it today.
  */
 export function AudienceSelector({
   onSelect,
@@ -195,39 +335,34 @@ export function AudienceSelector({
           aria-label="Entry points"
           className="mt-[26px] grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-2.5"
         >
-          {AUDIENCES.map(a => (
-            <button
-              key={a.id}
-              type="button"
-              aria-pressed={audience === a.id}
-              onClick={() => choose({ mode, audience: audience === a.id ? null : a.id })}
-              className={`on-navy flex min-h-[70px] items-center gap-3.5 rounded-[18px] border px-4 py-2.5 text-left text-sm leading-[1.35] font-medium text-white transition-colors hover:border-[var(--color-eu-gold)] hover:bg-[var(--color-navy-hover)] ${
-                audience === a.id
-                  ? 'border-[var(--color-eu-gold)] bg-[var(--color-navy-hover)]'
-                  : 'border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]'
-              }`}
-            >
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                aria-hidden="true"
-                className="flex-none text-[var(--color-icon-on-navy)]"
-              >
-                {a.icon}
-              </svg>
-              <span>
-                {a.label[0]}
-                {a.label[1] ? (
-                  <>
-                    {' '}
-                    <br className="hidden sm:block" />
-                    {a.label[1]}
-                  </>
-                ) : null}
-              </span>
-            </button>
-          ))}
+          {mode === 'role'
+            ? AUDIENCES.map(a => (
+                <button
+                  key={a.id}
+                  type="button"
+                  aria-pressed={audience === a.id}
+                  onClick={() => choose({ mode, audience: audience === a.id ? null : a.id })}
+                  className={`${CHIP} ${
+                    audience === a.id
+                      ? 'border-[var(--color-eu-gold)] bg-[var(--color-navy-hover)]'
+                      : 'border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]'
+                  }`}
+                >
+                  <Icon>{a.icon}</Icon>
+                  <Label lines={a.label} />
+                </button>
+              ))
+            : NEEDS.map(n => (
+                <Link
+                  key={n.id}
+                  to={n.to}
+                  state={n.section ? { section: n.section } : undefined}
+                  className={`${CHIP} border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]`}
+                >
+                  <Icon>{n.icon}</Icon>
+                  <Label lines={n.label} />
+                </Link>
+              ))}
         </div>
       </div>
     </section>

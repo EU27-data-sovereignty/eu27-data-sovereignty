@@ -288,6 +288,35 @@ test.describe('ranking', () => {
   })
 })
 
+test.describe('entry points (#101)', () => {
+  test('"I need to…" swaps the audiences for six tasks, each leading to its page', async ({
+    page,
+  }) => {
+    await page.goto('/')
+    const entries = page.getByRole('group', { name: 'Entry points' })
+    await expect(entries.getByRole('button')).toHaveCount(6)
+    await page.getByRole('button', { name: /I need to/ }).click()
+    await expect(entries.getByRole('link')).toHaveCount(6)
+    await entries.getByRole('link', { name: /Compare how peers host a register/ }).click()
+    await expect(page).toHaveURL(/\/holdings$/)
+    await expect(page.getByRole('heading', { name: 'Critical holdings', level: 1 })).toBeVisible()
+  })
+
+  test('a task that lives in a country report opens the chosen country at that section', async ({
+    page,
+  }) => {
+    await page.goto('/')
+    await page.getByRole('button', { name: /I need to/ }).click()
+    await page.getByRole('link', { name: /Turn gaps into formal questions/ }).click()
+    await expect(page).toHaveURL(/\/countries$/)
+    const title = BUNDLE.documents.DE!.sections.find(s => s.id === 'gaps')!.title
+    await expect(page.getByRole('status')).toContainText(title)
+    await page.getByRole('link', { name: 'Germany', exact: true }).click()
+    await expect(page).toHaveURL(/\/country\/DE#gaps$/)
+    await expect(page.locator('#gaps')).toBeInViewport()
+  })
+})
+
 test.describe('ask', () => {
   /** A recorded answer stream, so CI never calls the API. The cited claim is a real one. */
   const claim = Object.keys(BUNDLE.claims)[0]!

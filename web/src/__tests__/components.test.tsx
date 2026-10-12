@@ -5,6 +5,7 @@
  * and a single h1, and the audience selector is real buttons that report their choice (#101).
  */
 import { render, renderHook, act, screen, fireEvent } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
 import { describe, expect, it, beforeEach, vi } from 'vitest'
 
 import { AudienceSelector } from '../components/AudienceSelector'
@@ -79,8 +80,15 @@ describe('DocumentView', () => {
 })
 
 describe('AudienceSelector', () => {
+  const selector = (onSelect?: Parameters<typeof AudienceSelector>[0]['onSelect']) =>
+    render(
+      <MemoryRouter>
+        <AudienceSelector onSelect={onSelect} />
+      </MemoryRouter>,
+    )
+
   it('opens on "I am…" and switches the toggle with real pressed buttons', () => {
-    render(<AudienceSelector />)
+    selector()
     const group = screen.getByRole('group', { name: 'Choose entry by' })
     const [role, need] = [...group.querySelectorAll('button')]
     expect(role).toHaveAttribute('aria-pressed', 'true')
@@ -92,7 +100,7 @@ describe('AudienceSelector', () => {
 
   it('offers the six audiences as buttons and reports a choice, without opening anything', () => {
     const onSelect = vi.fn()
-    render(<AudienceSelector onSelect={onSelect} />)
+    selector(onSelect)
     const entries = screen.getByRole('group', { name: 'Entry points' })
     expect(entries.querySelectorAll('button')).toHaveLength(6)
     fireEvent.click(screen.getByRole('button', { name: /EU institutions/ }))
@@ -101,6 +109,25 @@ describe('AudienceSelector', () => {
       'aria-pressed',
       'true',
     )
+  })
+
+  it('swaps the audiences for six tasks under "I need to…", each a link to its page', () => {
+    selector()
+    fireEvent.click(screen.getByRole('button', { name: /I need to/ }))
+    const entries = screen.getByRole('group', { name: 'Entry points' })
+    expect(entries.querySelectorAll('button')).toHaveLength(0)
+    const links = [...entries.querySelectorAll('a')].map(a => [
+      a.textContent?.replace(/\s+/g, ' ').trim(),
+      a.getAttribute('href'),
+    ])
+    expect(links).toEqual([
+      ['Check my country’s exposure', '/countries'],
+      ['Decide what to migrate first', '/countries'],
+      ['Write tender criteria that hold up', '/sovereignty#indicators'],
+      ['Turn gaps into formal questions', '/countries'],
+      ['Compare how peers host a register', '/holdings'],
+      ['Plan for a provider cut-off', '/infrastructure'],
+    ])
   })
 })
 
