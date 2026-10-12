@@ -19,6 +19,28 @@ What changed and when. Reasoning for the choices behind these changes lives in
   underline, the selector band, link underlines and focus rings on navy.
 - **Every page.** Page bands take the hero's gradient and EU silhouette; tables, chips, bars and buttons take the
   new tokens. The PDFs and the mobile constants take the new brand colours through the same tokens.
+- **Housekeeping.** The six brand images of the #99 design are removed; `artifacts/STYLE.md` lists the new token
+  values; two unit tests cover the selector.
+- **Tests.** A browser test that taps a link far down a page now waits for the page to settle first (the link
+  rendered, the network idle, the fonts in): on the iPhone 17 Pro profile the tap still missed about 1 time in 40.
+
+## 2026-10-09
+
+### Fixed: pages no longer shift under a tap
+
+- **What failed.** The deploy of the methodology and fact-check graphics stopped on one iPhone 17 Pro browser
+  test: a tap on a link did not navigate. The test had been failing about 1 run in 4 since the #99 redesign; the
+  page moved between scrolling to the link and tapping it.
+- **Logo images** in the header and footer now carry their width and height, so the navigation no longer rewraps
+  on a phone when they load.
+- **Report previews** on the front page load up front rather than lazily, so a missing one is removed before a
+  reader scrolls past it.
+- **The test** waits for the web fonts before each tap.
+
+### Changed: methodology and fact-check graphics shipped
+
+- The graphics listed under #99 below (bars, the priority formula, the placement ladder, the writer/checker pairs,
+  the check timeline, verdict bars, per-state totals) went live with this fix.
 
 ## 2026-10-08
 
@@ -52,6 +74,34 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Methodology and fact-check graphics.** Count tables become bar charts; the priority rule becomes a formula; the
   placement rules a numbered ladder; who checks whom a set of pairs; how a check runs a timeline; each fact-check
   run gets a verdict bar; the per-state table gets totals and bars. All drawn from the documents' own data.
+
+
+### Added: a static mockup of the redesign
+
+- `mockups/eu27-redesign/`: the nine pages of the proposed design as static HTML, with their own README. It sits
+  outside the build; nothing in `web/`, the content model or the deploy reads it. Its sources file lists each
+  document hash first, so the secret scan no longer mistakes one for a key.
+
+### Changed: the provenance notice moves from a top banner into the footer
+
+- The machine-checked notice opens the footer of every page, in full at every width, with the generated date and
+  the methodology and fact-check links. It still prints. `ProvenanceBanner.tsx` becomes `ProvenanceNotice.tsx`.
+
+### Fixed: the Sources legend, the PDF gate in CI, an address in ROADMAP.md
+
+- **Sources.** Each legend swatch sits inside its `<dt>`: the bare element failed the accessibility test and had
+  blocked a deploy.
+- **CI.** `gate.yml` and `monitor.yml` refresh the apt index before installing `poppler-utils`; the runner image
+  pointed at a version the mirrors no longer serve, which failed the PDF gate.
+- **ROADMAP.md** describes a personal email address instead of quoting it, as the security gate requires.
+
+### Changed: two mobile dependencies patched, five alerts dismissed
+
+- `mobile/package-lock.json`: `shell-quote` 1.12.0 and `source-map-js` 1.2.2, closing Dependabot alerts 21
+  (critical) and 19 (high). Only their two lockfile entries change.
+- Five further alerts on `mobile/` (`braces`, `node-forge`, `sprintf-js`, `decode-uri-component`, `uuid`) are
+  dismissed on GitHub as tolerable risk: no patched version exists or the fix needs a major version its parent
+  does not accept, and `mobile/` is local-only and ships nowhere.
 
 ## 2026-10-07
 
