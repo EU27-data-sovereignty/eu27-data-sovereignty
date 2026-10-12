@@ -142,7 +142,7 @@ export function EuMap({
             <path
               d={d}
               fill="none"
-              stroke={selected === iso ? 'var(--color-highlight)' : 'var(--color-bg-page)'}
+              stroke={selected === iso ? 'var(--color-accent)' : 'var(--color-bg-page)'}
               strokeWidth={selected === iso ? 2.5 : 0.8}
             />
           </g>

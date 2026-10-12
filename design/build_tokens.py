@@ -71,12 +71,11 @@ def css(tokens: dict) -> str:
     lines += [f"  --color-{kebab(k)}: {v};" for k, v in tokens["brand"].items()]
     lines += [f"  --color-{kebab(k)}: {v};" for k, v in light.items()]
     lines += [f"  --text-{k}: {v}px;" for k, v in px.items() if k in ("axis", "body", "stat")]
-    # The print serif, for display type on the web too: the site and the PDFs share one voice.
-    serif = ", ".join(f'"{n}"' if " " in n else n for n in tokens["type"]["print_family"]) + ", serif"
-    lines += [f"  --font-serif: {serif};"]
-    # The EU27.CLOUD display sans, for headings and the page bands.
+    # One family on the web (#101): Manrope for body, display and what used to be the print serif. The PDFs keep
+    # their own print family through tokens.typ.
+    web = ", ".join(f'"{n}"' if " " in n else n for n in tokens["type"]["web_family"])
     display = ", ".join(f'"{n}"' if " " in n else n for n in tokens["type"]["display_family"])
-    lines += [f"  --font-display: {display};"]
+    lines += [f"  --font-sans: {web};", f"  --font-serif: {display};", f"  --font-display: {display};"]
     # Tailwind's `rounded` reads --radius.
     lines += [f"  --radius: {tokens['shape']['radius_px']}px;"]
     lines += ["}", ""]

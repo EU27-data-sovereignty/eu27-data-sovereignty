@@ -3,7 +3,9 @@ import { useMemo, useState } from 'react'
 import { SourceList } from '@/components/SourceList'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
-import { CARD, FIELD } from '@/components/ui'
+import { BUTTON_OUTLINE, CARD, FIELD } from '@/components/ui'
+
+const PAGE = 20
 
 const TIERS: [number, string][] = [
   [1, 'T1 · authoritative original'],
@@ -53,6 +55,8 @@ export function Sources({ bundle }: { bundle: Bundle }) {
   const [iso, setIso] = useState('')
   const [tier, setTier] = useState('')
   const [grade, setGrade] = useState('')
+  // Entries beyond the limit are hidden, not unmounted: every source stays in the list and keeps its number.
+  const [limit, setLimit] = useState(PAGE)
 
   const ids = Object.keys(bundle.sources).sort((a, b) =>
     bundle.sources[a]!.title.localeCompare(bundle.sources[b]!.title),
@@ -108,7 +112,12 @@ export function Sources({ bundle }: { bundle: Bundle }) {
       )
     }),
   )
-  const shown = ids.length - hidden.size
+  const matching = ids.filter(sid => !hidden.has(sid))
+  for (const sid of matching.slice(limit)) hidden.add(sid)
+  const shown = Math.min(limit, matching.length)
+  const strong = Object.values(bundle.claims).filter(cs =>
+    cs.some(c => c.grade !== 'Standard'),
+  ).length
   const names = Object.fromEntries(Object.values(bundle.countries).map(c => [c.iso2, c.name]))
 
   return (
@@ -119,9 +128,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
         facts={[
           [ids.length.toLocaleString('en'), 'checked sources'],
           [Object.keys(bundle.claims).length.toLocaleString('en'), 'claims they support'],
+          [strong.toLocaleString('en'), 'claims graded Strong or better'],
         ]}
       >
-        <p className="mt-3 max-w-3xl text-white/85">
+        <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
           {ids.length} sources support {Object.keys(bundle.claims).length} claims. A source is
           admitted only after its document was fetched, its SHA-256 recorded and the quoted text
           found in it; failures stay out and are recorded in the repository.
@@ -135,10 +145,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
             label,
             tierCounts[i]!,
             [
-              'var(--color-eu-gold)',
-              'color-mix(in srgb, var(--color-eu-gold) 55%, var(--color-bg-emphasis))',
+              'var(--color-rank-1)',
               'var(--color-rank-2)',
-              'var(--color-fg-muted)',
+              'var(--color-rank-3)',
+              'var(--color-baseline)',
             ][i]!,
           ])}
         />
@@ -148,10 +158,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
             g,
             n,
             g === 'Verified'
-              ? 'var(--color-eu-blue)'
+              ? 'var(--color-rank-1)'
               : g === 'Strong'
-                ? 'var(--color-eu-gold)'
-                : 'color-mix(in srgb, var(--color-eu-gold) 35%, var(--color-bg-emphasis))',
+                ? 'var(--color-rank-2)'
+                : 'var(--color-rank-3)',
           ])}
         />
       </div>
@@ -164,7 +174,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
           id="source-search"
           type="search"
           value={query}
-          onChange={e => setQuery(e.target.value)}
+          onChange={e => {
+            setQuery(e.target.value)
+            setLimit(PAGE)
+          }}
           placeholder="Search titles, publishers, quotes or holdings"
           className={`${FIELD} min-w-0 flex-[1_1_18rem]`}
         />
@@ -174,7 +187,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
         <select
           id="source-country"
           value={iso}
-          onChange={e => setIso(e.target.value)}
+          onChange={e => {
+            setIso(e.target.value)
+            setLimit(PAGE)
+          }}
           className={FIELD}
         >
           <option value="">All countries</option>
@@ -192,7 +208,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
         <select
           id="source-tier"
           value={tier}
-          onChange={e => setTier(e.target.value)}
+          onChange={e => {
+            setTier(e.target.value)
+            setLimit(PAGE)
+          }}
           className={FIELD}
         >
           <option value="">All tiers</option>
@@ -208,7 +227,10 @@ export function Sources({ bundle }: { bundle: Bundle }) {
         <select
           id="source-grade"
           value={grade}
-          onChange={e => setGrade(e.target.value)}
+          onChange={e => {
+            setGrade(e.target.value)
+            setLimit(PAGE)
+          }}
           className={FIELD}
         >
           <option value="">All grades</option>
@@ -217,13 +239,20 @@ export function Sources({ bundle }: { bundle: Bundle }) {
         </select>
       </div>
       <p aria-live="polite" className="text-sm text-[var(--color-fg-muted)] tabular-nums">
-        {hidden.size
-          ? shown
-            ? `Showing ${shown.toLocaleString('en')} of ${ids.length.toLocaleString('en')} sources`
-            : 'No source matches these filters.'
-          : `All ${ids.length.toLocaleString('en')} sources`}
+        {matching.length
+          ? `Showing ${shown.toLocaleString('en')} of ${matching.length.toLocaleString('en')}${
+              matching.length < ids.length ? ' matching' : ''
+            } sources`
+          : 'No source matches these filters.'}
       </p>
       <SourceList bundle={bundle} numbers={numbers} claims={claims} hidden={hidden} />
+      {matching.length > limit ? (
+        <div className="mt-5 flex justify-center">
+          <button type="button" onClick={() => setLimit(l => l + PAGE)} className={BUTTON_OUTLINE}>
+            Show {Math.min(PAGE, matching.length - limit)} more
+          </button>
+        </div>
+      ) : null}
     </article>
   )
 }

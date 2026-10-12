@@ -2550,6 +2550,8 @@ or GitHub runners are refused by so many hosts that the recheck covers too few s
 would run from a machine the owner controls.
 
 ### 99. The web app takes the EU27.CLOUD brand: badge, wordmark, map bands and a night-navy palette
+**Superseded in part by #101** (2026-10-12): the palette, type, header and front-page top are replaced by the
+landing design. The page layouts, the method graphics and the exception to #76 stand.
 **Decision.** 2026-10-08, at the request of Marco Buhlmann (repository admin), who chose to ship the design as is
 and record it here rather than drop its official-looking parts. The web app (`web/`) now shows:
 - **Brand marks.** The EU27.CLOUD badge (a "27" inside a ring of stars) and wordmark in the header, the full lockup
@@ -2573,7 +2575,14 @@ and record it here rather than drop its official-looking parts. The web app (`we
   filters; the ranking's groups as a ladder and its findings as pills; Hosting as cards grouped by state with a
   dependency filter (`HostingCards`, the table's own spans through `DocumentView`'s new `tables` hook); Sources
   with tier and grade distributions and filters that hide entries without renumbering them; Ask beside its
-  examples; method pages with a contents list. No page states a fact the bundle does not.
+  examples; method pages with a contents list. No page states a fact the bundle does not. The ranking's line under
+  each group is the methodology's own rule text (`model/methodology.py`), found by the group's label, not
+  restated in the web app.
+- **Method graphics.** The methodology and fact-check pages draw their own blocks through `DocumentView`'s
+  `blocks` hook (`web/src/utils/methodBlocks.tsx`, `components/MethodGraphics.tsx`): count tables as bars, the
+  priority rule as a formula cut from its own text, the placement rules as a numbered ladder, the writer/checker
+  table as pairs, the check steps as a timeline, each run's verdicts as a bar, and the per-state table's own
+  columns summed into tiles. The PDFs keep the plain tables; the words and numbers are the generated documents'.
 
 The design was reviewed as a static mockup first (`mockups/eu27-redesign/`).
 
@@ -2650,6 +2659,142 @@ are verified after they are carried out, by `gh repo view`, the Vercel project's
 
 *Would change if:* the project's scope narrows back to hosting infrastructure alone, or the org is renamed.
 
+### 101. The web app takes the landing design: a light navy-and-gold palette, Manrope, a new hero and an audience selector
+**Decision.** 2026-10-12, at the request of Marco Buhlmann, from a written brief and a static reference page
+(`reference.html`, kept outside the repository). The web app now shows:
+- **Tokens** (`design/tokens.json`, generated). Brand blue `#1E3A8A`, navy `#0B1B3F`, gold `#F2C230`; light page
+  `#F4F6FA`, body text `#374151`, borders `#D1D5DB`; dark page `#0B1B3F`, cards `#13265A`, text `#E6EAF3`. New
+  tokens: `navy_surface`, `navy_border`, `navy_hover`, `icon_on_navy` (brand) and `hero_from`, `hero_to`, `band`,
+  `map_fill`, `gap_mark` (per theme). `night` is removed. No value of the #99 palette remains in `web/`.
+- **Gold** only in the hero underline, the active toggle segment, the EU-institutions icon, the audience buttons'
+  hover and selected border, link underlines and focus rings on navy. Bars, meters, chips and buttons that were
+  gold are brand blue (`accent_text`, `eu_blue`).
+- **Type.** One family, Manrope (`@fontsource/manrope` 5.3.0, self-hosted; Latin, Latin Extended, Greek and
+  Cyrillic). `--font-sans`, `--font-serif` and `--font-display` all resolve to it. Montserrat and Libertinus Serif
+  leave the web app; the PDFs keep their print family.
+- **Header.** White, 68 px, a soft shadow: the badge (62 px), a divider, the wordmark with its tagline (36 px),
+  the nine existing navigation links, an "EN" language button that does nothing yet, and the theme toggle.
+- **Front page.** A hero ("Navigate Cloud Sovereignty", "Understand. Comply. Decide. Stay sovereign.") over a pale
+  gradient with a dot texture, the EU silhouette, a circle outline and a blue disc with twelve gold stars. Under
+  it, an audience selector band: an "I am… / I need to…" toggle and six audience buttons (`AudienceSelector`).
+  The selector records a choice (`onSelect`) and opens nothing: no page or panel exists for an audience yet. The
+  question box, the tile map of the 27 and the evidence meters move below the band, unchanged in function.
+- **Every other page.** `PageBand` takes the hero's gradient, dots and silhouette; method pages are a solid
+  method-teal band (#88). Tables get a `#EEF1F8` header with navy text and a 2 px blue rule. Links are brand blue,
+  navy on hover, underlined in gold. A disputed value's dashed rule is `#9AA8C4`.
+
+- **Amended the same day.** The front page's first section under the band is the Ask box alone ("Hello, Europe"),
+  free-form, and a question asked there is sent on arrival at `/ask`. The tile map, the dataset's title and
+  subtitle and the page's own copy of the machine-checked notice leave the front page; the footer's notice on
+  every page (#82, #83) is what remains of it there, and `tests/test_evidence.py` now checks that footer notice
+  (the provenance text contains the disclaimer word for word) rather than `Overview.tsx`. `TileMap` is kept
+  unused.
+
+- **"I need to…" gets its content.** Six tasks, worded by the requester from a note on use cases for decision
+  makers, each a link to the page that serves it today (`NEEDS` in `AudienceSelector`): the indicator grid,
+  Critical holdings, Hosting, and, for the three tasks that live inside a country report, Countries with the
+  section to open carried as router state. The labels "exposure" and "migrate first" are the requester's choice
+  over a softer wording; the pages they open still count evidence and prescribe nothing (#77). "I am…" still
+  opens nothing.
+
+**Problem.** #99's look (night navy, bright EU gold, the silhouette artwork behind every band) was a first brand
+pass. The landing design that followed is light, quieter with gold, set in one typeface, and opens the front page
+on who the reader is rather than on the dataset.
+
+**Alternatives considered.**
+- **Restyle through the tokens and rebuild the header and front-page top (chosen).** Every colour still comes
+  from `design/tokens.json`, so the contrast check and the "no hex in a component" test keep holding.
+- **Load Manrope from Google Fonts, as the reference page does.** *Why not:* the site's Content-Security-Policy
+  allows fonts from its own origin only (`vercel.json`), so the font would be blocked.
+- **Change only the web CSS and leave `tokens.json` alone.** *Why not:* #74 makes `tokens.json` the one source;
+  a web-only palette is the fork `tests/test_tokens.py` exists to stop. The cost is that the PDFs and the mobile
+  constants take the new brand colours too.
+- **Add the reference's navigation (About, Cloud Sovereignty, Resources, News & Events, Contact).** *Why not:*
+  those pages do not exist; the brief says to keep the working links and ask before adding placeholder routes.
+- **Write content for "I need to…" and for each audience.** *Why not:* out of the brief's scope, and a renderer
+  that writes content becomes a second source (#74).
+
+**Closes off.** The #99 palette and its two typefaces on the web. The front page no longer opens on the dataset's
+title and subtitle; they sit one screen down, as a section heading. The hero's flag disc is a ring of twelve
+stars on blue, which #76 forbade and #99 excepted for the web app only: the exception now covers the EU flag
+motif itself, and the footer's "not affiliated with any government or EU body" is still the only counter to it.
+The hero's wording ("Comply", "Decide") and the audience labels are the requester's and say more about purpose
+than #72/#73/#77 chose. The PDFs' covers and rules change colour with the brand tokens, without a redesign.
+
+**Verified:** locally on 2026-10-12:
+- `python3 design/build_tokens.py --check` exits 0 and every WCAG pair in `tokens.json` passes, including the
+  brief's own checks (brand blue on the selector band, body and accent text on the hero).
+- No hex value of the #99 palette is left in `web/src` or `web/index.html` (grep).
+- In `web/`: format, lint and type-check report nothing; 53 unit tests pass, two of them new, for the selector's
+  toggle and its six buttons.
+- Compared with the reference at 1440 px in a browser, in both themes; at 390 px the navigation wraps, the
+  headline scales down, the toggle stays on one line, the audience buttons fall to two columns and the page does
+  not scroll sideways.
+
+- The first deploy (`85d9e0e`) compiled the PDFs and passed Firefox, and failed on the front page's contrast check
+  in Chrome: tile-map tiles near the middle of the ramp gave their labels 4.3:1. The map now shades in four fixed
+  steps, each computed against its label in both themes (lowest 5.5:1); the accessibility tests pass three runs
+  in a row in both themes.
+
+*Would change if:* an audience or "I need to…" gets real content, which makes the selector a navigation and may
+move the dataset sections again; or the star disc draws an objection that the site implies EU endorsement, in
+which case the disc goes and #76 applies to the web app again.
+
+### 102. Twelve guide pages behind the front-page selector: advice in a data file, figures counted from the bundle
+**Decision.** 2026-10-12, at the request of Marco Buhlmann. Every button of the front page's selector now opens
+a page: `/for/:slug` for the six audiences under "I am…", `/how/:slug` for the six tasks under "I need to…".
+- **Words.** `web/src/data/guides.ts` holds each guide's title, lede, the situations it is for, its steps, what a
+  reader takes away and what the site does not do yet. They were drafted from the requester's note "Benefits and
+  Use Cases for Decision Makers" (2026-10-09). `web/src/pages/Guide.tsx` renders any of them.
+- **Figures.** A guide prints no number of its own. `web/src/data/guideFigures.ts` counts each figure from the
+  bundle when the page renders, from the spans the reports print, so a value the fact check withheld is not
+  counted; each figure links to the page where it can be checked.
+- **Links, not findings.** Every step is a link to an existing page. Steps that need a country carry the report
+  section to open (`exposure`, `holdings`, `gaps`) as router state through Countries.
+- **Left out of the note.** Its "data anchors" (named findings with fixed numbers), its cost comparison with a
+  consultancy assessment and its remark on competing assessments: fixed numbers go stale against the dataset, and
+  the last two have no checked source.
+- **The selector** (`AudienceSelector`) no longer marks an audience; both lists are links, and "I need to…" opens
+  a guide first rather than the destination page, as it did for a few hours under #101.
+
+**Problem.** The six audience buttons opened nothing, and the six task buttons jumped straight to a page without
+saying why. A reader arriving as "a procurement lead" had no account of what the site does for them.
+
+**Alternatives considered.**
+- **Guide text in a data file, one renderer, computed figures (chosen).** The words can be edited in one place
+  without touching layout, and no number is typed by hand.
+- **Generate the guides in `model/document.py` as documents, like the methodology.** *Why not:* a guide is advice
+  on using the site, with links between pages, not a report with claims; the content model has no link or
+  figure block, and adding them would touch the PDF and brief renderers for pages that only the web shows.
+- **Copy the note's findings and numbers onto the pages.** *Why not:* a number typed into a page is a second
+  source (#74), stale as soon as the data moves: on the day this was built the note said 37 tier 0 holdings had
+  sourced hosting and the dataset said 30. One of its named findings was withheld as disputed by the fact check.
+- **Keep the task buttons as direct links and write pages for the audiences only.** *Why not:* the request was
+  content behind every button, and a task page can say what the site does not yet do for that task.
+
+**Closes off.** The web app now carries prose that no test ties to a source: the guides are this project's
+advice, in its own voice, and say more about purpose ("decide what to migrate first", "criteria that hold up")
+than #72/#73/#77 chose for the reports. They are kept apart from findings (no fact spans, no footnotes, a
+"what the site does not do" list on every page), but a reader may still take them as the project's position.
+`tests/test_evidence.py`'s overstatement check reads `.tsx` files only, so it does not read `guides.ts`.
+
+**Verified:** locally on 2026-10-12:
+- `./test.sh --no-pdf --no-e2e --no-live` exits 0.
+- In `web/`: format, lint and type-check report nothing; 55 unit tests pass, among them that every guide has at
+  least three steps, only figures that exist and only related guides that exist.
+- `model/smoke.py`'s route list, which the deploy opens on the live site, names all twelve guides.
+- Playwright: all twelve routes render a heading, their steps and figures matching `N` or `N of M`; a step opens
+  Germany's report at `#gaps`; `/for/ministries` and `/how/exposure` are in the accessibility and 375 px route
+  lists.
+
+- The first deploy (`e52cca9`) failed on the accessibility test in Chrome: the figures strip was a `<dl>` with a
+  link inside each group. It is a `<ul>` now. The local runs had passed because the tests scanned the loading
+  placeholder; they now wait for the data (`loaded()`), and with that all 46 accessibility, 375 px and
+  entry-point tests pass in Chrome against the real pages.
+
+*Would change if:* the guides start to carry claims a reader could cite as findings, in which case they move into
+the content model with sources; or the project owner judges the advice too prescriptive for #77, in which case
+the wording is cut back to what each page shows.
 ### 103. National AI strategies per state are an authored note, held to the frontier-model standard, never rendered and never ranked
 **Decision.** 2026-10-10, at the owner's request. `NATIONAL-AI-STRATEGIES.md`, at the repository root, works out
 for each of the 27 member states a strategy for a foundation AI model that is *good enough for its citizens*, not

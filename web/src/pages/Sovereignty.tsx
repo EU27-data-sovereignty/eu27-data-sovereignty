@@ -66,6 +66,19 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
     [bundle],
   )
   const labels = Object.fromEntries(sov.groups.map(g => [g.id, g.label]))
+  // Each group's rule, in the methodology's own words (model/methodology.py), not restated here.
+  const rule = useMemo(() => {
+    const out: Record<string, string> = {}
+    for (const sec of bundle.methodology.sections)
+      for (const b of sec.blocks)
+        if (b.type === 'list')
+          for (const item of b.items) {
+            const text = item.map(x => x.t).join(' ')
+            const g = sov.groups.find(x => text.startsWith(`${x.label}: `))
+            if (g) out[g.id] = text.slice(g.label.length + 2)
+          }
+    return out
+  }, [bundle, sov])
   const order = sov.groups.map(g => g.id)
   const visible = Object.entries(sov.placements).filter(
     ([, p]) => filter === 'All' || p.confidence === filter,
@@ -97,15 +110,24 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <PageBand kicker="EU-27 · Ranking by published rule" title="Data-sovereignty ranking" />
-      <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
+      <PageBand
+        kicker="EU-27 · Ranking by published rule"
+        title="Data-sovereignty ranking"
+        facts={sov.groups
+          .map(
+            g => [g, Object.values(sov.placements).filter(p => p.group === g.id).length] as const,
+          )
+          .filter(([, n]) => n > 0)
+          .map(([g, n]) => [String(n), g.label])}
+      />
+      <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
         {sov.guardrail}
       </p>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         States are placed in groups by a published rule, not scored. An input without a checked
         source counts as not demonstrated. The bar beside each state shows the groups it could still
         reach once its open evidence is settled; that range is its confidence.{' '}
-        <Link to="/methodology" className="underline">
+        <Link to="/methodology#m-calculations" className="underline">
           The rule in full
         </Link>
         .
@@ -158,6 +180,11 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                     ({members.length})
                   </span>
                 </h2>
+                {rule[g.id] ? (
+                  <p className="mb-2.5 max-w-xl text-sm text-[var(--color-fg-muted)] first-letter:uppercase">
+                    {rule[g.id]}
+                  </p>
+                ) : null}
                 <ul className="flex flex-wrap gap-1.5">
                   {members.map(([iso, p]) => (
                     <li key={iso}>
@@ -165,7 +192,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                         type="button"
                         onClick={() => setSelected(iso)}
                         aria-pressed={selected === iso}
-                        className={`flex items-center gap-1.5 rounded border-2 border-[var(--color-border)] bg-[var(--color-bg-emphasis)] px-2 py-1 text-sm hover:border-[var(--color-eu-gold)] ${CHIP[p.confidence]} ${
+                        className={`flex items-center gap-1.5 rounded border-2 border-[var(--color-border)] bg-[var(--color-bg-emphasis)] px-2 py-1 text-sm hover:border-[var(--color-accent-text)] ${CHIP[p.confidence]} ${
                           selected === iso ? 'border-[var(--color-accent)]' : ''
                         }`}
                       >
@@ -201,7 +228,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
       {sel && selected ? (
         <section
           aria-live="polite"
-          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-eu-gold)] sm:p-6"
+          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-accent-text)] sm:p-6"
         >
           <h2 className="font-display text-2xl font-bold">{names[selected]}</h2>
           <p className="mb-2 text-sm">
@@ -226,14 +253,14 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         </section>
       ) : null}
 
-      <section aria-label="Indicators">
+      <section id="indicators" aria-label="Indicators" className="scroll-mt-6">
         <h2 className="mb-2 font-display font-bold text-xl text-[var(--color-accent-text)]">
           The indicators
         </h2>
         <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
           <table className="w-full min-w-[40rem] border-collapse text-sm">
             <thead>
-              <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
+              <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
                 <th scope="col" className="px-3.5 py-2.5 text-left">
                   <button type="button" onClick={() => setSortBy('name')} className="font-semibold">
                     State{sortBy === 'name' ? ' ▾' : ''}
@@ -281,6 +308,25 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             </tbody>
           </table>
         </div>
+        <ul
+          aria-label="Key"
+          className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[var(--color-fg-secondary)]"
+        >
+          {(['Yes', 'Partly', 'No'] as const).map(k => (
+            <li key={k}>
+              <span className={PILL[k]}>{k}</span>
+            </li>
+          ))}
+          <li>
+            <em className="text-[var(--color-fg-muted)]">Not yet sourced</em>: a gap, never a no
+          </li>
+          <li>
+            <em className="border-b border-dashed border-[var(--color-gap-mark)] text-[var(--color-fg-muted)]">
+              Disputed
+            </em>
+            : withheld until corrected and checked again
+          </li>
+        </ul>
       </section>
       <SourceList bundle={bundle} numbers={numbers} claims={claims} />
     </article>

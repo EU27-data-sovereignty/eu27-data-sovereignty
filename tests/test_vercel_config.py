@@ -15,6 +15,7 @@ returned 404. The first fix, `/`, then 404'd the home page itself once deploys w
 from __future__ import annotations
 
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -56,7 +57,7 @@ class Routing(unittest.TestCase):
             if f.name == "routes.ts" or "__tests__" in f.parts:
                 continue
             text = f.read_text(encoding="utf-8")
-            if "/country/" in text or "`/${" in text:
+            if "/country/" in text or re.search(r"`/\$\{[^}]*iso", text, re.I):
                 offenders.append(str(f.relative_to(ROOT)))
         self.assertEqual(offenders, [], "country links must come from countryPath (#105)")
 

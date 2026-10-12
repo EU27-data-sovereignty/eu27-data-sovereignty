@@ -48,7 +48,20 @@ export interface TileState {
 type Metric = 'holdings' | 'tier0' | 'facts'
 
 /**
- * The 27 as a tile map on the front page, shaded gold by how much verified evidence each has (#99).
+ * Four shades, not a continuous ramp: a tile mixed half and half is a mid-blue on which neither the light
+ * nor the dark label reaches 4.5:1 (the first #101 deploy failed on exactly that). Each step's mix was
+ * checked against its label colour in both themes; the lowest ratio is 5.5:1.
+ */
+const STEPS = [
+  { below: 0.4, mix: 12, dark: false },
+  { below: 0.65, mix: 26, dark: false },
+  { below: 0.85, mix: 82, dark: true },
+  { below: Infinity, mix: 100, dark: true },
+]
+
+/**
+ * The 27 as a tile map, shaded blue by how much verified evidence each has (#99, #101). Not on any page at
+ * present: it left the front page when the Ask box became that page's main act, and is kept here for reuse.
  * Shade is never the only cue: each tile prints its number, and its label reads it out. It counts
  * evidence; it is not a ranking of how sovereign a state is (#77).
  */
@@ -72,12 +85,16 @@ export function TileMap({ states }: { states: TileState[] }) {
   const s = by[sel] ?? states[0]!
 
   return (
-    <div className="rounded border border-white/10 bg-[var(--color-night)]/60 p-4 backdrop-blur-[3px] sm:p-5">
+    <div className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 sm:p-5">
       <div className="mb-3.5 flex flex-wrap items-center justify-between gap-3">
-        <span className="text-xs font-semibold tracking-[0.14em] text-white/75 uppercase">
+        <span className="text-xs font-bold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
           Verified evidence by state
         </span>
-        <div role="group" aria-label="Measure" className="flex rounded bg-white/10 p-0.5">
+        <div
+          role="group"
+          aria-label="Measure"
+          className="flex rounded bg-[var(--color-bg-emphasis)] p-0.5"
+        >
           {(
             [
               ['holdings', 'Holdings'],
@@ -91,7 +108,9 @@ export function TileMap({ states }: { states: TileState[] }) {
               aria-pressed={metric === m}
               onClick={() => setMetric(m)}
               className={`rounded px-2.5 py-1 text-xs font-medium ${
-                metric === m ? 'bg-[var(--color-eu-blue)] text-white' : 'text-white/75'
+                metric === m
+                  ? 'bg-[var(--color-eu-blue)] text-white'
+                  : 'text-[var(--color-fg-secondary)]'
               }`}
             >
               {label}
@@ -104,6 +123,7 @@ export function TileMap({ states }: { states: TileState[] }) {
           if (!t) return <span key={i} />
           const [v, max] = value(t)
           const share = max ? v! / max! : 0
+          const step = STEPS.find(x => share < x.below) ?? STEPS[STEPS.length - 1]!
           return (
             <button
               key={t.iso}
@@ -112,32 +132,32 @@ export function TileMap({ states }: { states: TileState[] }) {
               onClick={() => setSel(t.iso)}
               aria-label={`${t.name}: ${t.holdings} of ${t.holdingsTotal} holdings verified, ${t.tier0} of ${t.tier0Total} tier 0, ${t.facts} sourced facts`}
               className={`flex aspect-square flex-col items-center justify-center rounded text-[0.66rem] font-bold tracking-wide transition-transform hover:-translate-y-0.5 sm:text-xs ${
-                share > 0.55 ? 'text-[var(--color-night)]' : 'text-white'
-              } ${sel === t.iso ? 'ring-2 ring-white' : ''}`}
+                step.dark ? 'text-[var(--color-bg-card)]' : 'text-[var(--color-fg-primary)]'
+              } ${sel === t.iso ? 'ring-2 ring-[var(--color-accent)] ring-offset-2 ring-offset-[var(--color-bg-card)]' : ''}`}
               style={{
-                background: `color-mix(in oklab, var(--color-eu-gold) ${Math.round(12 + share * 88)}%, rgb(255 255 255 / 0.06))`,
+                background: `color-mix(in srgb, var(--color-accent-text) ${step.mix}%, var(--color-bg-emphasis))`,
               }}
             >
               {t.iso}
-              <span className="hidden text-[0.72em] font-medium opacity-80 tabular-nums sm:block">
+              <span className="hidden text-[0.72em] font-medium tabular-nums sm:block">
                 {metric === 'facts' ? v : `${v}/${max}`}
               </span>
             </button>
           )
         })}
       </div>
-      <div className="mt-3 flex items-center gap-2.5 text-xs text-white/60">
+      <div className="mt-3 flex items-center gap-2.5 text-xs text-[var(--color-fg-muted)]">
         <span>Less evidence</span>
-        <span className="h-2 w-32 rounded bg-gradient-to-r from-white/10 to-[var(--color-eu-gold)]" />
+        <span className="h-2 w-32 rounded bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-accent-text)_12%,var(--color-bg-emphasis))_0_25%,color-mix(in_srgb,var(--color-accent-text)_26%,var(--color-bg-emphasis))_25%_50%,color-mix(in_srgb,var(--color-accent-text)_82%,var(--color-bg-emphasis))_50%_75%,var(--color-accent-text)_75%)]" />
         <span>More</span>
       </div>
       <div
         aria-live="polite"
-        className="mt-3.5 flex flex-wrap items-end justify-between gap-3 border-t border-white/10 pt-3.5"
+        className="mt-3.5 flex flex-wrap items-end justify-between gap-3 border-t border-[var(--color-border)] pt-3.5"
       >
         <div>
-          <p className="font-display text-xl font-bold text-white">{s.name}</p>
-          <p className="text-sm text-white/75 tabular-nums">
+          <p className="font-display text-xl font-bold">{s.name}</p>
+          <p className="text-sm text-[var(--color-fg-secondary)] tabular-nums">
             {s.holdings} of {s.holdingsTotal} holdings verified · {s.facts} sourced facts
           </p>
           <div className="mt-1.5">
@@ -150,12 +170,12 @@ export function TileMap({ states }: { states: TileState[] }) {
         </div>
         <Link
           to={countryPath(s.iso)}
-          className="text-sm font-semibold whitespace-nowrap text-[var(--color-eu-gold)] hover:underline"
+          className="text-sm font-semibold whitespace-nowrap text-[var(--color-accent-text)] hover:underline"
         >
           Open country →
         </Link>
       </div>
-      <p className="mt-3 text-xs text-white/55">
+      <p className="mt-3 text-xs text-[var(--color-fg-muted)]">
         Counts of verified evidence, not a ranking of how sovereign a state is.
       </p>
     </div>

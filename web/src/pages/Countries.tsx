@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { coverage, factCounts, spans } from '@/data/sources'
 import type { Bundle } from '@/data/types'
+import type { ReportSection } from '@/data/guides'
 import { PageBand } from '@/components/PageBand'
 import { CARD, Dots, FIELD, Bar, Segmented } from '@/components/ui'
 import { countryPath } from '@/utils/routes'
@@ -16,6 +17,13 @@ type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 export function Countries({ bundle }: { bundle: Bundle }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('name')
+  // A guide's step may name the section of the report to open once a state is chosen (#102).
+  const section = (useLocation().state as { section?: ReportSection } | null)?.section
+  // Its heading, in the report's own words, from any country's document.
+  const sectionTitle = section
+    ? Object.values(bundle.documents)[0]?.sections.find(s => s.id === section)?.title
+    : undefined
+  const report = (iso: string) => `${countryPath(iso)}${sectionTitle ? `#${section}` : ''}`
 
   const rows = useMemo(() => {
     const all = Object.values(bundle.countries).map(c => {
@@ -40,11 +48,19 @@ export function Countries({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand kicker="EU-27 · Member states" title="Countries">
-        <p className="mt-3 max-w-3xl text-white/85">
+        <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
           Each member state analysed on its own fundamentals. The cards count verified evidence;
           they are not a ranking of how sovereign a state is.
         </p>
       </PageBand>
+      {sectionTitle ? (
+        <p
+          role="status"
+          className="mb-5 rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm font-medium"
+        >
+          Choose a member state to open its report at “{sectionTitle}”.
+        </p>
+      ) : null}
       <div className="mb-5 flex flex-wrap items-center gap-3">
         <label htmlFor="country-search" className="sr-only">
           Find a country
@@ -76,11 +92,11 @@ export function Countries({ bundle }: { bundle: Bundle }) {
         {rows.map(({ c, cov, facts, withheld }) => (
           <li
             key={c.iso2}
-            className={`${CARD} flex flex-col gap-3 p-5 transition-colors hover:border-[var(--color-eu-gold)]`}
+            className={`${CARD} flex flex-col gap-3 p-5 transition-colors hover:border-[var(--color-accent-text)]`}
           >
             <div className="flex items-baseline justify-between gap-3">
               <h2 className="font-display text-xl font-bold">
-                <Link to={countryPath(c.iso2)} className="hover:underline">
+                <Link to={report(c.iso2)} className="hover:underline">
                   {c.name}
                 </Link>
               </h2>

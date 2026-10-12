@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 
 import { DocumentView } from '@/components/DocumentView'
+import { methodBlocks } from '@/utils/methodBlocks'
 import { MethodFrame } from '@/components/MethodFrame'
 import type { Bundle } from '@/data/types'
 import { countryPath } from '@/utils/routes'
@@ -31,7 +32,7 @@ export function FactCheck({ bundle }: { bundle: Bundle }) {
           </Link>
         </p>
       )}
-      <DocumentView doc={doc} bundle={bundle} numbers={new Map()} />
+      <DocumentView doc={doc} bundle={bundle} numbers={new Map()} blocks={methodBlocks(bundle)} />
     </MethodFrame>
   )
 }

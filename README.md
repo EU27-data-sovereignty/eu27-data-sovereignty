@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://eu27.cloud">
+    <img src="web/public/brand/eu27-badge.png" alt="" width="72" height="72">
+    &nbsp;&nbsp;
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="web/public/brand/eu27-wordmark-white.png">
+      <img src="web/public/brand/eu27-wordmark.png" alt="EU27.CLOUD — European Union Data Sovereignty Initiative" height="72">
+    </picture>
+  </a>
+</p>
+
 # Sovereign Data Centers for European States
 
 An analysis, per EU member state, of the critical government data holdings a state cannot let depend on

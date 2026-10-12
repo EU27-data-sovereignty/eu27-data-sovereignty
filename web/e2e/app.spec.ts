@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
+import type { Locator, Page } from '@playwright/test'
 
 import type { Bundle, Span } from '../src/data/types'
 
@@ -61,6 +62,8 @@ const ROUTES = [
   '/methodology',
   '/fact-check',
   '/fact-check/DE',
+  '/for/ministries',
+  '/how/exposure',
 ]
 
 test.describe('a member state lives at its code (#105)', () => {
@@ -160,6 +163,18 @@ function docSpans(iso: string): Span[] {
   return out
 }
 
+/**
+ * Wait until a page has stopped moving before a tap far down it. The app renders after it has fetched the
+ * bundle, and only then asks for its web fonts and images; either can reflow the page between Playwright
+ * scrolling to a link and tapping it, and the tap then misses. So: the link exists (the page has rendered),
+ * the network is quiet (images in or removed), the fonts are in.
+ */
+async function settled(page: Page, link: Locator) {
+  await link.waitFor()
+  await page.waitForLoadState('networkidle')
+  await page.evaluate(() => document.fonts.ready)
+}
+
 test.describe('evidence rules (#82, #83)', () => {
   test('every page says the findings are machine-checked, not human-verified', async ({ page }) => {
     await page.goto('/de')
@@ -167,18 +182,22 @@ test.describe('evidence rules (#82, #83)', () => {
     await expect(
       page.locator('footer').getByText(BUNDLE.provenance, { exact: false }),
     ).toBeVisible()
-    for (const route of ['/', '/methodology']) {
-      await page.goto(route)
-      // exact: the footer notice on every page also contains the disclaimer, inside longer text; this
-      // checks the page's own statement of it.
-      await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
-    }
+    // The front page relies on the footer's notice alone: its own copy of it was removed as a duplicate (#101).
+    await page.goto('/')
+    await expect(
+      page.locator('footer').getByText(BUNDLE.notice.disclaimer, { exact: false }),
+    ).toBeVisible()
+    await page.goto('/methodology')
+    // exact: the footer notice on every page also contains the disclaimer, inside longer text; this
+    // checks the page's own statement of it.
+    await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
   })
 
   test('every page links the fact check, and a country lists the verdict on each of its facts (#87)', async ({
     page,
   }) => {
     await page.goto('/de')
+    await settled(page, page.getByRole('link', { name: 'fact check for Germany' }))
     await page.getByRole('link', { name: 'fact check for Germany' }).click()
     await expect(page).toHaveURL(/\/fact-check\/DE$/)
     await expect(
@@ -191,6 +210,7 @@ test.describe('evidence rules (#82, #83)', () => {
     const rows = table.rows
     await expect(page.getByText(rows[0]![0]!.t, { exact: true })).toBeVisible()
     await page.goto('/')
+    await settled(page, page.getByRole('link', { name: 'How every fact was checked' }))
     await page.getByRole('link', { name: 'How every fact was checked' }).click()
     await expect(page).toHaveURL(/\/fact-check$/)
     await expect(page.getByText('not by a person', { exact: false }).first()).toBeVisible()
@@ -205,9 +225,10 @@ test.describe('evidence rules (#82, #83)', () => {
     await expect(
       page.getByRole('link', { name: new RegExp(`Evidence: ${fact.g}$`) }).first(),
     ).toBeVisible()
-    // Source 1 is the first fact's first source: its entry shows that claim's grade and checks.
+    // Source 1 is the first fact's first source: its entry shows that claim's grade and checks, each as
+    // its own chip (#99 layout).
     const entry = page.locator('#src-1')
-    await expect(entry).toContainText(`${cite.grade}:`)
+    await expect(entry.getByText(cite.grade, { exact: true }).first()).toBeVisible()
     await expect(entry).toContainText(cite.checklist[0]!)
   })
 
@@ -299,6 +320,56 @@ test.describe('ranking', () => {
   })
 })
 
+test.describe('entry points (#101, #102)', () => {
+  const GUIDES = [
+    ...['ministries', 'procurement', 'parliaments', 'cyber', 'eu-institutions', 'operators'].map(
+      s => `/for/${s}`,
+    ),
+    ...['exposure', 'migrate', 'tender', 'questions', 'compare', 'cut-off'].map(s => `/how/${s}`),
+  ]
+
+  test('the toggle swaps six audiences for six tasks, each linked to its guide', async ({
+    page,
+  }) => {
+    await page.goto('/')
+    const audiences = page.getByRole('navigation', { name: 'Guides by audience' })
+    await expect(audiences.getByRole('link')).toHaveCount(6)
+    await page.getByRole('button', { name: /I need to/ }).click()
+    const tasks = page.getByRole('navigation', { name: 'Guides by task' })
+    await expect(tasks.getByRole('link')).toHaveCount(6)
+    await tasks.getByRole('link', { name: /Compare how peers host a register/ }).click()
+    await expect(page).toHaveURL(/\/how\/compare$/)
+    await expect(
+      page.getByRole('heading', { name: 'Compare how peers host a register', level: 1 }),
+    ).toBeVisible()
+  })
+
+  test('every guide renders its steps and figures counted from the bundle', async ({ page }) => {
+    for (const route of GUIDES) {
+      await page.goto(route)
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+      expect(await page.locator('ol > li').count(), route).toBeGreaterThanOrEqual(3)
+      // A figure that failed to compute would print NaN or "undefined".
+      await expect(page.locator('[data-figure]').first()).toBeVisible()
+      for (const value of await page.locator('[data-figure]').allTextContents())
+        expect(value, route).toMatch(/^[\d,]+( of [\d,]+)?$/)
+    }
+  })
+
+  test('a guide step that lives in a country report opens the chosen country at that section', async ({
+    page,
+  }) => {
+    await page.goto('/how/questions')
+    await page.getByRole('link', { name: /Choose a country/ }).click()
+    await expect(page).toHaveURL(/\/countries$/)
+    const title = BUNDLE.documents.DE!.sections.find(s => s.id === 'gaps')!.title
+    await expect(page.getByRole('status')).toContainText(title)
+    await page.getByRole('link', { name: 'Germany', exact: true }).click()
+    await expect(page).toHaveURL(/\/de#gaps$/)
+    await expect(page.locator('#gaps')).toBeInViewport()
+  })
+})
+
 test.describe('ask', () => {
   /** A recorded answer stream, so CI never calls the API. The cited claim is a real one. */
   const claim = Object.keys(BUNDLE.claims)[0]!
@@ -323,6 +394,19 @@ test.describe('ask', () => {
     await expect(page.locator('#src-1')).toContainText(claim)
   })
 
+  test('a question asked on the front page is answered on the Ask page', async ({ page }) => {
+    await page.route('**/api/ask', route =>
+      route.fulfill({ status: 200, contentType: 'text/event-stream', body: stream }),
+    )
+    await page.goto('/')
+    await expect(page.getByRole('heading', { name: 'Hello, Europe' })).toBeVisible()
+    await page.getByLabel('Ask any question').fill('Who runs the tax register?')
+    await page.getByRole('button', { name: 'Ask', exact: true }).click()
+    await expect(page).toHaveURL(/\/ask$/)
+    await expect(page.getByLabel('Your question')).toHaveValue('Who runs the tax register?')
+    await expect(page.getByText('According to the sourced data')).toBeVisible()
+  })
+
   test('a rate-limited request shows a clear message', async ({ page }) => {
     await page.route('**/api/ask', route => route.fulfill({ status: 429, body: '{}' }))
     await page.goto('/ask')
@@ -338,6 +422,17 @@ test.describe('ask', () => {
   })
 })
 
+/**
+ * Wait for the page itself, not the placeholder. Until the bundle has been fetched the app renders
+ * "Loading the EU-27 dataset…" inside a <main> of its own, so waiting for <main> alone lets a scan run
+ * against the placeholder and pass without having checked anything. That happened twice on a slow machine
+ * (#101, #102) while CI, which is faster, failed on the real page.
+ */
+async function loaded(page: Page) {
+  await expect(page.locator('main')).toBeVisible()
+  await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
+}
+
 test.describe('accessibility', () => {
   for (const route of ROUTES) {
     test(`${route} has no detectable violations`, async ({ page }) => {
@@ -345,7 +440,7 @@ test.describe('accessibility', () => {
       // 2026-10-01); a full axe scan of it takes longer than the default 30 s.
       if (route === '/sources') test.setTimeout(120_000)
       await page.goto(route)
-      await expect(page.locator('main')).toBeVisible()
+      await loaded(page)
       const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
         .analyze()
@@ -360,7 +455,7 @@ test.describe('accessibility in dark mode (#92)', () => {
   for (const route of ROUTES.filter(r => r !== '/sources')) {
     test(`${route} has no detectable violations in dark mode`, async ({ page }) => {
       await page.goto(route)
-      await expect(page.locator('main')).toBeVisible()
+      await loaded(page)
       expect(await page.evaluate(() => matchMedia('(prefers-color-scheme: dark)').matches)).toBe(
         true,
       )
@@ -399,7 +494,7 @@ test.describe('responsive', () => {
     test(`${route} does not scroll sideways at 375px (#92)`, async ({ page }) => {
       await page.setViewportSize({ width: 375, height: 800 })
       await page.goto(route)
-      await expect(page.locator('main')).toBeVisible()
+      await loaded(page)
       const overflow = await page.evaluate(
         () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
       )

@@ -58,7 +58,7 @@ export function Poster({ bundle }: { bundle: Bundle }) {
       style={{ width: 1024 }}
       className="mx-auto bg-[var(--color-bg-page)] p-8 text-[var(--color-fg-primary)]"
     >
-      <header className="mb-5 border-b-4 border-[var(--color-highlight)] pb-3">
+      <header className="mb-5 border-b-4 border-[var(--color-accent-text)] pb-3">
         <div className="text-[10px] font-semibold tracking-[0.18em] text-[var(--color-accent-text)] uppercase">
           EU-27 · Critical data holdings · {code}
         </div>

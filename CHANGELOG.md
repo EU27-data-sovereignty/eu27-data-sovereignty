@@ -48,6 +48,90 @@ What changed and when. Reasoning for the choices behind these changes lives in
   gains the box as its unit; the README lists and describes the note. The working log is
   `docs/plans/sovereign-appliance-log.md`.
 
+### Added: the logo at the top of the README
+
+- `README.md` opens with the EU27.CLOUD badge and wordmark, linked to the site. The wordmark switches to its
+  white version when GitHub is in dark mode. Both images are the ones the web app ships (`web/public/brand/`).
+
+### Added: a guide page behind every selector button (#102)
+
+- **Twelve pages.** `/for/…` for the six audiences under "I am…" (ministries and CIOs, procurement, parliaments
+  and audit courts, cyber agencies, EU institutions, operators, investors and press) and `/how/…` for the six
+  tasks under "I need to…". Each has an introduction, numbered steps that link to the pages where the sourced
+  facts are, figures from the data, and a list of what the site does not do yet; audience pages also say when
+  the site helps and what a reader takes away.
+- **Figures are counted, not written.** Each is computed from the dataset as the page loads and links to where
+  it can be checked.
+- **Selector.** Both lists are now links to these guides; an audience can no longer be "marked", and a task opens
+  its guide before the destination page.
+- **Source of the words.** Drafted from the note "Benefits and Use Cases for Decision Makers"; its fixed numbers,
+  named findings and two unsourced comparisons were left out. The text lives in `web/src/data/guides.ts`.
+- **The first deploy of this failed** on the accessibility test in Chrome: the figures strip was a `<dl>` whose
+  groups held a link beside their `<dt>` and `<dd>`, which a definition list does not allow. It is a list now,
+  and each "Check it" link names its figure for screen readers.
+
+### Fixed: the accessibility and phone-width tests could pass without scanning the page
+
+- Until the dataset has loaded the app shows "Loading the EU-27 dataset…" inside a `<main>` of its own. The tests
+  waited for `<main>` only, so on a slow machine they scanned that placeholder and passed. It hid two real
+  faults before a push (the tile map's contrast, the guides' figures strip); CI, being faster, caught both.
+- They now wait for the placeholder to go (`loaded()` in `web/e2e/app.spec.ts`) before scanning or measuring.
+
+### Changed: "I need to…" lists six tasks, each linked to its page (#101)
+
+- **The toggle now changes the options.** Under "I need to…" the six audience buttons give way to six tasks:
+  Check my country's exposure, Decide what to migrate first, Write tender criteria that hold up, Turn gaps into
+  formal questions, Compare how peers host a register, Plan for a provider cut-off.
+- **Where they lead.** Tender criteria opens the indicator grid on the ranking page; peer comparison opens
+  Critical holdings; provider cut-off opens Hosting. Exposure, migration order and gaps live inside a country's
+  report, so they open Countries with a line saying which section comes next, and a country then opens at
+  "Foreign-dependency exposure", "Critical data holdings, by priority" or "Research still open".
+- **"I am…" is unchanged:** its six audiences can be marked and lead nowhere yet.
+- **Navigation.** Moving to another page now starts at its top, or at the linked section; Back and Forward keep
+  the browser's own position.
+
+### Changed: the front page opens its content on a free-form Ask box (#101)
+
+- **"Hello, Europe".** Under the audience selector, the first section is now the question box: the headline, the
+  line "Whatever is on your mind about EU Data Sovereignty, ask any question here.", a large text box (Enter asks,
+  Shift+Enter starts a new line), the note on where a question is sent, and the six example questions as buttons.
+- **One step.** A question asked there is sent on arrival at the Ask page instead of waiting for a second press.
+  The same notice about Anthropic's API is shown under the box on the front page.
+- **Removed from the front page.** The tile map of the 27 ("Verified evidence by state"), the old title and
+  subtitle, and the two buttons beside them. `TileMap` stays in `web/src/charts/` for reuse; no page shows it.
+- **Removed as a duplicate.** The front page's own "Machine-checked, not human-verified" box: the footer of every
+  page carries that notice (#82, #83). The browser test now checks the footer's notice on the front page.
+- **Shared.** The example questions and the 500-character limit live in `web/src/data/ask.ts`.
+- **The first deploy of this failed** on `tests/test_evidence.py`, which looked for the disclaimer in
+  `Overview.tsx`. The test now holds the footer's notice in place instead: the provenance text contains the
+  disclaimer word for word, `ProvenanceNotice` prints it, and `Layout` renders it on every page.
+
+### Fixed: the tile map's labels keep their contrast (#101)
+
+- **What failed.** The first deploy of the landing design stopped on the front page's accessibility test in
+  Chrome: map tiles between about 55% and 65% were a mid-blue on which their labels reached only 4.3:1 (3.4:1 for
+  the small figure under each code), in both themes. The site stayed on the previous version.
+- **The fix.** `TileMap` shades in four fixed steps instead of a continuous ramp, each checked against its label
+  colour in both themes (lowest 5.5:1), and the figure under each code is no longer faded. The legend shows the
+  four steps.
+
+### Changed: the web app takes the landing design (#101)
+
+- **Front page.** A new hero ("Navigate Cloud Sovereignty") and, under it, an audience selector band: an
+  "I am… / I need to…" toggle and six audience buttons. The selector records a choice and opens nothing yet. The
+  question box, the tile map of the 27 and the evidence meters sit below the band.
+- **Header.** White with a soft shadow: the badge, the wordmark with its tagline, the existing navigation, an "EN"
+  language button (inactive for now) and the theme toggle.
+- **Palette and type.** Brand blue `#1E3A8A`, navy `#0B1B3F` and a deeper gold `#F2C230`, light by default with a
+  navy dark mode, all from `design/tokens.json`. One typeface, Manrope, self-hosted. Gold is kept for the hero
+  underline, the selector band, link underlines and focus rings on navy.
+- **Every page.** Page bands take the hero's gradient and EU silhouette; tables, chips, bars and buttons take the
+  new tokens. The PDFs and the mobile constants take the new brand colours through the same tokens.
+- **Housekeeping.** The six brand images of the #99 design are removed; `artifacts/STYLE.md` lists the new token
+  values; two unit tests cover the selector.
+- **Tests.** A browser test that taps a link far down a page now waits for the page to settle first (the link
+  rendered, the network idle, the fonts in): on the iPhone 17 Pro profile the tap still missed about 1 time in 40.
+
 ## 2026-10-10
 
 ### Added: `NATIONAL-AI-STRATEGIES.md`, a strategy per member state for a citizen-grade foundation model (#103)
@@ -76,6 +160,23 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Bookkeeping.** `tests/test_docs.py` now checks decision references of one to three digits (the `TODO.md` item is
   closed) and lists the note among the citing files; `FEASIBILITY-RANKING.md`'s status table points at the note and
   records that "sovereign data models" was read as sovereign AI models.
+## 2026-10-09
+
+### Fixed: pages no longer shift under a tap
+
+- **What failed.** The deploy of the methodology and fact-check graphics stopped on one iPhone 17 Pro browser
+  test: a tap on a link did not navigate. The test had been failing about 1 run in 4 since the #99 redesign; the
+  page moved between scrolling to the link and tapping it.
+- **Logo images** in the header and footer now carry their width and height, so the navigation no longer rewraps
+  on a phone when they load.
+- **Report previews** on the front page load up front rather than lazily, so a missing one is removed before a
+  reader scrolls past it.
+- **The test** waits for the web fonts before each tap.
+
+### Changed: methodology and fact-check graphics shipped
+
+- The graphics listed under #99 below (bars, the priority formula, the placement ladder, the writer/checker pairs,
+  the check timeline, verdict bars, per-state totals) went live with this fix.
 
 ## 2026-10-08
 
@@ -101,6 +202,42 @@ What changed and when. Reasoning for the choices behind these changes lives in
   and a question box. Countries become cards; Critical holdings group by tier with domain filters; the ranking
   becomes a ladder; Hosting groups its rows as cards by state with a dependency filter; Sources gains tier and
   grade distributions with search and filters; Ask sits beside its examples; method pages get a contents list.
+- **Mockup gaps closed.** Source entries become cards: a readable label for each claim, the quote set apart, and
+  its grade and checks as chips, 20 sources at a time. Hosting gains its figures in the header, legend cards that
+  filter, a search box and a tier filter. The ranking shows its group counts in the header, each group's rule in
+  the methodology's words, and a key under the indicator grid. The front page adds browse links under the question
+  box and a correction link on the notice.
+- **Methodology and fact-check graphics.** Count tables become bar charts; the priority rule becomes a formula; the
+  placement rules a numbered ladder; who checks whom a set of pairs; how a check runs a timeline; each fact-check
+  run gets a verdict bar; the per-state table gets totals and bars. All drawn from the documents' own data.
+
+
+### Added: a static mockup of the redesign
+
+- `mockups/eu27-redesign/`: the nine pages of the proposed design as static HTML, with their own README. It sits
+  outside the build; nothing in `web/`, the content model or the deploy reads it. Its sources file lists each
+  document hash first, so the secret scan no longer mistakes one for a key.
+
+### Changed: the provenance notice moves from a top banner into the footer
+
+- The machine-checked notice opens the footer of every page, in full at every width, with the generated date and
+  the methodology and fact-check links. It still prints. `ProvenanceBanner.tsx` becomes `ProvenanceNotice.tsx`.
+
+### Fixed: the Sources legend, the PDF gate in CI, an address in ROADMAP.md
+
+- **Sources.** Each legend swatch sits inside its `<dt>`: the bare element failed the accessibility test and had
+  blocked a deploy.
+- **CI.** `gate.yml` and `monitor.yml` refresh the apt index before installing `poppler-utils`; the runner image
+  pointed at a version the mirrors no longer serve, which failed the PDF gate.
+- **ROADMAP.md** describes a personal email address instead of quoting it, as the security gate requires.
+
+### Changed: two mobile dependencies patched, five alerts dismissed
+
+- `mobile/package-lock.json`: `shell-quote` 1.12.0 and `source-map-js` 1.2.2, closing Dependabot alerts 21
+  (critical) and 19 (high). Only their two lockfile entries change.
+- Five further alerts on `mobile/` (`braces`, `node-forge`, `sprintf-js`, `decode-uri-component`, `uuid`) are
+  dismissed on GitHub as tolerable risk: no patched version exists or the fix needs a major version its parent
+  does not accept, and `mobile/` is local-only and ships nowhere.
 
 ## 2026-10-07
 

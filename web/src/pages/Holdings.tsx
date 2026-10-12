@@ -35,7 +35,7 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand kicker="EU-27 · Critical holdings" title="Critical holdings">
-        <p className="mt-3 max-w-3xl text-white/85">
+        <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
           The {bundle.holding_classes.length} kinds of government data holding this project
           inventories, in tier order: tier 0 is the identity spine, tier 1 the legal, fiscal and
           security state. Open one to compare it across all 27 member states.
@@ -77,7 +77,7 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
       <div className={`scroll-x ${CARD}`}>
         <table className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>
-            <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
+            <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
               <th scope="col" className="px-4 py-2.5 text-left font-semibold">
                 Holding
               </th>
@@ -170,7 +170,7 @@ export function Holding({ bundle }: { bundle: Bundle }) {
       <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
         <table className="w-full min-w-[40rem] border-collapse text-sm">
           <thead>
-            <tr className="bg-[var(--color-bg-emphasis)] text-xs tracking-wider text-[var(--color-fg-muted)] uppercase shadow-[inset_0_-2px_0_var(--color-eu-blue)]">
+            <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
               {['Country', ...columns].map(h => (
                 <th key={h} scope="col" className="px-3.5 py-2.5 text-left">
                   {h}

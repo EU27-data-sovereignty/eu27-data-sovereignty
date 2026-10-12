@@ -2,7 +2,7 @@
 
 /*
  * Colour, type and dark-mode tokens are generated from design/tokens.json into tokens.css
- * (DECISIONS.md #74, #76). Components refer to roles (--color-fg-secondary), never to hexes.
+ * (DECISIONS.md #74, #101). Components refer to roles (--color-fg-secondary), never to hexes.
  */
 @import './tokens.css';
 
@@ -14,13 +14,7 @@
   body {
     background-color: var(--color-bg-page);
     color: var(--color-fg-primary);
-    font-family:
-      Inter,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      sans-serif;
+    font-family: var(--font-sans);
     font-size: var(--text-body);
     -webkit-font-smoothing: antialiased;
   }
@@ -36,12 +30,49 @@
     outline-offset: 2px;
   }
 
-  /* The page bands carry the EU silhouette artwork on the night navy it was drawn on. */
-  .band-map {
-    background: var(--color-night) url('/brand/hero-bg.webp') 60% 42% / cover no-repeat;
+  /* Links (#101): brand blue, navy on hover, underlined in gold. Utilities on a link still win. */
+  a {
+    text-decoration-color: var(--color-eu-gold);
   }
 
-  /* The wordmark and lockup ship in navy and in white; each theme shows its own. */
+  main a:where(.underline) {
+    color: var(--color-accent-text);
+    text-underline-offset: 3px;
+  }
+
+  main a:where(.underline):hover {
+    color: var(--color-fg-primary);
+  }
+
+  /* The hero and page bands: a pale gradient, a dot texture that fades out behind the text, and the EU
+     silhouette as a mask, so each theme fills it with its own token. All three are decoration. */
+  .hero-band {
+    background: linear-gradient(180deg, var(--color-hero-from) 0%, var(--color-hero-to) 100%);
+  }
+
+  .hero-dots {
+    opacity: 0.35;
+    background-image: radial-gradient(var(--color-gap-mark) 1.2px, transparent 1.4px);
+    background-size: 14px 14px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 60%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 60%);
+  }
+
+  .hero-map {
+    aspect-ratio: 222 / 260;
+    opacity: 0.9;
+    background: var(--color-map-fill);
+    -webkit-mask: url('/brand/eu-map.svg') center / contain no-repeat;
+    mask: url('/brand/eu-map.svg') center / contain no-repeat;
+  }
+
+  /* Controls on the navy selector band: gold focus ring, as gold is the only colour that reads there. */
+  .on-navy:focus-visible {
+    outline: 3px solid var(--color-eu-gold);
+    outline-offset: 2px;
+  }
+
+  /* The wordmark ships in navy and in white; each theme shows its own. */
   .logo-dark {
     display: none;
   }
@@ -74,5 +105,6 @@
   body {
     background: #ffffff;
     color: #000000;
+    font-family: var(--font-sans);
   }
 }

@@ -1,21 +1,14 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import { SourceList } from '@/components/SourceList'
+import { ASK_EXAMPLES, ASK_MAX } from '@/data/ask'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
-import { CARD } from '@/components/ui'
+import { BUTTON, CARD } from '@/components/ui'
 
-const MAX = 500
-
-const EXAMPLES = [
-  'Which member states have a law keeping government data under national jurisdiction?',
-  'Who operates Germany’s population register, and under which law?',
-  'Which holdings are still unverified for Estonia?',
-  'How does the data-sovereignty ranking work, and how confident is it?',
-  'Is it known where Belgium’s critical registers are hosted?',
-  'What does "not demonstrated" mean in the ranking?',
-]
+const MAX = ASK_MAX
+const EXAMPLES = ASK_EXAMPLES
 
 type Segment = { text: string } | { cite: number[] }
 type Status = 'idle' | 'asking' | 'done' | 'error'
@@ -120,10 +113,23 @@ export function Ask({ bundle }: { bundle: Bundle }) {
     }
   }
 
+  // A question asked on the front page is asked here at once: the reader pressed Ask there, under the same
+  // notice about where the question goes. Only on arrival, so editing the box never sends anything by itself.
+  // Deferred a tick, so a remount (React's strict mode) cancels the first request instead of doubling it.
+  useEffect(() => {
+    if (!passed.trim()) return
+    const timer = setTimeout(() => void ask(passed.trim().slice(0, MAX)), 0)
+    return () => {
+      clearTimeout(timer)
+      abort.current?.abort()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <article>
       <PageBand kicker="EU-27 · Ask" title="Ask about data sovereignty in the EU">
-        <p className="mt-3 max-w-3xl text-white/85">
+        <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
           Answers come only from this project’s sourced findings, with a citation for every fact.
           When the findings don’t cover a question, the answer says so.
         </p>
@@ -141,7 +147,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
               Your question
             </label>
             <div
-              className={`${CARD} p-1.5 transition-colors focus-within:border-[var(--color-eu-gold)]`}
+              className={`${CARD} p-1.5 transition-colors focus-within:border-[var(--color-accent-text)]`}
             >
               <textarea
                 id="question"
@@ -160,7 +166,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
                 <button
                   type="submit"
                   disabled={status === 'asking' || !question.trim()}
-                  className="rounded bg-[var(--color-eu-gold)] px-5 py-2 text-sm font-semibold text-[var(--color-eu-deep)] disabled:opacity-50"
+                  className={`${BUTTON} px-5 disabled:opacity-50`}
                 >
                   {status === 'asking' ? 'Answering…' : 'Ask'}
                 </button>
@@ -175,7 +181,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
 
           <section aria-live="polite" aria-label="Answer" className="mt-6">
             {status === 'error' ? (
-              <p className="rounded border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
+              <p className="rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
                 {message}
               </p>
             ) : null}

@@ -22,7 +22,7 @@ export function Bar({
     <span className="flex min-w-36 items-center gap-2.5">
       <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-[var(--color-bg-emphasis)]">
         <span
-          className={`block h-full rounded-full ${faded ? 'bg-[var(--color-eu-gold)]/45' : 'bg-[var(--color-eu-gold)]'}`}
+          className={`block h-full rounded-full ${faded ? 'bg-[var(--color-accent-text)]/40' : 'bg-[var(--color-accent-text)]'}`}
           style={{ width: `${pct}%` }}
         />
       </span>
@@ -42,7 +42,7 @@ export function Dots({ value, max, title }: { value: number; max: number; title:
           key={i}
           className={`h-2.5 w-2.5 rounded-full border ${
             i < value
-              ? 'border-[var(--color-eu-gold)] bg-[var(--color-eu-gold)]'
+              ? 'border-[var(--color-accent-text)] bg-[var(--color-accent-text)]'
               : 'border-[var(--color-border)] bg-[var(--color-bg-emphasis)]'
           }`}
         />
@@ -119,3 +119,11 @@ export const CARD = 'rounded border border-[var(--color-border)] bg-[var(--color
 /** Inputs and selects. 16 px: iPhone Safari zooms into any field set smaller (#92). */
 export const FIELD =
   'rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] px-3 py-2 text-base text-[var(--color-fg-primary)] placeholder:text-[var(--color-fg-muted)]'
+
+/** The primary button (#101): brand blue with white text. Gold is kept for the hero and the selector band. */
+export const BUTTON =
+  'inline-flex items-center justify-center rounded bg-[var(--color-eu-blue)] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[var(--color-navy-surface)]'
+
+/** The secondary button: outlined in the accent, filled on hover. */
+export const BUTTON_OUTLINE =
+  'inline-flex items-center justify-center rounded border border-[var(--color-accent-text)] px-4 py-2.5 text-sm font-semibold text-[var(--color-accent-text)] hover:bg-[var(--color-eu-blue)] hover:text-white'
