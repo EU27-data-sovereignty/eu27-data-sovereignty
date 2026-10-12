@@ -47,6 +47,18 @@ export interface TileState {
 type Metric = 'holdings' | 'tier0' | 'facts'
 
 /**
+ * Four shades, not a continuous ramp: a tile mixed half and half is a mid-blue on which neither the light
+ * nor the dark label reaches 4.5:1 (the first #101 deploy failed on exactly that). Each step's mix was
+ * checked against its label colour in both themes; the lowest ratio is 5.5:1.
+ */
+const STEPS = [
+  { below: 0.4, mix: 12, dark: false },
+  { below: 0.65, mix: 26, dark: false },
+  { below: 0.85, mix: 82, dark: true },
+  { below: Infinity, mix: 100, dark: true },
+]
+
+/**
  * The 27 as a tile map on the front page, shaded blue by how much verified evidence each has (#99, #101).
  * Shade is never the only cue: each tile prints its number, and its label reads it out. It counts
  * evidence; it is not a ranking of how sovereign a state is (#77).
@@ -109,6 +121,7 @@ export function TileMap({ states }: { states: TileState[] }) {
           if (!t) return <span key={i} />
           const [v, max] = value(t)
           const share = max ? v! / max! : 0
+          const step = STEPS.find(x => share < x.below) ?? STEPS[STEPS.length - 1]!
           return (
             <button
               key={t.iso}
@@ -117,14 +130,14 @@ export function TileMap({ states }: { states: TileState[] }) {
               onClick={() => setSel(t.iso)}
               aria-label={`${t.name}: ${t.holdings} of ${t.holdingsTotal} holdings verified, ${t.tier0} of ${t.tier0Total} tier 0, ${t.facts} sourced facts`}
               className={`flex aspect-square flex-col items-center justify-center rounded text-[0.66rem] font-bold tracking-wide transition-transform hover:-translate-y-0.5 sm:text-xs ${
-                share > 0.55 ? 'text-[var(--color-bg-card)]' : 'text-[var(--color-fg-primary)]'
+                step.dark ? 'text-[var(--color-bg-card)]' : 'text-[var(--color-fg-primary)]'
               } ${sel === t.iso ? 'ring-2 ring-[var(--color-accent)] ring-offset-2 ring-offset-[var(--color-bg-card)]' : ''}`}
               style={{
-                background: `color-mix(in oklab, var(--color-accent-text) ${Math.round(8 + share * 92)}%, var(--color-bg-emphasis))`,
+                background: `color-mix(in srgb, var(--color-accent-text) ${step.mix}%, var(--color-bg-emphasis))`,
               }}
             >
               {t.iso}
-              <span className="hidden text-[0.72em] font-medium opacity-80 tabular-nums sm:block">
+              <span className="hidden text-[0.72em] font-medium tabular-nums sm:block">
                 {metric === 'facts' ? v : `${v}/${max}`}
               </span>
             </button>
@@ -133,7 +146,7 @@ export function TileMap({ states }: { states: TileState[] }) {
       </div>
       <div className="mt-3 flex items-center gap-2.5 text-xs text-[var(--color-fg-muted)]">
         <span>Less evidence</span>
-        <span className="h-2 w-32 rounded bg-gradient-to-r from-[var(--color-bg-emphasis)] to-[var(--color-accent-text)]" />
+        <span className="h-2 w-32 rounded bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-accent-text)_12%,var(--color-bg-emphasis))_0_25%,color-mix(in_srgb,var(--color-accent-text)_26%,var(--color-bg-emphasis))_25%_50%,color-mix(in_srgb,var(--color-accent-text)_82%,var(--color-bg-emphasis))_50%_75%,var(--color-accent-text)_75%)]" />
         <span>More</span>
       </div>
       <div

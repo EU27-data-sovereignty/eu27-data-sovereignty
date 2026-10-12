@@ -2717,8 +2717,10 @@ than #72/#73/#77 chose. The PDFs' covers and rules change colour with the brand 
   headline scales down, the toggle stays on one line, the audience buttons fall to two columns and the page does
   not scroll sideways.
 
-NOT YET: the PDFs with the new brand colours (`typst` is not installed on the machine that made this change); CI
-compiles them before the deploy.
+- The first deploy (`85d9e0e`) compiled the PDFs and passed Firefox, and failed on the front page's contrast check
+  in Chrome: tile-map tiles near the middle of the ramp gave their labels 4.3:1. The map now shades in four fixed
+  steps, each computed against its label in both themes (lowest 5.5:1); the accessibility tests pass three runs
+  in a row in both themes.
 
 *Would change if:* an audience or "I need to…" gets real content, which makes the selector a navigation and may
 move the dataset sections again; or the star disc draws an objection that the site implies EU endorsement, in

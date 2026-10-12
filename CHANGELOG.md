@@ -7,6 +7,15 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Fixed: the tile map's labels keep their contrast (#101)
+
+- **What failed.** The first deploy of the landing design stopped on the front page's accessibility test in
+  Chrome: map tiles between about 55% and 65% were a mid-blue on which their labels reached only 4.3:1 (3.4:1 for
+  the small figure under each code), in both themes. The site stayed on the previous version.
+- **The fix.** `TileMap` shades in four fixed steps instead of a continuous ramp, each checked against its label
+  colour in both themes (lowest 5.5:1), and the figure under each code is no longer faded. The legend shows the
+  four steps.
+
 ### Changed: the web app takes the landing design (#101)
 
 - **Front page.** A new hero ("Navigate Cloud Sovereignty") and, under it, an audience selector band: an
