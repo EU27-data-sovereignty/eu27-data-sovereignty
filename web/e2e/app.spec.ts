@@ -320,8 +320,8 @@ test.describe('entry points (#101, #102)', () => {
       await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
       expect(await page.locator('ol > li').count(), route).toBeGreaterThanOrEqual(3)
       // A figure that failed to compute would print NaN or "undefined".
-      await expect(page.locator('dl dd').first()).toBeVisible()
-      for (const value of await page.locator('dl dd').allTextContents())
+      await expect(page.locator('[data-figure]').first()).toBeVisible()
+      for (const value of await page.locator('[data-figure]').allTextContents())
         expect(value, route).toMatch(/^[\d,]+( of [\d,]+)?$/)
     }
   })
@@ -392,6 +392,17 @@ test.describe('ask', () => {
   })
 })
 
+/**
+ * Wait for the page itself, not the placeholder. Until the bundle has been fetched the app renders
+ * "Loading the EU-27 dataset…" inside a <main> of its own, so waiting for <main> alone lets a scan run
+ * against the placeholder and pass without having checked anything. That happened twice on a slow machine
+ * (#101, #102) while CI, which is faster, failed on the real page.
+ */
+async function loaded(page: Page) {
+  await expect(page.locator('main')).toBeVisible()
+  await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
+}
+
 test.describe('accessibility', () => {
   for (const route of ROUTES) {
     test(`${route} has no detectable violations`, async ({ page }) => {
@@ -399,7 +410,7 @@ test.describe('accessibility', () => {
       // 2026-10-01); a full axe scan of it takes longer than the default 30 s.
       if (route === '/sources') test.setTimeout(120_000)
       await page.goto(route)
-      await expect(page.locator('main')).toBeVisible()
+      await loaded(page)
       const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
         .analyze()
@@ -414,7 +425,7 @@ test.describe('accessibility in dark mode (#92)', () => {
   for (const route of ROUTES.filter(r => r !== '/sources')) {
     test(`${route} has no detectable violations in dark mode`, async ({ page }) => {
       await page.goto(route)
-      await expect(page.locator('main')).toBeVisible()
+      await loaded(page)
       expect(await page.evaluate(() => matchMedia('(prefers-color-scheme: dark)').matches)).toBe(
         true,
       )
@@ -453,7 +464,7 @@ test.describe('responsive', () => {
     test(`${route} does not scroll sideways at 375px (#92)`, async ({ page }) => {
       await page.setViewportSize({ width: 375, height: 800 })
       await page.goto(route)
-      await expect(page.locator('main')).toBeVisible()
+      await loaded(page)
       const overflow = await page.evaluate(
         () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
       )

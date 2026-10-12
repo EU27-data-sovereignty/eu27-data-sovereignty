@@ -20,6 +20,16 @@ What changed and when. Reasoning for the choices behind these changes lives in
   its guide before the destination page.
 - **Source of the words.** Drafted from the note "Benefits and Use Cases for Decision Makers"; its fixed numbers,
   named findings and two unsourced comparisons were left out. The text lives in `web/src/data/guides.ts`.
+- **The first deploy of this failed** on the accessibility test in Chrome: the figures strip was a `<dl>` whose
+  groups held a link beside their `<dt>` and `<dd>`, which a definition list does not allow. It is a list now,
+  and each "Check it" link names its figure for screen readers.
+
+### Fixed: the accessibility and phone-width tests could pass without scanning the page
+
+- Until the dataset has loaded the app shows "Loading the EU-27 dataset…" inside a `<main>` of its own. The tests
+  waited for `<main>` only, so on a slow machine they scanned that placeholder and passed. It hid two real
+  faults before a push (the tile map's contrast, the guides' figures strip); CI, being faster, caught both.
+- They now wait for the placeholder to go (`loaded()` in `web/e2e/app.spec.ts`) before scanning or measuring.
 
 ### Changed: "I need to…" lists six tasks, each linked to its page (#101)
 

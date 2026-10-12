@@ -102,25 +102,30 @@ export function Guide({ bundle, kind }: { bundle: Bundle; kind: 'for' | 'how' })
           title={<span id="guide-figures">Where the evidence stands</span>}
           aside="Counted from the published dataset as this page loads. Each figure links to the page where it can be checked."
         />
-        <dl className="grid gap-px overflow-hidden rounded border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-2 lg:grid-cols-4">
+        {/* A list, not a <dl>: each figure carries a link, which a definition list's groups may not hold
+            beside their <dt> and <dd>. */}
+        <ul className="grid gap-px overflow-hidden rounded border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-2 lg:grid-cols-4">
           {guide.figures.map(id => {
             const f = FIGURES[id](bundle)
             return (
-              <div key={id} className="flex flex-col gap-1.5 bg-[var(--color-bg-card)] p-5">
-                <dd className="font-display text-3xl leading-none font-extrabold tabular-nums">
+              <li key={id} className="flex flex-col gap-1.5 bg-[var(--color-bg-card)] p-5">
+                <p
+                  data-figure
+                  className="font-display text-3xl leading-none font-extrabold tabular-nums"
+                >
                   {f.value}
-                </dd>
-                <dt className="text-sm text-[var(--color-fg-secondary)]">{f.label}</dt>
+                </p>
+                <p className="text-sm text-[var(--color-fg-secondary)]">{f.label}</p>
                 <Link
                   to={f.to}
                   className="mt-auto pt-1 text-xs font-semibold text-[var(--color-accent-text)] hover:underline"
                 >
-                  Check it →
+                  Check it<span className="sr-only">: {f.label}</span> →
                 </Link>
-              </div>
+              </li>
             )
           })}
-        </dl>
+        </ul>
       </section>
 
       <div className="mb-12 grid gap-8 lg:grid-cols-2">

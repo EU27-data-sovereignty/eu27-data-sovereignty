@@ -2787,6 +2787,11 @@ than #72/#73/#77 chose for the reports. They are kept apart from findings (no fa
   Germany's report at `#gaps`; `/for/ministries` and `/how/exposure` are in the accessibility and 375 px route
   lists.
 
+- The first deploy (`e52cca9`) failed on the accessibility test in Chrome: the figures strip was a `<dl>` with a
+  link inside each group. It is a `<ul>` now. The local runs had passed because the tests scanned the loading
+  placeholder; they now wait for the data (`loaded()`), and with that all 46 accessibility, 375 px and
+  entry-point tests pass in Chrome against the real pages.
+
 *Would change if:* the guides start to carry claims a reader could cite as findings, in which case they move into
 the content model with sources; or the project owner judges the advice too prescriptive for #77, in which case
 the wording is cut back to what each page shows.
