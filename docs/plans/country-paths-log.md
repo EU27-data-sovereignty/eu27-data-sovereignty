@@ -78,16 +78,15 @@ New denies, so the boundary is written down rather than implied: `git push origi
 | `./test.sh --no-live` | merged tree | 18 stages, exit 0 |
 | `./run.sh factcheck status` | merged tree | 1490 of 1490 checked |
 | `./test.sh --only model` | rule commit | 9 checks passed |
-| live redirect, `curl -sI https://eu27.cloud/country/DE` | production | **not yet**, needs the deploy |
+| live redirect, `curl -sI https://eu27.cloud/country/DE` | production | 308 to `/DE`; `/de` serves 200 (run 38334656899) |
 
 ## 6. Open
 
-- Push `sovereign-appliance-merge` to `main`: the deploy that carries #103 to #106. Under the new rule the
-  assistant can run it after the owner's OK; the first push under the rule is its verification.
+- Done: `7f265ac` pushed to `main` under the rule, Actions run 38334656899, all gate jobs green, deployed.
 - The local `sovereign-appliance` branch in the working checkout is still at `0a64633`; it was left there
   so the other sessions' uncommitted files are not disturbed. Reset it to `main` once the push is done.
-- `dotfiles/docs/policy/ai-and-external-services.md` §5 gets one line pointing at per-project allow rules,
-  with this as the first example; a separate commit in `dotfiles`.
+- Done in `dotfiles` (`893d744`, not yet pushed): policy §5 names per-project allow rules, this as the first
+  example.
 - Next content todo: print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address
   today. It is a content-model change, so a `label` span, a changelog entry and a `/factcheck` run.
 - Still later: the mobile reader to schema 2 (`TODO.md`).

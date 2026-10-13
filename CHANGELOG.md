@@ -16,6 +16,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Why.** The push that deploys this site was refused by Claude Code's auto-mode classifier as a production deploy,
   after the owner had given the OK in the conversation (#106). The rule removes that one prompt and no other; every
   gate on the path to `eu27.cloud` is unchanged, and the owner's OK is still required before each push.
+- **Verified in use.** The first push under the rule, `7f265ac` to `main`, ran as Actions run 38334656899: every
+  gate job green, deployed. On the live site `/country/DE` answers 308 to `/DE`, the app sends `/DE` on to `/de`,
+  and `/de` serves the page.
 
 ### Changed: a member state's page is at its code, `eu27.cloud/de` (#105)
 

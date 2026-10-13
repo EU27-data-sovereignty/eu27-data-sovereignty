@@ -2976,7 +2976,8 @@ push to `main` without the owner's OK in that conversation breaks `CLAUDE.md`, w
 
 **Verified:** 2026-10-12. `python3 -m json.tool .claude/settings.json` parses; the file is tracked (`git ls-files
 .claude/settings.json`). `tests/test_docs.py` passes with this entry. The first push under the rule is the one
-that deploys it, recorded in `CHANGELOG.md` with its Actions run; until then the rule is unverified in use.
+that deploys it, recorded in `CHANGELOG.md` with its Actions run. Done the same day: push `7f265ac` to `main`
+under the rule, Actions run 38334656899 green, `/country/DE` answering 308 on the live site.
 
 *Would change if:* a push to `main` happens without the owner's OK in the conversation, in which case the allow
 is removed and the push goes back to a hand-typed command; or Claude Code gains a per-command confirmation that
