@@ -3,7 +3,92 @@
 A log of the work behind [`NATIONAL-AI-STRATEGIES.md`](../../NATIONAL-AI-STRATEGIES.md), newest first, in the
 shape of [`stichting-log.md`](stichting-log.md). Each entry records who or what produced it, what the owner asked,
 what was decided and why, what changed, how it was checked, and what is still open. The decision of record is
-`DECISIONS.md` #103; this log is the working narrative behind it, not a second copy.
+`DECISIONS.md` #103; this log is the working narrative behind it, not a second copy. The note was recorded as
+#101 until commit `3c41351` of 2026-10-12 renumbered it to #103, so the three commits of 2026-10-10 cite #101 in
+their messages; the 2026-10-13 entry says why.
+
+## 2026-10-13 — renumbered to #103, merged into `main`, deployed; the record brought up to date
+
+**Produced by.** Claude Fable 5.1 (`claude-fable-5-1`) in Claude Code, the session that wrote the two entries below,
+`https://claude.ai/code/session_01FcnUV5xYY1w5oSz7Vnzqf2`, after a context reset. The owner asked: "ensure everything is
+documented in markdown files". Nothing in the note, the checker, the tests or the link register changed in this entry;
+only this log.
+
+### What happened between the entries
+
+All of it by concurrent sessions on this machine; their own narratives are [`country-paths-log.md`](country-paths-log.md)
+§2, [`sovereign-appliance-log.md`](sovereign-appliance-log.md) and the session index
+[`2026-10-12-session-log.md`](2026-10-12-session-log.md).
+
+- **Renumbered** in `3c41351` on 2026-10-12: `main` had meanwhile taken #101 and #102 for the landing design and the
+  guide pages, so this note's decision is #103 (the appliance note #104, the country paths #105). For this note the
+  commit moved the two citations in `NATIONAL-AI-STRATEGIES.md`, the `DECISION` constant in `model/national_ai_note.py`,
+  `tests/test_national_ai.py`, `tests/test_docs.py`, the header of the fact-check report, this log, and the entries in
+  `CHANGELOG.md`, `README.md`, `ROADMAP.md`, `TODO.md` and `FEASIBILITY-RANKING.md`. The three commits of 2026-10-10
+  (`8d25cc7`, `5537135`, `f321d78`) keep #101 in their messages; history is not rewritten.
+- **Merged into `main`.** `b7f5931` merged `origin/main` into the branch that carried this note and the appliance note;
+  `7f265ac` was pushed to `main` on 2026-10-12 under the permission rule of #106: Actions run 38334656899, conclusion
+  success, every gate job green, deployed. The note has been on `main` since. It is still never rendered, so nothing
+  on the site changed because of it.
+- **The checker now runs through the notes register.** `79fdf01` added `model/notes.py`, one `test.sh` stage that runs
+  every authored note's checker; `python3 model/notes.py check` lists this note as one of four (#103, #104, #108 and
+  the language drafts).
+- `origin/national-ai` (`f321d78`) is an ancestor of `main` and can be deleted by the owner; the assistant may not
+  delete branches.
+
+### What this session did on resuming
+
+- Found the owner's checkout on `sovereign-appliance`, 28 commits behind `main`, with other sessions' uncommitted
+  files (`CHANGELOG.md`, `OUTREACH.md`, `README.md`, the three stichting files); left all of it untouched, as before.
+- Checked every markdown file on `origin/main` that names the note for a citation left at #101: none. The `#101`
+  that remain in `README.md`, `CHANGELOG.md` and `DECISIONS.md` are the landing design's.
+- Found that this log carried the new number but did not say it had been renumbered, merged or deployed; those facts
+  were only in the other sessions' logs, and the "Still open" list of the entry below still called the merge an open
+  item. Wrote this entry, added the sentence in the header, and marked that item done in place.
+
+### Decisions
+
+1. **This log is amended, not rewritten.** The header gains one sentence on the numbering; the merge item in the
+   2026-10-10 "Still open" list gains a pointer to this entry; the entries themselves stay as written. A reader of the
+   2026-10-10 commits sees #101 and finds here why the record says #103.
+2. **The entry is written on a branch from `origin/main`, in a worktree, not in the checkout.** The checkout holds
+   other sessions' uncommitted work on a branch behind `main`. The branch is `national-ai-log`, pushed to origin;
+   `main` is the owner's to fast-forward (`git push origin national-ai-log:main`), since #106 wants the owner's OK in
+   the conversation before each push there.
+3. **No changelog entry.** A log entry changes no behaviour and no printed fact; `CHANGELOG.md` already records the
+   note under 2026-10-10, and the renumbering is in the concurrent session's record.
+
+### Verification
+
+In the worktree at `origin/main` (`fcf0b65`) plus this entry, 2026-10-13:
+
+```
+./run.sh national-ai check   → 27 states, 467 URLs (462 answered at the last link check), 175 unverified marks, 38,429 words, 0 problems
+python3 model/notes.py check → ok  the national-AI note (#103)  (and the three other notes ok)
+python3 -m unittest tests.test_national_ai tests.test_docs → Ran 19 tests, OK
+gh run view 38334656899      → conclusion success, head 7f265ac, event push
+git merge-base --is-ancestor f321d78 origin/main → true
+```
+
+### Still open
+
+- Unchanged: 130 cells the reviewers could not source, kept marked; four `gov.ie` pages refuse automated fetches; the
+  sourced follow-on in `ROADMAP.md` § "Then — national AI as reviewed indicators", not started.
+- Owner: fast-forward `main` to `national-ai-log`; delete `origin/national-ai` once satisfied.
+
+### Where everything is recorded
+
+| What | Where |
+|---|---|
+| The note | `NATIONAL-AI-STRATEGIES.md` (§8 is its status table) |
+| The decision of record, with alternatives and *Verified:* | `DECISIONS.md` #103 |
+| The reader-facing change entry | `CHANGELOG.md`, 2026-10-10, "Added … (#103)" |
+| The contract and how it is checked | `model/national_ai_note.py`, `tests/test_national_ai.py`, `./run.sh national-ai check` and `links`, the `test.sh` stage through `model/notes.py` |
+| The link register | `docs/national-ai-strategies-links.csv` |
+| The second-model review, verbatim | `docs/plans/national-ai-strategies-factcheck-2026-10-10.md` |
+| Where the note is pointed to | `README.md` (layout and its section), `ROADMAP.md` (the Done bullet and the follow-on), `TODO.md`, `FEASIBILITY-RANKING.md`, `CLAUDE.md`, `docs/testing.md` |
+| The renumbering, the merge and the push to `main` | `3c41351`, `b7f5931`, `7f265ac`; narrative in `country-paths-log.md` §2 and `2026-10-12-session-log.md` |
+| The working narrative and the open items | this file |
 
 ## 2026-10-10, later — the second-model review, applied
 
@@ -64,7 +149,9 @@ factories; OpenEuroLLM's Leonardo hours were for a dataset project. No route gro
 - The sourced follow-on (reviewed indicators and a `/national-ai` page) is designed in `ROADMAP.md` and not
   started: it adds about 135 printed facts that each need a fetched quote, an independent review and the
   cross-model check before a deploy.
-- Merging `national-ai` into `main` is a production deploy and is the owner's call.
+- Merging `national-ai` into `main` is a production deploy and is the owner's call. *Done by a concurrent session:
+  merged in `b7f5931`, pushed to `main` as `7f265ac` on 2026-10-12, Actions run 38334656899 green; see the
+  2026-10-13 entry.*
 
 ## 2026-10-10 — the note, its checker and the link register
 
