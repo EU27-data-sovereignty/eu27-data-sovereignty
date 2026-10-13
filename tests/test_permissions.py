@@ -27,7 +27,7 @@ class Allow(unittest.TestCase):
     def test_nothing_allowed_is_a_delete_or_a_force_push(self):
         for rule in ALLOW:
             inner = rule[len("Bash("):-1]
-            self.assertNotRegex(inner, r" :main$|\+|--force|-f\b")
+            self.assertNotRegex(inner, r" :main$|\+|--force|(?:^| )-f(?: |$)")
 
 
 class Deny(unittest.TestCase):

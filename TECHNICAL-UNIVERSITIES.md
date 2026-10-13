@@ -5,9 +5,13 @@ names the published list it comes from and the date the page was fetched, or is 
 "Leading" means: on one of the lists below. It is not a ranking, and the order within a state is
 alphabetical.
 
+Review status: drafted by a claude-opus-5-5 agent on 2026-10-12; a second claude-opus-5-5 agent, in a separate
+session on 2026-10-13, checked the 44 C1 rows against the archived list, the C2 rows against the EuroTech page and
+six C3 rows against their cited pages (#108). No person has read it.
+
 ## Criteria
 
-- C1: CESAER member, per https://web.archive.org/web/20260413044452/https://www.cesaer.org/members/ (the Internet Archive copy of https://www.cesaer.org/members/ captured 2026-04-13; cesaer.org did not resolve from here on 2026-10-12), accessed 2026-10-12.
+- C1: CESAER member, per https://web.archive.org/web/20260413044452/https://www.cesaer.org/members/ (the Internet Archive copy of https://www.cesaer.org/members/ captured 2026-04-13; cesaer.org did not resolve from here on 2026-10-12), accessed 2026-10-12. The date on a C1 row is the day the archived page was read; membership is as of the capture, 2026-04-13, not of that day.
 - C2: EuroTech Universities Alliance member, per https://eurotech-universities.eu/about-us/, accessed 2026-10-12.
 - C3: the state's technical university or polytechnic, per the page cited on the row.
 
@@ -137,7 +141,7 @@ alphabetical.
 
 | Institution | City | Website | Basis |
 |---|---|---|---|
-| Université du Luxembourg (University of Luxembourg) | Esch-sur-Alzette | https://www.uni.lu | [unverified] |
+| (none found) | — | — | none: searched 2026-10-12 |
 
 ## Malta (MT)
 
@@ -188,7 +192,7 @@ alphabetical.
 
 | Institution | City | Website | Basis |
 |---|---|---|---|
-| Univerza v Ljubljani (University of Ljubljana) | Ljubljana | https://www.uni-lj.si | [unverified] |
+| (none found) | — | — | none: searched 2026-10-12 |
 
 ## Spain (ES)
 
@@ -211,6 +215,7 @@ alphabetical.
 - Fetched 2026-10-12: the Internet Archive copy of cesaer.org/members (2026-04-13 capture; cesaer.org itself did not resolve), eurotech-universities.eu/about-us/, and each C3 page cited on its row. Every C1 and C2 member in an EU state is listed, which is why DE has nine rows and FR five.
 - C1: 44 rows. C2: 3 rows (DTU, TUM, TU/e). IP Paris is on both lists and is counted once, as C1. EPFL and Technion (C2) and the non-EU C1 members are out of scope.
 - C3: 11 rows, for states with fewer than two C1 or C2 members. The Estonian row cites the rectors' conference page (ern.ee), which names Tallinna Tehnikaülikool, because taltech.ee returned 403. CUT and VILNIUS TECH are cited from pages that name them in Greek and Lithuanian only.
-- [unverified]: 3 rows. rtu.lv returned 403. Luxembourg and Slovenia: no technical university or polytechnic was found, so the row names the state's public university and is not on any list.
+- [unverified]: 1 row, Riga Technical University, because rtu.lv returned 403 and no other page was fetched for it. Luxembourg and Slovenia: no technical university or polytechnic was found on 2026-10-12, and the row says so; a state's general university is not listed in its place.
+- C3 is the note's choice, not the page's: a cited page shows that the institution exists and what it calls itself (MCAST, "vocational education and training"; TVZ, a university of applied sciences); no page was found that names it *the* state's technical institution.
 - Not added under C3, for lack of a fetched page that says so: LUT University (FI) and a second Hungarian institution. FI and HU each have one row.
 - Cities and the homepage URLs are not separately sourced. A HEAD-style check on 2026-10-12 got 200 from most homepages; taltech.ee, rtu.lv and ucd.ie returned 403, uni.lu 202, and tugraz.at, kuleuven.be and rwth-aachen.de did not resolve from here.

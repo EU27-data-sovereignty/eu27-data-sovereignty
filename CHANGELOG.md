@@ -7,20 +7,22 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
-### Added: `TECHNICAL-UNIVERSITIES.md`, the technical universities of each member state, sourced or marked
+### Added: `TECHNICAL-UNIVERSITIES.md`, the technical universities of each member state, sourced or marked (#108)
 
 - **What it is.** An authored note at the root: per state, the institutions on a named published list (C1: CESAER
   members, from the Internet Archive copy of cesaer.org/members of 2026-04-13 because cesaer.org did not resolve on
   2026-10-12; C2: EuroTech Universities Alliance members, from its site) or the state's technical university cited from
-  a fetched page (C3), else **[unverified]**. 61 rows: 44 C1, 3 C2, 11 C3, 3 unverified. Alphabetical within a state,
+  a fetched page (C3), else **[unverified]**; a state with none says so. 61 rows: 44 C1, 3 C2, 11 C3, 1 unverified,
+  2 none (LU, SI). Alphabetical within a state,
   no ranking word anywhere: "leading" means on one of those lists and nothing more. Drafted by a claude-opus-5-5 agent
   that fetched every cited page; cities and homepages are not separately sourced.
 - **Checked.** `python3 model/technical_universities_note.py check`: the 27 headings in order, the four columns, every
-  Basis one of the three shapes, every URL in `docs/technical-universities-links.csv` (75 URLs, 68 answered on
+  Basis one of the three shapes, every URL in `docs/technical-universities-links.csv` (73 URLs, 67 answered on
   2026-10-12; `tugraz.at`, `kuleuven.be` and `rwth-aachen.de` did not resolve from here, `ucd.ie`, `taltech.ee` and
-  `rtu.lv` refused), no renderer names it. Registered in `model/notes.py`.
+  `rtu.lv` refused), no renderer names it. Registered in `model/notes.py`. A second claude-opus-5-5 agent checked
+  the C1 and C2 rows against their lists and six C3 rows against their pages (#108); no person has read it.
 
-### Changed: one `test.sh` stage for every authored note and draft set, through a register
+### Changed: one `test.sh` stage for every authored note and draft set, through a register (#108)
 
 - **What changed.** The three per-note stages became one, "Authored notes and agent drafts keep their contracts", which
   runs `python3 model/notes.py check`: the register of checker modules, one line of output each. A new note adds a
@@ -48,6 +50,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
   refuse any two-letter static route in `App.tsx` and any one-segment template path outside the helper, read the
   caller names from the workflows, and the draft checker refuses duplicate review rows, a `fix` without a wording,
   and a summary when the check fails. `ci.yml` drops an always-true `if` and cancels a superseded run per branch.
+- **First run.** The record and promote steps ran for the first time in the deploy of `3fe96b5` (Actions run
+  38344010621): the record step read the project's production target, the promote step found the new deployment
+  already current, the rollback step was skipped. The API fields #107 called unverified are verified by that run.
 
 ### Changed: the language drafts follow the i18n standards, and the checker enforces them (`docs/plans/localisation-plan.md`)
 

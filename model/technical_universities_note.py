@@ -34,8 +34,10 @@ STATES = {
 }
 COLUMNS = ["Institution", "City", "Website", "Basis"]
 DATE = r"\d{4}-\d{2}-\d{2}"
-BASIS = re.compile(rf"^(?:C[12], accessed {DATE}|C3: https?://\S+, accessed {DATE}|\[unverified\])$")
-RANKING = re.compile(r"\b(top|best|number one|no\. ?1|#1|ranked|ranking|first-ranked|elite|prestigious)\b", re.I)
+BASIS = re.compile(rf"^(?:C[12], accessed {DATE}|C3: https?://\S+, accessed {DATE}|\[unverified\]|none: searched {DATE})$")
+NONE_ROW = ["(none found)", "—", "—"]      # a state with no institution on any list says so, once
+RANKING = re.compile(r"\b(top|best|leading|foremost|premier|world-class|excellent|number one|no\. ?1|#1|ranked|ranking|"
+                     r"first-ranked|elite|prestigious)\b", re.I)
 RENDERERS = ["model/document.py", "model/export_json.py", "model/generate_countries.py", "model/ask_corpus.py",
              "book", "web/src", "api"]
 
@@ -78,7 +80,7 @@ def check() -> int:
         if STATES.get(iso) != name:
             problems.append(f"{iso}: heading says {name!r}, want {STATES.get(iso)!r}")
 
-    counts = {"C1": 0, "C2": 0, "C3": 0, "[unverified]": 0}
+    counts = {"C1": 0, "C2": 0, "C3": 0, "[unverified]": 0, "none": 0}
     n_rows = 0
     body = text.split("## Method", 1)[0]
     for i, (name, iso) in enumerate(heads):
@@ -101,6 +103,14 @@ def check() -> int:
                 problems.append(f"{iso}: row {r[0]!r} has {len(r)} cells")
                 continue
             inst, city, site, basis = r
+            if basis.startswith("none:"):
+                if [inst, city, site] != NONE_ROW or len(entries) != 1:
+                    problems.append(f"{iso}: a 'none' row must be the only row and read {NONE_ROW}")
+                elif BASIS.match(basis):
+                    counts["none"] += 1
+                else:
+                    problems.append(f"{iso}: basis {basis!r} is not 'none: searched <date>'")
+                continue
             if not re.match(r"^https://[^\s/]+(/\S*)?$", site) or site.endswith("/"):
                 problems.append(f"{iso}: {inst}: website {site!r} is not an https URL without a trailing slash")
             if not BASIS.match(basis):
@@ -113,12 +123,13 @@ def check() -> int:
             if RANKING.search(inst) or RANKING.search(city):
                 problems.append(f"{iso}: {inst}: ranking word")
 
-    # No ranking language outside the one sentence that defines "leading".
-    prose = re.sub(r'"Leading" means: on one of the lists below\. It is not a ranking', "", text)
-    prose = re.sub(r"^\|.*$", "", prose, flags=re.M)
-    for m in RANKING.finditer(prose):
-        line = prose[: m.start()].count("\n") + 1
-        problems.append(f"line {line}: ranking word {m.group(0)!r}")
+    # No ranking language in the prose, except on the one line that defines "leading" and on a line that quotes
+    # a cited page's own words; table rows are checked cell by cell above.
+    for n, line in enumerate(text.splitlines(), 1):
+        if line.startswith("|") or '"Leading" means' in line or 'calls itself' in line:
+            continue
+        for m in RANKING.finditer(line):
+            problems.append(f"line {n}: ranking word {m.group(0)!r}")
 
     # Every URL in the note is in the register, and the register has nothing the note dropped.
     note_urls = set(urls(text))
@@ -148,7 +159,7 @@ def check() -> int:
 
     answered = sum(1 for r in links.values() if str(r.get("status", "")).startswith("2") or str(r.get("status", "")).startswith("3"))
     print(f"{len(heads)} states, {n_rows} rows (C1 {counts['C1']}, C2 {counts['C2']}, C3 {counts['C3']}, "
-          f"[unverified] {counts['[unverified]']}), {len(note_urls)} URLs ({answered} answered at the last link check), "
+          f"[unverified] {counts['[unverified]']}, none {counts['none']}), {len(note_urls)} URLs ({answered} answered at the last link check), "
           f"{len(problems)} problems")
     for p in problems:
         print("  " + p)

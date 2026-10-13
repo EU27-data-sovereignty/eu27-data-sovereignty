@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-model/notes.py is the register of authored notes and agent drafts: every checker module is registered, every
-registered module exists and answers `check`, and the one test.sh stage runs the register.
+model/notes.py is the register of authored notes and agent drafts: every `model/*_note.py` checker and the
+drafts checker is registered, every registered module exists, and the one test.sh stage runs the register.
 
     python3 -m unittest discover -s tests -v
 """

@@ -3028,11 +3028,60 @@ claude-opus-5-5 the same day found the first rollback step to be a no-op (`verce
 prints a status in CLI 61) and the push allow in `.claude/settings.json` to match a delete and a force push; both
 were corrected before any further push. The ruleset and the two settings are **NOT YET** applied: the first push
 after the owner runs the three commands verifies them, and `gh api repos/EU27-data-sovereignty/eu27-data-sovereignty/rulesets`
-listing the ruleset is the check. The rollback and promote steps have **NOT YET** run against a real failure; the
-Vercel API field they read (`targets.production.url` of the project) is taken from the API reference and
-unverified in this workflow until the first such run. Two of the required contexts (`security / gate`,
+listing the ruleset is the check. The record and promote steps ran for the first time in Actions run 38344010621
+(2026-10-13, the deploy of `3fe96b5`): the record step read `targets.production.url`, the promote step found the
+new deployment already current, the rollback was skipped. The rollback step itself has **NOT YET** run against a
+real failure. Two of the required contexts (`security / gate`,
 `security / gitleaks`) are job ids in the dotfiles repository's reusable workflow, called at `@main`; a rename
 there would block every push to `main` until the ruleset is updated.
 
 *Would change if:* a second writer joins, in which case required reviews return; or a smoke-test failure shows the
 rollback window matters, in which case the bypass secret is set and the promote-after-smoke path is built.
+
+### 108. The technical universities are an authored note on published lists, and every note's checker runs through one register
+**Decision.** 2026-10-13, at the owner's request of 2026-10-12 for "the top technical schools in every EU-27
+country". `TECHNICAL-UNIVERSITIES.md`, at the root, lists per member state the institutions that are on a named
+published list: C1, the members of CESAER (read from the Internet Archive copy of 2026-04-13, because cesaer.org
+did not resolve on 2026-10-12); C2, the members of the EuroTech Universities Alliance; or C3, the state's technical
+university or polytechnic cited from a fetched page, where C1 and C2 give fewer than two. A state with none says
+so in a single row (`none: searched <date>`); a row whose page could not be fetched is **[unverified]**. "Top" is
+not used: "leading" is defined in the note as being on one of those lists, the order within a state is
+alphabetical, and the checker refuses a ranking word anywhere else. 61 rows: 44 C1, 3 C2, 11 C3, 1 unverified,
+2 states with none. The note is held by `model/technical_universities_note.py check` and its link register
+`docs/technical-universities-links.csv`, and is never rendered. At the same time `model/notes.py` becomes the
+register of every note and draft checker, and `test.sh` runs it as one stage in place of one stage per note.
+
+**Problem.** "Top" is a ranking, and the project does not rank (#10, #77); a list of schools the assistant thinks
+are best would be an opinion no reader could check. The authored-note contract of #103 and #104 gives the shape:
+a claim is on a page a reader can open, or it is marked. And each note had been adding a stage to `test.sh`,
+which at twenty stages was growing by one per note.
+
+**Alternatives considered.**
+- **Membership of named lists as the criterion, cited per row, a register for the checkers (chosen).**
+- **A ranking table (QS, THE, Shanghai) per state.** *Why not:* a league table is an opinion with a method the
+  project cannot reproduce, it changes yearly, and the project's own rule against ranking states would read
+  oddly next to a ranking of their universities.
+- **The assistant's own judgment of "top".** *Why not:* not checkable; the note would carry the model's prior as
+  a fact.
+- **Listing the state's general university where no technical one exists.** *Why not:* a non-technical
+  university in a table of technical universities is a claim known to be wrong, not an unverified one; the
+  reviewer on 2026-10-13 made the point and the rows became "none found".
+- **One `test.sh` stage per note, as before.** *Why not:* twenty stages for a single writer, growing with every
+  note, and the stage count is what `docs/testing.md` and the CI job map carry; the register keeps the gate at
+  eighteen and makes a new note a one-line registration that `tests/test_notes.py` enforces.
+
+**Closes off.** A ranking word in the note; a row without a page or a mark; a general university standing in
+for a missing technical one; a new `test.sh` stage for a note or draft set (it registers in `model/notes.py`).
+
+**Verified:** 2026-10-13. `python3 model/technical_universities_note.py check`: 27 states, 61 rows, 0 problems;
+`links`: 73 URLs, 67 answered on 2026-10-12 (`tugraz.at`, `kuleuven.be`, `rwth-aachen.de` did not resolve from
+the machine that ran it; `ucd.ie`, `taltech.ee`, `rtu.lv` refused). `python3 model/notes.py check`: four
+checkers, all pass. `tests/test_notes.py` and `tests/test_permissions.py` pass. Second-model review: a
+claude-opus-5-5 agent in a separate session read the 44 C1 rows against the archived list, the C2 rows against
+the EuroTech page and six C3 rows against their cited pages (BG, HR, EE, MT, IE, CY), all confirmed; it found
+the two general-university rows and the missing decision entry, both fixed before the push. **NOT YET:** a
+reading by a person, and a check of cesaer.org itself once it resolves.
+
+*Would change if:* cesaer.org resolves and the live list differs from the capture, in which case the C1 rows
+are re-read and the Criteria line cites the live page; or the project admits institutions as entities in the
+hosting model (#96), in which case this note becomes the seed of a sourced register and stops being authored.

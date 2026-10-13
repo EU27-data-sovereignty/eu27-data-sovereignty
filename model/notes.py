@@ -33,13 +33,16 @@ def check() -> int:
     for module, what in CHECKERS.items():
         r = subprocess.run([sys.executable, str(ROOT / "model" / module), "check"],
                            capture_output=True, text=True)
-        last = (r.stdout.strip().splitlines() or [""])[-1]
+        lines = r.stdout.strip().splitlines() or [""]
+        # Each checker prints its counts on one line and then its problems, one per line; find the counts line.
+        headline = next((l for l in lines if "problems" in l), lines[-1])
         mark = "ok  " if r.returncode == 0 else "FAIL"
-        print(f"  {mark} {what}: {last}")
+        print(f"  {mark} {what}: {headline.strip()}")
         if r.returncode != 0:
             failed.append(module)
-            if r.stdout.strip():
-                print("\n".join("       " + line for line in r.stdout.strip().splitlines()[:-1][:20]))
+            rest = [l for l in lines if l is not headline]
+            if rest:
+                print("\n".join("       " + line for line in rest[:20]))
             if r.stderr.strip():
                 print("\n".join("       " + line for line in r.stderr.strip().splitlines()[-5:]))
     return 1 if failed else 0
