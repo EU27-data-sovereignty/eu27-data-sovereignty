@@ -89,9 +89,11 @@ jobs:
         id: previous
         run: |
           set -uo pipefail
+          # The project's production target, not the newest production deployment: after a rollback the
+          # newest one is the deployment that was rolled back, and this must never point at it.
           prev="$(curl -sS -H "Authorization: Bearer $VERCEL_TOKEN" \
-            "https://api.vercel.com/v6/deployments?projectId=$VERCEL_PROJECT_ID&teamId=$VERCEL_ORG_ID&target=production&state=READY&limit=1" \
-            | jq -r '.deployments[0].url // empty')" || prev=""
+            "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID" \
+            | jq -r '.targets.production.url // empty')" || prev=""
           if [ -z "$prev" ]; then echo "::warning title=No previous production deployment recorded::a failed deploy cannot be rolled back automatically in this run"; fi
           echo "url=$prev" >> "$GITHUB_OUTPUT"
       - name: Deploy prebuilt
@@ -120,7 +122,7 @@ jobs:
       # itself. This makes the deployment that just passed every check the current production one if it is not.
       - name: The deployment that passed is the current production deployment
         run: |
-          set -uo pipefail
+          set -euo pipefail
           new="${{ steps.deploy.outputs.url }}"; new="${new#https://}"
           current="$(curl -sS -H "Authorization: Bearer $VERCEL_TOKEN" \
             "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID" | jq -r '.targets.production.url // empty')" || current=""

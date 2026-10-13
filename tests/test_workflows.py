@@ -236,6 +236,11 @@ class Hardening(unittest.TestCase):
         self.assertLess(DEPLOY.index("id: previous"), DEPLOY.index("id: deploy"),
                         "the previous production deployment is recorded before the upload")
         self.assertIn("steps.previous.outputs.url != ''", deploy[1])
+        record = DEPLOY.split("id: previous", 1)[1].split("- name:", 1)[0]
+        self.assertIn(".targets.production.url", record,
+                      "record the project's production target; the newest deployment may be the one rolled back")
+        promote = DEPLOY.split("is the current production deployment", 1)[1].split("- name:", 1)[0]
+        self.assertIn("set -euo pipefail", promote, "a failed promote must fail the step")
         self.assertLess(DEPLOY.index("Smoke test the live domain"), DEPLOY.index("Roll back to the previous"))
 
     def test_the_ruleset_requires_checks_that_the_branch_gate_produces(self):

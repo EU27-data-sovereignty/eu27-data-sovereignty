@@ -3029,7 +3029,7 @@ prints a status in CLI 61) and the push allow in `.claude/settings.json` to matc
 were corrected before any further push. The ruleset and the two settings are **NOT YET** applied: the first push
 after the owner runs the three commands verifies them, and `gh api repos/EU27-data-sovereignty/eu27-data-sovereignty/rulesets`
 listing the ruleset is the check. The rollback and promote steps have **NOT YET** run against a real failure; the
-Vercel API fields they read (`deployments[].url`, `targets.production.url`) are taken from the API reference and
+Vercel API field they read (`targets.production.url` of the project) is taken from the API reference and
 unverified in this workflow until the first such run. Two of the required contexts (`security / gate`,
 `security / gitleaks`) are job ids in the dotfiles repository's reusable workflow, called at `@main`; a rename
 there would block every push to `main` until the ruleset is updated.
