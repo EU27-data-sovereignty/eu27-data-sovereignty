@@ -1,17 +1,20 @@
 # Technical universities per member state
 
 An authored note, 2026-10-12. Not generated, not in the bundle, the web app, the PDFs or /ask. Every row
-names the published list it comes from and the date the page was fetched, or is marked [unverified].
+names the published list it comes from and the date the page was fetched, or is marked [unverified]; a
+state with no institution on any list has one row that says so.
 "Leading" means: on one of the lists below. It is not a ranking, and the order within a state is
 alphabetical.
 
 Review status: drafted by a claude-opus-5-5 agent on 2026-10-12; a second claude-opus-5-5 agent, in a separate
 session on 2026-10-13, checked the 44 C1 rows against the archived list, the C2 rows against the EuroTech page and
-six C3 rows against their cited pages (#108). No person has read it.
+six C3 rows against their cited pages: a second-agent check on the same model, not the cross-model check of #87.
+The cross-model check by claude-fable-5-1 on 2026-10-13 confirmed every C1, C2 and C3 row against its page (#108).
+No person has read it.
 
 ## Criteria
 
-- C1: CESAER member, per https://web.archive.org/web/20260413044452/https://www.cesaer.org/members/ (the Internet Archive copy of https://www.cesaer.org/members/ captured 2026-04-13; cesaer.org did not resolve from here on 2026-10-12), accessed 2026-10-12. The date on a C1 row is the day the archived page was read; membership is as of the capture, 2026-04-13, not of that day.
+- C1: CESAER member, per https://web.archive.org/web/20260413044452/https://www.cesaer.org/members/ (the Internet Archive copy of https://www.cesaer.org/members/ captured 2026-04-13; cesaer.org did not resolve from here on 2026-10-12), accessed 2026-10-12. The date on a C1 row is the day the archived page was read; membership is as of the capture, 2026-04-13, not of that day. The live page answered the cross-model checker on 2026-10-13 and lists the same 44 EU-state members, with "Grenoble INP – UGA" where the capture has "Université Grenoble Alpes".
 - C2: EuroTech Universities Alliance member, per https://eurotech-universities.eu/about-us/, accessed 2026-10-12.
 - C3: the state's technical university or polytechnic, per the page cited on the row.
 

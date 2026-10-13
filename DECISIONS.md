@@ -3076,11 +3076,17 @@ for a missing technical one; a new `test.sh` stage for a note or draft set (it r
 **Verified:** 2026-10-13. `python3 model/technical_universities_note.py check`: 27 states, 61 rows, 0 problems;
 `links`: 73 URLs, 67 answered on 2026-10-12 (`tugraz.at`, `kuleuven.be`, `rwth-aachen.de` did not resolve from
 the machine that ran it; `ucd.ie`, `taltech.ee`, `rtu.lv` refused). `python3 model/notes.py check`: four
-checkers, all pass. `tests/test_notes.py` and `tests/test_permissions.py` pass. Second-model review: a
-claude-opus-5-5 agent in a separate session read the 44 C1 rows against the archived list, the C2 rows against
+checkers, all pass. `tests/test_notes.py` and `tests/test_permissions.py` pass. Second-agent review, same model:
+a claude-opus-5-5 agent in a separate session read the 44 C1 rows against the archived list, the C2 rows against
 the EuroTech page and six C3 rows against their cited pages (BG, HR, EE, MT, IE, CY), all confirmed; it found
-the two general-university rows and the missing decision entry, both fixed before the push. **NOT YET:** a
-reading by a person, and a check of cesaer.org itself once it resolves.
+the two general-university rows and the missing decision entry, both fixed before the push. Cross-model check
+(#87's standard, the model that did not write it): a claude-fable-5-1 agent on 2026-10-13 fetched the archived
+CESAER page and confirmed all 44 C1 rows and that no EU-state member is missing, the EuroTech page and the three C2
+rows, and all eleven C3 pages, each naming its institution; nothing fetched contradicts the RTU row or the two
+"none found" rows; no ranking language; zero discrepancies. It also reached the live cesaer.org/members page
+(200 on 2026-10-13), which lists the same 44 EU-state members with one entry renamed, "Grenoble INP – UGA" where
+the capture has "Université Grenoble Alpes"; the note keeps the capture as its cited source and says so. **NOT YET:** a reading by a person,
+and a check of cesaer.org itself once it resolves.
 
 *Would change if:* cesaer.org resolves and the live list differs from the capture, in which case the C1 rows
 are re-read and the Criteria line cites the live page; or the project admits institutions as entities in the

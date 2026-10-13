@@ -20,7 +20,8 @@ What changed and when. Reasoning for the choices behind these changes lives in
   Basis one of the three shapes, every URL in `docs/technical-universities-links.csv` (73 URLs, 67 answered on
   2026-10-12; `tugraz.at`, `kuleuven.be` and `rwth-aachen.de` did not resolve from here, `ucd.ie`, `taltech.ee` and
   `rtu.lv` refused), no renderer names it. Registered in `model/notes.py`. A second claude-opus-5-5 agent checked
-  the C1 and C2 rows against their lists and six C3 rows against their pages (#108); no person has read it.
+  the C1 and C2 rows against their lists and six C3 rows against their pages, a same-model check; a claude-fable-5-1
+  agent then confirmed every C1, C2 and C3 row against its page, zero discrepancies (#108). No person has read it.
 
 ### Changed: one `test.sh` stage for every authored note and draft set, through a register (#108)
 
