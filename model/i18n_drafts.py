@@ -147,6 +147,14 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
         if verdict not in VERDICTS:
             problems.append(f"{iso}: review {key} {lang}: verdict '{r[2]}' not ok/fix")
             continue
+        if (key, lang) in seen:
+            problems.append(f"{iso}: review row {key} {lang} appears twice")
+            continue
+        if key not in src or lang not in langs:
+            problems.append(f"{iso}: review row {key} {lang} is not a cell of this draft")
+            continue
+        if verdict == "fix" and (len(r) < 5 or not r[4].strip()):
+            problems.append(f"{iso}: review {key} {lang} is a fix without a suggested wording")
         seen[(key, lang)] = verdict
         info[verdict] += 1
     for key, _ in keys:
@@ -175,15 +183,20 @@ def check(verbose: bool = True) -> int:
 
 
 def summary() -> None:
+    if check(verbose=False):
+        print("not written: the check fails; run `check` for the list")
+        sys.exit(1)
     keys, states = spec()
     lines = ["| ISO | State | Languages | Drafted by | Reviewed by | ok | fix |", "|---|---|---|---|---|---|---|"]
     for iso, (name, langs) in states.items():
         _, i = check_one(iso, keys, langs)
-        lines.append(f"| {iso} | {name} | {', '.join(langs)} | {i['drafted'] or '—'} | {i['reviewed'] or '—'} | {i['ok']} | {i['fix']} |")
+        esc = lambda v: (v or "—").replace("|", "\\|")  # noqa: E731
+        lines.append(f"| {iso} | {name} | {', '.join(langs)} | {esc(i['drafted'])} | {esc(i['reviewed'])} | {i['ok']} | {i['fix']} |")
     table = "\n".join(lines) + "\n"
     text = README.read_text(encoding="utf-8")
     start, end = "<!-- summary:start -->\n", "<!-- summary:end -->"
     a, b = text.index(start) + len(start), text.index(end)
+    assert a <= b, "README.md: the summary end marker comes before the start marker"
     README.write_text(text[:a] + table + text[b:], encoding="utf-8")
     print(f"wrote {README.relative_to(ROOT)}")
 

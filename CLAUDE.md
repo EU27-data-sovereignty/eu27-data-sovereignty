@@ -133,13 +133,16 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `document.Sources.withheld`, keyed on the fact's hash. The gate is not in `./test.sh`, so branches stay unblocked; run
   `./run.sh factcheck status` to see what is due. Never edit the ledger or a verdict to pass it.
 - **The assistant may push to `main`, and only there** (#106). The tracked `.claude/settings.json` allows `git push origin
-  main` and `git push origin <branch>:main` and denies branch deletes, direct `vercel --prod` deploys and `gh` writes to
-  the repository's settings. The allow is not consent: the owner's OK in the conversation still comes first, and the
+  main`, `git push origin HEAD:main` and the merge branch's push to `main`, exact forms only, and denies by prefix a
+  delete of `main`, a force push, direct `vercel --prod` deploys and `gh` writes to the repository's settings. The
+  allow is not consent: the owner's OK in the conversation still comes first, and the
   security gate, the Actions gate and the fact-check gate run exactly as before.
-- **Push the branch first, then `main`** (#107). `main`'s ruleset accepts only a commit whose fast checks have passed,
-  and `ci.yml` runs them on every branch push, so: push the branch, wait for green (about five minutes), then
-  `git push origin <branch>:main`. Force pushes and deletions of `main` are refused. A deploy whose smoke test or
-  live `/ask` check fails is rolled back by the workflow itself.
+- **Push the branch first, then `main`** (#107). Once the owner applies `.github/rulesets/main.json` (NOT YET as of
+  2026-10-12; `docs/plans/ci-cd-hardening.md`), `main` accepts only a commit whose fast checks have passed, and
+  `ci.yml` runs them on every branch push, so: push the branch, wait for green (about five minutes), then
+  `git push origin HEAD:main`. The same ruleset refuses force pushes and deletions of `main`. The deploy workflow
+  rolls back to the recorded previous deployment when the smoke test or the live `/ask` check fails; that step has
+  never fired, and its shape is held by `tests/test_workflows.py`.
 - **A push to `main` is a production deploy** (#81), gated by `./test.sh` in Actions, run as the parallel jobs of
   `.github/workflows/gate.yml` (#97). The deploy ships the gate's own build (`web-dist` and `pdfs` artifacts,
   `PREBUILT_SITE=1`), never a second one. A new `./test.sh` stage must sit inside an `in_group` block, or

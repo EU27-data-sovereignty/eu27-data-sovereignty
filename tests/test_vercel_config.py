@@ -43,11 +43,15 @@ class Routing(unittest.TestCase):
         self.assertTrue(rule.get("permanent"))
 
     def test_no_route_claims_a_two_letter_segment(self):
-        # Every top-level two-letter path is a country (#105); a redirect or rewrite source that is one would
-        # shadow a member state.
+        # Every top-level two-letter path is a country (#105); a redirect or rewrite source, or a static route in
+        # the app, that is one would shadow a member state.
         for r in CONFIG.get("redirects", []) + CONFIG.get("rewrites", []):
             seg = r["source"].strip("/").split("/")[0]
             self.assertFalse(len(seg) == 2 and seg.isalpha(), f"{r['source']} shadows a country page")
+        app = (ROOT / "web" / "src" / "App.tsx").read_text(encoding="utf-8")
+        for path in re.findall(r'<Route path="([^"]+)"', app):
+            seg = path.split("/")[0]
+            self.assertFalse(len(seg) == 2 and seg.isalpha(), f"route {path!r} shadows a country page (#105)")
 
     def test_the_app_builds_every_country_link_through_the_helper(self):
         # `countryPath` in web/src/utils/routes.ts is the one place that knows the shape (#105). A literal
@@ -57,7 +61,8 @@ class Routing(unittest.TestCase):
             if f.name == "routes.ts" or "__tests__" in f.parts:
                 continue
             text = f.read_text(encoding="utf-8")
-            if "/country/" in text or re.search(r"`/\$\{[^}]*iso", text, re.I):
+            # A literal old path, or a one-segment template path (`/${x}`) built anywhere but the helper.
+            if "/country/" in text or re.search(r"`/\$\{[^}]*\}`", text):
                 offenders.append(str(f.relative_to(ROOT)))
         self.assertEqual(offenders, [], "country links must come from countryPath (#105)")
 

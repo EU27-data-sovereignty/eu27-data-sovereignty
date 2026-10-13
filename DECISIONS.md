@@ -2907,8 +2907,8 @@ registers key on Eurostat's codes). `/country/<ISO>`, the route since the first 
 in `vercel.json` and in the router; an upper-case code redirects to the lower-case one; a two-letter segment
 that is not one of the 27 is not found. Every link to a country page is built by `countryPath` in
 `web/src/utils/routes.ts`. No other top-level route may be a bare two-letter segment:
-`tests/test_vercel_config.py` fails on a redirect or rewrite source that is one, and the router lists the
-static routes before `:iso` so that `/ask` and `/map` keep their meaning.
+`tests/test_vercel_config.py` fails on a redirect or rewrite source that is one, and React Router 7 ranks a static segment above `:iso` and `:iso` above `*` whatever the order, so `/ask`
+and `/map` keep their meaning; `tests/test_vercel_config.py` fails on any two-letter static route in `App.tsx`.
 
 **Problem.** The owner wants an address per country that can be said aloud and typed, for outreach to each
 state's offices (`OUTREACH.md`). `/country/DE` carries a word a reader has to remember and a code they have to
@@ -2996,7 +2996,8 @@ owner with the commands in `docs/plans/ci-cd-hardening.md`; the tree carries the
 
 **Problem.** `main` had no protection: a force push or a deletion would have gone through, and a red commit could
 sit on `main` because the gate runs after the push. A deploy whose smoke test failed stayed live. The runner image
-was `ubuntu-latest`, which GitHub migrates to Ubuntu 26 on 2026-10-19, so Chrome and the system libraries under the
+was `ubuntu-latest`, which GitHub migrates to Ubuntu 26 from 2026-10-19 (actions/runner-images issue 14748, as
+printed in every run's annotations), so Chrome and the system libraries under the
 browser tests would have changed without a commit. Secret scanning was off on a public repository. Nothing told the
 owner when an exactly pinned package gained a published vulnerability.
 
@@ -3020,11 +3021,18 @@ owner when an exactly pinned package gained a published vulnerability.
 `-latest` runner image. Any Dependabot version-update pull request. A force push to `main` by anyone, the owner
 included, without first changing the ruleset.
 
-**Verified:** 2026-10-12. `python3 -m unittest tests.test_workflows tests.test_docs`: pass, with the four new
-tests (no floating runner, rollback step after the smoke test, ruleset contexts are gate jobs and only the fast
-ones, Dependabot security-only). The ruleset and the two settings are **NOT YET** applied: the first push after
-the owner runs the three commands verifies them, and `gh api repos/EU27-data-sovereignty/eu27-data-sovereignty/rulesets`
-listing the ruleset is the check. The rollback step is verified only by its tests until a smoke test fails.
+**Verified:** 2026-10-12. `python3 -m unittest tests.test_workflows tests.test_docs`: pass, with the new tests (no
+floating runner; a rollback step after the smoke test that names the recorded previous deployment; ruleset
+contexts are gate jobs and only the fast ones; Dependabot security-only). An independent review on
+claude-opus-5-5 the same day found the first rollback step to be a no-op (`vercel rollback` with no argument
+prints a status in CLI 61) and the push allow in `.claude/settings.json` to match a delete and a force push; both
+were corrected before any further push. The ruleset and the two settings are **NOT YET** applied: the first push
+after the owner runs the three commands verifies them, and `gh api repos/EU27-data-sovereignty/eu27-data-sovereignty/rulesets`
+listing the ruleset is the check. The rollback and promote steps have **NOT YET** run against a real failure; the
+Vercel API fields they read (`deployments[].url`, `targets.production.url`) are taken from the API reference and
+unverified in this workflow until the first such run. Two of the required contexts (`security / gate`,
+`security / gitleaks`) are job ids in the dotfiles repository's reusable workflow, called at `@main`; a rename
+there would block every push to `main` until the ruleset is updated.
 
 *Would change if:* a second writer joins, in which case required reviews return; or a smoke-test failure shows the
 rollback window matters, in which case the bypass secret is set and the promote-after-smoke path is built.

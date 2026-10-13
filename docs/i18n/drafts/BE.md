@@ -60,7 +60,7 @@
 ## Review
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
-- Verdict: 132 ok, 3 fix
+- Verdict: 131 ok, 4 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -153,7 +153,7 @@
 | status.load_error | fr | ok | | |
 | notfound.title | fr | ok | | |
 | notfound.back | fr | ok | | |
-| notice.disclaimer | fr | ok | | |
+| notice.disclaimer | fr | fix | "vérifié" for both "checked" and "verified" collapses the distinction and overstates the machine check | Contrôlé par machine, non vérifié par une personne. Des agents automatisés ont trouvé ces sources et les ont contrôlées mécaniquement ; aucune personne n'a examiné les constats. La formulation anglaise d'une source non anglophone est une traduction automatique ou un résumé automatique du texte cité. Considérez chaque fait comme une piste vers sa source citée, et non comme établi. Les corrections sont les bienvenues via le modèle de ticket (issue template) du dépôt. |
 | site.title | de | ok | | |
 | site.kicker | de | ok | | |
 | nav.overview | de | ok | | |

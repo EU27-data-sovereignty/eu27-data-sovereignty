@@ -24,21 +24,25 @@ has reviewed it.
 
 ## What the cross-review found, 2026-10-12
 
-1,440 cells, 1,400 `ok`, 40 `fix`. None of the fixes is applied yet; that is stage 1 of the plan, done by the
+1,440 cells, 1,398 `ok`, 42 `fix`. None of the fixes is applied yet; that is stage 1 of the plan, done by the
 drafter and re-reviewed. The findings that matter:
 
-- **The honesty notice was weakened in six of agent B's thirteen drafts** (IT, MT, PT, RO, SK and, in a
-  different way, SI and IE): "machine-checked" came out as a word that means *verified* ("Verificato",
-  "Ivverifikat", "Verificado", "Verificat", "overené"), which is the one claim the notice exists to deny.
-  Agent A caught all of them and suggested the word for *checked* in each language. Agent A's fourteen
-  disclaimers kept every claim at full strength, agent B found. This is why a translated notice renders
-  only after a review on another model and a reading by a person.
+- **The honesty notice was weakened in eleven of the 27 drafts.** In IT, MT, PT, RO and SK, "machine-checked"
+  came out as a word that means *verified* ("Verificato", "Ivverifikat", "Verificado", "Verificat", "overené"),
+  which is the one claim the notice exists to deny; IE and SI had a calque with the same effect, and PL an
+  informal register. Agent A caught those nine in agent B's drafts. The three French notices (FR, the fr
+  column of BE, the fr column of LU) carried the same "Vérifié par machine" and were passed as `ok` by
+  agent B, and agent A's suggested fix for LU kept it: an independent quality review on a third model
+  (claude-opus-5-5, the same day) found all three, and both agents then corrected their tables. This is
+  why a translated notice renders only after a review on another model and a reading by a person.
 - **"Exposure" dropped or turned into causation** in section.exposure in five languages (de for AT and DE,
-  lt, lv, de and lb for LU, bg): the heading read as "dependence on abroad" rather than "exposure to it".
-- **A word that reads as money** in RO ("fond" for a data holding) and in NL and FR variants a less idiomatic
-  phrasing; a noun where the navigation wants an imperative in Greek (CY, EL); "Verificación de datos" in
-  Spanish colliding with "data" on a data-centre site.
-- **No fix at all** in CZ, DK, EE, FR, HR, HU and SE.
+  lt, lv, bg, and de and lb for LU): the heading read as "dependence on abroad" or "exposure caused by"
+  rather than "exposure to it". The first LU suggestions repeated the causation wording the DE review
+  rejects; agent A corrected them after the quality review.
+- **A word that reads as money** in RO ("fond" for a data holding); a noun where the navigation wants an
+  imperative in Greek (CY, EL); "Verificación de datos" in Spanish colliding with "data" on a data-centre
+  site; a less idiomatic phrasing in NL.
+- **No fix at all** in CZ, DK, EE, HR, HU and SE.
 
 The per-file review tables carry every verdict with its note and suggested wording.
 
@@ -48,7 +52,7 @@ The per-file review tables carry every verdict with its note and suggested wordi
 | ISO | State | Languages | Drafted by | Reviewed by | ok | fix |
 |---|---|---|---|---|---|---|
 | AT | Austria | de | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 42 | 3 |
-| BE | Belgium | nl, fr, de | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 132 | 3 |
+| BE | Belgium | nl, fr, de | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 131 | 4 |
 | BG | Bulgaria | bg | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 44 | 1 |
 | CY | Cyprus | el | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 44 | 1 |
 | CZ | Czechia | cs | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 45 | 0 |
@@ -58,7 +62,7 @@ The per-file review tables carry every verdict with its note and suggested wordi
 | EL | Greece | el | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 44 | 1 |
 | ES | Spain | es | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 44 | 1 |
 | FI | Finland | fi, sv | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 89 | 1 |
-| FR | France | fr | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 45 | 0 |
+| FR | France | fr | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 44 | 1 |
 | HR | Croatia | hr | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 45 | 0 |
 | HU | Hungary | hu | agent A, claude-opus-5-5, 2026-10-12 | agent B, claude-fable-5-1, 2026-10-12 | 45 | 0 |
 | IE | Ireland | ga | agent B, claude-fable-5-1, 2026-10-12 | agent A, claude-opus-5-5, 2026-10-12 | 43 | 2 |

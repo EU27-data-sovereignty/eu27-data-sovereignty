@@ -4,6 +4,3 @@
  * the shape changes in one place.
  */
 export const countryPath = (iso: string) => `/${iso.toLowerCase()}`
-
-/** The country page before #105, kept as a redirect so printed and shared links still land. */
-export const LEGACY_COUNTRY_PREFIX = '/country/'

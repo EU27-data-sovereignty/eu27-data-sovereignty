@@ -121,8 +121,9 @@ class Deploy(unittest.TestCase):
         # #92: a pull request runs the gate and the dependency audit before it can reach main. #107: so does
         # every push to a branch other than main, because main's ruleset requires the checks on the commit.
         self.assertRegex(CI, r"\non:\n  pull_request:\n  push:\n    branches-ignore: \[main\]\n")
-        self.assertRegex(CI, r"\n  gate:\n(?:    .*\n)*?    if: github.event_name == 'pull_request' \|\| github.event_name == 'push'\n"
-                             r"    uses: \./\.github/workflows/gate\.yml\n")
+        self.assertRegex(CI, r"\n  gate:\n    name: .+\n    uses: \./\.github/workflows/gate\.yml\n")
+        self.assertNotIn("    if: github.event_name", CI)        # the triggers already say which events run it
+        self.assertRegex(CI, r"\nconcurrency:\n  group: gate-\$\{\{ github\.ref \}\}\n  cancel-in-progress: true\n")
         self.assertIn("npm audit --audit-level=high --prefix web", GATE)
 
     def test_ci_installs_the_test_packages_by_hash(self):
@@ -218,9 +219,6 @@ class ToolVersions(unittest.TestCase):
         self.assertEqual((ROOT / ".nvmrc").read_text().strip(), self.PINNED["nodejs"])
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 class Hardening(unittest.TestCase):
     """#107: a pinned runner, a rollback after a failed post-deploy check, and a ruleset whose checks exist."""
@@ -233,7 +231,11 @@ class Hardening(unittest.TestCase):
         deploy = DEPLOY.split("- name: Roll back to the previous production deployment", 1)
         self.assertEqual(len(deploy), 2, "deploy.yml needs the rollback step")
         self.assertIn("if: failure() && steps.deploy.outcome == 'success'", deploy[1])
-        self.assertIn("rollback --yes", deploy[1])
+        self.assertIn('rollback "https://${{ steps.previous.outputs.url }}" --yes', deploy[1],
+                      "vercel rollback without a deployment argument only prints a status (CLI 61)")
+        self.assertLess(DEPLOY.index("id: previous"), DEPLOY.index("id: deploy"),
+                        "the previous production deployment is recorded before the upload")
+        self.assertIn("steps.previous.outputs.url != ''", deploy[1])
         self.assertLess(DEPLOY.index("Smoke test the live domain"), DEPLOY.index("Roll back to the previous"))
 
     def test_the_ruleset_requires_checks_that_the_branch_gate_produces(self):
@@ -244,13 +246,17 @@ class Hardening(unittest.TestCase):
         self.assertTrue({"deletion", "non_fast_forward", "required_status_checks"} <= kinds)
         checks = next(r for r in ruleset["rules"] if r["type"] == "required_status_checks")
         contexts = [c["context"] for c in checks["parameters"]["required_status_checks"]]
-        # The gate job in ci.yml is named Gate, so its reusable jobs report as "Gate / <job name>".
+        # The caller job's display name in ci.yml prefixes every reusable job: "<caller> / <job name>".
+        caller = re.search(r"\n  gate:\n    name: (.+)\n", CI).group(1)
         job_names = re.findall(r"^    name: (.+)$", GATE, re.M)
+        security = (ROOT / ".github" / "workflows" / "security.yml").read_text()
+        sec_caller = re.search(r"^name: (.+)$", security, re.M).group(1)
         for ctx in contexts:
-            if ctx.startswith("Gate / "):
-                self.assertIn(ctx[len("Gate / "):], job_names, f"{ctx} is not a gate job")
+            if ctx.startswith(f"{caller} / "):
+                self.assertIn(ctx[len(caller) + 3:], job_names, f"{ctx} is not a gate job")
             else:
-                self.assertTrue(ctx.startswith("security / "), ctx)
+                self.assertIn(ctx, (f"{sec_caller} / gate", f"{sec_caller} / gitleaks"),
+                              f"{ctx}: not a job of the reusable security workflow as named today")
         # Only the fast jobs: the PDFs are not built on a branch (ci.yml passes pdf: false) and the browsers
         # are not required, so a push waits for minutes, not a quarter of an hour.
         self.assertNotIn("Gate / PDFs (./test.sh --only pdf)", contexts)
@@ -261,3 +267,5 @@ class Hardening(unittest.TestCase):
         self.assertEqual(len(re.findall(r"^\s+open-pull-requests-limit: 0$", text, re.M)),
                          len(re.findall(r"^\s+- package-ecosystem:", text, re.M)))
 
+if __name__ == "__main__":
+    unittest.main()

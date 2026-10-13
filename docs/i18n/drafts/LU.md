@@ -109,7 +109,7 @@
 | status.load_error | fr | ok | | |
 | notfound.title | fr | ok | | |
 | notfound.back | fr | ok | | |
-| notice.disclaimer | fr | fix | 'relu' (proofread) is weaker than 'reviewed' | Vérifié par machine, non vérifié par une personne. Des agents automatisés ont trouvé ces sources et les ont contrôlées mécaniquement ; aucune personne n'a examiné les constats. La formulation en anglais d'une source non anglophone est une traduction automatique ou un résumé automatique du texte cité. Considérez chaque fait comme une piste vers sa source citée, non comme établi. Les corrections sont les bienvenues via le modèle de signalement du dépôt. |
+| notice.disclaimer | fr | fix | 'relu' (proofread) is weaker than 'reviewed' | Contrôlé par machine, non vérifié par une personne. Des agents automatisés ont trouvé ces sources et les ont contrôlées mécaniquement ; aucune personne n'a examiné les constats. La formulation en anglais d'une source non anglophone est une traduction automatique ou un résumé automatique du texte cité. Considérez chaque fait comme une piste vers sa source citée, non comme établi. Les corrections sont les bienvenues via le modèle de signalement du dépôt. |
 | site.title | de | ok | | |
 | site.kicker | de | ok | | |
 | nav.overview | de | ok | | |
@@ -126,7 +126,7 @@
 | country.sources | de | ok | | |
 | section.fundamentals | de | ok | | |
 | section.holdings | de | ok | | |
-| section.exposure | de | fix | drops 'exposure' | Exposition durch Auslandsabhängigkeit |
+| section.exposure | de | fix | drops 'exposure' | Exposition gegenüber Auslandsabhängigkeit |
 | section.posture | de | ok | | |
 | section.sizing | de | ok | | |
 | section.gaps | de | ok | | |
@@ -171,7 +171,7 @@
 | country.sources | lb | ok | | |
 | section.fundamentals | lb | ok | | |
 | section.holdings | lb | ok | | |
-| section.exposure | lb | fix | drops 'exposure' | Expositioun duerch Ofhängegkeet vum Ausland |
+| section.exposure | lb | fix | drops 'exposure' | Expositioun géigeniwwer der Ofhängegkeet vum Ausland |
 | section.posture | lb | ok | | |
 | section.sizing | lb | ok | | |
 | section.gaps | lb | ok | | |

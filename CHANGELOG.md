@@ -7,7 +7,27 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
-### Changed: the language drafts follow the i18n standards, and the checker enforces them (#105)
+### Fixed: what the independent quality review found before the next push (#106, #107)
+
+- **What was wrong.** An independent reviewer on claude-opus-5-5 read the day's eleven commits. The rollback step in
+  `deploy.yml` rolled nothing back: `vercel rollback` with no deployment argument prints a status and exits 0 in CLI
+  61. The push allow `Bash(git push origin *:main)` matched `git push origin :main`, a delete, and `+HEAD:main`, a
+  force push. Several documents described the unapplied ruleset and the untested rollback as facts. Three French
+  honesty notices (FR, BE fr, LU fr) had been passed as `ok` with "machine-checked" rendered as *verified*, the fault
+  caught in five other languages; the LU suggestions for section.exposure repeated the causation wording the DE
+  review rejects. The language-drafts entries cited #105, the country-paths decision; `docs/testing.md` still listed
+  seventeen stages; four new tests passed on broken input.
+- **What changed.** The workflow records the current production deployment before the upload and rolls back to it by
+  URL; a promote step makes the deployment that passed the current one, since Vercel pauses automatic promotion after
+  a rollback. The allow is now exact forms only, and a delete, a `+` ref or a force push to `origin` is denied by
+  prefix. Documents say NOT YET where it is not yet. Agents B and A corrected their own review tables (1,398 `ok`,
+  42 `fix`); `docs/i18n/README.md` says who passed what and who caught it. The drafts cite the plan, and the plan's
+  future decision is #108. `docs/testing.md` lists all twenty stages. The tests now require the rollback argument,
+  refuse any two-letter static route in `App.tsx` and any one-segment template path outside the helper, read the
+  caller names from the workflows, and the draft checker refuses duplicate review rows, a `fix` without a wording,
+  and a summary when the check fails. `ci.yml` drops an always-true `if` and cancels a superseded run per branch.
+
+### Changed: the language drafts follow the i18n standards, and the checker enforces them (`docs/plans/localisation-plan.md`)
 
 - **What changed.** `docs/i18n/STRINGS.md` gives every language its BCP 47 tag (ISO 639-1 subtag, ISO 3166-1
   region: `de-AT`, `el-GR`) and states the standards the drafts follow: tags in `<html lang>`, `hreflang` with an
@@ -23,7 +43,8 @@ What changed and when. Reasoning for the choices behind these changes lives in
   `.github/rulesets/main.json` is the ruleset for `main`: no force push, no deletion, and the four fast checks (model,
   web, the two security jobs) required on the commit. Every workflow runs on `ubuntu-24.04` instead of `-latest`.
   `.github/dependabot.yml` turns version updates off for every ecosystem and leaves security updates to raise a pull
-  request. `tests/test_workflows.py` checks each of these.
+  request. `tests/test_workflows.py` checks each of these. The rollback step has never fired; the ruleset is not yet
+  applied.
 - **What is yours to apply.** The ruleset, secret scanning with push protection, and Dependabot security updates are
   repository settings, outside the tree. `docs/plans/ci-cd-hardening.md` has the three commands.
 - **What was rejected, and why.** Required reviews, a staging environment and visual regression in CI; the reasons are
@@ -31,7 +52,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
   behind Vercel's deployment protection, which the smoke test cannot pass without a bypass secret; rollback gives the
   same outcome with a window of one smoke test.
 
-### Added: 27 language drafts, cross-reviewed by two agents on two models, and the plan to serve them (#105)
+### Added: 27 language drafts, cross-reviewed by two agents on two models, and the plan to serve them (`docs/plans/localisation-plan.md`)
 
 - **What it is.** `docs/i18n/STRINGS.md` lists the 45 chrome strings the app prints around the facts and the official
   languages per state. `docs/i18n/drafts/<ISO>.md`, one per member state, carries a machine translation per language:
@@ -46,8 +67,8 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 - **What changed.** `.claude/settings.json` is now tracked. It allows `git push origin main` and
   `git push origin <branch>:main` for Claude Code in this project, and denies branch deletes on `origin`, direct
-  `vercel --prod` deploys and `gh` writes to the repository's settings. Force pushes, `--no-verify` and the git
-  hooks path stay denied by the global settings and the `guard-git-bypass` hook.
+  `vercel --prod` deploys and `gh` writes to the repository's settings, by prefix. `--no-verify` and the git hooks
+  path stay denied by the `guard-git-bypass` hook.
 - **Why.** The push that deploys this site was refused by Claude Code's auto-mode classifier as a production deploy,
   after the owner had given the OK in the conversation (#106). The rule removes that one prompt and no other; every
   gate on the path to `eu27.cloud` is unchanged, and the owner's OK is still required before each push.

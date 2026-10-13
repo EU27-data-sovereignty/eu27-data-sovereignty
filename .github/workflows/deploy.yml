@@ -83,6 +83,17 @@ jobs:
             diff <(cd web/dist && find . -type f | sort) <(cd .vercel/output/static && find . -type f | sort) || true
             exit 1
           fi
+      # The deployment that is production right now, so a failed deploy can be rolled back to it by name:
+      # `vercel rollback` without a deployment argument only prints the rollback status (CLI 61).
+      - name: Record the current production deployment
+        id: previous
+        run: |
+          set -uo pipefail
+          prev="$(curl -sS -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v6/deployments?projectId=$VERCEL_PROJECT_ID&teamId=$VERCEL_ORG_ID&target=production&state=READY&limit=1" \
+            | jq -r '.deployments[0].url // empty')" || prev=""
+          if [ -z "$prev" ]; then echo "::warning title=No previous production deployment recorded::a failed deploy cannot be rolled back automatically in this run"; fi
+          echo "url=$prev" >> "$GITHUB_OUTPUT"
       - name: Deploy prebuilt
         id: deploy
         run: |
@@ -105,13 +116,27 @@ jobs:
       # ./test.sh's live group, run here rather than in the gate (see test.sh).
       - name: The live /ask answers through a real API call
         run: ./test.sh --only live
-      # A deploy that failed its smoke test or its live /ask check does not stay in front of readers (#107):
-      # Vercel keeps the previous production deployment, and `rollback` makes it current again. The window
-      # is the smoke test's own duration. The job still fails, so the run is red and the push is investigated.
-      - name: Roll back to the previous production deployment
-        if: failure() && steps.deploy.outcome == 'success'
+      # After a rollback Vercel pauses automatic promotion, so a later green deploy would not take the domain by
+      # itself. This makes the deployment that just passed every check the current production one if it is not.
+      - name: The deployment that passed is the current production deployment
         run: |
-          npx --yes "$VERCEL_CLI" rollback --yes --token="$VERCEL_TOKEN"
-          echo "::error::rolled back: ${{ steps.deploy.outputs.url }} failed its post-deploy checks"
+          set -uo pipefail
+          new="${{ steps.deploy.outputs.url }}"; new="${new#https://}"
+          current="$(curl -sS -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID" | jq -r '.targets.production.url // empty')" || current=""
+          if [ -z "$current" ]; then echo "::warning title=Current production deployment unknown::could not read the project's production target; promoting explicitly"; fi
+          if [ "$current" != "$new" ]; then
+            npx --yes "$VERCEL_CLI" promote "https://$new" --yes --token="$VERCEL_TOKEN"
+            echo "promoted https://$new (production was: ${current:-unknown})" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      # A deploy that failed its smoke test or its live /ask check does not stay in front of readers (#107):
+      # Vercel keeps the previous production deployment, and `rollback <url>` makes it current again. The window
+      # is the smoke test's own duration. The job still fails, so the run is red and the push is investigated.
+      # Not yet exercised by a real failure (2026-10-12); the step's shape is held by tests/test_workflows.py.
+      - name: Roll back to the previous production deployment
+        if: failure() && steps.deploy.outcome == 'success' && steps.previous.outputs.url != ''
+        run: |
+          npx --yes "$VERCEL_CLI" rollback "https://${{ steps.previous.outputs.url }}" --yes --token="$VERCEL_TOKEN"
+          echo "::error::rolled back to https://${{ steps.previous.outputs.url }}: ${{ steps.deploy.outputs.url }} failed its post-deploy checks"
           echo "### Rolled back" >> "$GITHUB_STEP_SUMMARY"
-          echo "${{ steps.deploy.outputs.url }} failed the smoke test or the live /ask check; the previous production deployment is current again." >> "$GITHUB_STEP_SUMMARY"
+          echo "${{ steps.deploy.outputs.url }} failed the smoke test or the live /ask check; https://${{ steps.previous.outputs.url }} is current again. Vercel pauses automatic promotion after a rollback; the next green run's promote step takes the domain back." >> "$GITHUB_STEP_SUMMARY"

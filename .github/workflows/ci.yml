@@ -14,12 +14,16 @@ on:
 permissions:
   contents: read
 
+# One gate per branch at a time: a newer push to the same branch cancels the run the older one started.
+concurrency:
+  group: gate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # The full gate on every pull request (#92) and branch push (#107), so a commit is not first tested by the
   # production deploy: the same parallel jobs as deploy.yml (gate.yml), without the PDFs, which only shipping needs.
   gate:
     name: Gate
-    if: github.event_name == 'pull_request' || github.event_name == 'push'
     uses: ./.github/workflows/gate.yml
     with:
       pdf: false

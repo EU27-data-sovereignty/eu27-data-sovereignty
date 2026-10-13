@@ -18,10 +18,10 @@ runner image, and nothing watching the pins for vulnerabilities.
 |---|---|---|---|
 | 1 | Secret scanning and push protection on the repository | none | **yours**, command A |
 | 2 | Pin every workflow to `ubuntu-24.04` | none | done, `tests/test_workflows.py` |
-| 3 | Ruleset on `main`: no force push, no deletion | none | **yours**, command B (file in tree) |
+| 3 | Ruleset on `main`: no force push, no deletion | none | **yours**, command B (file in tree); NOT YET applied |
 | 4 | Dependabot security updates on, version updates off | none | file done; **yours**, command C |
 | 5 | Keep the fact-check gate at deploy time only | none | unchanged, by design (#87) |
-| 6 | Roll back a deploy that fails its post-deploy checks | one smoke test | done, `deploy.yml` |
+| 6 | Roll back a deploy that fails its post-deploy checks | one smoke test | built, `deploy.yml`; never fired. The first version rolled nothing back (`vercel rollback` with no argument prints a status); the Opus 5.5 review caught it the same day and the step now names the recorded previous deployment |
 | 7 | Required fast checks on `main`; `ci.yml` on every branch push | ~5 min per push to `main` | done in tree; applied by command B |
 
 Rejected, because each would slow one writer for no check: required reviews, a staging environment, visual
@@ -66,5 +66,15 @@ gh api repos/EU27-data-sovereignty/eu27-data-sovereignty --jq '.security_and_ana
 
 Push the branch, wait for the four fast checks (about five minutes), then push it to `main`. A push to `main`
 of a commit whose checks have not run is refused with the names of the missing checks. Nothing else changes:
-the gate, the fact-check gate, the deploy and the smoke test run as before, and the deploy now rolls itself
-back if the smoke test or the live `/ask` check fails.
+the gate, the fact-check gate, the deploy and the smoke test run as before, and the deploy workflow rolls back to
+the recorded previous deployment if the smoke test or the live `/ask` check fails (a step that has not yet had to
+run).
+
+## The review that followed
+
+An independent reviewer on claude-opus-5-5 read the day's eleven commits before anything further was pushed. It
+found that the first rollback step was a no-op (`vercel rollback` with no deployment prints a status and exits 0),
+that the push allow in `.claude/settings.json` matched a delete and a force push of `main`, that several documents
+described the unapplied ruleset and the untested rollback in the present tense, and that three French honesty
+notices had been passed as `ok` with the same weakening flagged elsewhere. Every item was applied the same day;
+`CHANGELOG.md` carries the entry.
