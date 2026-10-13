@@ -2938,3 +2938,46 @@ paths and none under `/country/`). `python3 -m unittest tests.test_vercel_config
 *Would change if:* the site gains a language switch or any other two-letter top-level route, in which case
 the countries move under a prefix again and this entry is superseded; or a state's code changes in the
 registers, in which case the old code joins the redirect list.
+
+### 106. A tracked project permission rule allows the assistant to push to `main`, and nothing else outward
+**Decision.** 2026-10-12, at the owner's request. The repository tracks `.claude/settings.json`, Claude Code's
+project settings file. It allows two commands and no others: `git push origin main` and
+`git push origin <branch>:main`. It denies `git push origin --delete`, `vercel deploy --prod` and `vercel --prod`
+run directly, `gh repo edit`, and `gh api` with a write method. Everything else keeps its prompt. The allow is
+not consent: the assistant still asks for the owner's OK in the conversation before every push to `main`
+(`CLAUDE.md`), and nothing on the path to production changes: the security gate on commit and push, the
+`guard-git-bypass` hook that denies `--no-verify`, `core.hooksPath` and the bypass variable, the global denies
+on force pushes and credential files, the noreply identity, the Actions gate (`./test.sh` as parallel jobs plus
+gitleaks, #97) and the fact-check gate (#87).
+
+**Problem.** On 2026-10-12 the merge that carries #103 to #105 had passed the full gate, the owner had said to
+push, and the push to `main` was refused by Claude Code's auto-mode classifier as a production deploy. The
+classifier does not read the conversation, so the owner's OK could not satisfy it; the owner had to run the
+command by hand. A deploy that passes every gate and still needs a hand-typed command is one the owner will be
+tempted to bypass with a broad rule.
+
+**Alternatives considered.**
+- **A tracked project file allowing the two push forms and denying the other outward actions by name
+  (chosen).**
+- **A global rule in `~/.claude/settings.json`.** *Why not:* it would allow pushes to `main` in every repository,
+  including forks, upstream clones and do-not-touch repos; the policy (`ai-and-external-services.md` §5) is to
+  allow the narrowest command in the narrowest scope.
+- **The gitignored `.claude/settings.local.json`.** *Why not:* an untracked rule is invisible to a reviewer and to
+  a fresh clone; this decision exists so the rule is read in git like the gates it sits beside.
+- **`Bash(git push:*)` or `Bash(git:*)`.** *Why not:* the first allows force pushes, deletes and pushes to any
+  branch or remote; the second allows `git config`, which the hook guards for a reason.
+- **A manual-approval environment in GitHub Actions instead of any local rule.** *Why not:* it moves the same
+  click to a web page; the owner's approval is already given in the conversation, and the Actions gate is for
+  checks a person cannot do by eye, not for consent.
+
+**Closes off.** Any further allow for an outward-facing command in this project without its own decision entry:
+the file is the register, and the next entry names the command. Any reading of the rule as standing consent: a
+push to `main` without the owner's OK in that conversation breaks `CLAUDE.md`, whatever the settings allow.
+
+**Verified:** 2026-10-12. `python3 -m json.tool .claude/settings.json` parses; the file is tracked (`git ls-files
+.claude/settings.json`). `tests/test_docs.py` passes with this entry. The first push under the rule is the one
+that deploys it, recorded in `CHANGELOG.md` with its Actions run; until then the rule is unverified in use.
+
+*Would change if:* a push to `main` happens without the owner's OK in the conversation, in which case the allow
+is removed and the push goes back to a hand-typed command; or Claude Code gains a per-command confirmation that
+the classifier honours, in which case the allow is replaced by it.

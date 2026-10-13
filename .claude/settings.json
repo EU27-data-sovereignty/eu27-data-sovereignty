@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push origin main)",
+      "Bash(git push origin *:main)"
+    ],
+    "deny": [
+      "Bash(git push origin --delete:*)",
+      "Bash(vercel deploy --prod:*)",
+      "Bash(vercel --prod:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(gh api -X:*)",
+      "Bash(gh api --method:*)"
+    ]
+  }
+}
