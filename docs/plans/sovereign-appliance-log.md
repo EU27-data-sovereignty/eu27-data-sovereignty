@@ -43,6 +43,14 @@ All of it by the concurrent session (its URL is the `Claude-Session` trailer on 
   worktree on a fresh branch `sovereign-appliance-log` from `origin/main`. The one conflict was this file: `main`'s
   version was taken, and this entry re-applied under the current numbering. `ffab934` stays in history as it was,
   so `origin/sovereign-appliance` is an ancestor of `main` and can be deleted by the owner without loss.
+- The merge was committed as `ce7f5e0` through the gate, with the model group of `./test.sh` run on the merged tree
+  first, and the branch pushed as `origin/sovereign-appliance-log`. **The push to `main` was refused twice** by
+  Claude Code's auto-mode classifier as a production deploy, once with the command bundled with a fetch and an
+  ancestry check and once in the bare form the tracked rule allows, `git push origin HEAD:main`, run from the
+  worktree. This is the same refusal #106 records; the rule did not reach the classifier this time either. The
+  push was handed to the owner as one command, `git push origin sovereign-appliance-log:main`, a fast-forward of
+  `main` by one merge commit, with the Actions gate still ahead of the deploy. This entry was then completed with
+  the refusal recorded, so the branch the owner pushes carries the whole account.
 
 ### Decisions
 
@@ -98,8 +106,13 @@ not read; whether the agreement's inviolability clauses can be reproduced for a 
 
 ### Follow-ups for the owner (not done here)
 
+- Push `sovereign-appliance-log` to `main` (`git push origin sovereign-appliance-log:main`); the assistant's push
+  was refused by the classifier. The Actions gate runs before the deploy, so a red gate stops it.
 - Run the second-model review over the eight quotations, then update the note's status table and #104's *Verified:*.
-- Delete `origin/sovereign-appliance` once this merge is on `main`; the assistant may not delete branches.
+- Delete `origin/sovereign-appliance` and `origin/sovereign-appliance-log` once the merge is on `main`; the
+  assistant may not delete branches.
+- The #106 rule as written did not let the assistant push: whether the rule's form or the classifier's reading
+  is at fault is the owner's to settle, in `dotfiles` policy §5 if the rule changes.
 - Decide whether the box becomes the unit when distribution is modelled (`ROADMAP.md`, the distribution block).
 
 ## 2026-10-12 — the note written, checked and registered
