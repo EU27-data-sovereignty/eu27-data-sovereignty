@@ -25,13 +25,14 @@ env:
   # GitHub publishes for the release asset; bump both together.
   TYPST_VERSION: v0.15.1
   TYPST_SHA256: a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c
-  # ubuntu-latest ships Google Chrome; playwright.config.ts uses an installed browser (#22).
+  # ubuntu-24.04 ships Google Chrome; playwright.config.ts uses an installed browser (#22). Pinned, not
+  # -latest, so the browser under the tests changes only with a commit (#107).
   CHROME_PATH: /usr/bin/google-chrome
 
 jobs:
   model:
     name: Model and data (./test.sh --only model)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -61,7 +62,7 @@ jobs:
 
   web:
     name: Web app (./test.sh --only web)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -96,7 +97,7 @@ jobs:
   pdf:
     name: PDFs (./test.sh --only pdf)
     if: inputs.pdf
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -131,7 +132,7 @@ jobs:
   e2e:
     name: Browser tests (${{ matrix.project }})
     needs: web
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       # One job per Playwright project in web/playwright.config.ts. Chrome is the runner's own (#22);

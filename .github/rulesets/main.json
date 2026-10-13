@@ -1,0 +1,43 @@
+{
+  "name": "main: no force push, no delete, fast checks green",
+  "target": "branch",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "include": [
+        "refs/heads/main"
+      ],
+      "exclude": []
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [
+          {
+            "context": "Gate / Model and data (./test.sh --only model)"
+          },
+          {
+            "context": "Gate / Web app (./test.sh --only web)"
+          },
+          {
+            "context": "security / gate"
+          },
+          {
+            "context": "security / gitleaks"
+          }
+        ]
+      }
+    }
+  ],
+  "bypass_actors": []
+}

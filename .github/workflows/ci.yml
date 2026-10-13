@@ -1,9 +1,13 @@
 name: CI
 
-# Pull requests only (#98). A push to main runs the same gate in deploy.yml, and secrets are scanned on every push
-# and pull request by security.yml (gitleaks over the full history, then the security gate).
+# Pull requests (#98) and every push to a branch other than main (#107): main's ruleset accepts only a commit whose
+# fast checks have already passed, so the checks run on the branch first. A push to main runs the same gate in
+# deploy.yml, and secrets are scanned on every push and pull request by security.yml (gitleaks over the full
+# history, then the security gate).
 on:
   pull_request:
+  push:
+    branches-ignore: [main]
 
 # The gate checks out the repo and reads it. It never writes to the repository, so the default read/write
 # GITHUB_TOKEN is more scope than it needs.
@@ -11,11 +15,11 @@ permissions:
   contents: read
 
 jobs:
-  # The full gate on every pull request (#92), so a pull request is not first tested by the production
-  # deploy: the same parallel jobs as deploy.yml (gate.yml), without the PDFs, which only shipping needs.
+  # The full gate on every pull request (#92) and branch push (#107), so a commit is not first tested by the
+  # production deploy: the same parallel jobs as deploy.yml (gate.yml), without the PDFs, which only shipping needs.
   gate:
     name: Gate
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
     uses: ./.github/workflows/gate.yml
     with:
       pdf: false

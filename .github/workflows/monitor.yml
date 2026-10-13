@@ -17,7 +17,7 @@ jobs:
   live:
     name: Live site and data sources
     if: github.event.schedule != '41 7 * * *'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -35,7 +35,7 @@ jobs:
     # the CSV and fetch manifest of this run are kept as an artifact for 90 days.
     name: Cited sources still say what we quote
     if: github.event.schedule != '41 7 * * *'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -65,7 +65,7 @@ jobs:
     # is reported as "not configured" rather than failing every day.
     name: Live /ask answers with a citation
     if: github.event.schedule == '41 7 * * *' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0

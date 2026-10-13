@@ -1,0 +1,21 @@
+# Security updates only (#107). Version updates are off for every ecosystem (open-pull-requests-limit: 0):
+# every pin is exact by policy and moves by hand. Dependabot still raises a pull request when a pinned
+# package has a published vulnerability, once security updates are enabled in the repository settings.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 0
+  - package-ecosystem: npm
+    directory: /web
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 0
+  - package-ecosystem: pip
+    directory: /
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 0
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }
+    open-pull-requests-limit: 0

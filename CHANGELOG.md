@@ -16,6 +16,21 @@ What changed and when. Reasoning for the choices behind these changes lives in
   carries its tags. `python3 model/i18n_drafts.py check`, the `test.sh` stage, now also fails on a missing or wrong
   tag, a file that is not NFC, stray whitespace, or a dropped ellipsis.
 
+### Changed: the deploy rolls itself back, `main` gets a ruleset, the runner is pinned, Dependabot watches the pins (#107)
+
+- **What changed.** `deploy.yml` ends with a rollback step that runs only when the smoke test or the live `/ask` check
+  fails after the upload. `ci.yml` runs the gate on every branch push as well as on pull requests, and
+  `.github/rulesets/main.json` is the ruleset for `main`: no force push, no deletion, and the four fast checks (model,
+  web, the two security jobs) required on the commit. Every workflow runs on `ubuntu-24.04` instead of `-latest`.
+  `.github/dependabot.yml` turns version updates off for every ecosystem and leaves security updates to raise a pull
+  request. `tests/test_workflows.py` checks each of these.
+- **What is yours to apply.** The ruleset, secret scanning with push protection, and Dependabot security updates are
+  repository settings, outside the tree. `docs/plans/ci-cd-hardening.md` has the three commands.
+- **What was rejected, and why.** Required reviews, a staging environment and visual regression in CI; the reasons are
+  in #107. Promoting only after a smoke test of the candidate URL was rejected for now because the candidate sits
+  behind Vercel's deployment protection, which the smoke test cannot pass without a bypass secret; rollback gives the
+  same outcome with a window of one smoke test.
+
 ### Added: 27 language drafts, cross-reviewed by two agents on two models, and the plan to serve them (#105)
 
 - **What it is.** `docs/i18n/STRINGS.md` lists the 45 chrome strings the app prints around the facts and the official

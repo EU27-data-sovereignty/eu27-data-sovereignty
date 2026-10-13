@@ -2982,3 +2982,49 @@ under the rule, Actions run 38334656899 green, `/country/DE` answering 308 on th
 *Would change if:* a push to `main` happens without the owner's OK in the conversation, in which case the allow
 is removed and the push goes back to a hand-typed command; or Claude Code gains a per-command confirmation that
 the classifier honours, in which case the allow is replaced by it.
+
+### 107. The deploy rolls itself back, `main` is ruled not reviewed, the runner is pinned, Dependabot watches the pins
+**Decision.** 2026-10-12, at the owner's request, after a review of the pipeline that found the deploy path strong
+and the repository around it loose. Five changes, chosen for adding no friction to a single writer:
+`deploy.yml` rolls back to the previous production deployment when the smoke test or the live `/ask` check fails
+after the upload; `main` gets a ruleset (`.github/rulesets/main.json`) that refuses force pushes and deletions and
+requires the four fast checks (model, web, security gate, gitleaks) on the commit, with `ci.yml` running the gate on
+every branch push so a commit carries them before `main` is asked to take it; every workflow runs on `ubuntu-24.04`;
+`.github/dependabot.yml` turns version updates off and leaves security updates to raise a pull request; and the
+repository's secret scanning and push protection are switched on. The three settings changes are applied by the
+owner with the commands in `docs/plans/ci-cd-hardening.md`; the tree carries their inputs.
+
+**Problem.** `main` had no protection: a force push or a deletion would have gone through, and a red commit could
+sit on `main` because the gate runs after the push. A deploy whose smoke test failed stayed live. The runner image
+was `ubuntu-latest`, which GitHub migrates to Ubuntu 26 on 2026-10-19, so Chrome and the system libraries under the
+browser tests would have changed without a commit. Secret scanning was off on a public repository. Nothing told the
+owner when an exactly pinned package gained a published vulnerability.
+
+**Alternatives considered.**
+- **The five changes above, none requiring a second person (chosen).**
+- **Required pull-request reviews.** *Why not:* one writer; every merge would need a self-approval, which is a
+  ritual, not a check. The gate is the reviewer.
+- **Required checks on every gate job, browsers and PDFs included.** *Why not:* a quarter of an hour per push for
+  checks the deploy runs again anyway; the fast four catch the data, the types, the build and the secrets.
+- **Classic branch protection instead of a ruleset.** *Why not:* a ruleset is one JSON file in the tree, applied
+  and re-applied with one call and checked by a test; classic protection is clicked.
+- **Deploy to a candidate URL, smoke-test it, promote only on success.** *Why not, for now:* the candidate sits
+  behind Vercel's deployment protection and the smoke test cannot reach it without a bypass secret in two places;
+  rollback gives the same outcome with a window of one smoke test. *Would reopen* if that window ever matters.
+- **A staging environment.** *Why not:* previews behind Vercel login already exist for the cases that need one,
+  and a staging site is a second production to keep honest.
+- **Visual regression in CI.** *Why not:* Linux fonts differ from the macOS baselines; the suite would churn and be
+  ignored. It runs on macOS, where the baselines are.
+
+**Closes off.** A direct push to `main` of a commit whose checks have not run: push the branch first. Any
+`-latest` runner image. Any Dependabot version-update pull request. A force push to `main` by anyone, the owner
+included, without first changing the ruleset.
+
+**Verified:** 2026-10-12. `python3 -m unittest tests.test_workflows tests.test_docs`: pass, with the four new
+tests (no floating runner, rollback step after the smoke test, ruleset contexts are gate jobs and only the fast
+ones, Dependabot security-only). The ruleset and the two settings are **NOT YET** applied: the first push after
+the owner runs the three commands verifies them, and `gh api repos/EU27-data-sovereignty/eu27-data-sovereignty/rulesets`
+listing the ruleset is the check. The rollback step is verified only by its tests until a smoke test fails.
+
+*Would change if:* a second writer joins, in which case required reviews return; or a smoke-test failure shows the
+rollback window matters, in which case the bypass secret is set and the promote-after-smoke path is built.

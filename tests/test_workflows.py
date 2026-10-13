@@ -11,6 +11,7 @@ downloaded binary is checked against a checksum. Stdlib only, so the YAML is rea
 """
 from __future__ import annotations
 
+import json
 import re
 import unittest
 from pathlib import Path
@@ -116,9 +117,11 @@ class Deploy(unittest.TestCase):
         self.assertIn('if [ "$pdfs" != 28 ]', site)
         self.assertIn("python3 book/report.py -o web/dist", site)      # the full build without the flag
 
-    def test_pull_requests_get_the_full_gate_and_an_audit(self):
-        # #92: a pull request runs the gate and the dependency audit before it can reach main.
-        self.assertRegex(CI, r"\n  gate:\n(?:    .*\n)*?    if: github.event_name == 'pull_request'\n"
+    def test_pull_requests_and_branch_pushes_get_the_full_gate_and_an_audit(self):
+        # #92: a pull request runs the gate and the dependency audit before it can reach main. #107: so does
+        # every push to a branch other than main, because main's ruleset requires the checks on the commit.
+        self.assertRegex(CI, r"\non:\n  pull_request:\n  push:\n    branches-ignore: \[main\]\n")
+        self.assertRegex(CI, r"\n  gate:\n(?:    .*\n)*?    if: github.event_name == 'pull_request' \|\| github.event_name == 'push'\n"
                              r"    uses: \./\.github/workflows/gate\.yml\n")
         self.assertIn("npm audit --audit-level=high --prefix web", GATE)
 
@@ -157,11 +160,12 @@ class Deploy(unittest.TestCase):
         self.assertRegex(monitor, r"schedule:\n\s+- cron: ")
         self.assertNotIn("issues: write", monitor)              # read-only: it opens nothing
 
-    def test_ci_is_the_gate_on_pull_requests_and_nothing_else(self):
+    def test_ci_is_the_gate_on_pull_requests_and_branch_pushes_and_nothing_else(self):
         # #98: a second, weaker copy of the model checks on push, and a second gitleaks, were removed. A push to
         # main runs the gate in deploy.yml; secrets are scanned on every push and pull request by security.yml.
-        self.assertRegex(CI, r"\non:\n  pull_request:\n")
-        self.assertNotIn("push:", CI)
+        # #107: a push to any other branch runs the same gate, so main's ruleset finds the checks on the commit.
+        self.assertRegex(CI, r"\non:\n  pull_request:\n  push:\n    branches-ignore: \[main\]\n")
+        self.assertEqual(CI.count("push:"), 1)
         self.assertNotIn("unittest discover", CI)
         self.assertNotIn("gitleaks-reusable", CI)
         security = (ROOT / ".github" / "workflows" / "security.yml").read_text()
@@ -216,3 +220,44 @@ class ToolVersions(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Hardening(unittest.TestCase):
+    """#107: a pinned runner, a rollback after a failed post-deploy check, and a ruleset whose checks exist."""
+
+    def test_no_workflow_runs_on_a_floating_runner_image(self):
+        loose = [wf.name for wf in WORKFLOWS if "ubuntu-latest" in wf.read_text()]
+        self.assertEqual(loose, [], "pin the runner image (ubuntu-24.04); -latest changes under the gate")
+
+    def test_a_failed_smoke_test_rolls_the_deploy_back(self):
+        deploy = DEPLOY.split("- name: Roll back to the previous production deployment", 1)
+        self.assertEqual(len(deploy), 2, "deploy.yml needs the rollback step")
+        self.assertIn("if: failure() && steps.deploy.outcome == 'success'", deploy[1])
+        self.assertIn("rollback --yes", deploy[1])
+        self.assertLess(DEPLOY.index("Smoke test the live domain"), DEPLOY.index("Roll back to the previous"))
+
+    def test_the_ruleset_requires_checks_that_the_branch_gate_produces(self):
+        ruleset = json.loads((ROOT / ".github" / "rulesets" / "main.json").read_text())
+        self.assertEqual(ruleset["conditions"]["ref_name"]["include"], ["refs/heads/main"])
+        self.assertEqual(ruleset["bypass_actors"], [])
+        kinds = {r["type"] for r in ruleset["rules"]}
+        self.assertTrue({"deletion", "non_fast_forward", "required_status_checks"} <= kinds)
+        checks = next(r for r in ruleset["rules"] if r["type"] == "required_status_checks")
+        contexts = [c["context"] for c in checks["parameters"]["required_status_checks"]]
+        # The gate job in ci.yml is named Gate, so its reusable jobs report as "Gate / <job name>".
+        job_names = re.findall(r"^    name: (.+)$", GATE, re.M)
+        for ctx in contexts:
+            if ctx.startswith("Gate / "):
+                self.assertIn(ctx[len("Gate / "):], job_names, f"{ctx} is not a gate job")
+            else:
+                self.assertTrue(ctx.startswith("security / "), ctx)
+        # Only the fast jobs: the PDFs are not built on a branch (ci.yml passes pdf: false) and the browsers
+        # are not required, so a push waits for minutes, not a quarter of an hour.
+        self.assertNotIn("Gate / PDFs (./test.sh --only pdf)", contexts)
+        self.assertFalse(any("Browser" in c for c in contexts))
+
+    def test_dependabot_raises_security_updates_only(self):
+        text = (ROOT / ".github" / "dependabot.yml").read_text()
+        self.assertEqual(len(re.findall(r"^\s+open-pull-requests-limit: 0$", text, re.M)),
+                         len(re.findall(r"^\s+- package-ecosystem:", text, re.M)))
+

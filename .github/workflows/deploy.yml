@@ -33,7 +33,7 @@ jobs:
   deploy:
     name: Build and deploy to production
     needs: gate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # The environment is restricted to main in the repository settings, so only main can
     # read VERCEL_TOKEN.
     environment:
@@ -105,3 +105,13 @@ jobs:
       # ./test.sh's live group, run here rather than in the gate (see test.sh).
       - name: The live /ask answers through a real API call
         run: ./test.sh --only live
+      # A deploy that failed its smoke test or its live /ask check does not stay in front of readers (#107):
+      # Vercel keeps the previous production deployment, and `rollback` makes it current again. The window
+      # is the smoke test's own duration. The job still fails, so the run is red and the push is investigated.
+      - name: Roll back to the previous production deployment
+        if: failure() && steps.deploy.outcome == 'success'
+        run: |
+          npx --yes "$VERCEL_CLI" rollback --yes --token="$VERCEL_TOKEN"
+          echo "::error::rolled back: ${{ steps.deploy.outputs.url }} failed its post-deploy checks"
+          echo "### Rolled back" >> "$GITHUB_STEP_SUMMARY"
+          echo "${{ steps.deploy.outputs.url }} failed the smoke test or the live /ask check; the previous production deployment is current again." >> "$GITHUB_STEP_SUMMARY"
