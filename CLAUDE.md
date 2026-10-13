@@ -13,6 +13,12 @@ writing them by hand.
 
 A sourced analysis of each EU member state's critical government data holdings, and of what sovereign
 hosting for them requires.
+- **Scope: the 27 member states of the European Union, and only those.** Austria, Belgium, Bulgaria, Croatia,
+  Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania,
+  Luxembourg, Malta, the Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden, keyed by
+  Eurostat's codes (Greece is `EL`). Not the EEA states, the United Kingdom, Switzerland, candidate countries or
+  the EU institutions as holders of data in their own right: every register, indicator, ranking, page, PDF and
+  language draft is per member state, and a change to this scope is a decision, not an edit.
 - **Research.** Agents stage claims; `model/research.py` admits only claims whose quote is found in a
   fetched, hashed document and whose categorical label an independent reviewer agrees with (#79).
 - **Rendering.** One content model (`model/document.py`) renders everything: the EU-27 report and 27
@@ -63,6 +69,7 @@ python3 model/gaps.py [--csv out.csv]  # docs/gaps.md: every gap and how often i
 python3 model/provenance.py            # source register coverage per namespace
 ./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#103)
 ./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
+python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
@@ -157,3 +164,7 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   the book, the web app or `/ask` (`tests/test_sovereign_appliance.py`); no ranking language, no currency figure anywhere,
   a member state named only in its Precedents and Sources sections and there only with a URL and access date or
   **[unverified]**; `./run.sh appliance links` after adding or changing a URL.
+- **The language drafts are staging, never rendered.** `docs/i18n/drafts/<ISO>.md` are machine translations of the 45
+  chrome strings in `docs/i18n/STRINGS.md`, drafted by one agent and reviewed by the agent on the other model;
+  `tests/test_i18n_drafts.py` fails if a renderer names them or a file lacks its cross-review. No person has read them.
+  The plan that would admit them is `docs/plans/localisation-plan.md`; it needs its own decision entry first.

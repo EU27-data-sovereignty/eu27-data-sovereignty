@@ -116,6 +116,13 @@ step "The sovereign-appliance note keeps its contract"
 # in the committed link register, and nothing rendering it.
 python3 model/sovereign_appliance_note.py check
 ok "sections present, states sourced where named, every link registered"
+
+# -----------------------------------------------------------------------------
+step "The language drafts are complete, cross-reviewed and rendered nowhere"
+# docs/i18n/drafts/ is agent output (docs/plans/localisation-plan.md): every state, every key, every official
+# language, reviewed by the agent on the other model; nothing renders it until the plan's decision is written.
+python3 model/i18n_drafts.py check
+ok "27 drafts, every cell reviewed by a different agent"
 fi
 
 if in_group web; then

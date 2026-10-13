@@ -7,6 +7,17 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Added: 27 language drafts, cross-reviewed by two agents on two models, and the plan to serve them (#105)
+
+- **What it is.** `docs/i18n/STRINGS.md` lists the 45 chrome strings the app prints around the facts and the official
+  languages per state. `docs/i18n/drafts/<ISO>.md`, one per member state, carries a machine translation per language:
+  agent A (claude-opus-5-5) drafted 14 states and agent B (claude-fable-5-1) 13, and each then reviewed every cell of
+  the other's files, `ok` or `fix` with a suggested wording. `python3 model/i18n_drafts.py check` is a `test.sh` stage;
+  `docs/i18n/README.md` carries the per-state table it writes. Facts are not translated.
+- **Not rendered.** Nothing reads the drafts (`tests/test_i18n_drafts.py`). No person has read them. The plan that would
+  admit them, with the URL scheme `/<iso>/<lang>` and the decision entry it still needs, is `docs/plans/localisation-plan.md`.
+- **Scope stated.** `CLAUDE.md` now names the 27 member states as the whole scope of the project.
+
 ### Added: a tracked permission rule lets the assistant push to `main`, and nothing else outward (#106)
 
 - **What changed.** `.claude/settings.json` is now tracked. It allows `git push origin main` and
