@@ -70,6 +70,8 @@ python3 model/provenance.py            # source register coverage per namespace
 ./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#103)
 ./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
 python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
+python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
+python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
@@ -175,3 +177,9 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   chrome strings in `docs/i18n/STRINGS.md`, drafted by one agent and reviewed by the agent on the other model;
   `tests/test_i18n_drafts.py` fails if a renderer names them or a file lacks its cross-review. No person has read them.
   The plan that would admit them is `docs/plans/localisation-plan.md`; it needs its own decision entry first.
+- **`TECHNICAL-UNIVERSITIES.md` is authored, not generated.** Per state, the institutions on a named published list
+  (CESAER, EuroTech) or the state's technical university cited from a fetched page, else **[unverified]**; alphabetical
+  within a state, no ranking word anywhere, every URL in `docs/technical-universities-links.csv`
+  (`python3 model/technical_universities_note.py links` after a change). Never rendered.
+- **A new authored note or draft set registers in `model/notes.py`**, never as a new `test.sh` stage: one stage runs the
+  register, and `tests/test_notes.py` fails on a `model/*_note.py` that is not in it.

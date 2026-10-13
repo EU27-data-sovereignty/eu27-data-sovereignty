@@ -101,28 +101,14 @@ python3 model/document.py --check
 ok "every fact in all 27 documents resolves to a checked source"
 
 # -----------------------------------------------------------------------------
-step "The national-AI note keeps its contract"
-# NATIONAL-AI-STRATEGIES.md is authored prose (#103), so the gate checks what it can refuse: one entry per
-# state in the fixed template, every snapshot cell sourced or marked unverified, every URL in the committed
-# link register, no ranking language, no cost inside a strategy, and nothing rendering it. The counts go in
-# front of whoever runs the gate, like the ledger above.
-python3 model/national_ai_note.py check
-ok "27 entries, every cell sourced or marked, every link registered"
-
-# -----------------------------------------------------------------------------
-step "The sovereign-appliance note keeps its contract"
-# SOVEREIGN-APPLIANCE.md is authored prose (#104): the header wording, the named sections, no ranking language,
-# no currency figure, member states named only in Precedents and Sources and there only with a source, every URL
-# in the committed link register, and nothing rendering it.
-python3 model/sovereign_appliance_note.py check
-ok "sections present, states sourced where named, every link registered"
-
-# -----------------------------------------------------------------------------
-step "The language drafts are complete, cross-reviewed and rendered nowhere"
-# docs/i18n/drafts/ is agent output (docs/plans/localisation-plan.md): every state, every key, every official
-# language, reviewed by the agent on the other model; nothing renders it until the plan's decision is written.
-python3 model/i18n_drafts.py check
-ok "27 drafts, BCP 47 tags, NFC, every cell reviewed by a different agent"
+step "Authored notes and agent drafts keep their contracts"
+# Prose and staging the model never renders, each held to its own contract by its own checker: the national-AI
+# note (#103), the sovereign-appliance note (#104), the language drafts (docs/plans/localisation-plan.md), the
+# technical-universities note. model/notes.py is the register: a new note adds a line there, never a stage here,
+# and tests/test_notes.py fails on a checker that exists but is not registered. One line per note goes in front
+# of whoever runs the gate, like the ledger above.
+python3 model/notes.py check
+ok "every registered note and draft set holds its contract"
 fi
 
 if in_group web; then

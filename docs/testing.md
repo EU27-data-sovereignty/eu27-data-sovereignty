@@ -26,32 +26,30 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 2 | Verification ledger | `model/sources.py`: the source ledger is valid |
 | 3 | National data register | `model/national_data.py`: the register is valid |
 | 4 | Every fact sourced | `document.py --check`: every printed value resolves to a checked citation |
-| 5 | National-AI note keeps its contract | `model/national_ai_note.py check`: every snapshot cell sourced or marked, every link registered (#103) |
-| 6 | Sovereign-appliance note keeps its contract | `model/sovereign_appliance_note.py check` (#104) |
-| 7 | Language drafts complete, cross-reviewed, rendered nowhere | `model/i18n_drafts.py check`: 27 drafts, BCP 47 tags, NFC, every cell reviewed by the agent on the other model ([`docs/i18n/README.md`](i18n/README.md)) |
-| 8 | `/ask` type-check | `api/` compiles against the real Anthropic SDK |
-| 9 | Generated files current | the briefs, CSVs, bundle, `/ask` corpus and reports equal a fresh regeneration |
-| 10 | Admission reproduces | the registers rebuild from the committed evidence |
-| 11 | Fact-check ledger and audit file reproduce | `factcheck.py replay` and `audit --check` ([`docs/fact-check.md`](fact-check.md)) |
-| 12 | PDFs compile and are inspected | 28 PDFs build; `book/check_pdfs.py` checks each one: disclaimer, both appendices, country named, fonts embedded, size budget, and the 4 previews (needs poppler; CI installs it) |
-| 13–16 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
-| 17 | Production build | `vite build` succeeds |
-| 18 | Size budget | gzipped: data bundle ≤ 1,100 KB (900 KB until 2026-10-06), all JavaScript ≤ 400 KB |
-| 19 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
+| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the technical-universities note; one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
+| 6 | `/ask` type-check | `api/` compiles against the real Anthropic SDK |
+| 7 | Generated files current | the briefs, CSVs, bundle, `/ask` corpus and reports equal a fresh regeneration |
+| 8 | Admission reproduces | the registers rebuild from the committed evidence |
+| 9 | Fact-check ledger and audit file reproduce | `factcheck.py replay` and `audit --check` ([`docs/fact-check.md`](fact-check.md)) |
+| 10 | PDFs compile and are inspected | 28 PDFs build; `book/check_pdfs.py` checks each one: disclaimer, both appendices, country named, fonts embedded, size budget, and the 4 previews (needs poppler; CI installs it) |
+| 11–14 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
+| 15 | Production build | `vite build` succeeds |
+| 16 | Size budget | gzipped: data bundle ≤ 1,100 KB (900 KB until 2026-10-06), all JavaScript ≤ 400 KB |
+| 17 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
-| 20 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
+| 18 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
 
-`--no-e2e` skips stage 19, `--no-pdf` skips stage 12 and `--no-live` skips stage 20. Stage 20 tests the live site,
+`--no-e2e` skips stage 17, `--no-pdf` skips stage 10 and `--no-live` skips stage 18. Stage 18 tests the live site,
 not the checkout, and costs one request within the `eu27` workspace spend limit. Use `--no-live` offline or while the
 key is being replaced.
 
 **In CI the stages run as parallel jobs** (`.github/workflows/gate.yml`, #97). `./test.sh --only GROUP` runs one
 group:
-- `model`: stages 1–7 and 9–11;
-- `web`: stages 8 and 13–18;
-- `pdf`: stage 12;
-- `e2e`: stage 19, with `--project NAME` for one Playwright project;
-- `live`: stage 20. CI runs it in the deploy job, after the deploy and against it, not in the gate. A broken key
+- `model`: stages 1–5 and 7–9;
+- `web`: stages 6 and 11–16;
+- `pdf`: stage 10;
+- `e2e`: stage 17, with `--project NAME` for one Playwright project;
+- `live`: stage 18. CI runs it in the deploy job, after the deploy and against it, not in the gate. A broken key
   must not block the redeploy that fixes it.
 
 The five groups partition the stages, and `tests/test_workflows.py` fails if a stage is outside every group or
@@ -60,7 +58,7 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
 ## The Python suite, by subject
 
 - **Content and evidence:** `test_evidence`, `test_methodology`, `test_provenance`, `test_sources`,
-  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereign_appliance`, `test_i18n_drafts`, `test_sovereignty`, `test_model`, `test_book`,
+  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereign_appliance`, `test_i18n_drafts`, `test_notes`, `test_permissions`, `test_sovereignty`, `test_model`, `test_book`,
   `test_ask_corpus`, `test_emoji`, `test_institutions`, `test_gaps`.
 - **The fact check:** `test_factcheck`. It covers the rule, the hash, stage refusals, the gate, withholding,
   the appendix in every asset, the runbook's commands and the ledger replay.

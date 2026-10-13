@@ -87,7 +87,9 @@ class TheNote(unittest.TestCase):
         self.assertIn('"SOVEREIGN-APPLIANCE.md"', (ROOT / "tests" / "test_docs.py").read_text())
 
     def test_the_gate_and_run_script_know_the_note(self):
-        self.assertIn("sovereign_appliance_note.py check", (ROOT / "test.sh").read_text())
+        # The gate runs every registered note checker through model/notes.py, one stage for all of them.
+        self.assertIn("python3 model/notes.py check", (ROOT / "test.sh").read_text())
+        self.assertIn('"sovereign_appliance_note.py"', (ROOT / "model" / "notes.py").read_text())
         self.assertIn("appliance)", (ROOT / "run.sh").read_text())
 
 

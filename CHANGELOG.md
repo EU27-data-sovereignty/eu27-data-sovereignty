@@ -7,6 +7,28 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Added: `TECHNICAL-UNIVERSITIES.md`, the technical universities of each member state, sourced or marked
+
+- **What it is.** An authored note at the root: per state, the institutions on a named published list (C1: CESAER
+  members, from the Internet Archive copy of cesaer.org/members of 2026-04-13 because cesaer.org did not resolve on
+  2026-10-12; C2: EuroTech Universities Alliance members, from its site) or the state's technical university cited from
+  a fetched page (C3), else **[unverified]**. 61 rows: 44 C1, 3 C2, 11 C3, 3 unverified. Alphabetical within a state,
+  no ranking word anywhere: "leading" means on one of those lists and nothing more. Drafted by a claude-opus-5-5 agent
+  that fetched every cited page; cities and homepages are not separately sourced.
+- **Checked.** `python3 model/technical_universities_note.py check`: the 27 headings in order, the four columns, every
+  Basis one of the three shapes, every URL in `docs/technical-universities-links.csv` (75 URLs, 68 answered on
+  2026-10-12; `tugraz.at`, `kuleuven.be` and `rwth-aachen.de` did not resolve from here, `ucd.ie`, `taltech.ee` and
+  `rtu.lv` refused), no renderer names it. Registered in `model/notes.py`.
+
+### Changed: one `test.sh` stage for every authored note and draft set, through a register
+
+- **What changed.** The three per-note stages became one, "Authored notes and agent drafts keep their contracts", which
+  runs `python3 model/notes.py check`: the register of checker modules, one line of output each. A new note adds a
+  line to the register, never a stage; `tests/test_notes.py` fails on a `model/*_note.py` that is not registered and on
+  a checker run by its own stage. `test.sh` has 18 stages again instead of 20, and `docs/testing.md` lists them.
+- **Also.** `tests/test_permissions.py` holds the shape of `.claude/settings.json` (#106): every allow an exact push to
+  `origin main`, no wildcard, the outward denies present.
+
 ### Fixed: what the independent quality review found before the next push (#106, #107)
 
 - **What was wrong.** An independent reviewer on claude-opus-5-5 read the day's eleven commits. The rollback step in
