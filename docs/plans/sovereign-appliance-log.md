@@ -5,6 +5,103 @@ A log of the work behind [`SOVEREIGN-APPLIANCE.md`](../../SOVEREIGN-APPLIANCE.md
 decided and why, what changed, how it was checked, and what is still open. The decision of record is `DECISIONS.md`
 #104; this log is the working narrative behind it, not a second copy.
 
+## 2026-10-13 — committed, renumbered, deployed; the record brought up to date
+
+**Produced by.** Claude Fable 5.1 (`claude-fable-5-1`) in Claude Code, the same session as the entry below,
+`https://claude.ai/code/session_01BH4A8Do1xnsJ2M9GbUAFJG`, after a context reset. The owner asked: "document all
+decisions and changes in markdown", then "lets push". Nothing in the note, the checker or the tests changed in this
+entry; only this log, and the merge that carries it.
+
+### What happened between the entries
+
+All of it by the concurrent session (its URL is the `Claude-Session` trailer on the commits,
+`session_01JzrUgU5ZozYWCPBXUD2b5w`); its own narrative is [`country-paths-log.md`](country-paths-log.md).
+
+- **Committed** as `f73c24a` on 2026-10-12, from the staged tree alone, with the stichting and OUTREACH changes
+  kept out; the country paths followed one minute later as `0a64633`. So the separation went the other way round
+  from the follow-up's suggestion, the appliance first and the route after, and the gate ran on each. The commit
+  message records its verification: 362 Python tests OK, the note's check 0 problems. (The entry below says 364
+  from `./test.sh --only model`; the difference between the two counting commands was not traced.)
+- **Renumbered** in `3c41351`: `main` had meanwhile taken #101 and #102 for the landing design and the guide pages,
+  so the national-AI note is #103, this note is #104 and the country paths are #105. Every citation in the note, the
+  checker, the tests, the changelog and this log moved with it; the entry below reads #104 where it was written
+  as #102.
+- **Merged** with `origin/main` in `b7f5931`, the full gate run on the merged tree (`./test.sh --no-live`, 18 stages,
+  exit 0), and **pushed to `main`** as `7f265ac` under the new permission rule (#106): Actions run 38334656899,
+  every gate job green, deployed. The note has been live on `main` since then.
+- **The permission rule** (#106, `2ead774`) tracks `.claude/settings.json`: the assistant may push to `main` in two
+  forms and nothing else outward, and the owner's OK in the conversation still comes first. The untracked copy this
+  session found in the checkout is that file, identical to the tracked one.
+
+### What this session did on resuming
+
+- Read the log as "not yet committed", which was true when written and no longer, and committed a first version of
+  this entry as `ffab934` on `sovereign-appliance`, still citing the superseded numbers because the local branch was
+  28 commits behind `main`. On the owner's "lets push" it pushed that branch (`origin/sovereign-appliance`, the
+  security workflow green) and only then saw how far `main` had moved.
+- The local checkout could not merge `main` without disturbing the stichting files, so the merge was made in a
+  worktree on a fresh branch `sovereign-appliance-log` from `origin/main`. The one conflict was this file: `main`'s
+  version was taken, and this entry re-applied under the current numbering. `ffab934` stays in history as it was,
+  so `origin/sovereign-appliance` is an ancestor of `main` and can be deleted by the owner without loss.
+
+### Decisions
+
+8. **The appliance before the route, each from its own staged set, with the gate on both.** The alternatives were
+   a single commit of both sessions' work (two unrelated changes under one message) and separating the hunks around
+   the hook (forbidden: every commit passes the gate). The order was the concurrent session's call; it is recorded
+   here because it is the order the history shows.
+9. **This log is corrected, not rewritten.** The heading "not yet committed" in the entry below is amended in place
+   with a pointer to this entry and the commit follow-up is marked resolved, so a reader is not misled and the earlier
+   wording is still visible in history. `DECISIONS.md` #104 and the `CHANGELOG.md` entry are unchanged: both
+   describe what was committed, and neither records commit hashes by convention.
+10. **A stale entry is merged forward, not force-pushed away.** `ffab934` was already on the remote with the old
+    numbers. Rewriting it would need a force push, which the global and project rules deny; so the branch is merged
+    into `main`'s line and the conflict resolved to the current numbering. One wrong-numbered revision in history,
+    visible and explained, is the auditable outcome.
+
+### State of the tree at this entry
+
+- In the working checkout: the stichting files (`CHANGELOG.md`, `OUTREACH.md`, `README.md`, `docs/plans/stichting.md`,
+  `docs/plans/stichting-factcheck-2026-10-08.md`, `docs/plans/stichting-log.md`), modified or untracked, untouched by
+  either session and never staged by this one.
+- The concurrent session's merge worktree holds a further commit, `90e734e` (the universities working log and a
+  session index, #105 to #108), not on `main` when this entry was written.
+
+### Verification
+
+On the merged tree (`origin/main` at `6747558` plus this entry), 2026-10-13:
+
+- `./run.sh appliance check`: `13 sections, 8 URLs (7 answered at the last link check), 4 unverified marks, 4,165
+  words, 0 problems`.
+- `python3 -m unittest tests.test_sovereign_appliance tests.test_national_ai tests.test_docs`: 35 tests, OK.
+- `./run.sh factcheck status` on `0a64633`: 1490 of 1490 printed facts checked, supported, checker ≠ author; no
+  printed fact is touched by this entry.
+
+### Still unverified
+
+Unchanged from the entry below: the second-model review of the eight quotations; the Riigi Teataja page, cited and
+not read; whether the agreement's inviolability clauses can be reproduced for a cage in a commercial facility.
+
+### Where everything is recorded
+
+| What | Where |
+|---|---|
+| The note | `SOVEREIGN-APPLIANCE.md` (its status table carries the open review) |
+| The decision of record, with alternatives and *Verified:* | `DECISIONS.md` #104 |
+| The reader-facing change entry | `CHANGELOG.md`, 2026-10-12, "Added … (#104)" |
+| The contract and how it is checked | `model/sovereign_appliance_note.py`, `tests/test_sovereign_appliance.py`, the `test.sh` stage, `./run.sh appliance` |
+| The link register | `docs/sovereign-appliance-links.csv` |
+| Where the note is pointed to | `README.md` (layout, item 4, its section), `ROADMAP.md`'s distribution block, `CLAUDE.md` (command and gotcha), `docs/hosting-operators.md` (`colocated_appliance`), `docs/testing.md` |
+| The commits, the renumbering, the merge and the push to `main` | `f73c24a`, `3c41351`, `b7f5931`, `7f265ac`; narrative in `docs/plans/country-paths-log.md` |
+| The push rule | `DECISIONS.md` #106, `.claude/settings.json` |
+| The working narrative and the open items | this file |
+
+### Follow-ups for the owner (not done here)
+
+- Run the second-model review over the eight quotations, then update the note's status table and #104's *Verified:*.
+- Delete `origin/sovereign-appliance` once this merge is on `main`; the assistant may not delete branches.
+- Decide whether the box becomes the unit when distribution is modelled (`ROADMAP.md`, the distribution block).
+
 ## 2026-10-12 — the note written, checked and registered
 
 **Produced by.** Claude Fable 5.1 (`claude-fable-5-1`) in Claude Code, session
@@ -55,7 +152,7 @@ internet infra". Asked what to produce: a new authored note.
 - RFC 9334 and RFC 9162 were read through the fetch tool for the two definitions quoted.
 - No browser session was available (the Chrome extension was not connected), so no page was read interactively.
 
-### What changed (on branch `sovereign-appliance`, not yet committed)
+### What changed (committed the same day as `f73c24a`; see the 2026-10-13 entry)
 
 | File | Change |
 |---|---|
@@ -93,7 +190,8 @@ internet infra". Asked what to produce: a new authored note.
 - Commit. When this entry was written another session was editing the same checkout for #105 (the `/de` route),
   with staged renames in the index and its own hunks in `CHANGELOG.md`, `DECISIONS.md`, `CLAUDE.md` and
   `README.md` next to this work's. A plain commit would take both; the gate must run on whatever is committed, so
-  the two are separated by hand (or #105 is committed first and this work on top of it).
+  the two are separated by hand (or #105 is committed first and this work on top of it). *Resolved the same day;
+  the 2026-10-13 entry records how.*
 
 - Run the second-model review (`/factcheck`'s rule, by hand for prose) over the eight quotations.
 - Decide whether the box becomes the unit when distribution is modelled (`ROADMAP.md`, item 6 of that block).
