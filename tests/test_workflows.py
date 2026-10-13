@@ -236,6 +236,8 @@ class Hardening(unittest.TestCase):
         self.assertLess(DEPLOY.index("id: previous"), DEPLOY.index("id: deploy"),
                         "the previous production deployment is recorded before the upload")
         self.assertIn("steps.previous.outputs.url != ''", deploy[1])
+        self.assertIn("steps.promote.outcome != 'failure'", deploy[1],
+                      "a failed promote is not a failed deployment; it must not trigger the rollback")
         record = DEPLOY.split("id: previous", 1)[1].split("- name:", 1)[0]
         self.assertIn(".targets.production.url", record,
                       "record the project's production target; the newest deployment may be the one rolled back")

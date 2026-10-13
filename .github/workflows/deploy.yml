@@ -121,6 +121,7 @@ jobs:
       # After a rollback Vercel pauses automatic promotion, so a later green deploy would not take the domain by
       # itself. This makes the deployment that just passed every check the current production one if it is not.
       - name: The deployment that passed is the current production deployment
+        id: promote
         run: |
           set -euo pipefail
           new="${{ steps.deploy.outputs.url }}"; new="${new#https://}"
@@ -136,7 +137,8 @@ jobs:
       # is the smoke test's own duration. The job still fails, so the run is red and the push is investigated.
       # Not yet exercised by a real failure (2026-10-12); the step's shape is held by tests/test_workflows.py.
       - name: Roll back to the previous production deployment
-        if: failure() && steps.deploy.outcome == 'success' && steps.previous.outputs.url != ''
+        # Not when the promote step is what failed: that deployment passed the smoke test and the live check.
+        if: failure() && steps.deploy.outcome == 'success' && steps.promote.outcome != 'failure' && steps.previous.outputs.url != ''
         run: |
           npx --yes "$VERCEL_CLI" rollback "https://${{ steps.previous.outputs.url }}" --yes --token="$VERCEL_TOKEN"
           echo "::error::rolled back to https://${{ steps.previous.outputs.url }}: ${{ steps.deploy.outputs.url }} failed its post-deploy checks"
