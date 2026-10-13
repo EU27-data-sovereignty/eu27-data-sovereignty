@@ -21,8 +21,8 @@ What changed and when. Reasoning for the choices behind these changes lives in
   URL; a promote step makes the deployment that passed the current one, since Vercel pauses automatic promotion after
   a rollback. The allow is now exact forms only, and a delete, a `+` ref or a force push to `origin` is denied by
   prefix. Documents say NOT YET where it is not yet. Agents B and A corrected their own review tables (1,398 `ok`,
-  42 `fix`); `docs/i18n/README.md` says who passed what and who caught it. The drafts cite the plan, and the plan's
-  future decision is #108. `docs/testing.md` lists all twenty stages. The tests now require the rollback argument,
+  42 `fix`); `docs/i18n/README.md` says who passed what and who caught it. The drafts cite the plan, whose own
+  decision entry is still to be written. `docs/testing.md` lists all twenty stages. The tests now require the rollback argument,
   refuse any two-letter static route in `App.tsx` and any one-segment template path outside the helper, read the
   caller names from the workflows, and the draft checker refuses duplicate review rows, a `fix` without a wording,
   and a summary when the check fails. `ci.yml` drops an always-true `if` and cancels a superseded run per branch.
