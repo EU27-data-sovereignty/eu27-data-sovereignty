@@ -1,39 +1,46 @@
 # Progress
 
 Where every workstream stands, in one place. [`CHANGELOG.md`](CHANGELOG.md) records what changed and
-when, [`ROADMAP.md`](ROADMAP.md) what is planned, [`DECISIONS.md`](DECISIONS.md) why. This file is
-the status view across all three: what is built, what is half-built, what is blocked and on what.
+when, [`ROADMAP.md`](ROADMAP.md) what is planned, [`DECISIONS.md`](DECISIONS.md) why, [`TODO.md`](TODO.md)
+what is open. This file is the status view across them: what is built, what is half-built, what is
+blocked and on what. Every number below is the output of the command next to it, run on the date given.
 
-**Status as of 2026-09-30**, on `main` after `af59563`. Three commits are **not yet pushed**, and
-production still serves the 2026-09-27 build. The private contacts repo is unchanged.
+**Status as of 2026-10-13**, on `main` at `fcf0b65`, which production serves (`https://eu27.cloud`, deploy
+run 38373353625, every gate job green). Nothing is unpushed in this repository. The private contacts repo
+was not opened in this update; its figures below are from 2026-09-24.
 
 ---
 
 ## At a glance
 
-| Workstream | State | Evidence |
+| Workstream | State | Evidence (2026-10-13) |
 |---|---|---|
-| Own-fundamentals analysis | **Done** (#72) | No country scaled from another; `NoCountryIsDerivedFromAnother` tests |
-| Capacity | **Withdrawn**, not yet sized (#73) | Engine kept; sizing waits for measured holdings |
-| Content model + footnoted outputs | **Done** (#74, #75) | `document.py --check`: 0 unsourced facts; report + 27 country PDFs |
-| Web app | **Rebuilt**, EU theme, /ask added | 43 Vitest; 23 of 23 Playwright + axe |
-| Data-sovereignty ranking | **Evidenced** (#77); 134 of 189 indicators sourced | IE Dependent (High); IT Secured in law; 25 Not demonstrated (Low) |
-| Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
-| Mobile reader | **Stale**: on the withdrawn schema-1 bundle | 19 Jest tests; never built or deployed |
-| Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
-| Tables of contents | **Done** | every brief, `SUMMARY.md`, web, mobile, book outline |
-| Style guide | **Done**, one guide + per-format notes | `artifacts/STYLE.md` from `design/tokens.json` (#74, #76) |
-| **Source register** | **707 sources, 1,392 citations**: 138/621 params, 1,017 records, 134/189 indicators, 0/22 assumptions | `python3 model/provenance.py` (#67) |
-| **Critical holdings register** | **419 of 1053 pairs** verified and admitted; dependency labels reviewed (#79) | `./run.sh registers` (#73) |
-| Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
-| Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
-| Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
-| **Full test gate** | **Green** as of 2026-09-30 | `./test.sh`: 136 Python, 43 Vitest, 23 Playwright + axe |
+| Content model + footnoted outputs | **Done** (#74, #75, #82) | `document.py --check`: 27 documents and the EU-27 overview, 0 unsourced facts |
+| Cross-model fact check at deploy | **Done**, gate on every push to `main` (#87, #89) | `factcheck status`: 1490 of 1490 printed facts checked, supported, checker ≠ author |
+| **Source register** | **1,272 sources, 2,331 citations**: 162/621 params, 1,618/1,933 records, 142/189 indicators, 0/22 assumptions | `python3 model/provenance.py` (#67) |
+| **Critical holdings register** | **741 of 1,053 pairs** (70%) recorded, each cell cited; labels reviewed (#79) | `python3 model/national_data.py` (#73) |
+| Gaps | 3,671 gaps in 5,625 cells, each with how often it was searched | `python3 model/gaps.py` → `docs/gaps.md` |
+| Data-sovereignty ranking | **Evidenced** (#77) | IE Dependent (High); IT Secured in law (Low); 25 Not demonstrated (Low) |
+| Hosting of key registers | **Printed and compared** across the EU-27 (#95); operators as entities planned (#96) | `/infrastructure`, `countries/EU-INFRASTRUCTURE.md` |
+| Web app | **Live at eu27.cloud**, landing design (#101), guides (#102), one address per state (#105) | 55 Vitest; Playwright 73 (chrome) + 44 × 4 (firefox, webkit, two iPhones), run 38373353625 |
+| `/ask` | **Live**, real API call in the gate | deploy step "The live /ask answers through a real API call": success |
+| PDFs | **Done**: EU-27 report + 27 country reports, compiled in CI | `Gate / PDFs`: success |
+| Per-country artefacts | **Done**, 27 posters, hashes pinned | `countries/ARTEFACTS.csv` (#52) |
+| Deployment | **Push to `main` deploys** the gate's own build; records, promotes, rolls back by URL (#81, #97, #107) | run 38373353625: record, promote ran; rollback skipped |
+| Repository settings | **NOT YET**: ruleset, secret scanning, Dependabot security updates | three owner commands, `docs/plans/ci-cd-hardening.md` |
+| Authored notes | **Four**, each with a checker, never rendered (#59, #103, #104, #108) | `python3 model/notes.py check`: 4 `ok` |
+| Language drafts | **Staged**, not rendered; plan written, decision not yet | `i18n_drafts.py check`: 27 states, 1,440 cells, 1,398 ok, 42 fix |
+| Institutional map | **25 of 324 pairs** (37 rows), unchanged since 2026-09-24 | `python3 model/institutions.py` |
+| Named contacts | 956 rows, 910 people, 850 send-ready, as of 2026-09-24; not re-run | private repo at `contacts/` (#66) |
+| Mobile reader | **Stale**: schema-1 bundle, never built or deployed; Jest not run here | `mobile/`; `docs/plans/mobile-app.md` |
+| Paper book | **Scaffolded**; not checked in this update | `book/` |
+| **Full test gate** | **Green**: 18 stages as parallel CI jobs | `python3 -m unittest discover -s tests`: Ran 379 tests, OK; run 38373353625 |
 
-**The launch gate (#25, #67): nothing launches — indexing, the domain, the book, the mobile release,
-outreach sends — until every published claim cites an original source.** That half is now enforced:
-the site withholds anything unsourced (`document.py --check`, 0 unsourced facts). What remains is a
-human sampling audit that measures how often the admitted claims are wrong (`ROADMAP.md` § launch gate).
+**The launch gate (#25, #67): nothing launches — indexing, the book, the mobile release, outreach sends —
+until a person has measured how often the admitted claims are wrong.** The machine half is enforced: the
+site withholds anything unsourced, and every printed fact is checked by a model that did not write it
+(#87). The human sampling audit has not been done. The domain itself is live (#90), which the gate once
+held back; `ROADMAP.md` § launch gate has the current position.
 
 ---
 
@@ -70,196 +77,185 @@ flowchart LR
     DOC --> B[web/public/data/eu27.json]
     DOC --> G["countries/&lt;ISO&gt;/GOAL.md"]
     B --> REP[book/report.py<br/>EU-27 report + 27 PDFs]
-    B --> WEB[web/ React<br/>footnotes, ranking, map]
+    B --> WEB["web/ React<br/>eu27.cloud/&lt;iso&gt;"]
     B --> POS[posters]
     B --> ASK[api/_corpus.json<br/>/ask]
+    FC["/factcheck ledger<br/>checker ≠ author (#87)"] -. gate .-> WEB
     T[design/tokens.json] -.-> WEB
     T -.-> REP
+    N["Authored notes + language drafts<br/>model/notes.py: checked, never rendered"] -.x DOC
 ```
 
 Every fact in every output is a span of the one content model, and every span that states a fact
-carries claim ids that resolve to a checked source (#74, #75).
+carries claim ids that resolve to a checked source (#74, #75). The authored notes and the language
+drafts sit outside it: checked by their own contracts, read by nothing that renders.
 
 ---
 
 ## Done
 
-Each claim below is followed by the command that demonstrates it.
+Each claim below is followed by the command that demonstrates it, run on 2026-10-13 unless dated.
 
-### Evidence, verified and admitted (2026-09-29)
-Two research runs across all 27 states, each claim admitted only after its document was fetched, hashed
-and found to contain the quote. Every categorical label also needs an independent reviewer's agreement
-(#79). The method is in [`METHOD.md`](METHOD.md).
+### Evidence, verified and admitted
+Research runs across all 27 states, then the waves of 2026-10-06 for the cheapest gaps. Each claim is
+admitted only after its document was fetched, hashed and found to contain the quote; every categorical
+label also needs an independent reviewer's agreement (#79). The method is in [`METHOD.md`](METHOD.md).
 
 ```
 $ python3 model/research.py report | tail -1          # exact  loose  not_found  fetch_failed
-all          1961           20          284          251            0            0
+all          2192           21           75          228            0            0
 
-$ python3 model/national_data.py | tail -3
-419/1053 (country, record class) pairs recorded (40%)
-419 rows, of which 411 name a register and 8 evidence its absence.
+$ python3 model/national_data.py | grep -E 'pairs|rows'
+741/1053 (country, record class) pairs recorded (70%)
+741 rows, of which 732 name a register and 9 evidence its absence.
 
 $ python3 model/provenance.py
-707 sources, 1392 citations
+1272 sources, 2331 citations
 namespace     supported  declared   claims
-param               138         0      621    22.2% sourced
+param               162         0      621    26.1% sourced
 assumption            0         0       22     0.0% sourced
-record             1017         0     1651    61.6% sourced
-indicator           134         0      189    70.9% sourced
+record             1618         0     1933    83.7% sourced
+indicator           142         0      189    75.1% sourced
+
+$ python3 model/gaps.py | tail -1
+wrote docs/gaps.md: 3671 gaps in 5625 cells
 ```
 
-### Every fact shown is sourced
+### Every fact shown is sourced, and checked by a second model
 ```
 $ python3 model/document.py --check
-27 documents checked, 0 unsourced facts
+27 documents and the EU-27 overview checked, 0 unsourced facts
+
+$ ./run.sh factcheck status | tail -1
+1490 of 1490 printed facts checked, supported, checker ≠ author
 ```
+A fact the checker does not confirm is withheld as disputed, not printed (#89); the deploy fails on a
+printed fact that is new, changed or checked by its own author (#87).
 
 ### The ranking (#77)
 ```
-$ python3 model/sovereignty.py
-IE  Dependent on non-EU providers   High
-IT  Secured in law, not yet in practice   Low
-    ... 25 states: Not demonstrated, Low
+$ python3 model/sovereignty.py | grep -E '^(IE|IT) '
+IE  Dependent on non-EU providers              High
+IT  Secured in law, not yet in practice        Low
+$ python3 model/sovereignty.py | grep -c 'Not demonstrated'
+25
 ```
-Ireland's two triggers were checked by hand: the electoral register moving to a Microsoft Azure tenancy,
-and the TETRA network operator owned by Motorola Solutions. The 25 are Low mainly because hosting is
-unpublished for most holdings (`ROADMAP.md` § raise confidence).
+The 25 are Low mainly because hosting is unpublished for most holdings (`ROADMAP.md` § raise confidence).
+The ranking has no score, by test (#10, #77).
 
-### The outputs
-- **PDFs.** The EU-27 report and 27 country reports (typst): footnotes on the page, a source appendix
-  with hash and archived copy.
-- **Web app.** Overview, Ranking with map, Countries, Country, Critical holdings, Sources, Ask,
-  Methodology. EU tokens, light and dark.
-- **Posters.** 27, in `countries/<ISO>/`, with their own source list.
-- **`/ask`.** Built and tested (#78); live once the API key is set.
-
-```
-$ ./test.sh
-✅ All checks passed        # 136 Python, 43 Vitest, 23 Playwright + axe, API type-check
-```
-
-### Deployment
-Production (`sovereign-data-centers.vercel.app`) still serves the 2026-09-27 build; the new site is on a
-protected preview. The runbook, including `/ask`, is in [`DEPLOYMENT.md`](DEPLOYMENT.md).
-
-### The mobile reader (2026-09-17)
-`mobile/` is an Expo app, local only. **It is still on the schema-1 bundle, with the withdrawn
-Dutch-scaled figures**, and must move to the content model before any release (`ROADMAP.md`).
-
-### Tables of contents and country flags (2026-09-21)
-
-Every generated brief opens with a contents list built from the same `SECTIONS` tuple as its
-headings, so the two cannot disagree; `countries/NL/GOAL.md` has one by hand. `countries/SUMMARY.md`
-became a real index — each country name links to its brief, each row carries its flag. The web
-country page gained an on-page section index, which the 27 briefing PDFs inherited for free since
-they are printed from that route. The mobile list and the web country table carry flags.
-
-Flags are navigation only, never on an artefact (#47, #61). The book outline reads `DE · Germany`
-instead, because its interior is mono (#28) and typst could only reach flag glyphs through a
-colour, macOS-only font — `tests/test_book.py` asserts none reaches the typst source.
-
-The glyph is derived rather than stored in the bundle (#62), which is why this whole workstream
-cost **zero artefact re-renders**.
+### The outputs, live
+- **Web app** at `https://eu27.cloud`: the landing design (#101), a guide page behind every selector
+  button (#102), each member state at its code (`/de`, `/el`; #105), the hosting overview (#95), Sources,
+  Ask, Methodology with its graphics (#88).
+- **PDFs.** The EU-27 report and 27 country reports, typst, compiled and inspected in CI.
+- **Posters.** 27, in `countries/<ISO>/`, hashes pinned to the bundle.
+- **`/ask`.** Live since 2026-10-03; the gate asks it one real question on every deploy.
 
 ```
-$ python3 -m unittest tests.test_emoji tests.test_book
-Ran 10 tests ... OK
+$ curl -sI https://eu27.cloud/de | head -1
+HTTP/2 200
+$ curl -sI https://eu27.cloud/country/DE | grep -iE '^HTTP|^location'
+HTTP/2 308
+location: /DE
 ```
 
-### Representation style guides (2026-09-21)
+### Deployment (#81, #97, #107)
+A push to `main` runs `./test.sh` as parallel Actions jobs, then ships the gate's own build prebuilt;
+the deploy records the current production deployment, smoke-tests the live domain and `/ask`, promotes
+the deployment that passed, and rolls back by URL if a post-deploy check fails. The rollback step has
+never fired. The assistant may push to `main` under a tracked permission rule, with the owner's OK in
+the conversation first (#106).
 
-`artifacts/{markdown,html,pdf,png,mobile}/STYLE.md` plus a README of the invariants that hold
-across all of them (#63). They are the working form of rules that were spread across `DECISIONS.md`
-and source comments, and they cite decisions by number rather than restating the reasoning. All six
-are in `tests/test_docs.py`'s `CITING`, so a citation that stops resolving fails the suite.
+```
+$ gh run view 38373353625 --json jobs --jq '.jobs[] | "\(.name): \(.conclusion)"'
+Gate / PDFs (./test.sh --only pdf): success
+Gate / Model and data (./test.sh --only model): success
+Gate / Web app (./test.sh --only web): success
+Gate / Browser tests (iphone-17-pro): success      # and webkit, chrome, iphone-se, firefox
+Build and deploy to production: success
+  Record the current production deployment: success
+  The deployment that passed is the current production deployment: success
+  Roll back to the previous production deployment: skipped
+```
 
-The name collides with the repo's existing sense of "artefacts" (the tracked binaries). Accepted
-deliberately; `artifacts/README.md` opens by disambiguating.
+**NOT YET applied**, because they are repository settings the assistant's own rule denies: the ruleset on
+`main` (no force push, no deletion, four required fast checks), secret scanning with push protection, and
+Dependabot security updates. The three commands are in `docs/plans/ci-cd-hardening.md`.
+
+### The test gate
+Eighteen stages (`docs/testing.md`), the same locally and in CI: Python, the sourcing gate, the authored
+notes and drafts through one register, generated files current, the API type-check, lint, types, Vitest,
+build, the PDFs, Playwright with axe on every project, visual regression on the macOS baselines, the live
+`/ask`.
+
+```
+$ python3 -m unittest discover -s tests 2>&1 | tail -2
+Ran 379 tests in 15.433s
+OK
+$ cd web && npx vitest run 2>&1 | grep Tests
+      Tests  55 passed (55)
+$ python3 model/notes.py check
+  ok   the national-AI note (#103): 27 states, 467 URLs (462 answered at the last link check), 175 unverified marks, 38,429 words, 0 problems
+  ok   the sovereign-appliance note (#104): 13 sections, 8 URLs (7 answered at the last link check), 4 unverified marks, 4,165 words, 0 problems
+  ok   the language drafts (docs/plans/localisation-plan.md): 27 states, 45 keys, 1440 cells, 27 reviewed, 1398 ok, 42 fix, 0 problems
+  ok   the technical-universities note: 27 states, 61 rows (C1 44, C2 3, C3 11, [unverified] 1, none 2), 73 URLs (67 answered at the last link check), 0 problems
+```
+Playwright on run 38373353625: chrome 73 passed; firefox, webkit, iphone-se and iphone-17-pro 44 passed each.
+
+### The authored notes (#59, #103, #104, #108)
+Four notes at the root that the model never reads: the feasibility ranking, the national AI strategies, the
+sovereign appliance, the technical universities. Each from #103 on has a checker, a committed link
+register, and a test that fails if any renderer names it; all run through `model/notes.py` in one gate
+stage. The universities note was checked row by row by a second agent on the same model and then by a
+`claude-fable-5-1` agent (zero discrepancies); the appliance note's quotations have had no second-model
+review. **No person has read any of the three recent notes.**
+
+### Language drafts (staging)
+`docs/i18n/drafts/<ISO>.md`, 27 files: the app's 45 chrome strings in every official language of the state,
+drafted by two agents on two models, each reviewing the other's every cell. BCP 47 tags and Unicode NFC
+enforced. Nothing renders them; the plan to serve them at `/<iso>/<lang>` is `docs/plans/localisation-plan.md`
+and its decision entry is not yet written.
 
 ### Security and privacy
-- Every commit and push passes `dotfiles/security/gate.sh`.
-- `gitleaks` now also runs in CI over full history, not just the local diff.
-- `mobile/__tests__/security.test.ts` asserts no secret-shaped `EXPO_PUBLIC_*` name, no device
-  capability, no cleartext, and a dependency allowlist.
+- Every commit and push passes `dotfiles/security/gate.sh`; gitleaks and the gate run in CI over full history.
 - `tests/test_ignore_rules.py` asserts the rules that keep personal data out of git and off Vercel.
+- `tests/test_permissions.py` holds the shape of the assistant's permission rule: exact pushes only, every
+  other outward action denied by name (#106).
+- The `/ask` keys exposed on 2026-10-06 were revoked the same day; the finding is closed.
 - Named individuals live only in the private repo checked out at `contacts/` (#26, #45, #46, #49).
 
-```
-$ gh run view 35264956906
-✓ Model and data integrity in 7s
-✓ gitleaks / gitleaks in 7s
-```
+### Kept for the record
+- The capacity model is withdrawn, not sized; the engine is kept for sizing from measured holdings (#73).
+- The Dutch-scaled figures, the sovereignty matrix, the heatmap, the scenario sandbox and the Chrome
+  briefing PDFs were withdrawn by #72 to #76.
+- The gate was red for a week in September 2026 because CI ran only the Python suite; since #92 and #97
+  CI runs every stage, so a red `./test.sh` cannot ship.
 
 ---
 
 ## In progress
 
-### The gate was red for a week — found 2026-09-20, fixed 2026-09-21
-
-Two Playwright assertions hardcoded totals the model no longer produced, so the full gate failed
-at the E2E stage while every other stage passed.
-
-| `web/e2e/app.spec.ts` | Expected | Model says |
-|---|---|---|
-| line 27 | `305.7 MW` | **306.4 MW** |
-| line 28 | `125,089` servers | **125,371** |
-| line 49, Germany | `60.4 MW` | **60.7 MW** |
-
-Fixed as prescribed: the three figures are read from `model/eu27_results.csv` and formatted with
-the app's own `mw()` and `num()`, so neither the figure nor its rendering can drift independently.
-The CSV parser throws on a malformed row rather than yielding `NaN`.
-
+### The institutional map — 25 of 324, unchanged since 2026-09-24
+`model/institutions.csv` holds 37 admitted rows after a validator screen in the private repo; the email-routed
+bodies sit there until each one's contact *page* is found (#68).
 ```
-$ ./test.sh; echo $?
-  15 passed (6.6s)
-✅ All checks passed
-0
-```
-
-**The reusable finding stands, and is not fixed.** CI reported green on every one of those commits
-because `.github/workflows/ci.yml` runs `python3 -m unittest discover -s tests` and gitleaks —
-no `npm run build`, no Vitest, no Playwright, no mobile suite. The web suite runs only when
-somebody runs `./test.sh` by hand. `mobile/` is worse: nothing copies `assets/data/eu27.json` from
-`web/public/data/`, and the parity test that would catch the drift runs in neither `./test.sh` nor
-CI. **Putting the web and mobile suites in CI is the open countermeasure** — this is the #55
-pattern again.
-
-Three smaller drifts surfaced in the same pass:
-
-- `ROADMAP.md:62` read "44 Python tests ... 15 Playwright" — fixed; it now says 97 Python, 15
-  Playwright, 66 Vitest and 19 Jest, which is what the suites actually report. Test counts in
-  prose drift every time a suite grows; they are worth stating only where a command backs them.
-- `tests/test_docs.py` `CITING` omitted `SOURCES.md` — decision references in that file were the
-  one set nothing validated. Added, along with this file and the six `artifacts/` style guides.
-- `./test.sh` does not run the `mobile/` suite; those 19 tests run only from `mobile/`.
-
-### The institutional map — 25 of 324
-`OUTREACH.md` carries the institutions to approach in each member state as prose. The machine-checkable
-register, `model/institutions.csv`, was filled on 2026-09-24 from the same research pass that built the
-private people inventory, through a screen in the private repo (`contacts/tools/check_institutions.py`):
-of 215 researched rows, 141 failed the validator (most because they route by email, which the public
-register no longer admits, #68), 25 were dropped for naming a person, 1 carried a value the commit
-gate blocks, 11 had a quote that could not be found on the body's page, and **37 were admitted**.
-`tests/test_institutions.py` ratchets the coverage. The email-routed bodies are not lost: their
-inboxes sit in the private repo, and each needs its contact *page* found to enter this register.
-
-```
-$ python3 model/institutions.py
+$ python3 model/institutions.py | tail -2
 25/324 (country, function) pairs filled (8%)
 37 rows, of which 9 are EU-level (tier 0).
 ```
 
-The twelve functions: policy, operator, certification, procurement, scrutiny, press, energy, cyber,
-dataprotection, telecom, planning, finance. Named officeholders live only in the private repo (#26, #66).
+### Named contacts — as of 2026-09-24, not re-run
+The private repo at `contacts/` held 956 seats, 910 people, 850 send-ready rows (#66). Nothing in it was
+opened for this update; the figures are the last ones run. Counts only here; no name crosses into this
+repository.
 
-### Named contacts
-The private repo at `contacts/` holds `people.csv`: 956 seats held by 910 people across the EU
-institutions and 26 member states (none yet for MT; CY, HU, HR, EL and SI have five rows or fewer).
-Each row records why the person matters, a quote proving the seat, and a work contact their own
-institution publishes (#66). Every row is fetched and checked: 929 contacts and 870 seat quotes are
-found on their cited pages, and **850 rows have both, which is what "send-ready" means**. 78
-addresses were removed because their cited page did not carry them. Counts only here; no name
-crosses into this repository.
+### Localisation
+Stage 1 of `docs/plans/localisation-plan.md`: apply the 42 `fix` cells, get a native reading per language, then
+write the decision entry. Not started.
+
+### The mobile reader
+`mobile/` is an Expo app on the withdrawn schema-1 bundle, never built or deployed, with four Dependabot
+alerts in its lockfile. Port it to the content model or drop it; the owner's call (`TODO.md`).
 
 ---
 
@@ -268,34 +264,32 @@ crosses into this repository.
 ```mermaid
 flowchart TD
     V["Every published claim sourced (#67) - enforced:<br/>0 unsourced facts shown"]
+    F["Cross-model fact check at deploy (#87) - enforced:<br/>1490 of 1490"]
     H["Human sampling audit<br/>measured error rate - NOT YET"]
-    V --> H
+    V --> F --> H
     H --> IDX[Stage 2: allow indexing]
-    H --> DOM["Stage 3: eu27.cloud"]
     H --> BOOK[Paper book]
     H --> OUT[Outreach sends]
     H --> REL[Public mobile release]
-    PROD["Production deploy of the current build<br/>(author's OK)"] -.-> H
+    R["Repository settings: ruleset,<br/>secret scanning, Dependabot - owner, NOT YET"] -.-> D["Pushes to main held<br/>to the fast checks"]
 ```
 
-The sourcing mechanism is built and enforced. What gates launch now is a human measuring how often the
-admitted claims are wrong.
+The machine checks are built and enforced. What gates launch now is a person measuring how often the
+admitted claims are wrong; what gates the pipeline's last hardening is three commands only the owner runs.
 
 ---
 
 ## Next
 
-1. **Publish:** production deploy and push, each on the author's OK. **`/ask` live:** the API key
-   (dedicated workspace with a spend limit), then the 12-question eval and the rate limit.
-2. **Raise confidence** (`ROADMAP.md` § raise confidence):
-   - a hosting research pass with #79 review;
-   - a decision on classified holdings;
-   - a rendering fetch for JavaScript pages;
-   - re-run AT, BE and EE;
-   - record counts and sizes.
-3. **The human sampling audit,** which gates launch.
-4. **Mobile to schema 2,** and the book's country parts from the content model.
-5. **Institutional map and people inventory:** unchanged since 2026-09-24; see the sections above.
+1. **Owner:** the three repository-settings commands (`docs/plans/ci-cd-hardening.md`); push `dotfiles`
+   `893d744`; read `TECHNICAL-UNIVERSITIES.md` and a language draft; reset the local `sovereign-appliance`
+   branch to `main`. All in `TODO.md` § Publish.
+2. **Print `eu27.cloud/<iso>`** on the country PDFs and posters: a `label` span, a changelog entry, `/factcheck`.
+3. **Raise confidence** (`ROADMAP.md` § raise confidence): a hosting research pass with #79 review; a decision on
+   classified holdings; a rendering fetch for JavaScript pages; re-run AT, BE and EE; record counts and sizes.
+4. **The human sampling audit,** which gates launch.
+5. **Localisation stage 1**, then its decision entry.
+6. **Mobile to schema 2,** and the book's country parts from the content model.
 
 ---
 
@@ -303,4 +297,5 @@ admitted claims are wrong.
 
 Update it in the same session as the work it describes. Every status line needs a command and its
 real output, not a statement — if a number here cannot be reproduced by running something, it does
-not belong. `tests/test_docs.py` checks that every `#N` decision reference in this file resolves.
+not belong; say the date it was run, and say when a figure was not re-run. `tests/test_docs.py` checks
+that every `#N` decision reference in this file resolves.

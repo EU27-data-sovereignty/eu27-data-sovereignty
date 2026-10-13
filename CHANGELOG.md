@@ -5,6 +5,17 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-13
+
+### Changed: `PROGRESS.md` says where every workstream stands today
+
+- **What changed.** The status page had said "as of 2026-09-30" through twelve days of work. It now reads as of
+  2026-10-13 at `fcf0b65`: every figure is the output of the command beside it, run that day (the registers, the
+  provenance, the fact check, the ranking, the gaps, the test suites, the deploy run, the live redirect, the four
+  note checkers), and the two figures not re-run (the named contacts, the mobile suite) say so. The at-a-glance table
+  gains the fact-check gate, the hosting overview, the deployment path, the repository settings still to apply, the
+  authored notes and the language drafts; "What gates what" adds the cross-model check and the owner's three commands.
+
 ## 2026-10-12
 
 ### Added: `TECHNICAL-UNIVERSITIES.md`, the technical universities of each member state, sourced or marked (#108)
