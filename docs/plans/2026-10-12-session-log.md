@@ -142,3 +142,26 @@ Everything found was applied before the next push to `main`.
   `/factcheck`).
 - Localisation stage 1: apply the 42 fixes, a native reading, then #109.
 - The mobile reader to schema 2 (`TODO.md`).
+
+## 9. Coverage check, 2026-10-13
+
+The owner asked whether everything is documented. Checked by grepping `README.md`, `ROADMAP.md`, `TODO.md`,
+`PROGRESS.md`, `docs/testing.md` and `CLAUDE.md` for each item of the session. Found and closed in the same commit:
+
+| Gap | Closed by |
+|---|---|
+| `README.md` listed the two earlier notes in its layout and gave each a section; not the universities note, nor the tracked permission rule | layout lines and a section for #108; a layout line for `.claude/settings.json` (#106) |
+| `ROADMAP.md` said nothing of the country paths, the push rule, the hardened deploy, the notes register or the language drafts | three Done bullets; a "Then — the site in each state's official languages" section ahead of the national-AI item |
+| `TODO.md` carried none of the session's open items | the three owner commands, the `dotfiles` push and the branch reset, the owner's reading, `eu27.cloud/<iso>` on PDFs and posters, localisation stage 1 |
+| the `#108` changelog entry did not say where the note is recorded | one bullet |
+
+Already in place before the check: `CLAUDE.md` (scope, commands, gotchas for #105 to #108, the drafts, the
+register), `DECISIONS.md` #105 to #108, the `CHANGELOG.md` entries, `docs/testing.md` (18 stages, stage 5 the
+register), `docs/i18n/README.md` (who passed what and who caught it), the four plan documents, the universities
+working log, and this index. `docs/plans/mobile-app.md` (2026-10-03) still answers the mobile question: a stale,
+local-only reader, no release.
+
+Known and left alone: `PROGRESS.md` says "status as of 2026-09-30" and has not been updated by any session since;
+it predates this one and is a separate piece of work (`PROGRESS.md` § Maintaining this file). `ROADMAP.md` § In
+progress still describes the first production deploy as waiting, which #81 and `TODO.md` § Publish have since
+closed; not rewritten here beyond the bullets above.

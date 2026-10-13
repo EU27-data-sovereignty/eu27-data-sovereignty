@@ -61,13 +61,23 @@ answers only from the sourced findings. A printed book is later.
 - **`/ask`.** A Vercel Function over the sourced corpus, with citations, nothing stored (#78).
 - **Design tokens.** `design/tokens.json` → web CSS, typst and mobile, contrast-checked (#74, #76).
 - **Posters.** 27 tracked summaries in `countries/<ISO>/`, re-rendered on every data change (#52).
+- **One address per state.** `eu27.cloud/de`, the code as a top-level path; `/country/<ISO>` redirects (#105).
+- **Authored notes**, never rendered, each with a checker and a link register: national AI strategies (#103), the
+  sovereign appliance (#104), the technical universities (#108).
 
 ### Tooling and process
 - **`./test.sh`.** Python, sourcing gate, API type-check against the real SDK, generated files current,
   lint, types, Vitest, build, Playwright plus axe.
 - **Decisions.** From #72 on, every entry states the decision, problem, alternatives with *Why not*,
   what it closes off, `Verified:` and *Would change if*; `tests/test_docs.py` enforces it.
-- **Deploys.** Built locally and uploaded prebuilt (#71); runbook in [`DEPLOYMENT.md`](DEPLOYMENT.md).
+- **Deploys.** Built locally and uploaded prebuilt (#71); runbook in [`DEPLOYMENT.md`](DEPLOYMENT.md). Since
+  #81 a push to `main` builds in Actions and deploys prebuilt; since #107 the deploy records the production target,
+  promotes the deployment that passed and rolls back by URL on a failed smoke test (never yet fired). The ruleset
+  for `main`, secret scanning and Dependabot security updates are repository settings the owner applies
+  (`docs/plans/ci-cd-hardening.md`); NOT YET applied.
+- **The assistant's push rule.** `.claude/settings.json`, tracked: exact pushes to `main` allowed, every other
+  outward action denied by name; the owner's OK in the conversation still precedes each push (#106).
+- **One gate stage for every note and draft set**, through `model/notes.py` (#108).
 
 ### Superseded, kept for the record
 The Dutch-scaled capacity model, the sovereignty matrix, the workloads heatmap, the scenario sandbox,
@@ -222,6 +232,13 @@ the project, point DNS, and let the apex redirect settle. The domain is delibera
 ### Then — capacity from holdings (#73)
 Size each state from its own measured holdings with the kept capacity engine, once enough classes have a
 sourced count or size. Each constant stays a declared `assumption:` claim.
+
+### Then — the site in each state's official languages
+27 language drafts of the app's 45 chrome strings exist (`docs/i18n/drafts/`), machine-translated by two agents on
+two models, each reviewing the other's every cell (1,398 `ok`, 42 `fix`); nothing renders them and no person has
+read them. The plan, `docs/plans/localisation-plan.md`, sets the URL scheme `/<iso>/<lang>`, the standards (BCP 47,
+Unicode NFC, ICU MessageFormat, `Intl`), the admission step and the tests. Stage 1 applies the 42 fixes and gets a
+native reading; the decision entry is written then, not before. Facts are never translated.
 
 ### Then — national AI as reviewed indicators (#103)
 `NATIONAL-AI-STRATEGIES.md` explores, per state, the route to a citizen-grade foundation model; its snapshots are

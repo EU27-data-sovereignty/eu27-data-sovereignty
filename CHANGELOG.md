@@ -22,6 +22,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
   `rtu.lv` refused), no renderer names it. Registered in `model/notes.py`. A second claude-opus-5-5 agent checked
   the C1 and C2 rows against their lists and six C3 rows against their pages, a same-model check; a claude-fable-5-1
   agent then confirmed every C1, C2 and C3 row against its page, zero discrepancies (#108). No person has read it.
+- **Where it is recorded.** A README layout line and section; the working log `docs/plans/technical-universities-log.md`;
+  `ROADMAP.md` lists the note among the authored notes, and `TODO.md` carries the owner's reading as open. The session's
+  every decision and change, with its deploy runs, is indexed in `docs/plans/2026-10-12-session-log.md`.
 
 ### Changed: one `test.sh` stage for every authored note and draft set, through a register (#108)
 

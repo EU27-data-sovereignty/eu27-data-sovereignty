@@ -173,6 +173,11 @@ content model (`model/document.py`), so they cannot disagree with each other (#7
 SOVEREIGN-APPLIANCE.md       authored note: a state-owned, state-keyed appliance for the tier 0/1 record,
                              racked in facilities that already exist on the national network; the host
                              contract and the one treaty precedent, cited or marked unverified (#104)
+TECHNICAL-UNIVERSITIES.md    authored note: per member state, the institutions on a named published list
+                             (CESAER, EuroTech) or cited from a fetched page; alphabetical, never ranked;
+                             no person has read it (#108)
+.claude/settings.json        the assistant's project permission rule: exact pushes to main allowed, every
+                             other outward action denied by name; the owner's OK still comes first (#106)
 
 ## Running
 
@@ -301,6 +306,21 @@ there only in a paragraph or list item that carries a URL with an access date or
 [`docs/sovereign-appliance-links.csv`](docs/sovereign-appliance-links.csv), with non-answering ones marked; and no
 file in `model/`, `book/`, `api/`, `web/src/` or `mobile/` naming the note. `./run.sh appliance check` prints the counts.
 It adds the value `colocated_appliance` to the planned hosting-model enum of `docs/hosting-operators.md` (#96).
+
+## Technical universities per member state
+
+[`TECHNICAL-UNIVERSITIES.md`](TECHNICAL-UNIVERSITIES.md) is an authored note (#108), written 2026-10-12, listing per
+member state the institutions on a named published list: CESAER members (from the Internet Archive capture of
+2026-04-13, because cesaer.org did not resolve that day), EuroTech Universities Alliance members, or the state's
+technical university cited from a fetched page; a state with none says so. "Top" is not used and the order within a
+state is alphabetical: the project does not rank (#10, #77), and a league table is an opinion whose method it cannot
+reproduce. 61 rows for 27 states.
+
+**What the gate checks** (`model/technical_universities_note.py`, through the register `model/notes.py`): the 27
+headings in order, the four columns, every row's basis one of the allowed shapes with a date, every URL in
+`docs/technical-universities-links.csv`, no ranking word, and that nothing renders it. A second agent on the same
+model and then a `claude-fable-5-1` agent checked every row against its page; no person has read it. The working log
+is `docs/plans/technical-universities-log.md`.
 
 ## What the evidence shows so far
 

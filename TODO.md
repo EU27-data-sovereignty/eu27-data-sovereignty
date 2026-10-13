@@ -67,6 +67,13 @@ Open
 - [x] Live `/ask` answers with citations (`ask_smoke.py --require`: 1122 characters, 3 citations, 2026-10-03);
       repository variable ASK_LIVE=true, so the daily check now fails if it stops
 - [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)
+- [ ] **Owner:** the three repository-settings commands in `docs/plans/ci-cd-hardening.md` (#107): A secret
+      scanning and push protection; B the ruleset for `main` from `.github/rulesets/main.json`; C Dependabot
+      alerts and security updates. Until B runs, a push to `main` is not held to the fast checks
+- [ ] **Owner:** push `dotfiles` commit `893d744` (policy §5, the per-project allow rule); reset the local
+      `sovereign-appliance` branch to `main` once the stichting files there are committed or stashed, then
+      `git worktree prune`
+- [ ] **Owner:** read `TECHNICAL-UNIVERSITIES.md` (#108) and a language draft or two; no person has read either
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
 - [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it
@@ -115,6 +122,10 @@ Open
 
 ## Outputs
 - [ ] Mobile reader to schema 2 (content model), with the two Dependabot alerts fixed on the way
+- [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`
+      span in the content model, a changelog entry, `/factcheck` before the push
+- [ ] Localisation stage 1 (`docs/plans/localisation-plan.md`): apply the 42 `fix` cells, a native reading per
+      language, then the decision entry the plan reserves
 - [ ] Print book: country parts rendered from the content model; write Parts I, II and V
 - [ ] PDF tables: a long compound word (e.g. "Identitätsdokumentenregister") runs into the next column;
       allow hyphenation or breaking in table cells
