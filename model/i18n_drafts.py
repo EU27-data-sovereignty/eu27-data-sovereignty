@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -21,6 +22,7 @@ DRAFTS = ROOT / "docs" / "i18n" / "drafts"
 README = ROOT / "docs" / "i18n" / "README.md"
 
 VERDICTS = {"ok", "fix"}
+BCP47 = re.compile(r"^[a-z]{2,3}-[A-Z]{2}$")   # language subtag (ISO 639-1) + region (ISO 3166-1)
 
 
 def _rows(table_lines: list[str]) -> list[list[str]]:
@@ -50,11 +52,20 @@ def spec() -> tuple[list[tuple[str, str]], dict[str, tuple[str, list[str]]]]:
     text = STRINGS.read_text(encoding="utf-8")
     keys = [(r[0], r[1]) for r in _rows(text.split("## Official languages")[0].splitlines())[1:]]
     states = {}
-    for r in _rows(text.split("## Official languages")[1].splitlines())[1:]:
+    for r in _rows(text.split("## Official languages")[1].split("## The standards")[0].splitlines())[1:]:
         iso, name, langs = r[0], r[1], r[2]
         codes = [c for c in (c.strip().split(" ")[0] for c in langs.split(",")) if re.fullmatch(r"[a-z]{2}", c)]
         states[iso] = (name, codes)
     return keys, states
+
+
+def tags() -> dict[str, dict[str, str]]:
+    """ISO -> {language subtag: BCP 47 tag}, from STRINGS.md's fourth column."""
+    text = STRINGS.read_text(encoding="utf-8")
+    out = {}
+    for r in _rows(text.split("## Official languages")[1].split("## The standards")[0].splitlines())[1:]:
+        out[r[0]] = {t.split("-")[0]: t for t in (x.strip() for x in r[3].split(",")) if t}
+    return out
 
 
 def _field(text: str, label: str) -> str:
@@ -69,6 +80,16 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
     if not path.exists():
         return [f"{iso}: no draft file"], info
     text = path.read_text(encoding="utf-8")
+    if unicodedata.normalize("NFC", text) != text:
+        problems.append(f"{iso}: file is not Unicode NFC")
+    want_tags = tags().get(iso, {})
+    declared = dict(re.findall(r"\b([a-z]{2}) [^;()]+\(([a-z]{2,3}-[A-Z]{2})\)", _field(text, "Languages")))
+    for lang in langs:
+        tag = declared.get(lang)
+        if not tag or not BCP47.match(tag):
+            problems.append(f"{iso}: {lang} has no BCP 47 tag on the Languages line")
+        elif tag != want_tags.get(lang):
+            problems.append(f"{iso}: {lang} tagged {tag}, STRINGS.md says {want_tags.get(lang)}")
     info["drafted"] = _field(text, "Drafted by")
     info["reviewed"] = _field(text, "Reviewed by")
     if not info["drafted"]:
@@ -98,6 +119,10 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
             info["cells"] += 1
             if not cell:
                 problems.append(f"{iso}: {key} {lang} is empty")
+            elif cell != cell.strip():
+                problems.append(f"{iso}: {key} {lang} has leading or trailing whitespace")
+            elif "\u2026" in src.get(key, "") and "\u2026" not in cell:
+                problems.append(f"{iso}: {key} {lang} drops the ellipsis (U+2026)")
             elif "EU-27" in src.get(key, "") and "EU-27" not in cell:
                 problems.append(f"{iso}: {key} {lang} drops 'EU-27'")
             elif key == "notice.disclaimer" and not 0.6 <= len(cell) / len(src[key]) <= 2.2:

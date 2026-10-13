@@ -62,35 +62,53 @@ The columns a draft carries. The code is the ISO 639-1 code; where English is of
 `en` column is the source and only the other language is drafted. Luxembourgish is not an official EU
 language but is a national language of Luxembourg; its column is marked as such.
 
-| ISO | State | Languages |
-|---|---|---|
-| AT | Austria | de |
-| BE | Belgium | nl, fr, de |
-| BG | Bulgaria | bg |
-| CY | Cyprus | el |
-| CZ | Czechia | cs |
-| DE | Germany | de |
-| DK | Denmark | da |
-| EE | Estonia | et |
-| EL | Greece | el |
-| ES | Spain | es |
-| FI | Finland | fi, sv |
-| FR | France | fr |
-| HR | Croatia | hr |
-| HU | Hungary | hu |
-| IE | Ireland | ga (en is the source) |
-| IT | Italy | it |
-| LT | Lithuania | lt |
-| LU | Luxembourg | fr, de, lb (national, not an EU language) |
-| LV | Latvia | lv |
-| MT | Malta | mt (en is the source) |
-| NL | Netherlands | nl |
-| PL | Poland | pl |
-| PT | Portugal | pt |
-| RO | Romania | ro |
-| SE | Sweden | sv |
-| SI | Slovenia | sl |
-| SK | Slovakia | sk |
+| ISO | State | Languages | BCP 47 tags |
+|---|---|---|---|
+| AT | Austria | de | de-AT |
+| BE | Belgium | nl, fr, de | nl-BE, fr-BE, de-BE |
+| BG | Bulgaria | bg | bg-BG |
+| CY | Cyprus | el | el-CY |
+| CZ | Czechia | cs | cs-CZ |
+| DE | Germany | de | de-DE |
+| DK | Denmark | da | da-DK |
+| EE | Estonia | et | et-EE |
+| EL | Greece | el | el-GR |
+| ES | Spain | es | es-ES |
+| FI | Finland | fi, sv | fi-FI, sv-FI |
+| FR | France | fr | fr-FR |
+| HR | Croatia | hr | hr-HR |
+| HU | Hungary | hu | hu-HU |
+| IE | Ireland | ga (en is the source) | ga-IE |
+| IT | Italy | it | it-IT |
+| LT | Lithuania | lt | lt-LT |
+| LU | Luxembourg | fr, de, lb (national, not an EU language) | fr-LU, de-LU, lb-LU |
+| LV | Latvia | lv | lv-LV |
+| MT | Malta | mt (en is the source) | mt-MT |
+| NL | Netherlands | nl | nl-NL |
+| PL | Poland | pl | pl-PL |
+| PT | Portugal | pt | pt-PT |
+| RO | Romania | ro | ro-RO |
+| SE | Sweden | sv | sv-SE |
+| SI | Slovenia | sl | sl-SI |
+| SK | Slovakia | sk | sk-SK |
+
+## The standards the drafts follow
+
+- **Language tags are BCP 47 (RFC 5646):** an ISO 639-1 language subtag and an ISO 3166-1 region subtag,
+  `de-AT`, `nl-BE`, `sv-FI`. The region is the ISO 3166-1 code, so Greece's tag is `el-GR` although the
+  project keys the state as `EL` (Eurostat's code). A draft file's `Languages:` line carries the tag of every
+  column, and a renderer puts it in `<html lang>`, in `hreflang` alternates with an `x-default`, and in
+  `Content-Language`.
+- **Column headers are the language subtag alone** (`de`, `nl`); the state's file gives the region. The
+  URL carries the subtag too (`/be/fr`), never the full tag.
+- **Text is UTF-8, Unicode NFC.** The checker fails a cell that is not NFC, so composed and decomposed
+  diacritics cannot mix, and a cell with leading or trailing whitespace.
+- **The source is the English the app prints** (`en-GB` spelling). "EU-27" and the ellipsis (U+2026) are
+  kept as they are.
+- **No string is built by concatenation and none carries a placeholder today.** A future string with a count
+  or a date is written as an ICU MessageFormat pattern with the plural forms of the target language, and
+  numbers and dates are formatted with `Intl` for the page's tag, never by hand.
+- **Direction is left to right** for every official EU language; no bidi handling is needed.
 
 States that share a language (AT and DE; BE and NL; BE, FR and LU; CY and EL; FI and SE; BE and LU for
 German) get their own file each: the draft for Austria may differ from the one for Germany in register

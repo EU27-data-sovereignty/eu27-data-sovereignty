@@ -12,8 +12,10 @@ How the files were made, 2026-10-12:
 2. Each agent then reviewed every cell of the other's files, never its own, and appended a `## Review`
    table with `ok` or `fix` per key and language, a note, and a suggested wording for every `fix`.
 3. `python3 model/i18n_drafts.py check` reads every file and fails on a missing key, a missing language,
-   an `en` cell that differs from the source, a dropped "EU-27", a disclaimer that is not a full
-   translation, a file without a review, or a review by its own drafter.
+   an `en` cell that differs from the source, a dropped "EU-27" or ellipsis, a disclaimer that is not a full
+   translation, a file without a review, a review by its own drafter, a language without its BCP 47 tag or
+   with a tag that differs from `STRINGS.md`, a file that is not Unicode NFC, or a cell with stray whitespace
+   (`STRINGS.md` § The standards the drafts follow).
 4. `python3 model/i18n_drafts.py summary` rewrites the table below from the files.
 
 No person who speaks these languages has read them yet. That reading is stage 1 of the plan, and until it

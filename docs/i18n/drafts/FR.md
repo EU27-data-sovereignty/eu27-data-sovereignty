@@ -1,6 +1,6 @@
 # France (FR): language draft
 
-- Languages: fr French
+- Languages: fr French (fr-FR)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

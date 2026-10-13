@@ -1,6 +1,6 @@
 # Sweden (SE): language draft
 
-- Languages: sv Swedish
+- Languages: sv Swedish (sv-SE)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

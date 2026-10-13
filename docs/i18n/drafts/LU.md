@@ -1,6 +1,6 @@
 # Luxembourg (LU): language draft
 
-- Languages: fr French; de German; lb Luxembourgish
+- Languages: fr French (fr-LU); de German (de-LU); lb Luxembourgish (lb-LU)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

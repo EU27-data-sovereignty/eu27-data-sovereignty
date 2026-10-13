@@ -1,6 +1,6 @@
 # Portugal (PT): language draft
 
-- Languages: pt Portuguese
+- Languages: pt Portuguese (pt-PT)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

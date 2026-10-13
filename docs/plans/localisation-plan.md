@@ -37,6 +37,17 @@ which gains a language argument.
 Why not `Accept-Language`: it hides the choice in the browser, it makes two readers of the same link see
 different pages, and the smoke test and the fact-check audit could not name what a URL shows.
 
+## 3a. The standards
+
+Language tags are BCP 47 (RFC 5646): ISO 639-1 language subtag, ISO 3166-1 region subtag (`de-AT`, `el-GR`).
+The URL carries the language subtag (`/be/fr`); the page carries the full tag in `<html lang>`, in `hreflang`
+alternates with an `x-default` pointing at the English page, and in `Content-Language`. Text is UTF-8 in
+Unicode NFC. Strings are looked up by key, never concatenated; a future string with a count or a date is an
+ICU MessageFormat pattern with the target language's plural forms, and numbers and dates go through `Intl`
+for the page's tag. Every official EU language is left to right. The full list is in `STRINGS.md` § The
+standards the drafts follow, and `model/i18n_drafts.py check` enforces the tag, the normalisation, the
+whitespace and the ellipsis on every file.
+
 ## 4. What is translated, and what is not
 
 Translated: the 45 strings in `docs/i18n/STRINGS.md`. They are chrome, they carry no fact, and they are

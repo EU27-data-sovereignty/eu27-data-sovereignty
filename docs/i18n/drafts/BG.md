@@ -1,6 +1,6 @@
 # Bulgaria (BG): language draft
 
-- Languages: bg Bulgarian
+- Languages: bg Bulgarian (bg-BG)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

@@ -1,6 +1,6 @@
 # Romania (RO): language draft
 
-- Languages: ro Romanian
+- Languages: ro Romanian (ro-RO)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

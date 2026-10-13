@@ -1,6 +1,6 @@
 # Latvia (LV): language draft
 
-- Languages: lv Latvian
+- Languages: lv Latvian (lv-LV)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

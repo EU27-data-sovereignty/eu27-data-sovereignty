@@ -1,6 +1,6 @@
 # Poland (PL): language draft
 
-- Languages: pl Polish
+- Languages: pl Polish (pl-PL)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

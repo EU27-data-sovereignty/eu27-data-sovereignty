@@ -7,6 +7,15 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-12
 
+### Changed: the language drafts follow the i18n standards, and the checker enforces them (#105)
+
+- **What changed.** `docs/i18n/STRINGS.md` gives every language its BCP 47 tag (ISO 639-1 subtag, ISO 3166-1
+  region: `de-AT`, `el-GR`) and states the standards the drafts follow: tags in `<html lang>`, `hreflang` with an
+  `x-default` and `Content-Language` when rendered; UTF-8 in Unicode NFC; lookup by key, no concatenation; ICU
+  MessageFormat for any future string with a count; `Intl` for numbers and dates. Every draft's `Languages:` line
+  carries its tags. `python3 model/i18n_drafts.py check`, the `test.sh` stage, now also fails on a missing or wrong
+  tag, a file that is not NFC, stray whitespace, or a dropped ellipsis.
+
 ### Added: 27 language drafts, cross-reviewed by two agents on two models, and the plan to serve them (#105)
 
 - **What it is.** `docs/i18n/STRINGS.md` lists the 45 chrome strings the app prints around the facts and the official

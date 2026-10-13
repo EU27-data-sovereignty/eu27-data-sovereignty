@@ -1,6 +1,6 @@
 # Croatia (HR): language draft
 
-- Languages: hr Croatian
+- Languages: hr Croatian (hr-HR)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 

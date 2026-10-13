@@ -1,6 +1,6 @@
 # Belgium (BE): language draft
 
-- Languages: nl Dutch; fr French; de German
+- Languages: nl Dutch (nl-BE); fr French (fr-BE); de German (de-BE)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
