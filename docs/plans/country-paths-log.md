@@ -90,3 +90,5 @@ New denies, so the boundary is written down rather than implied: `git push origi
 - Next content todo: print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address
   today. It is a content-model change, so a `label` span, a changelog entry and a `/factcheck` run.
 - Still later: the mobile reader to schema 2 (`TODO.md`).
+- What followed the same day (the language drafts, the pipeline hardening, the universities note, four more
+  pushes to `main`) is indexed in [`2026-10-12-session-log.md`](2026-10-12-session-log.md).
