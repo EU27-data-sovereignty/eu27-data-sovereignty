@@ -80,7 +80,7 @@ points".
 | File | Change |
 |---|---|
 | `INTERNET-ENTRY-POINTS.md` | the note: 27 states, 626 rows (319 E1, 299 E2, 1 E3, 7 none), 27 Counts lines |
-| `model/internet_entry_points_note.py` | the checker: `check`, `counts`, `links` |
+| `model/internet_entry_points_note.py` | the checker: `check`, `counts`, `links`, `retry` |
 | `docs/internet-entry-points-links.csv` | the link register |
 | `tests/test_internet_entry_points.py` | the note's contract and the checker's refusals on a synthetic note |
 | `model/notes.py`, `tests/test_docs.py`, `run.sh` | registration, the citing list, `./run.sh entry-points` |
@@ -124,10 +124,10 @@ points".
 | `links` then `retry` | 855 URLs, 808 answered on 2026-10-14; the first pass left 162 PeeringDB pages at 429, the sequential passes left none; the 47 non-answers are E2 website cells |
 | `python3 model/notes.py check` | five checkers, all ok |
 | `python3 -m unittest tests.test_internet_entry_points tests.test_notes` | 35 tests, OK |
-| `tests/test_docs.py` | fails on contiguity while #109 to #113 are uncommitted in the main checkout; passes once this branch sits on top of them |
+| `python3 -m unittest tests.test_docs` | OK with the entry at #109 on `origin/main`; it fails on contiguity if the mobile reader (#109 to #113) merges first, until this entry is renumbered #114 |
 | Same-model review | fifteen findings, applied; E1 rows 319 of 319 against the live index |
 | Cross-model check | 646 fetches, 319 + 299 + 1 rows confirmed, 27 Counts lines, zero discrepancies |
-| `./test.sh` | recorded in the commit message of the merge |
+| `./test.sh --no-e2e --no-pdf --no-live` | exit 0, 16 stages pass; Playwright, the PDFs and the live `/ask` check not run |
 
 ### Still unverified
 
