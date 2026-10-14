@@ -5,6 +5,21 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-14
+
+### Changed: `docs/ci-cd.md` describes the pipeline after #107; the vetting of 2026-10-14 is recorded
+
+- **What changed.** `docs/ci-cd.md` (last revised at #98) now has the branch-push trigger, the pinned runner, the
+  deploy job's record, promote and rollback steps, a "Changes on 2026-10-12 (#107)" table with what the run history
+  has verified since (the promote step, the first weekly `sources` run, the pull-request fact-check step) and what it
+  has not (the rollback, never fired; the ruleset, secret scanning and Dependabot settings, still the owner's to
+  apply), and known limits that say so. `docs/plans/ci-cd-status-2026-10-14.md` is the point-in-time vetting:
+  every repository setting, run, live route and workflow file checked read-only, each with its command and output.
+- **Found.** None of the three settings commands of #107 applied; the weekly recheck of 2026-10-12 failed on 27
+  sources (18 on one host); 27 of 138 commits on `main` with a personal author address; six documents lagging the
+  workflow files, listed in the report. `TODO.md` ticks the dotfiles push and the weekly source check, and adds the
+  recheck and the branch hand-over.
+
 ## 2026-10-12
 
 ### Added: `TECHNICAL-UNIVERSITIES.md`, the technical universities of each member state, sourced or marked (#108)

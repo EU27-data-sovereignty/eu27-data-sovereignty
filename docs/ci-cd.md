@@ -2,19 +2,26 @@
 
 What runs on GitHub Actions, on which event, and what a failure means. The checks themselves are listed stage by
 stage in [`testing.md`](testing.md), and the pipeline's timings in [`process.md`](process.md). The reasoning is in
-[`DECISIONS.md`](../DECISIONS.md), cited by number. Last revised 2026-10-07 (#98).
+[`DECISIONS.md`](../DECISIONS.md), cited by number. Last revised 2026-10-14 (#107); the vetting of that day, with
+every check and its output, is [`plans/ci-cd-status-2026-10-14.md`](plans/ci-cd-status-2026-10-14.md).
 
 ## By event
 
 | Event | Workflow | What runs | Blocks |
 |---|---|---|---|
-| Pull request | `ci.yml` → `gate.yml` (`pdf: false`) | The gate's model, web and e2e jobs; the fact check, reported only | The merge, by convention (`main` has no branch protection) |
+| Push to any branch but `main` | `ci.yml` → `gate.yml` (`pdf: false`) | The gate's model, web and e2e jobs; the fact check, reported only. One run per branch: a newer push cancels the run the older one started (#107) | The later push to `main`, once the ruleset is applied (NOT YET on 2026-10-14): `main` accepts only a commit whose model, web and security checks have passed |
+| Pull request | `ci.yml` → `gate.yml` (`pdf: false`) | The same | The same; no reviewer is required (#107) |
 | Push or pull request | `security.yml` → dotfiles `security-reusable.yml` | gitleaks over the full history with the shared ruleset, then the security gate over what the push brings | Nothing directly; a red run is a finding to fix |
-| Push to `main` | `deploy.yml` → `gate.yml` (`pdf: true`, `factcheck: true`) | The full gate including 28 PDFs and the fact-check gate, then the deploy | The production deploy |
+| Push to `main` | `deploy.yml` → `gate.yml` (`pdf: true`, `factcheck: true`) | The full gate including 28 PDFs and the fact-check gate; then the deploy job: the gate's own build packaged and checked byte for byte, the current production deployment recorded, the prebuilt upload, the smoke test, one live `/ask` call, promotion if needed, and a rollback to the recorded deployment if the smoke test or the `/ask` call fails (#107) | The production deploy |
 | Mondays 06:17 UTC | `monitor.yml` (`live`, `sources`) | The live site smoke test, Eurostat vintages, every cited source re-fetched | Nothing; a red run is a finding |
 | Daily 07:41 UTC | `monitor.yml` (`ask`) | One fixed question to the live `/ask` | Nothing |
 
+The cron times are requests: GitHub has started these runs six to nine hours late on every day observed
+(2026-10-03 to 2026-10-13), so a Monday recheck can finish on Monday evening.
+
 Every workflow declares `permissions: contents: read`. None can write to the repository, open an issue or comment.
+Every job runs on `ubuntu-24.04`, never `-latest`, so the browser and system libraries under the gate change only
+with a commit (#107).
 
 ## The gate (`gate.yml`)
 
@@ -33,7 +40,10 @@ locally.
 | `e2e` | `./test.sh --only e2e --project <name>` | Playwright, one job per browser project |
 
 The deploy job ships the gate's own `web-dist` and `pdfs` artifacts. It fails unless the packaged tree's
-sha256 equals the tested build's (#97).
+sha256 equals the tested build's (#97). After the upload it runs `model/smoke.py` against the domain and
+`./test.sh --only live` (one real `/ask` call), promotes the deployment if Vercel has not (after a rollback Vercel
+pauses automatic promotion), and on a failed smoke test or `/ask` call rolls back to the production deployment it
+recorded before the upload (#107). The run stays red either way.
 
 ## Data integrity checks
 
@@ -100,10 +110,35 @@ Enforced by `tests/test_workflows.py` unless noted.
 **Not yet verified in CI:** the first pull request showing the fact-check step, and the first `sources` run, with
 its duration against the 120-minute timeout and its artifact.
 
+## Changes on 2026-10-12 (#107)
+
+| Gap found | Change | Covered now by |
+|---|---|---|
+| A deploy that failed its smoke test stayed in front of readers | The deploy job records the project's production deployment before the upload and, if the smoke test or the live `/ask` call fails afterwards, runs `vercel rollback <that url>`. The first version called `vercel rollback` with no argument, which only prints a status; the Opus 5.5 review of the same day caught it | `deploy.yml`, last two steps; `tests/test_workflows.py` holds the step's condition and argument |
+| After a rollback Vercel stops promoting, so the next green deploy would not take the domain | A promote step after the live check makes the deployment that passed the current one when it is not | `deploy.yml`, promote step |
+| `main` could be force-pushed or deleted, and a commit could reach it untested | A ruleset for `main` (`.github/rulesets/main.json`): no deletion, no non-fast-forward, four required checks (model, web, security gate, gitleaks). `ci.yml` now runs the gate on every branch push, so the checks exist before the push to `main` | the file and `ci.yml` are in the tree; the ruleset is applied by the owner with one `gh api` call, NOT YET on 2026-10-14 |
+| `ubuntu-latest` could change the browser under the gate between two pushes | Every job pinned to `ubuntu-24.04` | `tests/test_workflows.py` |
+| Nothing watched the exact pins for published vulnerabilities | `.github/dependabot.yml`: security updates only, version updates off for every ecosystem | the file is in the tree; Dependabot security updates are switched on by the owner, NOT YET on 2026-10-14 |
+
+**Verified in CI since**, from the run history (`plans/ci-cd-status-2026-10-14.md`):
+- The promote step first ran in Deploy run 38344010621 (2026-10-13 04:00 UTC) and on every deploy since.
+- The first `sources` run (#98) was Monday 2026-10-12, run 38269792964: 72 minutes of the 120 allowed, the `recheck`
+  artifact kept; it failed on 27 sources newly disputing their facts, 18 of them one host, which is the job doing
+  what it is for. The committed `recheck.csv` is unchanged until the owner re-runs `./run.sh recheck`.
+- The fact-check status step ran on the pull request of 2026-10-08 (CI run 37836074455), reported, not enforced.
+- Branch pushes run the gate (CI runs on 2026-10-13, all green; three cancelled by the concurrency rule).
+
+**Not yet:** the rollback step has never fired, because no deploy has failed after its upload; the ruleset, secret
+scanning with push protection, and Dependabot security updates are repository settings the owner applies
+(`plans/ci-cd-hardening.md`, commands A to C); the `security / gate` and `security / gitleaks` contexts in the
+ruleset depend on the job ids of the dotfiles reusable workflow at `@main`.
+
 ## Known limits
 
-- `main` has no branch protection, so a red pull-request gate is advisory. The deploy's gate is what stops a bad
-  push from reaching production.
+- Until the owner applies the ruleset (command B), a red branch or pull-request gate is advisory. The deploy's
+  gate is what stops a bad push from reaching production; a force push or a deletion of `main` is not refused.
+- Scheduled runs start hours after their cron time (above).
+- The rollback is held by tests, not by a real failure.
 - The weekly recheck runs from GitHub's addresses. If many hosts refuse them, it checks fewer sources than a
   local run would. The local `./run.sh recheck` stays the authoritative record.
 - Mutation testing and the fact-check stability sample run by hand before a release ([`testing.md`](testing.md)).

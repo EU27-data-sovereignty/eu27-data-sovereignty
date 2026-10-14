@@ -69,17 +69,24 @@ Open
 - [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)
 - [ ] **Owner:** the three repository-settings commands in `docs/plans/ci-cd-hardening.md` (#107): A secret
       scanning and push protection; B the ruleset for `main` from `.github/rulesets/main.json`; C Dependabot
-      alerts and security updates. Until B runs, a push to `main` is not held to the fast checks
-- [ ] **Owner:** push `dotfiles` commit `893d744` (policy §5, the per-project allow rule); reset the local
-      `sovereign-appliance` branch to `main` once the stichting files there are committed or stashed, then
-      `git worktree prune`
+      alerts and security updates. Until B runs, a push to `main` is not held to the fast checks. Checked
+      2026-10-14 (`docs/plans/ci-cd-status-2026-10-14.md`): none of the three applied yet
+- [ ] **Owner:** the weekly recheck of Monday 2026-10-12 (Monitor run 38269792964) found 27 sources newly disputing
+      their facts, 18 of them `finlex.fi` pages served with HTTP 200 and the quote not found. `./run.sh recheck`
+      (`./run.sh retry` if the host now needs the rendered route), `./run.sh data`, review, commit
+- [x] Push `dotfiles` commit `893d744` (policy §5, the per-project allow rule): on its `origin/main`, checked 2026-10-14
+- [ ] **Owner:** the stichting files from `sovereign-appliance` are committed on `plans/stichting-refresh` (`1e1c713`,
+      `dff7967`, 2026-10-14; the stash that carried them is kept as `stash@{0}`). Push that branch and
+      `ci/status-2026-10-14`, then each to `main`; then `git branch -D sovereign-appliance`, `git worktree prune`,
+      `git stash drop`
 - [ ] **Owner:** read `TECHNICAL-UNIVERSITIES.md` (#108) and a language draft or two; no person has read either
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
 - [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it
 - [x] Testing items (b89f03c, 1e52404): live `/ask` check, mutation testing, `hypothesis`, fact-check
       stability sampling, visual baselines, Firefox/WebKit, iPhone
-- [ ] Weekly source link check (`monitor.yml` checks the live site and Eurostat vintages, not cited sources)
+- [x] Weekly source link check: the `sources` job of `monitor.yml` re-fetches every cited source on Mondays (#98);
+      first run 2026-10-12
 - [ ] Two of the withheld facts, from the pilot:
   - [ ] `record:DE:civil_registry:operator`: the printed text says "national personal identification
         number … for every natural person"; §139b AO only says the BZSt stores these data on natural
