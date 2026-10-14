@@ -149,7 +149,8 @@ countries/
   NL/                        also: REFERENCE-CASE.md (the original hand-written Dutch plan, now a note, not
                              an input), the xlsx the engine reproduces, FRONTIER-MODEL.md, TODO, plan
 web/                         React + Vite visualization app; reads the JSON bundle, no server
-mobile/                      Expo reader for the same bundle; local only, never built or deployed
+mobile/                      Expo reader of the split edition: offline-first, the 28 parts inside the app, a newer
+                             edition from a public EU-region Supabase bucket the deploy writes (#109–#113); no release yet
 tests/                       stdlib unittest suite for the model and the data
 ROADMAP.md                   what is done, in progress and next, and what gates what
 METHOD.md                    how a claim is researched, checked, reviewed and shown: the evidence pipeline
@@ -186,7 +187,7 @@ TECHNICAL-UNIVERSITIES.md    authored note: per member state, the institutions o
 ./run.sh                                    # dev server on http://localhost:5173
 ./run.sh data                               # regenerate country files, briefs and the JSON bundle
 ./run.sh help                               # every command
-./test.sh                                   # the full gate: model, types, lint, unit, build, e2e, a11y
+./test.sh                                   # the full gate: model, types, lint, unit, build, mobile, e2e, a11y
 ./run.sh artefacts                          # re-render the tracked posters
 ./run.sh sources                            # verification-ledger coverage
 ./run.sh registers                          # critical national data register coverage
@@ -347,6 +348,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file; the methodology and fact-check appendices in every asset, marked in a method teal | #87–#88 |
 | 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
 | 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #103 |
+| 2026-10-14 | The mobile reader rebuilt on the content model: the split edition shipped in the app, Supabase Storage (EU region) as the update channel written only by the deploy, a `mobile` group in the gate | #109–#113 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

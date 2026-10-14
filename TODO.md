@@ -12,7 +12,8 @@ produced: [`METHOD.md`](METHOD.md).
 - [x] Fast-forwarded `main` to `feat/fact-check` and pushed (2026-10-02); `Deploy` run 37072208296 green;
       live at https://eu27.cloud (noindex); recorded in `DEPLOYMENT.md`
 - [ ] Dependabot: 4 open (2 high, 2 moderate), all in `mobile/package-lock.json` (2026-10-05); `web/` is
-      clean. Cleared by porting or dropping the mobile reader (below)
+      clean. The rebuilt lockfile (#109) carries the same four Expo-toolchain transitives, allowlisted with reasons
+      in `mobile/audit-allowlist.json`; **owner:** dismiss them in the Security tab with those reasons
 - [x] `security` workflow green on every push since 2026-10-03 (calls the shared workflow, `71d84ba`)
 - [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
       (author), then the 12-question eval (with approval), then the Vercel Firewall rate limit
@@ -66,7 +67,12 @@ Open
       2026-11-02, 09:00 ET, with these steps
 - [x] Live `/ask` answers with citations (`ask_smoke.py --require`: 1122 characters, 3 citations, 2026-10-03);
       repository variable ASK_LIVE=true, so the daily check now fails if it stops
-- [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)
+- [x] Owner: port the mobile reader to schema 2, or drop it: rebuilt on the content model (#109, 2026-10-14)
+- [ ] **Owner:** the edition channel (#111, #112): create the Supabase project in an EU-27 region, apply
+      `mobile/supabase/migrations/` (`cd mobile && supabase link --project-ref <ref> && supabase db push`),
+      `gh variable set SUPABASE_URL --body https://<ref>.supabase.co`, and
+      `pbpaste | gh secret set SUPABASE_SERVICE_ROLE_KEY --env production`; until then the deploy's `edition` job is
+      skipped. Then confirm the app identifiers `cloud.eu27.reader`, and read the app on a device
 - [ ] **Owner:** the three repository-settings commands in `docs/plans/ci-cd-hardening.md` (#107): A secret
       scanning and push protection; B the ruleset for `main` from `.github/rulesets/main.json`; C Dependabot
       alerts and security updates. Until B runs, a push to `main` is not held to the fast checks. Checked
@@ -82,7 +88,8 @@ Open
 - [ ] **Owner:** read `TECHNICAL-UNIVERSITIES.md` (#108) and a language draft or two; no person has read either
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
-- [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it
+- [ ] Dependabot in `mobile/`: `node-forge` (no fix), `braces` (no fix), `decode-uri-component`, `uuid`: allowlisted with
+      reasons (#113); owner to dismiss with those reasons
 - [x] Testing items (b89f03c, 1e52404): live `/ask` check, mutation testing, `hypothesis`, fact-check
       stability sampling, visual baselines, Firefox/WebKit, iPhone
 - [x] Weekly source link check: the `sources` job of `monitor.yml` re-fetches every cited source on Mondays (#98);
@@ -128,7 +135,9 @@ Open
 - [ ] Human sampling audit with a measured error rate: the launch gate (#25, #67)
 
 ## Outputs
-- [ ] Mobile reader to schema 2 (content model), with the two Dependabot alerts fixed on the way
+- [x] Mobile reader to schema 2 (content model): rebuilt, #109–#113 (2026-10-14)
+- [ ] Mobile reader: a signed manifest (ed25519) so the channel proves authorship, not only integrity (#111)
+- [ ] Mobile reader: add `Gate / Mobile reader (./test.sh --only mobile)` to `main`'s ruleset after two weeks of timings (#113)
 - [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`
       span in the content model, a changelog entry, `/factcheck` before the push
 - [ ] Localisation stage 1 (`docs/plans/localisation-plan.md`): apply the 42 `fix` cells, a native reading per

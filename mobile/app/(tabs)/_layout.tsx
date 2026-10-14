@@ -1,12 +1,21 @@
-/** Two tabs: the 27 countries, and how the numbers were produced. */
+/** Five tabs: the 27 countries, the infrastructure overview, the ranking, the method, and the edition. */
 import { Tabs } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import { Text, type ColorValue } from 'react-native';
 
-import { themeFor } from '@/constants/Colors';
+import { useTheme } from '@/components/theme';
+
+function glyph(g: string) {
+  return function TabGlyph({ color }: { color: ColorValue }) {
+    return (
+      <Text style={{ color, fontSize: 18 }} accessibilityElementsHidden>
+        {g}
+      </Text>
+    );
+  };
+}
 
 export default function TabsLayout() {
-  const theme = themeFor(useColorScheme());
-
+  const theme = useTheme();
   return (
     <Tabs
       screenOptions={{
@@ -19,8 +28,11 @@ export default function TabsLayout() {
         sceneStyle: { backgroundColor: theme.bgPage },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Countries' }} />
-      <Tabs.Screen name="methodology" options={{ title: 'Methodology' }} />
+      <Tabs.Screen name="index" options={{ title: 'Countries', tabBarIcon: glyph('▦') }} />
+      <Tabs.Screen name="infrastructure" options={{ title: 'Hosting', tabBarIcon: glyph('▤') }} />
+      <Tabs.Screen name="sovereignty" options={{ title: 'Ranking', tabBarIcon: glyph('▥') }} />
+      <Tabs.Screen name="method" options={{ title: 'Method', tabBarIcon: glyph('◈') }} />
+      <Tabs.Screen name="about" options={{ title: 'Edition', tabBarIcon: glyph('◉') }} />
     </Tabs>
   );
 }

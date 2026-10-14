@@ -1,6 +1,8 @@
 /**
- * Formatting helpers. Copied verbatim from `web/src/utils/format.ts` so a figure reads the
- * same on the phone as on the site; `__tests__/parity.test.ts` fails if the two drift.
+ * Copy of `web/src/utils/format.ts`: number formatting and the flag glyph, shared presentation logic (#61, #62).
+ *
+ * Pinned byte for byte below this comment by `__tests__/parity.test.ts`, so the app and the site cannot
+ * disagree. Edit the web file, then copy it here in the same commit; never edit this copy.
  */
 
 const nf = new Intl.NumberFormat('en-GB')

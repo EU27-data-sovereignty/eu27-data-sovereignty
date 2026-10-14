@@ -60,6 +60,8 @@ answers only from the sourced findings. A printed book is later.
 - **Ranking.** `model/sovereignty.py`, five groups, confidence as the range of groups still reachable (#77).
 - **`/ask`.** A Vercel Function over the sourced corpus, with citations, nothing stored (#78).
 - **Design tokens.** `design/tokens.json` → web CSS, typst and mobile, contrast-checked (#74, #76).
+- **The mobile reader.** The content model on a phone, offline, from a hash-pinned split edition; Supabase Storage
+  (EU region) as the edition channel, written only by the deploy (#109–#113).
 - **Posters.** 27 tracked summaries in `countries/<ISO>/`, re-rendered on every data change (#52).
 - **One address per state.** `eu27.cloud/de`, the code as a top-level path; `/country/<ISO>` redirects (#105).
 - **Authored notes**, never rendered, each with a checker and a link register: national AI strategies (#103), the
@@ -287,26 +289,24 @@ wanting a second topology in the model at all, which is a product decision.
 generated country parts were withdrawn with the Dutch-scaled figures. When the book returns, they are
 rendered from the content model like the report. Mono interior (#28).
 
-### Later — a mobile reader
-`mobile/` is an Expo app that reads the 27 country cases on a phone: one app with the country as
-data, not 27 builds. It renders `assets/data/eu27.json` — a copy of the same bundle the site reads,
-checked against it by `mobile/__tests__/parity.test.ts` — so the app and the site cannot disagree
-about a figure, and the app needs no network at all.
-
-**It is local-only, and still on the schema-1 bundle** (the Dutch-scaled figures). No EAS build, no
-store listing, no deploy. Before any release it must move to schema 2: render the content model, like
-the web country page. Its two open Dependabot alerts (medium, `uuid` and `decode-uri-component`) go with
-that upgrade.
+### Later — a mobile release
+`mobile/` is an Expo app that reads the 27 country reports on a phone: one app with the country as data, not
+27 builds (#109). It renders the content model from the split edition inside its binary, the 28 parts
+`model/export_json.py --split` writes from the same bundle the site reads (#110), so the app and the site cannot
+disagree about a value, and the app needs no network at all. It learns of a newer edition from one public,
+read-only Supabase Storage bucket in an EU region that only the deploy writes (#111, #112), verifying every file
+against its published hash first. Its suite is the `mobile` group of `./test.sh` and a parallel CI job (#113).
 
 What is deliberately not built yet:
 
-- **Supabase as a read-only mirror of the bundle.** `mobile/src/services/supabase.ts` is wired and
-  idle — unconfigured returns `null`, and unconfigured is the default. The one thing a mirror would
-  buy is shipping a data correction without a store release, which only matters once there is a
-  release. Schema, sync path and RLS are a design job, not a decision taken here.
 - **A public release**, which sits behind the same gate as indexing and `eu27.cloud`: the legal and
-  regulatory entries are not yet verified (#25). The app carries the same placeholder disclaimer the
-  site does.
+  regulatory entries are not yet verified (#25). No EAS, no store accounts, no build.
+- **The hosted bucket.** The channel is built and proven against a local stack; the owner creates the EU-region
+  project and sets its variable and secret (`DEPLOYMENT.md` § The edition channel). Until then the app ships
+  its bundled edition and the deploy's `edition` job is skipped.
+- **A signed manifest.** The hash chain proves integrity, not authorship (#111).
+- **Languages.** `docs/plans/localisation-plan.md`.
+- **In-app submissions.** The GitHub forms stay the path (#85).
 
 ### Later — outreach
 The inventory exists (2026-09-24, #66): 956 seats held by 910 people across the EU institutions and 26

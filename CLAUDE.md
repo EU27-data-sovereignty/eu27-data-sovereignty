@@ -40,9 +40,10 @@ are recorded: `tests/test_docs.py` enforces it.
 ./test.sh --no-e2e                     # without Playwright
 ./test.sh --no-pdf                     # without compiling the PDFs (otherwise missing typst fails)
 ./test.sh --no-live                    # without the live /ask check (one real API call to eu27.cloud)
-./test.sh --only model|pdf|web|e2e|live [--project NAME]   # one stage group; CI runs them as parallel jobs (#97)
+./test.sh --no-mobile                  # without the mobile reader's suite (no mobile/node_modules)
+./test.sh --only model|pdf|web|mobile|e2e|live [--project NAME]   # one stage group; CI runs them as parallel jobs (#97, #113)
 ./run.sh                               # dev server, http://localhost:5173
-./run.sh data                          # regenerate briefs, bundle and /ask corpus (pins the epoch)
+./run.sh data                          # regenerate briefs, bundle, the split edition (mobile/assets/data, #110) and /ask corpus (pins the epoch)
 ./run.sh artefacts                     # re-render the 27 tracked posters (needs Chrome)
 ./run.sh export                        # EU-27 report + 27 country PDFs into book/build/
 git push origin main                   # PRODUCTION deploy via .github/workflows/deploy.yml; allowed by .claude/settings.json (#106), still only after the owner's OK in the conversation
@@ -73,6 +74,12 @@ python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete 
 python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
 python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
+
+cd mobile && ./init.sh                 # the reader: npm ci, the 28 parts, an .env.local you may leave empty (#109)
+cd mobile && ./test.sh [--quick|--integration|--offline|--ci]   # its full suite; --integration needs colima start && supabase start
+cd mobile && ./run.sh web|ios|android  # the app; unconfigured, it reads its bundled edition and makes no request
+python3 model/export_json.py --split --from web/public/data/eu27.json   # the 28 parts + manifest from the committed bundle
+python3 model/edition.py check|publish|verify   # the edition channel: the tree, the deploy's publisher, the bucket read back (#112)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
 vercel curl <path> --deployment <preview-url> -- -sS            # previews need auth; plain curl gets 302
@@ -163,8 +170,12 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   still reads `row[1]` and `row[2]`, so keep the holding and register in those positions.
 - **Withheld labels still feed counts.** `exposure_section` and `sovereignty.py` read the raw
   `foreign_dependency`, including labels the report withholds (TODO.md). Don't build new counts that way.
-- **The mobile reader is stale** (schema-1 bundle). Don't copy the new bundle into it without the
-  schema-2 port.
+- **The mobile reader renders the split edition** (#109, #110). The 28 parts under `mobile/assets/data/` are generated
+  from the committed bundle and gitignored; only `manifest.json` is tracked, and it must equal
+  `web/public/data/manifest.json` (`./run.sh data` writes both). `mobile/src/data/{types,format,sources}.ts` are
+  byte-for-byte copies of the web's files: edit the web file, copy it, same commit. Only the deploy's `edition` job
+  writes the Supabase bucket, with a key that is never on a command line (#112); the app has no write path (#111).
+  No store release, no EAS: the launch gate holds for the app too.
 - **`NATIONAL-AI-STRATEGIES.md` is authored, not generated** (#103). It is never read by the model, the book, the web
   app or `/ask`; `tests/test_national_ai.py` fails if any of them names it. Edit it by hand, keep every snapshot cell
   sourced with an access date or marked **[unverified]**, put no cost figure in a strategy, no ranking language anywhere,

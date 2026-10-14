@@ -1,0 +1,37 @@
+{
+  "_comment": "npm audit advisories accepted on purpose (supply-chain.md §4: record why it is not exploitable here). test.sh fails on any high/critical advisory not listed here, and on entries here that no longer appear. Re-check each by its review date.",
+  "advisories": [
+    {
+      "id": "GHSA-86w9-cpqp-85rv",
+      "package": "node-forge",
+      "severity": "high",
+      "reason": "No patched release exists (<=1.4.0, latest is 1.4.0). Pulled in by @expo/cli and @expo/code-signing-certificates, which are build tools that run on the developer's machine. Not in the app bundle, and this template doesn't set up EAS Update code signing.",
+      "added": "2026-10-04",
+      "review": "2027-01-04"
+    },
+    {
+      "id": "GHSA-vfj7-8cjw-p6xm",
+      "package": "braces",
+      "severity": "high",
+      "reason": "No patched release exists (<=3.0.3, latest is 3.0.3). Used through micromatch by Metro, Jest and ESLint to match developer-written glob patterns at build and test time. Not in the app bundle, and no untrusted patterns reach it.",
+      "added": "2026-10-04",
+      "review": "2027-01-04"
+    },
+    {
+      "id": "GHSA-vcc3-ghjq-m6fr",
+      "package": "decode-uri-component",
+      "severity": "moderate",
+      "reason": "expo-router -> query-string@7 -> decode-uri-component@0.2.2 does ship in the app. The patched versions (>=0.4.3) are ESM-only, and query-string@7 loads it with require(), so an override would break the bundle and Jest. The impact is a client-side denial of service from a malformed URL opened on the user's own device. Goes away when expo-router moves to a newer query-string.",
+      "added": "2026-10-04",
+      "review": "2027-01-04"
+    },
+    {
+      "id": "GHSA-w5hq-g745-h8pq",
+      "package": "uuid",
+      "severity": "moderate",
+      "reason": "uuid@7.0.3 comes from @expo/config-plugins -> xcode during prebuild, on the developer's machine. The flaw is only in v3/v5/v6 when a caller passes a buffer, which xcode doesn't do. The fix is a 4-major jump (11.1.1) inside a transitive dependency we don't control.",
+      "added": "2026-10-04",
+      "review": "2027-01-04"
+    }
+  ]
+}

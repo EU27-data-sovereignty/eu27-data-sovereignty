@@ -2,4 +2,12 @@ node_modules
 .expo
 dist
 web-build
+coverage
 supabase/.temp
+# Generated or copied byte for byte from elsewhere: never reformatted here.
+assets/data/
+src/constants/Colors.ts
+src/data/types.ts
+src/data/format.ts
+src/data/sources.ts
+package-lock.json

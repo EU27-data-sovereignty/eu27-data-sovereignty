@@ -1,104 +1,114 @@
-/** The country list: all 27, filterable, each row carrying the two figures that size the case. */
+/**
+ * All 27 member states, filterable, from the edition's index: the same counts the web's Countries page
+ * derives, computed by the model (#110). Each row reports evidence, not judgement: how much of a state's
+ * inventory has a verified source, and how many values are withheld. Opening a row loads that state's part.
+ */
 import { Link } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { Text as Type, themeFor } from '@/constants/Colors';
-import { bundle, search } from '@/data/bundle';
-import { eur, flagEmoji, mw, num } from '@/data/format';
+import { Heading, Loading, ScreenFooter } from '@/components/Screen';
+import { SPACE, Type, useTheme } from '@/components/theme';
+import { flagEmoji } from '@/data/format';
+import { indexRows } from '@/data/parts';
+import { countryPath } from '@/data/routes';
+import { useEdition } from '@/edition/EditionContext';
 
 export default function Countries() {
-  const theme = themeFor(useColorScheme());
+  const theme = useTheme();
+  const { core, loadError } = useEdition();
   const [query, setQuery] = useState('');
-  const rows = useMemo(() => search(query), [query]);
+  const rows = useMemo(() => {
+    if (!core) return [];
+    const q = query.trim().toLowerCase();
+    return indexRows(core).filter(
+      (r) => !q || r.name.toLowerCase().includes(q) || r.iso.toLowerCase() === q
+    );
+  }, [core, query]);
 
+  if (!core) return <Loading error={loadError} />;
   return (
-    <View style={[styles.page, { backgroundColor: theme.bgPage }]}>
-      <TextInput
-        value={query}
-        onChangeText={setQuery}
-        placeholder="Filter by country or code"
-        placeholderTextColor={theme.fgMuted}
-        autoCorrect={false}
-        accessibilityLabel="Filter countries"
-        style={[
-          styles.filter,
-          { borderColor: theme.border, color: theme.fgPrimary, backgroundColor: theme.bgCard },
-        ]}
-      />
-
-      <FlatList
-        data={rows}
-        keyExtractor={c => c.iso2}
-        ListHeaderComponent={
-          <Text style={[styles.total, { color: theme.fgSecondary }]}>
-            {num(bundle.totals.servers)} servers · {bundle.totals.design_mw.toFixed(1)} MW ·{' '}
-            {bundle.totals.sites} sites across {Object.keys(bundle.countries).length} member states
+    <FlatList
+      style={{ backgroundColor: theme.bgPage }}
+      contentContainerStyle={styles.pad}
+      data={rows}
+      keyExtractor={(r) => r.iso}
+      ListHeaderComponent={
+        <View>
+          <Heading kicker="EU-27 · Member states" title="Countries" />
+          <Text style={[styles.intro, { color: theme.fgSecondary }]}>
+            Each member state analysed on its own fundamentals. The rows count verified evidence;
+            they are not a ranking of how sovereign a state is.
           </Text>
-        }
-        ListEmptyComponent={
-          <Text style={[styles.total, { color: theme.fgMuted }]}>No country matches that.</Text>
-        }
-        renderItem={({ item }) => (
-          <Link href={{ pathname: '/country/[iso]', params: { iso: item.iso2 } }} asChild>
-            <View
-              accessibilityRole="link"
-              accessibilityLabel={item.name}
-              style={[styles.row, { borderColor: theme.border, backgroundColor: theme.bgCard }]}
-            >
-              <View style={styles.rowMain}>
-                {/* The list is the index, which is the one place a flag belongs (#47). The row
-                    already carries accessibilityLabel={item.name}, so the flag is decorative.
-                    The name stays its OWN text node rather than being concatenated with the
-                    glyph, so it remains independently addressable — by assistive tech, and by
-                    the test that asserts the list renders real country names. */}
-                <Text style={[styles.name, { color: theme.fgPrimary }]}>
-                  <Text>{`${flagEmoji(item.iso2)}  `}</Text>
-                  <Text>{item.name}</Text>
-                </Text>
-                <Text style={[styles.meta, { color: theme.fgSecondary }]}>
-                  {item.iso2} · {num(item.capacity.total_servers)} servers · {item.capacity.sites}{' '}
-                  sites
-                </Text>
-              </View>
-              <View>
-                <Text style={[styles.figure, { color: theme.accentText }]}>
-                  {mw(item.capacity.design_mw)}
-                </Text>
-                <Text style={[styles.meta, { color: theme.fgMuted, textAlign: 'right' }]}>
-                  {eur(item.capacity.capex_total)}
-                </Text>
-              </View>
+          <TextInput
+            accessibilityLabel="Find a country"
+            placeholder="Find a country"
+            placeholderTextColor={theme.fgMuted}
+            value={query}
+            onChangeText={setQuery}
+            autoCorrect={false}
+            style={[
+              styles.field,
+              { borderColor: theme.border, color: theme.fgPrimary, backgroundColor: theme.bgCard },
+            ]}
+          />
+          <Text style={[styles.count, { color: theme.fgMuted }]}>
+            {rows.length === 27 ? '27 member states' : `${rows.length} of 27 member states`}
+          </Text>
+        </View>
+      }
+      ListEmptyComponent={
+        <Text style={{ color: theme.fgMuted }}>No member state matches that name.</Text>
+      }
+      ListFooterComponent={<ScreenFooter />}
+      renderItem={({ item: r }) => (
+        <Link href={countryPath(r.iso)} asChild>
+          <View
+            accessibilityRole="button"
+            accessibilityLabel={`${r.name}, country report`}
+            style={[styles.card, { borderColor: theme.border, backgroundColor: theme.bgCard }]}
+          >
+            <View style={styles.row}>
+              <Text style={styles.flag} accessibilityElementsHidden importantForAccessibility="no">
+                {flagEmoji(r.iso)}
+              </Text>
+              <Text style={[styles.name, { color: theme.fgPrimary }]}>{r.name}</Text>
+              <Text style={[styles.iso, { color: theme.fgMuted }]}>{r.iso}</Text>
             </View>
-          </Link>
-        )}
-      />
-    </View>
+            <Text style={[styles.line, { color: theme.fgSecondary }]}>
+              Holdings verified {r.holdings_verified} of {r.holdings_total} · Tier 0{' '}
+              {r.tier0_verified} of {r.tier0_total} · Sourced facts {r.facts}
+            </Text>
+            <Text style={[styles.line, { color: theme.fgMuted }]}>
+              {r.withheld ? `${r.withheld} withheld as disputed` : 'Nothing withheld as disputed'}
+            </Text>
+          </View>
+        </Link>
+      )}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  page: { flex: 1, paddingHorizontal: 16 },
-  filter: {
+  pad: { padding: SPACE.lg },
+  intro: { fontSize: Type.body, lineHeight: 21, marginBottom: SPACE.md },
+  field: {
     borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    marginVertical: 12,
-    fontSize: Type.body,
+    borderRadius: 6,
+    paddingHorizontal: SPACE.md,
+    paddingVertical: 10,
+    fontSize: 16,
   },
-  total: { fontSize: Type.axis, marginBottom: 12 },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 8,
+  count: { fontSize: Type.axis, marginVertical: SPACE.sm },
+  card: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: 6,
+    padding: SPACE.md,
+    marginBottom: SPACE.sm,
   },
-  rowMain: { flexShrink: 1, paddingRight: 12 },
-  name: { fontSize: Type.heading, fontWeight: '600' },
-  meta: { fontSize: Type.axis, marginTop: 2 },
-  figure: { fontSize: Type.heading, fontWeight: '600', textAlign: 'right' },
+  row: { flexDirection: 'row', alignItems: 'baseline', gap: SPACE.sm, marginBottom: SPACE.xs },
+  flag: { fontSize: 18 },
+  name: { flex: 1, fontSize: Type.heading, fontWeight: '700' },
+  iso: { fontSize: Type.axis, fontWeight: '700', letterSpacing: 1 },
+  line: { fontSize: Type.axis + 1, lineHeight: 17 },
 });

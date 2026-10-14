@@ -1,0 +1,2 @@
+-- Nothing to seed: the bucket starts empty, and only the deploy workflow fills it (#112).
+-- mobile/test.sh --integration publishes a fixture edition and removes it again.

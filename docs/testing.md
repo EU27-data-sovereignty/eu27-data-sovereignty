@@ -35,11 +35,13 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 11–14 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
 | 15 | Production build | `vite build` succeeds |
 | 16 | Size budget | gzipped: data bundle ≤ 1,100 KB (900 KB until 2026-10-06), all JavaScript ≤ 400 KB |
-| 17 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
+| 17 | The mobile reader | `mobile/test.sh --ci`, the reader's own suite ([`../mobile/README.md`](../mobile/README.md), #113): node, deps, no tracked env, shell, tooling, exact pins, identity, env keys, scripts, format, lint, types; the 28 parts regenerated and checked against the manifest and the committed bundle (`model/edition.py check`); the generated tokens current; Jest with coverage floors, incl. parity with `web/` byte for byte; expo-doctor; the web export; npm audit against `mobile/audit-allowlist.json`. With `MOBILE_TEST_FLAGS=--integration` (the deploy's gate only): the edition channel round-trip against local Supabase |
+| 18 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
-| 18 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
+| 19 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
 
-`--no-e2e` skips stage 17, `--no-pdf` skips stage 10 and `--no-live` skips stage 18. Stage 18 tests the live site,
+`--no-e2e` skips stage 18, `--no-pdf` skips stage 10, `--no-mobile` skips stage 17 (no `mobile/node_modules`) and
+`--no-live` skips stage 19. Stage 19 tests the live site,
 not the checkout, and costs one request within the `eu27` workspace spend limit. Use `--no-live` offline or while the
 key is being replaced.
 
@@ -48,11 +50,13 @@ group:
 - `model`: stages 1–5 and 7–9;
 - `web`: stages 6 and 11–16;
 - `pdf`: stage 10;
-- `e2e`: stage 17, with `--project NAME` for one Playwright project;
-- `live`: stage 18. CI runs it in the deploy job, after the deploy and against it, not in the gate. A broken key
+- `mobile`: stage 17; its `--integration` round-trip runs only when the caller passes `mobile_integration: true`
+  (deploy.yml does, ci.yml does not: `supabase start` would be the critical path on every branch push);
+- `e2e`: stage 18, with `--project NAME` for one Playwright project;
+- `live`: stage 19. CI runs it in the deploy job, after the deploy and against it, not in the gate. A broken key
   must not block the redeploy that fixes it.
 
-The five groups partition the stages, and `tests/test_workflows.py` fails if a stage is outside every group or
+The six groups partition the stages, and `tests/test_workflows.py` fails if a stage is outside every group or
 a group is not run. Locally, `./test.sh` with no flag still runs everything in order.
 
 ## The Python suite, by subject
@@ -84,6 +88,10 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
   also shows the smoke test fails against a server that serves the wrong things.
 - **Delivery:** `test_workflows`, `test_vercel_config`, `test_ignore_rules`, `test_artifacts`, `test_tokens`,
   `test_repeatability`, `test_docs`, `test_contrib`, `test_fetch`.
+- **The mobile reader's edition (#110, #111, #112):** `test_export_split` (the 28 parts merge back to the single
+  bundle byte for byte, every part renders alone, the two tracked manifests are the committed bundle's) and
+  `test_edition` (the publisher and verifier against a fake Storage server: immutable per edition, idempotent,
+  the pointer last, altered bytes refused by name, the service key never in a URL, on stdout or in a summary).
 
 ## The live-site smoke test
 
@@ -94,7 +102,9 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
 - indexing is off;
 - `www` redirects to the apex;
 - the TLS certificate is valid for 14 more days or longer;
-- with `--bundle`, the served data is the committed data.
+- with `--bundle`, the served data is the committed data;
+- with `--edition-url` and `--manifest`, the mobile reader's edition channel serves the committed manifest and
+  every part under it, read anonymously (#111); an empty URL is reported as not configured.
 
 It runs after every deploy and every week.
 
@@ -147,4 +157,6 @@ tests.test_properties tests.test_hypothesis`, from a throwaway clone.
 
 ## Still waiting on the owner
 
-- **The mobile reader** (`mobile/`, schema 1) carries 4 Dependabot alerts that only a port or a removal clears.
+- **The mobile reader's four Dependabot alerts** (`node-forge`, `braces`, `decode-uri-component`, `uuid`) are
+  Expo-toolchain transitives the rebuild (#109) carries too, allowlisted with reasons in
+  `mobile/audit-allowlist.json`; they close when the owner dismisses them in the Security tab with those reasons.

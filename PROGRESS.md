@@ -19,7 +19,7 @@ production still serves the 2026-09-27 build. The private contacts repo is uncha
 | Web app | **Rebuilt**, EU theme, /ask added | 43 Vitest; 23 of 23 Playwright + axe |
 | Data-sovereignty ranking | **Evidenced** (#77); 134 of 189 indicators sourced | IE Dependent (High); IT Secured in law; 25 Not demonstrated (Low) |
 | Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
-| Mobile reader | **Stale**: on the withdrawn schema-1 bundle | 19 Jest tests; never built or deployed |
+| Mobile reader | **Rebuilt** on the content model, offline-first, Supabase Storage as the edition channel (#109–#113) | 75 Jest + 9 integration steps; `./test.sh --only mobile` in the gate; no release |
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
 | Tables of contents | **Done** | every brief, `SUMMARY.md`, web, mobile, book outline |
 | Style guide | **Done**, one guide + per-format notes | `artifacts/STYLE.md` from `design/tokens.json` (#74, #76) |
@@ -142,9 +142,10 @@ $ ./test.sh
 Production (`sovereign-data-centers.vercel.app`) still serves the 2026-09-27 build; the new site is on a
 protected preview. The runbook, including `/ask`, is in [`DEPLOYMENT.md`](DEPLOYMENT.md).
 
-### The mobile reader (2026-09-17)
-`mobile/` is an Expo app, local only. **It is still on the schema-1 bundle, with the withdrawn
-Dutch-scaled figures**, and must move to the content model before any release (`ROADMAP.md`).
+### The mobile reader (2026-09-17; rebuilt 2026-10-14)
+`mobile/` is an Expo app that renders the content model from the split edition inside its binary and learns of
+a newer edition from a public, read-only Supabase bucket the deploy writes (#109–#113). Its suite is the `mobile`
+group of `./test.sh` and a parallel CI job. No release: the launch gate holds (`ROADMAP.md`).
 
 ### Tables of contents and country flags (2026-09-21)
 
@@ -231,7 +232,8 @@ Three smaller drifts surfaced in the same pass:
   prose drift every time a suite grows; they are worth stating only where a command backs them.
 - `tests/test_docs.py` `CITING` omitted `SOURCES.md` — decision references in that file were the
   one set nothing validated. Added, along with this file and the six `artifacts/` style guides.
-- `./test.sh` does not run the `mobile/` suite; those 19 tests run only from `mobile/`.
+- `./test.sh` does not run the `mobile/` suite; those 19 tests run only from `mobile/`. **Closed by #113
+  (2026-10-14):** `./test.sh --only mobile` and a gate job run the rebuilt reader's suite.
 
 ### The institutional map — 25 of 324
 `OUTREACH.md` carries the institutions to approach in each member state as prose. The machine-checkable

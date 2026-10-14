@@ -7,6 +7,58 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-14
 
+### Added: the mobile reader rebuilt on the content model, offline-first, with Supabase Storage as its edition channel (#109–#111)
+
+- **What it is.** `mobile/` is an Expo SDK 57 app built from `templates/rn-supabase` with its auth, forms and EAS
+  removed. It renders the content model as the site does: `src/components/DocumentView.tsx` is the port of the
+  web renderer, `src/data/{types,format,sources}.ts` are byte-for-byte copies of the web's files, and every
+  screen ends with the provenance notice in the edition's own words. Seven screens: the 27 states, a state's
+  report with its numbered sources, the infrastructure overview, the ranking, the methodology, the fact-check
+  appendices, and the edition. English only; no store release, no EAS (#109).
+- **The edition.** `python3 model/export_json.py --split` writes the committed bundle as 28 parts
+  (`eu27.core.json` with an index of the 27, and one `eu27.<ISO>.json` per state, each self-contained) and a
+  `manifest.json` naming every part's sha256 and the bundle's, the edition id. The parts are generated and
+  gitignored; the manifest is tracked in `mobile/assets/data/` and at `web/public/data/manifest.json`, so the
+  site publishes its edition id too. `tests/test_export_split.py` proves the parts merge back to the single file
+  byte for byte and that every claim is in exactly one state part (#110).
+- **The channel.** One public, read-only Supabase Storage bucket `editions` in an EU region
+  (`mobile/supabase/migrations/`: a `select` policy for `anon`, nothing else). The app checks for a newer edition
+  on a tap in About, or at launch if the reader opts in; it hashes every downloaded file against the published
+  manifest, and the manifest against `latest.json`, before showing a value, re-hashes a downloaded part on every
+  read, and discards an edition whose part fails. Unconfigured, it makes no request. The hash chain proves
+  integrity, not authorship: the project is a trusted party until a signed manifest exists (#111).
+- **Checked.** `cd mobile && ./test.sh --ci`: 20 steps PASS. Jest: 75 tests; coverage 77.5% statements.
+  `./test.sh --quick --ci --integration` against local Supabase 2.120.0 on Colima: 9 of 9 steps, incl. anonymous
+  writes refused and an object altered in the bucket rejected by name. `expo-doctor` 21 of 21; the web export
+  7.8 MB with the parts inside. **Not yet:** a reading on a device by a person; the hosted project, which the
+  owner creates (`DEPLOYMENT.md` § The edition channel).
+- **Where it is recorded.** `mobile/README.md`, `artifacts/mobile/STYLE.md`, `docs/plans/mobile-log.md`,
+  `docs/plans/mobile-app.md` (status), `ROADMAP.md`, `PROGRESS.md`, `CLAUDE.md`.
+
+### Changed: `./run.sh data` writes the split edition; `./test.sh` gains a `mobile` group and `--no-mobile`; the deploy publishes the edition and the weekly monitor checks it (#112, #113)
+
+- **What changed.** `./run.sh data` and the gate's "Generated files are current" stage run `export_json.py
+  --split`; a stale manifest fails the model group. `./test.sh --only mobile` (stage 17; browser tests are 18,
+  the live `/ask` 19) runs `mobile/test.sh --ci`, the reader's own suite: parity, the parts against the
+  manifest and the bundle (`model/edition.py check`), the generated tokens, format, lint, types, Jest with
+  coverage floors, expo-doctor, the web export, and `npm audit` against `mobile/audit-allowlist.json`.
+  `gate.yml` runs it as a parallel job; a second job, `mobile-integration`, runs the Supabase round-trip only
+  when `deploy.yml` asks (#113). `deploy.yml` gains the job `edition`, after the deploy job: `model/edition.py
+  publish` uploads the manifest and parts under the edition id, never overwriting, and moves `latest.json` last;
+  the service-role key is an environment secret read only there; the job then reads the bucket back
+  anonymously, as `monitor.yml` does weekly (`smoke.py --edition-url`). Skipped until the owner sets
+  `SUPABASE_URL` (#112). `model/reproduce.py` and the root `init.sh` install `mobile/`; `.github/dependabot.yml`
+  watches its lockfile; `.gitignore` gains the generated parts, the local Supabase state and the coverage
+  directory, each asserted by name in `tests/test_ignore_rules.py`.
+- **Dependabot.** The four alerts on the old lockfile (`node-forge` GHSA-86w9-cpqp-85rv, `braces`
+  GHSA-vfj7-8cjw-p6xm, `decode-uri-component` GHSA-vcc3-ghjq-m6fr, `uuid` GHSA-w5hq-g745-h8pq) are Expo-toolchain
+  transitives the rebuilt lockfile carries too; they are allowlisted with reasons and close when the owner
+  dismisses them with those reasons.
+- **Checked.** `python3 -m unittest tests.test_workflows tests.test_evidence tests.test_ignore_rules
+  tests.test_export_split tests.test_edition tests.test_repeatability -q`: 96 tests, OK. `./test.sh --only
+  mobile`: PASS. `python3 model/notes.py check`: four checkers, all pass with the rebuilt tree. **Not yet:** the
+  first production publish and the first Actions timings of the two new jobs.
+
 ### Changed: `docs/ci-cd.md` describes the pipeline after #107; the vetting of 2026-10-14 is recorded
 
 - **What changed.** `docs/ci-cd.md` (last revised at #98) now has the branch-push trigger, the pinned runner, the

@@ -11,9 +11,11 @@ set -e
 #   ./test.sh --no-e2e     skip the browser stage (no Chrome, or CI without one)
 #   ./test.sh --no-pdf     skip compiling the PDFs (no typst); without it, missing typst fails
 #   ./test.sh --no-live    skip the live /ask check (offline, or the key is being replaced)
-#   ./test.sh --only GROUP one group: model, pdf, web, e2e or live (CI runs them as parallel jobs)
+#   ./test.sh --no-mobile  skip the mobile reader's suite (no mobile/node_modules; run mobile/init.sh)
+#   ./test.sh --only GROUP one group: model, pdf, web, mobile, e2e or live (CI runs them as parallel jobs)
 #   ./test.sh --only e2e --project NAME   one Playwright project (CI runs one job each)
 #   PDF_OUT=dir ./test.sh  keep the compiled PDFs in dir (CI deploys exactly these)
+#   MOBILE_TEST_FLAGS=--integration ./test.sh --only mobile   the edition channel against local Supabase too
 #
 # Exit 0 = safe to publish. Anything else = do not.
 
@@ -29,6 +31,7 @@ cd "$ROOT"
 SKIP_E2E=false
 SKIP_PDF=false
 SKIP_LIVE=false
+SKIP_MOBILE=false
 ONLY=""
 PROJECT=""
 while [ $# -gt 0 ]; do
@@ -36,13 +39,14 @@ while [ $# -gt 0 ]; do
         --no-e2e) SKIP_E2E=true ;;
         --no-pdf) SKIP_PDF=true ;;
         --no-live) SKIP_LIVE=true ;;
+        --no-mobile) SKIP_MOBILE=true ;;
         --only)
             ONLY="$2"; shift
-            case "$ONLY" in model|pdf|web|e2e|live) ;; *) echo -e "${RED}❌ --only takes model, pdf, web, e2e or live${NC}"; exit 1 ;; esac
+            case "$ONLY" in model|pdf|web|mobile|e2e|live) ;; *) echo -e "${RED}❌ --only takes model, pdf, web, mobile, e2e or live${NC}"; exit 1 ;; esac
             ;;
         --project) PROJECT="$2"; shift ;;
         --help|-h)
-            sed -n '3,19p' "$0" | sed 's/^# \{0,1\}//'
+            sed -n '3,21p' "$0" | sed 's/^# \{0,1\}//'
             exit 0
             ;;
         *)
@@ -54,7 +58,7 @@ while [ $# -gt 0 ]; do
 done
 
 # A stage runs when no group is chosen, or when it is in the chosen one. The groups partition the
-# stages: running all four is exactly ./test.sh, which tests/test_workflows.py checks.
+# stages: running all six is exactly ./test.sh, which tests/test_workflows.py checks.
 in_group() { [ -z "$ONLY" ] || [ "$ONLY" = "$1" ]; }
 
 STEP=0
@@ -133,10 +137,10 @@ step "Generated files are current"
 # countries/ holds tracked binaries that are re-rendered by hand (#51), and work in
 # progress under model/ is normal, so a dirty tree is not by itself a stale one --
 # and a check that cries wolf on every uncommitted edit is a check people stop reading.
-GENERATED_PATHS=(countries model web/public/data api/_corpus.json docs/evidence.md docs/gaps.md)
+GENERATED_PATHS=(countries model web/public/data mobile/assets/data/manifest.json api/_corpus.json docs/evidence.md docs/gaps.md)
 before="$(git diff -- "${GENERATED_PATHS[@]}" | shasum)"
 python3 model/generate_countries.py > /dev/null
-python3 model/export_json.py > /dev/null
+python3 model/export_json.py --split > /dev/null
 python3 model/ask_corpus.py > /dev/null
 python3 model/evidence_report.py > /dev/null
 python3 model/gaps.py > /dev/null
@@ -250,6 +254,29 @@ PY
 ok "data bundle and JavaScript within their gzipped budgets"
 
 cd "$ROOT"
+fi
+
+# -----------------------------------------------------------------------------
+if ! in_group mobile; then
+    :
+elif [ "$SKIP_MOBILE" = true ]; then
+    echo
+    echo -e "${YELLOW}⚠️  Skipping the mobile stage (--no-mobile)${NC}"
+else
+step "The mobile reader: parity with web/, the split edition, the tokens, and its own suite"
+# mobile/test.sh is the reader's full gate with its own summary table (#113): the 28 parts regenerated and
+# checked against the manifest and the committed bundle, the three copies of web/ files pinned byte for
+# byte, the generated tokens, format, lint, types, Jest with coverage floors, expo-doctor, the web export
+# and npm audit against mobile/audit-allowlist.json. --ci skips only the local security gate, which the
+# commit hook already runs. MOBILE_TEST_FLAGS=--integration adds the edition channel round-trip against a
+# local Supabase stack; the deploy's gate passes it, a branch push does not.
+if [ ! -d "mobile/node_modules" ]; then
+    echo -e "${RED}    ❌ mobile/node_modules missing. Run mobile/init.sh, or pass --no-mobile.${NC}"
+    exit 1
+fi
+# shellcheck disable=SC2086
+(cd mobile && ./test.sh --ci ${MOBILE_TEST_FLAGS:-})
+ok "the mobile reader's suite passed: parity, edition, tokens, format, lint, types, unit, doctor, web export, audit"
 fi
 
 # -----------------------------------------------------------------------------

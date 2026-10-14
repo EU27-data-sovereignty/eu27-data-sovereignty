@@ -33,6 +33,8 @@ SURFACES = [
     ROOT / "book" / "report.py", ROOT / "model" / "generate_countries.py",
     ROOT / "model" / "export_json.py", ROOT / "model" / "national_data.py",
     ROOT / "api" / "_ask-core.ts", *sorted((ROOT / "web" / "src").rglob("*.tsx")),
+    # The mobile reader's own code, never mobile/ wholesale (node_modules): #109.
+    *sorted((ROOT / "mobile" / "app").rglob("*.tsx")), *sorted((ROOT / "mobile" / "src").rglob("*.ts*")),
 ]
 
 
@@ -53,6 +55,20 @@ class Disclaimer(unittest.TestCase):
         import report  # noqa: PLC0415
         self.assertIn(report.esc(evidence.DISCLAIMER), report.report_typ(BUNDLE))
         self.assertIn(report.esc(evidence.DISCLAIMER), report.country_typ(BUNDLE, "DE"))
+
+    def test_the_mobile_app_shows_it(self):
+        # Every screen renders inside Screen (or a list with ScreenFooter), which appends the ProvenanceNotice
+        # with the edition's own wording; About prints the disclaimer in full (#109).
+        mobile = ROOT / "mobile"
+        screen = (mobile / "src" / "components" / "Screen.tsx").read_text(encoding="utf-8")
+        self.assertIn("<ProvenanceNotice", screen)
+        self.assertIn("{provenance}", (mobile / "src" / "components" / "ProvenanceNotice.tsx").read_text(encoding="utf-8"))
+        routes = [p for p in (mobile / "app").rglob("*.tsx") if p.name != "_layout.tsx"]
+        self.assertGreaterEqual(len(routes), 8)
+        for route in routes:
+            text = route.read_text(encoding="utf-8")
+            self.assertTrue("<Screen" in text or "<ScreenFooter" in text, f"{route.name} has no provenance notice")
+        self.assertIn("core.notice.disclaimer", (mobile / "app" / "(tabs)" / "about.tsx").read_text(encoding="utf-8"))
 
     def test_ask_is_told_to_say_it(self):
         core = (ROOT / "api" / "_ask-core.ts").read_text(encoding="utf-8")

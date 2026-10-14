@@ -3,6 +3,8 @@
 Smoke-test the live site: what a reader gets, checked from outside, after every deploy and every week.
 
     python3 model/smoke.py [--site https://eu27.cloud] [--bundle web/public/data/eu27.json] [--summary FILE]
+                           [--edition-url https://<ref>.supabase.co/storage/v1/object/public/editions
+                            --manifest mobile/assets/data/manifest.json]
 
 Why this file exists
 --------------------
@@ -14,6 +16,9 @@ Checked: every route a reader can open answers 200 with HTML; the EU-27 report, 
 4 report previews answer with their type; every security header `vercel.json` sets on `/(.*)` is served as
 set; indexing is still off (robots and `X-Robots-Tag`); `www` redirects to the apex; the TLS certificate is
 valid for at least `--min-days` more days; and, with `--bundle`, the served data bundle is the committed one.
+With `--edition-url`, the mobile reader's edition channel (#111, model/edition.py) serves the committed
+manifest and every part under it, read anonymously; an empty URL (the owner has not created the project yet)
+is reported as not configured and does not fail. `--site ''` skips the site and checks the channel alone.
 """
 from __future__ import annotations
 
@@ -32,6 +37,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "book"))
+sys.path.insert(0, str(ROOT / "model"))
+
+import edition  # noqa: E402
 
 # Every route a reader can open; tests/test_smoke.py keeps it a superset of the e2e ROUTES.
 ROUTES = ["/", "/countries", "/de", "/nl", "/holdings", "/holdings/civil_registry",
@@ -78,12 +86,21 @@ def cert_days_left(host: str) -> float:
     return (end - dt.datetime.now(dt.timezone.utc)).total_seconds() / 86400
 
 
-def run(site: str, bundle: Path | None, min_days: int) -> list[tuple[str, bool, str]]:
+def run(site: str, bundle: Path | None, min_days: int, edition_url: str | None = None,
+        manifest: Path | None = None) -> list[tuple[str, bool, str]]:
     import report  # noqa: PLC0415 -- the preview names are the build's own
     results: list[tuple[str, bool, str]] = []
 
     def check(name: str, ok: bool, detail: str = "") -> None:
         results.append((name, ok, detail))
+
+    if edition_url is not None:
+        if edition_url:
+            results += [(f"edition {n}", ok, d) for n, ok, d in edition.verify(edition_url, manifest)]
+        else:
+            check("edition channel", True, "not configured (SUPABASE_URL unset)")
+    if not site:
+        return results
 
     for path in ROUTES:
         code, h, _ = request(site + path)
@@ -131,12 +148,16 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--bundle", type=Path, help="also require the served bundle to equal this file")
     ap.add_argument("--min-days", type=int, default=14, help="minimum days the TLS certificate must still be valid")
     ap.add_argument("--summary", type=Path, help="append a markdown table (e.g. $GITHUB_STEP_SUMMARY)")
+    ap.add_argument("--edition-url", help="the public bucket URL; '' reports the channel as not configured")
+    ap.add_argument("--manifest", type=Path, help="the committed manifest the channel must serve")
     a = ap.parse_args(argv)
-    results = run(a.site.rstrip("/"), a.bundle, a.min_days)
+    if a.edition_url and not a.manifest:
+        ap.error("--edition-url needs --manifest")
+    results = run(a.site.rstrip("/"), a.bundle, a.min_days, a.edition_url, a.manifest)
     failed = [r for r in results if not r[1]]
     for name, ok, detail in results:
         print(f"{'ok  ' if ok else 'FAIL'} {name}{f'  ({detail})' if detail and not ok else ''}")
-    print(f"{len(results) - len(failed)} of {len(results)} smoke checks passed on {a.site}")
+    print(f"{len(results) - len(failed)} of {len(results)} smoke checks passed on {a.site or 'the edition channel'}")
     if a.summary:
         with a.summary.open("a", encoding="utf-8") as fh:
             fh.write(f"### Smoke test: {len(results) - len(failed)} of {len(results)} passed\n\n")

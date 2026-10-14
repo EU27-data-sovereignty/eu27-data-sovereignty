@@ -33,14 +33,22 @@ web/node_modules/
 web/dist/
 .vercel/
 
-# Expo reader (mobile/). Local-only: no build, no store listing, no deploy.
-# node_modules/ above already covers the first of these; it is repeated because
-# tests/test_ignore_rules.py asserts each one by name, and a rule that is only
-# implied is a rule that disappears the next time the general one is edited.
+# Expo reader (mobile/). Never built by Vercel (.vercelignore excludes it) and it holds a
+# local Supabase stack's state. node_modules/ and .env.* above already cover several of
+# these; each is repeated because tests/test_ignore_rules.py asserts it by name, and a rule
+# that is only implied is a rule that disappears the next time the general one is edited.
+# The 28 parts of the split edition are generated from web/public/data/eu27.json by
+# `python3 model/export_json.py --split` (#110); only manifest.json beside them is tracked.
 mobile/node_modules/
 mobile/.expo/
 mobile/dist/
+mobile/coverage/
 mobile/.env.local
+mobile/.env.production
+mobile/assets/data/eu27.*.json
+mobile/supabase/.temp/
+mobile/supabase/.branches/
+mobile/supabase/.env
 
 # Outreach contact lists. The institutional map is public (see README); files
 # naming individuals are not: a public official's work contact is still personal

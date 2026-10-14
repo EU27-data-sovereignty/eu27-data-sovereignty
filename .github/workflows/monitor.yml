@@ -1,7 +1,7 @@
 name: Monitor
 
 # Weekly, read-only checks of what can change without a commit (#92): the live site (routes, PDFs, headers,
-# noindex, redirect, TLS certificate, served bundle), whether Eurostat has published new vintages, and whether a
+# noindex, redirect, TLS certificate, served bundle) and the mobile reader's edition channel (#111), whether Eurostat has published new vintages, and whether a
 # cited source has gone or lost a quote (#98). A failure fails the run and is written to the run summary; it
 # opens no issue and changes nothing.
 on:
@@ -23,8 +23,14 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.14"
-      - name: Smoke test the live site
-        run: python3 model/smoke.py --site https://eu27.cloud --bundle web/public/data/eu27.json --summary "$GITHUB_STEP_SUMMARY"
+      - name: The split edition, regenerated from the committed bundle (#110)
+        run: python3 model/export_json.py --split --from web/public/data/eu27.json
+      # With --edition-url, the mobile reader's channel too (#111): latest.json names the committed edition and
+      # every object hashes to the committed manifest. Reported as not configured until SUPABASE_URL is set.
+      - name: Smoke test the live site and the edition channel
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+        run: python3 model/smoke.py --site https://eu27.cloud --bundle web/public/data/eu27.json --edition-url "${SUPABASE_URL:+$SUPABASE_URL/storage/v1/object/public/editions}" --manifest mobile/assets/data/manifest.json --summary "$GITHUB_STEP_SUMMARY"
       - name: Eurostat vintages (reported, never applied)
         run: python3 model/fetch_eurostat.py --check | tee -a "$GITHUB_STEP_SUMMARY"
 

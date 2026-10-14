@@ -142,8 +142,8 @@ def clean_room(evidence: bool = False, keep: bool = False) -> int:
         head = subprocess.run(["git", "rev-parse", "--short=12", "HEAD"], cwd=clone, capture_output=True,
                               text=True).stdout.strip()
         print(f"  commit {head}")
-        for script in ("generate_countries.py", "export_json.py", "ask_corpus.py", "evidence_report.py"):
-            run(f"regenerate ({script})", sys.executable, f"model/{script}")
+        for script in ("generate_countries.py", "export_json.py --split", "ask_corpus.py", "evidence_report.py"):
+            run(f"regenerate ({script})", sys.executable, *(f"model/{script}".split()))
         drift = subprocess.run(["git", "status", "--porcelain"], cwd=clone, capture_output=True, text=True).stdout
         if drift.strip():
             failures.append("generated files differ from the committed ones:\n" + drift[:1500])
@@ -152,6 +152,7 @@ def clean_room(evidence: bool = False, keep: bool = False) -> int:
         # budget. Only the browser tests are left out (--no-e2e): they need Chrome, not the repository.
         run("install dependencies (npm ci)", "npm", "ci", "--silent")
         run("install web dependencies (npm ci)", "npm", "ci", "--silent", cwd=clone / "web")
+        run("install mobile dependencies (npm ci)", "npm", "ci", "--silent", cwd=clone / "mobile")
         run("the full gate (./test.sh --no-e2e)", "./test.sh", "--no-e2e")
         if evidence:
             # The third-party audit, scripted: no cache, every source fetched again from the web.

@@ -120,11 +120,19 @@ fi
 print_success "$(python3 -c "import json;d=json.load(open('package.json'));print(len(d.get('dependencies',{}))+len(d.get('devDependencies',{})))") direct dependencies installed, all exactly pinned"
 cd "$ROOT"
 
+# --- Mobile reader -----------------------------------------------------------
+echo
+print_info "Installing mobile dependencies..."
+cd "$ROOT/mobile"
+npm ci --no-audit --no-fund
+print_success "mobile/node_modules ready (the reader's own ./init.sh adds .env.local; ./test.sh --only mobile runs its suite)"
+cd "$ROOT"
+
 # --- Data --------------------------------------------------------------------
 echo
-print_info "Generating the data bundle..."
-python3 model/export_json.py
-print_success "web/public/data/eu27.json ready"
+print_info "Generating the data bundle and the split edition..."
+python3 model/export_json.py --split
+print_success "web/public/data/eu27.json and the 28 parts under mobile/assets/data/ ready"
 
 # --- Verification state ------------------------------------------------------
 # A fresh clone should learn the project's actual epistemic state on first contact,

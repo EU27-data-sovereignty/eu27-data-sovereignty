@@ -40,6 +40,9 @@ The site is static except for one function, `/api/ask` (#78). There is no databa
 | Secret | `ANTHROPIC_API_KEY` (Vercel env, Production, sensitive) | The owner sets the value in the Vercel dashboard, and it is never printed. The key is from the Anthropic workspace `eu27` and **expires 2026-11-05** (see the `/ask` runbook). Without it, `/ask` returns a readable error |
 | Cost cap | A dedicated Anthropic workspace for that key, with a monthly spend limit | The hard ceiling, enforced by Anthropic. When it is reached, `/ask` says questions are paused |
 | Rate limit | Vercel Firewall rule on `/api/ask`, per IP | Staged with `vercel firewall`, applied only with the owner's OK |
+| Edition channel | Supabase Storage, bucket `editions`, public read, in an EU-27 region (project NOT YET created, 2026-10-14) | The mobile reader's only network path (#111). `<edition>/manifest.json` and the 28 parts, immutable; `latest.json`, the pointer. Written only by `deploy.yml`'s `edition` job after the site is final (#112); the policy is `mobile/supabase/migrations/` |
+| Edition variable and secret | `SUPABASE_URL` (repository variable); `SUPABASE_SERVICE_ROLE_KEY` (environment secret, `production`) | The job is skipped until the variable exists; then a missing secret fails the run. The key reaches `model/edition.py` through its environment, never a command line, and is never printed |
+| Edition check | `model/smoke.py --edition-url`, in the `edition` job and weekly in `monitor.yml` | `latest.json` names the committed edition; the served manifest and every part hash to the committed manifest, read anonymously |
 
 ## Deploy flow
 
@@ -157,6 +160,48 @@ vercel ls eu27-data-sovereignty        # newest production deploy and its age
 Every `Deploy` run does this check itself, as the last step of its smoke test. The bundle only catches data changes. A UI-only change leaves it unchanged, so also compare the newest
 deploy's date with `git log -1 --format=%ci`.
 
+## The edition channel (Supabase Storage, #111, #112)
+
+**What it is.** One bucket, `editions`, in a hosted Supabase project in an EU-27 region (Frankfurt `eu-central-1`
+or Stockholm `eu-north-1`; not London, not Zurich). Public read: the one policy is a `select` for `anon`
+(`mobile/supabase/migrations/20261015000000_editions_bucket.sql`); there is no insert, update or delete policy,
+so only the service role, which bypasses row-level security, writes. Objects: `<edition>/manifest.json`,
+`<edition>/eu27.core.json`, `<edition>/eu27.<ISO>.json` and `<edition>/published.json`, never overwritten;
+`latest.json`, the pointer the deploy moves last. The edition id is the sha256 of `web/public/data/eu27.json`,
+the number the "Deployed" row of every run summary prints.
+
+**Creating it (owner, once).**
+
+1. Create the project in the Supabase dashboard, EU region; disable sign-ups (Authentication → Providers →
+   Email → off). The app never calls auth.
+2. Apply the migration: `cd mobile && supabase link --project-ref <ref> && supabase db push`. Check:
+   `curl -sS -o /dev/null -w '%{http_code}' https://<ref>.supabase.co/storage/v1/object/public/editions/latest.json`
+   prints 400 or 404 (bucket present, pointer not yet written), not a DNS failure.
+3. `gh variable set SUPABASE_URL --body https://<ref>.supabase.co`, then, with the service-role key on the
+   clipboard (Project Settings → API), `pbpaste | gh secret set SUPABASE_SERVICE_ROLE_KEY --env production`
+   (the pipe rule in Known gaps: never at a prompt). Check:
+   `gh api repos/EU27-data-sovereignty/eu27-data-sovereignty/actions/variables --jq '.variables[].name'` lists
+   `SUPABASE_URL`, and `.../environments/production/secrets --jq '.secrets[].name'` names the key.
+4. The next push to `main` publishes. The run summary gains an "Edition published" table and the edition rows of
+   the smoke test; the weekly monitor stops reporting "not configured".
+
+**Rotating the key.** Generate a new service-role key in the dashboard (which revokes the old one), set it as in
+step 3, then `gh workflow run Deploy`: the job re-publishes the same edition (every object "already published,
+identical") and moves the pointer, which proves the new key works.
+
+**Verifying by hand, from anywhere.**
+
+```
+curl -sS https://<ref>.supabase.co/storage/v1/object/public/editions/latest.json
+python3 model/export_json.py --split --from web/public/data/eu27.json
+python3 model/edition.py verify --url https://<ref>.supabase.co/storage/v1/object/public/editions --manifest mobile/assets/data/manifest.json
+```
+
+**What Supabase sees.** Each check from an installed app sends one request for `latest.json` and, for a newer
+edition, up to 29 more. Supabase and the cloud provider its project runs on see the network address, the app's
+user agent and the time, in their request logs. Nothing identifies the reader; the app stores nothing about the
+reader; no request is made unless the reader taps or opts in (`mobile/README.md` § Security and privacy).
+
 ## `/ask` runbook (#78)
 
 `/ask` is the only part of the site that spends money and handles visitors' input.
@@ -256,6 +301,11 @@ owner's approval:
 - **Set a secret by piping it, not at a prompt.** `gh secret set` run through Claude Code's `!` prefix has no
   terminal to prompt on and silently stores an empty value. Use `pbpaste | gh secret set NAME --env production`
   with the value on the clipboard.
+- **The edition pointer is mutable and unsigned.** `latest.json` is the one object the deploy overwrites; a
+  write with the service key from anywhere else would show only at the next check (after every deploy, and
+  weekly), and the hash chain proves integrity, not who published (#111). A signed manifest is the follow-up.
+  `latest.json` is cached for a minute, the parts for a year; a manual site rollback (`vercel rollback`) does
+  not move the pointer, so the bucket can be one edition ahead of the site until the next deploy.
 - **The Vercel MCP connector cannot list this project's deployments.** `list_deployments` returns 403
   (seen 2026-09-27). The CLI (`vercel ls`, `vercel inspect`) works; use that instead.
 

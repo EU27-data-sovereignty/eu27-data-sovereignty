@@ -9,11 +9,11 @@ every check and its output, is [`plans/ci-cd-status-2026-10-14.md`](plans/ci-cd-
 
 | Event | Workflow | What runs | Blocks |
 |---|---|---|---|
-| Push to any branch but `main` | `ci.yml` → `gate.yml` (`pdf: false`) | The gate's model, web and e2e jobs; the fact check, reported only. One run per branch: a newer push cancels the run the older one started (#107) | The later push to `main`, once the ruleset is applied (NOT YET on 2026-10-14): `main` accepts only a commit whose model, web and security checks have passed |
+| Push to any branch but `main` | `ci.yml` → `gate.yml` (`pdf: false`) | The gate's model, web, mobile and e2e jobs; the fact check, reported only. One run per branch: a newer push cancels the run the older one started (#107) | The later push to `main`, once the ruleset is applied (NOT YET on 2026-10-14): `main` accepts only a commit whose model, web and security checks have passed |
 | Pull request | `ci.yml` → `gate.yml` (`pdf: false`) | The same | The same; no reviewer is required (#107) |
 | Push or pull request | `security.yml` → dotfiles `security-reusable.yml` | gitleaks over the full history with the shared ruleset, then the security gate over what the push brings | Nothing directly; a red run is a finding to fix |
-| Push to `main` | `deploy.yml` → `gate.yml` (`pdf: true`, `factcheck: true`) | The full gate including 28 PDFs and the fact-check gate; then the deploy job: the gate's own build packaged and checked byte for byte, the current production deployment recorded, the prebuilt upload, the smoke test, one live `/ask` call, promotion if needed, and a rollback to the recorded deployment if the smoke test or the `/ask` call fails (#107) | The production deploy |
-| Mondays 06:17 UTC | `monitor.yml` (`live`, `sources`) | The live site smoke test, Eurostat vintages, every cited source re-fetched | Nothing; a red run is a finding |
+| Push to `main` | `deploy.yml` → `gate.yml` (`pdf: true`, `factcheck: true`, `mobile_integration: true`) | The full gate including 28 PDFs, the fact-check gate and the mobile edition round-trip against a local Supabase; then the deploy job: the gate's own build packaged and checked byte for byte, the current production deployment recorded, the prebuilt upload, the smoke test, one live `/ask` call, promotion if needed, and a rollback to the recorded deployment if the smoke test or the `/ask` call fails (#107); then the `edition` job, once `SUPABASE_URL` is set: the split edition published to the bucket and read back (#112) | The production deploy |
+| Mondays 06:17 UTC | `monitor.yml` (`live`, `sources`) | The live site smoke test and the edition channel (#111), Eurostat vintages, every cited source re-fetched | Nothing; a red run is a finding |
 | Daily 07:41 UTC | `monitor.yml` (`ask`) | One fixed question to the live `/ask` | Nothing |
 
 The cron times are requests: GitHub has started these runs six to nine hours late on every day observed
@@ -38,6 +38,8 @@ locally.
 | `web` | `./test.sh --only web` | `api/` type-checks against the real SDK; type-check, lint, format, Vitest and build; the gzipped size budget |
 | `pdf` | `./test.sh --only pdf` | The EU-27 report and 27 country PDFs compile and pass inspection (disclaimer, appendices, fonts, size). Deploy only |
 | `e2e` | `./test.sh --only e2e --project <name>` | Playwright, one job per browser project |
+| `mobile` | `./test.sh --only mobile` | The mobile reader's suite (`mobile/test.sh --ci`): parity with `web/` byte for byte, the 28 parts against the manifest and the committed bundle, the generated tokens, format, lint, types, Jest with coverage floors, expo-doctor, the web export, `npm audit` against `mobile/audit-allowlist.json` (#113) |
+| `mobile-integration` | `MOBILE_TEST_FLAGS=--integration ./test.sh --only mobile`, if `mobile_integration` | A local Supabase stack; the deploy's own publisher fills the bucket; anonymous reads, refused writes, `verify`, the app installing a good edition and rejecting an altered one. Deploy only: `supabase start` would be the critical path on every push (#113) |
 
 The deploy job ships the gate's own `web-dist` and `pdfs` artifacts. It fails unless the packaged tree's
 sha256 equals the tested build's (#97). After the upload it runs `model/smoke.py` against the domain and
@@ -132,6 +134,16 @@ its duration against the 120-minute timeout and its artifact.
 scanning with push protection, and Dependabot security updates are repository settings the owner applies
 (`plans/ci-cd-hardening.md`, commands A to C); the `security / gate` and `security / gitleaks` contexts in the
 ruleset depend on the job ids of the dotfiles reusable workflow at `@main`.
+
+## Changes on 2026-10-14 (#109–#113)
+
+| Change | Where | What the run history has verified |
+|---|---|---|
+| The `mobile` job on every branch push and pull request | `gate.yml` | NOT YET: no run on a branch with it yet |
+| The `mobile-integration` job in the deploy's gate | `gate.yml`, `deploy.yml` | NOT YET; locally, `cd mobile && ./test.sh --quick --ci --integration`: 9 of 9 steps against local Supabase 2.120.0 |
+| The `edition` job after the deploy | `deploy.yml` | NOT YET: skipped until the owner sets `SUPABASE_URL`; the publisher is tested in `tests/test_edition.py` and by the integration run |
+| The edition check in the weekly smoke test | `monitor.yml` | NOT YET: reports "not configured" until the variable exists |
+| Dependabot watches `mobile/package-lock.json` | `dependabot.yml` | NOT YET: security updates are still off in the settings (#107 A to C) |
 
 ## Known limits
 

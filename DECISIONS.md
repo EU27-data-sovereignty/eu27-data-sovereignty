@@ -3091,3 +3091,250 @@ and a check of cesaer.org itself once it resolves.
 *Would change if:* cesaer.org resolves and the live list differs from the capture, in which case the C1 rows
 are re-read and the Criteria line cites the live page; or the project admits institutions as entities in the
 hosting model (#96), in which case this note becomes the seed of a sourced register and stops being authored.
+
+
+### 109. The mobile reader is rebuilt from the workspace template on the content model, English only, with no release
+**Decision.** 2026-10-14, at the owner's request for "a mobile app with react native and supabase". `mobile/` is
+replaced, not ported: an Expo SDK 57 app (expo-router, React Native 0.86) scaffolded from `templates/rn-supabase`
+with its auth, forms, query client, fonts and EAS removed, that renders the content model exactly as the site
+does. `src/components/DocumentView.tsx` is the port of `web/src/components/DocumentView.tsx`: a fact with its
+numbered source marks, a gap in muted italics, a disputed value in muted italics with a dashed underline, a table
+stacked into cards, and not one sentence of its own; `src/data/{types,format,sources}.ts` are byte-for-byte
+copies of the web's files, pinned by `__tests__/parity.test.ts`. Seven screens: the 27 states, a state's report
+with its sources, the infrastructure overview, the ranking, the methodology, the fact-check appendices and the
+edition. Every screen ends with the provenance notice in the edition's own words (`tests/test_evidence.py`). No
+accounts, no analytics, no permissions, no session storage, a dependency allowlist and exact pins
+(`__tests__/security.test.ts`). English only; no store release, no EAS, no build: the launch gate (#25, #50)
+holds for the app as for the domain. What the template contributed is listed in `docs/plans/mobile-log.md`.
+
+**Problem.** The reader of 2026-09-17 shipped the schema-1 bundle with the Dutch-scaled figures #72 and #73
+withdrew, 1,140 lines of screens none of which survive the content model, and four Dependabot alerts; it ran in
+neither `./test.sh` nor CI (PROGRESS.md records the drift twice). Porting it would have kept its shape for no
+screen's benefit.
+
+**Alternatives considered.**
+- **Rebuild from the template, trimmed to a reader (chosen).**
+- **Port the schema-1 reader.** *Why not:* its screens render fields that no longer exist; the content model is
+  a different shape, and the port would have been a rewrite under an old name, with the same toolchain
+  advisories.
+- **Drop the reader.** *Why not:* it is the one output that works with no network, and the owner asked for it.
+- **Keep it stale until the foundation exists.** *Why not:* it prints withdrawn figures to anyone who runs it.
+- **Keep the template's auth and profiles for later.** *Why not:* dead code is attack surface and a dependency
+  the allowlist would have to admit; accounts are not on the roadmap for this reader.
+
+**Closes off.** A screen that is not a rendering of `document.py` spans; a dependency outside the allowlist;
+auth, accounts or telemetry; EAS, store accounts or a build before the launch gate; editing a pinned copy
+instead of its web original.
+
+**Verified:** 2026-10-14. `cd mobile && ./test.sh --ci`: 20 steps PASS, 2 skipped (gate: `--ci`; integration:
+`pass --integration`). Jest: 5 suites, 75 tests, coverage 77.5% statements, 70.9% branches, 78.2% functions,
+80.8% lines (floors 70/55/65/70 in `jest.config.js`). `npx tsc --noEmit`: clean. `npx expo lint`: clean.
+`npm run doctor`: 21 of 21 checks passed. `npx expo export --platform web`: one bundle of 7.8 MB, the 28 parts
+inside. `node scripts/check-audit.mjs`: 5 root advisories, 4 allowlisted, 1 moderate noted, ok.
+`python3 -m unittest tests.test_evidence -q`: the new `test_the_mobile_app_shows_it` passes. **NOT YET:** a
+reading on a physical device by a person; the app has run in Jest and as a web export only.
+
+*Would change if:* the content model gains a block type the renderer does not draw (then the port is extended,
+never a local sentence); or the launch gate is passed and a release is decided, which reopens EAS, the store
+accounts and the identifiers `cloud.eu27.reader` (#111's region and processor questions come with it).
+
+### 110. The app ships the bundle as a split edition: 28 generated parts and a tracked manifest whose id is the bundle's sha256
+**Decision.** 2026-10-14. `python3 model/export_json.py --split` writes `web/public/data/eu27.json` as
+`eu27.core.json` (everything that is not one state's, plus `index`, the one key the single file lacks: each
+state's name and the evidence counts the web's Countries page derives) and 27 `eu27.<ISO>.json` (one state's
+document, data, fact-check appendix and line, with exactly the claims its spans cite and the sources behind
+them), into `mobile/assets/data/`, and a `manifest.json` naming the sha256 and size of every part and the
+sha256 of the single file, which is the **edition id**. The parts are generated and gitignored; the manifest is
+tracked there and at `web/public/data/manifest.json`, so the site publishes its edition id too. `./run.sh data`,
+the gate's "Generated files are current" stage and the clean-room rebuild all run the split; `--from FILE` splits
+an existing bundle without rebuilding the model. The app `require()`s the 28 parts (`src/data/bundled.ts`),
+each behind a function so a state is parsed on first use.
+
+**Problem.** The single bundle is 7.5 MB; parsing it whole on every launch is the wrong shape for a phone, and
+the hand copy the old reader carried drifted from the site with no error anywhere. The parts had to be
+provably the same content as the file every other output renders, and the proof had to run with no network.
+
+**Alternatives considered.**
+- **A split per state with a manifest, generated, proven by a round-trip test (chosen).**
+- **Ship the single 7.5 MB file.** *Why not:* parsed in full at launch on a low-end phone; the one reason for a
+  split is to load a state on demand.
+- **Network-only, nothing in the binary.** *Why not:* the reason the app exists is reading without a network; a
+  reader with no connection would see nothing.
+- **Track the 28 parts in git.** *Why not:* a second 7.5 MB per edition in history for files that are a pure
+  function of a committed file; the manifest pins them, and `tests/test_export_split.py` proves the function.
+  One `.gitignore` line reverses it if the owner prefers the files in git.
+- **Parts under `web/public/data/`.** *Why not:* `mobile/` is excluded by `.vercelignore` and `web/public/` is
+  not: 7 MB more on every Vercel upload for no reader. Only the 2 KB manifest is written there.
+- **`index` in the single file too.** *Why not:* it would change the web bundle's bytes and mark all 27 posters
+  stale (`countries/ARTEFACTS.csv` pins the bundle's hash).
+
+**Closes off.** A mobile screen that reads anything but a part; a part edited by hand; `./run.sh data` without
+the split; a manifest in one place that differs from the other.
+
+**Verified:** 2026-10-14. `python3 -m unittest tests.test_export_split -q`: 13 tests, OK. The round trip:
+`merge_parts(split_bundle(B)) == B` and the re-serialisation equals the committed bytes; every claim a part
+cites is in it; every claim of the bundle is in exactly one state part; the two tracked manifests are the
+committed bundle's. `python3 model/export_json.py --from web/public/data/eu27.json`: 28 parts, 8,071,643 bytes,
+edition `1a970a50803fdee0…`; `shasum -a 256` of both manifests: `3b5cd5208d5f8687…`, identical. A second
+`./run.sh data` leaves no diff under `web/public/data` or `mobile/assets/data`. `./test.sh --only model`: the
+regeneration step passes with the split in it.
+
+*Would change if:* the bundle gains a cross-state claim (a claim one state's document cites from another's),
+which `test_every_claim_in_the_bundle_is_in_exactly_one_country_part` would fail; or Metro's handling of 28
+JSON modules proves too heavy at startup on low-end devices, in which case the parts become assets
+(`expo-asset`), which would also allow hashing the bundled parts at runtime.
+
+### 111. The edition channel is one public, read-only Supabase Storage bucket in an EU region, read on a tap
+**Decision.** 2026-10-14, the owner's choice over the plan of 2026-10-03 (`docs/plans/mobile-app.md`, which
+recommended no Supabase in v1). A hosted Supabase project in an EU-27 region (Frankfurt or Stockholm; not
+London, not Zurich), one bucket `editions`, public, 16 MiB per object, JSON only, with one `select` policy for
+`anon` and no insert, update or delete policy (`mobile/supabase/migrations/20261015000000_editions_bucket.sql`):
+only the service role, which bypasses row-level security, writes, and only the deploy holds it (#112). Objects:
+`<edition>/manifest.json`, the 28 parts and `<edition>/published.json`, immutable; `latest.json`, the one
+mutable pointer. The app's `src/services/channel.ts` is the only place a URL is built, from the configured
+project; `src/edition/expoFiles.ts` the only place anything is downloaded. A check runs on a tap in the About
+screen, or at launch if the reader switches the automatic check on (off by default), and never otherwise;
+unconfigured, the app makes no request at all. Every downloaded file is hashed against the published manifest,
+the manifest against `latest.json`, before a single value is shown; a downloaded part is re-hashed on every
+read, and a mismatch discards the edition, serves the bundled one and names the part. The hash chain proves
+integrity and consistency with the deploy's record; it does not prove who published, since the pointer and the
+manifest come from the same origin: until a signed manifest exists, the Supabase project is a trusted party, and
+this entry says so.
+
+**Problem.** An installed app would otherwise print facts the site later withheld as disputed (#89) with no way
+to learn of it before a store release, and a release is behind the launch gate. The channel had to be auditable
+from outside by anyone with `curl`, to give the app no write path, and to add no second network call.
+
+**Alternatives considered.**
+- **A public read-only bucket, hash-verified, on an opt-in request (chosen).**
+- **`GET https://eu27.cloud/data/manifest.json`, the 2026-10-03 plan's recommendation.** *Why not:* a second
+  reader of the Vercel deployment couples the app's updates to the web deploy's cache rules and SPA rewrite, and
+  the owner chose a channel the app owns; the site still publishes its manifest, so the two can be compared.
+- **No network at all.** *Why not:* installed apps would go on printing values later withheld, with no way to
+  say so.
+- **EAS Update.** *Why not:* it ships code, not data, through a US build service the project does not use, and
+  a data correction is not a code release.
+- **Self-hosting on an EU provider.** *Why not, for now:* a server to patch and back up for a 10 MB bucket;
+  reopened with the foundation (`docs/plans/stichting.md`), which is also when the processor question is settled.
+- **GitHub Releases as the channel.** *Why not:* rate-limited anonymous reads, no region choice, and a US
+  processor with no EU hosting.
+- **A check at every launch by default.** *Why not:* "Data not collected" would be untrue of an app that
+  contacts a host on every start; a tap, or an explicit opt-in, keeps the privacy statement honest.
+
+**Closes off.** Any write path from the app; a region outside the EU-27; a second network call or host; a
+value from a downloaded file that has not matched its hash; the service-role key anywhere in the app or its
+environment.
+
+**Verified:** 2026-10-14, against the local stack (`supabase start`, CLI 2.120.0, on Colima): `cd mobile &&
+./test.sh --quick --ci --integration`: 9 of 9 integration steps passed against 127.0.0.1:54321: the publisher
+fills the bucket; every object is readable anonymously and hashes to its manifest entry; anonymous POST, DELETE
+and a POST to a new path answer 4xx; a re-run changes nothing; `verify` passes; the app's store installs the
+edition; an object altered in the bucket with the service key is caught by `verify` by name and rejected by the
+app, which keeps the bundled edition; the bucket is left empty. `npx jest __tests__/edition.test.ts`: 12 tests
+(unconfigured makes no request; up to date; unreachable; a malformed pointer and a future schema ignored; an
+install with every part verified and the pointer written; a part with one byte altered rejected with nothing
+kept; a manifest not matching the pointer rejected; a failed download leaves no temporary directory; an
+installed part altered on disk is discarded on read). `__tests__/security.test.ts`: downloads only in
+`expoFiles.ts`, URLs only in `channel.ts`, no literal host anywhere. **NOT YET:** the hosted project, which
+exists only when the owner creates it (`DEPLOYMENT.md` § The edition channel lists the steps); the first
+device fetching from it.
+
+*Would change if:* a signed manifest is added (ed25519 over the manifest, the public key in the app), after
+which the Supabase project is no longer trusted for authorship; or the foundation chooses an EU self-hosted
+store, in which case `channel.ts` changes and nothing else; or Supabase stops offering an EU-27 region.
+
+### 112. Only the deploy publishes an edition: one job, after the site is final, immutable objects, the pointer last
+**Decision.** 2026-10-14. `deploy.yml` gains a job `edition` with `needs: deploy`, in the `production`
+environment, skipped until the repository variable `SUPABASE_URL` is set (the `ASK_LIVE` phase-in): it
+regenerates the parts from the committed bundle (#110) and runs `python3 model/edition.py publish`, which reads
+the service-role key from `SUPABASE_SERVICE_ROLE_KEY` in its environment (never argv, never printed), proves
+the local tree first, uploads each object under `<edition>/` with `x-upsert: false` (an object already there is
+accepted only if it hashes to ours; different bytes under the same id fail), writes `published.json` once with
+the commit and run, and only when every part is served moves `latest.json`, the sole object written with
+`x-upsert: true`. The run summary carries the edition id, the manifest's sha256, the commit and the count of
+objects uploaded or already present; the same job then reads the bucket back anonymously
+(`model/smoke.py --edition-url`), and `monitor.yml` does the same weekly. A failed publish fails the run and
+touches nothing on the site. `model/edition.py` is stdlib `urllib`, tested against a fake Storage server
+(`tests/test_edition.py`) and against the real one by the integration run (#111). `tests/test_workflows.py`
+holds the shape: one job, `needs: deploy`, the secret once and only in an `env:` block, one `run:` line of
+`python3 model/edition.py publish`, no npx, curl, supabase or pip in the step, `upsert=True` once in the module.
+
+**Problem.** The bucket is read by every installed app; what reaches it must be the manifest the gate tested
+and nothing else, written by something a reader can audit, from a place that has already passed every check.
+A hand upload is a step nobody re-checks and a key on a laptop; a bash loop of curl lines cannot be
+unit-tested; the Supabase CLI would need its own pin and checksum in the workflow and uploads through the same
+REST endpoint anyway.
+
+**Alternatives considered.**
+- **A separate job after the deploy, a stdlib publisher, immutable objects (chosen).**
+- **The owner publishes by hand (`./run.sh publish`).** *Why not:* outside the gate, outside the run summary,
+  and the service key would live on a laptop.
+- **Publish from the gate's mobile job.** *Why not:* a branch push would publish, and the key would leave the
+  `production` environment.
+- **A step inside the deploy job, before or after the smoke test.** *Why not:* before promote, a failed publish
+  would fire the rollback of a site that passed every check; inside the job at all, the key's scope widens to
+  every step and the rollback condition has to learn about the bucket. A job with `needs: deploy` runs only
+  after a site that was not rolled back, and holds the key alone.
+- **curl lines in the workflow.** *Why not:* 29 objects, a Duplicate branch, read-after-write and a summary
+  table in bash is a loop nobody tests; the Python module runs against a local `http.server` in the unit tests
+  and against local Supabase in the integration run.
+- **The Supabase CLI (`storage cp`).** *Why not:* an exact pin and a checksum in `deploy.yml`, as typst has, for
+  a tool that uses the same REST endpoint; and its upload flags are not the immutability contract this needs.
+- **Upsert everything.** *Why not:* a published edition could change under an installed app's hash; a bucket
+  the app has verified once must not be able to differ the next time.
+
+**Closes off.** Any other writer of the bucket; the service key outside the `production` environment or on a
+command line; an object under an edition id overwritten; a pointer moved before every part is served; a
+rollback of the site because of the bucket.
+
+**Verified:** 2026-10-14. `python3 -m unittest tests.test_edition tests.test_workflows -q`: OK (12 publisher
+tests, incl. the key never on stdout, in a URL or in the summary; the six `Edition` workflow tests). The
+integration run of #111: the same `edition.py publish` against local Supabase, 9 of 9. **NOT YET:** the first
+production publish (the job is skipped until `SUPABASE_URL` exists); the first weekly check with a URL; a
+publish failure in production, expected never to roll the site back.
+
+*Would change if:* Supabase Storage changes its Duplicate response or the `x-upsert` header, which
+`put_immutable` would report as an upload failure on the next deploy; or the foundation moves the bucket, in
+which case `Storage.object()` and `Storage.public()` change and the tests hold the rest.
+
+### 113. The mobile reader is a stage of the gate and a parallel CI job; its Supabase round-trip runs only in the deploy's gate
+**Decision.** 2026-10-14. `./test.sh` gains a sixth `--only` group, `mobile` (stage 17), and `--no-mobile`; the
+stage runs `mobile/test.sh --ci`, the reader's own suite with its summary table, and fails, not skips, when
+`mobile/node_modules` is missing, the file's precedent for `web/`. `gate.yml` runs it as a parallel job on every
+branch push and pull request, and a second job, `mobile-integration`, only when the caller passes
+`mobile_integration: true`: `deploy.yml` does, `ci.yml` does not. The clean-room rebuild and the root `init.sh`
+install `mobile/` too; `.github/dependabot.yml` watches its lockfile; the four Expo-toolchain advisories the
+rebuilt lockfile still carries are allowlisted with reasons in `mobile/audit-allowlist.json`, and `npm audit`
+runs against that file, never bare.
+
+**Problem.** The old reader's suite ran only from `mobile/`, and PROGRESS.md records twice that the parity test
+that would have caught the drift ran in neither `./test.sh` nor CI. `supabase start` pulls about a dozen Docker
+images (two to four minutes) and would have made the mobile job the critical path of every branch push, above
+the PDF job's four minutes; two of the four advisories have no patched release, so a bare `npm audit` would fail
+every run.
+
+**Alternatives considered.**
+- **A gate group on every push; the integration round-trip in the deploy's gate only (chosen).**
+- **Outside the gate, as before.** *Why not:* the drift this allowed is on record.
+- **The integration round-trip on every branch push.** *Why not:* the critical path, for a check whose value
+  is before a production publish.
+- **The integration round-trip weekly only.** *Why not:* it would run after a publish, not before one.
+- **A bare `npm audit --audit-level=high --prefix mobile` line in `gate.yml`, as the web job has.** *Why not:*
+  `node-forge` and `braces` have no fix; the allowlisted audit is the same check with the reasons on record.
+- **Adding the mobile context to `main`'s ruleset now.** *Why not:* #107's reason for the fast four was minutes
+  per push; add it after two weeks of timings show it under the web job.
+
+**Closes off.** A mobile test that runs only from `mobile/`; a `mobile/test.sh` step the root gate does not run;
+`supabase start` on a branch push; a Docker image pulled by tag on the critical path (the integration job pulls
+by tag, the one unpinned element of this change, and runs only before a production publish).
+
+**Verified:** 2026-10-14. `./test.sh --only mobile`: one stage, then `mobile/test.sh`'s table, every step PASS,
+exit 0. `python3 -m unittest tests.test_workflows -q`: OK, incl. `test_the_gate_jobs_run_every_stage_of_test_sh`
+with the six groups and `test_the_mobile_group_runs_in_the_gate_and_its_round_trip_only_in_the_deploy_s_gate`.
+`python3 -m unittest tests.test_ignore_rules tests.test_repeatability -q`: OK. **NOT YET:** the first Actions
+timings of the `mobile` and `mobile-integration` jobs; the clean-room run (`./run.sh reproduce`) with `mobile/`
+in it.
+
+*Would change if:* the mobile job's duration in Actions stays under the web job's for two weeks, in which case
+`Gate / Mobile reader (./test.sh --only mobile)` is added to `.github/rulesets/main.json`; or `supabase start`
+becomes pinnable by digest, in which case the round-trip can move to every push.

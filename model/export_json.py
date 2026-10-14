@@ -2,11 +2,20 @@
 """
 Export every fact about all 27 member states as one JSON bundle for the web app.
 
-    python3 model/export_json.py [-o web/public/data/eu27.json]
+    python3 model/export_json.py [-o web/public/data/eu27.json] [--split [DIR]]
+    python3 model/export_json.py --from web/public/data/eu27.json [--split [DIR]]
 
 Reads the same country_data.build() dict and content model (document.py) the markdown
-briefs and the PDFs are rendered from, so no output can disagree with another. The whole bundle is ~26 KB gzipped, which is
-why the app ships the entire model client-side and needs no API.
+briefs and the PDFs are rendered from, so no output can disagree with another. The bundle is about
+930 KB gzipped (7.5 MB raw); the web app ships the entire model client-side and needs no API.
+
+`--split` also writes the *edition* the mobile reader ships (#110): the same content as 28 parts,
+`eu27.core.json` plus one `eu27.<ISO>.json` per member state, each self-contained, and a
+`manifest.json` naming the sha256 of every part and of the single file (the edition id). The parts are
+a pure function of the single file, so they are generated, never tracked; the manifest is tracked, in
+`mobile/assets/data/` and in `web/public/data/`, so the site publishes its edition id too. `--from`
+splits an existing bundle without rebuilding the model. tests/test_export_split.py proves the parts
+merge back to the single file byte for byte.
 
 Keys prefixed with "_" are dropped: they carry Python objects (the raw Summary
 dataclass) that exist only so the markdown renderer can format unrounded values.
@@ -14,6 +23,7 @@ dataclass) that exist only so the markdown renderer can format unrounded values.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -28,6 +38,126 @@ import evidence  # noqa: E402
 
 SCHEMA_VERSION = 2
 DEFAULT_OUT = cm.ROOT / "web" / "public" / "data" / "eu27.json"
+# The split edition (#110): the parts next to the app that bundles them, the manifest also next to the site's
+# single file. Part names are fixed so the app's static requires and the manifest's keys cannot drift.
+SPLIT_DIR = cm.ROOT / "mobile" / "assets" / "data"
+SITE_MANIFEST = DEFAULT_OUT.parent / "manifest.json"
+CORE_PART = "eu27.core.json"
+MANIFEST = "manifest.json"
+# The record maps a country part carries; everything else in the bundle is core.
+PER_COUNTRY = ("documents", "countries")
+
+
+def dumps(obj) -> str:
+    """The one serialisation every file here uses: sorted keys, so bytes are reproducible and diffs readable."""
+    return json.dumps(obj, indent=1, sort_keys=True, ensure_ascii=False)
+
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def cited(docs: list[dict], claims: dict) -> tuple[dict, list[str]]:
+    """The claims a list of documents cites (any span carrying ids, so a disputed span's trace resolves
+    too), restricted to what the bundle records, and the source ids behind them."""
+    ids = sorted({c for d in docs for s in document.walk_spans(d) for c in s.get("c", []) if c in claims})
+    sub = {c: claims[c] for c in ids}
+    return sub, sorted({cite["source_id"] for cs in sub.values() for cite in cs})
+
+
+def index_entry(doc: dict, country: dict) -> dict:
+    """What the country list shows without opening a part: the same counts the web's Countries page
+    derives (web/src/data/sources.ts coverage() and factCounts(), web/src/pages/Countries.tsx)."""
+    spans = list(document.walk_spans(doc))
+    held = country["national_data"]
+    return {
+        "name": country["name"],
+        "facts": sum(1 for s in spans if s["role"] == "fact"),
+        "gaps": sum(1 for s in spans if s["role"] in ("gap", "disputed") and s["t"] != "—"),
+        "withheld": sum(1 for s in spans if s["role"] == "disputed"),
+        "holdings_verified": sum(1 for e in held if e["status"] != "unrecorded"),
+        "holdings_total": len(held),
+        "tier0_verified": sum(1 for e in held if e["status"] != "unrecorded" and e["tier"] == 0),
+        "tier0_total": sum(1 for e in held if e["tier"] == 0),
+    }
+
+
+def split_bundle(bundle: dict) -> dict[str, bytes]:
+    """The edition: the bundle as self-contained parts plus a manifest, as bytes keyed by file name.
+
+    `eu27.<ISO>.json` holds one state's document, data, fact-check appendix and line, with exactly the claims
+    its spans cite and the sources behind them. `eu27.core.json` holds everything else (notice, sovereignty,
+    methodology, infrastructure, the EU fact-check appendix, ...) with the claims *those* cite, plus `index`,
+    the one key the single file lacks. Duplicates across parts (a source two states cite, the infrastructure
+    overview's copies of country spans) are byte-identical, which merge_parts() asserts."""
+    single = dumps(bundle).encode("utf-8")
+    claims, sources, fc = bundle["claims"], bundle["sources"], bundle["factcheck"]
+    isos = sorted(bundle["documents"])
+    files: dict[str, bytes] = {}
+
+    core = {k: v for k, v in bundle.items() if k not in PER_COUNTRY + ("claims", "sources", "factcheck")}
+    core["factcheck"] = {"eu": fc["eu"]}
+    core["claims"], sids = cited([bundle["infrastructure"], bundle["methodology"], fc["eu"]], claims)
+    core["sources"] = {s: sources[s] for s in sids}
+    core["index"] = {iso: index_entry(bundle["documents"][iso], bundle["countries"][iso]) for iso in isos}
+    files[CORE_PART] = dumps(core).encode("utf-8")
+
+    for iso in isos:
+        docs = [bundle["documents"][iso], fc["countries"][iso]]
+        part_claims, sids = cited(docs, claims)
+        part = {"schema_version": bundle["schema_version"], "generated": bundle["generated"],
+                "documents": {iso: bundle["documents"][iso]}, "countries": {iso: bundle["countries"][iso]},
+                "factcheck": {"countries": {iso: fc["countries"][iso]}, "lines": {iso: fc["lines"][iso]}},
+                "claims": part_claims, "sources": {s: sources[s] for s in sids}}
+        files[f"eu27.{iso}.json"] = dumps(part).encode("utf-8")
+
+    manifest = {"schema_version": bundle["schema_version"], "generated": bundle["generated"],
+                "edition": sha256(single),
+                "parts": {name: {"sha256": sha256(data), "bytes": len(data)} for name, data in files.items()}}
+    files[MANIFEST] = dumps(manifest).encode("utf-8")
+    return files
+
+
+def merge_parts(parts: dict[str, dict]) -> dict:
+    """The single bundle from loaded parts (name -> dict). Inverse of split_bundle(): a duplicate record
+    that differs between parts is a corrupt edition, not a merge to resolve."""
+    core = dict(parts[CORE_PART])
+    core.pop("index")
+    merged = {**core, "documents": {}, "countries": {}, "claims": dict(core["claims"]),
+              "sources": dict(core["sources"]), "factcheck": {"eu": core["factcheck"]["eu"], "countries": {}, "lines": {}}}
+    for name, part in sorted(parts.items()):
+        if name in (CORE_PART, MANIFEST):
+            continue
+        for key in PER_COUNTRY:
+            merged[key].update(part[key])
+        merged["factcheck"]["countries"].update(part["factcheck"]["countries"])
+        merged["factcheck"]["lines"].update(part["factcheck"]["lines"])
+        for key in ("claims", "sources"):
+            for k, v in part[key].items():
+                if k in merged[key] and merged[key][k] != v:
+                    raise ValueError(f"{name}: {key} {k} differs from another part")
+                merged[key][k] = v
+    for key in ("documents", "countries", "claims", "sources"):
+        merged[key] = dict(sorted(merged[key].items()))
+    merged["factcheck"]["countries"] = dict(sorted(merged["factcheck"]["countries"].items()))
+    merged["factcheck"]["lines"] = dict(sorted(merged["factcheck"]["lines"].items()))
+    return merged
+
+
+def write_split(bundle: dict, out_dir: Path, site_manifest: Path | None = SITE_MANIFEST) -> dict:
+    """Write the edition into out_dir, removing any part that is no longer in it, and the manifest also
+    beside the site's single file. Returns the manifest."""
+    files = split_bundle(bundle)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for stale in out_dir.glob("eu27.*.json"):
+        if stale.name not in files:
+            stale.unlink()
+    for name, data in files.items():
+        (out_dir / name).write_bytes(data)
+    if site_manifest:
+        site_manifest.parent.mkdir(parents=True, exist_ok=True)
+        site_manifest.write_bytes(files[MANIFEST])
+    return json.loads(files[MANIFEST])
 
 
 def strip_private(obj):
@@ -126,15 +256,29 @@ def build_bundle() -> dict:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("-o", "--out", type=Path, default=DEFAULT_OUT)
+    p.add_argument("--split", nargs="?", const=SPLIT_DIR, default=None, type=Path, metavar="DIR",
+                   help=f"also write the split edition and its manifest (default DIR {SPLIT_DIR.relative_to(cm.ROOT)})")
+    p.add_argument("--from", dest="source", type=Path, metavar="FILE",
+                   help="split this existing bundle instead of rebuilding the model (implies --split)")
     args = p.parse_args(argv)
 
-    bundle = build_bundle()
-    args.out.parent.mkdir(parents=True, exist_ok=True)
-    # sort_keys so the bundle is byte-reproducible and diffs stay readable.
-    args.out.write_text(json.dumps(bundle, indent=1, sort_keys=True, ensure_ascii=False), encoding="utf-8")
+    if args.source:
+        bundle = json.loads(args.source.read_text(encoding="utf-8"))
+        split_dir = args.split or SPLIT_DIR
+    else:
+        bundle = build_bundle()
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        # sort_keys so the bundle is byte-reproducible and diffs stay readable.
+        args.out.write_text(dumps(bundle), encoding="utf-8")
+        size = args.out.stat().st_size
+        print(f"{args.out}: {len(bundle['countries'])} countries, {size:,} bytes")
+        split_dir = args.split
 
-    size = args.out.stat().st_size
-    print(f"{args.out}: {len(bundle['countries'])} countries, {size:,} bytes")
+    if split_dir:
+        manifest = write_split(bundle, split_dir)
+        total = sum(p["bytes"] for p in manifest["parts"].values())
+        print(f"{split_dir}: edition {manifest['edition'][:16]}…, {len(manifest['parts'])} parts, {total:,} bytes; "
+              f"manifest also at {SITE_MANIFEST.relative_to(cm.ROOT)}")
     return 0
 
 

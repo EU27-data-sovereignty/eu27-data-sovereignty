@@ -1,8 +1,7 @@
 # Plan: a mobile app in all 24 EU languages (React Native + Supabase)
 
-Drafted 2026-10-03 by a read-only planning agent and reviewed in session. Nothing in it is decided until the
-owner answers the decisions at the end, and each choice that closes off an alternative gets a `DECISIONS.md`
-entry.
+Drafted 2026-10-03 by a read-only planning agent and reviewed in session. The reader part was decided and built
+on 2026-10-14 (see Status below); the languages remain a plan.
 
 ## Context
 
@@ -107,6 +106,27 @@ entry.
 - **Performance** on low-end phones.
 - **US processors** (Expo EAS, Supabase).
 - **Accounts in a personal name** until the foundation exists.
+
+## Status 2026-10-14
+
+The owner decided in planning (`docs/plans/mobile-log.md`; DECISIONS.md #109–#113), and the reader was rebuilt in
+the same session. Of the nine decisions below:
+
+1. **Rebuild:** yes (#109). The old reader is gone; `mobile/` is the new app.
+2. **Edition check:** yes, but against a Supabase Storage bucket the deploy writes, not against `eu27.cloud`
+   (#111, #112). The "Edition check (v1.1)" paragraph above is superseded: the app's only network call is the
+   bucket, on a tap or an opt-in; the site still publishes `/data/manifest.json` so the two can be compared.
+3. **Facts:** English, with the original quote in each source entry (#109). Translation stays in
+   `localisation-plan.md`.
+4. **Irish and Maltese labels:** not applicable until 3 changes.
+5. **Store accounts**, 6. **DSA trader**, 7. **Internal testing:** open; no release, no EAS (#109).
+8. **Supabase:** answered early, by the owner: hosted, in an EU region, as a read-only edition channel only; the
+   foundation's processor list names it for that reason. Submissions stay on the GitHub forms.
+9. **Builds:** neither; no builds until the launch gate.
+
+The split export (`model/export_json.py --split`), the "About this edition" screen, the parity pins, the gate stage
+and the Dependabot entry exist as this plan described them. `mobile-release.yml` is not built. The languages
+(phases 3 and 4) are untouched.
 
 ## Owner decisions
 

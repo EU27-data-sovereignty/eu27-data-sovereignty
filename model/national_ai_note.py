@@ -256,7 +256,7 @@ def problems(body: str | None = None) -> list[str]:
             out.append(f"section 6 group '{g}' is not alphabetical by English name; order carries no meaning")
 
     # Never rendered.
-    skip = {"node_modules", ".venv", "dist", "build", "__pycache__", "research"}
+    skip = {"node_modules", ".venv", "dist", "build", "__pycache__", "research", ".expo", "coverage", "supabase"}
     for d in ("model", "book", "api", "web/src", "mobile"):
         for p in (ROOT / d).rglob("*"):
             if skip & set(p.relative_to(ROOT).parts):

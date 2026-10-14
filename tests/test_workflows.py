@@ -72,14 +72,14 @@ class Deploy(unittest.TestCase):
     def test_deploy_waits_for_the_gate(self):
         self.assertRegex(DEPLOY, r"\n  gate:\n(?:    .*\n)*?    uses: \./\.github/workflows/gate\.yml\n")
         self.assertRegex(DEPLOY, r"\n  deploy:\n(?:    .*\n)*?    needs: gate\n")
-        self.assertRegex(DEPLOY, r"with:\n      pdf: true\n      factcheck: true\n")
+        self.assertRegex(DEPLOY, r"with:\n      pdf: true\n      factcheck: true\n      mobile_integration: true\n")
 
     def test_the_gate_jobs_run_every_stage_of_test_sh(self):
         # The --only groups partition test.sh: every stage is in exactly one group, and gate.yml runs each
         # group, so the parallel jobs run what ./test.sh runs (docs/process.md, optimisation 3).
         groups = test_sh_groups()
         self.assertNotIn(None, groups, f"stages outside any --only group: {groups.get(None)}")
-        self.assertEqual(sorted(groups), ["e2e", "live", "model", "pdf", "web"])
+        self.assertEqual(sorted(groups), ["e2e", "live", "mobile", "model", "pdf", "web"])
         for group in set(groups) - {"live"}:
             self.assertRegex(GATE, rf"\./test\.sh --only {group}\b")
 
@@ -195,6 +195,80 @@ class Deploy(unittest.TestCase):
     def test_only_main_deploys(self):
         self.assertRegex(DEPLOY, r"push:\n\s+branches: \[main\]\n")
         self.assertNotIn("pull_request", DEPLOY)
+
+
+class Edition(unittest.TestCase):
+    """The edition channel (#111, #112): published by one job after the site is final, written by one stdlib
+    module, read back anonymously after every deploy and every week."""
+
+    EDITION_PY = (ROOT / "model" / "edition.py").read_text(encoding="utf-8")
+    MONITOR = (ROOT / ".github" / "workflows" / "monitor.yml").read_text(encoding="utf-8")
+
+    def job(self) -> str:
+        parts = DEPLOY.split("\n  edition:\n")
+        self.assertEqual(len(parts), 2, "deploy.yml needs the edition job")
+        return parts[1]
+
+    def test_the_edition_is_published_by_its_own_job_after_the_deploy(self):
+        job = self.job()
+        self.assertRegex(job, r"\n    needs: deploy\n")
+        self.assertIn("if: vars.SUPABASE_URL != ''", job)            # phased in like ASK_LIVE: skipped until set
+        self.assertRegex(job, r"environment:\n      name: production\n")
+        self.assertLess(DEPLOY.index("Roll back to the previous production deployment"), DEPLOY.index("\n  edition:\n"))
+        deploy_job = DEPLOY.split("\n  deploy:\n")[1].split("\n  # The edition channel", 1)[0]
+        for forbidden in ("model/edition.py", "SUPABASE", "--edition-url"):
+            self.assertNotIn(forbidden, deploy_job, "the deploy job itself never touches the bucket")
+
+    def test_the_service_key_reaches_only_the_publisher_through_its_environment(self):
+        self.assertEqual(DEPLOY.count("secrets.SUPABASE_SERVICE_ROLE_KEY"), 1)
+        job = self.job()
+        step = job.split("- name: Publish the edition", 1)[1].split("- name:", 1)[0]
+        self.assertIn("env:\n          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}", step)
+        for line in job.splitlines():
+            if line.strip().startswith("run:"):
+                self.assertNotIn("SERVICE_ROLE", line, "the key is never on a command line")
+                self.assertNotIn("echo", line)
+        for wf in WORKFLOWS:
+            if wf.name != "deploy.yml":
+                self.assertNotIn("SERVICE_ROLE", wf.read_text(), wf.name)
+
+    def test_the_publisher_is_one_stdlib_module_and_nothing_unpinned(self):
+        job = self.job()
+        step = job.split("- name: Publish the edition", 1)[1].split("- name:", 1)[0]
+        runs = [ln.strip() for ln in step.splitlines() if ln.strip().startswith("run:")]
+        self.assertEqual(len(runs), 1)
+        self.assertTrue(runs[0].startswith("run: python3 model/edition.py publish "), runs[0])
+        for tool in ("npx", "curl", "supabase ", "pip "):
+            self.assertNotIn(tool, step, f"{tool.strip()} in the publish step: an unpinned tool")
+        self.assertIn("import urllib.request", self.EDITION_PY)
+        self.assertNotIn("import requests", self.EDITION_PY)
+
+    def test_an_edition_is_immutable_and_only_the_pointer_moves(self):
+        self.assertIn('"x-upsert": "true" if upsert else "false"', self.EDITION_PY)
+        self.assertIn("put_immutable(store, f\"{edition}/{name}\"", self.EDITION_PY)
+        self.assertIn("upsert=False", self.EDITION_PY)
+        pointer = self.EDITION_PY.split("def put_pointer", 1)[1].split("\ndef ", 1)[0]
+        self.assertIn("upsert=True", pointer)
+        self.assertEqual(self.EDITION_PY.count("upsert=True"), 1, "only latest.json is ever overwritten")
+        self.assertIn("os.environ.get(\"SUPABASE_SERVICE_ROLE_KEY\")", self.EDITION_PY)
+        self.assertNotIn("add_argument(\"--key", self.EDITION_PY)
+
+    def test_the_deploy_and_the_weekly_monitor_read_the_edition_back(self):
+        job = self.job()
+        self.assertIn("python3 model/smoke.py --site '' --edition-url", job)
+        self.assertIn("--manifest mobile/assets/data/manifest.json", job)
+        self.assertIn("--edition-url", self.MONITOR)
+        self.assertIn("--manifest mobile/assets/data/manifest.json", self.MONITOR)
+        for text in (job, self.MONITOR):
+            self.assertLess(text.index("export_json.py --split --from"), text.index("--edition-url"),
+                            "the parts are generated before they are checked")
+
+    def test_the_mobile_group_runs_in_the_gate_and_its_round_trip_only_in_the_deploy_s_gate(self):
+        self.assertRegex(GATE, r"\n  mobile:\n(?:    .*\n)*?      - name: Run the mobile group\n        run: \./test\.sh --only mobile\n")
+        self.assertRegex(GATE, r"\n  mobile-integration:\n(?:    .*\n)*?    if: inputs\.mobile_integration\n")
+        self.assertIn("MOBILE_TEST_FLAGS=--integration ./test.sh --only mobile", GATE)
+        self.assertNotIn("mobile_integration: true", CI)
+        self.assertRegex(GATE, r"supabase/setup-cli@[0-9a-f]{40} # v[\d.]+\n        with:\n          version: \d+\.\d+\.\d+\n")
 
 
 class ToolVersions(unittest.TestCase):

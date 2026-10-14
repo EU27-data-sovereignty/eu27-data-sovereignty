@@ -28,8 +28,11 @@ VERCELIGNORE = ROOT / ".vercelignore"
 # layer is exactly the kind of thing that gets deleted in a tidy-up.
 PERSONAL = ["**/contacts/", "*-contacts.md"]
 
-# The Expo reader is local-only: no build, no store listing, no deploy.
-MOBILE_GIT = ["mobile/node_modules/", "mobile/.expo/", "mobile/dist/", "mobile/.env.local"]
+# The Expo reader is never built by Vercel, holds a local Supabase stack's state, and bundles the 28
+# generated parts of the split edition (#110): only their manifest is tracked.
+MOBILE_GIT = ["mobile/node_modules/", "mobile/.expo/", "mobile/dist/", "mobile/coverage/", "mobile/.env.local",
+              "mobile/.env.production", "mobile/assets/data/eu27.*.json", "mobile/supabase/.temp/",
+              "mobile/supabase/.branches/", "mobile/supabase/.env"]
 
 
 def rules(path: Path) -> list[str]:

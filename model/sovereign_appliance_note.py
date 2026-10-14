@@ -41,7 +41,7 @@ UNVERIFIED = nai.UNVERIFIED
 REQUIRED = ("## Contents", "## Precedents", "## Caveats", "## Status and next steps")
 NAMING_ALLOWED = ("## Precedents", "## Sources")
 RENDERERS = ("model", "book", "api", "web/src", "mobile")
-RENDERER_SKIP = {"node_modules", ".venv", "dist", "build", "__pycache__", "research"}
+RENDERER_SKIP = {"node_modules", ".venv", "dist", "build", "__pycache__", "research", ".expo", "coverage", "supabase"}
 
 
 def text() -> str:

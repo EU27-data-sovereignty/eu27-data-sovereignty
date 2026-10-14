@@ -29,6 +29,7 @@ jobs:
     with:
       pdf: true
       factcheck: true
+      mobile_integration: true
 
   deploy:
     name: Build and deploy to production
@@ -144,3 +145,36 @@ jobs:
           echo "::error::rolled back to https://${{ steps.previous.outputs.url }}: ${{ steps.deploy.outputs.url }} failed its post-deploy checks"
           echo "### Rolled back" >> "$GITHUB_STEP_SUMMARY"
           echo "${{ steps.deploy.outputs.url }} failed the smoke test or the live /ask check; https://${{ steps.previous.outputs.url }} is current again. Vercel pauses automatic promotion after a rollback; the next green run's promote step takes the domain back." >> "$GITHUB_STEP_SUMMARY"
+
+  # The edition channel (#111, #112): once the site is final, the manifest the gate tested goes to the public
+  # bucket the mobile reader reads, under its edition id, never overwritten, and latest.json moves to it. Only
+  # model/edition.py writes, only this job holds the service-role key (an environment secret restricted to
+  # main), and the key reaches the process through its environment, never argv. Skipped until the owner creates
+  # the project and sets the SUPABASE_URL repository variable; once set, a missing secret fails the run. A failed
+  # publish fails the run and touches nothing on the site: the site and the bucket are two surfaces.
+  edition:
+    name: Publish the edition to Supabase Storage
+    needs: deploy
+    if: vars.SUPABASE_URL != ''
+    runs-on: ubuntu-24.04
+    environment:
+      name: production
+    env:
+      SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      # The 28 parts are a pure function of the committed bundle (#110); the gate's mobile job checked that the
+      # tracked manifest is theirs.
+      - name: The split edition, regenerated from the committed bundle
+        run: python3 model/export_json.py --split --from web/public/data/eu27.json
+      - name: Publish the edition (immutable per edition id; latest.json last)
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 model/edition.py publish --dir mobile/assets/data --bundle web/public/data/eu27.json --commit "$GITHUB_SHA" --run-id "$GITHUB_RUN_ID" --run-url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --summary "$GITHUB_STEP_SUMMARY"
+      # Read back anonymously, as the app reads: latest.json names this edition, and every object hashes to
+      # the committed manifest. The same check runs weekly in monitor.yml.
+      - name: The served edition is the committed one
+        run: python3 model/smoke.py --site '' --edition-url "$SUPABASE_URL/storage/v1/object/public/editions" --manifest mobile/assets/data/manifest.json --summary "$GITHUB_STEP_SUMMARY"

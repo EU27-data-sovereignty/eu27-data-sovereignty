@@ -1,7 +1,7 @@
 name: Gate
 
 # The full gate (./test.sh) as parallel jobs, called by ci.yml for pull requests and by deploy.yml before
-# production (#92, #81). The four groups of ./test.sh --only partition its stages, so these jobs together
+# production (#92, #81). The five groups of ./test.sh --only partition its stages, so these jobs together
 # run exactly what ./test.sh runs locally (tests/test_workflows.py). Every cache is keyed by a pin or a
 # checksum, and every install still verifies what it installs: npm ci the lockfile, pip --require-hashes,
 # typst its sha256 (docs/process.md, optimisations 1 to 3).
@@ -14,6 +14,10 @@ on:
         default: true
       factcheck:
         description: Require every printed fact to pass the cross-model fact check (#87)
+        type: boolean
+        default: false
+      mobile_integration:
+        description: Start a local Supabase and run the edition channel round-trip (mobile/test.sh --integration, #113)
         type: boolean
         default: false
 
@@ -128,6 +132,57 @@ jobs:
           path: ${{ runner.temp }}/pdfs
           if-no-files-found: error
           retention-days: 7
+
+  mobile:
+    name: Mobile reader (./test.sh --only mobile)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # The edition and tokens steps of mobile/test.sh call model/ and design/ scripts.
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - name: Install dependencies
+        run: npm ci --prefix mobile
+      # mobile/test.sh --ci: parity with web/, the split edition against its manifest, the generated tokens,
+      # format, lint, types, unit tests with coverage floors, expo-doctor, the web export, and npm audit
+      # against mobile/audit-allowlist.json (two Expo-toolchain advisories have no patched release).
+      - name: Run the mobile group
+        run: ./test.sh --only mobile
+
+  # The edition channel end to end (#112, #113): a local Supabase stack, the deploy's own publisher filling
+  # its bucket, anonymous reads, refused anonymous writes, verify(), and the app's store installing a good
+  # edition and rejecting an altered one. `supabase start` pulls about a dozen images by tag, so this runs
+  # only when the caller asks (deploy.yml does; ci.yml does not), in parallel with the PDFs.
+  mobile-integration:
+    name: Mobile edition channel (./test.sh --only mobile, --integration)
+    if: inputs.mobile_integration
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - uses: supabase/setup-cli@45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        with:
+          version: 2.120.0
+      - name: Install dependencies
+        run: npm ci --prefix mobile
+      - name: Start the local Supabase stack (applies mobile/supabase/migrations)
+        run: supabase start --workdir mobile
+      - name: Run the mobile group with the edition round-trip
+        run: MOBILE_TEST_FLAGS=--integration ./test.sh --only mobile
 
   e2e:
     name: Browser tests (${{ matrix.project }})
