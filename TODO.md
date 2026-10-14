@@ -74,6 +74,14 @@ Open
       `sovereign-appliance` branch to `main` once the stichting files there are committed or stashed, then
       `git worktree prune`
 - [ ] **Owner:** read `TECHNICAL-UNIVERSITIES.md` (#108) and a language draft or two; no person has read either
+- [ ] **Owner, before the push:** rule on the TeleGeography wording in `INTERNET-ENTRY-POINTS.md` (E1 definition) and
+      `LICENSE-DATA` (#109). The map's code licenses "any reference to" the map, its URL and screen captures under
+      CC BY-SA 4.0 and states no licence for the JSON data the E1 rows reproduce; TeleGeography's citation page says the
+      underlying databases are restricted to paying subscribers. Keep the rows under the conservative reading, ask
+      TeleGeography, or withdraw the E1 rows and keep E2 and E3.
+- [ ] **Owner:** read `INTERNET-ENTRY-POINTS.md` (#109), at least the Definitions and three states; no person has read it.
+      Open from it: an E3 search per state (statutes naming landing stations or exchanges); the `ixp` column of
+      `model/eu27_parameters.csv` is still unsourced text and prints as a gap, and could now cite the note's register
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
 - [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it

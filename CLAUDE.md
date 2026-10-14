@@ -71,6 +71,7 @@ python3 model/provenance.py            # source register coverage per namespace
 ./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
 python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
 python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
+./run.sh entry-points check|counts|links|retry   # the authored note INTERNET-ENTRY-POINTS.md: its contract; rewrite every Counts line from its table; refetch every URL into its link register; re-probe rate-limited basis pages one at a time (#109)
 python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
@@ -182,5 +183,12 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `none: searched <date>` row; alphabetical
   within a state, no ranking word anywhere, every URL in `docs/technical-universities-links.csv`
   (`python3 model/technical_universities_note.py links` after a change). Never rendered.
+- **`INTERNET-ENTRY-POINTS.md` is authored, not generated** (#109). Per state, every subsea landing point the Submarine
+  Cable Map labels with that state (E1, cited from the map's JSON page for the point, never its HTML, which is an empty
+  shell), every exchange PeeringDB lists there (E2, cited from its PeeringDB page) and a statute naming one (E3), else
+  **[unverified]**, or one `none: searched <date>` row per kind. Under each table one `Counts:` line that the checker
+  recomputes from the rows: never type a count, run `./run.sh entry-points counts`. No ranking or size word anywhere
+  ("largest", "hub", "key" included); "choke point" is only the three defined terms. `./run.sh entry-points links` after
+  adding or changing a URL. Never rendered.
 - **A new authored note or draft set registers in `model/notes.py`** (#108), never as a new `test.sh` stage: one stage runs the
   register, and `tests/test_notes.py` fails on a `model/*_note.py` that is not in it.

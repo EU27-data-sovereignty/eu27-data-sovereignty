@@ -12,6 +12,16 @@ WHAT THIS COVERS
 The code is licensed separately under LICENSE (MIT). Images have their own
 provenance notes in ASSETS.md.
 
+One exception. The E1 rows of INTERNET-ENTRY-POINTS.md reproduce landing-point and
+cable names from TeleGeography's Submarine Cable Map (submarinecablemap.com), each
+row citing the map by URL. The map's code states that "any reference to
+TeleGeography's Submarine Cable Map, URL, or any screencapture of the map" is made
+available under CC BY-SA 4.0; it states no licence for the data behind its JSON
+pages, and TeleGeography's citation page says the underlying databases remain
+restricted to paying subscribers. Those rows are offered under CC BY-SA 4.0 with
+attribution to TeleGeography, as the conservative reading, and not under CC BY 4.0;
+if TeleGeography's terms do not allow their reproduction, they will be withdrawn.
+
 WHY A SEPARATE LICENCE
 
 MIT grants rights over "the Software" and does not map cleanly onto a dataset. This

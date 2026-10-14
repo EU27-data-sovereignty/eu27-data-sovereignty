@@ -166,18 +166,22 @@ NATIONAL-AI-STRATEGIES.md    authored note: for each member state, a strategy fo
 DISTRIBUTION-AND-TRUST.md    authored note: what sovereign infrastructure can borrow from CDN
                              architecture, and the encryption, accountability and auditability
                              that wide distribution depends on (#64)
-```
-
-Python is the source of truth. The markdown briefs, the PDFs, the web app and the posters all render one
-content model (`model/document.py`), so they cannot disagree with each other (#74).
 SOVEREIGN-APPLIANCE.md       authored note: a state-owned, state-keyed appliance for the tier 0/1 record,
                              racked in facilities that already exist on the national network; the host
                              contract and the one treaty precedent, cited or marked unverified (#104)
 TECHNICAL-UNIVERSITIES.md    authored note: per member state, the institutions on a named published list
                              (CESAER, EuroTech) or cited from a fetched page; alphabetical, never ranked;
                              no person has read it (#108)
+INTERNET-ENTRY-POINTS.md     authored note: per member state, every subsea landing point the Submarine Cable
+                             Map labels with it and every exchange point PeeringDB lists there, each row
+                             citing its page; counts derived by the checker, never typed; no person has
+                             read it (#109)
 .claude/settings.json        the assistant's project permission rule: exact pushes to main allowed, every
                              other outward action denied by name; the owner's OK still comes first (#106)
+```
+
+Python is the source of truth. The markdown briefs, the PDFs, the web app and the posters all render one
+content model (`model/document.py`), so they cannot disagree with each other (#74).
 
 ## Running
 
@@ -322,6 +326,29 @@ headings in order, the four columns, every row's basis one of the allowed shapes
 model and then a `claude-fable-5-1` agent checked every row against its page; no person has read it. The working log
 is `docs/plans/technical-universities-log.md`.
 
+## Where the internet enters each member state
+
+[`INTERNET-ENTRY-POINTS.md`](INTERNET-ENTRY-POINTS.md) is an authored note (#109), written 2026-10-14, listing per
+member state every subsea cable landing point the Submarine Cable Map labels with that state (E1, each row citing
+the map's JSON page for the point and naming its cables) and every internet exchange point PeeringDB lists there
+(E2, each row citing its PeeringDB page), plus a statute that names one where the project's registry already holds
+the page (E3, one row). A state with nothing of a kind has a row that says so. Every entry the two lists give is a
+row, with no selection: 319 landing points and 299 exchanges. Under each table a `Counts:` line gives the number of
+rows of each kind and three defined, counted terms that stand in for "choke point"; the checker recomputes the line
+from the rows, so no count in a Counts line is typed by hand. The note draws nothing and ranks nothing: #31 rejected a
+cable globe as decoration, and the decision records why a counted table of facilities, each with an operator and a
+seat, is a dependency fact instead.
+
+**What the gate checks** (`model/internet_entry_points_note.py`, through the register `model/notes.py`): the 27
+headings in order, the five columns, every Basis one of the allowed shapes citing the map's JSON (its HTML pages
+are an empty shell) or a PeeringDB page, a "none" row only alone, every Counts line equal to its table, every URL
+in `docs/internet-entry-points-links.csv`, no ranking or size word in the prose or a Place cell, and that nothing
+renders it. `./run.sh entry-points counts` rewrites the Counts lines; `links` refetches every URL. A second
+`claude-fable-5-1` agent reviewed the note, the checker and five states' tables in a fresh context on 2026-10-14 and
+confirmed the E1 rows against the map's live index, 319 of 319; a `claude-opus-5-5` agent then ran the cross-model
+check of #87 the same day, 646 fresh fetches, every E1, E2 and E3 row against its page and every Counts line
+recomputed, zero discrepancies. No person has read it. The working log is `docs/plans/internet-entry-points-log.md`.
+
 ## What the evidence shows so far
 
 `countries/SUMMARY.md` and the Overview page give the live figures: how many holdings are verified per
@@ -347,6 +374,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file; the methodology and fact-check appendices in every asset, marked in a method teal | #87–#88 |
 | 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
 | 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #103 |
+| 2026-10-14 | Where the internet enters each member state: an authored note of every landing point and exchange point the cited lists give, counts derived by its checker, three counted terms in place of "choke point" | #109 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

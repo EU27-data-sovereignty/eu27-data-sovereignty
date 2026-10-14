@@ -104,7 +104,7 @@ ok "every fact in all 27 documents resolves to a checked source"
 step "Authored notes and agent drafts keep their contracts"
 # Prose and staging the model never renders, each held to its own contract by its own checker: the national-AI
 # note (#103), the sovereign-appliance note (#104), the language drafts (docs/plans/localisation-plan.md), the
-# technical-universities note. model/notes.py is the register: a new note adds a line there, never a stage here,
+# technical-universities note (#108), the internet-entry-points note (#109). model/notes.py is the register: a new note adds a line there, never a stage here,
 # and tests/test_notes.py fails on a checker that exists but is not registered. One line per note goes in front
 # of whoever runs the gate, like the ledger above.
 python3 model/notes.py check

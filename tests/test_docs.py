@@ -31,7 +31,7 @@ REFERENCE = re.compile(r"(?<![\w#])#(\d{1,3})(?![0-9A-Za-z])")
 # Files that cite decisions by number. Country briefs are generated and cite none.
 CITING = ["README.md", "ROADMAP.md", "PROGRESS.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md",
           "FEASIBILITY-RANKING.md", "NATIONAL-AI-STRATEGIES.md", "DISTRIBUTION-AND-TRUST.md",
-          "SOVEREIGN-APPLIANCE.md",
+          "SOVEREIGN-APPLIANCE.md", "TECHNICAL-UNIVERSITIES.md", "INTERNET-ENTRY-POINTS.md",
           "VERIFICATION.md", "DEPLOYMENT.md",
           "METHOD.md", "CLAUDE.md", "TODO.md", "artifacts/STYLE.md", "model/research/README.md",
           "SOURCES.md", "DECISIONS.md", ".gitignore",

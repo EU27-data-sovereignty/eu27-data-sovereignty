@@ -218,6 +218,17 @@ case "${1:-dev}" in
             *) print_error "usage: ./run.sh appliance check | links"; exit 1 ;;
         esac
         ;;
+    entry-points)
+        # The authored note on where the internet enters each member state: check its contract, rewrite every
+        # state's Counts line from its own table, or fetch every URL it cites once and rewrite the link register.
+        case "${2:-check}" in
+            check) python3 model/internet_entry_points_note.py check ;;
+            counts) python3 model/internet_entry_points_note.py counts ;;
+            links) python3 model/internet_entry_points_note.py links ;;
+            retry) python3 model/internet_entry_points_note.py retry ;;
+            *) print_error "usage: ./run.sh entry-points check | counts | links | retry"; exit 1 ;;
+        esac
+        ;;
     retry)
         python3 model/research.py verify --rendered && python3 model/reproduce.py admit
         ;;

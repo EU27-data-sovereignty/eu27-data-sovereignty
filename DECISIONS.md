@@ -3091,3 +3091,85 @@ and a check of cesaer.org itself once it resolves.
 *Would change if:* cesaer.org resolves and the live list differs from the capture, in which case the C1 rows
 are re-read and the Criteria line cites the live page; or the project admits institutions as entities in the
 hosting model (#96), in which case this note becomes the seed of a sourced register and stops being authored.
+
+### 109. Where the internet enters each state is an authored note of counted entry points, with "choke point" as three defined terms and no globe
+**Decision.** 2026-10-14, at the owner's request of the same day to "document where 'the internet' 'enters' each
+country, e.g. key entry and choke points". `INTERNET-ENTRY-POINTS.md`, at the root, lists per member state every
+subsea cable landing point the Submarine Cable Map labels with that state (E1, each row citing the map's JSON page
+for the point, which names it and its cables, with planned cables marked), every internet exchange point PeeringDB
+lists in the state (E2, each row citing its PeeringDB page), and a statute that names such a facility where the
+project's registry already holds the page (E3: one row, Latvia's Article 32, cited for indicator LV:L1). A state with
+nothing of a kind has one row that says so. Every entry the two lists give is a row, with no selection: 319 E1 rows
+and 299 E2 rows, 626 rows in all. Under each table one `Counts:` line gives the rows of each kind and three defined
+terms, no-landing, single-landing and single-exchange, which are counts of the rows; the checker recomputes the line
+and refuses one that differs, and `./run.sh entry-points counts` writes it, so no count in the note is typed by hand.
+Those three terms are the note's only reading of "choke point". The note is held by
+`model/internet_entry_points_note.py check`, its link register `docs/internet-entry-points-links.csv` and
+`tests/test_internet_entry_points.py`, registered in `model/notes.py` (#108), and is never rendered. The E1 rows
+reproduce names from the map, whose code licenses "any reference to" it, its URL and screen captures under
+CC BY-SA 4.0 and states no licence for the data behind its JSON pages; the rows are offered under CC BY-SA 4.0 with
+attribution as the conservative reading, `LICENSE-DATA` records the exception, and the owner's ruling on that
+wording is open in `TODO.md` before any push.
+
+**Problem.** The project has carried this topic since its first commit as the `ixp` column of
+`model/eu27_parameters.csv`, unsourced free text ("DE-CIX Frankfurt (world's largest) …; Norden/Sylt/Rostock
+landings") that `document.POSTURE` prints as *Not yet sourced* in all 27 briefs. "Key" and "choke point" are
+judgements of which entry matters, and the project does not rank or score (#10, #77). #31 rejected a globe of cable
+landings as decoration, "the sovereignty argument in this project is jurisdictional, not geographic", which still
+holds for a picture: a map shows where a cable comes ashore and says nothing a reader can check about dependency.
+A table is a different object. A landing station and an exchange are facilities with an operator and a seat, and a
+seat is a jurisdiction; a state whose only path to the rest of the network runs through a facility on another
+state's territory cannot host sovereignly what it reaches only through that facility, whatever its own hosting law
+says. The count of entry points per state is therefore a dependency fact of the same kind as the operator links #96
+plans, and the first checkable form of it. The note counts; it draws nothing and ranks nothing.
+
+**Alternatives considered.**
+- **An authored note under the #103/#104/#108 contract, every list entry a row, counts derived by the checker
+  (chosen).**
+- **A sourced register now, printed in the briefs and the overview.** *Why not:* a list of N stations per state does
+  not fit `national_data.csv`, which holds one row per state and class; it needs the new namespace, staging, review,
+  admission and reproduction steps that #96 plans and has not built, and the fact-check gate of #87 would hold `main`
+  until every row was checked by the other model. The note is the seed of that register, not a substitute for it.
+- **A map or globe.** *Why not:* #31; and a picture cannot carry a citation per point.
+- **Copying the `ixp` column into prose.** *Why not:* unsourced, and it carries "world's largest" and "major".
+- **A capped list of the "main" entry points per state.** *Why not:* any selection rule is a ranking by proxy; the
+  Counts line carries the "how many" question instead, and IT's 55 landing points and DE's 59 exchanges are the
+  lists' fact.
+- **Judging which entry is the choke point.** *Why not:* which facility carries the traffic, and what would follow
+  if it failed, is not on any page the note can cite; three counted terms are, and the checker refuses the terms
+  anywhere but in the Definitions and the Counts lines.
+- **Satellite gateways as a fourth kind.** *Why not:* no published list names earth stations per state in a way a
+  row could cite; every row would be the note's own word.
+- **Euro-IX as the exchange list.** *Why not:* its list pages answered 404 on 2026-10-14, and its IXP-DB API has no
+  page per exchange a row could cite; it is the cross-check in the Method section.
+- **Citing the map's HTML pages, which a reader opens in a browser.** *Why not:* they are a 1.5 KB application shell
+  with no text, so a checker fetching the page would find nothing; the map's JSON page for the same point carries the
+  name and cables, and the checker pins that host and path.
+
+**Closes off.** A ranking or size word in the note's prose or a Place cell; a row citing the map's HTML; a count typed
+by hand; a satellite row; a selection among the entries a list gives; a reading of "choke point" that is not one of
+the three defined terms; a renderer that names the file.
+
+**Verified:** 2026-10-14. `python3 model/internet_entry_points_note.py check`: 27 states, 626 rows (E1 319, in
+service 298, E2 299, E3 1, [unverified] 0, none 7), 855 URLs, 0 problems; `counts` on the generated note: 27 Counts
+lines, 0 lines changed. `links` then `retry`: 855 URLs, 808 answered on 2026-10-14; every basis page answered 2xx
+(PeeringDB had answered 429 to 162 pages at six concurrent requests, and each answered when re-probed one at a time);
+the 47 that did not are E2 website cells, PeeringDB's field and no basis. `python3 model/notes.py check`: five
+checkers, all pass.
+`tests/test_internet_entry_points.py`: 32 tests pass, 24 of them a synthetic note failing on each rule.
+Second-agent review, same model: a claude-fable-5-1 agent in a fresh context on 2026-10-14 confirmed the E1 rows
+against the map's live index, 319 of 319, and every Counts line; its fifteen findings are applied (the licence
+wording quoted rather than asserted; 162 PeeringDB pages that had answered 429 re-probed one at a time; four stated
+rules added to the checker: E3 from the registry, label ends with the state, [unverified] not in service, hand-typed
+totals named as such). Cross-model check (#87's standard, the model that did not write it): a claude-opus-5-5
+agent on 2026-10-14 made 646 fresh fetches, all 200, and confirmed every E1 row's name and cable list with planned
+marking against its JSON page (319 of 319), every E2 row's name, place and website against its PeeringDB page and
+the API (299 of 299), the E3 phrase on the statute page, the seven "none" rows, and all 27 Counts lines recomputed
+two ways: zero discrepancies; its four prose points (licence reach, the 429 rows, the outermost regions, "territory"
+for offshore platforms) are rewritten in the Definitions. **NOT YET:** a reading by a person; the owner's ruling on
+the TeleGeography wording (`TODO.md`).
+
+*Would change if:* the project admits operators as entities (#96), in which case the E1 and E2 rows become the seed of
+a sourced register with the operator's seat as a column and the note stops being authored; or `param:<ISO>:ixp` gets
+citations from this note's register, in which case the free text in the parameters file goes; or a published list of
+satellite gateway earth stations appears that a row can cite, in which case E4 is added.

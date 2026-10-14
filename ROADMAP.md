@@ -63,7 +63,7 @@ answers only from the sourced findings. A printed book is later.
 - **Posters.** 27 tracked summaries in `countries/<ISO>/`, re-rendered on every data change (#52).
 - **One address per state.** `eu27.cloud/de`, the code as a top-level path; `/country/<ISO>` redirects (#105).
 - **Authored notes**, never rendered, each with a checker and a link register: national AI strategies (#103), the
-  sovereign appliance (#104), the technical universities (#108).
+  sovereign appliance (#104), the technical universities (#108), the internet entry points per state (#109).
 
 ### Tooling and process
 - **`./test.sh`.** Python, sourcing gate, API type-check against the real SDK, generated files current,
