@@ -116,9 +116,11 @@ check_shell() {
 }
 
 # Tool versions that live outside package.json: the Supabase CLI the deploy's gate installs
-# (../.github/workflows/gate.yml) is an exact x.y.z and the one README.md names; no EAS anywhere.
+# (../.github/workflows/gate.yml) is an exact x.y.z and the one README.md names; the EAS CLI is one pinned
+# version in eas.json (cli.version, which the CLI enforces on itself) and the deploy's `app` job, run as
+# `npx eas-cli@<that>` and never as a project dependency, which expo-doctor refuses (#114).
 check_tooling() {
-    local rc=0 supa readme
+    local rc=0 supa readme eas_json eas_deploy
     supa="$(sed -n -E 's/^[[:space:]]*version:[[:space:]]*(.*)$/\1/p' ../.github/workflows/gate.yml | tr -d "'\"" | sort -u)"
     if ! printf '%s' "$supa" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
         echo "gate.yml: Supabase CLI version must be one exact x.y.z (found: ${supa:-none})"; rc=1
@@ -130,10 +132,51 @@ check_tooling() {
             echo "Supabase CLI $supa in gate.yml and README.md"
         fi
     fi
-    if grep -qE 'eas-cli|eas build|eas update' run.sh init.sh README.md package.json app.json; then
-        echo "EAS is not used: no eas-cli, eas build or eas update may appear (no store release, #109)"; rc=1
+    eas_json="$(node -p 'require("./eas.json").cli.version || ""')"
+    eas_deploy="$(sed -n -E 's/^[[:space:]]*EAS_CLI:[[:space:]]*eas-cli@(.*)$/\1/p' ../.github/workflows/deploy.yml | tr -d "'\"" | sort -u)"
+    if ! printf '%s' "$eas_json" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+        echo "eas.json: cli.version must be an exact x.y.z (found: ${eas_json:-none})"; rc=1
+    elif [ "$eas_deploy" != "$eas_json" ]; then
+        echo "EAS CLI pins differ: eas.json cli.version $eas_json, deploy.yml EAS_CLI ${eas_deploy:-none}"; rc=1
+    elif node -e 'const p=require("./package.json"); process.exit(("eas-cli" in (p.dependencies||{}))||("eas-cli" in (p.devDependencies||{}))?1:0)'; then
+        echo "EAS CLI $eas_json in eas.json and deploy.yml; not a project dependency (expo-doctor)"
+    else
+        echo "eas-cli must not be a project dependency (expo-doctor): it runs as npx eas-cli@<eas.json cli.version>"; rc=1
     fi
     return $rc
+}
+
+# The release workflow runs on EAS only when the deploy's `app` job (or ./run.sh release) asks: no GitHub
+# push may start it, and nothing reaches App Store Connect without the approval job in between (#114).
+check_workflows() {
+    local rc=0 f
+    for f in .eas/workflows/*.yml; do
+        [ -f "$f" ] || { echo "no .eas/workflows/*.yml"; return 1; }
+        if [ "$(wc -c < "$f")" -gt 16384 ]; then echo "$f is over EAS's 16 KiB limit"; rc=1; fi
+        if grep -qE '^\s+(push|pull_request|pull_request_labeled|pull_request_comment|schedule|ref_delete|app_store_connect):' "$f"; then
+            echo "$f: only workflow_dispatch may trigger a release; the deploy's gate comes first"; rc=1
+        fi
+        grep -qE '^\s+workflow_dispatch:' "$f" || { echo "$f: needs an on.workflow_dispatch trigger"; rc=1; }
+        if grep -qE '^\s+type:\s*submit\s*$' "$f" && ! grep -qE '^\s+type:\s*require-approval\s*$' "$f"; then
+            echo "$f: a submit job needs a require-approval job before it"; rc=1
+        fi
+        python3 -c 'import sys,yaml' 2>/dev/null && python3 -c "import yaml,sys; yaml.safe_load(open('$f'))" || true
+    done
+    [ "$rc" -eq 0 ] && echo "$(ls .eas/workflows/*.yml | wc -l | tr -d ' ') EAS workflow(s): manual trigger only, approval before submit"
+    return $rc
+}
+
+# The App Store listing (store.config.json) is valid against the pinned CLI's schema (#116). Apple's review
+# contact is required by the schema and lives outside the tree (store.config.js), so the lint runs with
+# placeholders built at runtime: no e-mail-shaped literal may sit in a tracked file (the security gate).
+check_listing() {
+    EAS_REVIEW_EMAIL="$(printf 'lint%sexample.invalid' @)" EAS_REVIEW_PHONE='+00 0' \
+        npx --yes "eas-cli@$(node -p 'require("./eas.json").cli.version')" metadata:lint --profile production
+}
+
+# The release ledger (releases.csv) keeps its shape and every row points at a commit in this repository.
+check_release() {
+    python3 ../model/release.py check --dir . --ledger releases.csv
 }
 
 # Every dependency is an exact x.y.z (repo-standards; the gate enforces it on commit too).
@@ -236,6 +279,9 @@ fi
 
 run_step shell check_shell
 run_step tooling check_tooling
+run_step workflows check_workflows
+run_step listing check_listing
+run_step release check_release
 run_step pins check_pins
 run_step identity check_identity
 run_step env-keys check_env_keys

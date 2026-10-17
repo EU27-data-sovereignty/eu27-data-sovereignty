@@ -1,6 +1,8 @@
 /**
- * The edition for the screens: which one is active, its core part, and the update state (#110, #111).
- * The provider takes the store, so tests render the real screens on a `MemoryFileStore` edition.
+ * The edition for the screens: which one is active, its core part, and the update state (#110, #111), plus
+ * the state of the app's own over-the-air update, checked in the same tap (#115). The provider takes the
+ * store and the update port, so tests render the real screens on a `MemoryFileStore` edition with no Expo
+ * service behind them.
  */
 import {
   createContext,
@@ -13,6 +15,13 @@ import {
 } from 'react';
 
 import type { CorePart, CountryPart } from '@/data/parts';
+import {
+  checkForAppUpdate,
+  noAppUpdates,
+  type AppBuild,
+  type AppUpdatePort,
+  type AppUpdateState,
+} from '@/update/appUpdate';
 import { EditionStore, type Edition, type UpdateState } from './EditionStore';
 
 export interface EditionApi {
@@ -22,8 +31,12 @@ export interface EditionApi {
   core: CorePart | null;
   loadError: string | null;
   update: UpdateState;
+  /** The edition check and, in the same tap, the check for a newer build of the app (#115). */
   checkForUpdate(): Promise<void>;
   switchToInstalled(): Promise<void>;
+  appUpdate: AppUpdateState;
+  build: AppBuild;
+  restartToApply(): Promise<void>;
   autoCheck: boolean;
   setAutoCheck(on: boolean): Promise<void>;
   /** The last downloaded part that failed its hash, if the store fell back to the bundled edition. */
@@ -32,11 +45,22 @@ export interface EditionApi {
 
 const Context = createContext<EditionApi | null>(null);
 
-export function EditionProvider({ store, children }: { store: EditionStore; children: ReactNode }) {
+export function EditionProvider({
+  store,
+  appUpdates = noAppUpdates,
+  children,
+}: {
+  store: EditionStore;
+  appUpdates?: AppUpdatePort;
+  children: ReactNode;
+}) {
   const [edition, setEdition] = useState<Edition>(store.active);
   const [core, setCore] = useState<CorePart | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [update, setUpdate] = useState<UpdateState>({ kind: 'idle' });
+  const [appUpdate, setAppUpdate] = useState<AppUpdateState>(
+    appUpdates.enabled ? { kind: 'idle' } : { kind: 'disabled' }
+  );
   const [autoCheck, setAuto] = useState(false);
   const [integrityNotice, setIntegrityNotice] = useState<string | null>(null);
 
@@ -52,9 +76,15 @@ export function EditionProvider({ store, children }: { store: EditionStore; chil
     }
   }, [store]);
 
+  // The edition first, then the app's own code: one tap, two hosts, both named on the About screen.
   const checkForUpdate = useCallback(async () => {
     await store.checkForUpdate(setUpdate);
-  }, [store]);
+    await checkForAppUpdate(appUpdates, setAppUpdate);
+  }, [store, appUpdates]);
+
+  const restartToApply = useCallback(async () => {
+    if (appUpdate.kind === 'ready') await appUpdates.reload();
+  }, [appUpdates, appUpdate.kind]);
 
   const switchToInstalled = useCallback(async () => {
     await store.useInstalled();
@@ -80,12 +110,15 @@ export function EditionProvider({ store, children }: { store: EditionStore; chil
       const auto = await store.autoCheck();
       if (cancelled) return;
       setAuto(auto);
-      if (auto) await store.checkForUpdate((s) => !cancelled && setUpdate(s));
+      if (auto) {
+        await store.checkForUpdate((s) => !cancelled && setUpdate(s));
+        await checkForAppUpdate(appUpdates, (s) => !cancelled && setAppUpdate(s));
+      }
     })();
     return () => {
       cancelled = true;
     };
-  }, [store, load]);
+  }, [store, load, appUpdates]);
 
   const value = useMemo<EditionApi>(
     () => ({
@@ -96,6 +129,9 @@ export function EditionProvider({ store, children }: { store: EditionStore; chil
       update,
       checkForUpdate,
       switchToInstalled,
+      appUpdate,
+      build: appUpdates.build,
+      restartToApply,
       autoCheck,
       setAutoCheck,
       integrityNotice,
@@ -108,6 +144,9 @@ export function EditionProvider({ store, children }: { store: EditionStore; chil
       update,
       checkForUpdate,
       switchToInstalled,
+      appUpdate,
+      appUpdates.build,
+      restartToApply,
       autoCheck,
       setAutoCheck,
       integrityNotice,

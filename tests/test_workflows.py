@@ -207,7 +207,8 @@ class Edition(unittest.TestCase):
     def job(self) -> str:
         parts = DEPLOY.split("\n  edition:\n")
         self.assertEqual(len(parts), 2, "deploy.yml needs the edition job")
-        return parts[1]
+        # Up to the next job (#114 added `app` after it): the key rules below are about this job alone.
+        return parts[1].split("\n  app:\n", 1)[0]
 
     def test_the_edition_is_published_by_its_own_job_after_the_deploy(self):
         job = self.job()
@@ -269,6 +270,79 @@ class Edition(unittest.TestCase):
         self.assertIn("MOBILE_TEST_FLAGS=--integration ./test.sh --only mobile", GATE)
         self.assertNotIn("mobile_integration: true", CI)
         self.assertRegex(GATE, r"supabase/setup-cli@[0-9a-f]{40} # v[\d.]+\n        with:\n          version: \d+\.\d+\.\d+\n")
+
+
+class App(unittest.TestCase):
+    """The reader's release (#114, #115): one job after the deploy starts the EAS workflow for the same commit,
+    with the pinned CLI from the lockfile and the token in the production environment; the EAS workflow itself
+    never runs on a push and never submits without an approval."""
+
+    RELEASE = (ROOT / "mobile" / ".eas" / "workflows" / "release.yml").read_text(encoding="utf-8")
+    MOBILE_PKG = json.loads((ROOT / "mobile" / "package.json").read_text(encoding="utf-8"))
+    EAS_JSON = json.loads((ROOT / "mobile" / "eas.json").read_text(encoding="utf-8"))
+
+    def job(self) -> str:
+        parts = DEPLOY.split("\n  app:\n")
+        self.assertEqual(len(parts), 2, "deploy.yml needs the app job")
+        return parts[1]
+
+    def test_the_release_starts_from_its_own_job_after_the_deploy_in_the_production_environment(self):
+        job = self.job()
+        self.assertRegex(job, r"\n    needs: deploy\n")
+        self.assertIn("if: vars.EXPO_PROJECT_ID != ''", job)               # phased in like SUPABASE_URL
+        self.assertRegex(job, r"environment:\n      name: production\n")
+        self.assertLess(DEPLOY.index("\n  edition:\n"), DEPLOY.index("\n  app:\n"))
+        self.assertIn("working-directory: mobile", job)
+        self.assertIn("cache-dependency-path: mobile/package-lock.json", job)
+        self.assertIn("run: npm ci\n", job)
+
+    def test_the_token_reaches_only_the_workflow_run_step_through_its_environment(self):
+        self.assertEqual(DEPLOY.count("secrets.EXPO_TOKEN"), 1)
+        job = self.job()
+        step = job.split("- name: Start the release workflow", 1)[1].split("- name:", 1)[0]
+        self.assertIn("env:\n          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}", step)
+        runs = [ln.strip() for ln in step.splitlines() if ln.strip().startswith("run:")]
+        self.assertEqual(runs, ['run: npx --yes "$EAS_CLI" workflow:run .eas/workflows/release.yml --non-interactive'])
+        for line in job.splitlines():
+            if line.strip().startswith("run:"):
+                self.assertNotIn("EXPO_TOKEN", line, "the token is never on a command line")
+                self.assertNotIn("--token", line)
+                self.assertNotIn("echo", line)
+        for wf in WORKFLOWS:
+            if wf.name != "deploy.yml":
+                self.assertNotIn("EXPO_TOKEN", wf.read_text(), wf.name)
+
+    def test_the_cli_is_one_pinned_version_everywhere(self):
+        pin = re.search(r"EAS_CLI: eas-cli@(\d+\.\d+\.\d+)\n", DEPLOY)
+        self.assertIsNotNone(pin, "deploy.yml pins EAS_CLI: eas-cli@x.y.z")
+        version = pin.group(1)
+        self.assertEqual(self.EAS_JSON["cli"]["version"], version, "eas.json enforces the same pin on the CLI")
+        for field in ("dependencies", "devDependencies"):
+            self.assertNotIn("eas-cli", self.MOBILE_PKG.get(field, {}), "expo-doctor refuses eas-cli as a dependency")
+        self.assertNotIn("npx eas ", self.job(), "never a floating eas: the pinned EAS_CLI, like VERCEL_CLI")
+        self.assertNotIn("eas-cli@latest", DEPLOY)
+        self.assertNotIn("expo/expo-github-action", DEPLOY)
+
+    def test_the_eas_workflow_runs_only_when_asked_and_submits_only_after_an_approval(self):
+        on = self.RELEASE.split("\non:\n", 1)[1].split("\njobs:\n", 1)[0]
+        self.assertEqual([ln.strip().rstrip(":").split(":")[0] for ln in on.splitlines() if ln.strip()],
+                         ["workflow_dispatch"])
+        jobs = re.findall(r"^  (\w+):\n", self.RELEASE, re.M)
+        self.assertIn("require_approval", jobs)
+        self.assertIn("type: require-approval", self.RELEASE)
+        for submit in ("submit_ios",):
+            block = self.RELEASE.split(f"\n  {submit}:\n", 1)[1].split("\n  ", 1)[0]
+            self.assertIn("require_approval", block, f"{submit} runs only after the approval")
+        self.assertNotIn("submit_android", self.RELEASE, "no Play account yet (#114)")
+        self.assertIn("submit_beta_review: false", self.RELEASE)
+        self.assertLessEqual(len(self.RELEASE.encode()), 16 * 1024)
+
+    def test_installed_apps_never_check_for_code_on_their_own(self):
+        app = json.loads((ROOT / "mobile" / "app.json").read_text(encoding="utf-8"))["expo"]
+        self.assertEqual(app["updates"]["checkAutomatically"], "NEVER")
+        self.assertEqual(app["runtimeVersion"], {"policy": "appVersion"})
+        self.assertEqual(self.EAS_JSON["build"]["production"]["channel"], "production")
+        self.assertIn("channel: production", self.RELEASE)
 
 
 class ToolVersions(unittest.TestCase):

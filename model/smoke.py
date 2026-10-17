@@ -44,7 +44,7 @@ import edition  # noqa: E402
 # Every route a reader can open; tests/test_smoke.py keeps it a superset of the e2e ROUTES.
 ROUTES = ["/", "/countries", "/de", "/nl", "/holdings", "/holdings/civil_registry",
           "/infrastructure", "/sources",
-          "/sovereignty", "/ask", "/methodology", "/fact-check", "/fact-check/DE",
+          "/sovereignty", "/ask", "/methodology", "/fact-check", "/fact-check/DE", "/privacy",
           # The twelve guides behind the front page's selector (#102).
           "/for/ministries", "/for/procurement", "/for/parliaments", "/for/cyber", "/for/eu-institutions",
           "/for/operators", "/how/exposure", "/how/migrate", "/how/tender", "/how/questions", "/how/compare",

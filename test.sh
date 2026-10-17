@@ -287,6 +287,31 @@ elif [ "$SKIP_E2E" = true ]; then
     echo -e "${YELLOW}⚠️  Skipping browser stage (--no-e2e)${NC}"
 else
     step "End-to-end, accessibility and rendered-data assertions"
+    # Four of the five projects run in Playwright's own Firefox and WebKit (the iPhone projects are WebKit).
+    # Without them every one of their tests fails at launch in under a millisecond: 180 red lines that say
+    # nothing about the site. Refuse to start instead, with the one command that fixes it (./init.sh runs it).
+    case "$PROJECT" in
+        chrome) NEED_BROWSERS="" ;;
+        firefox) NEED_BROWSERS="firefox" ;;
+        webkit|iphone-*) NEED_BROWSERS="webkit" ;;
+        *) NEED_BROWSERS="firefox webkit" ;;
+    esac
+    BROWSER_CACHE="${PLAYWRIGHT_BROWSERS_PATH:-}"
+    if [ -z "$BROWSER_CACHE" ]; then
+        case "$(uname -s)" in
+            Darwin) BROWSER_CACHE="$HOME/Library/Caches/ms-playwright" ;;
+            *) BROWSER_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/ms-playwright" ;;
+        esac
+    fi
+    MISSING_BROWSERS=""
+    for b in $NEED_BROWSERS; do
+        ls -d "$BROWSER_CACHE/$b"-* > /dev/null 2>&1 || MISSING_BROWSERS="$MISSING_BROWSERS $b"
+    done
+    if [ -n "$MISSING_BROWSERS" ]; then
+        echo -e "${RED}❌ Playwright browser(s) not installed:${MISSING_BROWSERS} (looked in $BROWSER_CACHE).${NC}"
+        echo -e "   Run ${GREEN}./init.sh${NC} or ${GREEN}(cd web && npx playwright install firefox webkit)${NC}, or ${GREEN}--only e2e --project chrome${NC}."
+        exit 1
+    fi
     cd web
     if [ -n "$PROJECT" ]; then
         npx playwright test --project "$PROJECT"

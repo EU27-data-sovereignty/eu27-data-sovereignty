@@ -12,6 +12,7 @@ import { Guide } from './pages/Guide'
 import { Holding, HoldingsIndex } from './pages/Holdings'
 import { Infrastructure } from './pages/Infrastructure'
 import { Methodology } from './pages/Methodology'
+import { Privacy } from './pages/Privacy'
 import { NotFound } from './pages/NotFound'
 import { Overview } from './pages/Overview'
 import { Poster } from './pages/Poster'
@@ -84,6 +85,8 @@ export function App() {
         <Route path="map" element={<Sovereignty bundle={bundle} />} />
         <Route path="country/:iso" element={<LegacyCountry />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
+        {/* The privacy policy the app stores link to (#116): static, every surface on one page. */}
+        <Route path="privacy" element={<Privacy />} />
         <Route path="fact-check" element={<FactCheck bundle={bundle} />} />
         <Route path="fact-check/:iso" element={<FactCheck bundle={bundle} />} />
         {/* The guides behind the front page's selector (#102): an audience, or a task. */}

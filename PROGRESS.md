@@ -19,7 +19,7 @@ production still serves the 2026-09-27 build. The private contacts repo is uncha
 | Web app | **Rebuilt**, EU theme, /ask added | 43 Vitest; 23 of 23 Playwright + axe |
 | Data-sovereignty ranking | **Evidenced** (#77); 134 of 189 indicators sourced | IE Dependent (High); IT Secured in law; 25 Not demonstrated (Low) |
 | Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
-| Mobile reader | **Rebuilt** on the content model, offline-first, Supabase Storage as the edition channel (#109–#113) | 75 Jest + 9 integration steps; `./test.sh --only mobile` in the gate; no release |
+| Mobile reader | **Rebuilt** on the content model, offline-first, Supabase Storage as the edition channel (#109–#113); **release path on EAS** with the public click held (#114–#116) | 87 Jest + 9 integration steps; `./test.sh --only mobile` in the gate; accounts, first build and App Review open |
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
 | Tables of contents | **Done** | every brief, `SUMMARY.md`, web, mobile, book outline |
 | Style guide | **Done**, one guide + per-format notes | `artifacts/STYLE.md` from `design/tokens.json` (#74, #76) |
@@ -145,7 +145,10 @@ protected preview. The runbook, including `/ask`, is in [`DEPLOYMENT.md`](DEPLOY
 ### The mobile reader (2026-09-17; rebuilt 2026-10-14)
 `mobile/` is an Expo app that renders the content model from the split edition inside its binary and learns of
 a newer edition from a public, read-only Supabase bucket the deploy writes (#109–#113). Its suite is the `mobile`
-group of `./test.sh` and a parallel CI job. No release: the launch gate holds (`ROADMAP.md`).
+group of `./test.sh` and a parallel CI job. Since 2026-10-16 the deploy starts its EAS release workflow: build,
+TestFlight, the owner's approval, the upload to App Store Connect, with "Submit for Review" and "Release" kept as
+manual clicks (#114–#116); the owner's accounts and the first build are open (`TODO.md`). The launch gate holds
+for the public click (`ROADMAP.md`).
 
 ### Tables of contents and country flags (2026-09-21)
 

@@ -1,8 +1,9 @@
 # Mobile style
 
 Covers the Expo Router reader in `mobile/` (#109). It renders the content model from the split edition inside
-its binary and learns of a newer edition from one public, read-only bucket (#110, #111). It is not released:
-no build, no store listing, no EAS, until the launch gate (#25, #50). The tokens are those of
+its binary and learns of a newer edition from one public, read-only bucket (#110, #111). It is built and uploaded
+to App Store Connect by an EAS workflow the deploy starts (#114); the public release click waits for the launch
+gate (#25, #50). The tokens are those of
 [`../STYLE.md`](../STYLE.md), generated into `src/constants/Colors.ts` by `design/build_tokens.py`.
 
 ## The parity contract

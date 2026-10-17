@@ -1,0 +1,50 @@
+{
+  "cli": {
+    "version": "25.0.0",
+    "appVersionSource": "remote",
+    "requireCommit": true
+  },
+  "build": {
+    "production": {
+      "distribution": "store",
+      "channel": "production",
+      "environment": "production",
+      "autoIncrement": true,
+      "node": "24.22.0",
+      "ios": {
+        "image": "sdk-57"
+      },
+      "android": {
+        "image": "sdk-57"
+      }
+    },
+    "preview": {
+      "extends": "production",
+      "distribution": "internal",
+      "channel": "preview",
+      "environment": "preview"
+    },
+    "development": {
+      "extends": "preview",
+      "developmentClient": true,
+      "channel": "development",
+      "environment": "development",
+      "ios": {
+        "simulator": true
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "0000000000",
+        "appleTeamId": "XXXXXXXXXX",
+        "metadataPath": "./store.config.js"
+      },
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    }
+  }
+}

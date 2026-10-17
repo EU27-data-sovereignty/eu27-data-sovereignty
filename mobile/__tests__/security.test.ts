@@ -44,12 +44,59 @@ describe('publishable configuration', () => {
     }
   });
 
-  it('keeps credentials, EAS and over-the-air code updates out of app.json', () => {
+  it('never checks for an over-the-air code update unless the reader asks (#115)', () => {
     const { expo } = json('app.json');
     expect(JSON.stringify(expo.extra ?? {})).not.toMatch(SECRET_SHAPED);
-    expect(expo.updates).toBeUndefined();
-    expect(expo.runtimeVersion).toBeUndefined();
-    expect(expo.extra?.eas).toBeUndefined();
+    // expo-updates would otherwise ask Expo's service at every launch; the About tab asks, on a tap or the
+    // opt-in, through src/update/expoAppUpdates.ts alone.
+    expect(expo.updates.enabled).toBe(true);
+    expect(expo.updates.checkAutomatically).toBe('NEVER');
+    expect(expo.updates.fallbackToCacheTimeout).toBe(0);
+    const projectId = expo.extra?.eas?.projectId;
+    expect(projectId).toMatch(/^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/);
+    expect(expo.updates.url).toBe(`https://u.expo.dev/${projectId}`);
+    expect(expo.runtimeVersion).toEqual({ policy: 'appVersion' });
+  });
+
+  it('declares export compliance in config, not as a usage string', () => {
+    const { expo } = json('app.json');
+    expect(expo.ios.config).toEqual({ usesNonExemptEncryption: false });
+  });
+
+  it('eas.json: the pinned CLI, build numbers on EAS, and no credential in the tree (#114)', () => {
+    const eas = json('eas.json');
+    const pkg = json('package.json');
+    // One exact pin the CLI enforces on itself; never a project dependency (expo-doctor refuses it), so
+    // run.sh, test.sh and deploy.yml run `npx eas-cli@<this>`, as the deploy runs the Vercel CLI.
+    expect(eas.cli.version).toMatch(/^\d+\.\d+\.\d+$/);
+    expect(pkg.devDependencies['eas-cli']).toBeUndefined();
+    expect(pkg.dependencies['eas-cli']).toBeUndefined();
+    expect(eas.cli.appVersionSource).toBe('remote');
+    expect(eas.cli.requireCommit).toBe(true);
+    expect(eas.build.production.autoIncrement).toBe(true);
+    expect(eas.build.production.channel).toBe('production');
+    expect(eas.build.production.distribution).toBe('store');
+    for (const profile of Object.values(eas.build) as { env?: unknown }[]) {
+      expect(profile.env ?? {}).toEqual({});
+    }
+    // The App Store Connect key and the Apple account are held on EAS, never pointed at from here.
+    expect(eas.submit.production.ios.ascApiKeyPath).toBeUndefined();
+    expect(eas.submit.production.ios.appleId).toBeUndefined();
+    expect(eas.submit.production.android.serviceAccountKeyPath).toBeUndefined();
+    expect(JSON.stringify(eas)).not.toMatch(SECRET_SHAPED);
+  });
+
+  it('the store listing names the privacy policy at the site and says no person verified the data (#116)', () => {
+    const { expo } = json('app.json');
+    const listing = json('store.config.json').apple;
+    const info = listing.info['en-US'];
+    expect(info.privacyPolicyUrl).toBe(`${expo.extra.siteUrl}${expo.extra.privacyPath}`);
+    expect(info.marketingUrl).toBe(expo.extra.siteUrl);
+    expect(info.description).toMatch(/No person has verified them/);
+    expect(listing.release.automaticRelease).toBe(false);
+    // Apple's review contact comes from the environment of `./run.sh metadata push` (store.config.js).
+    expect(listing.review.email).toBeUndefined();
+    expect(listing.review.phone).toBeUndefined();
   });
 
   it('is this project, not the template', () => {
@@ -97,6 +144,7 @@ describe('dependencies', () => {
     'expo-router',
     'expo-splash-screen',
     'expo-status-bar',
+    'expo-updates',
     'react',
     'react-dom',
     'react-native',
@@ -147,10 +195,24 @@ describe('network: one path, one host, every URL derived from the configured pro
     );
   });
 
-  it('opens external links only where a source or a form is shown', () => {
+  it('opens external links only where a source, a form or the privacy policy is shown', () => {
     expect(where(/Linking\.openURL/)).toEqual([
+      'app/(tabs)/about.tsx',
       'app/country/[iso].tsx',
       'src/components/SourceList.tsx',
+    ]);
+  });
+
+  it('builds the site address only from app.json, in one file', () => {
+    expect(where(/siteUrl|privacyPath/)).toEqual(['src/services/site.ts']);
+    expect(where(/privacyUrl\(/)).toEqual(['app/(tabs)/about.tsx', 'src/services/site.ts']);
+    expect(read('src/services/site.ts')).toMatch(/Constants\.expoConfig/);
+  });
+
+  it('reaches the update service only through its port (#115)', () => {
+    expect(where(/expo-updates/)).toEqual(['src/update/expoAppUpdates.ts']);
+    expect(where(/checkForUpdateAsync|fetchUpdateAsync|reloadAsync/)).toEqual([
+      'src/update/expoAppUpdates.ts',
     ]);
   });
 

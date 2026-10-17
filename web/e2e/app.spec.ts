@@ -60,6 +60,7 @@ const ROUTES = [
   '/sovereignty',
   '/ask',
   '/methodology',
+  '/privacy',
   '/fact-check',
   '/fact-check/DE',
   '/for/ministries',

@@ -78,8 +78,10 @@ on 2026-10-14 (see Status below); the languages remain a plan.
 
 ## Build, CI, testing
 
-- **Builds.** Expo managed, with continuous native generation. EAS builds run only from a manual,
-  owner-approved workflow, `mobile-release.yml`, after `./test.sh` and the fact-check gates.
+- **Builds.** Expo managed, with continuous native generation. EAS builds run only from the EAS workflow
+  `mobile/.eas/workflows/release.yml`, started by the deploy's `app` job after `./test.sh` and the fact-check
+  gates, with the owner's approval before any upload (#114; this paragraph said `mobile-release.yml` until
+  2026-10-16).
 - **Proving the bundle is the checked one.** The app's copy is checked against `manifest.json` at HEAD, as
   the web smoke test checks the served bundle.
 - **The gate.** `test.sh` gains a mobile stage, with a `--no-mobile` flag. CI gains `npm audit` for `mobile/`
@@ -106,6 +108,16 @@ on 2026-10-14 (see Status below); the languages remain a plan.
 - **Performance** on low-end phones.
 - **US processors** (Expo EAS, Supabase).
 - **Accounts in a personal name** until the foundation exists.
+
+## Status 2026-10-16 (#114–#116)
+
+The owner decided to release through EAS and to the App Store, keeping the public release click manual. Of the
+open items above: 5 **store accounts** — personal, state unknown on 2026-10-16 (`TODO.md`); 7 **internal testing** —
+TestFlight's internal group, then App Review, then a manual release; 9 **builds** — EAS cloud builds, with the
+credentials on EAS and the audit trail in `mobile/releases.csv`. `mobile-release.yml` became the EAS workflow
+`mobile/.eas/workflows/release.yml`, started by the deploy's `app` job, with `require-approval` before the upload.
+"Over-the-air updates (EAS Update) are not used" above is superseded by #115: used, never automatic. The privacy
+policy page exists at `/privacy` (#116). 6 **DSA trader** stays the owner's, in App Store Connect.
 
 ## Status 2026-10-14
 

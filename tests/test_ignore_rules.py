@@ -16,6 +16,7 @@ sentence.
 """
 from __future__ import annotations
 
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -33,6 +34,11 @@ PERSONAL = ["**/contacts/", "*-contacts.md"]
 MOBILE_GIT = ["mobile/node_modules/", "mobile/.expo/", "mobile/dist/", "mobile/coverage/", "mobile/.env.local",
               "mobile/.env.production", "mobile/assets/data/eu27.*.json", "mobile/supabase/.temp/",
               "mobile/supabase/.branches/", "mobile/supabase/.env"]
+
+# Signing keys and store credentials live on EAS (#114). `eas credentials` can download them into the tree
+# as credentials.json, a .p8 key or a keystore; none of that may ever be committed.
+MOBILE_KEYS = ["*.pem", "*.p8", "*.p12", "*.jks", "*.keystore", "*.mobileprovision", "credentials.json",
+               "google-service-account*.json", "*.ipa", "*.aab", "*.apk"]
 
 
 def rules(path: Path) -> list[str]:
@@ -58,6 +64,14 @@ class Mobile(unittest.TestCase):
         have = rules(GITIGNORE)
         for rule in MOBILE_GIT:
             self.assertIn(rule, have, f".gitignore lost `{rule}`")
+
+    def test_no_signing_key_or_store_credential_can_be_committed(self):
+        have = rules(ROOT / "mobile" / ".gitignore")
+        for rule in MOBILE_KEYS:
+            self.assertIn(rule, have, f"mobile/.gitignore lost `{rule}` (#114)")
+        tracked = subprocess.run(["git", "-C", str(ROOT), "ls-files", "mobile"], capture_output=True, text=True).stdout
+        for name in tracked.splitlines():
+            self.assertNotRegex(name, r"\.(p8|p12|jks|keystore|mobileprovision|ipa|aab|apk)$|credentials\.json$", name)
 
 
 class Cache(unittest.TestCase):

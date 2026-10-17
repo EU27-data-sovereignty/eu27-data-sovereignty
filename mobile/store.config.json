@@ -1,0 +1,57 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "copyright": "2026 Pieter de Jong",
+    "categories": ["REFERENCE", "EDUCATION"],
+    "advisory": {
+      "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+      "contests": "NONE",
+      "gamblingSimulated": "NONE",
+      "horrorOrFearThemes": "NONE",
+      "matureOrSuggestiveThemes": "NONE",
+      "medicalOrTreatmentInformation": "NONE",
+      "profanityOrCrudeHumor": "NONE",
+      "sexualContentGraphicAndNudity": "NONE",
+      "sexualContentOrNudity": "NONE",
+      "violenceCartoonOrFantasy": "NONE",
+      "violenceRealistic": "NONE",
+      "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+      "gambling": false,
+      "unrestrictedWebAccess": false,
+      "kidsAgeBand": null,
+      "ageRatingOverride": "NONE",
+      "koreaAgeRatingOverride": "NONE"
+    },
+    "info": {
+      "en-US": {
+        "title": "EU-27 Data Sovereignty",
+        "subtitle": "Government data, per state",
+        "description": "A sourced reader of what each of the 27 EU member states holds in critical government data, where it is hosted, and what sovereign hosting for it requires. One screen per member state: its report with numbered sources, the hosting of its key registers, its place in a ranking by published rule, and the fact-check appendix behind every printed figure.\n\nThe edition inside the app is the same content model the site at eu27.cloud publishes, so the app and the site cannot disagree about a value. It reads with no network at all. A newer edition arrives only when you ask: a tap in About, or an opt-in check at launch, and every downloaded file is verified against its published hash before a single value from it is shown.\n\nWhat this app can honestly say about its evidence: every figure was gathered and checked by automated agents against a fetched, hashed source and reviewed by a second model that did not write it. No person has verified them. A figure that cannot be traced to its quote is shown as a gap, never as a number. The full method, every source and every check are on the Methodology and Fact check screens and at eu27.cloud.\n\nNo accounts, no analytics, no tracking, no permissions. The app collects nothing.",
+        "keywords": [
+          "EU",
+          "data sovereignty",
+          "government data",
+          "sovereign cloud",
+          "public sector",
+          "registers",
+          "hosting"
+        ],
+        "releaseNotes": "First release: the 27 country reports, the infrastructure overview, the ranking, the methodology and the fact-check appendices, read offline from the edition inside the app.",
+        "promoText": "The 27 member states' critical government data, sourced, offline, state by state.",
+        "marketingUrl": "https://eu27.cloud",
+        "supportUrl": "https://github.com/EU27-data-sovereignty/eu27-data-sovereignty/issues",
+        "privacyPolicyUrl": "https://eu27.cloud/privacy"
+      }
+    },
+    "release": {
+      "automaticRelease": false,
+      "phasedRelease": false
+    },
+    "review": {
+      "firstName": "Pieter",
+      "lastName": "de Jong",
+      "demoRequired": false,
+      "notes": "The app is a reader of a public dataset. It works fully offline from the edition inside the binary: no sign-in, no account, no demo credentials. The two network controls are on the About tab, off by default: \"Check for a newer edition\" fetches a hash-pinned data edition from the project's Supabase Storage bucket, and the same tap checks Expo's update service for a newer app build. Native views: every country report, its numbered sources (which open in the system browser), the hosting of each register, the ranking, the fact-check appendix. The privacy policy is at https://eu27.cloud/privacy and linked from the About tab."
+    }
+  }
+}

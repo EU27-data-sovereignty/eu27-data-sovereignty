@@ -174,6 +174,10 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             <a className="underline" href={CORRECTIONS_URL}>
               the corrections form
             </a>
+            .{' '}
+            <NavLink className="underline" to="/privacy">
+              Privacy
+            </NavLink>
             .
           </div>
         </div>

@@ -289,7 +289,7 @@ wanting a second topology in the model at all, which is a product decision.
 generated country parts were withdrawn with the Dutch-scaled figures. When the book returns, they are
 rendered from the content model like the report. Mono interior (#28).
 
-### Later — a mobile release
+### In progress — the mobile release (#114–#116)
 `mobile/` is an Expo app that reads the 27 country reports on a phone: one app with the country as data, not
 27 builds (#109). It renders the content model from the split edition inside its binary, the 28 parts
 `model/export_json.py --split` writes from the same bundle the site reads (#110), so the app and the site cannot
@@ -297,10 +297,20 @@ disagree about a value, and the app needs no network at all. It learns of a newe
 read-only Supabase Storage bucket in an EU region that only the deploy writes (#111, #112), verifying every file
 against its published hash first. Its suite is the `mobile` group of `./test.sh` and a parallel CI job (#113).
 
-What is deliberately not built yet:
+Since 2026-10-16 it is released through Expo Application Services (#114): the deploy's `app` job starts
+`mobile/.eas/workflows/release.yml` for the deployed commit, which builds on a native change, sends the build to
+TestFlight, waits for the owner's approval and uploads it to App Store Connect, or publishes the JavaScript as an
+over-the-air update that installed apps fetch only on the reader's tap (#115). The listing is `store.config.json`;
+the privacy policy the stores require is `/privacy` (#116); `releases.csv` retraces every build to its commit.
 
-- **A public release**, which sits behind the same gate as indexing and `eu27.cloud`: the legal and
-  regulatory entries are not yet verified (#25). No EAS, no store accounts, no build.
+What is deliberately not done yet:
+
+- **The public release click.** "Submit for Review" and "Release" are manual in App Store Connect
+  (`automaticRelease: false`), behind the same gate as indexing and `eu27.cloud`: the legal and regulatory entries
+  are not yet verified (#25). The owner's accounts, the first build and App Review's verdict are open
+  (`TODO.md` § Release the reader).
+- **Google Play.** Android builds in the workflow and is never submitted: no Play account, and Google's
+  12-testers-for-14-days rule for new personal accounts.
 - **The hosted bucket.** The channel is built and proven against a local stack; the owner creates the EU-region
   project and sets its variable and secret (`DEPLOYMENT.md` § The edition channel). Until then the app ships
   its bundled edition and the deploy's `edition` job is skipped.

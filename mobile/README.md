@@ -6,9 +6,12 @@ all. It learns of a newer edition from one public, read-only bucket, verifies ev
 published hash before showing a single value from it, and otherwise keeps the edition it has (DECISIONS.md
 #109 to #113).
 
-**No release yet.** No build, no store listing, no EAS. `vercel.json` builds `web/` and `.vercelignore`
-excludes this directory, so nothing here ships anywhere. A public release is gated on the same verification
-work as search indexing and the `eu27.cloud` domain (`DECISIONS.md` #25, #50).
+**Released through EAS, by hand at the last step** (#114). `vercel.json` builds `web/` and `.vercelignore` excludes
+this directory: nothing here reaches the site. The deploy's `app` job starts `.eas/workflows/release.yml` on Expo
+Application Services for the deployed commit: a build only when the native fingerprint changed, TestFlight, the
+owner's approval, the upload to App Store Connect; or the JavaScript as an over-the-air update that installed apps
+fetch only when the reader asks (#115). "Submit for Review" and "Release" stay clicks in App Store Connect: the
+public release is still behind the launch gate (`DECISIONS.md` #25, #67). § Release, below.
 
 ```bash
 ./init.sh                 # Node and npm checked, npm ci, the 28 parts generated, an .env.local you may leave empty
@@ -88,22 +91,23 @@ two tracked manifests to each other. `./run.sh data` at the root regenerates eve
 
 ## Test suite (`./test.sh`)
 
-| Step                           | What it checks                                                                                                                                |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `node`, `deps`                 | Node ≥ 20.19.4 (24 expected); `node_modules` matches the lockfile                                                                             |
-| `secrets`                      | no tracked `.env*` but `.env.template`                                                                                                        |
-| `shell`                        | every script parses under bash and `/bin/bash` 3.2; shellcheck when installed                                                                 |
-| `tooling`                      | the CLI the deploy's gate installs is an exact version, Supabase CLI 2.120.0, and the one named here; no EAS anywhere                         |
-| `pins`                         | every dependency is an exact `x.y.z`                                                                                                          |
-| `identity`                     | `app.json`, `package.json` and `supabase/config.toml` name this project, not the template                                                     |
-| `env-keys`                     | every `EXPO_PUBLIC_*` the code reads is declared in `.env.template` (names only)                                                              |
-| `scripts`                      | `run.sh help`, `init.sh --help`, `test.sh --help` exit 0; unknown input exits non-zero                                                        |
-| `format`, `lint`, `types`      | Prettier, ESLint (`expo lint`), `tsc --noEmit`                                                                                                |
-| `parts`, `edition`, `tokens`   | the 28 parts regenerated; they match the manifest, the manifest the committed bundle, the site's copy the app's; the generated tokens current |
-| `unit`, `parity`               | Jest with coverage floors (`jest.config.js`); the parity and security suites named on their own                                               |
-| `doctor`, `web-build`, `audit` | expo-doctor; `expo export --platform web`; npm audit against `audit-allowlist.json`                                                           |
-| `gate`                         | the workspace security gate over the tree (skipped with `--ci`)                                                                               |
-| `integration`                  | with `--integration`: `scripts/integration-test.mjs` against the local stack, nine steps (below)                                              |
+| Step                              | What it checks                                                                                                                                                                                           |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `node`, `deps`                    | Node ≥ 20.19.4 (24 expected); `node_modules` matches the lockfile                                                                                                                                        |
+| `secrets`                         | no tracked `.env*` but `.env.template`                                                                                                                                                                   |
+| `shell`                           | every script parses under bash and `/bin/bash` 3.2; shellcheck when installed                                                                                                                            |
+| `tooling`                         | the CLI the deploy's gate installs is an exact version, Supabase CLI 2.120.0, and the one named here; the EAS CLI pin (`eas.json` `cli.version`) equal to `deploy.yml`'s, and `eas-cli` not a dependency |
+| `workflows`, `listing`, `release` | `.eas/workflows/*.yml`: manual trigger only, an approval before every submit, under 16 KiB; `eas metadata:lint` over `store.config.json`; `releases.csv` in shape, every row's commit in this repository |
+| `pins`                            | every dependency is an exact `x.y.z`                                                                                                                                                                     |
+| `identity`                        | `app.json`, `package.json` and `supabase/config.toml` name this project, not the template                                                                                                                |
+| `env-keys`                        | every `EXPO_PUBLIC_*` the code reads is declared in `.env.template` (names only)                                                                                                                         |
+| `scripts`                         | `run.sh help`, `init.sh --help`, `test.sh --help` exit 0; unknown input exits non-zero                                                                                                                   |
+| `format`, `lint`, `types`         | Prettier, ESLint (`expo lint`), `tsc --noEmit`                                                                                                                                                           |
+| `parts`, `edition`, `tokens`      | the 28 parts regenerated; they match the manifest, the manifest the committed bundle, the site's copy the app's; the generated tokens current                                                            |
+| `unit`, `parity`                  | Jest with coverage floors (`jest.config.js`); the parity and security suites named on their own                                                                                                          |
+| `doctor`, `web-build`, `audit`    | expo-doctor; `expo export --platform web`; npm audit against `audit-allowlist.json`                                                                                                                      |
+| `gate`                            | the workspace security gate over the tree (skipped with `--ci`)                                                                                                                                          |
+| `integration`                     | with `--integration`: `scripts/integration-test.mjs` against the local stack, nine steps (below)                                                                                                         |
 
 The integration run, in order: the deploy's own publisher (`model/edition.py publish`) fills the bucket with
 a fixture edition; every object is readable anonymously and hashes to its manifest entry; anonymous writes
@@ -115,7 +119,8 @@ process and are never written or printed.
 ## Security and privacy
 
 The app has no accounts, no analytics, no telemetry and no crash reporting. It collects nothing, and in its
-default configuration makes no network request at all. `__tests__/security.test.ts` asserts each of these:
+default configuration makes no network request at all: `expo-updates` is configured never to check on its own
+(`checkAutomatically: NEVER`, #115). `__tests__/security.test.ts` asserts each of these:
 
 - **No capabilities.** `android.permissions` is empty, `ios.infoPlist` declares no usage strings, and
   nothing re-enables cleartext traffic (Android refuses it by default).
@@ -125,22 +130,53 @@ default configuration makes no network request at all. `__tests__/security.test.
   writes. Secret-shaped names fail the test, and `.env.template` ships no values.
 - **A dependency allowlist**, not a denylist, and exact pins: analytics and ad SDKs arrive under names nobody
   predicts.
-- **One network path.** Downloads happen only in `src/edition/expoFiles.ts`; URLs are built only in
-  `src/services/channel.ts`, from the configured project; no file hardcodes a host; external links open only
-  from a source entry or a submission form.
+- **Two hosts, one tap.** Edition downloads happen only in `src/edition/expoFiles.ts`, with URLs built only in
+  `src/services/channel.ts` from the configured project; the app's own update is asked for only through
+  `src/update/expoAppUpdates.ts`, the one file that imports `expo-updates`, and only in the same tap as the
+  edition check; no file hardcodes a host (the site's address for the privacy link comes from `app.json`);
+  external links open only from a source entry, a submission form or the privacy link.
 - **Nothing persisted about the reader.** No session storage dependency. On the device: the downloaded
   edition, a pointer to it, and one setting (whether to check automatically at launch, off by default).
 
 **What one check sends, and to whom.** A tap on "Check for a newer edition" (or launch, if the reader has
 switched the automatic check on) sends one request for a 200-byte pointer to the project's Supabase Storage,
-and up to 29 more for the files of a newer edition. Supabase, and the cloud provider its EU-region project
-runs on, see the reader's network address, the app's user agent and the time, in their request logs, as any
-host does. Nothing identifies the reader; nothing about the reader is stored; no request is made unless the
-reader asks. `docs/plans/stichting.md` § Privacy records Supabase among the processors for this reason.
+and up to 29 more for the files of a newer edition; then one request to Expo's update service (`u.expo.dev`,
+United States) for a newer build of the app's code, and its download if there is one. Each host sees the
+reader's network address, the app's user agent and the time, in its request logs, as any host does. Nothing
+identifies the reader; nothing about the reader is stored; no request is made unless the reader asks.
+`https://eu27.cloud/privacy` says the same to the public, and `docs/plans/stichting.md` § Privacy records
+Supabase and Expo among the processors for this reason.
 
 `__tests__/parity.test.ts` additionally asserts the edition names no individual: the institutional map is
 public; named people live in the separate private contacts repo (`DECISIONS.md` #26, #49), and the app is
 exactly where such a leak would ship.
+
+## Release
+
+| Piece                | Where                                  | What it does                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The workflow         | `.eas/workflows/release.yml`           | On EAS: `fingerprint` → `get-build` → `build` (only when no build matches the fingerprint) → `testflight` (internal group) → `require-approval` → `submit` (the upload to App Store Connect); or `update` to the `production` channel when a build exists. `workflow_dispatch` only: the deploy's `app` job starts it after the site's gate, or `./run.sh release` by hand |
+| Build profiles       | `eas.json`                             | `production` (store, channel `production`, build numbers on EAS), `preview` (internal), `development` (simulator); `cli.version` is the one CLI pin, run as `npx eas-cli@<it>` by `run.sh`, `test.sh` and the deploy                                                                                                                                                       |
+| The listing          | `store.config.json`, `store.config.js` | EAS Metadata; the review contact from `EAS_REVIEW_EMAIL` and `EAS_REVIEW_PHONE` at push time, never in the tree; `automaticRelease: false`                                                                                                                                                                                                                                 |
+| The ledger           | `releases.csv`                         | One row per EAS build, written by `./run.sh release record <build-id>` (`model/release.py`): version, build number, build id, fingerprint, runtime, channel, commit, the edition manifest's sha256 at that commit                                                                                                                                                          |
+| Over-the-air updates | `src/update/`                          | `expo-updates`, never automatic; the About tab asks in the same tap as the edition check and offers a restart (#115)                                                                                                                                                                                                                                                       |
+| Credentials          | on EAS                                 | Apple distribution certificate, provisioning profile, App Store Connect API key (App Manager), Android upload keystore; `eas credentials` manages them; nothing of them is in the tree (`.gitignore`, `tests/test_ignore_rules.py`)                                                                                                                                        |
+
+```bash
+./run.sh eas login                  # once; or EXPO_TOKEN in the environment (CI); `./run.sh eas <args>` is the pinned CLI
+./run.sh release                    # the workflow above; approve the upload in the Expo dashboard
+./run.sh release record <build-id>  # append the build to releases.csv
+./run.sh build ios                  # one production build by hand
+./run.sh update "<message>"         # the JavaScript to the production channel
+./run.sh metadata lint|push|pull    # the listing; push needs EAS_REVIEW_EMAIL and EAS_REVIEW_PHONE
+```
+
+The one-time setup is the owner's (`TODO.md` § Release the reader): `./run.sh eas init --force` for the real
+project id, `./run.sh eas credentials` for both platforms, `./run.sh eas update:configure`, the first interactive
+`./run.sh build ios` and `./run.sh eas submit --platform ios --latest`
+that create the App Store Connect record, the GitHub link with base directory `mobile`, the `EXPO_TOKEN`
+secret and the `EXPO_PROJECT_ID` variable. Android builds in the workflow and is never submitted: there is no
+Play account.
 
 ## Supabase
 

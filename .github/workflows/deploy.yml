@@ -178,3 +178,46 @@ jobs:
       # the committed manifest. The same check runs weekly in monitor.yml.
       - name: The served edition is the committed one
         run: python3 model/smoke.py --site '' --edition-url "$SUPABASE_URL/storage/v1/object/public/editions" --manifest mobile/assets/data/manifest.json --summary "$GITHUB_STEP_SUMMARY"
+
+  # The app (#114, #115): once the site is final, the release workflow runs on EAS for this same commit
+  # (mobile/.eas/workflows/release.yml): fingerprint; a build only when the native code changed; TestFlight;
+  # the owner's approval in the Expo dashboard; the upload to App Store Connect. When a build for this
+  # fingerprint already exists, the JavaScript goes out as an over-the-air update that installed apps fetch
+  # only when the reader asks. Skipped until the owner creates the EAS project and sets the EXPO_PROJECT_ID
+  # repository variable; the token is a production-environment secret and reaches the pinned CLI through
+  # its environment, never argv. A failed run touches nothing on the site or in the bucket. "Submit for
+  # Review" and "Release" stay clicks in App Store Connect: the launch gate (#25, #67).
+  app:
+    name: Release the reader on EAS
+    needs: deploy
+    if: vars.EXPO_PROJECT_ID != ''
+    runs-on: ubuntu-24.04
+    environment:
+      name: production
+    env:
+      EAS_CLI: eas-cli@25.0.0
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      # The CLI is `npx eas-cli@<exact>`, the pin eas.json's cli.version enforces on itself and mobile/test.sh
+      # (`tooling`) holds equal to EAS_CLI above; never a project dependency (expo-doctor refuses it), as the
+      # Vercel CLI runs above. The reader's dependencies are installed so the CLI can read the app config.
+      - name: The reader's dependencies
+        run: npm ci
+      - name: app.json names the project the variable names
+        env:
+          EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+        run: node -e 'const id = require("./app.json").expo.extra.eas.projectId; if (id !== process.env.EXPO_PROJECT_ID) { console.error(`app.json names EAS project ${id}, the repository variable ${process.env.EXPO_PROJECT_ID}`); process.exit(1) }'
+      - name: Start the release workflow for this commit
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: npx --yes "$EAS_CLI" workflow:run .eas/workflows/release.yml --non-interactive
+      - name: Where to follow it
+        run: printf '### Release workflow started on EAS\n\nCommit `%s`. A new build goes to TestFlight, then waits for the owner'"'"'s approval in the Expo dashboard before the upload to App Store Connect; an unchanged native build gets the JavaScript as an over-the-air update. Record a build with `cd mobile && ./run.sh release record <build-id>`.\n' "$GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"

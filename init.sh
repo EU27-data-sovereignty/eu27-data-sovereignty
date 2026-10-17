@@ -118,6 +118,11 @@ else
     npm install --no-audit --no-fund
 fi
 print_success "$(python3 -c "import json;d=json.load(open('package.json'));print(len(d.get('dependencies',{}))+len(d.get('devDependencies',{})))") direct dependencies installed, all exactly pinned"
+# Four of the five browser projects (#92) run in Playwright's own Firefox and WebKit, which no
+# machine has by default. Without them `./test.sh` fails 180 browser tests at launch, each in
+# under a millisecond; the gate's e2e stage now refuses to start with one message instead.
+npx playwright install firefox webkit
+print_success "Playwright Firefox and WebKit installed (the Chrome project uses the browser above)"
 cd "$ROOT"
 
 # --- Mobile reader -----------------------------------------------------------

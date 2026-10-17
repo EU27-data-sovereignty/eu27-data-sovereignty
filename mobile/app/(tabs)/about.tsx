@@ -1,16 +1,20 @@
 /**
  * This edition: its id (the sha256 of the bundle it was split from), when it was generated, where it came
  * from, what it counts, what the project can honestly say about its evidence, and the one control that
- * reaches the network: a check for a newer edition (#110, #111). Every sentence about evidence comes from
- * the edition's `notice`; the privacy sentence is the app’s own and says exactly what one check sends.
+ * reaches the network: a check for a newer edition (#110, #111), which in the same tap also asks for a
+ * newer build of the app itself (#115). Every sentence about evidence comes from the edition's `notice`;
+ * the privacy sentences are the app’s own and say exactly what one check sends, and to whom. The privacy
+ * policy the stores require is linked from here (#116).
  */
 import Constants from 'expo-constants';
-import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, Switch, Text, View } from 'react-native';
 
 import { Heading, Loading, Screen } from '@/components/Screen';
 import { SPACE, Type, useTheme } from '@/components/theme';
 import { useEdition } from '@/edition/EditionContext';
 import type { UpdateState } from '@/edition/EditionStore';
+import { privacyUrl } from '@/services/site';
+import { describeAppUpdate } from '@/update/appUpdate';
 
 function describe(update: UpdateState): string {
   switch (update.kind) {
@@ -42,6 +46,9 @@ export default function About() {
     update,
     checkForUpdate,
     switchToInstalled,
+    appUpdate,
+    build,
+    restartToApply,
     autoCheck,
     setAutoCheck,
     integrityNotice,
@@ -51,7 +58,12 @@ export default function About() {
     (t, e) => ({ facts: t.facts + e.facts, withheld: t.withheld + e.withheld }),
     { facts: 0, withheld: 0 }
   );
-  const busy = update.kind === 'checking' || update.kind === 'downloading';
+  const busy =
+    update.kind === 'checking' ||
+    update.kind === 'downloading' ||
+    appUpdate.kind === 'checking' ||
+    appUpdate.kind === 'downloading';
+  const privacy = privacyUrl();
   const row = (label: string, value: string, mono = false) => (
     <View style={styles.row} key={label}>
       <Text style={[styles.label, { color: theme.fgMuted }]}>{label}</Text>
@@ -88,6 +100,12 @@ export default function About() {
         'App',
         `${Constants.expoConfig?.name ?? ''} ${Constants.expoConfig?.version ?? ''}`.trim()
       )}
+      {row(
+        'App build',
+        build.updateId
+          ? `Update ${build.updateId.slice(0, 8)} on runtime ${build.runtimeVersion ?? '?'}${build.channel ? ` (${build.channel})` : ''}`
+          : `The code inside the app as installed${build.runtimeVersion ? `, runtime ${build.runtimeVersion}` : ''}`
+      )}
 
       <Text accessibilityRole="header" style={[styles.heading, { color: theme.fgPrimary }]}>
         What this edition can say about its evidence
@@ -112,6 +130,9 @@ export default function About() {
         Newer editions
       </Text>
       <Text style={[styles.small, { color: theme.fgSecondary }]}>{describe(update)}</Text>
+      <Text style={[styles.small, { color: theme.fgSecondary, marginTop: SPACE.xs }]}>
+        {describeAppUpdate(appUpdate)}
+      </Text>
       <View style={styles.actions}>
         <Pressable
           accessibilityRole="button"
@@ -132,6 +153,15 @@ export default function About() {
             <Text style={{ color: theme.accentText, fontWeight: '600' }}>Use it now</Text>
           </Pressable>
         ) : null}
+        {appUpdate.kind === 'ready' ? (
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => void restartToApply()}
+            style={[styles.button, { borderWidth: 1, borderColor: theme.accent }]}
+          >
+            <Text style={{ color: theme.accentText, fontWeight: '600' }}>Restart to apply</Text>
+          </Pressable>
+        ) : null}
       </View>
       <View style={styles.toggle}>
         <Text style={[styles.small, { color: theme.fgPrimary, flex: 1 }]}>
@@ -146,11 +176,26 @@ export default function About() {
       </View>
       <Text style={[styles.small, { color: theme.fgMuted, marginTop: SPACE.sm }]}>
         A check sends one request for a 200-byte pointer to the project’s edition channel, and up to
-        29 more for the files of a newer edition. The host sees the network address, the app’s user
-        agent and the time, in its request logs. Nothing identifies the reader; nothing about the
-        reader is stored. Every downloaded file is checked against its published hash before a
-        single value from it is shown.
+        29 more for the files of a newer edition; then one request to Expo’s update service for a
+        newer build of this app. Each host sees the network address, the app’s user agent and the
+        time, in its request logs. Nothing identifies the reader; nothing about the reader is
+        stored; no request is made unless you tap, or switch the automatic check on. Every
+        downloaded edition file is checked against its published hash before a single value from it
+        is shown.
       </Text>
+      {privacy ? (
+        <Pressable
+          accessibilityRole="link"
+          onPress={() => void Linking.openURL(privacy)}
+          style={styles.link}
+        >
+          <Text
+            style={[styles.small, { color: theme.accentText, textDecorationLine: 'underline' }]}
+          >
+            Privacy policy
+          </Text>
+        </Pressable>
+      ) : null}
     </Screen>
   );
 }
@@ -172,4 +217,5 @@ const styles = StyleSheet.create({
   actions: { flexDirection: 'row', flexWrap: 'wrap', gap: SPACE.sm, marginTop: SPACE.md },
   button: { paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6 },
   toggle: { flexDirection: 'row', alignItems: 'center', gap: SPACE.md, marginTop: SPACE.md },
+  link: { marginTop: SPACE.md, alignSelf: 'flex-start' },
 });

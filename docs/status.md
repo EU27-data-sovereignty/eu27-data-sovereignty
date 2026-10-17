@@ -102,8 +102,9 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
    - recruit reviewers for the roster (`model/contrib/reviewers.csv`);
    - draw the sample (`./run.sh contrib audit-sample`);
    - measure the error rate.
-4. Decide on the mobile app and the foundation. The app's store accounts and Supabase wait for the
-   foundation.
+4. The mobile app's release path exists (#114–#116, 2026-10-16): the owner's Expo and Apple accounts, the
+   one-time EAS setup, the first TestFlight build and App Review are open (`TODO.md` § Release the reader);
+   the public release click waits for the launch gate. Supabase and the foundation: unchanged.
 5. **The data plan, step 1: find as much data as we can.** Cheapest gaps first (owner, 2026-10-06): a free
    retry pass, then a $45 wave on the registers found but not verified. Registers known: 675 → 732 of 1,044. Pairs
    recorded: 684 → 741 of 1,053 (70%). 59 registers remain "claimed, not verified". The gap list is `docs/gaps.md`. The hosting wave's

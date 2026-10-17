@@ -52,7 +52,9 @@ group:
 - `pdf`: stage 10;
 - `mobile`: stage 17; its `--integration` round-trip runs only when the caller passes `mobile_integration: true`
   (deploy.yml does, ci.yml does not: `supabase start` would be the critical path on every branch push);
-- `e2e`: stage 18, with `--project NAME` for one Playwright project;
+- `e2e`: stage 18, with `--project NAME` for one Playwright project. Four of the five projects need Playwright's own
+  Firefox and WebKit, which `./init.sh` installs (`cd web && npx playwright install firefox webkit` by hand); the stage
+  refuses to start without them rather than failing every test at launch;
 - `live`: stage 19. CI runs it in the deploy job, after the deploy and against it, not in the gate. A broken key
   must not block the redeploy that fixes it.
 
@@ -92,6 +94,10 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
   bundle byte for byte, every part renders alone, the two tracked manifests are the committed bundle's) and
   `test_edition` (the publisher and verifier against a fake Storage server: immutable per edition, idempotent,
   the pointer last, altered bytes refused by name, the service key never in a URL, on stdout or in a summary).
+- **The mobile reader's release (#114, #116):** `test_release` (the EAS release ledger `mobile/releases.csv` is
+  generated, held in shape by `check`, and every row retraceable to a build, a commit and an edition manifest) and
+  `test_privacy` (the `/privacy` page the stores link to names every processor the plans name and makes the same
+  claims the reader's own tests hold it to).
 
 ## The live-site smoke test
 

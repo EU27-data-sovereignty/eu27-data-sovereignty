@@ -8,6 +8,7 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { useTheme } from '@/components/theme';
 import { EditionProvider } from '@/edition/EditionContext';
 import { createEditionStore } from '@/edition/defaults';
+import { expoAppUpdates } from '@/update/expoAppUpdates';
 
 export default function RootLayout() {
   const theme = useTheme();
@@ -15,7 +16,7 @@ export default function RootLayout() {
   return (
     <ErrorBoundary>
       <SafeAreaProvider>
-        <EditionProvider store={store}>
+        <EditionProvider store={store} appUpdates={expoAppUpdates}>
           <StatusBar style="auto" />
           <Stack
             screenOptions={{

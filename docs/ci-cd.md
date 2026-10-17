@@ -2,7 +2,7 @@
 
 What runs on GitHub Actions, on which event, and what a failure means. The checks themselves are listed stage by
 stage in [`testing.md`](testing.md), and the pipeline's timings in [`process.md`](process.md). The reasoning is in
-[`DECISIONS.md`](../DECISIONS.md), cited by number. Last revised 2026-10-14 (#107); the vetting of that day, with
+[`DECISIONS.md`](../DECISIONS.md), cited by number. Last revised 2026-10-16 (#114–#116); the vetting of that day, with
 every check and its output, is [`plans/ci-cd-status-2026-10-14.md`](plans/ci-cd-status-2026-10-14.md).
 
 ## By event
@@ -12,7 +12,7 @@ every check and its output, is [`plans/ci-cd-status-2026-10-14.md`](plans/ci-cd-
 | Push to any branch but `main` | `ci.yml` → `gate.yml` (`pdf: false`) | The gate's model, web, mobile and e2e jobs; the fact check, reported only. One run per branch: a newer push cancels the run the older one started (#107) | The later push to `main`, once the ruleset is applied (NOT YET on 2026-10-14): `main` accepts only a commit whose model, web and security checks have passed |
 | Pull request | `ci.yml` → `gate.yml` (`pdf: false`) | The same | The same; no reviewer is required (#107) |
 | Push or pull request | `security.yml` → dotfiles `security-reusable.yml` | gitleaks over the full history with the shared ruleset, then the security gate over what the push brings | Nothing directly; a red run is a finding to fix |
-| Push to `main` | `deploy.yml` → `gate.yml` (`pdf: true`, `factcheck: true`, `mobile_integration: true`) | The full gate including 28 PDFs, the fact-check gate and the mobile edition round-trip against a local Supabase; then the deploy job: the gate's own build packaged and checked byte for byte, the current production deployment recorded, the prebuilt upload, the smoke test, one live `/ask` call, promotion if needed, and a rollback to the recorded deployment if the smoke test or the `/ask` call fails (#107); then the `edition` job, once `SUPABASE_URL` is set: the split edition published to the bucket and read back (#112) | The production deploy |
+| Push to `main` | `deploy.yml` → `gate.yml` (`pdf: true`, `factcheck: true`, `mobile_integration: true`) | The full gate including 28 PDFs, the fact-check gate and the mobile edition round-trip against a local Supabase; then the deploy job: the gate's own build packaged and checked byte for byte, the current production deployment recorded, the prebuilt upload, the smoke test, one live `/ask` call, promotion if needed, and a rollback to the recorded deployment if the smoke test or the `/ask` call fails (#107); then the `edition` job, once `SUPABASE_URL` is set: the split edition published to the bucket and read back (#112); then the `app` job, once `EXPO_PROJECT_ID` is set: the reader's release workflow started on EAS for the same commit, which builds on a native change, sends the build to TestFlight, waits for the owner's approval and uploads it to App Store Connect, or publishes the JavaScript as an over-the-air update (#114, #115) | The production deploy; the app's build and upload |
 | Mondays 06:17 UTC | `monitor.yml` (`live`, `sources`) | The live site smoke test and the edition channel (#111), Eurostat vintages, every cited source re-fetched | Nothing; a red run is a finding |
 | Daily 07:41 UTC | `monitor.yml` (`ask`) | One fixed question to the live `/ask` | Nothing |
 
@@ -144,6 +144,18 @@ ruleset depend on the job ids of the dotfiles reusable workflow at `@main`.
 | The `edition` job after the deploy | `deploy.yml` | NOT YET: skipped until the owner sets `SUPABASE_URL`; the publisher is tested in `tests/test_edition.py` and by the integration run |
 | The edition check in the weekly smoke test | `monitor.yml` | NOT YET: reports "not configured" until the variable exists |
 | Dependabot watches `mobile/package-lock.json` | `dependabot.yml` | NOT YET: security updates are still off in the settings (#107 A to C) |
+
+## Changes on 2026-10-16 (#114–#116)
+
+| Change | Where | What the run history has verified |
+|---|---|---|
+| The `app` job after `edition`: `npm ci` in `mobile/`, `app.json`'s project id checked against the variable, `npx eas-cli@25.0.0 workflow:run` (the `EAS_CLI` pin, equal to `eas.json`'s `cli.version`) with `EXPO_TOKEN` in that step's env | `deploy.yml` | NOT YET: skipped until the owner sets `EXPO_PROJECT_ID`; the shape is held by `tests/test_workflows.py` `App` |
+| The EAS workflow: `workflow_dispatch` only, `require-approval` before `submit`, Android never submitted | `mobile/.eas/workflows/release.yml` | NOT YET: `eas workflow:validate` needs the owner's login; `mobile/test.sh` `workflows` holds the triggers and the approval |
+| `mobile/test.sh` gains `workflows`, `listing` (`eas metadata:lint`) and `release` (the ledger); `tooling` holds the EAS CLI pin | `mobile/test.sh` | Locally on 2026-10-16: PASS |
+
+Secrets after this change: `VERCEL_TOKEN`, `SUPABASE_SERVICE_ROLE_KEY` and `EXPO_TOKEN`, all in the `production`
+environment (restricted to `main`), each read by exactly one step through its environment; `tests/test_workflows.py`
+fails on a second reference or a `--token` on a command line.
 
 ## Known limits
 

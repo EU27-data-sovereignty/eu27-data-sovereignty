@@ -129,6 +129,34 @@ Open
 - [ ] Decide how classified holdings (defence, intelligence) count in the ranking: exclusion or unknown
 - [ ] Rendering fetch for JavaScript pages (FI, PT, LT, CY) and a retry route for refused sites
       (LU, LV, RO, IE)
+
+## Release the reader (#114–#116; the public release click stays behind the launch gate)
+- [ ] **Owner:** accounts. `! npx eas-cli@25.0.0 whoami` (expect "Not logged in"); an Expo account at expo.dev if none;
+      an Apple Developer Program membership (https://developer.apple.com/account, €99/yr, personal, transferable to
+      the stichting later). State unknown on 2026-10-16
+- [ ] **Owner:** one-time EAS setup, in `mobile/` (`./run.sh eas <args>` is the pinned CLI): `./run.sh eas login`; `./run.sh eas init --force` (replaces the nil project
+      id in `app.json`, sets `owner`); `./run.sh eas credentials --platform ios` (distribution certificate, profile, an
+      App Store Connect API key with the App Manager role, all on EAS) and `--platform android` (upload keystore);
+      `./run.sh eas update:configure` (rewrites `updates.url`; keep `checkAutomatically: NEVER`); then the first
+      interactive `./run.sh build ios` and `./run.sh eas submit --platform ios --latest`,
+      which create the App Store Connect record; put its Apple ID in `eas.json` `ascAppId` and the team id in
+      `appleTeamId`; commit `app.json` and `eas.json`
+- [ ] **Owner:** link the GitHub repository to the EAS project (Expo GitHub app, base directory `mobile`); then
+      `gh secret set EXPO_TOKEN --env production` with a robot token for the project, and
+      `gh variable set EXPO_PROJECT_ID --body <projectId>`; until then the deploy's `app` job is skipped
+- [ ] Spike before the first push to `main` with the variable set: `cd mobile && EXPO_TOKEN=… ./run.sh release` on a
+      pushed commit, and `./run.sh eas workflow:validate .eas/workflows/release.yml` (needs the login); record both outputs in #114's Verified line
+- [ ] **Owner, in App Store Connect by hand** (EAS Metadata does not cover them): App Privacy "Data Not Collected";
+      screenshots (6.9" iPhone and 13" iPad from the simulator, `./run.sh ios`); the EU DSA trader declaration; the
+      age-rating confirmation. Then `EAS_REVIEW_EMAIL=… EAS_REVIEW_PHONE=… ./run.sh metadata push`
+- [ ] First release: push the branch, green `ci.yml`, owner's OK, `git push origin HEAD:main`; TestFlight on a device
+      (closes #109's "NOT YET: a reading on a physical device by a person"); approve in the Expo dashboard; "Submit
+      for Review" in App Store Connect; `./run.sh release record <build-id>` and commit `mobile/releases.csv`; fill
+      #114's and #115's Verified lines
+- [ ] Google Play: a developer account ($25), a service-account key on EAS, `submit_android` behind the same
+      approval, and Google's closed test (12 testers, 14 days) before production
+- [ ] EAS Update code signing, if the project ever moves to a plan that includes it (#115)
+
 - [ ] Re-run the thin run-1 states: AT, BE, EE
 - [ ] Record counts and data sizes per holding, for capacity (#73)
 - [ ] `gov_employment_k`: source it or drop it (withheld today)
@@ -136,6 +164,7 @@ Open
 
 ## Outputs
 - [x] Mobile reader to schema 2 (content model): rebuilt, #109–#113 (2026-10-14)
+- [x] Mobile reader: a release path through EAS to App Store Connect, the public click held (#114–#116, 2026-10-16)
 - [ ] Mobile reader: a signed manifest (ed25519) so the channel proves authorship, not only integrity (#111)
 - [ ] Mobile reader: add `Gate / Mobile reader (./test.sh --only mobile)` to `main`'s ruleset after two weeks of timings (#113)
 - [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`

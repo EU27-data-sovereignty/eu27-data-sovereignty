@@ -2,7 +2,7 @@
   "expo": {
     "name": "EU-27 Data Sovereignty",
     "slug": "eu27-data-sovereignty",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "eu27",
@@ -11,7 +11,10 @@
       "supportsTablet": true,
       "bundleIdentifier": "cloud.eu27.reader",
       "buildNumber": "1",
-      "infoPlist": {}
+      "infoPlist": {},
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "versionCode": 1,
@@ -43,6 +46,22 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "NEVER",
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/00000000-0000-0000-0000-000000000000"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "extra": {
+      "siteUrl": "https://eu27.cloud",
+      "privacyPath": "/privacy",
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
     }
   }
 }

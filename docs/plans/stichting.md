@@ -134,9 +134,13 @@ From the transfer on, the stichting is the GDPR controller for anything it colle
 `/ask` questions passed on to Anthropic. Before any data collection it needs:
 - a privacy notice;
 - a record of processing;
-- processor agreements with Vercel, Supabase, Anthropic and GitHub (Supabase is a processor because the mobile
-  reader's edition check reaches its Storage bucket, hosted in an EU-27 region, on a tap or an opt-in: #111);
-- transfer safeguards for the US processors.
+- processor agreements with Vercel, Supabase, Anthropic, GitHub and Expo (Supabase is a processor because the
+  mobile reader's edition check reaches its Storage bucket, hosted in an EU-27 region, on a tap or an opt-in:
+  #111; Expo because the same tap asks its update service for a newer build of the app, and because EAS holds
+  the signing credentials and builds the binaries: #114, #115); Apple and Google as store operators under
+  their own terms;
+- transfer safeguards for the US processors (Vercel, Anthropic, Expo);
+- the public privacy page `https://eu27.cloud/privacy` (#116) rewritten to name the stichting as controller.
 
 ## Timeline
 

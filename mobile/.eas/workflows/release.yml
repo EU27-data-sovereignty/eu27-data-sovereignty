@@ -1,0 +1,112 @@
+# The release workflow (DECISIONS.md #114, #115). Runs on EAS, never on a GitHub push: the deploy's `app` job
+# triggers it with `eas workflow:run` only after the site's gate, the fact-check gate and the deploy itself
+# passed (.github/workflows/deploy.yml), and `./run.sh release` runs it by hand.
+#
+# Shape, from Expo's deploy-to-production example plus an approval: fingerprint the native project; look for an
+# existing production build with that fingerprint; build only when there is none; send a new iOS build to the
+# TestFlight internal group; stop for the owner's approval in the Expo dashboard; only then upload it to App Store
+# Connect, where "Submit for Review" and "Release" stay manual clicks (the launch gate, #25, #67). When a build
+# already exists for the fingerprint, publish the JavaScript as an over-the-air update to the `production`
+# channel instead: installed apps fetch it only when the reader asks (#115). Android builds and is never
+# submitted here: a Play account does not exist yet.
+name: Release the reader
+run_name: Release ${{ github.sha }}
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  fingerprint:
+    type: fingerprint
+    environment: production
+
+  get_ios_build:
+    needs: [fingerprint]
+    type: get-build
+    params:
+      platform: ios
+      profile: production
+      distribution: store
+      fingerprint_hash: ${{ needs.fingerprint.outputs.ios_fingerprint_hash }}
+
+  get_android_build:
+    needs: [fingerprint]
+    type: get-build
+    params:
+      platform: android
+      profile: production
+      distribution: store
+      fingerprint_hash: ${{ needs.fingerprint.outputs.android_fingerprint_hash }}
+
+  build_ios:
+    needs: [get_ios_build]
+    if: ${{ !needs.get_ios_build.outputs.build_id }}
+    type: build
+    params:
+      platform: ios
+      profile: production
+
+  build_android:
+    needs: [get_android_build]
+    if: ${{ !needs.get_android_build.outputs.build_id }}
+    type: build
+    params:
+      platform: android
+      profile: production
+
+  testflight:
+    needs: [build_ios]
+    type: testflight
+    params:
+      build_id: ${{ needs.build_ios.outputs.build_id }}
+      profile: production
+      submit_beta_review: false
+
+  require_approval:
+    needs: [testflight]
+    type: require-approval
+
+  submit_ios:
+    needs: [require_approval, build_ios]
+    type: submit
+    params:
+      build_id: ${{ needs.build_ios.outputs.build_id }}
+      profile: production
+
+  publish_ios_update:
+    needs: [get_ios_build]
+    if: ${{ needs.get_ios_build.outputs.build_id }}
+    type: update
+    environment: production
+    params:
+      channel: production
+      platform: ios
+      message: ${{ github.sha }}
+
+  publish_android_update:
+    needs: [get_android_build]
+    if: ${{ needs.get_android_build.outputs.build_id }}
+    type: update
+    environment: production
+    params:
+      channel: production
+      platform: android
+      message: ${{ github.sha }}
+
+  record:
+    after: [build_ios, build_android, submit_ios, publish_ios_update, publish_android_update]
+    type: doc
+    params:
+      md: |
+        ## Release of `${{ github.sha }}`
+
+        | What | iOS | Android |
+        |---|---|---|
+        | Fingerprint | `${{ needs.fingerprint.outputs.ios_fingerprint_hash }}` | `${{ needs.fingerprint.outputs.android_fingerprint_hash }}` |
+        | Existing build | `${{ after.get_ios_build.outputs.build_id }}` | `${{ after.get_android_build.outputs.build_id }}` |
+        | New build | `${{ after.build_ios.outputs.build_id }}` (${{ after.build_ios.status }}) | `${{ after.build_android.outputs.build_id }}` (${{ after.build_android.status }}) |
+        | Build version | ${{ after.build_ios.outputs.app_version }} (${{ after.build_ios.outputs.app_build_version }}) | ${{ after.build_android.outputs.app_version }} (${{ after.build_android.outputs.app_build_version }}) |
+        | Uploaded to App Store Connect | ${{ after.submit_ios.status }} | not submitted (no Play account) |
+        | Over-the-air update | ${{ after.publish_ios_update.status }} | ${{ after.publish_android_update.status }} |
+
+        Record it in the tree: `cd mobile && ./run.sh release record <build-id>` appends the row to `releases.csv`.

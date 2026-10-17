@@ -84,3 +84,7 @@ cache/
 
 # Local Claude Code settings; the project skill under .claude/skills/ is tracked.
 .claude/settings.local.json
+
+# Claude Code worktrees: checkouts of other branches, created by the assistant's worktree
+# isolation. Each is its own working tree of this repo and never belongs in a commit.
+.claude/worktrees/

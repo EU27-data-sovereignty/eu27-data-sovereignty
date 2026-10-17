@@ -150,7 +150,8 @@ countries/
                              an input), the xlsx the engine reproduces, FRONTIER-MODEL.md, TODO, plan
 web/                         React + Vite visualization app; reads the JSON bundle, no server
 mobile/                      Expo reader of the split edition: offline-first, the 28 parts inside the app, a newer
-                             edition from a public EU-region Supabase bucket the deploy writes (#109–#113); no release yet
+                             edition from a public EU-region Supabase bucket the deploy writes (#109–#113); built and
+                             uploaded to App Store Connect by an EAS workflow the deploy starts, released by hand (#114)
 tests/                       stdlib unittest suite for the model and the data
 ROADMAP.md                   what is done, in progress and next, and what gates what
 METHOD.md                    how a claim is researched, checked, reviewed and shown: the evidence pipeline
@@ -349,6 +350,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
 | 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #103 |
 | 2026-10-14 | The mobile reader rebuilt on the content model: the split edition shipped in the app, Supabase Storage (EU region) as the update channel written only by the deploy, a `mobile` group in the gate | #109–#113 |
+| 2026-10-16 | The reader released through EAS: build, TestFlight, the owner's approval, the upload to App Store Connect, with the public release click held; over-the-air code updates on the reader's tap; the privacy page at `/privacy` | #114–#116 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

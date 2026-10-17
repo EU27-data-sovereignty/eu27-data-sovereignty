@@ -13,6 +13,7 @@ import { MemoryFileStore, type Fetcher } from '../src/edition/memoryFiles';
 import { type Manifest } from '../src/edition/manifest';
 import { utf8Encode } from '../src/edition/utf8';
 import type { Channel } from '../src/services/channel';
+import type { AppUpdatePort } from '../src/update/appUpdate';
 
 export const sha256 = async (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex');
 export const sha256Sync = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex');
@@ -90,7 +91,37 @@ export function makeStore(
 
 export async function renderWithEdition(
   ui: ReactElement,
-  store = makeStore({ configured: false }).store
+  store = makeStore({ configured: false }).store,
+  appUpdates?: AppUpdatePort
 ): Promise<RenderResult> {
-  return render(<EditionProvider store={store}>{ui}</EditionProvider>);
+  return render(
+    <EditionProvider store={store} appUpdates={appUpdates}>
+      {ui}
+    </EditionProvider>
+  );
+}
+
+/** An update port a test can script: what `check` and `fetch` answer, and whether `reload` was asked. */
+export function fakeAppUpdates(
+  script: { available?: boolean; isNew?: boolean; fail?: 'check' | 'fetch' } = {}
+) {
+  const calls: string[] = [];
+  const port: AppUpdatePort = {
+    enabled: true,
+    build: { runtimeVersion: '1.0.0', updateId: null, channel: 'production' },
+    check: async () => {
+      calls.push('check');
+      if (script.fail === 'check') throw new Error('offline');
+      return script.available ?? false;
+    },
+    download: async () => {
+      calls.push('fetch');
+      if (script.fail === 'fetch') throw new Error('offline');
+      return script.isNew ?? true;
+    },
+    reload: async () => {
+      calls.push('reload');
+    },
+  };
+  return { port, calls };
 }

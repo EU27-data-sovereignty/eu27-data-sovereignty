@@ -6,7 +6,7 @@
  * placeholder, passes any test that only checks for the absence of an exception. Every screen must also
  * carry the provenance notice (tests/test_evidence.py).
  */
-import { screen, waitFor, within } from '@testing-library/react-native';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react-native';
 
 import About from '../app/(tabs)/about';
 import Countries from '../app/(tabs)/index';
@@ -18,7 +18,12 @@ import FactCheckCountry from '../app/fact-check/[iso]';
 import FactCheckEu from '../app/fact-check/index';
 import { BUNDLED_MANIFEST, bundledPart } from '../src/data/bundled';
 import type { CorePart, CountryPart } from '../src/data/parts';
-import { renderWithEdition } from './support';
+import { fakeAppUpdates, makeStore, renderWithEdition } from './support';
+
+jest.mock('expo-constants', () => {
+  const { expo } = jest.requireActual('../app.json');
+  return { __esModule: true, default: { expoConfig: expo } };
+});
 
 jest.mock('expo-router', () => {
   const React = require('react');
@@ -125,6 +130,25 @@ describe('about this edition', () => {
     expect(screen.getByText(core.generated)).toBeTruthy();
     expect(screen.getByText('Inside the app, as installed')).toBeTruthy();
     expect(screen.getByText('Not checked since launch.')).toBeTruthy();
+    expect(
+      screen.getByText('Over-the-air app updates are not enabled in this build.')
+    ).toBeTruthy();
+    expect(screen.getByText('Privacy policy')).toBeTruthy();
     await provenanceShown();
+  });
+
+  it('checks for a newer app build only in the same tap as the edition check, then offers a restart (#115)', async () => {
+    const { port, calls } = fakeAppUpdates({ available: true });
+    await renderWithEdition(<About />, makeStore({ configured: true }).store, port);
+    await waitFor(() => expect(screen.getByText(BUNDLED_MANIFEST.edition)).toBeTruthy());
+    expect(screen.getByText('App build not checked since launch.')).toBeTruthy();
+    expect(calls).toEqual([]);
+    fireEvent.press(screen.getByText('Check for a newer edition'));
+    await waitFor(() =>
+      expect(screen.getByText('A newer app build is downloaded. Restart to use it.')).toBeTruthy()
+    );
+    expect(calls).toEqual(['check', 'fetch']);
+    fireEvent.press(screen.getByText('Restart to apply'));
+    await waitFor(() => expect(calls).toEqual(['check', 'fetch', 'reload']));
   });
 });
