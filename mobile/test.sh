@@ -71,10 +71,10 @@ skip_step() {
 # --- step bodies -------------------------------------------------------------------------------
 
 check_node() {
-    local min="20.19.4" current want
+    local min="22.13.0" current want
     current="$(node -v | sed 's/^v//')"
     if [ "$(printf '%s\n%s\n' "$min" "$current" | sort -V | head -n1)" != "$min" ]; then
-        echo "Node $current is older than $min (React Native 0.86 / Metro minimum)"; return 1
+        echo "Node $current is older than $min (Expo SDK 58 minimum)"; return 1
     fi
     want="$(tr -d '[:space:]v' < .nvmrc)"
     if [ "${current%%.*}" != "$want" ]; then
@@ -246,6 +246,13 @@ check_tokens() {
     python3 ../design/build_tokens.py --check && echo "src/constants/Colors.ts is current"
 }
 
+check_config() {
+    # Every config plugin must resolve, or the failure only shows on EAS. expo prints "env: load …" lines
+    # before the JSON; keep only from the first brace on.
+    npx expo config --type introspect --json | sed -n '/^{/,$p' > "$LOG_DIR/expo-config.json"
+    node -e 'const c = require(process.argv[1]); if (!c.name || !c.slug || !c.ios?.bundleIdentifier) { console.log("introspected config lacks name/slug/bundleIdentifier"); process.exit(1) } console.log(`${c.name} ${c.version} — ${(c.plugins ?? []).length} plugin(s) resolved`)' "$LOG_DIR/expo-config.json"
+}
+
 check_web_build() {
     npx expo export --platform web --output-dir "$LOG_DIR/web-dist"
 }
@@ -292,6 +299,7 @@ run_step types npm run type-check
 run_step parts check_parts
 run_step edition check_edition
 run_step tokens check_tokens
+run_step config check_config
 
 if [ "$QUICK" -eq 1 ]; then
     run_step unit npx jest

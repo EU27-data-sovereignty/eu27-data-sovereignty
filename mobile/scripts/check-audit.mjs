@@ -39,7 +39,9 @@ let failed = false;
 for (const advisory of advisories.values()) {
   const entry = allowed.get(advisory.id);
   if (entry) {
-    const due = entry.review <= today ? ` — REVIEW DUE (${entry.review})` : '';
+    const due =
+      entry.review <= today ? ` — REVIEW DUE (${entry.review}): re-check and move the date` : '';
+    if (entry.review <= today) failed = true;
     console.log(`allowed  ${advisory.severity.padEnd(8)} ${advisory.name} ${advisory.id}${due}`);
   } else if (BLOCKING.has(advisory.severity)) {
     console.log(

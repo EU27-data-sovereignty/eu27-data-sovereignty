@@ -120,7 +120,7 @@ describe('device capabilities', () => {
 
   it('allows no cleartext traffic', () => {
     // Android refuses cleartext by default since API 28; the only ways to re-enable it are the
-    // usesCleartextTraffic key (not in SDK 57's schema) or the expo-build-properties plugin. Neither is here.
+    // usesCleartextTraffic key (not in SDK 58's schema) or the expo-build-properties plugin. Neither is here.
     expect(expo.android.usesCleartextTraffic).toBeUndefined();
     expect(JSON.stringify(expo.plugins ?? [])).not.toMatch(
       /usesCleartextTraffic|expo-build-properties/

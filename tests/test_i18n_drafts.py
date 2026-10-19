@@ -42,7 +42,7 @@ class NeverRendered(unittest.TestCase):
     """No renderer, exporter or corpus may read the drafts until the plan's decision is written."""
 
     READERS = ["model/document.py", "model/export_json.py", "model/generate_countries.py", "model/ask_corpus.py",
-               "book", "web/src", "api"]
+               "book", "web/src", "api", "mobile/src", "mobile/app"]
 
     def test_nothing_reads_the_drafts(self):
         hits = []

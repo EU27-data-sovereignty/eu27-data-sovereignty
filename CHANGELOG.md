@@ -5,6 +5,27 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-19
+
+### Changed: the reader on Expo SDK 58, the template's pins; the languages decided (#117)
+
+- **The languages (#117).** The reader will speak the EU's 24 official languages, interface only, each shipped once
+  a native speaker has read it; facts stay English with their original-language quote. Nothing is translated yet:
+  this records the rule and closes the gap that let the app read the drafts unnoticed. `tests/test_i18n_drafts.py`
+  `NeverRendered` now scans `mobile/src` and `mobile/app`. `docs/plans/localisation-plan.md` §6 and
+  `docs/plans/mobile-app.md` point at #117.
+- **SDK 58.** `mobile/` moves to the pins of `templates/rn-supabase` (2026-10-17): expo 58.0.14, expo-router
+  58.0.23, React Native 0.88.0, React 19.3.0, @supabase/supabase-js 2.118.0, Jest 30.5.2 with jest-expo 58.0.11,
+  and the expo-* modules at their 58 releases; `react-test-renderer` removed (jest-expo 58 renders through
+  `test-renderer`). Node floor 22.13.0 in `package.json`, `init.sh` and `test.sh`. React Native 0.88 types
+  `ScrollView` as a function component, so the screen's scroll ref is a `ScrollViewInstance`. A new native
+  fingerprint: the next release is a store build, not an over-the-air update (#115).
+- **`mobile/test.sh` gains the template's `config` step** (`expo config --type introspect` must resolve every
+  plugin, which otherwise fails only on EAS), and `scripts/check-audit.mjs` now fails when an allowlist entry's
+  review date has passed. The `decode-uri-component` entry is gone: expo-router 58 no longer pulls it in.
+- **`mobile/run.sh build ios|android`** asks before a production build and refuses one unattended without `CI=1`.
+- **The EAS CLI pin** moves to 25.1.1, the template's, in `mobile/eas.json` and `deploy.yml`'s `EAS_CLI`.
+
 ## 2026-10-17
 
 ### Changed: Claude Code worktrees are gitignored

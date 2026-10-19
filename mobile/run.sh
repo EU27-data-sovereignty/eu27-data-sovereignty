@@ -3,7 +3,7 @@
 # The mobile reader of the EU-27 report: an Expo app that ships the fact-checked edition and reads it
 # offline (#109, #110). It is built, sent to TestFlight and uploaded to App Store Connect by the release
 # workflow on EAS (.eas/workflows/release.yml, #114), which the deploy's `app` job starts after the site's
-# gate; the commands below run the same steps by hand with the pinned CLI in node_modules. "Submit for
+# gate; the commands below run the same steps by hand with the pinned `npx eas-cli@<exact>` (eas.json). "Submit for
 # Review" and "Release" stay clicks in App Store Connect: the launch gate (DECISIONS.md #25, #67).
 set -euo pipefail
 
@@ -97,6 +97,19 @@ require_review_contact() {
     fi
 }
 
+# A production build is store-ready and counts against the EAS quota: it asks first, and refuses to run
+# unattended unless CI=1 says a pipeline started it (as the template's run.sh does).
+confirm_production() {
+    [ "$2" = "production" ] && [ -z "${CI:-}" ] || return 0
+    if [ ! -t 0 ]; then
+        echo -e "${RED}A production build needs an interactive confirmation (or CI=1 in a pipeline).${NC}" >&2
+        exit 1
+    fi
+    printf '%b' "${YELLOW}Production build for $1 (channel production, store-ready). Continue? [y/N] ${NC}"
+    read -r answer
+    case "$answer" in y|Y|yes) ;; *) echo "Cancelled."; exit 1 ;; esac
+}
+
 case "${1:-start}" in
     help|-h|--help) usage; exit 0 ;;
 esac
@@ -126,7 +139,8 @@ case "${1:-start}" in
         esac ;;
     build)
         case "${2:-}" in
-            ios|android) require_eas_account; eas build --platform "$2" --profile "${3:-production}" ;;
+            ios|android) confirm_production "$2" "${3:-production}"; require_eas_account
+                         eas build --platform "$2" --profile "${3:-production}" ;;
             *) echo -e "${RED}Usage: ./run.sh build ios|android [profile]${NC}" >&2; exit 1 ;;
         esac ;;
     update)

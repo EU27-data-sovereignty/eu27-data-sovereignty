@@ -4,7 +4,7 @@
  * FlatList footer instead; the notice is the same component either way.
  */
 import { forwardRef, type ReactNode } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, type ScrollViewInstance, StyleSheet, Text, View } from 'react-native';
 
 import { useEdition } from '@/edition/EditionContext';
 import { ProvenanceNotice } from './ProvenanceNotice';
@@ -20,7 +20,7 @@ export function ScreenFooter() {
   );
 }
 
-export const Screen = forwardRef<ScrollView, { children: ReactNode }>(function Screen(
+export const Screen = forwardRef<ScrollViewInstance, { children: ReactNode }>(function Screen(
   { children },
   ref
 ) {

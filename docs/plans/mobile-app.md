@@ -109,6 +109,13 @@ on 2026-10-14 (see Status below); the languages remain a plan.
 - **US processors** (Expo EAS, Supabase).
 - **Accounts in a personal name** until the foundation exists.
 
+## Status 2026-10-19 (#117)
+
+The owner decided the languages: 24, interface only, each shipped once a native speaker has read it, in the existing
+`mobile/` brought up to the template's pins (#117). Owner decision 3 is settled (facts stay English); 4 is moot (no
+language ships unread). The i18next layer in "Languages" above is superseded: `expo-localization` plus a small
+`src/i18n/`. Phase 3 follows #117; phase 4's translated facts are not planned.
+
 ## Status 2026-10-16 (#114–#116)
 
 The owner decided to release through EAS and to the App Store, keeping the public release click manual. Of the

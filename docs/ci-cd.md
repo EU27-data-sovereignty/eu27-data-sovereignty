@@ -149,7 +149,7 @@ ruleset depend on the job ids of the dotfiles reusable workflow at `@main`.
 
 | Change | Where | What the run history has verified |
 |---|---|---|
-| The `app` job after `edition`: `npm ci` in `mobile/`, `app.json`'s project id checked against the variable, `npx eas-cli@25.0.0 workflow:run` (the `EAS_CLI` pin, equal to `eas.json`'s `cli.version`) with `EXPO_TOKEN` in that step's env | `deploy.yml` | NOT YET: skipped until the owner sets `EXPO_PROJECT_ID`; the shape is held by `tests/test_workflows.py` `App` |
+| The `app` job after `edition`: `npm ci` in `mobile/`, `app.json`'s project id checked against the variable, `npx eas-cli@25.1.1 workflow:run` (the `EAS_CLI` pin, equal to `eas.json`'s `cli.version`) with `EXPO_TOKEN` in that step's env | `deploy.yml` | NOT YET: skipped until the owner sets `EXPO_PROJECT_ID`; the shape is held by `tests/test_workflows.py` `App` |
 | The EAS workflow: `workflow_dispatch` only, `require-approval` before `submit`, Android never submitted | `mobile/.eas/workflows/release.yml` | NOT YET: `eas workflow:validate` needs the owner's login; `mobile/test.sh` `workflows` holds the triggers and the approval |
 | `mobile/test.sh` gains `workflows`, `listing` (`eas metadata:lint`) and `release` (the ledger); `tooling` holds the EAS CLI pin | `mobile/test.sh` | Locally on 2026-10-16: PASS |
 

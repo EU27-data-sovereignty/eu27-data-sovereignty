@@ -19,9 +19,9 @@ done
 
 GREEN='\033[0;32m'; RED='\033[0;31m'; YELLOW='\033[1;33m'; BLUE='\033[0;34m'; RESET='\033[0m'
 
-# React Native 0.86 / Metro require Node ^20.19.4 || ^22.13.0 || ^24.3.0 || >=25; .nvmrc pins 24 to match the root.
+# Expo SDK 58 (React Native 0.88) requires Node >=22.13.0; .nvmrc pins 24 to match the root.
 check_node_version() {
-    local min_version="20.19.4" current_version
+    local min_version="22.13.0" current_version
     if ! command -v node &> /dev/null; then
         echo -e "${RED}❌ Node.js is not installed (nvm install 24; see .nvmrc)${RESET}"; exit 1
     fi

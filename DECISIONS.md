@@ -3490,3 +3490,51 @@ cannot link to, and `docs/plans/stichting.md` deferred the notice to the foundat
 
 *Would change if:* the foundation becomes the controller, which rewrites the last section and adds a record
 of processing; or a processor is added or dropped, which `tests/test_privacy.py` turns into a failing build.
+
+### 117. The reader speaks the EU's 24 languages, interface only, and a language ships when a person has read it
+**Decision.** 2026-10-19. The mobile reader (`mobile/`) gets its interface in the EU's 24 official languages, not
+27 per-state locales: one admitted table per language (`model/i18n/<lang>.json`), each state opening in its first
+official language (BE nl/fr/de, LU lb/fr/de, FI fi/sv, IE ga/en, MT mt/en). Only the interface strings keyed in
+`docs/i18n/STRINGS.md` are translated; facts, quotes, glosses, the guides and the methodology stay English with
+their original-language quote, so #82 and #87 are unchanged. A language is admitted only from a draft reviewed by
+the other model (`model/i18n_drafts.py check`) **and** read by one native speaker (`Read by: <role>, <date>`);
+until then the app does not offer it. The app reads the admitted tables through a small `src/i18n/` of its own
+plus `expo-localization` for the device locale. `mobile/` is first brought up to the template's pins
+(`templates/rn-supabase`, Expo 58), not re-scaffolded. This is the decision `docs/plans/localisation-plan.md` §6
+reserved as "#109" (a number since taken by the reader), for the app; the web's language segment stays that
+plan's stage 2 and needs its own entry. It settles `docs/plans/mobile-app.md` owner decision 3 (facts stay
+English) and makes decision 4 moot (no language ships unread, Irish and Maltese included).
+
+**Problem.** The owner asked for the app in every EU language. The groundwork exists but is staging: 27
+per-state drafts of 45 strings, cross-reviewed, 42 `fix` verdicts unapplied (11 of them weaken the honesty
+notice from "machine-checked" to "verified"), no person has read any. "27 languages" is not a count that exists:
+27 states share 24 official languages. And `NeverRendered` did not scan `mobile/`, so the app could have read
+the drafts without a test failing.
+
+**Alternatives considered.**
+- **24 languages, interface only, a native reading per language, one language at a time (chosen).**
+- **27 per-state locales** (`de-AT`, `de-DE`, `fr-BE` ... as full files). *Why not:* 27 tables for 24 languages,
+  which drift apart; a state-specific wording is an overlay (`<lang>-<ISO>.json`) on the language, not a copy.
+- **Translate the facts too.** *Why not:* every translated fact is new printed text #87 has not seen; it needs a
+  per-language verdict and gate, estimated $2–5k a pass, and a rule #87 does not yet have.
+- **Ship all languages machine-only, labelled.** *Why not:* the honesty rule says what no person reviewed; 11 of
+  27 drafts already weakened that very notice, which is the failure a reader catches and a label does not.
+- **i18next + react-i18next.** *Why not:* two dependencies on the allowlist (`security.test.ts`) for
+  interpolation and namespaces the 45 strings do not use; `Intl.PluralRules` covers plurals.
+- **A fresh scaffold from the template.** *Why not:* redoes #109–#116 (edition channel, EAS, privacy) for an
+  upgrade of pins.
+
+**Closes off.** A rendered translation without a different-model review and a `Read by:` line; any reader of
+`docs/i18n/drafts` in `mobile/src` or `mobile/app` (`tests/test_i18n_drafts.py` `NeverRendered`); a translated
+fact, quote or gloss without a new decision; a language picker that lists a language the catalogue has not
+admitted; locale-dependent number formatting of a printed figure (`src/data/format.ts` stays `en-GB`, pinned to
+the web copy).
+
+**Verified:** 2026-10-19. `python3 -m unittest tests.test_i18n_drafts -q`: 3 tests OK, with `NeverRendered` now
+scanning `mobile/src` and `mobile/app`. **NOT YET:** the template upgrade (Expo 58), `model/i18n.py`, the app's
+`src/i18n/` and picker, and the first admitted language, which needs the 42 fixes applied and a native reading
+(`TODO.md`).
+
+*Would change if:* a person reads facts in a language and asks for them translated, which reopens the facts
+alternative under a new #87 rule; or a state asks for its own wording at scale, which turns overlays into
+per-state tables.

@@ -5,7 +5,7 @@
  */
 import { Link, Stack, useLocalSearchParams } from 'expo-router';
 import { useRef } from 'react';
-import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Linking, type ScrollViewInstance, StyleSheet, Text, View } from 'react-native';
 
 import { DocumentView } from '@/components/DocumentView';
 import { Heading, Loading, Screen } from '@/components/Screen';
@@ -23,7 +23,7 @@ export default function CountryScreen() {
   const code = String(iso).toUpperCase();
   const { core } = useEdition();
   const { part, error } = useCountry(code);
-  const scroll = useRef<ScrollView>(null);
+  const scroll = useRef<ScrollViewInstance>(null);
   const sourcesTop = useRef(0);
   const positions = useRef(new Map<string, number>());
 

@@ -131,7 +131,7 @@ Open
       (LU, LV, RO, IE)
 
 ## Release the reader (#114–#116; the public release click stays behind the launch gate)
-- [ ] **Owner:** accounts. `! npx eas-cli@25.0.0 whoami` (expect "Not logged in"); an Expo account at expo.dev if none;
+- [ ] **Owner:** accounts. `! npx eas-cli@25.1.1 whoami` (expect "Not logged in"); an Expo account at expo.dev if none;
       an Apple Developer Program membership (https://developer.apple.com/account, €99/yr, personal, transferable to
       the stichting later). State unknown on 2026-10-16
 - [ ] **Owner:** one-time EAS setup, in `mobile/` (`./run.sh eas <args>` is the pinned CLI): `./run.sh eas login`; `./run.sh eas init --force` (replaces the nil project
