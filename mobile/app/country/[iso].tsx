@@ -5,7 +5,7 @@
  */
 import { Link, Stack, useLocalSearchParams } from 'expo-router';
 import { useRef } from 'react';
-import { Linking, type ScrollViewInstance, StyleSheet, Text, View } from 'react-native';
+import { Linking, Pressable, type ScrollViewInstance, StyleSheet, Text, View } from 'react-native';
 
 import { DocumentView } from '@/components/DocumentView';
 import { Heading, Loading, Screen } from '@/components/Screen';
@@ -16,12 +16,15 @@ import { bundleView } from '@/data/parts';
 import { factCheckPath } from '@/data/routes';
 import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sources';
 import { useCountry, useEdition } from '@/edition/EditionContext';
+import { stateLanguage } from '@/i18n/catalogue';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function CountryScreen() {
   const theme = useTheme();
   const { iso = '' } = useLocalSearchParams<{ iso: string }>();
   const code = String(iso).toUpperCase();
   const { core } = useEdition();
+  const { t, tx, lang, catalogue, choose } = useLanguage();
   const { part, error } = useCountry(code);
   const scroll = useRef<ScrollViewInstance>(null);
   const sourcesTop = useRef(0);
@@ -37,6 +40,7 @@ export default function CountryScreen() {
   const claims = claimsBySource([doc], bundle);
   const cov = coverage(country);
   const { facts, gaps } = factCounts(doc);
+  const own = stateLanguage(catalogue, code);
   const jump = (sid: string) => {
     const y = positions.current.get(sid);
     if (y !== undefined) scroll.current?.scrollTo({ y: sourcesTop.current + y, animated: true });
@@ -44,31 +48,40 @@ export default function CountryScreen() {
 
   return (
     <Screen ref={scroll}>
-      <Stack.Screen options={{ title: doc.name }} />
-      <Heading kicker={`EU-27 · Country report · ${doc.iso}`} title={doc.name} />
+      <Stack.Screen options={{ title: tx(doc.name) }} />
+      <Heading kicker={t('app.country.kicker', { iso: doc.iso })} title={tx(doc.name)} />
+      {own && own !== lang ? (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => void choose(own, code)}
+          style={[styles.readIn, { borderColor: theme.accent }]}
+        >
+          <Text style={{ color: theme.accentText, fontWeight: '600' }}>
+            {t('app.language.read_in', { language: catalogue.languages[own]?.name ?? own })}
+          </Text>
+        </Pressable>
+      ) : null}
       <Text style={[styles.summary, { color: theme.fgSecondary }]}>
-        {cov.verified} of {cov.total} critical holding classes verified · {facts} sourced facts
-        shown · {gaps} values withheld until sourced · capacity not yet sized
+        {t('app.country.summary', { verified: cov.verified, total: cov.total, facts, gaps })}
       </Text>
       <View style={[styles.contribute, { borderColor: theme.border }]}>
         <Text style={[styles.small, { color: theme.fgPrimary }]}>
-          Know a public source for one of the {gaps} withheld values, or a better one for a fact?{' '}
+          {t('app.country.contribute', { gaps })}{' '}
           <Text
             accessibilityRole="link"
             onPress={() => Linking.openURL(submitLink(bundle, code))}
             style={[styles.link, { color: theme.accentText }]}
           >
-            Submit a source
+            {t('app.country.submit')}
           </Text>
-          . Every fact also has a <Text style={{ fontStyle: 'italic' }}>Check this fact</Text> link
-          in its source entry.
+          . {t('app.country.check_hint')}
         </Text>
       </View>
       <DocumentView doc={doc} bundle={bundle} numbers={numbers} onSource={jump} />
       <Text style={[styles.small, { color: theme.fgPrimary }]}>
         {bundle.factcheck.lines[code]}{' '}
         <Link href={factCheckPath(code)} style={[styles.link, { color: theme.accentText }]}>
-          Fact check for {doc.name}
+          {t('app.country.factcheck', { name: tx(doc.name) })}
         </Link>
         .
       </Text>
@@ -93,5 +106,13 @@ const styles = StyleSheet.create({
     marginBottom: SPACE.xl,
   },
   small: { fontSize: Type.body - 1, lineHeight: 19 },
+  readIn: {
+    alignSelf: 'flex-start',
+    borderWidth: 1,
+    borderRadius: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    marginBottom: SPACE.md,
+  },
   link: { textDecorationLine: 'underline' },
 });

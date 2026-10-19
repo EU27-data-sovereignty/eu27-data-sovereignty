@@ -170,7 +170,15 @@ Open
 - [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`
       span in the content model, a changelog entry, `/factcheck` before the push
 - [ ] Localisation stage 1 (`docs/plans/localisation-plan.md`): apply the 42 `fix` cells, a native reading per
-      language, then the decision entry the plan reserves
+      language, then the decision entry the plan reserves (for the reader: #117, 2026-10-19; the three items below)
+- [ ] Languages (#117): draft the "Reader strings" part of the 27 drafts (the 223 keys of
+      `docs/i18n/STRINGS-reader.md`), split between agents A and B as on 2026-10-12, and cross-review it on the other
+      model; `python3 model/i18n_drafts.py check` then counts 27 drafted, 0 pending (2026-10-19)
+- [ ] Languages (#117): apply the 42 `fix` verdicts as `fixed`, the eleven weakened honesty notices first (2026-10-19)
+- [ ] **Owner:** languages (#117): one native reader per language; record `- Read by (<lang>): <role>, <date>` on the
+      draft, then `./run.sh data` admits it; `python3 model/i18n.py why` says what each column still waits on (2026-10-19)
+- [ ] Mobile reader: the Expo SDK 58 upgrade and `expo-localization` change the native fingerprint, so the next
+      release is a store build through EAS, not an over-the-air update (#114, #115, #117; 2026-10-19)
 - [ ] Print book: country parts rendered from the content model; write Parts I, II and V
 - [ ] PDF tables: a long compound word (e.g. "Identitätsdokumentenregister") runs into the next column;
       allow hyphenation or breaking in table cells

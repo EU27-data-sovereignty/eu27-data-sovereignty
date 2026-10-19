@@ -7,6 +7,29 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-19
 
+### Added: the reader's language layer, English only until a native speaker has read a translation (#117)
+
+- **Scope widened the same day (#117).** A count showed most of what a reader sees is the content model's text, so
+  the translated set is the app's own strings, the site's chrome, and the content model's 116 label and gap texts
+  (table labels, country names, "Not yet sourced"); facts, categorical values included, explanations, quotes and
+  sources stay English. `docs/i18n/STRINGS-reader.md` holds the reader's 107 strings and the generated labels-and-gaps
+  table (`python3 model/i18n.py strings`).
+- **Admission.** `model/i18n.py admit` writes `model/i18n/` and `mobile/assets/i18n/catalogue.json` from the drafts,
+  one state column at a time, only with both parts cross-reviewed, every `fix` applied (a new verdict, `fixed`, whose
+  cell must read exactly as suggested), and a `- Read by (<lang>): <role>, <date>` line. States that share a language
+  merge, with a state's own wording kept as an overlay; each language file names who drafted, reviewed and read each
+  column and the hash of its draft. Today it admits English only. `model/i18n.py check` runs in the gate through
+  `model/notes.py`, and in the reader's suite as its `catalogue` step; `./run.sh data` regenerates it.
+- **The reader.** Every screen's own text goes through `src/i18n/` (`t` by key, `tx` by the English text of a label,
+  gap, section title or the disclaimer); the Edition tab gains a Language section that lists only admitted languages,
+  each in its own name, with who drafted, reviewed and read the one on screen; a country report offers "Read in
+  <language>" when its state's language is admitted. The choice is a file on the device; the device's language is
+  read with `expo-localization` 58.0.4, in one file. On screen nothing changes while English is the only language.
+- **Tests.** `tests/test_i18n.py` (an unread draft, an open `fix`, or a `fixed` cell that does not read as suggested
+  is not admitted; a read one is; overlays) and `mobile/__tests__/i18n.test.tsx` (every key the app uses exists in
+  English; the screens on a fixture catalogue translate labels and gaps and never a categorical fact; the choice is
+  stored and never requested over the network).
+
 ### Changed: the reader on Expo SDK 58, the template's pins; the languages decided (#117)
 
 - **The languages (#117).** The reader will speak the EU's 24 official languages, interface only, each shipped once

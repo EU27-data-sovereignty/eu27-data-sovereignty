@@ -7,10 +7,14 @@
  * reads as a gap and never as a fact (#75, #89). Nothing here adds a sentence: a renderer that writes
  * content becomes a second source. `__tests__/document-view.test.tsx` checks that the rendered text, minus
  * the [n] marks, is exactly the spans' text.
+ *
+ * In a language the catalogue has admitted (#117), a label or gap span, and a section title, is shown in that
+ * language when the catalogue has its exact English text; a fact, a disputed value or an explanation never is.
  */
 import { StyleSheet, Text, View, type StyleProp, type TextStyle } from 'react-native';
 
 import type { Block, Bundle, Document, Span } from '@/data/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { TableBlock } from './TableBlock';
 import { SPACE, Type, useTheme } from './theme';
 
@@ -25,8 +29,9 @@ export interface SpanProps {
 
 export function SpanView({ span, numbers, bundle, onSource, style }: SpanProps) {
   const theme = useTheme();
+  const { t, tx } = useLanguage();
   if (span.role === 'gap') {
-    return <Text style={[style, styles.muted, { color: theme.fgMuted }]}>{span.t}</Text>;
+    return <Text style={[style, styles.muted, { color: theme.fgMuted }]}>{tx(span.t)}</Text>;
   }
   if (span.role === 'disputed') {
     return (
@@ -42,6 +47,7 @@ export function SpanView({ span, numbers, bundle, onSource, style }: SpanProps) 
       </Text>
     );
   }
+  if (span.role === 'label') return <Text style={style}>{tx(span.t)}</Text>;
   if (span.role !== 'fact') return <Text style={style}>{span.t}</Text>;
   const ids = [
     ...new Set(
@@ -57,7 +63,11 @@ export function SpanView({ span, numbers, bundle, onSource, style }: SpanProps) 
           <Text
             key={sid}
             accessibilityRole="link"
-            accessibilityLabel={`Source ${n}: ${bundle.sources[sid]?.label ?? sid}. Evidence: ${span.g ?? ''}`}
+            accessibilityLabel={t('app.sources.mark', {
+              n: n ?? '',
+              label: bundle.sources[sid]?.label ?? sid,
+              grade: span.g ?? '',
+            })}
             onPress={onSource ? () => onSource(sid) : undefined}
             style={[styles.mark, { color: theme.accentText }]}
           >
@@ -139,16 +149,19 @@ export function DocumentView({
   blocks?: (block: Block, section: string) => React.ReactNode | undefined;
 } & Omit<SpanProps, 'span'>) {
   const theme = useTheme();
+  const { t, tx } = useLanguage();
   return (
     <View>
       {doc.sections.map((s, i) => (
-        <View key={s.id} style={styles.section} accessibilityLabel={s.title}>
-          <Text style={[styles.sectionNo, { color: theme.accentText }]}>SECTION {i + 1}</Text>
+        <View key={s.id} style={styles.section} accessibilityLabel={tx(s.title)}>
+          <Text style={[styles.sectionNo, { color: theme.accentText }]}>
+            {t('app.section_no', { n: i + 1 })}
+          </Text>
           <Text
             accessibilityRole="header"
             style={[styles.sectionTitle, { color: theme.fgPrimary }]}
           >
-            {s.title}
+            {tx(s.title)}
           </Text>
           {s.blocks.map((b, j) => {
             if (b.type === 'table' && tables[s.id]) return <View key={j}>{tables[s.id]!(b)}</View>;

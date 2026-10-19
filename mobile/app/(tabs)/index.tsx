@@ -13,18 +13,24 @@ import { flagEmoji } from '@/data/format';
 import { indexRows } from '@/data/parts';
 import { countryPath } from '@/data/routes';
 import { useEdition } from '@/edition/EditionContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function Countries() {
   const theme = useTheme();
   const { core, loadError } = useEdition();
+  const { t, tx } = useLanguage();
   const [query, setQuery] = useState('');
   const rows = useMemo(() => {
     if (!core) return [];
     const q = query.trim().toLowerCase();
     return indexRows(core).filter(
-      (r) => !q || r.name.toLowerCase().includes(q) || r.iso.toLowerCase() === q
+      (r) =>
+        !q ||
+        r.name.toLowerCase().includes(q) ||
+        tx(r.name).toLowerCase().includes(q) ||
+        r.iso.toLowerCase() === q
     );
-  }, [core, query]);
+  }, [core, query, tx]);
 
   if (!core) return <Loading error={loadError} />;
   return (
@@ -35,14 +41,13 @@ export default function Countries() {
       keyExtractor={(r) => r.iso}
       ListHeaderComponent={
         <View>
-          <Heading kicker="EU-27 · Member states" title="Countries" />
+          <Heading kicker={t('app.countries.kicker')} title={t('app.tab.countries')} />
           <Text style={[styles.intro, { color: theme.fgSecondary }]}>
-            Each member state analysed on its own fundamentals. The rows count verified evidence;
-            they are not a ranking of how sovereign a state is.
+            {t('app.countries.intro')}
           </Text>
           <TextInput
-            accessibilityLabel="Find a country"
-            placeholder="Find a country"
+            accessibilityLabel={t('app.countries.find')}
+            placeholder={t('app.countries.find')}
             placeholderTextColor={theme.fgMuted}
             value={query}
             onChangeText={setQuery}
@@ -53,34 +58,41 @@ export default function Countries() {
             ]}
           />
           <Text style={[styles.count, { color: theme.fgMuted }]}>
-            {rows.length === 27 ? '27 member states' : `${rows.length} of 27 member states`}
+            {rows.length === 27
+              ? t('app.countries.all')
+              : t('app.countries.some', { n: rows.length })}
           </Text>
         </View>
       }
-      ListEmptyComponent={
-        <Text style={{ color: theme.fgMuted }}>No member state matches that name.</Text>
-      }
+      ListEmptyComponent={<Text style={{ color: theme.fgMuted }}>{t('app.countries.none')}</Text>}
       ListFooterComponent={<ScreenFooter />}
       renderItem={({ item: r }) => (
         <Link href={countryPath(r.iso)} asChild>
           <View
             accessibilityRole="button"
-            accessibilityLabel={`${r.name}, country report`}
+            accessibilityLabel={t('app.countries.row', { name: tx(r.name) })}
             style={[styles.card, { borderColor: theme.border, backgroundColor: theme.bgCard }]}
           >
             <View style={styles.row}>
               <Text style={styles.flag} accessibilityElementsHidden importantForAccessibility="no">
                 {flagEmoji(r.iso)}
               </Text>
-              <Text style={[styles.name, { color: theme.fgPrimary }]}>{r.name}</Text>
+              <Text style={[styles.name, { color: theme.fgPrimary }]}>{tx(r.name)}</Text>
               <Text style={[styles.iso, { color: theme.fgMuted }]}>{r.iso}</Text>
             </View>
             <Text style={[styles.line, { color: theme.fgSecondary }]}>
-              Holdings verified {r.holdings_verified} of {r.holdings_total} · Tier 0{' '}
-              {r.tier0_verified} of {r.tier0_total} · Sourced facts {r.facts}
+              {t('app.countries.counts', {
+                hv: r.holdings_verified,
+                ht: r.holdings_total,
+                tv: r.tier0_verified,
+                tt: r.tier0_total,
+                facts: r.facts,
+              })}
             </Text>
             <Text style={[styles.line, { color: theme.fgMuted }]}>
-              {r.withheld ? `${r.withheld} withheld as disputed` : 'Nothing withheld as disputed'}
+              {r.withheld
+                ? t('app.countries.withheld', { n: r.withheld })
+                : t('app.countries.none_withheld')}
             </Text>
           </View>
         </Link>

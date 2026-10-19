@@ -12,18 +12,20 @@ import { SPACE, Type, useTheme } from '@/components/theme';
 import { bundleView, indexRows } from '@/data/parts';
 import { factCheckPath } from '@/data/routes';
 import { useEdition } from '@/edition/EditionContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function FactCheckEu() {
   const theme = useTheme();
   const { core, loadError } = useEdition();
+  const { t, tx } = useLanguage();
   if (!core) return <Loading error={loadError} />;
   const bundle = bundleView(core);
   return (
     <Screen>
-      <Heading kicker="EU-27 · Cross-model check" title="Fact check" />
+      <Heading kicker={t('app.factcheck.kicker')} title={t('app.title.factcheck')} />
       <DocumentView doc={core.factcheck.eu} bundle={bundle} numbers={new Map()} />
       <Text accessibilityRole="header" style={[styles.heading, { color: theme.fgPrimary }]}>
-        By member state
+        {t('app.factcheck.by_state')}
       </Text>
       <View style={styles.links}>
         {indexRows(core).map((r) => (
@@ -32,7 +34,7 @@ export default function FactCheckEu() {
             href={factCheckPath(r.iso)}
             style={[styles.link, { color: theme.accentText }]}
           >
-            {r.name}
+            {tx(r.name)}
           </Link>
         ))}
       </View>

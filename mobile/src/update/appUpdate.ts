@@ -8,6 +8,7 @@
  * The data edition still comes only from the edition channel (#111): an app update carries code and the
  * edition inside the binary at the time it was published; the reader's downloaded edition stays in place.
  */
+import { english, type Translator } from '@/i18n/catalogue';
 
 export type AppUpdateState =
   | { kind: 'disabled' }
@@ -73,21 +74,7 @@ export async function checkForAppUpdate(
   }
 }
 
-export function describeAppUpdate(state: AppUpdateState): string {
-  switch (state.kind) {
-    case 'disabled':
-      return 'Over-the-air app updates are not enabled in this build.';
-    case 'idle':
-      return 'App build not checked since launch.';
-    case 'checking':
-      return 'Checking for a newer app build…';
-    case 'up-to-date':
-      return 'This is the latest app build for this version.';
-    case 'downloading':
-      return 'Downloading a newer app build…';
-    case 'ready':
-      return 'A newer app build is downloaded. Restart to use it.';
-    case 'unreachable':
-      return 'The update service could not be reached. The app keeps the build it has.';
-  }
+/** The sentence for a state, in the reader's language (`app.appupdate.*`, #117); English by default. */
+export function describeAppUpdate(state: AppUpdateState, t: Translator['t'] = english.t): string {
+  return t(`app.appupdate.${state.kind.replace(/-/g, '_')}`);
 }

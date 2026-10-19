@@ -3491,15 +3491,19 @@ cannot link to, and `docs/plans/stichting.md` deferred the notice to the foundat
 *Would change if:* the foundation becomes the controller, which rewrites the last section and adds a record
 of processing; or a processor is added or dropped, which `tests/test_privacy.py` turns into a failing build.
 
-### 117. The reader speaks the EU's 24 languages, interface only, and a language ships when a person has read it
+### 117. The reader speaks the EU's 24 languages, interface, labels and gaps, and a language ships when a person has read it
 **Decision.** 2026-10-19. The mobile reader (`mobile/`) gets its interface in the EU's 24 official languages, not
 27 per-state locales: one admitted table per language (`model/i18n/<lang>.json`), each state opening in its first
-official language (BE nl/fr/de, LU lb/fr/de, FI fi/sv, IE ga/en, MT mt/en). Only the interface strings keyed in
-`docs/i18n/STRINGS.md` are translated; facts, quotes, glosses, the guides and the methodology stay English with
-their original-language quote, so #82 and #87 are unchanged. A language is admitted only from a draft reviewed by
-the other model (`model/i18n_drafts.py check`) **and** read by one native speaker (`Read by: <role>, <date>`);
-until then the app does not offer it. The app reads the admitted tables through a small `src/i18n/` of its own
-plus `expo-localization` for the device locale. `mobile/` is first brought up to the template's pins
+official language (BE nl/fr/de, LU lb/fr/de, FI fi/sv, IE ga/en, MT mt/en). Translated: the chrome keyed in
+`docs/i18n/STRINGS.md`, the reader's own strings in `docs/i18n/STRINGS-reader.md`, and the content model's label
+and gap texts (116 on 2026-10-19: table labels, country names, "Not yet sourced"), which `model/i18n.py strings`
+generates into that file and the reader matches by exact English text. Facts (categorical values included),
+disputed values, quotes, glosses, explanations, the guides and the methodology stay English with their
+original-language quote, so #82 and #87 are unchanged. A language is admitted (`model/i18n.py admit`) only from a
+draft whose two parts pass `model/i18n_drafts.py check`, with every `fix` applied (`fixed`), **and** read by one
+native speaker (`- Read by (<lang>): <role>, <date>`); until then the app does not offer it. The app reads the
+generated `mobile/assets/i18n/catalogue.json` through a small `src/i18n/` of its own plus `expo-localization`
+for the device's languages; the reader's choice is one file on the device. `mobile/` is first brought up to the template's pins
 (`templates/rn-supabase`, Expo 58), not re-scaffolded. This is the decision `docs/plans/localisation-plan.md` §6
 reserved as "#109" (a number since taken by the reader), for the app; the web's language segment stays that
 plan's stage 2 and needs its own entry. It settles `docs/plans/mobile-app.md` owner decision 3 (facts stay
@@ -3512,7 +3516,15 @@ notice from "machine-checked" to "verified"), no person has read any. "27 langua
 the drafts without a test failing.
 
 **Alternatives considered.**
-- **24 languages, interface only, a native reading per language, one language at a time (chosen).**
+- **24 languages; interface, labels and gaps; a native reading per language; one language at a time (chosen).**
+- **Interface only (the 45 chrome strings and the app's own).** *Why not:* the owner's first choice, reopened the
+  same day on a count: most of what a reader sees is the content model's text, so a German reader would get German
+  tabs over English tables. Labels and gaps add 116 short texts (about 300 words a language).
+- **Labels, gaps and the method prose.** *Why not now:* 223 more texts, about 5,100 words a language to draft and
+  have read; a later stage once the first languages are read.
+- **A message id on each label span in `model/document.py`.** *Why not:* it changes the bundle, so the posters, the
+  edition and its manifest move for no printed change; matching the exact English text needs no bundle change, and
+  a reworded label falls back to English instead of showing a stale translation.
 - **27 per-state locales** (`de-AT`, `de-DE`, `fr-BE` ... as full files). *Why not:* 27 tables for 24 languages,
   which drift apart; a state-specific wording is an overlay (`<lang>-<ISO>.json`) on the language, not a copy.
 - **Translate the facts too.** *Why not:* every translated fact is new printed text #87 has not seen; it needs a
@@ -3530,10 +3542,14 @@ fact, quote or gloss without a new decision; a language picker that lists a lang
 admitted; locale-dependent number formatting of a printed figure (`src/data/format.ts` stays `en-GB`, pinned to
 the web copy).
 
-**Verified:** 2026-10-19. `python3 -m unittest tests.test_i18n_drafts -q`: 3 tests OK, with `NeverRendered` now
-scanning `mobile/src` and `mobile/app`. **NOT YET:** the template upgrade (Expo 58), `model/i18n.py`, the app's
-`src/i18n/` and picker, and the first admitted language, which needs the 42 fixes applied and a native reading
-(`TODO.md`).
+**Verified:** 2026-10-19. `python3 -m unittest tests.test_i18n tests.test_i18n_drafts tests.test_notes -q`: 16
+tests OK, incl. a draft that is read, reviewed and fixed is admitted; unread, or with an open `fix`, or a `fixed` cell
+that does not read as suggested, is not; two states sharing a language merge with an overlay. `python3
+model/i18n.py check`: 1 language admitted (en), 268 keys, 0 of 32 state columns admitted, 0 problems.
+`cd mobile && npx jest __tests__/i18n.test.tsx`: 9 tests OK on a fixture catalogue, incl. every `t()` key exists in
+English and a categorical fact stays untranslated on a translated country screen. `cd mobile && ./test.sh --ci`:
+all steps pass on Expo SDK 58. **NOT YET:** the reader part of the 27 drafts (drafting and cross-review of 223
+keys), the 42 fixes, a native reading per language, and so the first admitted language (`TODO.md`).
 
 *Would change if:* a person reads facts in a language and asks for them translated, which reopens the facts
 alternative under a new #87 rule; or a state asks for its own wording at scale, which turns overlays into

@@ -71,6 +71,7 @@ python3 model/provenance.py            # source register coverage per namespace
 ./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#103)
 ./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
 python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
+python3 model/i18n.py strings|admit|check|why   # the bundle's labels into STRINGS-reader.md; admit read drafts into model/i18n/ and the reader's catalogue (#117)
 python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
 python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
@@ -199,10 +200,15 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   the book, the web app or `/ask` (`tests/test_sovereign_appliance.py`); no ranking language, no currency figure anywhere,
   a member state named only in its Precedents and Sources sections and there only with a URL and access date or
   **[unverified]**; `./run.sh appliance links` after adding or changing a URL.
-- **The language drafts are staging, never rendered.** `docs/i18n/drafts/<ISO>.md` are machine translations of the 45
-  chrome strings in `docs/i18n/STRINGS.md`, drafted by one agent and reviewed by the agent on the other model;
-  `tests/test_i18n_drafts.py` fails if a renderer names them or a file lacks its cross-review. No person has read them.
-  The plan that would admit them is `docs/plans/localisation-plan.md`; it needs its own decision entry first.
+- **The language drafts are staging, never rendered; the catalogue is admitted from them** (#117).
+  `docs/i18n/drafts/<ISO>.md` are machine translations of `docs/i18n/STRINGS.md` (45 chrome strings) and, in a
+  "Reader strings" part, `docs/i18n/STRINGS-reader.md` (the reader's strings plus the content model's labels and gaps,
+  whose table `model/i18n.py strings` generates), drafted by one agent and reviewed by the agent on the other model;
+  `tests/test_i18n_drafts.py` fails if a renderer, the reader included, names them. Only `model/i18n.py admit` reads
+  them, and it admits a state's language column only with both parts reviewed, every `fix` applied as `fixed`, and a
+  `- Read by (<lang>): <role>, <date>` line: a native speaker's reading, recorded by role, never by name. No person has
+  read one yet, so the catalogue is English only. Never edit `model/i18n/` or `mobile/assets/i18n/` by hand. The web
+  stage of `docs/plans/localisation-plan.md` needs its own decision entry.
 - **`TECHNICAL-UNIVERSITIES.md` is authored, not generated** (#108). Per state, the institutions on a named published
   list (CESAER, EuroTech) or the state's technical university cited from a fetched page, else **[unverified]**, or one
   `none: searched <date>` row; alphabetical

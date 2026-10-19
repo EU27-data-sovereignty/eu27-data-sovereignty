@@ -1,8 +1,16 @@
 # Language drafts for the 27 member states
 
-Agent output, not data. Nothing here renders anywhere: not the bundle, the web app, the PDFs or `/ask`.
-The plan that would admit them is [`docs/plans/localisation-plan.md`](../plans/localisation-plan.md);
-the strings they cover and the official languages per state are in [`STRINGS.md`](STRINGS.md).
+Agent output, not data. Nothing here renders anywhere: not the bundle, the web app, the PDFs, `/ask` or the
+reader. The plan for the site is [`docs/plans/localisation-plan.md`](../plans/localisation-plan.md); the strings
+the drafts cover and the official languages per state are in [`STRINGS.md`](STRINGS.md), and the reader's own in
+[`STRINGS-reader.md`](STRINGS-reader.md).
+
+**Admission (#117).** `python3 model/i18n.py admit` builds `model/i18n/<lang>.json` and the reader's catalogue
+from the drafts, one state column at a time, and admits a column only when the file passes `model/i18n_drafts.py
+check`, has its "Reader strings" and "Reader review" parts, has no outstanding `fix` (each applied and marked
+`fixed`, the cell reading exactly as suggested), and carries `- Read by (<lang>): <role>, <date>` for that language.
+`python3 model/i18n.py why` prints, per column, the first reason it is not admitted. On 2026-10-19 every column
+waits on its reader part.
 
 How the files were made, 2026-10-12:
 

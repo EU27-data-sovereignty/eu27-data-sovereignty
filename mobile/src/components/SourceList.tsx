@@ -9,6 +9,7 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { reviewLink } from '@/data/contribute';
 import type { Bundle } from '@/data/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { SPACE, Type, useTheme } from './theme';
 
 /** A checklist line's kind, by its own wording: the source tier, a check passed, or a shortfall. */
@@ -78,6 +79,7 @@ export function SourceList({
   onLayoutSource?: (sourceId: string, y: number) => void;
 }) {
   const theme = useTheme();
+  const { t } = useLanguage();
   if (numbers.size === 0) return null;
   const ordered = [...numbers.entries()].sort((a, b) => a[1] - b[1]);
   const chip = (kind: ReturnType<typeof checkKind>) =>
@@ -89,17 +91,16 @@ export function SourceList({
           ? { borderColor: theme.rank5, borderStyle: 'dashed' as const, color: theme.fgPrimary }
           : { borderColor: theme.border, color: theme.fgSecondary };
   return (
-    <View style={[styles.section, { borderTopColor: theme.border }]} accessibilityLabel="Sources">
+    <View
+      style={[styles.section, { borderTopColor: theme.border }]}
+      accessibilityLabel={t('country.sources')}
+    >
       <Text accessibilityRole="header" style={[styles.heading, { color: theme.fgPrimary }]}>
-        Sources
+        {t('country.sources')}
       </Text>
-      <Text style={[styles.intro, { color: theme.fgSecondary }]}>
-        Each source is listed once. The hash identifies the exact document that was fetched; the
-        quote under each claim is text found in it by machine, in its original language, then a
-        machine translation where the source is not in English, then the checks the claim passed.
-      </Text>
+      <Text style={[styles.intro, { color: theme.fgSecondary }]}>{t('app.sources.intro')}</Text>
       <Text style={[styles.rule, { color: theme.fgMuted }]}>
-        Evidence grades. {bundle.notice.grade_rule}
+        {t('app.sources.grades')} {bundle.notice.grade_rule}
       </Text>
       {ordered.map(([sid, n]) => {
         const s = bundle.sources[sid];
@@ -118,11 +119,11 @@ export function SourceList({
                 <Text style={[styles.title, { color: theme.fgPrimary }]}>{s.title}</Text>
                 <Text style={[styles.meta, { color: theme.fgMuted }]}>
                   {[s.publisher, s.published, host(s.url)].filter(Boolean).join(' · ')} ·{' '}
-                  <ExternalLink href={s.url} label="Open source" />
+                  <ExternalLink href={s.url} label={t('app.sources.open')} />
                   {s.archived_url ? (
                     <>
                       {' · '}
-                      <ExternalLink href={s.archived_url} label="Archived copy" />
+                      <ExternalLink href={s.archived_url} label={t('app.sources.archived')} />
                     </>
                   ) : null}
                 </Text>
@@ -147,12 +148,12 @@ export function SourceList({
                       <Text style={[styles.quote, { color: theme.fgPrimary }]}>“{c.original}”</Text>
                     ) : (
                       <Text style={[styles.gloss, { color: theme.fgSecondary }]}>
-                        Value {c.value_as_found} at {c.locator}
+                        {t('app.sources.value_at', { value: c.value_as_found, locator: c.locator })}
                       </Text>
                     )}
                     {c.gloss ? (
                       <Text style={[styles.gloss, { color: theme.fgSecondary }]}>
-                        Machine translation: “{c.gloss}”
+                        {t('fact.gloss')} “{c.gloss}”
                       </Text>
                     ) : null}
                     <View style={styles.chips}>
@@ -177,13 +178,13 @@ export function SourceList({
                       ))}
                     </View>
                     <Text style={[styles.meta, { color: theme.fgMuted }]}>
-                      retrieved {c.retrieved} ·{' '}
+                      {t('app.sources.retrieved', { date: c.retrieved })} ·{' '}
                       <Pressable
                         onPress={() => Linking.openURL(reviewLink(bundle, claim))}
                         accessibilityRole="link"
                       >
                         <Text style={[styles.link, { color: theme.accentText }]}>
-                          Check this fact
+                          {t('fact.check_this')}
                         </Text>
                       </Pressable>
                     </Text>

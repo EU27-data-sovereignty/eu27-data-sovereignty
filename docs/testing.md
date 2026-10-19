@@ -26,7 +26,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 2 | Verification ledger | `model/sources.py`: the source ledger is valid |
 | 3 | National data register | `model/national_data.py`: the register is valid |
 | 4 | Every fact sourced | `document.py --check`: every printed value resolves to a checked citation |
-| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the technical-universities note; one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
+| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the admitted language catalogue (#117), the technical-universities note; one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
 | 6 | `/ask` type-check | `api/` compiles against the real Anthropic SDK |
 | 7 | Generated files current | the briefs, CSVs, bundle, `/ask` corpus and reports equal a fresh regeneration |
 | 8 | Admission reproduces | the registers rebuild from the committed evidence |
@@ -35,7 +35,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 11–14 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
 | 15 | Production build | `vite build` succeeds |
 | 16 | Size budget | gzipped: data bundle ≤ 1,100 KB (900 KB until 2026-10-06), all JavaScript ≤ 400 KB |
-| 17 | The mobile reader | `mobile/test.sh --ci`, the reader's own suite ([`../mobile/README.md`](../mobile/README.md), #113): node, deps, no tracked env, shell, tooling, exact pins, identity, env keys, scripts, format, lint, types; the 28 parts regenerated and checked against the manifest and the committed bundle (`model/edition.py check`); the generated tokens current; Jest with coverage floors, incl. parity with `web/` byte for byte; expo-doctor; the web export; npm audit against `mobile/audit-allowlist.json`. With `MOBILE_TEST_FLAGS=--integration` (the deploy's gate only): the edition channel round-trip against local Supabase |
+| 17 | The mobile reader | `mobile/test.sh --ci`, the reader's own suite ([`../mobile/README.md`](../mobile/README.md), #113): node, deps, no tracked env, shell, tooling, exact pins, identity, env keys, scripts, format, lint, types; the 28 parts regenerated and checked against the manifest and the committed bundle (`model/edition.py check`); the generated tokens current; the Expo config resolved; the language catalogue current (#117); Jest with coverage floors, incl. parity with `web/` byte for byte; expo-doctor; the web export; npm audit against `mobile/audit-allowlist.json`. With `MOBILE_TEST_FLAGS=--integration` (the deploy's gate only): the edition channel round-trip against local Supabase |
 | 18 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
 | 19 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
@@ -64,7 +64,7 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
 ## The Python suite, by subject
 
 - **Content and evidence:** `test_evidence`, `test_methodology`, `test_provenance`, `test_sources`,
-  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereign_appliance`, `test_i18n_drafts`, `test_notes`, `test_permissions`, `test_sovereignty`, `test_model`, `test_book`,
+  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereign_appliance`, `test_i18n_drafts`, `test_i18n`, `test_notes`, `test_permissions`, `test_sovereignty`, `test_model`, `test_book`,
   `test_ask_corpus`, `test_emoji`, `test_institutions`, `test_gaps`.
 - **The fact check:** `test_factcheck`. It covers the rule, the hash, stage refusals, the gate, withholding,
   the appendix in every asset, the runbook's commands and the ledger replay.

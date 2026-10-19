@@ -3,11 +3,14 @@ import { Component, type ReactNode } from 'react';
 import { Appearance, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { Text as Type, themeFor } from '@/constants/Colors';
+import { english } from '@/i18n/catalogue';
+import { LanguageContext, type LanguageApi } from '@/i18n/LanguageContext';
 
 type Props = { children: ReactNode };
 type State = { error: Error | null };
 
 export class ErrorBoundary extends Component<Props, State> {
+  static contextType = LanguageContext;
   state: State = { error: null };
 
   static getDerivedStateFromError(error: Error): State {
@@ -19,21 +22,24 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.error) {
       const theme = themeFor(Appearance.getColorScheme());
+      const { t } = (this.context as LanguageApi | null) ?? english;
       return (
         <View style={[styles.container, { backgroundColor: theme.bgPage }]}>
           <Text style={[styles.title, { color: theme.fgPrimary }]} accessibilityRole="header">
-            Something went wrong
+            {t('app.error.title')}
           </Text>
           {/* Raw error text helps in development but can leak internals to readers. */}
           <Text style={[styles.message, { color: theme.fgSecondary }]}>
-            {__DEV__ ? this.state.error.message : 'Please try again.'}
+            {__DEV__ ? this.state.error.message : t('app.error.hint')}
           </Text>
           <Pressable
             onPress={this.reset}
             accessibilityRole="button"
             style={[styles.button, { backgroundColor: theme.accent }]}
           >
-            <Text style={{ color: theme.fgOnAccent, fontWeight: '600' }}>Try again</Text>
+            <Text style={{ color: theme.fgOnAccent, fontWeight: '600' }}>
+              {t('app.error.retry')}
+            </Text>
           </Pressable>
         </View>
       );

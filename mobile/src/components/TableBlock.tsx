@@ -6,6 +6,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 import type { Block } from '@/data/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { SpanView, type SpanProps } from './DocumentView';
 import { SPACE, Type, useTheme } from './theme';
 
@@ -14,15 +15,18 @@ export function TableBlock({
   ...rest
 }: { block: Extract<Block, { type: 'table' }> } & Omit<SpanProps, 'span'>) {
   const theme = useTheme();
+  const { tx } = useLanguage();
   return (
-    <View style={styles.table} accessibilityLabel={block.columns.map((c) => c.t).join(', ')}>
+    <View style={styles.table} accessibilityLabel={block.columns.map((c) => tx(c.t)).join(', ')}>
       {block.rows.map((row, r) => (
         <View
           key={r}
           style={[styles.card, { borderColor: theme.border, backgroundColor: theme.bgCard }]}
         >
           <View style={styles.title}>
-            <Text style={[styles.column, { color: theme.fgMuted }]}>{block.columns[0]?.t}</Text>
+            <Text style={[styles.column, { color: theme.fgMuted }]}>
+              {tx(block.columns[0]?.t ?? '')}
+            </Text>
             <SpanView
               span={row[0]!}
               {...rest}
@@ -32,7 +36,7 @@ export function TableBlock({
           {row.slice(1).map((cell, i) => (
             <View key={i} style={styles.line}>
               <Text style={[styles.column, { color: theme.fgMuted }]}>
-                {block.columns[i + 1]?.t}
+                {tx(block.columns[i + 1]?.t ?? '')}
               </Text>
               <View style={{ flex: 1 }}>
                 <SpanView span={cell} {...rest} style={[styles.cell, { color: theme.fgPrimary }]} />

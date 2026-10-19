@@ -276,7 +276,7 @@ if [ ! -d "mobile/node_modules" ]; then
 fi
 # shellcheck disable=SC2086
 (cd mobile && ./test.sh --ci ${MOBILE_TEST_FLAGS:-})
-ok "the mobile reader's suite passed: parity, edition, tokens, config, format, lint, types, unit, doctor, web export, audit"
+ok "the mobile reader's suite passed: parity, edition, tokens, config, catalogue, format, lint, types, unit, doctor, web export, audit"
 fi
 
 # -----------------------------------------------------------------------------

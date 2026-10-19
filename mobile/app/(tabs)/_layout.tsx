@@ -3,6 +3,7 @@ import { Tabs } from 'expo-router';
 import { Text, type ColorValue } from 'react-native';
 
 import { useTheme } from '@/components/theme';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 function glyph(g: string) {
   return function TabGlyph({ color }: { color: ColorValue }) {
@@ -16,6 +17,7 @@ function glyph(g: string) {
 
 export default function TabsLayout() {
   const theme = useTheme();
+  const { t } = useLanguage();
   return (
     <Tabs
       screenOptions={{
@@ -28,11 +30,20 @@ export default function TabsLayout() {
         sceneStyle: { backgroundColor: theme.bgPage },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Countries', tabBarIcon: glyph('▦') }} />
-      <Tabs.Screen name="infrastructure" options={{ title: 'Hosting', tabBarIcon: glyph('▤') }} />
-      <Tabs.Screen name="sovereignty" options={{ title: 'Ranking', tabBarIcon: glyph('▥') }} />
-      <Tabs.Screen name="method" options={{ title: 'Method', tabBarIcon: glyph('◈') }} />
-      <Tabs.Screen name="about" options={{ title: 'Edition', tabBarIcon: glyph('◉') }} />
+      <Tabs.Screen
+        name="index"
+        options={{ title: t('app.tab.countries'), tabBarIcon: glyph('▦') }}
+      />
+      <Tabs.Screen
+        name="infrastructure"
+        options={{ title: t('app.tab.hosting'), tabBarIcon: glyph('▤') }}
+      />
+      <Tabs.Screen
+        name="sovereignty"
+        options={{ title: t('app.tab.ranking'), tabBarIcon: glyph('▥') }}
+      />
+      <Tabs.Screen name="method" options={{ title: t('app.tab.method'), tabBarIcon: glyph('◈') }} />
+      <Tabs.Screen name="about" options={{ title: t('app.tab.edition'), tabBarIcon: glyph('◉') }} />
     </Tabs>
   );
 }

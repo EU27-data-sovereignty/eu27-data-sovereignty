@@ -52,7 +52,7 @@ show_help() {
     echo "  type-check       tsc --noEmit"
     echo
     echo -e "${GREEN}Data and artefacts${NC}"
-    echo "  data             Regenerate country CSVs, briefs and the JSON bundle"
+    echo "  data             Regenerate country CSVs, briefs, the JSON bundle and the interface catalogue"
     echo "  artefacts        Re-render the tracked posters and briefing PDFs (needs Chrome)"
     echo "  export           EU-27 report + 27 country PDFs (book/build/, from the content model)"
     echo "  book             Typeset the paper book"
@@ -93,7 +93,9 @@ regen_data() {
     python3 model/evidence_report.py > /dev/null
     python3 model/gaps.py > /dev/null                 # what is missing, and how hard it was looked for
     python3 model/factcheck.py audit > /dev/null      # reads the bundle just written (#87)
-    print_success "Country files, briefs, bundle, split edition, /ask corpus, docs/evidence.md, docs/gaps.md and docs/fact-check-audit.md regenerated"
+    python3 model/i18n.py strings > /dev/null         # the bundle's labels and gaps, for the drafts (#117)
+    python3 model/i18n.py admit > /dev/null           # model/i18n/ and the reader's catalogue
+    print_success "Country files, briefs, bundle, split edition, /ask corpus, docs/evidence.md, docs/gaps.md, docs/fact-check-audit.md and the interface catalogue regenerated"
 }
 
 case "${1:-dev}" in

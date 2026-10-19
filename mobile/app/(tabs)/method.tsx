@@ -11,19 +11,21 @@ import { SPACE, Type, useTheme } from '@/components/theme';
 import { bundleView } from '@/data/parts';
 import { factCheckPath } from '@/data/routes';
 import { useEdition } from '@/edition/EditionContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function Method() {
   const theme = useTheme();
   const { core, loadError } = useEdition();
+  const { t } = useLanguage();
   if (!core) return <Loading error={loadError} />;
   const bundle = bundleView(core);
   return (
     <Screen>
-      <Heading kicker="EU-27 · How we know" title="Methodology" />
+      <Heading kicker={t('app.method.kicker')} title={t('app.method.title')} />
       <Text style={[styles.small, { color: theme.fgSecondary, marginBottom: SPACE.lg }]}>
-        How every printed fact was checked by the model that did not write it:{' '}
+        {t('app.method.factcheck')}{' '}
         <Link href={factCheckPath()} style={[styles.link, { color: theme.accentText }]}>
-          the fact-check appendix
+          {t('app.method.factcheck_link')}
         </Link>
         .
       </Text>

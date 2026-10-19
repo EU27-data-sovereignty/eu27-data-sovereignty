@@ -7,6 +7,7 @@ import { forwardRef, type ReactNode } from 'react';
 import { ScrollView, type ScrollViewInstance, StyleSheet, Text, View } from 'react-native';
 
 import { useEdition } from '@/edition/EditionContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { ProvenanceNotice } from './ProvenanceNotice';
 import { SPACE, Type, useTheme } from './theme';
 
@@ -40,10 +41,11 @@ export const Screen = forwardRef<ScrollViewInstance, { children: ReactNode }>(fu
 /** What a screen shows while its part of the edition loads, or when it could not be read. */
 export function Loading({ error }: { error?: string | null }) {
   const theme = useTheme();
+  const { t } = useLanguage();
   return (
     <View style={styles.pad}>
       <Text style={{ color: theme.fgMuted, fontSize: Type.body }}>
-        {error ? `This part of the edition could not be read: ${error}` : 'Loading the edition…'}
+        {error ? t('app.load_error', { error }) : t('app.loading')}
       </Text>
     </View>
   );

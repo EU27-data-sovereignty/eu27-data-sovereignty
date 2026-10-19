@@ -7,6 +7,7 @@ import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { factCheckPath } from '@/data/routes';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { SPACE, Type, useTheme } from './theme';
 
 export function ProvenanceNotice({
@@ -17,16 +18,17 @@ export function ProvenanceNotice({
   provenance: string;
 }) {
   const theme = useTheme();
+  const { t } = useLanguage();
   return (
     <View style={[styles.box, { borderTopColor: theme.border }]} accessibilityRole="summary">
       <Text style={[styles.text, { color: theme.fgSecondary }]}>
-        {provenance} Generated {generated}.{' '}
+        {provenance} {t('app.provenance.generated', { date: generated })}{' '}
         <Link href="/method" style={[styles.link, { color: theme.accentText }]}>
-          How this was built
+          {t('app.provenance.how_built')}
         </Link>
         {' · '}
         <Link href={factCheckPath()} style={[styles.link, { color: theme.accentText }]}>
-          How every fact was checked
+          {t('app.provenance.how_checked')}
         </Link>
         .
       </Text>

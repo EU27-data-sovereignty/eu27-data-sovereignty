@@ -141,6 +141,7 @@ describe('dependencies', () => {
     'expo-crypto',
     'expo-file-system',
     'expo-linking',
+    'expo-localization',
     'expo-router',
     'expo-splash-screen',
     'expo-status-bar',
@@ -162,6 +163,10 @@ describe('dependencies', () => {
     const all = { ...pkg.dependencies, ...pkg.devDependencies };
     const ranged = Object.entries(all).filter(([, v]) => !/^\d+\.\d+\.\d+$/.test(String(v)));
     expect(ranged).toEqual([]);
+  });
+
+  it('reads the device language in one file, and only to pick an admitted language (#117)', () => {
+    expect(where(/expo-localization/)).toEqual(['src/i18n/deviceLocales.ts']);
   });
 
   it('persists nothing about the reader: no session storage dependency', () => {

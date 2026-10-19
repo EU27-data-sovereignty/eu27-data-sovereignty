@@ -13,10 +13,12 @@ import { Heading, Loading, Screen } from '@/components/Screen';
 import { SPACE, Type, useTheme } from '@/components/theme';
 import { countryPath } from '@/data/routes';
 import { useEdition } from '@/edition/EditionContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function Sovereignty() {
   const theme = useTheme();
   const { core, loadError } = useEdition();
+  const { t, tx } = useLanguage();
   const rule = useMemo(() => {
     const out: Record<string, string> = {};
     if (!core) return out;
@@ -34,10 +36,10 @@ export default function Sovereignty() {
   const sov = core.sovereignty;
   const fill = groupFill(theme);
   const order = sov.groups.map((g) => g.id);
-  const name = (iso: string) => core.index[iso]?.name ?? iso;
+  const name = (iso: string) => tx(core.index[iso]?.name ?? iso);
   return (
     <Screen>
-      <Heading kicker="EU-27 · Ranking by published rule" title="Data-sovereignty ranking" />
+      <Heading kicker={t('app.ranking.kicker')} title={t('app.ranking.title')} />
       <View
         style={[
           styles.callout,
@@ -47,9 +49,7 @@ export default function Sovereignty() {
         <Text style={[styles.small, { color: theme.fgPrimary }]}>{sov.guardrail}</Text>
       </View>
       <Text style={[styles.small, styles.intro, { color: theme.fgSecondary }]}>
-        States are placed in groups by a published rule, not scored. An input without a checked
-        source counts as not demonstrated. The bar beside each state shows the groups it could still
-        reach once its open evidence is settled; that range is its confidence.
+        {t('app.ranking.intro')}
       </Text>
       {sov.groups.map((g) => {
         const members = Object.entries(sov.placements)
@@ -75,7 +75,10 @@ export default function Sovereignty() {
                 <Link key={iso} href={countryPath(iso)} asChild>
                   <View
                     accessibilityRole="button"
-                    accessibilityLabel={`${name(iso)}, ${p.confidence} confidence, open its report`}
+                    accessibilityLabel={t('app.ranking.chip', {
+                      name: name(iso),
+                      confidence: p.confidence,
+                    })}
                     style={[
                       styles.chip,
                       { borderColor: theme.border, backgroundColor: theme.bgEmphasis },
@@ -89,7 +92,7 @@ export default function Sovereignty() {
               ))}
               {members.length === 0 ? (
                 <Text style={[styles.rule, { color: theme.fgMuted, fontStyle: 'italic' }]}>
-                  None
+                  {t('app.ranking.none')}
                 </Text>
               ) : null}
             </View>
@@ -97,7 +100,7 @@ export default function Sovereignty() {
         );
       })}
       <Text accessibilityRole="header" style={[styles.heading, { color: theme.accentText }]}>
-        The indicators
+        {t('app.ranking.indicators')}
       </Text>
       {sov.indicators.map((ind) => (
         <View key={ind.id} style={styles.indicator}>
@@ -108,9 +111,9 @@ export default function Sovereignty() {
         </View>
       ))}
       <Text style={[styles.small, { color: theme.fgSecondary, marginTop: SPACE.md }]}>
-        Each state’s findings per indicator are in the Placement section of its report.{' '}
-        <Text style={{ color: theme.fgMuted, fontStyle: 'italic' }}>Not yet sourced</Text>: a gap,
-        never a no.{' '}
+        {t('app.ranking.findings')}{' '}
+        <Text style={{ color: theme.fgMuted, fontStyle: 'italic' }}>{tx('Not yet sourced')}</Text>:{' '}
+        {t('app.ranking.gap')}{' '}
         <Text
           style={{
             color: theme.fgMuted,
@@ -119,9 +122,9 @@ export default function Sovereignty() {
             textDecorationStyle: 'dashed',
           }}
         >
-          Disputed
+          {t('app.ranking.disputed_word')}
         </Text>
-        : withheld until corrected and checked again.
+        : {t('app.ranking.disputed')}
       </Text>
     </Screen>
   );

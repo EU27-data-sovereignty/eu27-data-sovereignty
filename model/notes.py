@@ -6,7 +6,7 @@ The register of authored notes and agent drafts, and the one gate stage that che
     python3 model/notes.py list      # what is registered
 
 An authored note (the national-AI strategies, the sovereign appliance, the technical universities) or an
-agent draft set (the language drafts) is prose or staging the model never renders, held to a contract its own checker
+agent draft set (the language drafts, and the catalogue admitted from them) is prose or staging the model never renders, held to a contract its own checker
 enforces. Each checker is a module under model/ with a `check` subcommand. Registering it here is what
 puts it in the gate: test.sh runs this file once, so a new note adds a line here, not a stage there,
 and tests/test_notes.py fails if a checker module exists that is not registered.
@@ -24,6 +24,7 @@ CHECKERS: dict[str, str] = {
     "national_ai_note.py": "the national-AI note (#103)",
     "sovereign_appliance_note.py": "the sovereign-appliance note (#104)",
     "i18n_drafts.py": "the language drafts (docs/plans/localisation-plan.md)",
+    "i18n.py": "the admitted interface catalogue (#117)",
     "technical_universities_note.py": "the technical-universities note",
 }
 

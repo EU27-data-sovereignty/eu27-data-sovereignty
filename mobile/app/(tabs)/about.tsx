@@ -4,7 +4,8 @@
  * reaches the network: a check for a newer edition (#110, #111), which in the same tap also asks for a
  * newer build of the app itself (#115). Every sentence about evidence comes from the edition's `notice`;
  * the privacy sentences are the app’s own and say exactly what one check sends, and to whom. The privacy
- * policy the stores require is linked from here (#116).
+ * policy the stores require is linked from here (#116). The reader chooses the app's language here, from the
+ * languages the catalogue has admitted, and sees who drafted, reviewed and read the one on screen (#117).
  */
 import Constants from 'expo-constants';
 import { Linking, Pressable, StyleSheet, Switch, Text, View } from 'react-native';
@@ -13,27 +14,30 @@ import { Heading, Loading, Screen } from '@/components/Screen';
 import { SPACE, Type, useTheme } from '@/components/theme';
 import { useEdition } from '@/edition/EditionContext';
 import type { UpdateState } from '@/edition/EditionStore';
+import type { Translator } from '@/i18n/catalogue';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { privacyUrl } from '@/services/site';
 import { describeAppUpdate } from '@/update/appUpdate';
 
-function describe(update: UpdateState): string {
+function describe(update: UpdateState, t: Translator['t']): string {
   switch (update.kind) {
     case 'idle':
-      return 'Not checked since launch.';
     case 'unconfigured':
-      return 'This build has no edition channel configured; it reads only the edition inside the app.';
     case 'checking':
-      return 'Checking…';
-    case 'up-to-date':
-      return 'This is the latest published edition.';
-    case 'downloading':
-      return `Downloading ${update.name} (${update.done + 1} of ${update.total})…`;
-    case 'ready':
-      return `A newer edition (${update.edition.slice(0, 16)}…) is downloaded and verified.`;
-    case 'rejected':
-      return `Rejected: ${update.reason}. Nothing of it was kept.`;
     case 'unreachable':
-      return 'The edition channel could not be reached. The app keeps the edition it has.';
+      return t(`app.update.${update.kind}`);
+    case 'up-to-date':
+      return t('app.update.up_to_date');
+    case 'downloading':
+      return t('app.update.downloading', {
+        name: update.name,
+        done: update.done + 1,
+        total: update.total,
+      });
+    case 'ready':
+      return t('app.update.ready', { edition: update.edition.slice(0, 16) });
+    case 'rejected':
+      return t('app.update.rejected', { reason: update.reason });
   }
 }
 
@@ -53,6 +57,7 @@ export default function About() {
     setAutoCheck,
     integrityNotice,
   } = useEdition();
+  const { t, tx, lang, languages, provenance, choose, catalogue } = useLanguage();
   if (!core) return <Loading error={loadError} />;
   const totals = Object.values(core.index).reduce(
     (t, e) => ({ facts: t.facts + e.facts, withheld: t.withheld + e.withheld }),
@@ -74,7 +79,7 @@ export default function About() {
   );
   return (
     <Screen>
-      <Heading kicker="EU-27 · This edition" title="About this edition" />
+      <Heading kicker={t('app.about.kicker')} title={t('app.about.title')} />
       {integrityNotice ? (
         <View
           style={[
@@ -85,32 +90,52 @@ export default function About() {
           <Text style={[styles.small, { color: theme.fgPrimary }]}>{integrityNotice}</Text>
         </View>
       ) : null}
-      {row('Edition (sha256 of the bundle)', edition.id, true)}
-      {row('Generated', core.generated)}
-      {row('Schema', String(core.schema_version))}
+      {row(t('app.about.edition'), edition.id, true)}
+      {row(t('app.about.generated'), core.generated)}
+      {row(t('app.about.schema'), String(core.schema_version))}
       {row(
-        'Source',
+        t('app.about.source'),
         edition.source === 'bundled'
-          ? 'Inside the app, as installed'
-          : `Downloaded from the edition channel${edition.published ? ` · published ${edition.published.published_at}` : ''}${edition.published?.commit ? ` · commit ${edition.published.commit.slice(0, 7)}` : ''}`
+          ? t('app.about.source_bundled')
+          : [
+              t('app.about.source_downloaded'),
+              edition.published
+                ? t('app.about.published', { date: edition.published.published_at })
+                : '',
+              edition.published?.commit
+                ? t('app.about.commit', { commit: edition.published.commit.slice(0, 7) })
+                : '',
+            ]
+              .filter(Boolean)
+              .join(' · ')
       )}
-      {row('Facts shown', `${totals.facts} across 27 member states`)}
-      {row('Withheld as disputed', String(totals.withheld))}
+      {row(t('app.about.facts'), t('app.about.facts_value', { n: totals.facts }))}
+      {row(t('app.about.withheld'), String(totals.withheld))}
       {row(
-        'App',
+        t('app.about.app'),
         `${Constants.expoConfig?.name ?? ''} ${Constants.expoConfig?.version ?? ''}`.trim()
       )}
       {row(
-        'App build',
+        t('app.about.build'),
         build.updateId
-          ? `Update ${build.updateId.slice(0, 8)} on runtime ${build.runtimeVersion ?? '?'}${build.channel ? ` (${build.channel})` : ''}`
-          : `The code inside the app as installed${build.runtimeVersion ? `, runtime ${build.runtimeVersion}` : ''}`
+          ? `${t('app.about.build_update', {
+              id: build.updateId.slice(0, 8),
+              runtime: build.runtimeVersion ?? '?',
+            })}${build.channel ? ` (${build.channel})` : ''}`
+          : [
+              t('app.about.build_installed'),
+              build.runtimeVersion
+                ? t('app.about.build_runtime', { runtime: build.runtimeVersion })
+                : '',
+            ]
+              .filter(Boolean)
+              .join(', ')
       )}
 
       <Text accessibilityRole="header" style={[styles.heading, { color: theme.fgPrimary }]}>
-        What this edition can say about its evidence
+        {t('app.about.evidence')}
       </Text>
-      <Text style={[styles.small, { color: theme.fgPrimary }]}>{core.notice.disclaimer}</Text>
+      <Text style={[styles.small, { color: theme.fgPrimary }]}>{tx(core.notice.disclaimer)}</Text>
       <Text style={[styles.small, { color: theme.fgSecondary, marginTop: SPACE.sm }]}>
         {core.notice.withheld}
       </Text>
@@ -127,11 +152,11 @@ export default function About() {
       ))}
 
       <Text accessibilityRole="header" style={[styles.heading, { color: theme.fgPrimary }]}>
-        Newer editions
+        {t('app.about.newer')}
       </Text>
-      <Text style={[styles.small, { color: theme.fgSecondary }]}>{describe(update)}</Text>
+      <Text style={[styles.small, { color: theme.fgSecondary }]}>{describe(update, t)}</Text>
       <Text style={[styles.small, { color: theme.fgSecondary, marginTop: SPACE.xs }]}>
-        {describeAppUpdate(appUpdate)}
+        {describeAppUpdate(appUpdate, t)}
       </Text>
       <View style={styles.actions}>
         <Pressable
@@ -140,9 +165,7 @@ export default function About() {
           onPress={() => void checkForUpdate()}
           style={[styles.button, { backgroundColor: theme.accent, opacity: busy ? 0.6 : 1 }]}
         >
-          <Text style={{ color: theme.fgOnAccent, fontWeight: '600' }}>
-            Check for a newer edition
-          </Text>
+          <Text style={{ color: theme.fgOnAccent, fontWeight: '600' }}>{t('app.about.check')}</Text>
         </Pressable>
         {update.kind === 'ready' ? (
           <Pressable
@@ -150,7 +173,9 @@ export default function About() {
             onPress={() => void switchToInstalled()}
             style={[styles.button, { borderWidth: 1, borderColor: theme.accent }]}
           >
-            <Text style={{ color: theme.accentText, fontWeight: '600' }}>Use it now</Text>
+            <Text style={{ color: theme.accentText, fontWeight: '600' }}>
+              {t('app.about.use_now')}
+            </Text>
           </Pressable>
         ) : null}
         {appUpdate.kind === 'ready' ? (
@@ -159,29 +184,25 @@ export default function About() {
             onPress={() => void restartToApply()}
             style={[styles.button, { borderWidth: 1, borderColor: theme.accent }]}
           >
-            <Text style={{ color: theme.accentText, fontWeight: '600' }}>Restart to apply</Text>
+            <Text style={{ color: theme.accentText, fontWeight: '600' }}>
+              {t('app.about.restart')}
+            </Text>
           </Pressable>
         ) : null}
       </View>
       <View style={styles.toggle}>
         <Text style={[styles.small, { color: theme.fgPrimary, flex: 1 }]}>
-          Check automatically at launch
+          {t('app.about.auto')}
         </Text>
         <Switch
-          accessibilityLabel="Check automatically at launch"
+          accessibilityLabel={t('app.about.auto')}
           value={autoCheck}
           onValueChange={(on) => void setAutoCheck(on)}
           disabled={update.kind === 'unconfigured'}
         />
       </View>
       <Text style={[styles.small, { color: theme.fgMuted, marginTop: SPACE.sm }]}>
-        A check sends one request for a 200-byte pointer to the project’s edition channel, and up to
-        29 more for the files of a newer edition; then one request to Expo’s update service for a
-        newer build of this app. Each host sees the network address, the app’s user agent and the
-        time, in its request logs. Nothing identifies the reader; nothing about the reader is
-        stored; no request is made unless you tap, or switch the automatic check on. Every
-        downloaded edition file is checked against its published hash before a single value from it
-        is shown.
+        {t('app.about.privacy_note')}
       </Text>
       {privacy ? (
         <Pressable
@@ -192,9 +213,55 @@ export default function About() {
           <Text
             style={[styles.small, { color: theme.accentText, textDecorationLine: 'underline' }]}
           >
-            Privacy policy
+            {t('app.about.privacy')}
           </Text>
         </Pressable>
+      ) : null}
+
+      <Text accessibilityRole="header" style={[styles.heading, { color: theme.fgPrimary }]}>
+        {t('app.language.heading')}
+      </Text>
+      <View style={styles.actions} accessibilityRole="radiogroup">
+        {languages.map((l) => (
+          <Pressable
+            key={l.lang}
+            accessibilityRole="radio"
+            accessibilityState={{ checked: l.lang === lang }}
+            onPress={() => void choose(l.lang)}
+            style={[
+              styles.button,
+              { borderWidth: 1, borderColor: theme.accent },
+              l.lang === lang && { backgroundColor: theme.accent },
+            ]}
+          >
+            <Text
+              style={{
+                color: l.lang === lang ? theme.fgOnAccent : theme.accentText,
+                fontWeight: '600',
+              }}
+            >
+              {l.name}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
+      <Text style={[styles.small, { color: theme.fgSecondary, marginTop: SPACE.sm }]}>
+        {t('app.language.scope')}
+      </Text>
+      {provenance.map((p) => (
+        <Text key={p.iso} style={[styles.small, { color: theme.fgMuted, marginTop: SPACE.xs }]}>
+          {p.tag}:{' '}
+          {t('app.language.provenance', {
+            drafted: p.drafted ?? '',
+            reviewed: p.reviewed ?? '',
+            read: p.read ?? '',
+          })}
+        </Text>
+      ))}
+      {Object.values(catalogue.states).some((ls) => ls.some((l) => !catalogue.languages[l])) ? (
+        <Text style={[styles.small, { color: theme.fgMuted, marginTop: SPACE.sm }]}>
+          {t('app.language.pending')}
+        </Text>
       ) : null}
     </Screen>
   );

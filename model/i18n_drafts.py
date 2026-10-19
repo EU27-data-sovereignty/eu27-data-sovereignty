@@ -6,8 +6,14 @@ The language drafts under docs/i18n/drafts/: their contract, and the summary tab
     python3 model/i18n_drafts.py summary    # rewrite the table in docs/i18n/README.md from the drafts
 
 A draft is agent output (docs/plans/localisation-plan.md). Nothing renders it: not the bundle, not the
-web app, not the PDFs, not /ask. This script only says whether each file keeps the shape that a later
-admission could read, and whether a second, different agent has gone over every cell.
+web app, not the PDFs, not /ask, not the reader. This script only says whether each file keeps the shape
+that admission (model/i18n.py, #117) reads, and whether a second, different agent has gone over every cell.
+
+A draft has two parts. "Strings" and "Review" cover docs/i18n/STRINGS.md, the site's and the PDFs' chrome.
+"Reader strings" and "Reader review" cover docs/i18n/STRINGS-reader.md, the reader's own strings and the
+content model's labels and gaps (#117); until a draft has that part, it is counted as pending, not as a
+problem. A review verdict is `ok`, `fix` (with a suggested wording), or `fixed`: the suggestion was applied
+and the cell now reads exactly as suggested.
 """
 from __future__ import annotations
 
@@ -18,10 +24,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 STRINGS = ROOT / "docs" / "i18n" / "STRINGS.md"
+READER_STRINGS = ROOT / "docs" / "i18n" / "STRINGS-reader.md"
 DRAFTS = ROOT / "docs" / "i18n" / "drafts"
 README = ROOT / "docs" / "i18n" / "README.md"
 
-VERDICTS = {"ok", "fix"}
+VERDICTS = {"ok", "fix", "fixed"}
 BCP47 = re.compile(r"^[a-z]{2,3}-[A-Z]{2}$")   # language subtag (ISO 639-1) + region (ISO 3166-1)
 
 
@@ -59,6 +66,17 @@ def spec() -> tuple[list[tuple[str, str]], dict[str, tuple[str, list[str]]]]:
     return keys, states
 
 
+def reader_keys() -> list[tuple[str, str]]:
+    """The reader's keys, in order: its own strings, then the content model's labels and gaps."""
+    if not READER_STRINGS.exists():
+        return []
+    text = READER_STRINGS.read_text(encoding="utf-8")
+    out = []
+    for heading in ("App strings", "Content labels and gaps"):
+        out += [(r[0], r[1]) for r in _table_after(text, heading)[1:]]
+    return out
+
+
 def tags() -> dict[str, dict[str, str]]:
     """ISO -> {language subtag: BCP 47 tag}, from STRINGS.md's fourth column."""
     text = STRINGS.read_text(encoding="utf-8")
@@ -76,7 +94,8 @@ def _field(text: str, label: str) -> str:
 def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[list[str], dict]:
     problems: list[str] = []
     path = DRAFTS / f"{iso}.md"
-    info = {"iso": iso, "langs": langs, "drafted": "", "reviewed": "", "ok": 0, "fix": 0, "cells": 0}
+    info = {"iso": iso, "langs": langs, "drafted": "", "reviewed": "", "ok": 0, "fix": 0, "fixed": 0, "cells": 0,
+            "reader": "", "verdicts": {}}
     if not path.exists():
         return [f"{iso}: no draft file"], info
     text = path.read_text(encoding="utf-8")
@@ -95,9 +114,23 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
     if not info["drafted"]:
         problems.append(f"{iso}: no 'Drafted by' line")
 
-    rows = _table_after(text, "Strings")
+    problems += _check_part(iso, text, keys, langs, info, "Strings", "Review")
+    rkeys = reader_keys()
+    if rkeys and _table_after(text, "Reader strings"):
+        info["reader"] = "drafted"
+        problems += _check_part(iso, text, rkeys, langs, info, "Reader strings", "Reader review")
+    elif rkeys:
+        info["reader"] = "pending"
+    return problems, info
+
+
+def _check_part(iso: str, text: str, keys: list[tuple[str, str]], langs: list[str], info: dict,
+                strings: str, review_heading: str) -> list[str]:
+    """One strings table and its review table: complete, in order, every cell reviewed by the other agent."""
+    problems: list[str] = []
+    rows = _table_after(text, strings)
     if not rows:
-        return problems + [f"{iso}: no Strings table"], info
+        return [f"{iso}: no {strings} table"]
     header, body = rows[0], rows[1:]
     want = ["key", "en", *langs]
     if header != want:
@@ -128,10 +161,11 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
             elif key == "notice.disclaimer" and not 0.6 <= len(cell) / len(src[key]) <= 2.2:
                 problems.append(f"{iso}: disclaimer {lang} length {len(cell)} vs source {len(src[key])}: not a full translation?")
 
-    review = _table_after(text, "Review")
+    cells = {(r[0], lang): cell for r in body if len(r) == len(want) for lang, cell in zip(langs, r[2:])}
+    review = _table_after(text, review_heading)
     if not review:
-        problems.append(f"{iso}: not reviewed")
-        return problems, info
+        problems.append(f"{iso}: {strings} not reviewed")
+        return problems
     if not info["reviewed"]:
         problems.append(f"{iso}: no 'Reviewed by' line")
     d_agent = info["drafted"].split(",")[0].strip()
@@ -145,7 +179,7 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
             continue
         key, lang, verdict = r[0], r[1], r[2].lower()
         if verdict not in VERDICTS:
-            problems.append(f"{iso}: review {key} {lang}: verdict '{r[2]}' not ok/fix")
+            problems.append(f"{iso}: review {key} {lang}: verdict '{r[2]}' not ok/fix/fixed")
             continue
         if (key, lang) in seen:
             problems.append(f"{iso}: review row {key} {lang} appears twice")
@@ -153,15 +187,18 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
         if key not in src or lang not in langs:
             problems.append(f"{iso}: review row {key} {lang} is not a cell of this draft")
             continue
-        if verdict == "fix" and (len(r) < 5 or not r[4].strip()):
-            problems.append(f"{iso}: review {key} {lang} is a fix without a suggested wording")
+        if verdict in ("fix", "fixed") and (len(r) < 5 or not r[4].strip()):
+            problems.append(f"{iso}: review {key} {lang} is a {verdict} without a suggested wording")
+        elif verdict == "fixed" and cells.get((key, lang)) != r[4].strip():
+            problems.append(f"{iso}: review {key} {lang} is marked fixed but the cell does not read as suggested")
         seen[(key, lang)] = verdict
         info[verdict] += 1
+        info["verdicts"][(key, lang)] = verdict
     for key, _ in keys:
         for lang in langs:
             if (key, lang) not in seen:
                 problems.append(f"{iso}: {key} {lang} has no review verdict")
-    return problems, info
+    return problems
 
 
 def check(verbose: bool = True) -> int:
@@ -175,7 +212,9 @@ def check(verbose: bool = True) -> int:
     reviewed = sum(1 for i in infos if i["reviewed"])
     print(f"{len(states)} states, {len(keys)} keys, {sum(i['cells'] for i in infos)} cells, "
           f"{reviewed} reviewed, {sum(i['ok'] for i in infos)} ok, {sum(i['fix'] for i in infos)} fix, "
-          f"{len(all_problems)} problems")
+          f"{sum(i['fixed'] for i in infos)} fixed, "
+          f"reader part {sum(1 for i in infos if i['reader'] == 'drafted')} drafted / "
+          f"{sum(1 for i in infos if i['reader'] == 'pending')} pending, {len(all_problems)} problems")
     if verbose:
         for p in all_problems:
             print("  " + p)

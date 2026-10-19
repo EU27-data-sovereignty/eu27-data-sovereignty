@@ -300,6 +300,7 @@ run_step parts check_parts
 run_step edition check_edition
 run_step tokens check_tokens
 run_step config check_config
+run_step catalogue python3 ../model/i18n.py check
 
 if [ "$QUICK" -eq 1 ]; then
     run_step unit npx jest
