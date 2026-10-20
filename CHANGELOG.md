@@ -7,6 +7,12 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-20
 
+### Fixed: Vite 8.2.4, past three launch-editor advisories that stopped the deploy
+
+- **Dependency.** `vite` 8.2.2 → 8.2.4 (pinned, same release line). GHSA-698v-4r3x-3vcv, GHSA-r825-w8mm-5pxw and
+  GHSA-587h-7wmj-h5pm (high) affect the dev server's open-in-editor helper, not the built site, but the deploy's
+  `npm audit --audit-level=high` gate failed on them and held back the three changes above.
+
 ### Changed: each country card leads with the state's outline, filled to its verified share (#110)
 
 - **Countries.** Every card shows the state's own outline, filled from the bottom to the share of its holdings
