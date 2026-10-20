@@ -3123,3 +3123,31 @@ The hero's EU disc is an image and keeps its own blue.
 
 *Would change if:* the owner adopts the reference's layout too, or a contrast check fails on a page the home page
 does not show.
+
+### 110. A country card shows the state's own outline, filled to its share of verified holdings
+**Decision.** 2026-10-20, at the request of Marco Buhlmann, who chose this (option B) from three proposed card
+designs. Each card on `/countries` leads with the state's outline (`CountryOutline`, from the same world-atlas
+geometry as the Ranking map), filled from the bottom to the share of its holdings with a verified source, beside
+the name and that count in large type ("31 / 39, holdings with a verified source"). The holdings bar goes; tier 0
+dots, sourced facts, the disputed count and the PDF link stay. The outline is decoration (`aria-hidden`): the
+number beside it is the reading. The level runs over the outline's own height, and distant islands (Madeira, the
+Azores) are left out of the drawing so the mainland is legible. The geometry now loads through one shared module
+(`charts/euShapes.ts`), so the map and the cards fetch the chunk once.
+
+**Problem.** Twenty-seven identical cards of bars and dots read as a table; the owner wanted the page more
+inviting without adding claims.
+
+**Alternatives considered.**
+- **A ring per card (A).** *Why not:* not chosen; a ring is the same bar bent round and still looks alike 27 times.
+- **Compact evidence rows (C).** *Why not:* not chosen; denser, but the page stays a table.
+- **Filling by area rather than level.** *Why not:* a true area fill needs a search per shape for the matching
+  line and reads no better; the level is labelled by the number beside it.
+
+**Closes off.** A card whose graphic carries information its text does not; the outline as a ranking cue (every
+state is drawn at the same size, whatever its area).
+
+**Verified:** 2026-10-20. Built and screenshotted in dark and light at 1440 px and at 390 px; the full gate and the
+browser profiles as recorded in `CHANGELOG.md`.
+
+*Would change if:* the count shown moves from holdings to another measure, or the geometry chunk becomes too heavy
+for the page and the outlines are precomputed.

@@ -7,6 +7,15 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-20
 
+### Changed: each country card leads with the state's outline, filled to its verified share (#110)
+
+- **Countries.** Every card shows the state's own outline, filled from the bottom to the share of its holdings
+  with a verified source, beside the count in large type. The holdings bar is gone; tier 0, sourced facts,
+  disputed values and the PDF link are unchanged. The outline is decorative to screen readers: the count is the
+  reading.
+- **Map geometry.** Loaded through one shared module (`charts/euShapes.ts`), so the Ranking map and the cards
+  fetch it once.
+
 ### Changed: a deeper navy and a muted gold across the site (#109)
 
 - **Palette only.** `design/tokens.json` takes the colours of the owner's reference design; content and layout are

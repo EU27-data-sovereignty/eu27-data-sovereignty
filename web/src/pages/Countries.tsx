@@ -5,18 +5,26 @@ import { coverage, factCounts, spans } from '@/data/sources'
 import type { Bundle } from '@/data/types'
 import type { ReportSection } from '@/data/guides'
 import { PageBand } from '@/components/PageBand'
-import { CARD, Dots, FIELD, Bar, Segmented } from '@/components/ui'
+import { CARD, Dots, FIELD, Segmented } from '@/components/ui'
 import { countryPath } from '@/utils/routes'
+import { CountryOutline } from '@/charts/CountryOutline'
+import { ISO_OF, useEuShapes } from '@/charts/euShapes'
 
 type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 
 /**
  * All 27 as cards, sortable and searchable -- the web's advantage over the PDF's fixed table. Each card
- * reports evidence, not judgement: how much of each state's inventory has a verified source (#99 layout).
+ * reports evidence, not judgement: how much of each state's inventory has a verified source, drawn as the
+ * state's own outline filled to that share (#110).
  */
 export function Countries({ bundle }: { bundle: Bundle }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('name')
+  const shapes = useEuShapes()
+  const outline = useMemo(
+    () => Object.fromEntries((shapes ?? []).map(f => [ISO_OF[String(f.id)]!, f])),
+    [shapes],
+  )
   // A guide's step may name the section of the report to open once a state is chosen (#102).
   const section = (useLocation().state as { section?: ReportSection } | null)?.section
   // Its heading, in the report's own words, from any country's document.
@@ -94,19 +102,29 @@ export function Countries({ bundle }: { bundle: Bundle }) {
             key={c.iso2}
             className={`${CARD} flex flex-col gap-3 p-5 transition-colors hover:border-[var(--color-accent-text)]`}
           >
-            <div className="flex items-baseline justify-between gap-3">
-              <h2 className="font-display text-xl font-bold">
-                <Link to={report(c.iso2)} className="hover:underline">
-                  {c.name}
-                </Link>
-              </h2>
-              <span className="text-xs font-bold tracking-wider text-[var(--color-fg-muted)]">
-                {c.iso2}
-              </span>
+            <div className="flex items-start gap-4">
+              <CountryOutline shape={outline[c.iso2]} value={cov.verified} max={cov.total} />
+              <div className="flex min-w-0 flex-1 flex-col gap-1">
+                <div className="flex items-baseline justify-between gap-3">
+                  <h2 className="font-display text-xl font-bold">
+                    <Link to={report(c.iso2)} className="hover:underline">
+                      {c.name}
+                    </Link>
+                  </h2>
+                  <span className="text-xs font-bold tracking-wider text-[var(--color-fg-muted)]">
+                    {c.iso2}
+                  </span>
+                </div>
+                <p className="mt-1 font-display text-3xl font-light tabular-nums">
+                  {cov.verified}
+                  <span className="text-base text-[var(--color-fg-muted)]"> / {cov.total}</span>
+                </p>
+                <p className="text-sm text-[var(--color-fg-secondary)]">
+                  holdings with a verified source
+                </p>
+              </div>
             </div>
             <div className="grid grid-cols-[7.5em_minmax(0,1fr)] items-center gap-2.5 text-sm text-[var(--color-fg-secondary)]">
-              <span>Holdings</span>
-              <Bar value={cov.verified} max={cov.total} />
               <span>Tier 0</span>
               <Dots
                 value={cov.tier0}
