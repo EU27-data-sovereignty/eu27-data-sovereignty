@@ -5,6 +5,15 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-20
+
+### Changed: the ranking explains a state under the map, and Ask moves to the end of the navigation
+
+- **Ranking.** A state's explanation ("What could move it") now sits directly under the map instead of below the
+  whole group list, so it is in view where the state was picked. On wide screens the map and the explanation stay
+  in view while the group list scrolls; on a phone, picking a state from the list scrolls its explanation into view.
+- **Navigation.** Ask is the last item, after Fact check.
+
 ## 2026-10-12
 
 ### Added: `TECHNICAL-UNIVERSITIES.md`, the technical universities of each member state, sourced or marked (#108)

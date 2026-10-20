@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { EuMap } from '@/charts/EuMap'
@@ -59,6 +59,14 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
   const sov = bundle.sovereignty
   const [filter, setFilter] = useState<Confidence>('All')
   const [selected, setSelected] = useState<string | null>(null)
+  const detailRef = useRef<HTMLElement>(null)
+  // A state picked from the group list on a phone has its explanation below the map, out of sight: bring it
+  // into view. "nearest" leaves the page still when the explanation is already visible.
+  useEffect(() => {
+    if (!selected) return
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    detailRef.current?.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' })
+  }, [selected])
   const [sortBy, setSortBy] = useState<string>('name')
 
   const names = useMemo(
@@ -153,7 +161,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         ))}
       </fieldset>
 
-      <div className="mb-10 grid gap-6 lg:grid-cols-2">
+      <div className="mb-10 grid gap-6 lg:grid-cols-2 lg:items-start">
         <section aria-label="Groups">
           {sov.groups.map(g => {
             const members = visible
@@ -211,7 +219,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           })}
         </section>
 
-        <section aria-label="Map">
+        <section aria-label="Map" className="self-start lg:sticky lg:top-6">
           <EuMap
             placements={Object.fromEntries(visible)}
             labels={labels}
@@ -222,36 +230,37 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           <p className="mt-1 text-xs text-[var(--color-fg-muted)]">
             Hatched: Low confidence. Select a state for its explanation.
           </p>
+          {/* The explanation sits under the map, so it is read where the state was picked */}
+          {sel && selected ? (
+            <section
+              ref={detailRef}
+              aria-live="polite"
+              className="mt-4 scroll-mt-6 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-accent-text)] sm:p-6"
+            >
+              <h2 className="font-display text-2xl font-bold">{names[selected]}</h2>
+              <p className="mb-2 text-sm">
+                <strong>{labels[sel.group]}</strong> · {sel.confidence} confidence · could still
+                reach {labels[sel.range[0]!]}
+                {sel.range.length > 1 ? ` to ${labels[sel.range[sel.range.length - 1]!]}` : ''}
+              </p>
+              <h3 className="text-sm font-semibold">What could move it</h3>
+              <ul className="mb-2 list-disc pl-5 text-sm">
+                {sel.could_move.map((m, i) => (
+                  <li key={i}>
+                    {m.input === 'holdings'
+                      ? `If any of ${m.count} tier 0/1 holdings with unsourced hosting runs on non-EU infrastructure`
+                      : `If ${sov.indicators.find(x => x.id === m.input)?.label.toLowerCase()} is found to be ${m.if}`}
+                    : {labels[m.group]}
+                  </li>
+                ))}
+              </ul>
+              <Link to={countryPath(selected)} className="text-sm underline">
+                Full analysis of {names[selected]}
+              </Link>
+            </section>
+          ) : null}
         </section>
       </div>
-
-      {sel && selected ? (
-        <section
-          aria-live="polite"
-          className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 shadow-[inset_0_3px_0_var(--color-accent-text)] sm:p-6"
-        >
-          <h2 className="font-display text-2xl font-bold">{names[selected]}</h2>
-          <p className="mb-2 text-sm">
-            <strong>{labels[sel.group]}</strong> · {sel.confidence} confidence · could still reach{' '}
-            {labels[sel.range[0]!]}
-            {sel.range.length > 1 ? ` to ${labels[sel.range[sel.range.length - 1]!]}` : ''}
-          </p>
-          <h3 className="text-sm font-semibold">What could move it</h3>
-          <ul className="mb-2 list-disc pl-5 text-sm">
-            {sel.could_move.map((m, i) => (
-              <li key={i}>
-                {m.input === 'holdings'
-                  ? `If any of ${m.count} tier 0/1 holdings with unsourced hosting runs on non-EU infrastructure`
-                  : `If ${sov.indicators.find(x => x.id === m.input)?.label.toLowerCase()} is found to be ${m.if}`}
-                : {labels[m.group]}
-              </li>
-            ))}
-          </ul>
-          <Link to={countryPath(selected)} className="text-sm underline">
-            Full analysis of {names[selected]}
-          </Link>
-        </section>
-      ) : null}
 
       <section id="indicators" aria-label="Indicators" className="scroll-mt-6">
         <h2 className="mb-2 font-display font-bold text-xl text-[var(--color-accent-text)]">

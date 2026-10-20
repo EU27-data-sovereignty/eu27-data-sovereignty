@@ -12,9 +12,10 @@ const NAV = [
   { to: '/holdings', label: 'Critical holdings' },
   { to: '/infrastructure', label: 'Hosting' },
   { to: '/sources', label: 'Sources' },
-  { to: '/ask', label: 'Ask' },
   { to: '/methodology', label: 'Methodology' },
   { to: '/fact-check', label: 'Fact check' },
+  // Last: it draws on every page before it.
+  { to: '/ask', label: 'Ask' },
 ]
 
 export function Layout({ generated, provenance }: { generated: string; provenance: string }) {
