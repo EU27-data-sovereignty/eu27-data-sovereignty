@@ -7,6 +7,7 @@ import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sour
 import type { Bundle } from '@/data/types'
 import { NotFound } from './NotFound'
 import { PageBand } from '@/components/PageBand'
+import { spanText, useT } from '@/i18n'
 
 /**
  * One member state, analysed on its own fundamentals (#72). The body is the content model --
@@ -15,6 +16,7 @@ import { PageBand } from '@/components/PageBand'
  */
 export function Country({ bundle }: { bundle: Bundle }) {
   const { iso = '' } = useParams()
+  const t = useT()
   const code = iso.toUpperCase()
   const doc = bundle.documents[code]
   const country = bundle.countries[code]
@@ -27,19 +29,24 @@ export function Country({ bundle }: { bundle: Bundle }) {
 
   return (
     <article className="lg:grid lg:grid-cols-[12rem_1fr] lg:gap-8">
-      <nav aria-label="Contents" className="mb-6 text-sm lg:sticky lg:top-4 lg:mb-0 lg:self-start">
-        <h2 className="mb-2 font-semibold text-[var(--color-fg-secondary)]">Contents</h2>
+      <nav
+        aria-label={t('country.contents')}
+        className="mb-6 text-sm lg:sticky lg:top-4 lg:mb-0 lg:self-start"
+      >
+        <h2 className="mb-2 font-semibold text-[var(--color-fg-secondary)]">
+          {t('country.contents')}
+        </h2>
         <ol className="space-y-1">
           {doc.sections.map((s, i) => (
             <li key={s.id}>
               <a className="text-[var(--color-accent-text)] hover:underline" href={`#${s.id}`}>
-                {i + 1}. {s.title}
+                {i + 1}. {spanText({ t: s.title, key: s.key }, t)}
               </a>
             </li>
           ))}
           <li>
             <a className="text-[var(--color-accent-text)] hover:underline" href="#sources">
-              Sources
+              {t('country.sources')}
             </a>
           </li>
         </ol>
@@ -48,11 +55,14 @@ export function Country({ bundle }: { bundle: Bundle }) {
       <div>
         <p className="text-xs tracking-widest text-[var(--color-fg-muted)] uppercase">
           <Link to="/countries" className="hover:underline">
-            Countries
+            {t('nav.countries')}
           </Link>{' '}
           · {code}
         </p>
-        <PageBand kicker={`EU-27 · Country report · ${doc.iso}`} title={doc.name} />
+        <PageBand
+          kicker={`${t('site.kicker')} · ${t('country.kicker')} · ${doc.iso}`}
+          title={doc.name}
+        />
         <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
           {cov.verified} of {cov.total} critical holding classes verified · {facts} sourced facts
           shown · {gaps} values withheld until sourced · capacity not yet sized
@@ -71,8 +81,8 @@ export function Country({ bundle }: { bundle: Bundle }) {
           <a className="underline" href={submitLink(bundle, code)} rel="noreferrer">
             Submit a source
           </a>
-          . Every fact also has a <em>Check this fact</em> link in its source entry. Submissions are
-          checked by machine and then by a different person who reads the language (
+          . Every fact also has a <em>{t('fact.check_this')}</em> link in its source entry.
+          Submissions are checked by machine and then by a different person who reads the language (
           <Link to="/methodology" className="underline">
             methodology
           </Link>

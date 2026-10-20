@@ -60,22 +60,35 @@ const doc: Document = {
   ],
 } as unknown as Document
 
+// DocumentView prints its labels in the page's language, which it reads from the address (#111).
 describe('DocumentView', () => {
   it('links a fact to its numbered source, and only a fact', () => {
-    render(<DocumentView doc={doc} bundle={bundle} numbers={new Map([['s1', 1]])} />)
+    render(
+      <MemoryRouter>
+        <DocumentView doc={doc} bundle={bundle} numbers={new Map([['s1', 1]])} />
+      </MemoryRouter>,
+    )
     const link = screen.getByRole('link', { name: /Source 1: Tax office/ })
     expect(link).toHaveAttribute('href', '#src-1')
     expect(screen.getAllByRole('link')).toHaveLength(1)
   })
 
   it('sets a gap and a disputed value apart from facts, in italics', () => {
-    render(<DocumentView doc={doc} bundle={bundle} numbers={new Map()} />)
+    render(
+      <MemoryRouter>
+        <DocumentView doc={doc} bundle={bundle} numbers={new Map()} />
+      </MemoryRouter>,
+    )
     expect(screen.getAllByText('Not yet sourced')[0]?.tagName).toBe('EM')
     expect(screen.getByText(/did not confirm this/).tagName).toBe('EM')
   })
 
   it('makes a wide table a keyboard-reachable region named by its columns', () => {
-    render(<DocumentView doc={doc} bundle={bundle} numbers={new Map()} />)
+    render(
+      <MemoryRouter>
+        <DocumentView doc={doc} bundle={bundle} numbers={new Map()} />
+      </MemoryRouter>,
+    )
     const region = screen.getByRole('region', { name: 'Holding, Register' })
     expect(region).toHaveAttribute('tabindex', '0')
   })

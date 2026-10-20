@@ -84050,10 +84050,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -84185,6 +84187,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -84205,10 +84208,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -84303,6 +84308,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -84338,14 +84344,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -85773,6 +85782,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -85793,10 +85803,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -85857,6 +85869,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -85877,10 +85890,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -85971,6 +85986,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -85987,6 +86003,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -86025,6 +86042,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -86061,10 +86079,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -86196,6 +86216,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -86216,10 +86237,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -86314,6 +86337,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -86349,14 +86373,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -87694,6 +87721,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -87714,10 +87742,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -87778,6 +87808,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -87798,10 +87829,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -87892,6 +87925,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -87908,6 +87942,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -88006,6 +88041,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -88042,10 +88078,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -88170,6 +88208,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -88190,10 +88229,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -88288,6 +88329,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -88323,14 +88365,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -89683,6 +89728,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -89703,10 +89749,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -89767,6 +89815,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -89787,10 +89836,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -89881,6 +89932,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -89897,6 +89949,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -89953,6 +90006,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -89989,10 +90043,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -90116,6 +90172,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -90136,10 +90193,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -90234,6 +90293,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -90269,14 +90329,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -91708,6 +91771,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -91728,10 +91792,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -91792,6 +91858,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -91812,10 +91879,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -91906,6 +91975,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -91922,6 +91992,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -91990,6 +92061,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -92026,10 +92098,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -92165,6 +92239,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -92185,10 +92260,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -92283,6 +92360,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -92318,14 +92396,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -93741,6 +93822,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -93761,10 +93843,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -93825,6 +93909,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -93845,10 +93930,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -93939,6 +94026,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -93955,6 +94043,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -94005,6 +94094,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -94041,10 +94131,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -94175,6 +94267,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -94195,10 +94288,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -94293,6 +94388,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -94328,14 +94424,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -95714,6 +95813,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -95734,10 +95834,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -95798,6 +95900,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -95818,10 +95921,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -95912,6 +96017,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -95928,6 +96034,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -95990,6 +96097,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -96026,10 +96134,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -96160,6 +96270,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -96180,10 +96291,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -96278,6 +96391,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -96313,14 +96427,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -97760,6 +97877,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -97780,10 +97898,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -97844,6 +97964,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -97864,10 +97985,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -97958,6 +98081,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -97974,6 +98098,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -98012,6 +98137,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -98048,10 +98174,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -98183,6 +98311,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -98203,10 +98332,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -98301,6 +98432,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -98336,14 +98468,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -99718,6 +99853,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -99738,10 +99874,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -99802,6 +99940,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -99822,10 +99961,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -99916,6 +100057,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -99932,6 +100074,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -100000,6 +100143,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -100036,10 +100180,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -100171,6 +100317,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -100191,10 +100338,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -100289,6 +100438,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -100324,14 +100474,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -101743,6 +101896,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -101763,10 +101917,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -101827,6 +101983,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -101847,10 +102004,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -101941,6 +102100,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -101957,6 +102117,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -102007,6 +102168,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -102043,10 +102205,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -102177,6 +102341,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -102197,10 +102362,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -102295,6 +102462,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -102330,14 +102498,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -103723,6 +103894,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -103743,10 +103915,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -103807,6 +103981,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -103827,10 +104002,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -103921,6 +104098,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -103937,6 +104115,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -103993,6 +104172,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -104029,10 +104209,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -104163,6 +104345,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -104183,10 +104366,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -104281,6 +104466,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -104316,14 +104502,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -105682,6 +105871,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -105702,10 +105892,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -105766,6 +105958,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -105786,10 +105979,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -105880,6 +106075,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -105896,6 +106092,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -105976,6 +106173,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -106012,10 +106210,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -106152,6 +106352,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -106172,10 +106373,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -106270,6 +106473,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -106305,14 +106509,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -107765,6 +107972,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -107785,10 +107993,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -107849,6 +108059,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -107869,10 +108080,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -107963,6 +108176,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -107979,6 +108193,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -108017,6 +108232,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -108053,10 +108269,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -108187,6 +108405,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -108207,10 +108426,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -108305,6 +108526,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -108340,14 +108562,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -109750,6 +109975,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -109770,10 +109996,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -109834,6 +110062,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -109854,10 +110083,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -109948,6 +110179,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -109964,6 +110196,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -110026,6 +110259,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -110062,10 +110296,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -110193,6 +110429,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -110213,10 +110450,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -110311,6 +110550,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -110346,14 +110586,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -111844,6 +112087,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -111864,10 +112108,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -111928,6 +112174,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -111948,10 +112195,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -112042,6 +112291,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -112058,6 +112308,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -112114,6 +112365,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -112150,10 +112402,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -112273,6 +112527,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -112293,10 +112548,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -112391,6 +112648,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -112426,14 +112684,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -113887,6 +114148,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -113907,10 +114169,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -113971,6 +114235,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -113991,10 +114256,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -114085,6 +114352,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -114101,6 +114369,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -114151,6 +114420,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -114187,10 +114457,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -114321,6 +114593,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -114341,10 +114614,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -114439,6 +114714,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -114474,14 +114750,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -115880,6 +116159,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -115900,10 +116180,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -115964,6 +116246,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -115984,10 +116267,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -116078,6 +116363,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -116094,6 +116380,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -116168,6 +116455,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -116204,10 +116492,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -116333,6 +116623,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -116353,10 +116644,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -116451,6 +116744,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -116486,14 +116780,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -117745,6 +118042,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -117765,10 +118063,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -117829,6 +118129,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -117849,10 +118150,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -117943,6 +118246,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -117959,6 +118263,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -118135,6 +118440,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -118171,10 +118477,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -118301,6 +118609,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -118321,10 +118630,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -118419,6 +118730,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -118454,14 +118766,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -119750,6 +120065,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -119770,10 +120086,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -119834,6 +120152,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -119854,10 +120173,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -119948,6 +120269,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -119964,6 +120286,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -120098,6 +120421,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -120134,10 +120458,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -120268,6 +120594,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -120288,10 +120615,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -120386,6 +120715,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -120421,14 +120751,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -121825,6 +122158,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -121845,10 +122179,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -121909,6 +122245,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -121929,10 +122266,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -122023,6 +122362,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -122039,6 +122379,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -122107,6 +122448,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -122143,10 +122485,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -122269,6 +122613,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -122289,10 +122634,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -122387,6 +122734,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -122422,14 +122770,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -123725,6 +124076,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -123745,10 +124097,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -123809,6 +124163,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -123829,10 +124184,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -123923,6 +124280,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -123939,6 +124297,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -124055,6 +124414,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -124091,10 +124451,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -124231,6 +124593,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -124251,10 +124614,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -124349,6 +124714,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -124384,14 +124750,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -125797,6 +126166,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -125817,10 +126187,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -125881,6 +126253,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -125901,10 +126274,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -125995,6 +126370,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -126011,6 +126387,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -126103,6 +126480,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -126139,10 +126517,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -126269,6 +126649,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -126289,10 +126670,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -126387,6 +126770,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -126422,14 +126806,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -127785,6 +128172,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -127805,10 +128193,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -127869,6 +128259,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -127889,10 +128280,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -127983,6 +128376,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -127999,6 +128393,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -128055,6 +128450,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -128091,10 +128487,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -128224,6 +128622,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -128244,10 +128643,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -128342,6 +128743,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -128377,14 +128779,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -129765,6 +130170,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -129785,10 +130191,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -129849,6 +130257,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -129869,10 +130278,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -129963,6 +130374,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -129979,6 +130391,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -130041,6 +130454,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -130077,10 +130491,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -130207,6 +130623,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -130227,10 +130644,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -130325,6 +130744,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -130360,14 +130780,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -131647,6 +132070,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -131667,10 +132091,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -131731,6 +132157,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -131751,10 +132178,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -131845,6 +132274,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -131861,6 +132291,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -131989,6 +132420,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -132025,10 +132457,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -132156,6 +132590,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -132176,10 +132611,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -132274,6 +132711,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -132309,14 +132747,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -133664,6 +134105,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -133684,10 +134126,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -133748,6 +134192,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -133768,10 +134213,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -133862,6 +134309,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -133878,6 +134326,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -133964,6 +134413,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -134000,10 +134450,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -134135,6 +134587,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -134155,10 +134608,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -134253,6 +134708,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -134288,14 +134744,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -135766,6 +136225,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -135786,10 +136246,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -135850,6 +136312,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -135870,10 +136333,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -135964,6 +136429,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -135980,6 +136446,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -136018,6 +136485,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -136054,10 +136522,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.finding",
          "role": "label",
          "t": "Finding"
         }
@@ -136184,6 +136654,7 @@
       }
      ],
      "id": "placement",
+     "key": "section.placement",
      "title": "Data-sovereignty placement"
     },
     {
@@ -136204,10 +136675,12 @@
        ],
        "columns": [
         {
+         "key": "col.indicator",
          "role": "label",
          "t": "Indicator"
         },
         {
+         "key": "col.value",
          "role": "label",
          "t": "Value"
         }
@@ -136302,6 +136775,7 @@
       }
      ],
      "id": "fundamentals",
+     "key": "section.fundamentals",
      "title": "Fundamentals"
     },
     {
@@ -136337,14 +136811,17 @@
        ],
        "columns": [
         {
+         "key": "col.priority",
          "role": "label",
          "t": "Priority"
         },
         {
+         "key": "col.holding",
          "role": "label",
          "t": "Holding"
         },
         {
+         "key": "col.register",
          "role": "label",
          "t": "Register or system"
         },
@@ -137712,6 +138189,7 @@
       }
      ],
      "id": "holdings",
+     "key": "section.holdings",
      "title": "Critical data holdings, by priority"
     },
     {
@@ -137732,10 +138210,12 @@
        ],
        "columns": [
         {
+         "key": "col.infrastructure",
          "role": "label",
          "t": "Infrastructure"
         },
         {
+         "key": "col.holdings",
          "role": "label",
          "t": "Holdings"
         }
@@ -137796,6 +138276,7 @@
       }
      ],
      "id": "exposure",
+     "key": "section.exposure",
      "title": "Foreign-dependency exposure"
     },
     {
@@ -137816,10 +138297,12 @@
        ],
        "columns": [
         {
+         "key": "col.dimension",
          "role": "label",
          "t": "Dimension"
         },
         {
+         "key": "col.position",
          "role": "label",
          "t": "Position"
         }
@@ -137910,6 +138393,7 @@
       }
      ],
      "id": "posture",
+     "key": "section.posture",
      "title": "Legal and institutional posture"
     },
     {
@@ -137926,6 +138410,7 @@
       }
      ],
      "id": "sizing",
+     "key": "section.sizing",
      "title": "Capacity"
     },
     {
@@ -137988,6 +138473,7 @@
       }
      ],
      "id": "gaps",
+     "key": "section.gaps",
      "title": "Research still open"
     }
    ]
@@ -192206,10 +192692,12 @@
       ],
       "columns": [
        {
+        "key": "col.state",
         "role": "label",
         "t": "State"
        },
        {
+        "key": "col.holding",
         "role": "label",
         "t": "Holding"
        },
@@ -194973,6 +195461,7 @@
      }
     ],
     "id": "hosting",
+    "key": "overview.hosting",
     "title": "Where key registers are hosted, and by whom"
    },
    {
@@ -194999,14 +195488,17 @@
       ],
       "columns": [
        {
+        "key": "col.state",
         "role": "label",
         "t": "State"
        },
        {
+        "key": "col.registers_sourced",
         "role": "label",
         "t": "Registers sourced"
        },
        {
+        "key": "col.hosting_sourced",
         "role": "label",
         "t": "Hosting sourced"
        },
@@ -195955,6 +196447,7 @@
      }
     ],
     "id": "coverage",
+    "key": "overview.coverage",
     "title": "What is known, per state"
    }
   ]

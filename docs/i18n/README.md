@@ -18,6 +18,10 @@ How the files were made, 2026-10-12:
    (`STRINGS.md` § The standards the drafts follow).
 4. `python3 model/i18n_drafts.py summary` rewrites the table below from the files.
 
+A language leaves this folder only through admission (`python3 model/i18n_admit.py`, DECISIONS.md #111): once its
+`fix` cells are applied and re-reviewed to `ok`, and a person who reads it has added a line under the file's header,
+`- Read by (<lang>): <role>, <date>`, the script copies that column into `model/i18n/` and the state's page serves it.
+
 No person who speaks these languages has read them yet. That reading is stage 1 of the plan, and until it
 is recorded on a file the file is a machine draft of a page that says, in its own notice, that no person
 has reviewed it.

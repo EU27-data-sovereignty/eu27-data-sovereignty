@@ -18,16 +18,21 @@ import { Poster } from './pages/Poster'
 import { Sources } from './pages/Sources'
 import { Sovereignty } from './pages/Sovereignty'
 import { countryPath } from './utils/routes'
+import { langFromPath, lookup, resolveLang } from './i18n'
 
 /**
- * A member state lives at its own top-level path, `/de` (#105). The code is the bundle's key, so a
- * segment that is not one of the 27 falls through to the not-found page, and an upper-case code is
- * redirected to the one canonical spelling.
+ * A member state lives at its own top-level path, `/de` (#105), and a language other than its default at
+ * `/be/fr` (#111). The code is the bundle's key, so a segment that is not one of the 27 falls through to the
+ * not-found page, and an upper-case code is redirected to the one canonical spelling. `resolveLang` says what
+ * the second segment serves: a language, a redirect to the state's own address, or nothing.
  */
 function CountryAtRoot({ bundle }: { bundle: Bundle }) {
-  const { iso = '' } = useParams()
+  const { iso = '', lang } = useParams()
   if (!(iso.toUpperCase() in bundle.documents)) return <NotFound />
-  if (iso !== iso.toLowerCase()) return <Navigate to={countryPath(iso)} replace />
+  if (iso !== iso.toLowerCase()) return <Navigate to={countryPath(iso, lang)} replace />
+  const served = resolveLang(iso, lang)
+  if (served.kind === 'notfound') return <NotFound />
+  if (served.kind === 'redirect') return <Navigate to={countryPath(iso)} replace />
   return <Country bundle={bundle} />
 }
 
@@ -45,10 +50,13 @@ export function App() {
     loadBundle().then(setBundle, e => setError(String(e)))
   }, [])
 
+  // Printed before the router has a page, so the language comes straight from the address.
+  const t = lookup(langFromPath(window.location.pathname).tag)
+
   if (error) {
     return (
       <main className="mx-auto max-w-2xl p-6">
-        <h1 className="mb-2 text-xl font-semibold">Could not load the data</h1>
+        <h1 className="mb-2 text-xl font-semibold">{t('status.load_error')}</h1>
         <p className="text-[var(--color-fg-secondary)]">{error}</p>
         <p className="mt-2 text-sm text-[var(--color-fg-muted)]">
           Run <code>python3 model/export_json.py</code> to regenerate the bundle.
@@ -62,7 +70,7 @@ export function App() {
   if (!bundle) {
     return (
       <main className="mx-auto max-w-2xl p-6 text-[var(--color-fg-secondary)]">
-        Loading the EU-27 dataset…
+        {t('status.loading')}
       </main>
     )
   }
@@ -91,6 +99,7 @@ export function App() {
         <Route path="how/:slug" element={<Guide bundle={bundle} kind="how" />} />
         {/* Static segments above rank ahead of this one, so `/ask` is never read as a country. */}
         <Route path=":iso" element={<CountryAtRoot bundle={bundle} />} />
+        <Route path=":iso/:lang" element={<CountryAtRoot bundle={bundle} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

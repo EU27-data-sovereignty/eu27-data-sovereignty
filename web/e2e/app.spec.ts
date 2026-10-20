@@ -349,6 +349,39 @@ test.describe('header navigation', () => {
   })
 })
 
+test.describe('languages (#111)', () => {
+  test('a state page is English until a translation is admitted, at one address', async ({
+    page,
+  }) => {
+    await page.goto('/de')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en')
+    await expect(page.getByRole('heading', { name: 'Germany', level: 1 })).toBeVisible()
+
+    // The default spelled out and an official language not yet admitted both come back to /de.
+    for (const path of ['/de/en', '/de/de']) {
+      await page.goto(path)
+      await expect(page).toHaveURL(/\/de$/)
+    }
+    // A language Germany does not have is not a page.
+    await page.goto('/de/fr')
+    await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible()
+  })
+
+  test('the language switch lists what the page can be read in', async ({ page }) => {
+    await page.goto('/de')
+    await loaded(page)
+    const sw = page.getByRole('button', { name: 'Language: English' })
+    await sw.click()
+    await expect(sw).toHaveAttribute('aria-expanded', 'true')
+    const list = page.locator(`#${await sw.getAttribute('aria-controls')}`)
+    await expect(list.getByRole('listitem')).toHaveCount(1)
+    await expect(list.getByText('English')).toHaveAttribute('aria-current', 'true')
+    await page.keyboard.press('Escape')
+    await expect(sw).toHaveAttribute('aria-expanded', 'false')
+  })
+})
+
 test.describe('entry points (#101, #102)', () => {
   const GUIDES = [
     ...['ministries', 'procurement', 'parliaments', 'cyber', 'eu-institutions', 'operators'].map(

@@ -1,5 +1,6 @@
 import { reviewLink } from '@/data/contribute'
 import type { Bundle } from '@/data/types'
+import { useT } from '@/i18n'
 
 /** A checklist line's kind, by its own wording: the source tier, a check passed, or a shortfall. */
 function checkKind(item: string): 'tier' | 'pass' | 'short' | 'plain' {
@@ -66,6 +67,7 @@ export function SourceList({
   /** Sources a filter on the page has hidden; they stay in the list, so numbering never shifts. */
   hidden?: Set<string>
 }) {
+  const t = useT()
   if (numbers.size === 0) return null
   const ordered = [...numbers.entries()].sort((a, b) => a[1] - b[1])
   return (
@@ -142,7 +144,7 @@ export function SourceList({
                         )}
                         {c.gloss ? (
                           <p className="text-[var(--color-fg-secondary)]">
-                            Machine translation: <q>{c.gloss}</q>
+                            {t('fact.gloss')} <q>{c.gloss}</q>
                           </p>
                         ) : null}
                         <div className="flex flex-wrap items-center gap-1.5 text-xs">
@@ -170,7 +172,7 @@ export function SourceList({
                               href={reviewLink(bundle, claim)}
                               rel="noreferrer"
                             >
-                              Check this fact
+                              {t('fact.check_this')}
                             </a>
                           </span>
                         </div>

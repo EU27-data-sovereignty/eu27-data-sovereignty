@@ -95,8 +95,10 @@ DEPENDENCY_LABEL = {
 # Spans and cells
 # --------------------------------------------------------------------------- #
 
-def label(t: str) -> dict:
-    return {"t": t, "role": "label"}
+def label(t: str, key: str | None = None) -> dict:
+    """A heading or row name. `key` names its entry in the admitted language tables (model/i18n/, #111), so a
+    page served in another language can look the heading up; tests/test_i18n.py holds `t` to their English."""
+    return {"t": t, "role": "label", "key": key} if key else {"t": t, "role": "label"}
 
 
 def method(t: str) -> dict:
@@ -253,13 +255,13 @@ def fundamentals(c: dict, src: Sources) -> dict:
         value = f"{num(p[col], places)} {unit}" if p.get(col) not in (None, "") else ""
         rows.append([label(name), src.fact(claim, value)])
     return {
-        "id": "fundamentals", "title": "Fundamentals",
+        "id": "fundamentals", "title": "Fundamentals", "key": "section.fundamentals",
         "blocks": [
             {"type": "p", "spans": [method(
                 f"{c['name']} described on its own measured characteristics. Each figure is the "
                 "published value of a pinned Eurostat series; the footnote names the series, "
                 "the dimensions and the retrieval date.")]},
-            {"type": "table", "columns": [label("Indicator"), label("Value")], "align": ["left", "right"],
+            {"type": "table", "columns": [label("Indicator", "col.indicator"), label("Value", "col.value")], "align": ["left", "right"],
              "rows": rows},
         ],
     }
@@ -299,7 +301,7 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
     verified = sum(1 for e in entries if e["status"] != "unrecorded")
     measured = sum(1 for e in entries if e.get("record_count") or e.get("data_size"))
     return {
-        "id": "holdings", "title": "Critical data holdings, by priority",
+        "id": "holdings", "title": "Critical data holdings, by priority", "key": "section.holdings",
         "blocks": [
             {"type": "p", "spans": [method(
                 f"The holdings {c['name']} cannot let depend on infrastructure a foreign state can "
@@ -308,7 +310,7 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
                 "or data size.")]},
             {"type": "callout", "tone": "method", "spans": [method(PRIORITY_RULE)]},
             {"type": "table",
-             "columns": [label("Priority"), label("Holding"), label("Register or system"),
+             "columns": [label("Priority", "col.priority"), label("Holding", "col.holding"), label("Register or system", "col.register"),
                          label("Operator"), label(HOSTING_COLUMN), label("Infrastructure dependency"),
                          label("Records / size")],
              "align": ["left"] * 7, "rows": rows},
@@ -325,13 +327,13 @@ def exposure_section(c: dict, entries: list[dict]) -> dict:
     rows = [[label(DEPENDENCY_LABEL[k]), method(str(counts.get(k, 0)))]
             for k in ("national", "eu_provider", "mixed", "non_eu_provider", "unknown")]
     return {
-        "id": "exposure", "title": "Foreign-dependency exposure",
+        "id": "exposure", "title": "Foreign-dependency exposure", "key": "section.exposure",
         "blocks": [
             {"type": "p", "spans": [method(
                 f"Of the {len(held)} verified holdings, how many sources state where the "
                 "infrastructure is operated. A holding counts as dependent only when a cited "
                 "document says so; silence is counted as not stated, never as national.")]},
-            {"type": "table", "columns": [label("Infrastructure"), label("Holdings")],
+            {"type": "table", "columns": [label("Infrastructure", "col.infrastructure"), label("Holdings", "col.holdings")],
              "align": ["left", "right"], "rows": rows},
         ],
     }
@@ -343,13 +345,13 @@ def posture_section(c: dict, src: Sources) -> dict:
             for col, name in POSTURE]
     shown = sum(1 for r in rows if r[1]["role"] == "fact")
     return {
-        "id": "posture", "title": "Legal and institutional posture",
+        "id": "posture", "title": "Legal and institutional posture", "key": "section.posture",
         "blocks": [
             {"type": "p", "spans": [method(
                 f"{shown} of {len(rows)} posture entries have a verified source. The others were "
                 "researched from public policy documents but are withheld here until each is "
                 "checked against the governing instrument.")]},
-            {"type": "table", "columns": [label("Dimension"), label("Position")],
+            {"type": "table", "columns": [label("Dimension", "col.dimension"), label("Position", "col.position")],
              "align": ["left", "left"], "rows": rows},
         ],
     }
@@ -358,7 +360,7 @@ def posture_section(c: dict, src: Sources) -> dict:
 def sizing_section(c: dict, entries: list[dict]) -> dict:
     measured = sum(1 for e in entries if e.get("record_count") or e.get("data_size"))
     return {
-        "id": "sizing", "title": "Capacity",
+        "id": "sizing", "title": "Capacity", "key": "section.sizing",
         "blocks": [
             {"type": "callout", "tone": "gap", "spans": [method(
                 f"Not yet sized. Capacity for {c['name']} will be derived from its own measured "
@@ -372,7 +374,7 @@ def gaps_section(c: dict, entries: list[dict]) -> dict:
     missing = [e for e in entries if e["status"] == "unrecorded" and e["tier"] <= 1]
     items = [[method(f"{e['label']} (tier {e['tier']})")] for e in missing]
     return {
-        "id": "gaps", "title": "Research still open",
+        "id": "gaps", "title": "Research still open", "key": "section.gaps",
         "blocks": [
             {"type": "p", "spans": [method(
                 f"Tier 0 and 1 holdings for {c['name']} without a verified source yet. "
@@ -419,14 +421,14 @@ def placement_section(c: dict, src: Sources, p: dict) -> dict:
     moves = [[method(move_text(m))] for m in p["could_move"]]
     rng = p["range"]
     return {
-        "id": "placement", "title": "Data-sovereignty placement",
+        "id": "placement", "title": "Data-sovereignty placement", "key": "section.placement",
         "blocks": [
             {"type": "callout", "tone": "notice", "spans": [method(
                 f"{sv.LABELS[p['group']]}. Confidence: {p['confidence']}. With the evidence still "
                 f"open, {c['name']} could be anywhere from '{sv.LABELS[rng[0]]}' to "
                 f"'{sv.LABELS[rng[-1]]}'.")]},
             {"type": "p", "spans": [method(sv.GUARDRAIL)]},
-            {"type": "table", "columns": [label("Indicator"), label("Finding")],
+            {"type": "table", "columns": [label("Indicator", "col.indicator"), label("Finding", "col.finding")],
              "align": ["left", "left"], "rows": rows},
             {"type": "p", "spans": [method("What could move this placement:")]},
             {"type": "list", "items": moves} if moves else
@@ -496,7 +498,7 @@ def infrastructure(documents: dict) -> dict:
     return {
         "iso": "EU", "name": "Key infrastructure and hosting",
         "sections": [
-            {"id": "hosting", "title": "Where key registers are hosted, and by whom",
+            {"id": "hosting", "title": "Where key registers are hosted, and by whom", "key": "overview.hosting",
              "blocks": [
                  {"type": "p", "spans": [method(
                      f"Every holding whose hosting a checked source states, by member state: {printed} "
@@ -505,10 +507,10 @@ def infrastructure(documents: dict) -> dict:
                      "here has no sourced hosting yet; that is a gap in the evidence, not a finding "
                      "that it is hosted nationally.")]},
                  {"type": "table",
-                  "columns": [label("State"), label("Holding"), *(label(c) for c in OVERVIEW_COLUMNS)],
+                  "columns": [label("State", "col.state"), label("Holding", "col.holding"), *(label(c) for c in OVERVIEW_COLUMNS)],
                   "align": ["left"] * 6, "rows": rows},
              ]},
-            {"id": "coverage", "title": "What is known, per state",
+            {"id": "coverage", "title": "What is known, per state", "key": "overview.coverage",
              "blocks": [
                  {"type": "p", "spans": [method(
                      "Counted from the facts each state's report prints: holdings with a sourced "
@@ -516,7 +518,7 @@ def infrastructure(documents: dict) -> dict:
                      "dependency their sources state. Not stated means no printed source says; it is "
                      "never counted as national.")]},
                  {"type": "table",
-                  "columns": [label("State"), label("Registers sourced"), label("Hosting sourced"),
+                  "columns": [label("State", "col.state"), label("Registers sourced", "col.registers_sourced"), label("Hosting sourced", "col.hosting_sourced"),
                               *(label(n) for _, n in COVERAGE), label("Not stated")],
                   "align": ["left"] + ["right"] * 7, "rows": coverage},
              ]},

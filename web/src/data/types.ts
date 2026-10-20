@@ -19,6 +19,8 @@ export interface Span {
   g?: Grade
   /** 'categorical' for a closed-vocabulary value admitted by review. */
   k?: 'categorical'
+  /** A label's entry in the language tables (#111): pages served in another language print that instead. */
+  key?: string
 }
 
 export type Block =
@@ -30,6 +32,8 @@ export type Block =
 export interface Section {
   id: string
   title: string
+  /** The title's entry in the language tables (#111). */
+  key?: string
   blocks: Block[]
 }
 

@@ -7,6 +7,26 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-20
 
+### Added: language plumbing for the member-state pages, with English the only language served (#111)
+
+- **Addresses.** `/<iso>/<lang>` is a route: `/<iso>` serves the state's first admitted official language, else
+  English; the default spelled out and an official language not yet admitted redirect to `/<iso>`; any other segment
+  is not found. `countryPath(iso, lang)` builds the links.
+- **Tables.** `model/i18n_admit.py` writes `model/i18n/` from `docs/i18n/STRINGS.md` and from drafts that carry a
+  person's reading (`- Read by (<lang>): …`) and no open `fix`. None does yet, so only English is written.
+- **Lookups.** The navigation, the country page's contents, kicker and source links, "Check this fact", the gloss
+  label, the not-found page and the loading and error messages print through `t(key)`. The content model tags its
+  keyed section titles and column labels (`label(t, key)`), and the bundle is regenerated with those keys.
+  `<html lang>` follows the page. The header's EN button, which did nothing, now lists the languages a page can be
+  read in (English alone until a translation is admitted). "About the data" and the language button share one
+  disclosure hook.
+- **Docs.** Decision #111, the number the localisation plan reserved (it said #109, which the palette took today).
+  The plan, ROADMAP, TODO, `docs/testing.md`, `CLAUDE.md` and `docs/i18n/README.md` follow.
+- **Tests.** `tests/test_i18n.py`, `web/src/__tests__/i18n.test.ts` and Playwright `languages (#111)`. The
+  DocumentView component tests render inside a router, as the app does.
+- **Infographics.** The 27 `countries/<ISO>/<ISO>-infographic.png` re-rendered, because the bundle they are checked
+  against changed; they now also carry the navy-and-gold palette (#109), which they predated.
+
 ### Changed: Sources, Methodology and Fact check move under "About the data" in the header
 
 - **Navigation.** The bar reads Overview, Ranking, Countries, Critical holdings, Hosting, About the data, Ask.

@@ -3151,3 +3151,50 @@ browser profiles as recorded in `CHANGELOG.md`.
 
 *Would change if:* the count shown moves from holdings to another measure, or the geometry chunk becomes too heavy
 for the page and the outlines are precomputed.
+
+### 111. A member state's page carries its language as a second path segment, from admitted tables only
+**Decision.** 2026-10-20, at the request of Marco Buhlmann ("fix the number and start the plumbing"), the decision
+`docs/plans/localisation-plan.md` §6 reserved, written for stage 2's plumbing ahead of stage 1's readings:
+- **Address.** `/<iso>` serves the state's first *admitted* official language, else English; `/<iso>/<lang>` serves
+  another admitted one, or English as `en`. The default spelled out (`/de/en` today) and an official language not
+  yet admitted (`/de/de`) redirect to `/<iso>`, so a page has one address; any other segment is not found. Every
+  other page is English. `countryPath(iso, lang)` builds every link; `resolveLang` decides what a segment serves.
+- **Tables.** `model/i18n_admit.py` writes `model/i18n/strings/<tag>.json` and `model/i18n/languages.json`:
+  English from `docs/i18n/STRINGS.md`, and a draft language only when its file carries `- Read by (<lang>): <role>,
+  <date>` and its review holds no `fix` for that language. Admission is whole or nothing, so no page mixes a
+  translated label with an English stand-in. The web app imports the tables at build time rather than through the
+  bundle, because the loading and error messages print before the bundle exists.
+- **Lookups.** Renderers print the keyed strings through `t(key)`: the navigation, the country page's contents,
+  kicker and source links, "Check this fact", the gloss label, not-found, loading and load error. The content model
+  tags its keyed section titles and column labels with `key` (`label(t, key)`), and `DocumentView` prints the table's
+  string for them. `<html lang>` follows the page. The header's language button lists what the page can be read in.
+- **Nothing translated renders yet.** No draft carries a reading on 2026-10-20, so every table but English is
+  absent and every page reads exactly as before.
+
+**Problem.** The plan's stage 2 (router segment, tables, lookups, switch) waited on stage 1's 24 human readings,
+which are slow; the owner asked for the plumbing first, so that admitting a read language changes data, not code.
+
+**Alternatives considered.**
+- **Writing this decision after stage 1, as the plan and ROADMAP said.** *Why not:* the owner asked for the
+  plumbing now; the rule the ordering protected (no unread translation renders) is kept by admission instead.
+- **The tables inside the bundle, as the plan sketched.** *Why not:* the two status messages print before the
+  bundle loads; a build-time import serves every string from one place.
+- **Per-key fallback to English with a notice (plan §5.6).** *Why not:* admission is whole, so a key is never
+  missing from an admitted table; the notice is needed only if partial admission is ever allowed.
+- **Keeping the inert "EN" button.** *Why not:* a control that does nothing; it now lists the page's languages.
+
+**Closes off.** A translated string on any page from a draft no person has read; a page served in a language that
+is not one of its state's official languages or English; a new keyed string printed as a literal
+(`tests/test_i18n.py`).
+
+**Verified:** 2026-10-20. `python3 model/i18n_admit.py --check`; `tests/test_i18n.py` (tables reproduce, every
+looked-up key exists, every table key is looked up or listed with its reason, every keyed heading in the bundle
+matches the English table); `web/src/__tests__/i18n.test.ts` (address resolution with a stand-in admitted French for
+Belgium, lookups); Playwright `languages (#111)`; the full gate and the browser profiles as recorded in
+`CHANGELOG.md`. **NOT YET:** four keys are not wired (`site.title`, `fact.withheld`, `fact.disputed`,
+`notice.disclaimer`, each with its reason in the test); "About the data" has no key; `hreflang` alternates and
+`Content-Language` wait for a second admitted language.
+
+*Would change if:* a language is admitted only in part, in which case per-key fallback and the plan's notice
+return; or a page other than a state's needs a language, in which case the segment rule moves up a level and
+#105's reservation of two-letter top-level paths is revisited.

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 
 import type { Block, Bundle, Document, Span } from '@/data/types'
+import { spanText, useT } from '@/i18n'
 
 /**
  * Renders the content model (model/document.py) -- the same document the PDF typesets.
@@ -10,6 +11,7 @@ import type { Block, Bundle, Document, Span } from '@/data/types'
  * Nothing here adds a sentence: a renderer that writes content becomes a second source.
  */
 export function SpanView({ span, numbers, bundle }: SpanProps) {
+  const t = useT()
   if (span.role === 'gap') {
     return <em className="text-[var(--color-fg-muted)]">{span.t}</em>
   }
@@ -20,7 +22,7 @@ export function SpanView({ span, numbers, bundle }: SpanProps) {
       </em>
     )
   }
-  if (span.role !== 'fact') return <>{span.t}</>
+  if (span.role !== 'fact') return <>{spanText(span, t)}</>
   const ids = [
     ...new Set((span.c ?? []).flatMap(claim => (bundle.claims[claim] ?? []).map(c => c.source_id))),
   ]
@@ -65,6 +67,7 @@ function Spans({ spans, ...rest }: { spans: Span[] } & Omit<SpanProps, 'span'>) 
 }
 
 function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'>) {
+  const t = useT()
   switch (block.type) {
     case 'p':
       return (
@@ -103,7 +106,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
           className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] mb-5"
           tabIndex={0}
           role="region"
-          aria-label={block.columns.map(c => c.t).join(', ')}
+          aria-label={block.columns.map(c => spanText(c, t)).join(', ')}
         >
           <table className="w-full min-w-[32rem] border-collapse text-sm">
             <thead>
@@ -114,7 +117,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
                     scope="col"
                     className={`px-3.5 py-2.5 font-semibold ${block.align?.[i] === 'right' ? 'text-right' : 'text-left'}`}
                   >
-                    {c.t}
+                    {spanText(c, t)}
                   </th>
                 ))}
               </tr>
@@ -163,6 +166,7 @@ export function DocumentView({
    */
   blocks?: (block: Block, section: string) => ReactNode | undefined
 }) {
+  const t = useT()
   return (
     <>
       {doc.sections.map((s, i) => (
@@ -171,7 +175,7 @@ export function DocumentView({
             <span className="mb-1 block font-sans text-xs font-semibold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
               Section {i + 1}
             </span>
-            {s.title}
+            {spanText({ t: s.title, key: s.key }, t)}
           </h2>
           {s.blocks.map((b, j) => {
             if (b.type === 'table' && tables[s.id]) return <div key={j}>{tables[s.id]!(b)}</div>

@@ -39,7 +39,8 @@ class Contract(unittest.TestCase):
 
 
 class NeverRendered(unittest.TestCase):
-    """No renderer, exporter or corpus may read the drafts until the plan's decision is written."""
+    """No renderer, exporter or corpus reads the drafts. Since #111 they reach a page only through admission
+    (model/i18n_admit.py), which copies a language into model/i18n/ once a person has read it."""
 
     READERS = ["model/document.py", "model/export_json.py", "model/generate_countries.py", "model/ask_corpus.py",
                "book", "web/src", "api"]

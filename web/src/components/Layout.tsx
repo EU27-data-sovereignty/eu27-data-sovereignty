@@ -1,28 +1,32 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom'
 
+import { LanguageSwitch } from './LanguageSwitch'
 import { ProvenanceNotice } from './ProvenanceNotice'
 import { CORRECTIONS_URL } from '@/data/contribute'
+import { useLang, useT, type Key } from '@/i18n'
+import { useDisclosure } from '@/utils/disclosure'
 import { useTheme } from '@/utils/theme'
 
-const NAV = [
-  { to: '/', label: 'Overview', end: true },
-  { to: '/sovereignty', label: 'Ranking' },
-  { to: '/countries', label: 'Countries' },
-  { to: '/holdings', label: 'Critical holdings' },
-  { to: '/infrastructure', label: 'Hosting' },
+// Labels are keys into the language tables (#111), so a state's page served in its language names them in it.
+const NAV: { to: string; label: Key; end?: boolean }[] = [
+  { to: '/', label: 'nav.overview', end: true },
+  { to: '/sovereignty', label: 'nav.ranking' },
+  { to: '/countries', label: 'nav.countries' },
+  { to: '/holdings', label: 'nav.holdings' },
+  { to: '/infrastructure', label: 'nav.hosting' },
 ]
 
 // How the evidence was gathered and checked: one entry in the bar, opened as a short list, so the bar names
 // what the site finds and this names how it knows.
-const ABOUT_THE_DATA = [
-  { to: '/sources', label: 'Sources' },
-  { to: '/methodology', label: 'Methodology' },
-  { to: '/fact-check', label: 'Fact check' },
+const ABOUT_THE_DATA: { to: string; label: Key }[] = [
+  { to: '/sources', label: 'nav.sources' },
+  { to: '/methodology', label: 'nav.methodology' },
+  { to: '/fact-check', label: 'nav.factcheck' },
 ]
 
 // Last: it draws on every page before it.
-const ASK = { to: '/ask', label: 'Ask' }
+const ASK: { to: string; label: Key } = { to: '/ask', label: 'nav.ask' }
 
 // py-1: a 30 px tap target, over WCAG 2.2's 24 px minimum (#92).
 const LINK = 'inline-block py-1 '
@@ -35,6 +39,13 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
   const [mode, setMode] = useTheme()
   const { pathname, hash } = useLocation()
   const home = pathname === '/'
+  const { tag } = useLang()
+  const t = useT()
+
+  // The document's language is the page's: `de-DE` on a German page, so a screen reader speaks it as German.
+  useEffect(() => {
+    document.documentElement.lang = tag
+  }, [tag])
 
   // A client-side route change neither scrolls to a #section nor returns to the top, as a page load would.
   // Do both, one frame later, once the new page has rendered. Back and forward keep the browser's own
@@ -97,33 +108,16 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
           >
             {NAV.map(n => (
               <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>
-                {n.label}
+                {t(n.label)}
               </NavLink>
             ))}
             <AboutTheData />
             <NavLink to={ASK.to} className={navClass}>
-              {ASK.label}
+              {t(ASK.label)}
             </NavLink>
           </nav>
           <div className="flex items-center gap-3">
-            {/* English is the only language so far: the control states it and does nothing yet. */}
-            <button
-              type="button"
-              aria-label="Language: English"
-              className="inline-flex min-h-11 items-center gap-2.5 rounded-lg border-[1.5px] border-[var(--color-accent-text)] bg-[var(--color-bg-card)] px-4 text-[15px] font-semibold text-[var(--color-accent-text)]"
-            >
-              EN
-              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                <path
-                  d="M3 5l4 4 4-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <LanguageSwitch />
             {/* Shows the mode it switches to: a sun while dark, a moon while light. */}
             <button
               type="button"
@@ -191,54 +185,22 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
 
 /**
  * "About the data": a disclosure button over Sources, Methodology and Fact check. A plain list of links, not an
- * ARIA menu, so Tab and the screen reader's link list work as they do in the rest of the bar. It closes on
- * Escape (focus back on the button), on a click outside, when focus leaves it, and on every route change.
+ * ARIA menu, so Tab and the screen reader's link list work as they do in the rest of the bar. Opening and
+ * closing is `useDisclosure`'s, shared with the language switch.
  */
 function AboutTheData() {
   const { pathname } = useLocation()
-  // Open on the page it was opened on: any route change closes it, with no effect to reset it.
-  const [openAt, setOpenAt] = useState<string | null>(null)
-  const open = openAt === pathname
-  const setOpen = (o: boolean) => setOpenAt(o ? pathname : null)
-  const root = useRef<HTMLDivElement>(null)
-  const button = useRef<HTMLButtonElement>(null)
-  const panel = useId()
+  const t = useT()
+  const { open, rootProps, buttonProps, panelProps } = useDisclosure()
   const here = ABOUT_THE_DATA.some(n => pathname === n.to || pathname.startsWith(`${n.to}/`))
 
-  useEffect(() => {
-    if (!open) return
-    const outside = (e: PointerEvent) => {
-      if (!root.current?.contains(e.target as Node)) setOpenAt(null)
-    }
-    const escape = (e: KeyboardEvent) => {
-      if (e.key !== 'Escape') return
-      setOpenAt(null)
-      button.current?.focus()
-    }
-    document.addEventListener('pointerdown', outside)
-    document.addEventListener('keydown', escape)
-    return () => {
-      document.removeEventListener('pointerdown', outside)
-      document.removeEventListener('keydown', escape)
-    }
-  }, [open])
-
   return (
-    <div
-      ref={root}
-      className="relative"
-      onBlur={e => {
-        if (!root.current?.contains(e.relatedTarget as Node | null)) setOpen(false)
-      }}
-    >
+    <div {...rootProps} className="relative">
       <button
-        ref={button}
-        type="button"
-        aria-expanded={open}
-        aria-controls={panel}
-        onClick={() => setOpen(!open)}
+        {...buttonProps}
         className={`${LINK}inline-flex items-center gap-1.5 ${here ? ACTIVE : IDLE}`}
       >
+        {/* Not yet a key in the strings table: its drafts predate the menu (#111). */}
         About the data
         <svg
           width="12"
@@ -258,8 +220,7 @@ function AboutTheData() {
         </svg>
       </button>
       <ul
-        id={panel}
-        hidden={!open}
+        {...panelProps}
         className="absolute top-full right-0 z-20 sm:right-auto sm:left-0 mt-2 min-w-48 rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 shadow-[0_8px_24px_rgb(0_0_0/0.18)]"
       >
         {ABOUT_THE_DATA.map(n => (
@@ -273,7 +234,7 @@ function AboutTheData() {
                   : 'text-[var(--color-fg-secondary)] hover:bg-[var(--color-bg-emphasis)] hover:text-[var(--color-accent-text)]')
               }
             >
-              {n.label}
+              {t(n.label)}
             </NavLink>
           </li>
         ))}

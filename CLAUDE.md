@@ -176,7 +176,9 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **The language drafts are staging, never rendered.** `docs/i18n/drafts/<ISO>.md` are machine translations of the 45
   chrome strings in `docs/i18n/STRINGS.md`, drafted by one agent and reviewed by the agent on the other model;
   `tests/test_i18n_drafts.py` fails if a renderer names them or a file lacks its cross-review. No person has read them.
-  The plan that would admit them is `docs/plans/localisation-plan.md`; it needs its own decision entry first.
+  A language reaches a page only through `python3 model/i18n_admit.py` (#111), which copies it into `model/i18n/`
+  once its file carries `- Read by (<lang>): …` and no open `fix`; renderers print keyed strings through `t(key)`
+  and `tests/test_i18n.py` holds the app, the bundle and the tables to one list.
 - **`TECHNICAL-UNIVERSITIES.md` is authored, not generated** (#108). Per state, the institutions on a named published
   list (CESAER, EuroTech) or the state's technical university cited from a fetched page, else **[unverified]**, or one
   `none: searched <date>` row; alphabetical
