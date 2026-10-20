@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom'
 
 import { ProvenanceNotice } from './ProvenanceNotice'
@@ -11,12 +11,25 @@ const NAV = [
   { to: '/countries', label: 'Countries' },
   { to: '/holdings', label: 'Critical holdings' },
   { to: '/infrastructure', label: 'Hosting' },
+]
+
+// How the evidence was gathered and checked: one entry in the bar, opened as a short list, so the bar names
+// what the site finds and this names how it knows.
+const ABOUT_THE_DATA = [
   { to: '/sources', label: 'Sources' },
   { to: '/methodology', label: 'Methodology' },
   { to: '/fact-check', label: 'Fact check' },
-  // Last: it draws on every page before it.
-  { to: '/ask', label: 'Ask' },
 ]
+
+// Last: it draws on every page before it.
+const ASK = { to: '/ask', label: 'Ask' }
+
+// py-1: a 30 px tap target, over WCAG 2.2's 24 px minimum (#92).
+const LINK = 'inline-block py-1 '
+const ACTIVE =
+  'text-[var(--color-accent-text)] underline decoration-[var(--color-eu-gold)] decoration-2 underline-offset-8'
+const IDLE = 'text-[var(--color-fg-secondary)] hover:text-[var(--color-accent-text)]'
+const navClass = ({ isActive }: { isActive: boolean }) => LINK + (isActive ? ACTIVE : IDLE)
 
 export function Layout({ generated, provenance }: { generated: string; provenance: string }) {
   const [mode, setMode] = useTheme()
@@ -83,21 +96,14 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             className="ml-auto flex flex-wrap items-center gap-x-7 gap-y-2 text-[15px] font-medium"
           >
             {NAV.map(n => (
-              <NavLink
-                key={n.to}
-                to={n.to}
-                end={n.end}
-                // py-1: a 30 px tap target, over WCAG 2.2's 24 px minimum (#92).
-                className={({ isActive }) =>
-                  'inline-block py-1 ' +
-                  (isActive
-                    ? 'text-[var(--color-accent-text)] underline decoration-[var(--color-eu-gold)] decoration-2 underline-offset-8'
-                    : 'text-[var(--color-fg-secondary)] hover:text-[var(--color-accent-text)]')
-                }
-              >
+              <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>
                 {n.label}
               </NavLink>
             ))}
+            <AboutTheData />
+            <NavLink to={ASK.to} className={navClass}>
+              {ASK.label}
+            </NavLink>
           </nav>
           <div className="flex items-center gap-3">
             {/* English is the only language so far: the control states it and does nothing yet. */}
@@ -179,6 +185,99 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
           </div>
         </div>
       </footer>
+    </div>
+  )
+}
+
+/**
+ * "About the data": a disclosure button over Sources, Methodology and Fact check. A plain list of links, not an
+ * ARIA menu, so Tab and the screen reader's link list work as they do in the rest of the bar. It closes on
+ * Escape (focus back on the button), on a click outside, when focus leaves it, and on every route change.
+ */
+function AboutTheData() {
+  const { pathname } = useLocation()
+  // Open on the page it was opened on: any route change closes it, with no effect to reset it.
+  const [openAt, setOpenAt] = useState<string | null>(null)
+  const open = openAt === pathname
+  const setOpen = (o: boolean) => setOpenAt(o ? pathname : null)
+  const root = useRef<HTMLDivElement>(null)
+  const button = useRef<HTMLButtonElement>(null)
+  const panel = useId()
+  const here = ABOUT_THE_DATA.some(n => pathname === n.to || pathname.startsWith(`${n.to}/`))
+
+  useEffect(() => {
+    if (!open) return
+    const outside = (e: PointerEvent) => {
+      if (!root.current?.contains(e.target as Node)) setOpenAt(null)
+    }
+    const escape = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      setOpenAt(null)
+      button.current?.focus()
+    }
+    document.addEventListener('pointerdown', outside)
+    document.addEventListener('keydown', escape)
+    return () => {
+      document.removeEventListener('pointerdown', outside)
+      document.removeEventListener('keydown', escape)
+    }
+  }, [open])
+
+  return (
+    <div
+      ref={root}
+      className="relative"
+      onBlur={e => {
+        if (!root.current?.contains(e.relatedTarget as Node | null)) setOpen(false)
+      }}
+    >
+      <button
+        ref={button}
+        type="button"
+        aria-expanded={open}
+        aria-controls={panel}
+        onClick={() => setOpen(!open)}
+        className={`${LINK}inline-flex items-center gap-1.5 ${here ? ACTIVE : IDLE}`}
+      >
+        About the data
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 14 14"
+          aria-hidden="true"
+          className={open ? 'rotate-180' : ''}
+        >
+          <path
+            d="M3 5l4 4 4-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <ul
+        id={panel}
+        hidden={!open}
+        className="absolute top-full right-0 z-20 sm:right-auto sm:left-0 mt-2 min-w-48 rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 shadow-[0_8px_24px_rgb(0_0_0/0.18)]"
+      >
+        {ABOUT_THE_DATA.map(n => (
+          <li key={n.to}>
+            <NavLink
+              to={n.to}
+              className={({ isActive }) =>
+                'block rounded-md px-3 py-2 ' +
+                (isActive
+                  ? 'bg-[var(--color-bg-emphasis)] text-[var(--color-accent-text)]'
+                  : 'text-[var(--color-fg-secondary)] hover:bg-[var(--color-bg-emphasis)] hover:text-[var(--color-accent-text)]')
+              }
+            >
+              {n.label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

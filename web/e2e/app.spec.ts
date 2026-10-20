@@ -320,6 +320,35 @@ test.describe('ranking', () => {
   })
 })
 
+test.describe('header navigation', () => {
+  test('"About the data" opens Sources, Methodology and Fact check, and closes', async ({
+    page,
+  }) => {
+    await page.goto('/')
+    const nav = page.getByRole('navigation', { name: 'Main' })
+    const about = nav.getByRole('button', { name: 'About the data' })
+    await settled(page, about)
+    await expect(about).toHaveAttribute('aria-expanded', 'false')
+    await expect(nav.getByRole('link', { name: 'Methodology' })).toBeHidden()
+
+    await about.click()
+    await expect(about).toHaveAttribute('aria-expanded', 'true')
+    for (const name of ['Sources', 'Methodology', 'Fact check']) {
+      await expect(nav.getByRole('link', { name, exact: true })).toBeVisible()
+    }
+    await page.keyboard.press('Escape')
+    await expect(about).toHaveAttribute('aria-expanded', 'false')
+    await expect(about).toBeFocused()
+
+    await about.click()
+    await nav.getByRole('link', { name: 'Methodology' }).click()
+    await expect(page).toHaveURL(/\/methodology$/)
+    await expect(about).toHaveAttribute('aria-expanded', 'false')
+    // Ask stays the bar's last entry.
+    await expect(nav.getByRole('link').last()).toHaveText('Ask')
+  })
+})
+
 test.describe('entry points (#101, #102)', () => {
   const GUIDES = [
     ...['ministries', 'procurement', 'parliaments', 'cyber', 'eu-institutions', 'operators'].map(

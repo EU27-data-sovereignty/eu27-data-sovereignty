@@ -7,6 +7,17 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-20
 
+### Changed: Sources, Methodology and Fact check move under "About the data" in the header
+
+- **Navigation.** The bar reads Overview, Ranking, Countries, Critical holdings, Hosting, About the data, Ask.
+  "About the data" is a disclosure button opening a short list of the three links (a list, not an ARIA menu, so Tab
+  and a screen reader's link list work as elsewhere in the bar). It closes on Escape, a click outside, focus leaving
+  it, and any route change, and is marked current while on one of its pages. On a phone the list aligns to the
+  button's right edge so it stays on screen.
+- **Tests.** A browser test opens it, closes it with Escape (focus returns to the button), follows Methodology, and
+  checks Ask is still last. The eight 1280 px visual baselines are regenerated: the header now fits one row at that
+  width (the language and theme buttons wrapped to a second row before), so every page starts about 56 px higher.
+
 ### Fixed: Vite 8.2.4, past three launch-editor advisories that stopped the deploy
 
 - **Dependency.** `vite` 8.2.2 → 8.2.4 (pinned, same release line). GHSA-698v-4r3x-3vcv, GHSA-r825-w8mm-5pxw and
