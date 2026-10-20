@@ -3091,3 +3091,35 @@ and a check of cesaer.org itself once it resolves.
 *Would change if:* cesaer.org resolves and the live list differs from the capture, in which case the C1 rows
 are re-read and the Criteria line cites the live page; or the project admits institutions as entities in the
 hosting model (#96), in which case this note becomes the seed of a sourced register and stops being authored.
+
+### 109. The palette moves to a deeper navy and a muted gold; content and layout stay as #101 left them
+**Decision.** 2026-10-20, at the request of Marco Buhlmann, from a reference screenshot of a navy-and-gold home
+design: "apply the color scheme to the current site without any changes to content and layout". Only
+`design/tokens.json` changes, and the three generated files with it:
+- **Brand.** Navy `#0C1628` (was `#0B1B3F`), navy surface `#111E33`, border `#1E2C44`, hover `#18263D`, icon on
+  navy `#C3CBD8`, gold `#D9B35E` (was `#F2C230`), brand blue `#1F3355`, a slate navy (was `#1E3A8A`).
+- **Dark.** Page `#0C1628`, cards `#111E33`, text `#E9EDF4` / `#C3CBD8` / `#9FABBF`. Accent and accent text are
+  the muted gold, so links and meters in dark mode are gold rather than pale blue. The hero is flat
+  (`hero_from` = `hero_to` = the page). Rank shades are slate blues ending in gold.
+- **Light.** Page `#F4F5F7`, white cards, navy text, borders `#DDE2EA`. Accent and accent text are the slate navy;
+  gold stays the highlight (hero underline, active toggle segment).
+
+**Problem.** The #101 palette's saturated EU blue and bright yellow read as a flag rather than as research; the
+owner's reference uses a greyer navy with flat panels and a quieter gold.
+
+**Alternatives considered.**
+- **Gold as the light-mode accent too, as in the reference's dark design.** *Why not:* gold on the light page is
+  under the 3:1 the generator demands for UI (`accent` on `bg_page`); the light accent has to be dark.
+- **Taking the reference's layout and type (Inter, a country-index hero) as well.** *Why not:* not asked; the
+  owner wanted the colours alone, on the content and layout as they are.
+
+**Closes off.** Any hex for these roles outside `design/tokens.json` (#74 already does); the #101 brand values in
+generated files.
+
+**Verified:** 2026-10-20. `python3 design/build_tokens.py` passes every WCAG pair it checks; `tests/test_tokens.py`
+passes; the home page built and screenshotted in dark and light at 1440 px and reviewed by the owner before
+commit; the light-mode visual baselines still match within tolerance; the full gate and the browser profiles as recorded in `CHANGELOG.md`.
+The hero's EU disc is an image and keeps its own blue.
+
+*Would change if:* the owner adopts the reference's layout too, or a contrast check fails on a page the home page
+does not show.

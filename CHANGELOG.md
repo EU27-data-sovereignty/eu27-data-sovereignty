@@ -7,6 +7,14 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-20
 
+### Changed: a deeper navy and a muted gold across the site (#109)
+
+- **Palette only.** `design/tokens.json` takes the colours of the owner's reference design; content and layout are
+  untouched. Dark: page `#0C1628`, flat cards `#111E33`, links and meters in gold `#D9B35E`. Light: page `#F4F5F7`,
+  white cards, accents in slate navy `#1F3355`, gold kept for highlights. Generated `tokens.css`, `tokens.typ` and
+  `Colors.ts` follow; every WCAG pair the generator checks still passes.
+- **Tests.** The visual baselines (light mode) still match within their tolerance, so none changed.
+
 ### Changed: the ranking explains a state under the map, and Ask moves to the end of the navigation
 
 - **Ranking.** A state's explanation ("What could move it") now sits directly under the map instead of below the
