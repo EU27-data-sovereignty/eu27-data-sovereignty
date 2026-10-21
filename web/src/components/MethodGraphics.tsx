@@ -5,13 +5,14 @@ import type { Block, Bundle, Span } from '@/data/types'
 import { SpanView } from './DocumentView'
 import { CARD } from './ui'
 import { num, text, verdicts } from '@/utils/blocks'
-import { useTx } from '@/i18n'
+import { useModelText, useTx } from '@/i18n'
 
 /**
  * Graphics for the methodology and fact-check documents (#99). Each one draws a block the generated
  * document already holds -- a count table as bars, the priority rule as a formula, the placement rules as
  * a ladder, the check steps as a timeline -- so every word and number still comes from
- * model/methodology.py and model/factcheck_appendix.py. Nothing here states a fact of its own (#74).
+ * model/methodology.py and model/factcheck_appendix.py. Nothing here states a fact of its own (#74). Text is
+ * shown in the page's language through `useModelText` (#113); matching works on the English.
  */
 
 type Table = Extract<Block, { type: 'table' }>
@@ -38,6 +39,7 @@ export function Track({ share, tone = 'var(--color-method)' }: { share: number; 
 /** A two-column table whose second column counts something: each row as a labelled bar. */
 export function CountBars({ block, bundle }: { block: Table; bundle: Bundle }) {
   const { tx } = useTx()
+  const say = useModelText()
   const max = Math.max(1, ...block.rows.map(r => num(r[1])))
   return (
     <div className={`${CARD} mb-5 max-w-3xl overflow-hidden`}>
@@ -45,13 +47,13 @@ export function CountBars({ block, bundle }: { block: Table; bundle: Bundle }) {
         <thead>
           <tr className={HEAD}>
             <th scope="col" className="px-4 py-2.5 text-left font-semibold">
-              {block.columns[0]!.t}
+              {say(block.columns[0]!)}
             </th>
             <th scope="col" className="w-1/2 px-4 py-2.5 text-left font-semibold">
               <span className="sr-only">{tx('Share')}</span>
             </th>
             <th scope="col" className="px-4 py-2.5 text-right font-semibold">
-              {block.columns[1]!.t}
+              {say(block.columns[1]!)}
             </th>
           </tr>
         </thead>
@@ -81,6 +83,9 @@ export function CountBars({ block, bundle }: { block: Table; bundle: Bundle }) {
  */
 export function PriorityFormula({ rule }: { rule: string }) {
   const { tx } = useTx()
+  // The formula is cut from the English rule; a page that has the rule translated shows the translation as text.
+  const translated = tx(rule)
+  if (translated !== rule) return <p className="mb-3 max-w-3xl">{translated}</p>
   const m = /^(?:.*?\.\s*)?Priority = (.+?)\.\s*(.*)$/s.exec(rule)
   const terms = m?.[1]?.split(' + ').map(t => /^(.+?) \((.+)\)$/.exec(t.trim()))
   if (!m || !terms || terms.some(t => !t)) return <p className="mb-3 max-w-3xl">{rule}</p>
@@ -111,11 +116,17 @@ export function PriorityFormula({ rule }: { rule: string }) {
 /** The placement rules, applied first to last, as a numbered ladder in each group's colour. */
 export function RuleLadder({ block, bundle }: { block: List; bundle: Bundle }) {
   const groups = bundle.sovereignty.groups
+  const say = useModelText()
+  const { tx } = useTx()
   return (
     <ol className="mb-5 grid max-w-3xl gap-2">
       {block.items.map((item, i) => {
         const t = text(item)
         const g = groups.find(x => t.startsWith(`${x.label}: `))
+        // Shown in the page's language: the whole rule translated, cut after the group's name at its colon.
+        const shown = item.map(say).join(' ')
+        const rest =
+          shown === t ? t.slice((g?.label.length ?? -2) + 2) : shown.slice(shown.indexOf(': ') + 2)
         return (
           <li
             key={i}
@@ -137,12 +148,12 @@ export function RuleLadder({ block, bundle }: { block: List; bundle: Bundle }) {
                       className="inline-block h-2.5 w-2.5 rounded-sm"
                       style={{ background: GROUP_FILL[g.id] }}
                     />
-                    {g.label}:
+                    {tx(g.label)}:
                   </strong>
-                  {t.slice(g.label.length + 2)}
+                  {rest}
                 </>
               ) : (
-                t
+                shown
               )}
             </span>
           </li>
@@ -154,12 +165,17 @@ export function RuleLadder({ block, bundle }: { block: List; bundle: Bundle }) {
 
 /** Who checks whom: each row of the writer/checker table as a pair, so no model checks its own work. */
 export function Pairing({ block, bundle }: { block: Table; bundle: Bundle }) {
+  const say = useModelText()
   return (
-    <div className="mb-5 grid max-w-3xl gap-2" role="table" aria-label={text(block.columns)}>
+    <div
+      className="mb-5 grid max-w-3xl gap-2"
+      role="table"
+      aria-label={block.columns.map(say).join(' ')}
+    >
       <div role="row" className="sr-only">
         {block.columns.map((c, i) => (
           <span key={i} role="columnheader">
-            {c.t}
+            {say(c)}
           </span>
         ))}
       </div>
@@ -171,7 +187,7 @@ export function Pairing({ block, bundle }: { block: Table; bundle: Bundle }) {
         >
           <span role="cell" className={`${CARD} px-4 py-3`}>
             <span className="block text-[0.68rem] font-semibold tracking-[0.12em] text-[var(--color-fg-muted)] uppercase">
-              {block.columns[0]!.t}
+              {say(block.columns[0]!)}
             </span>
             <code className="text-sm">
               <Cell span={r[0]!} bundle={bundle} />
@@ -185,7 +201,7 @@ export function Pairing({ block, bundle }: { block: Table; bundle: Bundle }) {
             className={`${CARD} border-[var(--color-method)] bg-[var(--color-method-wash)] px-4 py-3`}
           >
             <span className="block text-[0.68rem] font-semibold tracking-[0.12em] text-[var(--color-fg-muted)] uppercase">
-              {block.columns[1]!.t}
+              {say(block.columns[1]!)}
             </span>
             <code className="text-sm">
               <Cell span={r[1]!} bundle={bundle} />
@@ -199,10 +215,12 @@ export function Pairing({ block, bundle }: { block: Table; bundle: Bundle }) {
 
 /** A list of steps as a timeline; a leading command (`factcheck.py prepare`) is set in code. */
 export function Steps({ block }: { block: List }) {
+  const say = useModelText()
   return (
     <ol className="mb-5 max-w-3xl border-l-2 border-[var(--color-method)] pl-6">
       {block.items.map((item, i) => {
-        const t = text(item)
+        // Shown in the page's language; a leading command keeps its code face when the translation keeps it first.
+        const t = item.map(say).join(' ')
         const cmd = /^(\S+\.(?:py|js|sh|yml)(?: [a-z]+)?)\b(.*)$/s.exec(t)
         return (
           <li key={i} className="relative mb-4 text-sm last:mb-0">
@@ -246,12 +264,13 @@ export function BarredTable({
   bundle: Bundle
   bars: Record<number, (row: Span[]) => ReactNode>
 }) {
+  const say = useModelText()
   return (
     <div
       className={`scroll-x ${CARD} mb-5`}
       tabIndex={0}
       role="region"
-      aria-label={text(block.columns)}
+      aria-label={block.columns.map(say).join(' ')}
     >
       <table className="w-full min-w-[44rem] border-collapse text-sm">
         <thead>
@@ -262,7 +281,7 @@ export function BarredTable({
                 scope="col"
                 className={`px-3.5 py-2.5 font-semibold ${block.align?.[i] === 'right' ? 'text-right' : 'text-left'}`}
               >
-                {c.t}
+                {say(c)}
               </th>
             ))}
           </tr>
@@ -314,9 +333,10 @@ export function VerdictBar({ cell }: { cell: string }) {
 /** The per-state table's own columns summed into headline tiles above it. */
 export function Totals({ block }: { block: Table }) {
   const { tx, num: count } = useTx()
+  const say = useModelText()
   const tiles = block.columns
     .slice(1)
-    .map((c, i) => [c.t, block.rows.reduce((n, r) => n + (num(r[i + 1]) || 0), 0)])
+    .map((c, i) => [say(c), block.rows.reduce((n, r) => n + (num(r[i + 1]) || 0), 0)])
   return (
     <dl className="mb-4 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-4">
       {tiles.map(([label, n]) => (

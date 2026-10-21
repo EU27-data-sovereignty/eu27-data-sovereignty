@@ -14,6 +14,9 @@ import {
   spanText,
   stateOf,
   translator,
+  modelText,
+  registerCountries,
+  countryName,
   type StateLanguage,
 } from '@/i18n'
 import { countryPath } from '@/utils/routes'
@@ -180,5 +183,57 @@ describe('the site catalog (#113)', () => {
       '/methodology',
     )
     expect(screen.getByText(/Read the/).textContent).toBe('Read the methodology first.')
+  })
+})
+
+describe("the model's own wording (#113, stage 3)", () => {
+  // A stand-in German catalog: the pattern and a holding-class name translated, the reason left alone.
+  const table: Record<string, string> = {
+    '{holding} (tier {tier})': '{holding} (Stufe {tier})',
+    'Civil registry core': 'Kern des Personenstandsregisters',
+    '{name} described on its own measured characteristics.':
+      '{name}: beschrieben anhand eigener Merkmale.',
+    'Disputed: {why}': 'Strittig: {why}',
+    Yes: 'Ja',
+  }
+  const tx = (english: string, args?: Record<string, string | number>) =>
+    format(table[english] ?? english, args ?? {}, 'de-DE')
+  const t = lookup('de-DE')
+  registerCountries({ DE: { name: 'Germany' }, EL: { name: 'Greece' } })
+
+  it('fills a translated pattern with translated arguments', () => {
+    const span = {
+      t: 'Civil registry core (tier 0)',
+      role: 'label' as const,
+      m: '{holding} (tier {tier})',
+      a: { holding: 'Civil registry core', tier: 0 },
+    }
+    expect(modelText(span, t, tx, 'de-DE')).toBe('Kern des Personenstandsregisters (Stufe 0)')
+    expect(modelText(span, t, tx, 'en')).toBe('Civil registry core (tier 0)')
+  })
+
+  it('names a state in the page language, Greece by its ISO region code', () => {
+    const span = {
+      t: 'Germany described on its own measured characteristics.',
+      role: 'method' as const,
+      m: '{name} described on its own measured characteristics.',
+      a: { name: 'Germany' },
+    }
+    expect(modelText(span, t, tx, 'de-DE')).toBe(
+      'Deutschland: beschrieben anhand eigener Merkmale.',
+    )
+    expect(countryName('EL', 'Greece', 'de-DE')).toBe('Griechenland')
+  })
+
+  it('translates a closed value, never a fact, and leaves a dispute’s reason as written', () => {
+    expect(modelText({ t: 'Yes', role: 'fact', k: 'categorical' }, t, tx, 'de-DE')).toBe('Ja')
+    expect(modelText({ t: 'Yes', role: 'fact' }, t, tx, 'de-DE')).toBe('Yes')
+    const dispute = {
+      t: 'Disputed: the quote is gone',
+      role: 'disputed' as const,
+      m: 'Disputed: {why}',
+      a: { why: 'the quote is gone' },
+    }
+    expect(modelText(dispute, t, tx, 'de-DE')).toBe('Strittig: the quote is gone')
   })
 })

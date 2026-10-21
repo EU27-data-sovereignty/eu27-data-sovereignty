@@ -7,6 +7,27 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-21
 
+### Added: the model's own wording in the six site languages (#113, stage 3)
+
+- **Model.** The sentences `model/document.py` and `model/methodology.py` fill per state or per build (method
+  notes, the placement explanation, what could move it, the build counts, "Disputed:") are patterns with arguments
+  (`msg`), so a page in another language translates each once. The English they print, in the bundle, the PDFs and
+  GOAL.md, is unchanged byte for byte; the bundle only gains `m` and `a` on 1,593 spans.
+- **Catalog.** `model/i18n_site.py extract` also reads the bundle: 184 model strings (holding classes, column
+  headings, method prose, group names, indicator questions, closed values), drafted and cross-reviewed like the rest;
+  it reports static model text that still names a state or holds a build count.
+- **Pages.** Country reports, the methodology, the ranking (groups, questions, the Yes / Partly / No grid), the
+  holdings and the hosting overview print model text through `modelText`; a state inside a sentence is named in the
+  page's language. Facts and the fact check's reasons stay as written.
+- **Country names.** Every page names a state in the reader's language (Deutschland, Duitsland, Allemagne), from the
+  browser's own region names: report titles, the ranking, the Countries cards, the fact check, holdings, sources.
+- **Review.** 184 model strings plus the hosting page's title, drafted and reviewed in four rounds per language
+  (16 Dutch, 6 German, 9 French, 7 Spanish, 28 Italian and 19 Polish fixes, each re-reviewed); the reviewers replaced
+  national institution names with generic ones, since a label shows on every state's page in that language.
+- **The hosting page** prints the reviewed translation of the disclaimer while the bundle's still matches the source.
+- **Checks.** A translation may add a plural block where its grammar needs one; unit tests for `modelText`; tests that
+  read a state's English heading or wording open its English address or expect its name in the page's language.
+
 ### Added: the web app's own wording in German, French, Spanish, Italian, Polish and Dutch (#113, stage 2)
 
 - **Catalog.** Every sentence the app writes (pages, guides, overview, selector, charts, notices) goes through `tx`,

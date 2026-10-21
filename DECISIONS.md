@@ -3285,6 +3285,16 @@ notice while its language has no reading.
   language (`num`, and plain number arguments). The owner kept "verified" in the English counts and had the English
   plurals fixed ("1 sources"), which changed nine strings before review closed.
 
+- **Stage 3 (done 2026-10-21): the model's own wording.** A sentence the model fills per state or per build is a
+  pattern: `document.msg(role, pattern, **args)` keeps the English `t` the PDFs, GOAL.md and English pages print,
+  byte for byte, and adds `m` and `a`. The extractor reads the bundle too: patterns and their translatable arguments,
+  static labels, method notes and gaps, closed values ("Yes", "High"), section titles, holding-class names and the
+  ranking's group names and questions (184 strings), and reports any static text still naming a state or carrying a
+  build count. `modelText` translates a span on a page in another language, naming a state in that language from
+  the browser's own data (`Intl.DisplayNames`). Facts, and the fact check's reasons, are evidence and stay as
+  written; "Disputed:" is translated, its reason is not. Where the methodology's graphics parse the English (the
+  priority formula), a translated page shows the translated rule as text.
+
 **Verified:** 2026-10-21, stages 1 and 2. `web/src/__tests__/i18n.test.ts` (page language for a choice; what the
 switch offers; named, nested and plural arguments; `txr`); Playwright: a choice made on `/` holds on `/sources` and
 `/nl`, an explicit `/de/en` wins, `/be` lists its languages first; the English pages pixel-identical through the

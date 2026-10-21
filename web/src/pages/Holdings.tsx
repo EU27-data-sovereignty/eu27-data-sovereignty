@@ -9,7 +9,7 @@ import type { Bundle, Document, Span } from '@/data/types'
 import { claimsBySource, numberSources } from '@/data/sources'
 import { NotFound } from './NotFound'
 import { countryPath } from '@/utils/routes'
-import { m, useTx } from '@/i18n'
+import { m, useCountryName, useTx } from '@/i18n'
 
 const TIER_NOTE: Record<number, string> = {
   0: m('The identity spine: civil registry, biometrics, eID, PKI'),
@@ -114,7 +114,7 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
                   <tr key={h.class_id} className="border-t border-[var(--color-border)]">
                     <th scope="row" className="px-4 py-2.5 text-left font-medium">
                       <Link to={`/holdings/${h.class_id}`} className="hover:underline">
-                        {h.label}
+                        {tx(h.label)}
                       </Link>
                     </th>
                     <td className="px-4 py-2.5 text-[var(--color-fg-muted)] capitalize">
@@ -146,6 +146,7 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
 export function Holding({ bundle }: { bundle: Bundle }) {
   const { cls = '' } = useParams()
   const { tx } = useTx()
+  const countryName = useCountryName()
   const meta = bundle.holding_classes.find(h => h.class_id === cls)
   if (!meta) return <NotFound />
 
@@ -154,9 +155,9 @@ export function Holding({ bundle }: { bundle: Bundle }) {
   for (const doc of Object.values(bundle.documents).sort((a, b) => a.name.localeCompare(b.name))) {
     const table = doc.sections.find(s => s.id === 'holdings')?.blocks.find(b => b.type === 'table')
     if (!table || table.type !== 'table') continue
-    columns = table.columns.slice(2).map(c => c.t)
+    columns = table.columns.slice(2).map(c => tx(c.t))
     const row = table.rows.find(r => r[1]?.t.startsWith(`${meta.label} (`))
-    if (row) rows.push({ iso: doc.iso, name: doc.name, cells: row.slice(2) })
+    if (row) rows.push({ iso: doc.iso, name: countryName(doc.iso, doc.name), cells: row.slice(2) })
   }
   // A synthetic one-section document per row, so footnote numbering follows this page.
   const docs: Document[] = rows.map(r => ({
@@ -175,7 +176,7 @@ export function Holding({ bundle }: { bundle: Bundle }) {
         </Link>{' '}
         · {tx('tier {t}', { t: meta.tier })}
       </p>
-      <PageBand kicker={tx('EU-27 · Critical holding')} title={meta.label} />
+      <PageBand kicker={tx('EU-27 · Critical holding')} title={tx(meta.label)} />
       <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
         <table className="w-full min-w-[40rem] border-collapse text-sm">
           <thead>

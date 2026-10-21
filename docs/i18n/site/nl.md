@@ -2,13 +2,198 @@
 
 - Language: nl (site catalog; reads with the home table nl-NL)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-21
-- Revised by: agent B, claude-fable-5-1, 2026-10-21 (applied 39 fixes; drafted the 9 changed strings; final round: applied 1 fix)
+- Revised by: agent B, claude-fable-5-1, 2026-10-21 (applied 39 fixes; drafted the 9 changed strings; final round: applied 1 fix; stage 3: drafted the 184 model strings; stage 3: applied 16 fixes)
 - Status: draft, machine-translated, not yet reviewed
 
 ## Strings
 
 | key | en | nl |
 |---|---|---|
+| s.b85a2bdd1b | Authentication audit log | Authenticatie-auditlog |
+| s.fcb532f087 | Beneficial ownership register | Register van uiteindelijk begunstigden |
+| s.96ecaa31b4 | Benefits & pensions | Uitkeringen & pensioenen |
+| s.2f1257dc51 | Border and visa systems | Grens- en visumsystemen |
+| s.ec814ead0c | Breeder document scans | Scans van brondocumenten |
+| s.f280e2a648 | Business registry | Ondernemingsregister |
+| s.d8d788ca5d | Central bank systems | Systemen van de centrale bank |
+| s.765efdcdc6 | Civil registry core | Kern van de burgerlijke stand |
+| s.aae813dd56 | Classification in law | Classificatie in de wet |
+| s.3f865d6890 | Cloud certification | Cloudcertificering |
+| s.3427094904 | Crisis management and civil protection | Crisisbeheersing en civiele bescherming |
+| s.04b7b26c8c | Critical | Kritiek |
+| s.6b91907643 | Customs declarations | Douaneaangiften |
+| s.ca20bc6b00 | Data classification | Gegevensclassificatie |
+| s.3165449154 | Defence command and logistics | Defensiecommandovoering en -logistiek |
+| s.f089a1fbed | Dependent on non-EU providers | Afhankelijk van niet-EU-aanbieders |
+| s.72e58b67f4 | Digital identity credentials | Digitale identiteitsmiddelen |
+| s.171ec6a77a | Disputed: {why} | Betwist: {why} |
+| s.04c3e89d9b | Document issuance history | Uitgiftehistorie van documenten |
+| s.aaf87fe57a | Education | Onderwijs |
+| s.4e9d205ed7 | Election management and results | Verkiezingsbeheer en -uitslagen |
+| s.f19d170012 | Electoral roll entry | Inschrijving in het kiezersregister |
+| s.042b70234d | Electricity grid control | Besturing van het elektriciteitsnet |
+| s.f180a9ce79 | Emergency calls and public-safety radio | Noodoproepen en radio voor openbare veiligheid |
+| s.98bf3b1ffd | Facial biometric | Gezichtsbiometrie |
+| s.3d64ce6c47 | Fingerprint biometric | Vingerafdrukbiometrie |
+| s.5343f3aabe | Firearms register | Wapenregister |
+| s.3b9865356c | GDP, current prices | Bbp, lopende prijzen |
+| s.0c3b551296 | Geospatial base data | Geo-basisgegevens |
+| s.5dfe1bc1a0 | Governing instrument | Grondslag |
+| s.c4fe29fe96 | Government cloud in operation | Overheidscloud in bedrijf |
+| s.ec4f0f9f9e | Government data centres | Overheidsdatacenters |
+| s.9704ed6cc1 | Government payroll and personnel | Salarisadministratie en personeel van de overheid |
+| s.982c964c83 | Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished. | Groepen beschrijven wat de bronnen laten zien, niet hoe soeverein een lidstaat is. Een plaatsing met lage zekerheid weerspiegelt meestal onderzoek dat nog niet is afgerond. |
+| s.8061bb6bf8 | Health records | Medische dossiers |
+| s.b86fc1b412 | Hosting (as sourced) | Hosting (volgens bron) |
+| s.94accd37b7 | Hyperscaler regions in country | Hyperscaler-regio’s in het land |
+| s.8667bf9045 | If any of the {count} tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: {group}. | {count, plural, one {Als de enige tier 0/1-gegevensverzameling waarvan de hosting nog geen bron heeft, op niet-EU-infrastructuur blijkt te draaien: {group}.} other {Als een van de # tier 0/1-gegevensverzamelingen waarvan de hosting nog geen bron heeft, op niet-EU-infrastructuur blijkt te draaien: {group}.}} |
+| s.2948d7b9da | If {indicator} is found to be {value}: {group}. | Als {indicator} {value} blijkt te zijn: {group}. |
+| s.b3f1bf4f30 | Intelligence services | Inlichtingendiensten |
+| s.f785330b4c | Internet exchange | Internetknooppunt |
+| s.a91102c85d | Judicial & criminal justice | Rechtspraak & strafrecht |
+| s.be9109ac1b | Jurisdiction requirement | Jurisdictievereiste |
+| s.a3d31a53fb | Land & property registry | Kadaster & eigendomsregister |
+| s.99767669ed | Land area | Landoppervlakte |
+| s.cbbacb3e80 | National archives (digital) | Nationale archieven (digitaal) |
+| s.44749b1cbc | National digital identity | Nationale digitale identiteit |
+| s.6fb2a8a8cc | No central register | Geen centraal register |
+| s.e6e1757649 | Non-EU provider | Niet-EU-aanbieder |
+| s.b34eac40f3 | Non-household electricity price | Elektriciteitsprijs voor niet-huishoudens |
+| s.1652d30cec | Not demonstrated | Niet aangetoond |
+| s.114883188a | Not stated in sources | Niet vermeld in bronnen |
+| s.fd51e343e2 | Not yet measured | Nog niet gemeten |
+| s.2f23122d83 | Not yet sized. Capacity for {name} will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. {measured} of {total} holding classes have a sourced measurement so far. | Nog niet bepaald. De capaciteit voor {name} wordt afgeleid van de eigen gemeten gegevensverzamelingen (aantallen records en gegevensomvang), niet geschaald vanuit een ander land. {measured} van {total} klassen van gegevensverzamelingen hebben tot nu toe een meting met bron. |
+| s.a9b0cdd774 | Not yet verified | Nog niet geverifieerd |
+| s.c2cce8d695 | Nothing: every input the rule reads is settled by a source. | Niets: elke invoerwaarde die de regel leest, is door een bron vastgesteld. |
+| s.3ad8637946 | Of the {n} verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national. | Van de {n} geverifieerde gegevensverzamelingen: voor hoeveel ervan bronnen vermelden waar de infrastructuur wordt geëxploiteerd. Een gegevensverzameling telt alleen als afhankelijk wanneer een geciteerd document dat zegt; als de bron zwijgt, telt dat als niet vermeld, nooit als nationaal. |
+| s.f987414340 | Official gazette and legislation | Officieel publicatieblad en wetgeving |
+| s.d0e687b079 | Operator | Beheerder |
+| s.f83b48a858 | Police information systems | Politie-informatiesystemen |
+| s.182d37ec74 | Population | Bevolking |
+| s.f2fe3e1c9e | Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5. | Prioriteit = gevolg van verlies (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + moeilijkheid van het opnieuw opbouwen (lage herstelbaarheid: 2, gemiddelde: 1, hoge: 0) + bekende blootstelling aan niet-EU-aanbieders (niet-EU of gemengd: 2, EU-aanbieder of nog niet bekend: 1, nationaal: 0). Kritiek is 6 of hoger, Hoog is 4 of 5. |
+| s.034dd0deff | Procurement route | Inkooproute |
+| s.c622853228 | Public administration employment (NACE O) | Werkgelegenheid in het openbaar bestuur (NACE O) |
+| s.5e46f732e6 | Public health surveillance | Surveillance van de volksgezondheid |
+| s.1890a8b969 | Records / size | Records / omvang |
+| s.acb219584d | Renewables share of electricity | Aandeel hernieuwbare energie in elektriciteit |
+| s.62c114ace1 | Residence and migration status | Verblijfs- en migratiestatus |
+| s.110c7c517b | Secured in law, not yet in practice | Wettelijk verankerd, nog niet in de praktijk |
+| s.5f407d41f3 | Sovereign cloud certification | Soevereine-cloudcertificering |
+| s.1ca90cb624 | Sovereign in law and in practice | Soeverein in de wet en in de praktijk |
+| s.0a4c313dc5 | Sovereign in practice, not secured in law | Soeverein in de praktijk, niet wettelijk verankerd |
+| s.5c1505aea9 | Sovereign or government cloud | Soevereine of overheidscloud |
+| s.2dfa66079d | Standard | Standaard |
+| s.d7e81c01c8 | State PKI and qualified trust services | Staats-PKI en gekwalificeerde vertrouwensdiensten |
+| s.1e01ee18be | State-controlled national eID | Nationale eID onder staatscontrole |
+| s.967135dc53 | State-controlled trust anchor | Vertrouwensanker onder staatscontrole |
+| s.16b62d3922 | Statistical microdata | Statistische microdata |
+| s.78d71ef805 | Statutory health insurance | Wettelijke ziektekostenverzekering |
+| s.9be70f66f8 | Tax | Belastingen |
+| s.eeac96e96e | The holdings {name} cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. {verified} of {total} holding classes have a verified source; {measured} have a sourced record count or data size. | De gegevensverzamelingen die {name} niet kan laten afhangen van infrastructuur waarover een vreemde staat dwang kan uitoefenen of die hij kan uitschakelen, gerangschikt volgens een vastgelegde regel. {verified} van {total} klassen van gegevensverzamelingen hebben een geverifieerde bron; {measured, plural, one {# heeft} other {# hebben}} een aantal records of een gegevensomvang met bron. |
+| s.1ef26968be | Tier 0 and 1 holdings for {name} without a verified source yet. Corrections and sources are welcome through the repository's issue template. | Gegevensverzamelingen in tier 0 en 1 voor {name} die nog geen geverifieerde bron hebben. Correcties en bronnen zijn welkom via het issue-sjabloon van de repository. |
+| s.5e127373f3 | Treasury and state accounts | Schatkist en staatsrekeningen |
+| s.5f11eb7511 | Vehicle & licensing | Voertuigen & rijbewijzen |
+| s.7d46fdf50f | Water management control | Besturing van waterbeheersystemen |
+| s.ea4e96959c | What could move this placement: | Wat deze plaatsing kan verschuiven: |
+| s.fd12863535 | no | nee |
+| s.fb360f9c09 | yes | ja |
+| s.fff7760a9e | {group}. Confidence: {confidence}. With the evidence still open, {name} could be anywhere from '{from}' to '{to}'. | {group}. Zekerheid: {confidence}. Zolang het bewijs nog openstaat, kan {name} overal tussen ‘{from}’ en ‘{to}’ uitkomen. |
+| s.fa84aa0fe2 | {holding} (tier {tier}) | {holding} (tier {tier}) |
+| s.966a5454e4 | {name} described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date. | {name} beschreven op zijn eigen gemeten kenmerken. Elk cijfer is de gepubliceerde waarde van een vastgezette Eurostat-reeks; de voetnoot noemt de reeks, de dimensies en de datum van ophalen. |
+| s.47c8fcf67a | {shown} of {total} posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument. | {shown} van {total} vermeldingen over de positie hebben een geverifieerde bron. De overige zijn onderzocht aan de hand van openbare beleidsdocumenten, maar worden hier achtergehouden tot elk ervan is getoetst aan de grondslag. |
+| s.f7a15511d4 | Counted from the facts each state's report prints: holdings with a sourced register, how many of them have sourced hosting, and the infrastructure dependency their sources state. Not stated means no printed source says; it is never counted as national. | Geteld uit de feiten die het rapport van elke lidstaat afdrukt: gegevensverzamelingen met een register met bron, hoeveel daarvan hosting met bron hebben, en de infrastructuurafhankelijkheid die hun bronnen vermelden. Niet vermeld betekent dat geen afgedrukte bron het zegt; het wordt nooit als nationaal geteld. |
+| s.26e5bd9d84 | Every holding whose hosting a checked source states, by member state: {printed} printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally. | Elke gegevensverzameling waarvan een gecontroleerde bron de hosting vermeldt, per lidstaat: {printed} afgedrukt, en alles wat de factcheck heeft achtergehouden gemarkeerd als betwist. Elke cel is dezelfde als die het eigen rapport van de lidstaat afdrukt, met dezelfde bron. Een gegevensverzameling die hier niet staat, heeft nog geen hosting met bron; dat is een hiaat in het bewijs, geen bevinding dat ze nationaal wordt gehost. |
+| s.3d9ef2e1a4 | Key infrastructure and hosting | Belangrijkste infrastructuur en hosting |
+| s.3b7aee0921 | Register or system | Register of systeem |
+| s.ddca7ab7f4 | A gap means not yet sourced. It never means the thing does not exist. | Een hiaat betekent dat er nog geen bron is. Het betekent nooit dat wat ontbreekt niet bestaat. |
+| s.5d8970fa99 | A value that no checked source supports is withheld and shown as a gap. A gap means not yet sourced, never that the thing does not exist. | Een waarde die door geen enkele gecontroleerde bron wordt gestaafd, wordt achtergehouden en als hiaat getoond. Een hiaat betekent dat er nog geen bron is, nooit dat wat ontbreekt niet bestaat. |
+| s.1c023ff571 | A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: {runs}. Reviewer model: {models}, the same model as the researcher. | Een toetsingsrun heeft daarna elk afgedrukt feit opnieuw onderzocht, en daarna de hiaten. Hij zocht naar een betere bron, naar nieuwere informatie en naar elke bron die het tegenspreekt. Elk van zijn bevindingen is beoordeeld door een blinde beoordelaar, die het citaat en de URL te zien kreeg maar nooit de voorgestelde waarde. Runs: {runs}. Beoordelaarsmodel: {models}, hetzelfde model als de onderzoeker. |
+| s.eb41f68213 | Anyone in any member state may submit a source or check a printed fact, through public issue forms. A submitted source passes the same mechanical checks as agent research. A fact counts as verified by a person only under the two-person rule: confirmed by someone on the reviewer roster, who did not submit it, who reads the source's language, and who declared no conflict of interest. One such rejection makes a fact disputed; two withdraw it, unless two reviewers confirmed it. | Iedereen in elke lidstaat kan via openbare issue-formulieren een bron indienen of een afgedrukt feit controleren. Een ingediende bron doorloopt dezelfde mechanische controles als agentonderzoek. Een feit telt alleen als door een persoon geverifieerd onder de tweepersoonsregel: bevestigd door iemand op de beoordelaarslijst, die het niet zelf heeft ingediend, die de taal van de bron leest en die geen belangenconflict heeft gemeld. Eén zo’n afwijzing maakt een feit betwist; twee trekken het in, tenzij twee beoordelaars het hebben bevestigd. |
+| s.e6c7329679 | Before anything is published, every printed fact is checked once more, exactly as printed, by a second model: the one that did not write it. The checker fetches the cited source and decides whether it supports the statement as printed. A production deploy is refused unless every printed fact has a current verdict of supported. The rule, the steps and each fact's verdict are in the fact-check appendix. | Voordat iets wordt gepubliceerd, wordt elk afgedrukt feit nog eens gecontroleerd, precies zoals afgedrukt, door een tweede model: het model dat het niet heeft geschreven. De controleur haalt de geciteerde bron op en beslist of die de bewering staaft zoals afgedrukt. Een productie-deploy wordt geweigerd tenzij elk afgedrukt feit een actueel oordeel ‘gestaafd’ heeft. De regel, de stappen en het oordeel over elk feit staan in de factcheckbijlage. |
+| s.05d27dcc23 | Calculations | Berekeningen |
+| s.fd9f9cff11 | Categorical findings (infrastructure dependency, sovereignty indicators): admitted only when a second, independent automated reviewer reached the same value from the same quote. | Categorische bevindingen (infrastructuurafhankelijkheid, soevereiniteitsindicatoren): alleen toegelaten wanneer een tweede, onafhankelijke geautomatiseerde beoordelaar uit hetzelfde citaat tot dezelfde waarde kwam. |
+| s.14a628e6d3 | Checked by | Gecontroleerd door |
+| s.d22fca0f44 | Citizen submissions staged | Burgerinzendingen in afwachting |
+| s.4f23e1e7f8 | Citizens and human review | Burgers en menselijke beoordeling |
+| s.06e8db2dfd | Claims | Beweringen |
+| s.4108482c08 | Confidence is how many groups a state could still reach if every unknown resolved for or against it: one group is High, two Medium, three or more Low. Within a group, states are alphabetical; the order carries no meaning. | Zekerheid is het aantal groepen dat een lidstaat nog zou kunnen bereiken als elke onbekende in zijn voordeel of nadeel zou uitvallen: één groep is Hoog, twee Gemiddeld, drie of meer Laag. Binnen een groep staan de lidstaten alfabetisch; de volgorde heeft geen betekenis. |
+| s.66e12969c2 | Count | Aantal |
+| s.ed1c64ab57 | Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order: | Plaatsing inzake datasoevereiniteit. Een invoerwaarde zonder gecontroleerde bron is onbekend en telt als niet aangetoond: nooit als soeverein, nooit als afhankelijk. Elke lidstaat wordt geplaatst volgens de eerste regel waaraan hij voldoet, in deze volgorde: |
+| s.1052689464 | Dataset | Dataset |
+| s.2a4e3cb3c6 | Decimals | Decimalen |
+| s.eb559b8cbc | Dependent on non-EU providers: a source shows a tier 0 or 1 holding on non-EU infrastructure, or a national eID or trust anchor outside state or EU control. | Afhankelijk van niet-EU-aanbieders: een bron toont een gegevensverzameling in tier 0 of 1 op niet-EU-infrastructuur, of een nationale eID of vertrouwensanker buiten de controle van de staat of de EU. |
+| s.d203be5dfd | English wording of a non-English source is a machine translation or machine summary. Its figures are checked against the original; its words are not. | De Engelse formulering van een niet-Engelstalige bron is een machinevertaling of een machinale samenvatting. De cijfers erin zijn getoetst aan het origineel; de woorden niet. |
+| s.d4a05b67a6 | Eurostat figures: the value was read from a pinned Eurostat dataset through its API and compared with the table cell, within 0.5%. The raw API response is stored and its SHA-256 recorded in model/fetch_manifest.csv. The footnote names the dataset, its dimensions and the retrieval date. | Eurostat-cijfers: de waarde is via de API uit een vastgezette Eurostat-dataset gelezen en vergeleken met de tabelcel, binnen 0,5%. Het ruwe API-antwoord is opgeslagen en de SHA-256 ervan is vastgelegd in model/fetch_manifest.csv. De voetnoot noemt de dataset, de dimensies en de datum van ophalen. |
+| s.188de23f5b | Every cited source is re-fetched periodically and each quote looked for again. A fact whose quote has vanished, or whose source is gone, is withheld as disputed. A refusal to serve the page changes nothing. | Elke geciteerde bron wordt periodiek opnieuw opgehaald en elk citaat opnieuw opgezocht. Een feit waarvan het citaat is verdwenen, of waarvan de bron weg is, wordt achtergehouden als betwist. Een weigering om de pagina te leveren verandert niets. |
+| s.2b913254a8 | Everything is built from the project's repository. `./run.sh reproduce` rebuilds every output in a fresh clone and compares it with the published one. `./run.sh reproduce --evidence` also re-fetches every cited source and checks every quote again. The git commit and the data bundle's SHA-256 this document was built from are printed on its title page. | Alles wordt gebouwd vanuit de repository van het project. `./run.sh reproduce` bouwt elke uitvoer opnieuw in een verse kloon en vergelijkt die met de gepubliceerde. `./run.sh reproduce --evidence` haalt ook elke geciteerde bron opnieuw op en controleert elk citaat opnieuw. De git-commit en de SHA-256 van de gegevensbundel waaruit dit document is gebouwd, staan op de titelpagina. |
+| s.84d987fe02 | Evidence grades | Bewijsgraden |
+| s.04b0dda32a | Fact written by | Feit geschreven door |
+| s.228587d1aa | Facts disputed by a reviewer | Feiten betwist door een beoordelaar |
+| s.18a1dacbc5 | Facts verified by a person | Feiten geverifieerd door een persoon |
+| s.d54360e78a | Facts withdrawn after review | Feiten ingetrokken na beoordeling |
+| s.1f20e66b17 | Figure | Cijfer |
+| s.96e578211a | Filters | Filters |
+| s.0b134e18cb | Findings or items | Bevindingen of items |
+| s.252adc9f26 | Fundamentals are Eurostat values at a pinned period, read through the dissemination API. Each is multiplied into the unit shown and rounded, and must reproduce the published value within 0.5%: | Basisgegevens zijn Eurostat-waarden op een vastgezette periode, gelezen via de disseminatie-API. Elke waarde wordt omgerekend naar de getoonde eenheid en afgerond, en moet de gepubliceerde waarde binnen 0,5% reproduceren: |
+| s.aecc49c153 | Grade | Graad |
+| s.5012de0774 | How good is the best source behind each fact? Each cited host is classified once. An archived copy counts as the page it archived. The classification was drawn up by an agent and has not been reviewed by a person. | Hoe goed is de beste bron achter elk feit? Elke geciteerde host is één keer geclassificeerd. Een gearchiveerde kopie telt als de pagina die ze archiveerde. De classificatie is opgesteld door een agent en is niet door een persoon beoordeeld. |
+| s.1ac6e0db9e | How sources were found | Hoe bronnen zijn gevonden |
+| s.40176d930b | Human review | Menselijke beoordeling |
+| s.40f3f0b36f | In this build, {passing} of {printed} printed facts pass the fact check. | In deze build doorstaan {passing} van {printed} afgedrukte feiten de factcheck. |
+| s.7539231e04 | Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national. | Infrastructuurblootstelling telt, voor elke lidstaat, de geverifieerde gegevensverzamelingen waarvan de geciteerde bron zegt waar de infrastructuur draait. Als de bron zwijgt, telt dat als niet vermeld, nooit als nationaal. |
+| s.90a031edb0 | Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only. | Belangrijkste infrastructuur en hosting, het EU-27-overzicht, vermeldt elke gegevensverzameling waarvan een gecontroleerde bron de hosting vermeldt. Elke cel is een kopie van de cel die het eigen rapport van de lidstaat afdrukt, dus met dezelfde bron en dezelfde factcheck, en een achtergehouden waarde blijft achtergehouden. De aantallen per lidstaat betreffen alleen afgedrukte feiten. |
+| s.0c448a5f23 | Latest recheck | Laatste hercontrole |
+| s.51aff04e8d | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Machinaal gecontroleerd, niet door mensen geverifieerd. Geautomatiseerde agents hebben deze bronnen gevonden en mechanisch gecontroleerd; geen enkele persoon heeft de bevindingen beoordeeld. De Engelse formulering van een niet-Engelstalige bron is een machinevertaling of een machinale samenvatting van de geciteerde tekst. Beschouw elk feit als een aanwijzing naar de geciteerde bron, niet als vaststaand. Correcties zijn welkom via het issue-sjabloon van de repository. |
+| s.8b5cf8d60c | Most states do not publish where their critical registers are hosted, so placements are mostly of low confidence. That is a finding about transparency, not about sovereignty. | De meeste lidstaten publiceren niet waar hun kritieke registers worden gehost, dus de plaatsingen hebben meestal een lage zekerheid. Dat is een bevinding over transparantie, niet over soevereiniteit. |
+| s.b31b7fac2a | No person has verified any finding. Agents found and checked everything. | Geen enkele persoon heeft enige bevinding geverifieerd. Agents hebben alles gevonden en gecontroleerd. |
+| s.04c299e1b3 | Not demonstrated: neither. | Niet aangetoond: geen van beide. |
+| s.61348d3cc0 | Not reproducible byte for byte: agent research gives different findings if run again, so what is reproducible is their admission, from the recorded outputs. Also not: the posters (browser screenshots), and the hash of a page rendered in a browser. | Niet byte voor byte reproduceerbaar: agentonderzoek geeft bij een nieuwe run andere bevindingen, dus wat reproduceerbaar is, is hun toelating, op basis van de vastgelegde uitvoer. Ook niet: de posters (browserschermafbeeldingen), en de hash van een pagina die in een browser is weergegeven. |
+| s.170a28a9db | Period | Periode |
+| s.f7fa7832f9 | Printed facts | Afgedrukte feiten |
+| s.bcb88598d7 | Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5. | Prioriteit van een gegevensverzameling. Prioriteit = gevolg van verlies (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + moeilijkheid van het opnieuw opbouwen (lage herstelbaarheid: 2, gemiddelde: 1, hoge: 0) + bekende blootstelling aan niet-EU-aanbieders (niet-EU of gemengd: 2, EU-aanbieder of nog niet bekend: 1, nationaal: 0). Kritiek is 6 of hoger, Hoog is 4 of 5. |
+| s.ee19cf967e | Questions answered on the web | Vragen beantwoord op het web |
+| s.ddf48497b8 | Quote check of the first research runs | Citaatcontrole van de eerste onderzoeksruns |
+| s.adeb29b097 | Reproducing this document | Dit document reproduceren |
+| s.1338a3ee0c | Research agents, one per member state, looked for each critical holding and each indicator. Each claim needed a verbatim quote of 8 to 60 words from an exact URL. Nothing an agent returned was used until it passed the mechanical checks below. Agent output is staged separately and is never rendered. | Onderzoeksagents, één per lidstaat, hebben elke kritieke gegevensverzameling en elke indicator opgezocht. Elke bewering vereiste een letterlijk citaat van 8 tot 60 woorden van een exacte URL. Niets wat een agent teruggaf, is gebruikt voordat het de onderstaande mechanische controles had doorstaan. Agentuitvoer wordt apart bewaard en wordt nooit weergegeven. |
+| s.0d73a1c086 | Researched claims (holdings, operators, legal bases, indicators): the cited page or PDF was downloaded and its SHA-256 recorded, and the quoted text was found in the extracted document by literal matching. Every number and date in the printed value was found in the original-language quote; the English wording is a machine summary of the quote unless it appears in it verbatim. An archived copy was looked up on the Internet Archive; where none exists the footnote says so. | Onderzochte beweringen (gegevensverzamelingen, beheerders, wettelijke grondslagen, indicatoren): de geciteerde pagina of PDF is gedownload en de SHA-256 ervan vastgelegd, en de geciteerde tekst is door letterlijke vergelijking in het geëxtraheerde document gevonden. Elk getal en elke datum in de afgedrukte waarde is in het citaat in de oorspronkelijke taal gevonden; de Engelse formulering is een machinale samenvatting van het citaat, tenzij ze er letterlijk in voorkomt. Een gearchiveerde kopie is opgezocht in het Internet Archive; waar er geen bestaat, zegt de voetnoot dat. |
+| s.5016356d5e | Reviewers on the roster | Beoordelaars op de lijst |
+| s.a29f025627 | Scale | Schaal |
+| s.635dcfcb5a | Secured in law, not yet in practice: the statute, without the practice test. | Wettelijk verankerd, nog niet in de praktijk: de wet, zonder de praktijktoets. |
+| s.926a4d7e8c | Source tiers | Brontiers |
+| s.9ad33161bb | Sovereign in law and in practice: a statute keeps government data under national or EU jurisdiction, and at least 75% of verified tier 0/1 holdings run on national or EU infrastructure, the trust anchor and eID are state-controlled, and the state runs its own data centres or government cloud. | Soeverein in de wet en in de praktijk: een wet houdt overheidsgegevens onder nationale of EU-jurisdictie, en ten minste 75% van de geverifieerde gegevensverzamelingen in tier 0/1 draait op nationale of EU-infrastructuur, het vertrouwensanker en de eID staan onder staatscontrole, en de staat exploiteert zijn eigen datacenters of overheidscloud. |
+| s.4324ca9554 | Sovereign in practice, not secured in law: the practice test, without the statute. | Soeverein in de praktijk, niet wettelijk verankerd: de praktijktoets, zonder de wet. |
+| s.cf84687053 | Strong | Sterk |
+| s.d11347ce3a | Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. | Sterk: een T1- of T2-bron (een gezaghebbend origineel of een bevoegde overheidsinstantie); een officiële of primaire bron; het citaat exact gevonden in het gehashte document; een gearchiveerde kopie van precies die URL; geen naam in de waarde die in het citaat ontbreekt; en de waarde ofwel geciteerd uit een Engelstalige bron, letterlijk gevonden in het origineel, of berustend op cijfers die in het origineel zijn teruggevonden. Een categorische bevinding is pas Sterk na een blinde beoordeling (een beoordelaar die het citaat en de URL te zien kreeg, maar niet de voorgestelde waarde). Standaard: elke vereiste controle doorstaan, maar een van de genoemde niet. Alles wat minder is, wordt niet afgedrukt. Geverifieerd: Sterk, en bevestigd door een persoon onder de tweepersoonsregel: iemand op de beoordelaarslijst, niet degene die het heeft ingediend, die de taal van de bron leest en geen belangenconflict heeft gemeld. |
+| s.9f1a1d5e3e | T1 authoritative original (official law portal, statistics office, Eurostat) | T1 gezaghebbend origineel (officieel wettenportaal, statistiekbureau, Eurostat) |
+| s.75974ad5f7 | T2 competent public body or audit office | T2 bevoegde overheidsinstantie of rekenkamer |
+| s.c342fa1f4f | T3 other institution or company | T3 andere instelling of onderneming |
+| s.a544050c90 | T4 secondary (unofficial law mirror, press, encyclopedia) | T4 secundair (onofficiële wettenmirror, pers, encyclopedie) |
+| s.f1fceee56b | The blind reviewer during research was the same model as the researcher, so the two readings can share its blind spots. The fact check before each deploy uses a different model, which narrows that risk but does not remove blind spots that models share. | De blinde beoordelaar tijdens het onderzoek was hetzelfde model als de onderzoeker, dus de twee lezingen kunnen zijn blinde vlekken delen. De factcheck vóór elke deploy gebruikt een ander model, wat dat risico verkleint maar blinde vlekken die modellen delen niet wegneemt. |
+| s.61e3fb1ddf | The cross-model fact check before every deploy | De factcheck door een ander model vóór elke deploy |
+| s.3882bb002a | The printed value is checked against its quote at build time. Every number and date in it must appear in the original-language quote, read in any EU number format. A number found only in the English translation does not count. An abbreviation not found in the quote is shown in the fact's checklist. A value that is not a verbatim extract is a machine summary of the quote, and is labelled as one. | De afgedrukte waarde wordt bij de build getoetst aan het citaat. Elk getal en elke datum erin moet in het citaat in de oorspronkelijke taal voorkomen, gelezen in elke EU-getalnotatie. Een getal dat alleen in de Engelse vertaling is gevonden, telt niet. Een afkorting die niet in het citaat is gevonden, wordt in de checklist van het feit getoond. Een waarde die geen letterlijk uittreksel is, is een machinale samenvatting van het citaat en wordt als zodanig gelabeld. |
+| s.67ac669b7c | The web page's Ask feature answers questions using only these sourced findings, with a citation for every fact. Each question is sent to Anthropic's API to generate the answer and is not stored by this site. The model is told the findings are machine-checked and to say so in every answer. | De functie Vragen op de webpagina beantwoordt vragen uitsluitend met deze bevindingen met bron, met een bronvermelding voor elk feit. Elke vraag wordt naar de API van Anthropic gestuurd om het antwoord te genereren en wordt niet door deze site opgeslagen. Het model krijgt te horen dat de bevindingen machinaal gecontroleerd zijn en dat het dat in elk antwoord moet zeggen. |
+| s.4220d202c0 | There is no numeric confidence score: nothing has calibrated one. | Er is geen numerieke zekerheidsscore: er is er nooit een gekalibreerd. |
+| s.a0de0a20ed | This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: {facts} facts are printed, {gaps} values are withheld as gaps, and {disputed} are withheld as disputed. | Deze bijlage is gegenereerd uit de code en de gegevens die dit document hebben voortgebracht. Elke regel hieronder is de regel die de build uitvoert, en elk getal is geteld uit de bestanden die hij leest. In deze build: {facts, plural, one {# feit is afgedrukt} other {# feiten zijn afgedrukt}}, {gaps, plural, one {# waarde is achtergehouden als hiaat} other {# waarden zijn achtergehouden als hiaat}}, en {disputed, plural, one {# is achtergehouden als betwist} other {# zijn achtergehouden als betwist}}. |
+| s.aed3b8c6a7 | Verified | Geverifieerd |
+| s.8524fff511 | Vetting outcome | Toetsingsresultaat |
+| s.7c88c313f1 | What must hold for a fact to be printed | Wat moet gelden om een feit af te drukken |
+| s.cdba8c69aa | What this does not establish | Wat dit niet vaststelt |
+| s.3ef3f040f0 | What this is, and what it is not | Wat dit is, en wat het niet is |
+| s.ce296c876c | anything else: unrecorded, a person, or a program | iets anders: niet vastgelegd, een persoon, of een programma |
+| s.4cc558b843 | corroborated | bevestigd |
+| s.729e6ed847 | disputed | betwist |
+| s.b55e22fe78 | exact | exact |
+| s.a6dfdeaa3a | gone | verdwenen |
+| s.67805069b9 | loose | bij benadering |
+| s.8012ff51a0 | unchanged | ongewijzigd |
+| s.408e9edfd6 | unreachable | onbereikbaar |
+| s.625916084e | Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | Vereist een wet of bindende regeling dat overheidsgegevens (of gerubriceerde overheidsgegevens) onder nationale of EU-jurisdictie worden opgeslagen en verwerkt? |
+| s.ca310cd530 | Does the state operate its own government data centres that are in operation today? | Exploiteert de staat eigen overheidsdatacenters die vandaag in bedrijf zijn? |
+| s.cf7088eefc | Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | Is een cloudcertificering die immuniteit voor niet-EU-recht vereist, van kracht of aangenomen voor overheidsgebruik? |
+| s.a3e860461c | Is a national sovereign or government cloud platform in operation (not announced)? | Is een nationaal soeverein of overheidscloudplatform in bedrijf (niet alleen aangekondigd)? |
+| s.658d6ce48a | Is the government's data classification scheme established in a statute or binding regulation? | Is het gegevensclassificatiestelsel van de overheid vastgelegd in een wet of bindende regeling? |
+| s.2d29475e37 | Is the national electronic identity scheme operated by the state or a state-controlled body? | Wordt het nationale elektronische identiteitsstelsel geëxploiteerd door de staat of een orgaan onder staatscontrole? |
+| s.922e29d89c | Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | Wordt de root van de publieke-sleutelinfrastructuur van de overheid of haar gekwalificeerde vertrouwensdienst geëxploiteerd door de staat of een orgaan onder staatscontrole? |
 | s.9e80ea69fc | Run {command} to regenerate the bundle. | Voer {command} uit om de bundel opnieuw te genereren. |
 | s.c77394b252 | Loading the map… | De kaart wordt geladen… |
 | s.78afc1371f | Map of the EU-27 by data-sovereignty group | Kaart van de EU-27 naar datasoevereiniteitsgroep |
@@ -490,7 +675,8 @@
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-21
 - Re-reviewed by: agent A, claude-opus-5-5, 2026-10-21 (applied fixes and the nine changed strings; final round: 1 re-reviewed)
-- Verdict: 476 ok, 0 fix
+- Stage 3 reviewed by: agent A, claude-opus-5-5, 2026-10-21 (the 184 model strings; stage 3: fixes re-reviewed)
+- Verdict: 661 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -970,3 +1156,188 @@
 | s.ad4c27b442 | nl | ok | fix applied 2026-10-21, re-reviewed | |
 | s.3a6297f664 | nl | ok | | |
 | s.f1ff2ed428 | nl | ok | | |
+| s.b85a2bdd1b | nl | ok | | |
+| s.fcb532f087 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.96ecaa31b4 | nl | ok | | |
+| s.2f1257dc51 | nl | ok | | |
+| s.ec814ead0c | nl | ok | | |
+| s.f280e2a648 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.d8d788ca5d | nl | ok | | |
+| s.765efdcdc6 | nl | ok | | |
+| s.aae813dd56 | nl | ok | | |
+| s.3f865d6890 | nl | ok | | |
+| s.3427094904 | nl | ok | | |
+| s.04b7b26c8c | nl | ok | | |
+| s.6b91907643 | nl | ok | | |
+| s.ca20bc6b00 | nl | ok | | |
+| s.3165449154 | nl | ok | | |
+| s.f089a1fbed | nl | ok | | |
+| s.72e58b67f4 | nl | ok | | |
+| s.171ec6a77a | nl | ok | | |
+| s.04c3e89d9b | nl | ok | | |
+| s.aaf87fe57a | nl | ok | | |
+| s.4e9d205ed7 | nl | ok | | |
+| s.f19d170012 | nl | ok | | |
+| s.042b70234d | nl | ok | | |
+| s.f180a9ce79 | nl | ok | | |
+| s.98bf3b1ffd | nl | ok | | |
+| s.3d64ce6c47 | nl | ok | | |
+| s.5343f3aabe | nl | ok | | |
+| s.3b9865356c | nl | ok | | |
+| s.0c3b551296 | nl | ok | | |
+| s.5dfe1bc1a0 | nl | ok | | |
+| s.c4fe29fe96 | nl | ok | | |
+| s.ec4f0f9f9e | nl | ok | | |
+| s.9704ed6cc1 | nl | ok | | |
+| s.982c964c83 | nl | ok | | |
+| s.8061bb6bf8 | nl | ok | | |
+| s.b86fc1b412 | nl | ok | | |
+| s.94accd37b7 | nl | ok | | |
+| s.8667bf9045 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.2948d7b9da | nl | ok | | |
+| s.b3f1bf4f30 | nl | ok | | |
+| s.f785330b4c | nl | ok | | |
+| s.a91102c85d | nl | ok | | |
+| s.be9109ac1b | nl | ok | | |
+| s.a3d31a53fb | nl | ok | | |
+| s.99767669ed | nl | ok | | |
+| s.cbbacb3e80 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.44749b1cbc | nl | ok | | |
+| s.6fb2a8a8cc | nl | ok | | |
+| s.e6e1757649 | nl | ok | | |
+| s.b34eac40f3 | nl | ok | | |
+| s.1652d30cec | nl | ok | | |
+| s.114883188a | nl | ok | | |
+| s.fd51e343e2 | nl | ok | | |
+| s.2f23122d83 | nl | ok | | |
+| s.a9b0cdd774 | nl | ok | | |
+| s.c2cce8d695 | nl | ok | | |
+| s.3ad8637946 | nl | ok | | |
+| s.f987414340 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.d0e687b079 | nl | ok | | |
+| s.f83b48a858 | nl | ok | | |
+| s.182d37ec74 | nl | ok | | |
+| s.f2fe3e1c9e | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.034dd0deff | nl | ok | | |
+| s.c622853228 | nl | ok | | |
+| s.5e46f732e6 | nl | ok | | |
+| s.1890a8b969 | nl | ok | | |
+| s.acb219584d | nl | ok | | |
+| s.62c114ace1 | nl | ok | | |
+| s.110c7c517b | nl | ok | | |
+| s.5f407d41f3 | nl | ok | | |
+| s.1ca90cb624 | nl | ok | | |
+| s.0a4c313dc5 | nl | ok | | |
+| s.5c1505aea9 | nl | ok | | |
+| s.2dfa66079d | nl | ok | | |
+| s.d7e81c01c8 | nl | ok | | |
+| s.1e01ee18be | nl | ok | | |
+| s.967135dc53 | nl | ok | | |
+| s.16b62d3922 | nl | ok | | |
+| s.78d71ef805 | nl | ok | | |
+| s.9be70f66f8 | nl | ok | | |
+| s.eeac96e96e | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.1ef26968be | nl | ok | | |
+| s.5e127373f3 | nl | ok | | |
+| s.5f11eb7511 | nl | ok | | |
+| s.7d46fdf50f | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.ea4e96959c | nl | ok | | |
+| s.fd12863535 | nl | ok | | |
+| s.fb360f9c09 | nl | ok | | |
+| s.fff7760a9e | nl | ok | | |
+| s.fa84aa0fe2 | nl | ok | | |
+| s.966a5454e4 | nl | ok | | |
+| s.47c8fcf67a | nl | ok | | |
+| s.f7a15511d4 | nl | ok | | |
+| s.26e5bd9d84 | nl | ok | | |
+| s.3d9ef2e1a4 | nl | ok | | |
+| s.3b7aee0921 | nl | ok | | |
+| s.ddca7ab7f4 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.5d8970fa99 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.1c023ff571 | nl | ok | | |
+| s.eb41f68213 | nl | ok | | |
+| s.e6c7329679 | nl | ok | | |
+| s.05d27dcc23 | nl | ok | | |
+| s.fd9f9cff11 | nl | ok | | |
+| s.14a628e6d3 | nl | ok | | |
+| s.d22fca0f44 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.4f23e1e7f8 | nl | ok | | |
+| s.06e8db2dfd | nl | ok | | |
+| s.4108482c08 | nl | ok | | |
+| s.66e12969c2 | nl | ok | | |
+| s.ed1c64ab57 | nl | ok | | |
+| s.1052689464 | nl | ok | | |
+| s.2a4e3cb3c6 | nl | ok | | |
+| s.eb559b8cbc | nl | ok | | |
+| s.d203be5dfd | nl | ok | | |
+| s.d4a05b67a6 | nl | ok | | |
+| s.188de23f5b | nl | ok | | |
+| s.2b913254a8 | nl | ok | | |
+| s.84d987fe02 | nl | ok | | |
+| s.04b0dda32a | nl | ok | | |
+| s.228587d1aa | nl | ok | | |
+| s.18a1dacbc5 | nl | ok | | |
+| s.d54360e78a | nl | ok | | |
+| s.1f20e66b17 | nl | ok | | |
+| s.96e578211a | nl | ok | | |
+| s.0b134e18cb | nl | ok | | |
+| s.252adc9f26 | nl | ok | | |
+| s.aecc49c153 | nl | ok | | |
+| s.5012de0774 | nl | ok | | |
+| s.1ac6e0db9e | nl | ok | | |
+| s.40176d930b | nl | ok | | |
+| s.40f3f0b36f | nl | ok | | |
+| s.7539231e04 | nl | ok | | |
+| s.90a031edb0 | nl | ok | | |
+| s.0c448a5f23 | nl | ok | | |
+| s.51aff04e8d | nl | ok | | |
+| s.8b5cf8d60c | nl | ok | | |
+| s.b31b7fac2a | nl | ok | | |
+| s.04c299e1b3 | nl | ok | | |
+| s.61348d3cc0 | nl | ok | | |
+| s.170a28a9db | nl | ok | | |
+| s.f7fa7832f9 | nl | ok | | |
+| s.bcb88598d7 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.ee19cf967e | nl | ok | | |
+| s.ddf48497b8 | nl | ok | | |
+| s.adeb29b097 | nl | ok | | |
+| s.1338a3ee0c | nl | ok | | |
+| s.0d73a1c086 | nl | ok | | |
+| s.5016356d5e | nl | ok | | |
+| s.a29f025627 | nl | ok | | |
+| s.635dcfcb5a | nl | ok | | |
+| s.926a4d7e8c | nl | ok | | |
+| s.9ad33161bb | nl | ok | | |
+| s.4324ca9554 | nl | ok | | |
+| s.cf84687053 | nl | ok | | |
+| s.d11347ce3a | nl | ok | | |
+| s.9f1a1d5e3e | nl | ok | | |
+| s.75974ad5f7 | nl | ok | | |
+| s.c342fa1f4f | nl | ok | | |
+| s.a544050c90 | nl | ok | | |
+| s.f1fceee56b | nl | ok | | |
+| s.61e3fb1ddf | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.3882bb002a | nl | ok | | |
+| s.67ac669b7c | nl | ok | | |
+| s.4220d202c0 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.a0de0a20ed | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.aed3b8c6a7 | nl | ok | | |
+| s.8524fff511 | nl | ok | | |
+| s.7c88c313f1 | nl | ok | | |
+| s.cdba8c69aa | nl | ok | | |
+| s.3ef3f040f0 | nl | ok | | |
+| s.ce296c876c | nl | ok | | |
+| s.4cc558b843 | nl | ok | | |
+| s.729e6ed847 | nl | ok | | |
+| s.b55e22fe78 | nl | ok | | |
+| s.a6dfdeaa3a | nl | ok | | |
+| s.67805069b9 | nl | ok | fix applied 2026-10-21, re-reviewed | |
+| s.8012ff51a0 | nl | ok | | |
+| s.408e9edfd6 | nl | ok | | |
+| s.625916084e | nl | ok | | |
+| s.ca310cd530 | nl | ok | | |
+| s.cf7088eefc | nl | ok | | |
+| s.a3e860461c | nl | ok | | |
+| s.658d6ce48a | nl | ok | | |
+| s.2d29475e37 | nl | ok | | |
+| s.922e29d89c | nl | ok | | |

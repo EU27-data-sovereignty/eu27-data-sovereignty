@@ -21,6 +21,10 @@ export interface Span {
   k?: 'categorical'
   /** A label's entry in the language tables (#111): pages served in another language print that instead. */
   key?: string
+  /** The English pattern `t` was filled from, and its arguments (#113, stage 3): a page in another language
+   * translates the pattern from the site catalog and fills it. */
+  m?: string
+  a?: Record<string, string | number>
 }
 
 export type Block =

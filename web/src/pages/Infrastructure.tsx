@@ -6,7 +6,7 @@ import { PageBand } from '@/components/PageBand'
 import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
 import type { Bundle } from '@/data/types'
-import { useTx } from '@/i18n'
+import { lookup, useT, useTx } from '@/i18n'
 
 /**
  * Where each state's key registers are hosted, and by whom (#95). The body is the generated overview
@@ -15,6 +15,7 @@ import { useTx } from '@/i18n'
  */
 export function Infrastructure({ bundle }: { bundle: Bundle }) {
   const { tx, txr } = useTx()
+  const t = useT()
   const doc = bundle.infrastructure
   const numbers = numberSources([doc], bundle)
   const claims = claimsBySource([doc], bundle)
@@ -25,7 +26,7 @@ export function Infrastructure({ bundle }: { bundle: Bundle }) {
     <article>
       <PageBand
         kicker={tx('EU-27 · Key infrastructure')}
-        title={doc.name}
+        title={tx(doc.name)}
         facts={[
           [String(hosting.filter(r => r[4]?.role === 'fact').length), tx('hosting facts printed')],
           [
@@ -39,7 +40,11 @@ export function Infrastructure({ bundle }: { bundle: Bundle }) {
         ]}
       />
       <p className="mb-6 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
-        {bundle.notice.disclaimer}{' '}
+        {/* The reviewed translation of the disclaimer, while the bundle's still reads word for word as the source; a
+            measured disclaimer ("… of … facts verified by a person") prints as the model wrote it (#112). */}
+        {bundle.notice.disclaimer === lookup('en')('notice.disclaimer')
+          ? t('notice.disclaimer')
+          : bundle.notice.disclaimer}{' '}
         {txr('The same overview is in the {report}; each holding in full is on its {page}.', {
           report: (
             <a className="underline" href="/eu27-report.pdf">

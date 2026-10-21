@@ -61,7 +61,8 @@ export function HostingCards({
   const [dep, setDep] = useState<Dep | 'any'>('any')
   const [query, setQuery] = useState('')
   const [tier, setTier] = useState('')
-  const heads = block.columns.map(c => c.t)
+  // Shown, so in the page's language; filtering and matching above work on the English (#113).
+  const heads = block.columns.map(c => tx(c.t))
   const rows = block.rows.map(r => ({ cells: r, dep: depOf(r[5]) }))
   const states = [...new Set(rows.map(r => r.cells[0]!.t))]
   const tierOf = (r: (typeof rows)[0]) => /\(tier (\d)\)/.exec(r.cells[1]!.t)?.[1] ?? ''

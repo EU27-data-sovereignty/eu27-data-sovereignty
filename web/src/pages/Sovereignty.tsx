@@ -8,7 +8,7 @@ import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
 import type { Bundle, Document, GroupId, Placement, Span } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
-import { useTx } from '@/i18n'
+import { useCountryName, useTx } from '@/i18n'
 import { countryPath } from '@/utils/routes'
 
 type Confidence = 'All' | Placement['confidence']
@@ -59,6 +59,7 @@ function findings(doc: Document | undefined): Span[][] {
 export function Sovereignty({ bundle }: { bundle: Bundle }) {
   const sov = bundle.sovereignty
   const { tx, txr } = useTx()
+  const countryName = useCountryName()
   // The filter's and the explanation's words for a confidence level, one sentence each.
   const level = (c: Confidence) =>
     ({ All: tx('All'), High: tx('High'), Medium: tx('Medium'), Low: tx('Low') })[c]
@@ -79,10 +80,14 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
   const [sortBy, setSortBy] = useState<string>('name')
 
   const names = useMemo(
-    () => Object.fromEntries(Object.values(bundle.documents).map(d => [d.iso, d.name])),
-    [bundle],
+    () =>
+      Object.fromEntries(
+        Object.values(bundle.documents).map(d => [d.iso, countryName(d.iso, d.name)]),
+      ),
+    [bundle, countryName],
   )
-  const labels = Object.fromEntries(sov.groups.map(g => [g.id, g.label]))
+  // Group names as a reader sees them, in the page's language (#113); matching below uses the English.
+  const labels = Object.fromEntries(sov.groups.map(g => [g.id, tx(g.label)]))
   // Each group's rule, in the methodology's own words (model/methodology.py), not restated here.
   const rule = useMemo(() => {
     const out: Record<string, string> = {}
@@ -92,10 +97,15 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           for (const item of b.items) {
             const text = item.map(x => x.t).join(' ')
             const g = sov.groups.find(x => text.startsWith(`${x.label}: `))
-            if (g) out[g.id] = text.slice(g.label.length + 2)
+            if (g) {
+              // Translated whole, then cut after the group's name, wherever the translation puts the colon.
+              const full = tx(text)
+              const cut = full.indexOf(': ')
+              out[g.id] = full === text ? text.slice(g.label.length + 2) : full.slice(cut + 2)
+            }
           }
     return out
-  }, [bundle, sov])
+  }, [bundle, sov, tx])
   const order = sov.groups.map(g => g.id)
   const visible = Object.entries(sov.placements).filter(
     ([, p]) => filter === 'All' || p.confidence === filter,
@@ -135,10 +145,10 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             g => [g, Object.values(sov.placements).filter(p => p.group === g.id).length] as const,
           )
           .filter(([, n]) => n > 0)
-          .map(([g, n]) => [String(n), g.label])}
+          .map(([g, n]) => [String(n), tx(g.label)])}
       />
       <p className="mb-3 max-w-3xl rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm">
-        {sov.guardrail}
+        {tx(sov.guardrail)}
       </p>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         {tx('States are placed in groups by a published rule, not scored.')}{' '}
@@ -194,7 +204,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                     className="inline-block h-3 w-3"
                     style={{ background: GROUP_FILL[g.id] }}
                   />
-                  {g.label}
+                  {tx(g.label)}
                   <span className="font-normal text-[var(--color-fg-muted)]">
                     ({members.length})
                   </span>
@@ -304,14 +314,14 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                     key={ind.id}
                     scope="col"
                     className="px-3.5 py-2.5 text-left"
-                    title={ind.question}
+                    title={tx(ind.question)}
                   >
                     <button
                       type="button"
                       onClick={() => setSortBy(ind.id)}
                       className="font-semibold"
                     >
-                      {ind.label}
+                      {tx(ind.label)}
                       {sortBy === ind.id ? ' ▾' : ''}
                     </button>
                   </th>

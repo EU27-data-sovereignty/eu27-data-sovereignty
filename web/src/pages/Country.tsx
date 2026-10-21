@@ -7,7 +7,7 @@ import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sour
 import type { Bundle } from '@/data/types'
 import { NotFound } from './NotFound'
 import { PageBand } from '@/components/PageBand'
-import { spanText, useT, useTx } from '@/i18n'
+import { useCountryName, useModelText, useT, useTx } from '@/i18n'
 
 /**
  * One member state, analysed on its own fundamentals (#72). The body is the content model --
@@ -17,6 +17,8 @@ import { spanText, useT, useTx } from '@/i18n'
 export function Country({ bundle }: { bundle: Bundle }) {
   const { iso = '' } = useParams()
   const t = useT()
+  const text = useModelText()
+  const countryName = useCountryName()
   const { tx, txr } = useTx()
   const code = iso.toUpperCase()
   const doc = bundle.documents[code]
@@ -41,7 +43,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
           {doc.sections.map((s, i) => (
             <li key={s.id}>
               <a className="text-[var(--color-accent-text)] hover:underline" href={`#${s.id}`}>
-                {i + 1}. {spanText({ t: s.title, key: s.key }, t)}
+                {i + 1}. {text({ t: s.title, key: s.key, role: 'label' })}
               </a>
             </li>
           ))}
@@ -62,7 +64,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         </p>
         <PageBand
           kicker={`${t('site.kicker')} · ${t('country.kicker')} · ${doc.iso}`}
-          title={doc.name}
+          title={countryName(code, doc.name)}
         />
         <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
           {tx('{verified} of {total} critical holding classes verified', {
@@ -80,7 +82,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
             href={`/report/${code}.pdf`}
             className="inline-block rounded bg-[var(--color-accent)] px-3 py-1.5 text-sm font-semibold text-[var(--color-fg-on-accent)]"
           >
-            {tx('Download the {name} report (PDF)', { name: doc.name })}
+            {tx('Download the {name} report (PDF)', { name: countryName(code, doc.name) })}
           </a>
         </p>
 
@@ -117,7 +119,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
             {
               link: (
                 <Link to={`/fact-check/${code}`} className="underline">
-                  {tx('fact check for {name}', { name: doc.name })}
+                  {tx('fact check for {name}', { name: countryName(code, doc.name) })}
                 </Link>
               ),
             },

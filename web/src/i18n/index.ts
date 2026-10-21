@@ -1,4 +1,4 @@
-import { Fragment, createElement, useSyncExternalStore, type ReactNode } from 'react'
+import { Fragment, createElement, useMemo, useSyncExternalStore, type ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import en from '../../../model/i18n/strings/en.json'
@@ -359,4 +359,66 @@ export function useTx(): ReturnType<typeof translator> {
 /** A model span's text in the page's language: by its key where the model gave one, else as written. */
 export function spanText(span: Pick<Span, 't' | 'key'>, t: T): string {
   return span.key && span.key in en ? t(span.key as Key) : span.t
+}
+
+// Country names the model writes into its sentences, by English name -> ISO code, registered when the bundle loads,
+// so a translated sentence names a state in the page's language ("Deutschland") rather than in English.
+const COUNTRIES = new Map<string, string>()
+export function registerCountries(countries: Record<string, { name: string }>) {
+  for (const [iso, c] of Object.entries(countries)) COUNTRIES.set(c.name, iso)
+}
+
+/** A member state's name in the language `tag`, from the browser's own data; English where it has none. */
+export function countryName(iso: string, english: string, tag: string): string {
+  if (tag === 'en') return english
+  try {
+    // ISO 3166-1 has GR for Greece; the bundle keys it EL, as Eurostat does.
+    return new Intl.DisplayNames([tag], { type: 'region' }).of(iso === 'EL' ? 'GR' : iso) ?? english
+  } catch {
+    return english
+  }
+}
+
+/**
+ * The text of a span the model wrote, in the page's language (#113, stage 3). A key from the 47 core strings wins;
+ * a span with a pattern (`m`) is translated from the site catalog and filled with its arguments, each itself
+ * translated (a holding-class name, a group label) or, for a state, named in the page's language; a label, a
+ * method note, a gap or a closed-vocabulary value ("Yes") is looked up by its English. Facts and the fact check's
+ * reasons are evidence and stay as written.
+ */
+export function modelText(span: Span, t: T, tx: Tx, tag: string): string {
+  if (span.key && span.key in en) return t(span.key as Key)
+  if (tag === 'en') return span.t
+  if (span.m) {
+    const args: Record<string, string | number> = {}
+    for (const [k, v] of Object.entries(span.a ?? {})) {
+      const iso = typeof v === 'string' ? COUNTRIES.get(v) : undefined
+      args[k] = typeof v === 'number' ? v : iso ? countryName(iso, v, tag) : tx(v)
+    }
+    return tx(span.m, args)
+  }
+  // A state named on its own in a table (a row of the hosting overview) is named in the page's language too.
+  const iso = span.role === 'label' ? COUNTRIES.get(span.t) : undefined
+  if (iso) return countryName(iso, span.t, tag)
+  if (
+    span.role === 'label' ||
+    span.role === 'method' ||
+    span.role === 'gap' ||
+    span.k === 'categorical'
+  )
+    return tx(span.t)
+  return span.t
+}
+
+/** A member state's name in the page's language: `(iso, english) => name`. */
+export function useCountryName(): (iso: string, english: string) => string {
+  const { tag } = useLang()
+  return useMemo(() => (iso: string, english: string) => countryName(iso, english, tag), [tag])
+}
+
+export function useModelText(): (span: Span) => string {
+  const t = useT()
+  const { tx } = useTx()
+  const { tag } = useLang()
+  return span => modelText(span, t, tx, tag)
 }

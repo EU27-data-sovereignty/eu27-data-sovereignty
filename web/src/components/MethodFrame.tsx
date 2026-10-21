@@ -37,7 +37,7 @@ export function MethodFrame({
                 href={`#${s.id}`}
                 className="rounded-full border border-[var(--color-border)] px-3 py-1 text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)] lg:rounded-none lg:border-0 lg:border-l-2 lg:px-3 lg:py-1.5 lg:hover:border-[var(--color-method)]"
               >
-                {i + 1}. {s.title}
+                {i + 1}. {tx(s.title)}
               </a>
             ))}
           </nav>

@@ -2,13 +2,198 @@
 
 - Language: it (site catalog; reads with the home table it-IT)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-21
-- Revised by: agent B, claude-fable-5-1, 2026-10-21 (applied 40 fixes; drafted the 9 changed strings; final round: applied 2 fixes)
+- Revised by: agent B, claude-fable-5-1, 2026-10-21 (applied 40 fixes; drafted the 9 changed strings; final round: applied 2 fixes; stage 3: drafted the 184 model strings; stage 3: applied 28 fixes)
 - Status: draft, machine-translated, not yet reviewed
 
 ## Strings
 
 | key | en | it |
 |---|---|---|
+| s.b85a2bdd1b | Authentication audit log | Registro di audit delle autenticazioni |
+| s.fcb532f087 | Beneficial ownership register | Registro dei titolari effettivi |
+| s.96ecaa31b4 | Benefits & pensions | Prestazioni sociali e pensioni |
+| s.2f1257dc51 | Border and visa systems | Sistemi di frontiera e visti |
+| s.ec814ead0c | Breeder document scans | Scansioni dei documenti giustificativi |
+| s.f280e2a648 | Business registry | Registro delle imprese |
+| s.d8d788ca5d | Central bank systems | Sistemi della banca centrale |
+| s.765efdcdc6 | Civil registry core | Archivio centrale dello stato civile |
+| s.aae813dd56 | Classification in law | Classificazione sancita per legge |
+| s.3f865d6890 | Cloud certification | Certificazione cloud |
+| s.3427094904 | Crisis management and civil protection | Gestione delle crisi e protezione civile |
+| s.04b7b26c8c | Critical | Critica |
+| s.6b91907643 | Customs declarations | Dichiarazioni doganali |
+| s.ca20bc6b00 | Data classification | Classificazione dei dati |
+| s.3165449154 | Defence command and logistics | Comando e logistica della difesa |
+| s.f089a1fbed | Dependent on non-EU providers | Dipendente da fornitori extra-UE |
+| s.72e58b67f4 | Digital identity credentials | Credenziali di identità digitale |
+| s.171ec6a77a | Disputed: {why} | Contestato: {why} |
+| s.04c3e89d9b | Document issuance history | Storico del rilascio dei documenti |
+| s.aaf87fe57a | Education | Istruzione |
+| s.4e9d205ed7 | Election management and results | Gestione delle elezioni e risultati |
+| s.f19d170012 | Electoral roll entry | Iscrizione nelle liste elettorali |
+| s.042b70234d | Electricity grid control | Controllo della rete elettrica |
+| s.f180a9ce79 | Emergency calls and public-safety radio | Chiamate di emergenza e radio di pubblica sicurezza |
+| s.98bf3b1ffd | Facial biometric | Biometria facciale |
+| s.3d64ce6c47 | Fingerprint biometric | Biometria delle impronte digitali |
+| s.5343f3aabe | Firearms register | Registro delle armi da fuoco |
+| s.3b9865356c | GDP, current prices | PIL, prezzi correnti |
+| s.0c3b551296 | Geospatial base data | Dati geospaziali di base |
+| s.5dfe1bc1a0 | Governing instrument | Atto normativo di riferimento |
+| s.c4fe29fe96 | Government cloud in operation | Cloud governativo in funzione |
+| s.ec4f0f9f9e | Government data centres | Centri dati governativi |
+| s.9704ed6cc1 | Government payroll and personnel | Stipendi e personale della pubblica amministrazione |
+| s.982c964c83 | Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished. | I gruppi descrivono ciò che le fonti mostrano, non quanto uno Stato sia sovrano. Una collocazione a confidenza bassa riflette per lo più una ricerca non ancora conclusa. |
+| s.8061bb6bf8 | Health records | Cartelle sanitarie |
+| s.b86fc1b412 | Hosting (as sourced) | Hosting (secondo le fonti) |
+| s.94accd37b7 | Hyperscaler regions in country | Regioni di hyperscaler nel paese |
+| s.8667bf9045 | If any of the {count} tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: {group}. | Se anche uno solo dei patrimoni di livello 0/1 il cui hosting non ha ancora una fonte, {count} in tutto, risultasse funzionare su infrastruttura extra-UE: {group}. |
+| s.2948d7b9da | If {indicator} is found to be {value}: {group}. | Se l'indicatore “{indicator}” risulta {value}: {group}. |
+| s.b3f1bf4f30 | Intelligence services | Servizi di intelligence |
+| s.f785330b4c | Internet exchange | Punto di interscambio Internet |
+| s.a91102c85d | Judicial & criminal justice | Sistema giudiziario e giustizia penale |
+| s.be9109ac1b | Jurisdiction requirement | Requisito di giurisdizione |
+| s.a3d31a53fb | Land & property registry | Catasto e registro immobiliare |
+| s.99767669ed | Land area | Superficie |
+| s.cbbacb3e80 | National archives (digital) | Archivi nazionali (digitali) |
+| s.44749b1cbc | National digital identity | Identità digitale nazionale |
+| s.6fb2a8a8cc | No central register | Nessun registro centrale |
+| s.e6e1757649 | Non-EU provider | Fornitore extra-UE |
+| s.b34eac40f3 | Non-household electricity price | Prezzo dell'elettricità per usi non domestici |
+| s.1652d30cec | Not demonstrated | Non dimostrato |
+| s.114883188a | Not stated in sources | Non indicato nelle fonti |
+| s.fd51e343e2 | Not yet measured | Non ancora misurato |
+| s.2f23122d83 | Not yet sized. Capacity for {name} will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. {measured} of {total} holding classes have a sourced measurement so far. | Non ancora dimensionato. La capacità di questo Stato ({name}) sarà derivata dai suoi stessi patrimoni misurati (conteggi di record e dimensioni dei dati), non ricavata in scala da un altro paese. Finora {measured} su {total} classi di patrimonio hanno una misurazione con fonte. |
+| s.a9b0cdd774 | Not yet verified | Non ancora verificato |
+| s.c2cce8d695 | Nothing: every input the rule reads is settled by a source. | Nulla: ogni input che la regola legge è stabilito da una fonte. |
+| s.3ad8637946 | Of the {n} verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national. | Patrimoni verificati: {n}. Per quanti di essi le fonti indicano dove è gestita l'infrastruttura. Un patrimonio conta come dipendente solo quando un documento citato lo dice; il silenzio è contato come non indicato, mai come nazionale. |
+| s.f987414340 | Official gazette and legislation | Gazzetta ufficiale e legislazione |
+| s.d0e687b079 | Operator | Operatore |
+| s.f83b48a858 | Police information systems | Sistemi informativi di polizia |
+| s.182d37ec74 | Population | Popolazione |
+| s.f2fe3e1c9e | Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5. | Priorità = conseguenza della perdita (livello 0: 3, livello 1: 2, livello 2: 1, livello 3: 0) + difficoltà di ricostruzione (recuperabilità bassa: 2, media: 1, alta: 0) + esposizione nota a fornitori extra-UE (extra-UE o misto: 2, fornitore UE o non ancora noto: 1, nazionale: 0). Critica: 6 o più; Alta: 4 o 5. |
+| s.034dd0deff | Procurement route | Procedura di appalto |
+| s.c622853228 | Public administration employment (NACE O) | Occupazione nella pubblica amministrazione (NACE O) |
+| s.5e46f732e6 | Public health surveillance | Sorveglianza di sanità pubblica |
+| s.1890a8b969 | Records / size | Record / dimensione |
+| s.acb219584d | Renewables share of electricity | Quota di rinnovabili nell'elettricità |
+| s.62c114ace1 | Residence and migration status | Residenza e status migratorio |
+| s.110c7c517b | Secured in law, not yet in practice | Garantito per legge, non ancora in pratica |
+| s.5f407d41f3 | Sovereign cloud certification | Certificazione di cloud sovrano |
+| s.1ca90cb624 | Sovereign in law and in practice | Sovrano per legge e in pratica |
+| s.0a4c313dc5 | Sovereign in practice, not secured in law | Sovrano in pratica, non garantito per legge |
+| s.5c1505aea9 | Sovereign or government cloud | Cloud sovrano o governativo |
+| s.2dfa66079d | Standard | Standard |
+| s.d7e81c01c8 | State PKI and qualified trust services | PKI dello Stato e servizi fiduciari qualificati |
+| s.1e01ee18be | State-controlled national eID | eID nazionale sotto controllo statale |
+| s.967135dc53 | State-controlled trust anchor | Ancora di fiducia sotto controllo statale |
+| s.16b62d3922 | Statistical microdata | Microdati statistici |
+| s.78d71ef805 | Statutory health insurance | Assicurazione sanitaria obbligatoria |
+| s.9be70f66f8 | Tax | Fisco |
+| s.eeac96e96e | The holdings {name} cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. {verified} of {total} holding classes have a verified source; {measured} have a sourced record count or data size. | I patrimoni che questo Stato ({name}) non può lasciar dipendere da un'infrastruttura che uno Stato estero può sottoporre a ordini vincolanti o spegnere, ordinati secondo una regola dichiarata. {verified} su {total} classi di patrimonio hanno una fonte verificata; {measured, plural, one {# ha} many {# hanno} other {# hanno}} un conteggio di record o una dimensione dei dati con fonte. |
+| s.1ef26968be | Tier 0 and 1 holdings for {name} without a verified source yet. Corrections and sources are welcome through the repository's issue template. | {name}: patrimoni di livello 0 e 1 ancora senza una fonte verificata. Correzioni e fonti sono benvenute tramite il modulo per le segnalazioni del repository. |
+| s.5e127373f3 | Treasury and state accounts | Tesoreria e conti dello Stato |
+| s.5f11eb7511 | Vehicle & licensing | Veicoli e patenti |
+| s.7d46fdf50f | Water management control | Controllo della gestione idrica |
+| s.ea4e96959c | What could move this placement: | Che cosa potrebbe spostare questa collocazione: |
+| s.fd12863535 | no | no |
+| s.fb360f9c09 | yes | sì |
+| s.fff7760a9e | {group}. Confidence: {confidence}. With the evidence still open, {name} could be anywhere from '{from}' to '{to}'. | {group}. Confidenza: {confidence}. Con le evidenze ancora aperte, questo Stato ({name}) potrebbe collocarsi ovunque tra “{from}” e “{to}”. |
+| s.fa84aa0fe2 | {holding} (tier {tier}) | {holding} (livello {tier}) |
+| s.966a5454e4 | {name} described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date. | {name}: lo Stato descritto in base alle sue caratteristiche misurate. Ogni cifra è il valore pubblicato di una serie Eurostat fissata; la nota a piè di pagina indica la serie, le dimensioni e la data di consultazione. |
+| s.47c8fcf67a | {shown} of {total} posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument. | {shown} su {total} voci dell'assetto hanno una fonte verificata. Le altre sono state ricercate in documenti pubblici di indirizzo ma qui sono omesse finché ciascuna non sia stata controllata rispetto all'atto normativo di riferimento. |
+| s.f7a15511d4 | Counted from the facts each state's report prints: holdings with a sourced register, how many of them have sourced hosting, and the infrastructure dependency their sources state. Not stated means no printed source says; it is never counted as national. | Conteggi ricavati dai fatti che il rapporto di ciascuno Stato stampa: patrimoni con un registro con fonte, quanti di essi hanno un hosting con fonte, e la dipendenza infrastrutturale che le loro fonti indicano. Non indicato significa che nessuna fonte stampata lo dice; non è mai contato come nazionale. |
+| s.26e5bd9d84 | Every holding whose hosting a checked source states, by member state: {printed} printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally. | Ogni patrimonio il cui hosting è indicato da una fonte controllata, per Stato membro (stampati: {printed}), e quelli omessi dalla verifica dei fatti contrassegnati come contestati. Ogni cella è quella che il rapporto dello Stato stesso stampa, con la stessa fonte. Un patrimonio non elencato qui non ha ancora un hosting con fonte; è una lacuna nelle evidenze, non un risultato secondo cui è ospitato a livello nazionale. |
+| s.3d9ef2e1a4 | Key infrastructure and hosting | Infrastrutture chiave e hosting |
+| s.3b7aee0921 | Register or system | Registro o sistema |
+| s.ddca7ab7f4 | A gap means not yet sourced. It never means the thing does not exist. | Una lacuna significa che manca ancora una fonte. Non significa mai che la cosa non esista. |
+| s.5d8970fa99 | A value that no checked source supports is withheld and shown as a gap. A gap means not yet sourced, never that the thing does not exist. | Un valore che nessuna fonte controllata sostiene è omesso e mostrato come lacuna. Una lacuna significa che manca ancora una fonte, mai che la cosa non esista. |
+| s.1c023ff571 | A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: {runs}. Reviewer model: {models}, the same model as the researcher. | Un'esecuzione di vaglio ha poi riesaminato ogni fatto stampato, e dopo di esso le lacune. Ha cercato una fonte migliore, informazioni più recenti e qualsiasi fonte in disaccordo. Ciascuno dei suoi risultati è stato giudicato da un revisore in cieco, a cui sono stati mostrati la citazione e l'URL ma mai il valore proposto. Esecuzioni: {runs}. Modello revisore: {models}, lo stesso modello del ricercatore. |
+| s.eb41f68213 | Anyone in any member state may submit a source or check a printed fact, through public issue forms. A submitted source passes the same mechanical checks as agent research. A fact counts as verified by a person only under the two-person rule: confirmed by someone on the reviewer roster, who did not submit it, who reads the source's language, and who declared no conflict of interest. One such rejection makes a fact disputed; two withdraw it, unless two reviewers confirmed it. | Chiunque in qualsiasi Stato membro può segnalare una fonte o controllare un fatto stampato, tramite moduli pubblici di segnalazione. Una fonte segnalata passa gli stessi controlli meccanici della ricerca degli agenti. Un fatto conta come verificato da una persona solo secondo la regola delle due persone: confermato da qualcuno nell'elenco dei revisori, che non lo ha segnalato, che legge la lingua della fonte e che ha dichiarato di non avere conflitti di interesse. Un rifiuto di questo tipo rende un fatto contestato; due lo ritirano, a meno che due revisori non lo abbiano confermato. |
+| s.e6c7329679 | Before anything is published, every printed fact is checked once more, exactly as printed, by a second model: the one that did not write it. The checker fetches the cited source and decides whether it supports the statement as printed. A production deploy is refused unless every printed fact has a current verdict of supported. The rule, the steps and each fact's verdict are in the fact-check appendix. | Prima che qualsiasi cosa sia pubblicata, ogni fatto stampato è controllato un'altra volta, esattamente come stampato, da un secondo modello: quello che non lo ha scritto. Il controllore scarica la fonte citata e decide se sostiene l'affermazione come stampata. Un deploy in produzione è rifiutato a meno che ogni fatto stampato non abbia un verdetto attuale di “sostenuto”. La regola, i passaggi e il verdetto di ogni fatto sono nell'appendice di verifica dei fatti. |
+| s.05d27dcc23 | Calculations | Calcoli |
+| s.fd9f9cff11 | Categorical findings (infrastructure dependency, sovereignty indicators): admitted only when a second, independent automated reviewer reached the same value from the same quote. | Risultati categoriali (dipendenza infrastrutturale, indicatori di sovranità): ammessi solo quando un secondo revisore automatizzato indipendente ha raggiunto lo stesso valore dalla stessa citazione. |
+| s.14a628e6d3 | Checked by | Controllato da |
+| s.d22fca0f44 | Citizen submissions staged | Segnalazioni dei cittadini in attesa |
+| s.4f23e1e7f8 | Citizens and human review | Cittadini e revisione umana |
+| s.06e8db2dfd | Claims | Affermazioni |
+| s.4108482c08 | Confidence is how many groups a state could still reach if every unknown resolved for or against it: one group is High, two Medium, three or more Low. Within a group, states are alphabetical; the order carries no meaning. | La confidenza è il numero di gruppi che uno Stato potrebbe ancora raggiungere se ogni incognita si risolvesse a suo favore o a suo sfavore: un gruppo è Alta, due Media, tre o più Bassa. All'interno di un gruppo gli Stati sono in ordine alfabetico; l'ordine non ha alcun significato. |
+| s.66e12969c2 | Count | Conteggio |
+| s.ed1c64ab57 | Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order: | Collocazione in materia di sovranità dei dati. Un input senza una fonte controllata è ignoto e conta come non dimostrato: mai come sovrano, mai come dipendente. Ogni Stato è collocato secondo la prima regola che soddisfa, in questo ordine: |
+| s.1052689464 | Dataset | Set di dati |
+| s.2a4e3cb3c6 | Decimals | Decimali |
+| s.eb559b8cbc | Dependent on non-EU providers: a source shows a tier 0 or 1 holding on non-EU infrastructure, or a national eID or trust anchor outside state or EU control. | Dipendente da fornitori extra-UE: una fonte mostra un patrimonio di livello 0 o 1 su infrastruttura extra-UE, oppure un'eID nazionale o un'ancora di fiducia fuori dal controllo dello Stato o dell'UE. |
+| s.d203be5dfd | English wording of a non-English source is a machine translation or machine summary. Its figures are checked against the original; its words are not. | La formulazione in inglese di una fonte non in inglese è una traduzione automatica o un riassunto automatico. Le sue cifre sono controllate rispetto all'originale; le sue parole no. |
+| s.d4a05b67a6 | Eurostat figures: the value was read from a pinned Eurostat dataset through its API and compared with the table cell, within 0.5%. The raw API response is stored and its SHA-256 recorded in model/fetch_manifest.csv. The footnote names the dataset, its dimensions and the retrieval date. | Cifre Eurostat: il valore è stato letto da un set di dati Eurostat fissato tramite la sua API e confrontato con la cella della tabella, entro lo 0,5%. La risposta grezza dell'API è conservata e il suo SHA-256 registrato in model/fetch_manifest.csv. La nota a piè di pagina indica il set di dati, le sue dimensioni e la data di consultazione. |
+| s.188de23f5b | Every cited source is re-fetched periodically and each quote looked for again. A fact whose quote has vanished, or whose source is gone, is withheld as disputed. A refusal to serve the page changes nothing. | Ogni fonte citata viene scaricata di nuovo periodicamente e ogni citazione cercata di nuovo. Un fatto la cui citazione è svanita, o la cui fonte è scomparsa, è omesso perché contestato. Un rifiuto di servire la pagina non cambia nulla. |
+| s.2b913254a8 | Everything is built from the project's repository. `./run.sh reproduce` rebuilds every output in a fresh clone and compares it with the published one. `./run.sh reproduce --evidence` also re-fetches every cited source and checks every quote again. The git commit and the data bundle's SHA-256 this document was built from are printed on its title page. | Tutto è costruito dal repository del progetto. `./run.sh reproduce` ricostruisce ogni risultato prodotto in un clone nuovo e lo confronta con quello pubblicato. `./run.sh reproduce --evidence` scarica inoltre di nuovo ogni fonte citata e controlla di nuovo ogni citazione. Il commit git e lo SHA-256 del bundle di dati da cui questo documento è stato costruito sono stampati sul suo frontespizio. |
+| s.84d987fe02 | Evidence grades | Gradi di evidenza |
+| s.04b0dda32a | Fact written by | Fatto scritto da |
+| s.228587d1aa | Facts disputed by a reviewer | Fatti contestati da un revisore |
+| s.18a1dacbc5 | Facts verified by a person | Fatti verificati da una persona |
+| s.d54360e78a | Facts withdrawn after review | Fatti ritirati dopo la revisione |
+| s.1f20e66b17 | Figure | Cifra |
+| s.96e578211a | Filters | Filtri |
+| s.0b134e18cb | Findings or items | Risultati o voci |
+| s.252adc9f26 | Fundamentals are Eurostat values at a pinned period, read through the dissemination API. Each is multiplied into the unit shown and rounded, and must reproduce the published value within 0.5%: | I dati fondamentali sono valori Eurostat a un periodo fissato, letti tramite l'API di diffusione. Ciascuno è moltiplicato per esprimerlo nell'unità mostrata e arrotondato, e deve riprodurre il valore pubblicato entro lo 0,5%: |
+| s.aecc49c153 | Grade | Grado |
+| s.5012de0774 | How good is the best source behind each fact? Each cited host is classified once. An archived copy counts as the page it archived. The classification was drawn up by an agent and has not been reviewed by a person. | Quanto è buona la migliore fonte dietro ogni fatto? Ogni host citato è classificato una sola volta. Una copia archiviata conta come la pagina che ha archiviato. La classificazione è stata redatta da un agente e non è stata esaminata da una persona. |
+| s.1ac6e0db9e | How sources were found | Come sono state trovate le fonti |
+| s.40176d930b | Human review | Revisione umana |
+| s.40f3f0b36f | In this build, {passing} of {printed} printed facts pass the fact check. | In questa build, {passing} su {printed} fatti stampati superano la verifica dei fatti. |
+| s.7539231e04 | Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national. | L'esposizione infrastrutturale conta, per ogni Stato, i patrimoni verificati la cui fonte citata dice dove funziona l'infrastruttura. Il silenzio conta come non indicato, mai come nazionale. |
+| s.90a031edb0 | Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only. | Infrastrutture chiave e hosting, la panoramica EU-27, elenca ogni patrimonio il cui hosting è indicato da una fonte controllata. Ogni cella è una copia di quella che il rapporto dello Stato stesso stampa, quindi ha la stessa fonte e la stessa verifica dei fatti, e un valore omesso resta omesso. I suoi conteggi per Stato riguardano solo i fatti stampati. |
+| s.0c448a5f23 | Latest recheck | Ultimo ricontrollo |
+| s.51aff04e8d | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Controllato automaticamente, non verificato da persone. Agenti automatizzati hanno individuato queste fonti e le hanno controllate meccanicamente; nessuna persona ha esaminato i risultati. La formulazione in inglese di una fonte non in inglese è una traduzione automatica o un riassunto automatico del testo citato. Si consideri ogni fatto come un indizio verso la fonte citata, non come accertato. Le correzioni sono benvenute tramite il modulo per le segnalazioni del repository. |
+| s.8b5cf8d60c | Most states do not publish where their critical registers are hosted, so placements are mostly of low confidence. That is a finding about transparency, not about sovereignty. | La maggior parte degli Stati non pubblica dove sono ospitati i propri registri critici, quindi le collocazioni sono per lo più a confidenza bassa. È un risultato sulla trasparenza, non sulla sovranità. |
+| s.b31b7fac2a | No person has verified any finding. Agents found and checked everything. | Nessuna persona ha verificato alcun risultato. Gli agenti hanno trovato e controllato tutto. |
+| s.04c299e1b3 | Not demonstrated: neither. | Non dimostrato: nessuno dei due. |
+| s.61348d3cc0 | Not reproducible byte for byte: agent research gives different findings if run again, so what is reproducible is their admission, from the recorded outputs. Also not: the posters (browser screenshots), and the hash of a page rendered in a browser. | Non riproducibile byte per byte: la ricerca degli agenti dà risultati diversi se eseguita di nuovo, quindi ciò che è riproducibile è la loro ammissione, a partire dagli output registrati. Non lo sono neppure: i poster (schermate del browser) e l'hash di una pagina visualizzata in un browser. |
+| s.170a28a9db | Period | Periodo |
+| s.f7fa7832f9 | Printed facts | Fatti stampati |
+| s.bcb88598d7 | Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5. | Priorità di un patrimonio. Priorità = conseguenza della perdita (livello 0: 3, livello 1: 2, livello 2: 1, livello 3: 0) + difficoltà di ricostruzione (recuperabilità bassa: 2, media: 1, alta: 0) + esposizione nota a fornitori extra-UE (extra-UE o misto: 2, fornitore UE o non ancora noto: 1, nazionale: 0). Critica: 6 o più; Alta: 4 o 5. |
+| s.ee19cf967e | Questions answered on the web | Domande con risposta sul web |
+| s.ddf48497b8 | Quote check of the first research runs | Controllo delle citazioni delle prime esecuzioni di ricerca |
+| s.adeb29b097 | Reproducing this document | Riprodurre questo documento |
+| s.1338a3ee0c | Research agents, one per member state, looked for each critical holding and each indicator. Each claim needed a verbatim quote of 8 to 60 words from an exact URL. Nothing an agent returned was used until it passed the mechanical checks below. Agent output is staged separately and is never rendered. | Agenti di ricerca, uno per Stato membro, hanno cercato ogni patrimonio critico e ogni indicatore. Ogni affermazione richiedeva una citazione testuale da 8 a 60 parole da un URL esatto. Nulla di ciò che un agente ha restituito è stato usato prima di aver superato i controlli meccanici qui sotto. L'output degli agenti è conservato separatamente e non viene mai mostrato. |
+| s.0d73a1c086 | Researched claims (holdings, operators, legal bases, indicators): the cited page or PDF was downloaded and its SHA-256 recorded, and the quoted text was found in the extracted document by literal matching. Every number and date in the printed value was found in the original-language quote; the English wording is a machine summary of the quote unless it appears in it verbatim. An archived copy was looked up on the Internet Archive; where none exists the footnote says so. | Affermazioni ricercate (patrimoni, operatori, basi giuridiche, indicatori): la pagina o il PDF citati sono stati scaricati e il loro SHA-256 registrato, e il testo citato è stato trovato nel documento estratto per corrispondenza letterale. Ogni numero e data nel valore stampato è stato trovato nella citazione in lingua originale; la formulazione in inglese è un riassunto automatico della citazione a meno che non vi compaia testualmente. Una copia archiviata è stata cercata su Internet Archive; dove non ne esiste alcuna, la nota a piè di pagina lo dice. |
+| s.5016356d5e | Reviewers on the roster | Revisori nell'elenco |
+| s.a29f025627 | Scale | Scala |
+| s.635dcfcb5a | Secured in law, not yet in practice: the statute, without the practice test. | Garantito per legge, non ancora in pratica: la legge, senza il criterio della pratica. |
+| s.926a4d7e8c | Source tiers | Livelli delle fonti |
+| s.9ad33161bb | Sovereign in law and in practice: a statute keeps government data under national or EU jurisdiction, and at least 75% of verified tier 0/1 holdings run on national or EU infrastructure, the trust anchor and eID are state-controlled, and the state runs its own data centres or government cloud. | Sovrano per legge e in pratica: una legge mantiene i dati pubblici sotto giurisdizione nazionale o dell'UE, e almeno il 75% dei patrimoni verificati di livello 0/1 funziona su infrastruttura nazionale o dell'UE, l'ancora di fiducia e l'eID sono sotto controllo statale, e lo Stato gestisce i propri centri dati o un cloud governativo. |
+| s.4324ca9554 | Sovereign in practice, not secured in law: the practice test, without the statute. | Sovrano in pratica, non garantito per legge: il criterio della pratica, senza la legge. |
+| s.cf84687053 | Strong | Forte |
+| s.d11347ce3a | Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. | Forte: una fonte T1 o T2 (un originale autorevole o un ente pubblico competente); una fonte ufficiale o primaria; la citazione trovata esattamente nel documento con hash; una copia archiviata esattamente di quell'URL; nessun nome nel valore assente dalla citazione; e il valore o citato da una fonte in inglese, o trovato testualmente nell'originale, o fondato su cifre riscontrate nell'originale. Un risultato categoriale è Forte solo dopo una revisione in cieco (un revisore a cui sono stati mostrati la citazione e l'URL ma non il valore proposto). Standard: ogni controllo richiesto è stato superato, ma una di queste condizioni non è soddisfatta. Qualsiasi cosa al di sotto non è stampata. Verificato: Forte, e confermato da una persona secondo la regola delle due persone: qualcuno nell'elenco dei revisori, diverso da chi lo ha segnalato, che legge la lingua della fonte e ha dichiarato di non avere conflitti. |
+| s.9f1a1d5e3e | T1 authoritative original (official law portal, statistics office, Eurostat) | T1 originale autorevole (portale normativo ufficiale, istituto di statistica, Eurostat) |
+| s.75974ad5f7 | T2 competent public body or audit office | T2 ente pubblico competente o organo di controllo |
+| s.c342fa1f4f | T3 other institution or company | T3 altra istituzione o impresa |
+| s.a544050c90 | T4 secondary (unofficial law mirror, press, encyclopedia) | T4 secondaria (mirror normativo non ufficiale, stampa, enciclopedia) |
+| s.f1fceee56b | The blind reviewer during research was the same model as the researcher, so the two readings can share its blind spots. The fact check before each deploy uses a different model, which narrows that risk but does not remove blind spots that models share. | Il revisore in cieco durante la ricerca era lo stesso modello del ricercatore, quindi le due letture possono condividerne i punti ciechi. La verifica dei fatti prima di ogni deploy usa un modello diverso, il che riduce quel rischio ma non elimina i punti ciechi che i modelli condividono. |
+| s.61e3fb1ddf | The cross-model fact check before every deploy | La verifica dei fatti tra modelli prima di ogni deploy |
+| s.3882bb002a | The printed value is checked against its quote at build time. Every number and date in it must appear in the original-language quote, read in any EU number format. A number found only in the English translation does not count. An abbreviation not found in the quote is shown in the fact's checklist. A value that is not a verbatim extract is a machine summary of the quote, and is labelled as one. | Il valore stampato è controllato rispetto alla sua citazione al momento della build. Ogni numero e data al suo interno deve comparire nella citazione in lingua originale, letta in qualsiasi formato numerico dell'UE. Un numero trovato solo nella traduzione inglese non conta. Un'abbreviazione non trovata nella citazione è mostrata nella lista di controllo del fatto. Un valore che non è un estratto testuale è un riassunto automatico della citazione, ed è etichettato come tale. |
+| s.67ac669b7c | The web page's Ask feature answers questions using only these sourced findings, with a citation for every fact. Each question is sent to Anthropic's API to generate the answer and is not stored by this site. The model is told the findings are machine-checked and to say so in every answer. | La funzione Chiedi della pagina web risponde alle domande usando solo questi risultati con fonte, con una citazione per ogni fatto. Ogni domanda è inviata all'API di Anthropic per generare la risposta e non è conservata da questo sito. Al modello viene detto che i risultati sono controllati automaticamente e di dirlo in ogni risposta. |
+| s.4220d202c0 | There is no numeric confidence score: nothing has calibrated one. | Non esiste un punteggio numerico di confidenza: nulla ne ha calibrato uno. |
+| s.a0de0a20ed | This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: {facts} facts are printed, {gaps} values are withheld as gaps, and {disputed} are withheld as disputed. | Questa appendice è generata dal codice e dai dati che hanno prodotto questo documento. Ogni regola qui sotto è la regola che la build esegue, e ogni numero è contato dai file che essa legge. In questa build: {facts, plural, one {# fatto stampato} many {# fatti stampati} other {# fatti stampati}}, {gaps, plural, one {# valore omesso come lacuna} many {# valori omessi come lacune} other {# valori omessi come lacune}} e {disputed, plural, one {# omesso perché contestato} many {# omessi perché contestati} other {# omessi perché contestati}}. |
+| s.aed3b8c6a7 | Verified | Verificato |
+| s.8524fff511 | Vetting outcome | Esito del vaglio |
+| s.7c88c313f1 | What must hold for a fact to be printed | Che cosa deve valere perché un fatto sia stampato |
+| s.cdba8c69aa | What this does not establish | Che cosa questo non stabilisce |
+| s.3ef3f040f0 | What this is, and what it is not | Che cosa è, e che cosa non è |
+| s.ce296c876c | anything else: unrecorded, a person, or a program | qualsiasi altra cosa: non registrato, una persona o un programma |
+| s.4cc558b843 | corroborated | corroborato |
+| s.729e6ed847 | disputed | contestato |
+| s.b55e22fe78 | exact | esatta |
+| s.a6dfdeaa3a | gone | scomparsa |
+| s.67805069b9 | loose | approssimativa |
+| s.8012ff51a0 | unchanged | invariata |
+| s.408e9edfd6 | unreachable | irraggiungibile |
+| s.625916084e | Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | Una legge o un regolamento vincolante richiede che i dati pubblici (o i dati pubblici classificati) siano conservati e trattati sotto giurisdizione nazionale o dell'UE? |
+| s.ca310cd530 | Does the state operate its own government data centres that are in operation today? | Lo Stato gestisce propri centri dati governativi oggi in funzione? |
+| s.cf7088eefc | Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | Una certificazione cloud che richiede l'immunità dal diritto extra-UE è in vigore o adottata per uso governativo? |
+| s.a3e860461c | Is a national sovereign or government cloud platform in operation (not announced)? | Una piattaforma cloud nazionale sovrana o governativa è in funzione (non solo annunciata)? |
+| s.658d6ce48a | Is the government's data classification scheme established in a statute or binding regulation? | Lo schema di classificazione dei dati del governo è stabilito in una legge o in un regolamento vincolante? |
+| s.2d29475e37 | Is the national electronic identity scheme operated by the state or a state-controlled body? | Lo schema nazionale di identità elettronica è gestito dallo Stato o da un organismo sotto controllo statale? |
+| s.922e29d89c | Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | La radice dell'infrastruttura a chiave pubblica del governo o il suo servizio fiduciario qualificato è gestita dallo Stato o da un organismo sotto controllo statale? |
 | s.9e80ea69fc | Run {command} to regenerate the bundle. | Eseguire {command} per rigenerare il bundle. |
 | s.c77394b252 | Loading the map… | Caricamento della mappa… |
 | s.78afc1371f | Map of the EU-27 by data-sovereignty group | Mappa dell'EU-27 per gruppo di sovranità dei dati |
@@ -334,12 +519,12 @@
 | s.93d2f80ef7 | Submissions are checked by machine and then by a different person who reads the language ({link}). | Le segnalazioni sono controllate da una macchina e poi da una persona diversa che legge la lingua ({link}). |
 | s.60e6d488a8 | Submit a source | Segnala una fonte |
 | s.088fc2bb86 | capacity not yet sized | capacità non ancora dimensionata |
-| s.87abd9beab | fact check for {name} | verifica dei fatti per {name} |
+| s.87abd9beab | fact check for {name} | verifica dei fatti ({name}) |
 | s.5e705951b3 | methodology | metodologia |
 | s.32ea9a3579 | {n, plural, one {# sourced fact shown} other {# sourced facts shown}} | {n, plural, one {# fatto con fonte mostrato} many {# fatti con fonte mostrati} other {# fatti con fonte mostrati}} |
 | s.f9b095cf90 | {n, plural, one {Know a public source for the withheld value, or a better one for a fact?} other {Know a public source for one of the # withheld values, or a better one for a fact?}} | {n, plural, one {Conosce una fonte pubblica per il valore omesso, o una migliore per un fatto?} many {Conosce una fonte pubblica per uno di questi # valori omessi, o una migliore per un fatto?} other {Conosce una fonte pubblica per uno di questi # valori omessi, o una migliore per un fatto?}} |
 | s.59a9dfcb7b | {verified} of {total} critical holding classes verified | {verified} su {total} classi di patrimonio critiche verificate |
-| s.5233d9d9bc | Back to {name} | Torna a {name} |
+| s.5233d9d9bc | Back to {name} | Torna alla pagina: {name} |
 | s.13e63611d5 | Fact check | Verifica dei fatti |
 | s.3c558d8e40 | Fact check: {name} | Verifica dei fatti: {name} |
 | s.66d69ab480 | No fact-check appendix for {iso}. | Nessuna appendice di verifica dei fatti per {iso}. |
@@ -454,7 +639,7 @@
 | s.5674911442 | An input without a checked source counts as not demonstrated. | Un input senza una fonte controllata conta come non dimostrato. |
 | s.2992013270 | Confidence: | Confidenza: |
 | s.fe591c90cd | EU-27 · Ranking by published rule | EU-27 · Classifica secondo una regola pubblicata |
-| s.68e6d874c0 | Full analysis of {name} | Analisi completa di {name} |
+| s.68e6d874c0 | Full analysis of {name} | Analisi completa: {name} |
 | s.ae9629f4eb | Groups | Gruppi |
 | s.52230cf8d0 | Hatched: Low confidence. | Tratteggiato: confidenza bassa. |
 | s.b1a5954a48 | High | Alta |
@@ -489,10 +674,196 @@
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-21
 - Re-reviewed by: agent A, claude-opus-5-5, 2026-10-21 (applied fixes and the nine changed strings); final round: 2 re-reviewed
-- Verdict: 476 ok, 0 fix
+- Stage 3 reviewed by: agent A, claude-opus-5-5, 2026-10-21 (the 184 model strings); stage 3: fixes re-reviewed
+- Verdict: 661 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
+| s.b85a2bdd1b | it | ok | | |
+| s.fcb532f087 | it | ok | | |
+| s.96ecaa31b4 | it | ok | | |
+| s.2f1257dc51 | it | ok | | |
+| s.ec814ead0c | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.f280e2a648 | it | ok | | |
+| s.d8d788ca5d | it | ok | | |
+| s.765efdcdc6 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.aae813dd56 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.3f865d6890 | it | ok | | |
+| s.3427094904 | it | ok | | |
+| s.04b7b26c8c | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.6b91907643 | it | ok | | |
+| s.ca20bc6b00 | it | ok | | |
+| s.3165449154 | it | ok | | |
+| s.f089a1fbed | it | ok | | |
+| s.72e58b67f4 | it | ok | | |
+| s.171ec6a77a | it | ok | | |
+| s.04c3e89d9b | it | ok | | |
+| s.aaf87fe57a | it | ok | | |
+| s.4e9d205ed7 | it | ok | | |
+| s.f19d170012 | it | ok | | |
+| s.042b70234d | it | ok | | |
+| s.f180a9ce79 | it | ok | | |
+| s.98bf3b1ffd | it | ok | | |
+| s.3d64ce6c47 | it | ok | | |
+| s.5343f3aabe | it | ok | | |
+| s.3b9865356c | it | ok | | |
+| s.0c3b551296 | it | ok | | |
+| s.5dfe1bc1a0 | it | ok | | |
+| s.c4fe29fe96 | it | ok | | |
+| s.ec4f0f9f9e | it | ok | | |
+| s.9704ed6cc1 | it | ok | | |
+| s.982c964c83 | it | ok | | |
+| s.8061bb6bf8 | it | ok | | |
+| s.b86fc1b412 | it | ok | | |
+| s.94accd37b7 | it | ok | | |
+| s.8667bf9045 | it | ok | | |
+| s.2948d7b9da | it | ok | | |
+| s.b3f1bf4f30 | it | ok | | |
+| s.f785330b4c | it | ok | | |
+| s.a91102c85d | it | ok | | |
+| s.be9109ac1b | it | ok | | |
+| s.a3d31a53fb | it | ok | | |
+| s.99767669ed | it | ok | | |
+| s.cbbacb3e80 | it | ok | | |
+| s.44749b1cbc | it | ok | | |
+| s.6fb2a8a8cc | it | ok | | |
+| s.e6e1757649 | it | ok | | |
+| s.b34eac40f3 | it | ok | | |
+| s.1652d30cec | it | ok | | |
+| s.114883188a | it | ok | | |
+| s.fd51e343e2 | it | ok | | |
+| s.2f23122d83 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.a9b0cdd774 | it | ok | | |
+| s.c2cce8d695 | it | ok | | |
+| s.3ad8637946 | it | ok | | |
+| s.f987414340 | it | ok | | |
+| s.d0e687b079 | it | ok | | |
+| s.f83b48a858 | it | ok | | |
+| s.182d37ec74 | it | ok | | |
+| s.f2fe3e1c9e | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.034dd0deff | it | ok | | |
+| s.c622853228 | it | ok | | |
+| s.5e46f732e6 | it | ok | | |
+| s.1890a8b969 | it | ok | | |
+| s.acb219584d | it | ok | | |
+| s.62c114ace1 | it | ok | | |
+| s.110c7c517b | it | ok | | |
+| s.5f407d41f3 | it | ok | | |
+| s.1ca90cb624 | it | ok | | |
+| s.0a4c313dc5 | it | ok | | |
+| s.5c1505aea9 | it | ok | | |
+| s.2dfa66079d | it | ok | | |
+| s.d7e81c01c8 | it | ok | | |
+| s.1e01ee18be | it | ok | | |
+| s.967135dc53 | it | ok | | |
+| s.16b62d3922 | it | ok | | |
+| s.78d71ef805 | it | ok | | |
+| s.9be70f66f8 | it | ok | | |
+| s.eeac96e96e | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.1ef26968be | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.5e127373f3 | it | ok | | |
+| s.5f11eb7511 | it | ok | | |
+| s.7d46fdf50f | it | ok | | |
+| s.ea4e96959c | it | ok | | |
+| s.fd12863535 | it | ok | | |
+| s.fb360f9c09 | it | ok | | |
+| s.fff7760a9e | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.fa84aa0fe2 | it | ok | | |
+| s.966a5454e4 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.47c8fcf67a | it | ok | | |
+| s.f7a15511d4 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.26e5bd9d84 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.3d9ef2e1a4 | it | ok | | |
+| s.3b7aee0921 | it | ok | | |
+| s.ddca7ab7f4 | it | ok | | |
+| s.5d8970fa99 | it | ok | | |
+| s.1c023ff571 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.eb41f68213 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.e6c7329679 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.05d27dcc23 | it | ok | | |
+| s.fd9f9cff11 | it | ok | | |
+| s.14a628e6d3 | it | ok | | |
+| s.d22fca0f44 | it | ok | | |
+| s.4f23e1e7f8 | it | ok | | |
+| s.06e8db2dfd | it | ok | | |
+| s.4108482c08 | it | ok | | |
+| s.66e12969c2 | it | ok | | |
+| s.ed1c64ab57 | it | ok | | |
+| s.1052689464 | it | ok | | |
+| s.2a4e3cb3c6 | it | ok | | |
+| s.eb559b8cbc | it | ok | | |
+| s.d203be5dfd | it | ok | | |
+| s.d4a05b67a6 | it | ok | | |
+| s.188de23f5b | it | ok | | |
+| s.2b913254a8 | it | ok | | |
+| s.84d987fe02 | it | ok | | |
+| s.04b0dda32a | it | ok | | |
+| s.228587d1aa | it | ok | | |
+| s.18a1dacbc5 | it | ok | | |
+| s.d54360e78a | it | ok | | |
+| s.1f20e66b17 | it | ok | | |
+| s.96e578211a | it | ok | | |
+| s.0b134e18cb | it | ok | | |
+| s.252adc9f26 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.aecc49c153 | it | ok | | |
+| s.5012de0774 | it | ok | | |
+| s.1ac6e0db9e | it | ok | | |
+| s.40176d930b | it | ok | | |
+| s.40f3f0b36f | it | ok | | |
+| s.7539231e04 | it | ok | | |
+| s.90a031edb0 | it | ok | | |
+| s.0c448a5f23 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.51aff04e8d | it | ok | | |
+| s.8b5cf8d60c | it | ok | | |
+| s.b31b7fac2a | it | ok | | |
+| s.04c299e1b3 | it | ok | | |
+| s.61348d3cc0 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.170a28a9db | it | ok | | |
+| s.f7fa7832f9 | it | ok | | |
+| s.bcb88598d7 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.ee19cf967e | it | ok | | |
+| s.ddf48497b8 | it | ok | | |
+| s.adeb29b097 | it | ok | | |
+| s.1338a3ee0c | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.0d73a1c086 | it | ok | | |
+| s.5016356d5e | it | ok | | |
+| s.a29f025627 | it | ok | | |
+| s.635dcfcb5a | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.926a4d7e8c | it | ok | | |
+| s.9ad33161bb | it | ok | | |
+| s.4324ca9554 | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.cf84687053 | it | ok | | |
+| s.d11347ce3a | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.9f1a1d5e3e | it | ok | | |
+| s.75974ad5f7 | it | ok | | |
+| s.c342fa1f4f | it | ok | | |
+| s.a544050c90 | it | ok | | |
+| s.f1fceee56b | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.61e3fb1ddf | it | ok | | |
+| s.3882bb002a | it | ok | | |
+| s.67ac669b7c | it | ok | | |
+| s.4220d202c0 | it | ok | | |
+| s.a0de0a20ed | it | ok | fix applied 2026-10-21, re-reviewed | |
+| s.aed3b8c6a7 | it | ok | | |
+| s.8524fff511 | it | ok | | |
+| s.7c88c313f1 | it | ok | | |
+| s.cdba8c69aa | it | ok | | |
+| s.3ef3f040f0 | it | ok | | |
+| s.ce296c876c | it | ok | | |
+| s.4cc558b843 | it | ok | | |
+| s.729e6ed847 | it | ok | | |
+| s.b55e22fe78 | it | ok | | |
+| s.a6dfdeaa3a | it | ok | | |
+| s.67805069b9 | it | ok | | |
+| s.8012ff51a0 | it | ok | | |
+| s.408e9edfd6 | it | ok | | |
+| s.625916084e | it | ok | | |
+| s.ca310cd530 | it | ok | | |
+| s.cf7088eefc | it | ok | | |
+| s.a3e860461c | it | ok | | |
+| s.658d6ce48a | it | ok | | |
+| s.2d29475e37 | it | ok | | |
+| s.922e29d89c | it | ok | | |
 | s.9e80ea69fc | it | ok | | |
 | s.c77394b252 | it | ok | | |
 | s.78afc1371f | it | ok | | |
@@ -818,12 +1189,12 @@
 | s.93d2f80ef7 | it | ok | | |
 | s.60e6d488a8 | it | ok | | |
 | s.088fc2bb86 | it | ok | | |
-| s.87abd9beab | it | ok | | |
+| s.87abd9beab | it | ok | fix applied 2026-10-21, re-reviewed | |
 | s.5e705951b3 | it | ok | | |
 | s.32ea9a3579 | it | ok | | |
 | s.f9b095cf90 | it | ok | fix applied 2026-10-21, re-reviewed | |
 | s.59a9dfcb7b | it | ok | fix applied 2026-10-21, re-reviewed | |
-| s.5233d9d9bc | it | ok | | |
+| s.5233d9d9bc | it | ok | fix applied 2026-10-21, re-reviewed | |
 | s.13e63611d5 | it | ok | | |
 | s.3c558d8e40 | it | ok | | |
 | s.66d69ab480 | it | ok | | |
@@ -938,7 +1309,7 @@
 | s.5674911442 | it | ok | | |
 | s.2992013270 | it | ok | | |
 | s.fe591c90cd | it | ok | | |
-| s.68e6d874c0 | it | ok | | |
+| s.68e6d874c0 | it | ok | fix applied 2026-10-21, re-reviewed | |
 | s.ae9629f4eb | it | ok | | |
 | s.52230cf8d0 | it | ok | | |
 | s.b1a5954a48 | it | ok | | |

@@ -18,7 +18,7 @@ import { Poster } from './pages/Poster'
 import { Sources } from './pages/Sources'
 import { Sovereignty } from './pages/Sovereignty'
 import { countryPath } from './utils/routes'
-import { langFromPath, lookup, resolveLang, translator } from './i18n'
+import { langFromPath, lookup, registerCountries, resolveLang, translator } from './i18n'
 
 /**
  * A member state lives at its own top-level path, `/de` (#105), and a language other than its default at
@@ -47,7 +47,14 @@ export function App() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    loadBundle().then(setBundle, e => setError(String(e)))
+    loadBundle().then(
+      b => {
+        // Sentences the model writes name states; a translated page names them in its own language (#113).
+        registerCountries(b.countries)
+        setBundle(b)
+      },
+      e => setError(String(e)),
+    )
   }, [])
 
   // Printed before the router has a page, so the language comes straight from the address.

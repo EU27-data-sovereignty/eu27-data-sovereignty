@@ -4,7 +4,7 @@ import { SourceList } from '@/components/SourceList'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
 import { BUTTON_OUTLINE, CARD, FIELD } from '@/components/ui'
-import { m, useTx } from '@/i18n'
+import { m, useCountryName, useTx } from '@/i18n'
 
 const PAGE = 20
 
@@ -54,6 +54,7 @@ function Split({ title, parts }: { title: string; parts: [string, number, string
 /** The whole register of checked sources, each with every claim in the bundle it supports. */
 export function Sources({ bundle }: { bundle: Bundle }) {
   const { tx, num } = useTx()
+  const countryName = useCountryName()
   const [query, setQuery] = useState('')
   const [iso, setIso] = useState('')
   const [tier, setTier] = useState('')
@@ -121,7 +122,9 @@ export function Sources({ bundle }: { bundle: Bundle }) {
   const strong = Object.values(bundle.claims).filter(cs =>
     cs.some(c => c.grade !== 'Standard'),
   ).length
-  const names = Object.fromEntries(Object.values(bundle.countries).map(c => [c.iso2, c.name]))
+  const names = Object.fromEntries(
+    Object.values(bundle.countries).map(c => [c.iso2, countryName(c.iso2, c.name)]),
+  )
 
   return (
     <article>

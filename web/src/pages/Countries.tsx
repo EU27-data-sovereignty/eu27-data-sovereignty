@@ -9,7 +9,7 @@ import { CARD, Dots, FIELD, Segmented } from '@/components/ui'
 import { countryPath } from '@/utils/routes'
 import { CountryOutline } from '@/charts/CountryOutline'
 import { ISO_OF, useEuShapes } from '@/charts/euShapes'
-import { useTx } from '@/i18n'
+import { useCountryName, useTx } from '@/i18n'
 
 type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 
@@ -20,6 +20,7 @@ type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
  */
 export function Countries({ bundle }: { bundle: Bundle }) {
   const { tx } = useTx()
+  const countryName = useCountryName()
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('name')
   const shapes = useEuShapes()
@@ -115,7 +116,7 @@ export function Countries({ bundle }: { bundle: Bundle }) {
                 <div className="flex items-baseline justify-between gap-3">
                   <h2 className="font-display text-xl font-bold">
                     <Link to={report(c.iso2)} className="hover:underline">
-                      {c.name}
+                      {countryName(c.iso2, c.name)}
                     </Link>
                   </h2>
                   <span className="text-xs font-bold tracking-wider text-[var(--color-fg-muted)]">

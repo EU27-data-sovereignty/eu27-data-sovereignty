@@ -82,13 +82,18 @@ test.describe('a member state lives at its code (#105)', () => {
   test('the old /country/<ISO> path lands on /<iso>', async ({ page }) => {
     await page.goto('/country/DE')
     await expect(page).toHaveURL(/\/de$/)
-    await expect(page.getByRole('heading', { level: 1, name: 'Germany' })).toBeVisible()
+    // The heading names the state in the page's language (#113): Deutschland on /de.
+    await expect(page.locator('main#main h1')).toHaveText(
+      new Intl.DisplayNames(['de-DE'], { type: 'region' }).of('DE')!,
+    )
   })
 
   test('an upper-case code is redirected to the lower-case one', async ({ page }) => {
     await page.goto('/EL')
     await expect(page).toHaveURL(/\/el$/)
-    await expect(page.getByRole('heading', { level: 1, name: 'Greece' })).toBeVisible()
+    await expect(page.locator('main#main h1')).toHaveText(
+      new Intl.DisplayNames(['el-GR'], { type: 'region' }).of('GR')!,
+    )
   })
 
   test('a two-letter segment that is not a member state is not found', async ({ page }) => {
@@ -135,7 +140,7 @@ test.describe('data actually renders', () => {
   })
 
   test('a value with no checked source is shown as a gap, not a fact', async ({ page }) => {
-    await page.goto('/de')
+    await page.goto(english('DE'))
     await expect(page.locator('main').getByText('Not yet verified').first()).toBeVisible()
     await expect(page.locator('main').getByText('Not yet sized').first()).toBeVisible()
   })
@@ -612,7 +617,7 @@ test.describe('accessibility in dark mode (#92)', () => {
 
 test.describe('print (#92)', () => {
   test('printing a country page drops the navigation and keeps the findings', async ({ page }) => {
-    await page.goto('/de')
+    await page.goto(english('DE'))
     await page.emulateMedia({ media: 'print' })
     await expect(page.locator('header nav').first()).toBeHidden()
     await expect(page.getByRole('heading', { name: 'Germany', exact: true })).toBeVisible()
