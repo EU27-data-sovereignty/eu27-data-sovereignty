@@ -4,6 +4,7 @@ import { DocumentView } from '@/components/DocumentView'
 import { methodBlocks } from '@/utils/methodBlocks'
 import { MethodFrame } from '@/components/MethodFrame'
 import type { Bundle } from '@/data/types'
+import { useTx } from '@/i18n'
 import { countryPath } from '@/utils/routes'
 
 /**
@@ -13,22 +14,26 @@ import { countryPath } from '@/utils/routes'
  */
 export function FactCheck({ bundle }: { bundle: Bundle }) {
   const { iso } = useParams()
+  const { tx } = useTx()
   const code = iso?.toUpperCase()
   const doc = code ? bundle.factcheck.countries[code] : bundle.factcheck.eu
   if (!doc) {
-    return <p>No fact-check appendix for {iso}.</p>
+    return <p>{tx('No fact-check appendix for {iso}.', { iso: iso ?? '' })}</p>
   }
   const name = code ? bundle.documents[code]?.name : undefined
   return (
-    <MethodFrame title={`Fact check${name ? `: ${name}` : ''}`} sections={doc.sections}>
+    <MethodFrame
+      title={name ? tx('Fact check: {name}', { name }) : tx('Fact check')}
+      sections={doc.sections}
+    >
       {name && code && (
         <p className="mb-4 text-sm">
           <Link to={countryPath(code)} className="underline">
-            Back to {name}
+            {tx('Back to {name}', { name })}
           </Link>{' '}
           ·{' '}
           <Link to="/fact-check" className="underline">
-            All member states
+            {tx('All member states')}
           </Link>
         </p>
       )}

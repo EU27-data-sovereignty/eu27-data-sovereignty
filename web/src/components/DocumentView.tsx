@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 import type { Block, Bundle, Document, Span } from '@/data/types'
-import { spanText, useT } from '@/i18n'
+import { spanText, useT, useTx } from '@/i18n'
 
 /**
  * Renders the content model (model/document.py) -- the same document the PDF typesets.
@@ -12,6 +12,7 @@ import { spanText, useT } from '@/i18n'
  */
 export function SpanView({ span, numbers, bundle, compact = false }: SpanProps) {
   const t = useT()
+  const { tx } = useTx()
   if (span.role === 'disputed' && compact) {
     // In a grid the checker's whole reason would stretch one row to twenty lines: show the verdict, the word
     // the reason opens with, and keep the reason one click away. Nothing is added; the text is the model's.
@@ -49,7 +50,11 @@ export function SpanView({ span, numbers, bundle, compact = false }: SpanProps) 
             <a
               href={`#src-${n}`}
               className="text-[var(--color-accent-text)] no-underline hover:underline"
-              aria-label={`Source ${n}: ${bundle.sources[sid]?.label ?? sid}. Evidence: ${span.g ?? ''}`}
+              aria-label={tx('Source {n}: {label}. Evidence: {evidence}', {
+                n: String(n),
+                label: bundle.sources[sid]?.label ?? sid,
+                evidence: span.g ?? '',
+              })}
             >
               [{n}]
             </a>
@@ -182,13 +187,14 @@ export function DocumentView({
   blocks?: (block: Block, section: string) => ReactNode | undefined
 }) {
   const t = useT()
+  const { tx } = useTx()
   return (
     <>
       {doc.sections.map((s, i) => (
         <section key={s.id} id={s.id} className="mb-10 scroll-mt-4">
           <h2 className="mb-4 font-display text-2xl font-bold tracking-tight">
             <span className="mb-1 block font-sans text-xs font-semibold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
-              Section {i + 1}
+              {tx('Section {n}', { n: i + 1 })}
             </span>
             {spanText({ t: s.title, key: s.key }, t)}
           </h2>

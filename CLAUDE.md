@@ -181,6 +181,11 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `- Read by (<lang>): …` line says it is unread machine translation. Re-run admission after any draft change.
   Renderers print keyed strings through `t(key)`, counts through ICU patterns, and `tests/test_i18n.py` holds the
   app, the bundle and the tables to one list.
+- **Every sentence the web app writes goes through the site catalog (#113).** Write new English as
+  `tx('Whole sentence.', { arg })` (or `txr` when an element sits inside it; `m('…')` in a data file), never as bare
+  JSX text, never built from pieces, a count as `{n, plural, one {…} other {…}}`. Then
+  `python3 model/i18n_site.py extract`; the gate fails until SOURCE.md matches the code. A new or edited string prints
+  in English in the six site languages until drafted and cross-reviewed (`python3 model/i18n_site.py stale`).
 - **`TECHNICAL-UNIVERSITIES.md` is authored, not generated** (#108). Per state, the institutions on a named published
   list (CESAER, EuroTech) or the state's technical university cited from a fetched page, else **[unverified]**, or one
   `none: searched <date>` row; alphabetical

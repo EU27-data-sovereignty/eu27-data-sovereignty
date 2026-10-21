@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
 import { AUDIENCE_GUIDES, TASK_GUIDES } from '@/data/guides'
+import { m, useTx } from '@/i18n'
 
 export type EntryMode = 'role' | 'need'
 
@@ -175,7 +176,7 @@ const TASK_ICONS: { id: string; icon: ReactNode }[] = [
 const SEGMENTS: { mode: EntryMode; label: string; icon: ReactNode }[] = [
   {
     mode: 'role',
-    label: 'I am…',
+    label: m('I am…'),
     icon: (
       <>
         <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" strokeWidth="1.7" />
@@ -191,7 +192,7 @@ const SEGMENTS: { mode: EntryMode; label: string; icon: ReactNode }[] = [
   },
   {
     mode: 'need',
-    label: 'I need to…',
+    label: m('I need to…'),
     icon: (
       <>
         <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.7" />
@@ -225,15 +226,18 @@ function Icon({ children }: { children: ReactNode }) {
 }
 
 /** A label in one or two lines; the break is forced only where the buttons are wide enough for it. */
-function Label({ lines }: { lines: [string, string?] }) {
+function Label({ text }: { text: string }) {
+  const { tx } = useTx()
+  // Translated whole; the newline in it is where a wide screen breaks the line, a space on a narrow one.
+  const [first, ...rest] = tx(text).split('\n')
   return (
     <span>
-      {lines[0]}
-      {lines[1] ? (
+      {first}
+      {rest.length ? (
         <>
           {' '}
           <br className="hidden sm:block" />
-          {lines[1]}
+          {rest.join(' ')}
         </>
       ) : null}
     </span>
@@ -247,17 +251,18 @@ function Label({ lines }: { lines: [string, string?] }) {
  */
 export function AudienceSelector() {
   const [mode, setMode] = useState<EntryMode>('role')
+  const { tx } = useTx()
   const [guides, icons, base] =
     mode === 'role'
       ? ([AUDIENCE_GUIDES, AUDIENCE_ICONS, '/for'] as const)
       : ([TASK_GUIDES, TASK_ICONS, '/how'] as const)
 
   return (
-    <section aria-label="Choose your entry point" className="bg-[var(--color-band)]">
+    <section aria-label={tx('Choose your entry point')} className="bg-[var(--color-band)]">
       <div className="mx-auto max-w-[1440px] px-4 pt-8 pb-12 sm:px-8">
         <div
           role="group"
-          aria-label="Choose entry by"
+          aria-label={tx('Choose entry by')}
           className="inline-flex max-w-full items-center rounded-xl border border-[var(--color-navy-border)] bg-[var(--color-navy-surface)] p-1 sm:ml-2"
         >
           {SEGMENTS.map((s, i) => (
@@ -281,14 +286,14 @@ export function AudienceSelector() {
                 <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
                   {s.icon}
                 </svg>
-                {s.label}
+                {tx(s.label)}
               </button>
             </span>
           ))}
         </div>
 
         <nav
-          aria-label={mode === 'role' ? 'Guides by audience' : 'Guides by task'}
+          aria-label={mode === 'role' ? tx('Guides by audience') : tx('Guides by task')}
           className="mt-[26px] grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-2.5"
         >
           {guides.map(g => (
@@ -298,7 +303,7 @@ export function AudienceSelector() {
               className={`${CHIP} border-[var(--color-navy-border)] bg-[var(--color-navy-surface)]`}
             >
               <Icon>{icons.find(x => x.id === g.slug)?.icon}</Icon>
-              <Label lines={g.label} />
+              <Label text={g.label} />
             </Link>
           ))}
         </nav>

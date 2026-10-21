@@ -1,10 +1,11 @@
 import { coverage, factCounts } from './sources'
 import type { Bundle, Span } from './types'
+import type { Tx } from '@/i18n'
 
 /**
  * The figures a guide page may show (#102). Each is counted from the bundle when the page renders, from
  * the same spans the reports print, so a value the fact check withheld is never counted and no number is
- * written into a guide by hand.
+ * written into a guide by hand. Each takes the page's `tx`, so its value and label print in the page's language.
  */
 export interface Figure {
   value: string
@@ -32,95 +33,109 @@ function indicatorYes(bundle: Bundle, id: string): number {
   ).length
 }
 
-const of27 = (n: number) => `${n} of 27`
+const of27 = (tx: Tx, n: number) => tx('{n} of 27', { n })
 
 export const FIGURES = {
-  holdingsVerified: (b: Bundle): Figure => {
+  holdingsVerified: (b: Bundle, tx: Tx): Figure => {
     const c = Object.values(b.countries).map(coverage)
     return {
-      value: `${c.reduce((n, x) => n + x.verified, 0)} of ${c.reduce((n, x) => n + x.total, 0)}`,
-      label: 'critical holdings with a checked source',
+      value: tx('{n} of {total}', {
+        n: c.reduce((n, x) => n + x.verified, 0),
+        total: c.reduce((n, x) => n + x.total, 0),
+      }),
+      label: tx('critical holdings with a checked source'),
       to: '/countries',
     }
   },
-  tier0Hosting: (b: Bundle): Figure => {
+  tier0Hosting: (b: Bundle, tx: Tx): Figure => {
     const tier0 = isos(b).flatMap(iso =>
       rows(b, iso, 'holdings').filter(r => r[1]?.t.includes('(tier 0)')),
     )
     return {
-      value: `${tier0.filter(r => r[4]?.role === 'fact').length} of ${tier0.length}`,
-      label: 'tier 0 holdings whose hosting a source states',
+      value: tx('{n} of {total}', {
+        n: tier0.filter(r => r[4]?.role === 'fact').length,
+        total: tier0.length,
+      }),
+      label: tx('tier 0 holdings whose hosting a source states'),
       to: '/infrastructure',
     }
   },
-  lowRecoverability: (b: Bundle): Figure => {
+  lowRecoverability: (b: Bundle, tx: Tx): Figure => {
     const all = Object.values(b.countries).flatMap(c => c.national_data)
     return {
-      value: `${all.filter(e => e.recoverability === 'low').length} of ${all.length}`,
-      label: 'holdings classed as hard to rebuild',
+      value: tx('{n} of {total}', {
+        n: all.filter(e => e.recoverability === 'low').length,
+        total: all.length,
+      }),
+      label: tx('holdings classed as hard to rebuild'),
       to: '/methodology#m-calculations',
     }
   },
-  gaps: (b: Bundle): Figure => ({
+  gaps: (b: Bundle, tx: Tx): Figure => ({
     value: Object.values(b.documents)
       .reduce((n, d) => n + factCounts(d).gaps, 0)
       .toLocaleString('en'),
-    label: 'values withheld as gaps or disputed, each one a question',
+    label: tx('values withheld as gaps or disputed, each one a question'),
     to: '/countries',
   }),
-  sources: (b: Bundle): Figure => ({
+  sources: (b: Bundle, tx: Tx): Figure => ({
     value: Object.keys(b.sources).length.toLocaleString('en'),
-    label: 'checked sources, each hashed and quoted',
+    label: tx('checked sources, each hashed and quoted'),
     to: '/sources',
   }),
-  statesWithHosting: (b: Bundle): Figure => ({
-    value: of27(new Set(hostingRows(b).map(r => r[0]!.t)).size),
-    label: 'states with any sourced hosting',
+  statesWithHosting: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(tx, new Set(hostingRows(b).map(r => r[0]!.t)).size),
+    label: tx('states with any sourced hosting'),
     to: '/infrastructure',
   }),
-  notNational: (b: Bundle): Figure => ({
+  notNational: (b: Bundle, tx: Tx): Figure => ({
     value: String(
       hostingRows(b).filter(r => r[5]?.role === 'fact' && !r[5].t.startsWith('National')).length,
     ),
-    label: 'holdings sourced to an EU provider or mixed hosting',
+    label: tx('holdings sourced to an EU provider or mixed hosting'),
     to: '/infrastructure',
   }),
-  jurisdictionLaw: (b: Bundle): Figure => ({
-    value: of27(indicatorYes(b, 'L1')),
-    label: 'states with a sourced jurisdiction requirement',
+  jurisdictionLaw: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(tx, indicatorYes(b, 'L1')),
+    label: tx('states with a sourced jurisdiction requirement'),
     to: '/sovereignty#indicators',
   }),
-  certification: (b: Bundle): Figure => ({
-    value: of27(indicatorYes(b, 'L3')),
-    label: 'states with a sourced sovereign cloud certification',
+  certification: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(tx, indicatorYes(b, 'L3')),
+    label: tx('states with a sourced sovereign cloud certification'),
     to: '/sovereignty#indicators',
   }),
-  trustAnchor: (b: Bundle): Figure => ({
-    value: of27(indicatorYes(b, 'K1')),
-    label: 'states with a sourced state-controlled trust anchor',
+  trustAnchor: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(tx, indicatorYes(b, 'K1')),
+    label: tx('states with a sourced state-controlled trust anchor'),
     to: '/sovereignty#indicators',
   }),
-  eid: (b: Bundle): Figure => ({
-    value: of27(indicatorYes(b, 'K2')),
-    label: 'states with a sourced state-controlled eID',
+  eid: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(tx, indicatorYes(b, 'K2')),
+    label: tx('states with a sourced state-controlled eID'),
     to: '/sovereignty#indicators',
   }),
-  dataCentres: (b: Bundle): Figure => ({
-    value: of27(indicatorYes(b, 'C1')),
-    label: 'states with sourced government data centres',
+  dataCentres: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(tx, indicatorYes(b, 'C1')),
+    label: tx('states with sourced government data centres'),
     to: '/sovereignty#indicators',
   }),
-  holdingClasses: (b: Bundle): Figure => ({
+  holdingClasses: (b: Bundle, tx: Tx): Figure => ({
     value: String(b.holding_classes.length),
-    label: `holding classes in ${new Set(b.holding_classes.map(h => h.tier)).size} tiers, one taxonomy for all 27`,
+    label: tx('holding classes in {n} tiers, one taxonomy for all 27', {
+      n: new Set(b.holding_classes.map(h => h.tier)).size,
+    }),
     to: '/holdings',
   }),
-  lowConfidence: (b: Bundle): Figure => ({
-    value: of27(Object.values(b.sovereignty.placements).filter(p => p.confidence === 'Low').length),
-    label: 'placements still at Low confidence',
+  lowConfidence: (b: Bundle, tx: Tx): Figure => ({
+    value: of27(
+      tx,
+      Object.values(b.sovereignty.placements).filter(p => p.confidence === 'Low').length,
+    ),
+    label: tx('placements still at Low confidence'),
     to: '/sovereignty',
   }),
-} satisfies Record<string, (b: Bundle) => Figure>
+} satisfies Record<string, (b: Bundle, tx: Tx) => Figure>
 
 export type FigureId = keyof typeof FIGURES
 

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { SpanView } from './DocumentView'
 import { CARD, FIELD } from './ui'
 import type { Block, Bundle, Span } from '@/data/types'
+import { m, useTx } from '@/i18n'
 
 type Dep = 'national' | 'eu' | 'mixed' | 'none' | 'disputed'
 
@@ -27,19 +28,19 @@ const CHIP: Record<Dep, string> = {
 }
 
 const NOTE: Record<Dep, string> = {
-  national: 'A source says the system runs on state infrastructure.',
-  eu: 'Run by a provider or platform based elsewhere in the EU.',
-  mixed: 'National data centres with cloud access where required.',
-  none: 'The source names the system but not where it runs.',
-  disputed: 'The fact check could not confirm it; withheld until rechecked.',
+  national: m('A source says the system runs on state infrastructure.'),
+  eu: m('Run by a provider or platform based elsewhere in the EU.'),
+  mixed: m('National data centres with cloud access where required.'),
+  none: m('The source names the system but not where it runs.'),
+  disputed: m('The fact check could not confirm it; withheld until rechecked.'),
 }
 
 const LABEL: Record<Dep, string> = {
-  national: 'National infrastructure',
-  eu: 'EU provider',
-  mixed: 'Mixed',
-  none: 'Not stated',
-  disputed: 'Disputed',
+  national: m('National infrastructure'),
+  eu: m('EU provider'),
+  mixed: m('Mixed'),
+  none: m('Not stated'),
+  disputed: m('Disputed'),
 }
 
 /**
@@ -55,6 +56,7 @@ export function HostingCards({
   bundle: Bundle
   numbers: Map<string, number>
 }) {
+  const { tx } = useTx()
   const [state, setState] = useState('')
   const [dep, setDep] = useState<Dep | 'any'>('any')
   const [query, setQuery] = useState('')
@@ -79,7 +81,7 @@ export function HostingCards({
     <div className="mb-6">
       <div
         role="group"
-        aria-label="Infrastructure dependency"
+        aria-label={tx('Infrastructure dependency')}
         className="mb-5 grid grid-cols-2 gap-2.5 md:grid-cols-3 lg:grid-cols-5"
       >
         {(Object.keys(LABEL) as Dep[]).map(d => (
@@ -97,29 +99,29 @@ export function HostingCards({
             <span
               className={`self-start rounded-full border px-2.5 py-0.5 text-xs font-semibold ${CHIP[d]}`}
             >
-              {LABEL[d]}
+              {tx(LABEL[d])}
             </span>
             <span className="font-display text-2xl leading-none font-bold text-[var(--color-fg-primary)] tabular-nums">
               {counts[d]}
             </span>
-            <span>{NOTE[d]}</span>
+            <span>{tx(NOTE[d])}</span>
           </button>
         ))}
       </div>
       <div className="mb-4 flex flex-wrap items-center gap-3">
         <label htmlFor="hosting-search" className="sr-only">
-          Search registers, operators or providers
+          {tx('Search registers, operators or providers')}
         </label>
         <input
           id="hosting-search"
           type="search"
           value={query}
           onChange={e => setQuery(e.target.value)}
-          placeholder="Search registers, operators or providers"
+          placeholder={tx('Search registers, operators or providers')}
           className={`${FIELD} min-w-0 flex-[1_1_16rem]`}
         />
         <label htmlFor="hosting-state" className="sr-only">
-          Member state
+          {tx('Member state')}
         </label>
         <select
           id="hosting-state"
@@ -127,13 +129,13 @@ export function HostingCards({
           onChange={e => setState(e.target.value)}
           className={FIELD}
         >
-          <option value="">All member states</option>
+          <option value="">{tx('All member states')}</option>
           {states.map(s => (
             <option key={s}>{s}</option>
           ))}
         </select>
         <label htmlFor="hosting-tier" className="sr-only">
-          Tier
+          {tx('Tier')}
         </label>
         <select
           id="hosting-tier"
@@ -141,19 +143,19 @@ export function HostingCards({
           onChange={e => setTier(e.target.value)}
           className={FIELD}
         >
-          <option value="">All tiers</option>
+          <option value="">{tx('All tiers')}</option>
           {['0', '1', '2', '3'].map(t => (
             <option key={t} value={t}>
-              Tier {t}
+              {tx('Tier {t}', { t })}
             </option>
           ))}
         </select>
         <span aria-live="polite" className="text-sm text-[var(--color-fg-muted)] tabular-nums">
-          {shown.length} of {rows.length} rows
+          {tx('{shown} of {total} rows', { shown: shown.length, total: rows.length })}
         </span>
       </div>
       {shown.length === 0 ? (
-        <p className="text-[var(--color-fg-muted)]">No rows match these filters.</p>
+        <p className="text-[var(--color-fg-muted)]">{tx('No rows match these filters.')}</p>
       ) : null}
       {[...new Set(shown.map(r => r.cells[0]!.t))].map(s => {
         const group = shown.filter(r => r.cells[0]!.t === s)
@@ -162,7 +164,7 @@ export function HostingCards({
             <h3 className="mb-2.5 flex items-baseline gap-3 font-display text-xl font-bold">
               {s}
               <span className="font-sans text-sm font-normal text-[var(--color-fg-muted)]">
-                {group.length} {group.length === 1 ? 'holding' : 'holdings'}
+                {tx('{n, plural, one {# holding} other {# holdings}}', { n: group.length })}
               </span>
             </h3>
             <ul className="grid gap-2.5">
@@ -198,7 +200,7 @@ export function HostingCards({
                     {r.dep === 'national' || r.dep === 'eu' || r.dep === 'mixed' ? (
                       <SpanView span={r.cells[5]!} numbers={numbers} bundle={bundle} />
                     ) : (
-                      LABEL[r.dep]
+                      tx(LABEL[r.dep])
                     )}
                   </span>
                 </li>

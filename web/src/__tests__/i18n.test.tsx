@@ -1,3 +1,4 @@
+import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
 import {
@@ -12,6 +13,7 @@ import {
   servedLanguages,
   spanText,
   stateOf,
+  translator,
   type StateLanguage,
 } from '@/i18n'
 import { countryPath } from '@/utils/routes'
@@ -158,5 +160,25 @@ describe('formatCount', () => {
 
   it('leaves a string that is not a pattern as it is', () => {
     expect(formatCount('Sources', 3, 'en')).toBe('Sources')
+  })
+})
+
+describe('the site catalog (#113)', () => {
+  const { tx, txr } = translator(ENGLISH)
+
+  it('prints the English, with its arguments, where no translation exists', () => {
+    expect(tx('Overview')).toBe('Overview')
+    expect(tx('Download the {name} report (PDF)', { name: 'Malta' })).toBe(
+      'Download the Malta report (PDF)',
+    )
+  })
+
+  it('puts an element where the sentence places it', () => {
+    render(<p>{txr('Read the {link} first.', { link: <a href="/methodology">methodology</a> })}</p>)
+    expect(screen.getByRole('link', { name: 'methodology' })).toHaveAttribute(
+      'href',
+      '/methodology',
+    )
+    expect(screen.getByText(/Read the/).textContent).toBe('Read the methodology first.')
   })
 })

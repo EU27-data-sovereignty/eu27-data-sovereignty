@@ -6,6 +6,7 @@ import { PageBand } from '@/components/PageBand'
 import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
 import type { Bundle } from '@/data/types'
+import { useTx } from '@/i18n'
 
 /**
  * Where each state's key registers are hosted, and by whom (#95). The body is the generated overview
@@ -13,6 +14,7 @@ import type { Bundle } from '@/data/types'
  * carries the same source and the same fact check as on its country page. Nothing is written here.
  */
 export function Infrastructure({ bundle }: { bundle: Bundle }) {
+  const { tx, txr } = useTx()
   const doc = bundle.infrastructure
   const numbers = numberSources([doc], bundle)
   const claims = claimsBySource([doc], bundle)
@@ -22,24 +24,34 @@ export function Infrastructure({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand
-        kicker="EU-27 · Key infrastructure"
+        kicker={tx('EU-27 · Key infrastructure')}
         title={doc.name}
         facts={[
-          [String(hosting.filter(r => r[4]?.role === 'fact').length), 'hosting facts printed'],
-          [String(hosting.filter(r => r[4]?.role === 'disputed').length), 'withheld as disputed'],
-          [`${new Set(hosting.map(r => r[0]!.t)).size} of 27`, 'states with any sourced hosting'],
+          [String(hosting.filter(r => r[4]?.role === 'fact').length), tx('hosting facts printed')],
+          [
+            String(hosting.filter(r => r[4]?.role === 'disputed').length),
+            tx('withheld as disputed'),
+          ],
+          [
+            tx('{n} of 27', { n: new Set(hosting.map(r => r[0]!.t)).size }),
+            tx('states with any sourced hosting'),
+          ],
         ]}
       />
       <p className="mb-6 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
-        {bundle.notice.disclaimer} The same overview is in the{' '}
-        <a className="underline" href="/eu27-report.pdf">
-          EU-27 report
-        </a>
-        ; each holding in full is on its{' '}
-        <Link to="/countries" className="underline">
-          country page
-        </Link>
-        .
+        {bundle.notice.disclaimer}{' '}
+        {txr('The same overview is in the {report}; each holding in full is on its {page}.', {
+          report: (
+            <a className="underline" href="/eu27-report.pdf">
+              {tx('EU-27 report')}
+            </a>
+          ),
+          page: (
+            <Link to="/countries" className="underline">
+              {tx('country page')}
+            </Link>
+          ),
+        })}
       </p>
       <DocumentView
         doc={doc}

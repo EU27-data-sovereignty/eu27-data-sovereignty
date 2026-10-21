@@ -4,18 +4,20 @@ import { SourceList } from '@/components/SourceList'
 import type { Bundle } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
 import { BUTTON_OUTLINE, CARD, FIELD } from '@/components/ui'
+import { m, useTx } from '@/i18n'
 
 const PAGE = 20
 
 const TIERS: [number, string][] = [
-  [1, 'T1 · authoritative original'],
-  [2, 'T2 · competent public body'],
-  [3, 'T3 · other institution or company'],
-  [4, 'T4 · secondary (press, mirror)'],
+  [1, m('T1 · authoritative original')],
+  [2, m('T2 · competent public body')],
+  [3, m('T3 · other institution or company')],
+  [4, m('T4 · secondary (press, mirror)')],
 ]
 
 /** One distribution as a stacked bar with its legend: counts, never a score. */
 function Split({ title, parts }: { title: string; parts: [string, number, string][] }) {
+  const { tx, num } = useTx()
   const total = parts.reduce((n, p) => n + p[1], 0) || 1
   return (
     <div className={`${CARD} p-5`}>
@@ -38,12 +40,12 @@ function Split({ title, parts }: { title: string; parts: [string, number, string
               />
               {label}
             </dt>
-            <dd className="font-semibold tabular-nums">{n.toLocaleString('en')}</dd>
+            <dd className="font-semibold tabular-nums">{num(n)}</dd>
           </div>
         ))}
       </dl>
       <p className="mt-2 text-xs text-[var(--color-fg-muted)]">
-        {total.toLocaleString('en')} citations
+        {tx('{n, plural, one {# citation} other {# citations}}', { n: total })}
       </p>
     </div>
   )
@@ -51,6 +53,7 @@ function Split({ title, parts }: { title: string; parts: [string, number, string
 
 /** The whole register of checked sources, each with every claim in the bundle it supports. */
 export function Sources({ bundle }: { bundle: Bundle }) {
+  const { tx, num } = useTx()
   const [query, setQuery] = useState('')
   const [iso, setIso] = useState('')
   const [tier, setTier] = useState('')
@@ -123,26 +126,27 @@ export function Sources({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand
-        kicker="EU-27 · Evidence"
-        title="Sources"
+        kicker={tx('EU-27 · Evidence')}
+        title={tx('Sources')}
         facts={[
-          [ids.length.toLocaleString('en'), 'checked sources'],
-          [Object.keys(bundle.claims).length.toLocaleString('en'), 'claims they support'],
-          [strong.toLocaleString('en'), 'claims graded Strong or better'],
+          [num(ids.length), tx('checked sources')],
+          [num(Object.keys(bundle.claims).length), tx('claims they support')],
+          [num(strong), tx('claims graded Strong or better')],
         ]}
       >
         <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
-          {ids.length} sources support {Object.keys(bundle.claims).length} claims. A source is
-          admitted only after its document was fetched, its SHA-256 recorded and the quoted text
-          found in it; failures stay out and are recorded in the repository.
+          {tx(
+            '{sources, plural, one {# source supports} other {# sources support}} {claims, plural, one {# claim} other {# claims}}. A source is admitted only after its document was fetched, its SHA-256 recorded and the quoted text found in it; failures stay out and are recorded in the repository.',
+            { sources: ids.length, claims: Object.keys(bundle.claims).length },
+          )}
         </p>
       </PageBand>
 
       <div className="mb-8 grid gap-4 md:grid-cols-2">
         <Split
-          title="Source tier of each citation"
+          title={tx('Source tier of each citation')}
           parts={TIERS.map(([, label], i) => [
-            label,
+            tx(label),
             tierCounts[i]!,
             [
               'var(--color-rank-1)',
@@ -153,7 +157,7 @@ export function Sources({ bundle }: { bundle: Bundle }) {
           ])}
         />
         <Split
-          title="Evidence grade of each citation"
+          title={tx('Evidence grade of each citation')}
           parts={grades.map(([g, n]) => [
             g,
             n,
@@ -168,7 +172,7 @@ export function Sources({ bundle }: { bundle: Bundle }) {
 
       <div role="search" className="mb-3 flex flex-wrap items-center gap-3">
         <label htmlFor="source-search" className="sr-only">
-          Search sources
+          {tx('Search sources')}
         </label>
         <input
           id="source-search"
@@ -178,11 +182,11 @@ export function Sources({ bundle }: { bundle: Bundle }) {
             setQuery(e.target.value)
             setLimit(PAGE)
           }}
-          placeholder="Search titles, publishers, quotes or holdings"
+          placeholder={tx('Search titles, publishers, quotes or holdings')}
           className={`${FIELD} min-w-0 flex-[1_1_18rem]`}
         />
         <label htmlFor="source-country" className="sr-only">
-          Country
+          {tx('Country')}
         </label>
         <select
           id="source-country"
@@ -193,7 +197,7 @@ export function Sources({ bundle }: { bundle: Bundle }) {
           }}
           className={FIELD}
         >
-          <option value="">All countries</option>
+          <option value="">{tx('All countries')}</option>
           {Object.entries(names)
             .sort((a, b) => a[1].localeCompare(b[1]))
             .map(([code, name]) => (
@@ -203,7 +207,7 @@ export function Sources({ bundle }: { bundle: Bundle }) {
             ))}
         </select>
         <label htmlFor="source-tier" className="sr-only">
-          Source tier
+          {tx('Source tier')}
         </label>
         <select
           id="source-tier"
@@ -214,15 +218,15 @@ export function Sources({ bundle }: { bundle: Bundle }) {
           }}
           className={FIELD}
         >
-          <option value="">All tiers</option>
+          <option value="">{tx('All tiers')}</option>
           {TIERS.map(([t, label]) => (
             <option key={t} value={String(t)}>
-              {label}
+              {tx(label)}
             </option>
           ))}
         </select>
         <label htmlFor="source-grade" className="sr-only">
-          Evidence grade
+          {tx('Evidence grade')}
         </label>
         <select
           id="source-grade"
@@ -233,23 +237,29 @@ export function Sources({ bundle }: { bundle: Bundle }) {
           }}
           className={FIELD}
         >
-          <option value="">All grades</option>
+          <option value="">{tx('All grades')}</option>
           <option>Strong</option>
           <option>Standard</option>
         </select>
       </div>
       <p aria-live="polite" className="text-sm text-[var(--color-fg-muted)] tabular-nums">
         {matching.length
-          ? `Showing ${shown.toLocaleString('en')} of ${matching.length.toLocaleString('en')}${
-              matching.length < ids.length ? ' matching' : ''
-            } sources`
-          : 'No source matches these filters.'}
+          ? matching.length < ids.length
+            ? tx('Showing {shown} of {total} matching sources', {
+                shown: num(shown),
+                total: num(matching.length),
+              })
+            : tx('Showing {shown} of {total} sources', {
+                shown: num(shown),
+                total: num(matching.length),
+              })
+          : tx('No source matches these filters.')}
       </p>
       <SourceList bundle={bundle} numbers={numbers} claims={claims} hidden={hidden} />
       {matching.length > limit ? (
         <div className="mt-5 flex justify-center">
           <button type="button" onClick={() => setLimit(l => l + PAGE)} className={BUTTON_OUTLINE}>
-            Show {Math.min(PAGE, matching.length - limit)} more
+            {tx('Show {n} more', { n: Math.min(PAGE, matching.length - limit) })}
           </button>
         </div>
       ) : null}

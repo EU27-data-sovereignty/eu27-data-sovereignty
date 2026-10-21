@@ -9,6 +9,7 @@ import { CARD, Dots, FIELD, Segmented } from '@/components/ui'
 import { countryPath } from '@/utils/routes'
 import { CountryOutline } from '@/charts/CountryOutline'
 import { ISO_OF, useEuShapes } from '@/charts/euShapes'
+import { useTx } from '@/i18n'
 
 type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 
@@ -18,6 +19,7 @@ type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
  * state's own outline filled to that share (#110).
  */
 export function Countries({ bundle }: { bundle: Bundle }) {
+  const { tx } = useTx()
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<SortKey>('name')
   const shapes = useEuShapes()
@@ -55,10 +57,11 @@ export function Countries({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <PageBand kicker="EU-27 · Member states" title="Countries">
+      <PageBand kicker={tx('EU-27 · Member states')} title={tx('Countries')}>
         <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
-          Each member state analysed on its own fundamentals. The cards count verified evidence;
-          they are not a ranking of how sovereign a state is.
+          {tx(
+            'Each member state analysed on its own fundamentals. The cards count verified evidence; they are not a ranking of how sovereign a state is.',
+          )}
         </p>
       </PageBand>
       {sectionTitle ? (
@@ -66,37 +69,41 @@ export function Countries({ bundle }: { bundle: Bundle }) {
           role="status"
           className="mb-5 rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm font-medium"
         >
-          Choose a member state to open its report at “{sectionTitle}”.
+          {tx('Choose a member state to open its report at “{section}”.', {
+            section: sectionTitle,
+          })}
         </p>
       ) : null}
       <div className="mb-5 flex flex-wrap items-center gap-3">
         <label htmlFor="country-search" className="sr-only">
-          Find a country
+          {tx('Find a country')}
         </label>
         <input
           id="country-search"
           type="search"
-          placeholder="Find a country"
+          placeholder={tx('Find a country')}
           value={query}
           onChange={e => setQuery(e.target.value)}
           className={`${FIELD} min-w-0 flex-[1_1_14rem]`}
         />
         <Segmented<SortKey>
-          label="Sort by"
+          label={tx('Sort by')}
           value={sort}
           onChange={setSort}
           options={[
             ['name', 'A–Z'],
-            ['verified', 'Holdings verified'],
-            ['tier0', 'Tier 0 verified'],
-            ['facts', 'Sourced facts'],
+            ['verified', tx('Holdings verified')],
+            ['tier0', tx('Tier 0 verified')],
+            ['facts', tx('Sourced facts')],
           ]}
         />
       </div>
       {rows.length === 0 ? (
-        <p className="py-6 text-[var(--color-fg-muted)]">No member state matches that name.</p>
+        <p className="py-6 text-[var(--color-fg-muted)]">
+          {tx('No member state matches that name.')}
+        </p>
       ) : null}
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Member states">
+      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label={tx('Member states')}>
         {rows.map(({ c, cov, facts, withheld }) => (
           <li
             key={c.iso2}
@@ -120,25 +127,30 @@ export function Countries({ bundle }: { bundle: Bundle }) {
                   <span className="text-base text-[var(--color-fg-muted)]"> / {cov.total}</span>
                 </p>
                 <p className="text-sm text-[var(--color-fg-secondary)]">
-                  holdings with a verified source
+                  {tx('holdings with a verified source')}
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-[7.5em_minmax(0,1fr)] items-center gap-2.5 text-sm text-[var(--color-fg-secondary)]">
-              <span>Tier 0</span>
+              <span>{tx('Tier 0')}</span>
               <Dots
                 value={cov.tier0}
                 max={cov.tier0Total}
-                title={`${cov.tier0} of ${cov.tier0Total} tier 0 holdings verified`}
+                title={tx('{n} of {total} tier 0 holdings verified', {
+                  n: cov.tier0,
+                  total: cov.tier0Total,
+                })}
               />
-              <span>Sourced facts</span>
+              <span>{tx('Sourced facts')}</span>
               <span className="font-semibold text-[var(--color-fg-primary)] tabular-nums">
                 {facts}
               </span>
             </div>
             <div className="mt-auto flex items-center justify-between border-t border-[var(--color-border)] pt-3 text-sm">
               <span className="text-[var(--color-fg-muted)]">
-                {withheld ? `${withheld} withheld as disputed` : 'Nothing withheld as disputed'}
+                {withheld
+                  ? tx('{n} withheld as disputed', { n: withheld })
+                  : tx('Nothing withheld as disputed')}
               </span>
               <a
                 className="font-semibold text-[var(--color-accent-text)] hover:underline"

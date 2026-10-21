@@ -112,14 +112,16 @@ test.describe('data actually renders', () => {
   test('overview reports the state of the evidence from the bundle', async ({ page }) => {
     await page.goto('/')
     const sources = Object.keys(BUNDLE.sources).length
-    await expect(page.getByText(`from ${sources} checked sources`)).toBeVisible()
+    await expect(
+      page.getByText(`from ${sources.toLocaleString('en')} checked sources`),
+    ).toBeVisible()
     await expect(page.getByRole('link', { name: /EU-27 report \(PDF\)/ })).toBeVisible()
   })
 
   test('a country page shows a sourced fact with a footnote that lands on its source', async ({
     page,
   }) => {
-    await page.goto('/de')
+    await page.goto(english('DE'))
     await expect(page.getByRole('heading', { name: 'Germany', level: 1 })).toBeVisible()
     const fact = firstFact('DE')
     await expect(page.getByText(fact).first()).toBeVisible()
@@ -208,7 +210,7 @@ test.describe('evidence rules (#82, #83)', () => {
   test('every page links the fact check, and a country lists the verdict on each of its facts (#87)', async ({
     page,
   }) => {
-    await page.goto('/de')
+    await page.goto(english('DE'))
     await settled(page, page.getByRole('link', { name: 'fact check for Germany' }))
     await page.getByRole('link', { name: 'fact check for Germany' }).click()
     await expect(page).toHaveURL(/\/fact-check\/DE$/)
@@ -233,7 +235,7 @@ test.describe('evidence rules (#82, #83)', () => {
   }) => {
     const fact = docSpans('DE').find(sp => sp.role === 'fact')!
     const cite = BUNDLE.claims[fact.c![0]!]![0]!
-    await page.goto('/de')
+    await page.goto(english('DE'))
     await expect(
       page.getByRole('link', { name: new RegExp(`Evidence: ${fact.g}$`) }).first(),
     ).toBeVisible()
@@ -290,7 +292,7 @@ test.describe('contributing (#85)', () => {
   })
 
   test('a country page invites a source for its withheld values', async ({ page }) => {
-    await page.goto('/lu')
+    await page.goto(english('LU'))
     const link = page.getByRole('link', { name: 'Submit a source' })
     await expect(link).toHaveAttribute('href', /template=submit-source\.yml.*country=LU/)
   })
@@ -337,7 +339,7 @@ test.describe('header navigation', () => {
     page,
   }) => {
     await page.goto('/')
-    const nav = page.getByRole('navigation', { name: 'Main' })
+    const nav = page.locator('header nav').first()
     const about = nav.getByRole('button', { name: 'About the data' })
     await settled(page, about)
     await expect(about).toHaveAttribute('aria-expanded', 'false')
@@ -368,7 +370,7 @@ test.describe('languages (#111, #112)', () => {
     await page.goto('/de')
     await loaded(page)
     await expect(page.locator('html')).toHaveAttribute('lang', 'de-DE')
-    const nav = page.getByRole('navigation', { name: 'Main' })
+    const nav = page.locator('header nav').first()
     await expect(nav.getByRole('link', { name: 'Überblick' })).toBeVisible()
     // No reader of German has checked it yet, and the page says so in German and in English.
     const note = page.getByRole('note')
@@ -421,7 +423,7 @@ test.describe('languages (#111, #112)', () => {
     await list.getByRole('button', { name: 'Nederlands' }).click()
     await expect(page).toHaveURL(/\/$/)
     await expect(page.locator('html')).toHaveAttribute('lang', 'nl-NL')
-    const nav = page.getByRole('navigation', { name: 'Main' })
+    const nav = page.locator('header nav').first()
     await expect(nav.getByRole('link', { name: 'Overzicht' })).toBeVisible()
     await expect(page.getByRole('note')).toContainText('machine translation')
 
@@ -441,7 +443,7 @@ test.describe('languages (#111, #112)', () => {
   test("on a state page the switch puts the state's own languages first", async ({ page }) => {
     await page.goto('/be')
     await loaded(page)
-    const sw = page.getByRole('button', { name: /^Language: / })
+    const sw = page.getByRole('button', { name: /: Nederlands$/ })
     await sw.click()
     const list = page.locator(`#${await sw.getAttribute('aria-controls')}`)
     await expect(list.getByRole('button').first()).toHaveText('Nederlands')
@@ -612,7 +614,7 @@ test.describe('print (#92)', () => {
   test('printing a country page drops the navigation and keeps the findings', async ({ page }) => {
     await page.goto('/de')
     await page.emulateMedia({ media: 'print' })
-    await expect(page.getByRole('navigation', { name: 'Main' })).toBeHidden()
+    await expect(page.locator('header nav').first()).toBeHidden()
     await expect(page.getByRole('heading', { name: 'Germany', exact: true })).toBeVisible()
     await expect(page.locator('tbody tr').first()).toBeVisible()
   })

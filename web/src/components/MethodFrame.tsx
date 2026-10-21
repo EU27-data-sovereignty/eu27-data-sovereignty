@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 
 import { PageBand } from './PageBand'
+import { useTx } from '@/i18n'
 
 /**
  * How-we-know material — the methodology and the fact check — set apart in the method teal, with the same
@@ -16,9 +17,10 @@ export function MethodFrame({
   sections?: { id: string; title: string }[]
   children: ReactNode
 }) {
+  const { tx } = useTx()
   return (
     <article>
-      <PageBand kicker="Method · how this was made" title={title} tone="method" />
+      <PageBand kicker={tx('Method · how this was made')} title={title} tone="method" />
       <div
         className={
           sections.length ? 'grid items-start gap-10 lg:grid-cols-[220px_minmax(0,1fr)]' : ''
@@ -26,7 +28,7 @@ export function MethodFrame({
       >
         {sections.length ? (
           <nav
-            aria-label="On this page"
+            aria-label={tx('On this page')}
             className="flex flex-wrap gap-1.5 text-sm lg:sticky lg:top-6 lg:flex-col lg:gap-0.5"
           >
             {sections.map((s, i) => (

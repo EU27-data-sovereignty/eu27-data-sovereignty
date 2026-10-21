@@ -8,6 +8,7 @@ import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
 import type { Bundle, Document, GroupId, Placement, Span } from '@/data/types'
 import { PageBand } from '@/components/PageBand'
+import { useTx } from '@/i18n'
 import { countryPath } from '@/utils/routes'
 
 type Confidence = 'All' | Placement['confidence']
@@ -57,6 +58,14 @@ function findings(doc: Document | undefined): Span[][] {
  */
 export function Sovereignty({ bundle }: { bundle: Bundle }) {
   const sov = bundle.sovereignty
+  const { tx, txr } = useTx()
+  // The filter's and the explanation's words for a confidence level, one sentence each.
+  const level = (c: Confidence) =>
+    ({ All: tx('All'), High: tx('High'), Medium: tx('Medium'), Low: tx('Low') })[c]
+  const levelPhrase = (c: Placement['confidence']) =>
+    ({ High: tx('High confidence'), Medium: tx('Medium confidence'), Low: tx('Low confidence') })[c]
+  const finding = (k: 'Yes' | 'Partly' | 'No') =>
+    ({ Yes: tx('Yes'), Partly: tx('Partly'), No: tx('No') })[k]
   const [filter, setFilter] = useState<Confidence>('All')
   const [selected, setSelected] = useState<string | null>(null)
   const detailRef = useRef<HTMLElement>(null)
@@ -119,8 +128,8 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
   return (
     <article>
       <PageBand
-        kicker="EU-27 · Ranking by published rule"
-        title="Data-sovereignty ranking"
+        kicker={tx('EU-27 · Ranking by published rule')}
+        title={tx('Data-sovereignty ranking')}
         facts={sov.groups
           .map(
             g => [g, Object.values(sov.placements).filter(p => p.group === g.id).length] as const,
@@ -132,18 +141,20 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
         {sov.guardrail}
       </p>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
-        States are placed in groups by a published rule, not scored. An input without a checked
-        source counts as not demonstrated. The bar beside each state shows the groups it could still
-        reach once its open evidence is settled; that range is its confidence.{' '}
+        {tx('States are placed in groups by a published rule, not scored.')}{' '}
+        {tx('An input without a checked source counts as not demonstrated.')}{' '}
+        {tx(
+          'The bar beside each state shows the groups it could still reach once its open evidence is settled; that range is its confidence.',
+        )}{' '}
         <Link to="/methodology#m-calculations" className="underline">
-          The rule in full
+          {tx('The rule in full')}
         </Link>
         .
       </p>
 
       <fieldset className="mb-4 flex flex-wrap items-center gap-2 text-sm">
-        <legend className="sr-only">Show placements by confidence</legend>
-        <span className="mr-1">Confidence:</span>
+        <legend className="sr-only">{tx('Show placements by confidence')}</legend>
+        <span className="mr-1">{tx('Confidence:')}</span>
         {(['All', 'High', 'Medium', 'Low'] as Confidence[]).map(c => (
           <button
             key={c}
@@ -156,13 +167,13 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                 : 'border-[var(--color-border)]'
             }`}
           >
-            {c}
+            {level(c)}
           </button>
         ))}
       </fieldset>
 
       <div className="mb-10 grid gap-6 lg:grid-cols-2 lg:items-start">
-        <section aria-label="Groups">
+        <section aria-label={tx('Groups')}>
           {sov.groups.map(g => {
             const members = visible
               .filter(([, p]) => p.group === g.id)
@@ -205,13 +216,13 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                         }`}
                       >
                         {names[iso]}
-                        <span className="text-[var(--color-fg-muted)]">{p.confidence}</span>
+                        <span className="text-[var(--color-fg-muted)]">{level(p.confidence)}</span>
                         <RangeBar p={p} order={order} />
                       </button>
                     </li>
                   ))}
                   {members.length === 0 ? (
-                    <li className="text-xs text-[var(--color-fg-muted)] italic">None</li>
+                    <li className="text-xs text-[var(--color-fg-muted)] italic">{tx('None')}</li>
                   ) : null}
                 </ul>
               </div>
@@ -219,7 +230,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           })}
         </section>
 
-        <section aria-label="Map" className="self-start lg:sticky lg:top-6">
+        <section aria-label={tx('Map')} className="self-start lg:sticky lg:top-6">
           <EuMap
             placements={Object.fromEntries(visible)}
             labels={labels}
@@ -228,7 +239,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             onSelect={setSelected}
           />
           <p className="mt-1 text-xs text-[var(--color-fg-muted)]">
-            Hatched: Low confidence. Select a state for its explanation.
+            {tx('Hatched: Low confidence.')} {tx('Select a state for its explanation.')}
           </p>
           {/* The explanation sits under the map, so it is read where the state was picked */}
           {sel && selected ? (
@@ -239,32 +250,44 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
             >
               <h2 className="font-display text-2xl font-bold">{names[selected]}</h2>
               <p className="mb-2 text-sm">
-                <strong>{labels[sel.group]}</strong> · {sel.confidence} confidence · could still
-                reach {labels[sel.range[0]!]}
-                {sel.range.length > 1 ? ` to ${labels[sel.range[sel.range.length - 1]!]}` : ''}
+                <strong>{labels[sel.group]}</strong> · {levelPhrase(sel.confidence)} ·{' '}
+                {sel.range.length > 1
+                  ? tx('could still reach {from} to {to}', {
+                      from: labels[sel.range[0]!] ?? '',
+                      to: labels[sel.range[sel.range.length - 1]!] ?? '',
+                    })
+                  : tx('could still reach {from}', { from: labels[sel.range[0]!] ?? '' })}
               </p>
-              <h3 className="text-sm font-semibold">What could move it</h3>
+              <h3 className="text-sm font-semibold">{tx('What could move it')}</h3>
               <ul className="mb-2 list-disc pl-5 text-sm">
                 {sel.could_move.map((m, i) => (
                   <li key={i}>
                     {m.input === 'holdings'
-                      ? `If any of ${m.count} tier 0/1 holdings with unsourced hosting runs on non-EU infrastructure`
-                      : `If ${sov.indicators.find(x => x.id === m.input)?.label.toLowerCase()} is found to be ${m.if}`}
-                    : {labels[m.group]}
+                      ? tx(
+                          '{n, plural, one {If the # tier 0/1 holding with unsourced hosting runs on non-EU infrastructure: {group}} other {If any of # tier 0/1 holdings with unsourced hosting runs on non-EU infrastructure: {group}}}',
+                          { n: m.count ?? 0, group: String(labels[m.group]) },
+                        )
+                      : tx('If {indicator} is found to be {value}: {group}', {
+                          indicator: String(
+                            sov.indicators.find(x => x.id === m.input)?.label.toLowerCase(),
+                          ),
+                          value: String(m.if),
+                          group: String(labels[m.group]),
+                        })}
                   </li>
                 ))}
               </ul>
               <Link to={countryPath(selected)} className="text-sm underline">
-                Full analysis of {names[selected]}
+                {tx('Full analysis of {name}', { name: names[selected] ?? '' })}
               </Link>
             </section>
           ) : null}
         </section>
       </div>
 
-      <section id="indicators" aria-label="Indicators" className="scroll-mt-6">
+      <section id="indicators" aria-label={tx('Indicators')} className="scroll-mt-6">
         <h2 className="mb-2 font-display font-bold text-xl text-[var(--color-accent-text)]">
-          The indicators
+          {tx('The indicators')}
         </h2>
         <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
           <table className="w-full min-w-[40rem] border-collapse text-sm">
@@ -272,7 +295,8 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
               <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
                 <th scope="col" className="px-3.5 py-2.5 text-left">
                   <button type="button" onClick={() => setSortBy('name')} className="font-semibold">
-                    State{sortBy === 'name' ? ' ▾' : ''}
+                    {tx('State')}
+                    {sortBy === 'name' ? ' ▾' : ''}
                   </button>
                 </th>
                 {sov.indicators.map(ind => (
@@ -318,22 +342,27 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           </table>
         </div>
         <ul
-          aria-label="Key"
+          aria-label={tx('Key')}
           className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[var(--color-fg-secondary)]"
         >
           {(['Yes', 'Partly', 'No'] as const).map(k => (
             <li key={k}>
-              <span className={PILL[k]}>{k}</span>
+              <span className={PILL[k]}>{finding(k)}</span>
             </li>
           ))}
           <li>
-            <em className="text-[var(--color-fg-muted)]">Not yet sourced</em>: a gap, never a no
+            {txr('{term}: a gap, never a no', {
+              term: <em className="text-[var(--color-fg-muted)]">{tx('Not yet sourced')}</em>,
+            })}
           </li>
           <li>
-            <em className="border-b border-dashed border-[var(--color-gap-mark)] text-[var(--color-fg-muted)]">
-              Disputed
-            </em>
-            : withheld until corrected and checked again
+            {txr('{term}: withheld until corrected and checked again', {
+              term: (
+                <em className="border-b border-dashed border-[var(--color-gap-mark)] text-[var(--color-fg-muted)]">
+                  {tx('Disputed')}
+                </em>
+              ),
+            })}
           </li>
         </ul>
       </section>

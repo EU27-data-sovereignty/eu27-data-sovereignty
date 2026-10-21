@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Dots } from '@/components/ui'
+import { useTx } from '@/i18n'
 import { countryPath } from '@/utils/routes'
 
 /** Each state as one tile, placed roughly where it lies: [column, row] on a 7 × 7 grid. */
@@ -66,6 +67,7 @@ const STEPS = [
  * evidence; it is not a ranking of how sovereign a state is (#77).
  */
 export function TileMap({ states }: { states: TileState[] }) {
+  const { tx } = useTx()
   const [metric, setMetric] = useState<Metric>('holdings')
   const [sel, setSel] = useState('DE')
   const by = Object.fromEntries(states.map(s => [s.iso, s]))
@@ -88,18 +90,18 @@ export function TileMap({ states }: { states: TileState[] }) {
     <div className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 sm:p-5">
       <div className="mb-3.5 flex flex-wrap items-center justify-between gap-3">
         <span className="text-xs font-bold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
-          Verified evidence by state
+          {tx('Verified evidence by state')}
         </span>
         <div
           role="group"
-          aria-label="Measure"
+          aria-label={tx('Measure')}
           className="flex rounded bg-[var(--color-bg-emphasis)] p-0.5"
         >
           {(
             [
-              ['holdings', 'Holdings'],
-              ['tier0', 'Tier 0'],
-              ['facts', 'Facts'],
+              ['holdings', tx('Holdings')],
+              ['tier0', tx('Tier 0')],
+              ['facts', tx('Facts')],
             ] as [Metric, string][]
           ).map(([m, label]) => (
             <button
@@ -118,7 +120,11 @@ export function TileMap({ states }: { states: TileState[] }) {
           ))}
         </div>
       </div>
-      <div role="group" aria-label="Member states" className="grid grid-cols-7 gap-1 sm:gap-1.5">
+      <div
+        role="group"
+        aria-label={tx('Member states')}
+        className="grid grid-cols-7 gap-1 sm:gap-1.5"
+      >
         {cells.map((t, i) => {
           if (!t) return <span key={i} />
           const [v, max] = value(t)
@@ -130,7 +136,17 @@ export function TileMap({ states }: { states: TileState[] }) {
               type="button"
               aria-pressed={sel === t.iso}
               onClick={() => setSel(t.iso)}
-              aria-label={`${t.name}: ${t.holdings} of ${t.holdingsTotal} holdings verified, ${t.tier0} of ${t.tier0Total} tier 0, ${t.facts} sourced facts`}
+              aria-label={tx(
+                '{name}: {holdings} of {holdingsTotal} holdings verified, {tier0} of {tier0Total} tier 0, {facts, plural, one {# sourced fact} other {# sourced facts}}',
+                {
+                  name: t.name,
+                  holdings: t.holdings,
+                  holdingsTotal: t.holdingsTotal,
+                  tier0: t.tier0,
+                  tier0Total: t.tier0Total,
+                  facts: t.facts,
+                },
+              )}
               className={`flex aspect-square flex-col items-center justify-center rounded text-[0.66rem] font-bold tracking-wide transition-transform hover:-translate-y-0.5 sm:text-xs ${
                 step.dark ? 'text-[var(--color-bg-card)]' : 'text-[var(--color-fg-primary)]'
               } ${sel === t.iso ? 'ring-2 ring-[var(--color-accent)] ring-offset-2 ring-offset-[var(--color-bg-card)]' : ''}`}
@@ -147,9 +163,9 @@ export function TileMap({ states }: { states: TileState[] }) {
         })}
       </div>
       <div className="mt-3 flex items-center gap-2.5 text-xs text-[var(--color-fg-muted)]">
-        <span>Less evidence</span>
+        <span>{tx('Less evidence')}</span>
         <span className="h-2 w-32 rounded bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-accent-text)_12%,var(--color-bg-emphasis))_0_25%,color-mix(in_srgb,var(--color-accent-text)_26%,var(--color-bg-emphasis))_25%_50%,color-mix(in_srgb,var(--color-accent-text)_82%,var(--color-bg-emphasis))_50%_75%,var(--color-accent-text)_75%)]" />
-        <span>More</span>
+        <span>{tx('More')}</span>
       </div>
       <div
         aria-live="polite"
@@ -158,13 +174,23 @@ export function TileMap({ states }: { states: TileState[] }) {
         <div>
           <p className="font-display text-xl font-bold">{s.name}</p>
           <p className="text-sm text-[var(--color-fg-secondary)] tabular-nums">
-            {s.holdings} of {s.holdingsTotal} holdings verified · {s.facts} sourced facts
+            {tx(
+              '{holdings} of {holdingsTotal} holdings verified · {facts, plural, one {# sourced fact} other {# sourced facts}}',
+              {
+                holdings: s.holdings,
+                holdingsTotal: s.holdingsTotal,
+                facts: s.facts,
+              },
+            )}
           </p>
           <div className="mt-1.5">
             <Dots
               value={s.tier0}
               max={s.tier0Total}
-              title={`${s.tier0} of ${s.tier0Total} tier 0 holdings verified`}
+              title={tx('{tier0} of {tier0Total} tier 0 holdings verified', {
+                tier0: s.tier0,
+                tier0Total: s.tier0Total,
+              })}
             />
           </div>
         </div>
@@ -172,11 +198,11 @@ export function TileMap({ states }: { states: TileState[] }) {
           to={countryPath(s.iso)}
           className="text-sm font-semibold whitespace-nowrap text-[var(--color-accent-text)] hover:underline"
         >
-          Open country →
+          {tx('Open country →')}
         </Link>
       </div>
       <p className="mt-3 text-xs text-[var(--color-fg-muted)]">
-        Counts of verified evidence, not a ranking of how sovereign a state is.
+        {tx('Counts of verified evidence, not a ranking of how sovereign a state is.')}
       </p>
     </div>
   )

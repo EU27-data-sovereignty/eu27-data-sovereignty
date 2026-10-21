@@ -4,7 +4,7 @@ import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-do
 import { LanguageSwitch } from './LanguageSwitch'
 import { ProvenanceNotice } from './ProvenanceNotice'
 import { CORRECTIONS_URL } from '@/data/contribute'
-import { lookup, servedLanguages, stateOf, useLang, useT, type Key } from '@/i18n'
+import { lookup, servedLanguages, stateOf, useLang, useT, useTx, type Key } from '@/i18n'
 import { useDisclosure } from '@/utils/disclosure'
 import { countryPath } from '@/utils/routes'
 import { useTheme } from '@/utils/theme'
@@ -43,6 +43,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
   const lang = useLang()
   const { tag } = lang
   const t = useT()
+  const { tx, txr } = useTx()
 
   // The document's language is the page's: `de-DE` on a German page, so a screen reader speaks it as German.
   // The tab title follows it.
@@ -94,7 +95,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:m-2 focus:rounded focus:bg-[var(--color-bg-card)] focus:p-2"
       >
-        Skip to content
+        {tx('Skip to content')}
       </a>
 
       {/* The header of the EU27.CLOUD landing design (#101): white, 68 px, a soft shadow. */}
@@ -103,7 +104,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
           <NavLink
             to="/"
             end
-            aria-label="EU27.CLOUD home"
+            aria-label={tx('EU27.CLOUD home')}
             className="flex shrink-0 items-center gap-3.5"
           >
             <img
@@ -116,21 +117,21 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             <span aria-hidden="true" className="h-11 w-px bg-[var(--color-border)]" />
             <img
               src="/brand/eu27-wordmark.png"
-              alt="EU27.CLOUD — European Union Data Sovereignty Initiative"
+              alt={tx('EU27.CLOUD — European Union Data Sovereignty Initiative')}
               width={1200}
               height={236}
               className="logo-light h-9 w-auto"
             />
             <img
               src="/brand/eu27-wordmark-white.png"
-              alt="EU27.CLOUD — European Union Data Sovereignty Initiative"
+              alt={tx('EU27.CLOUD — European Union Data Sovereignty Initiative')}
               width={1200}
               height={236}
               className="logo-dark h-9 w-auto"
             />
           </NavLink>
           <nav
-            aria-label="Main"
+            aria-label={tx('Main')}
             className="ml-auto flex flex-wrap items-center gap-x-7 gap-y-2 text-[15px] font-medium"
           >
             {NAV.map(n => (
@@ -149,8 +150,8 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             <button
               type="button"
               onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-              aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              title={mode === 'dark' ? 'Light mode' : 'Dark mode'}
+              aria-label={mode === 'dark' ? tx('Switch to light mode') : tx('Switch to dark mode')}
+              title={mode === 'dark' ? tx('Light mode') : tx('Dark mode')}
               className="grid h-11 w-11 place-items-center rounded-lg border border-[var(--color-border)] text-[var(--color-fg-secondary)] hover:border-[var(--color-accent-text)] hover:text-[var(--color-accent-text)]"
             >
               {mode === 'dark' ? <SunIcon /> : <MoonIcon />}
@@ -187,7 +188,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             <NavLink
               to="/"
               end
-              aria-label="EU27.CLOUD, European Union Data Sovereignty Initiative"
+              aria-label={tx('EU27.CLOUD, European Union Data Sovereignty Initiative')}
               className="mb-4 flex items-center gap-3"
             >
               <img
@@ -212,12 +213,15 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
                 className="logo-dark h-9 w-auto"
               />
             </NavLink>
-            MIT licensed. Independent research, not affiliated with any government or EU body.
-            Corrections and sources welcome via{' '}
-            <a className="underline" href={CORRECTIONS_URL}>
-              the corrections form
-            </a>
-            .
+            {tx('MIT licensed.')}{' '}
+            {tx('Independent research, not affiliated with any government or EU body.')}{' '}
+            {txr('Corrections and sources welcome via {link}.', {
+              link: (
+                <a className="underline" href={CORRECTIONS_URL}>
+                  {tx('the corrections form')}
+                </a>
+              ),
+            })}
           </div>
         </div>
       </footer>

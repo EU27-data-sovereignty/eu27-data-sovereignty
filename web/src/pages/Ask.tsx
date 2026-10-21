@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { SourceList } from '@/components/SourceList'
 import { ASK_EXAMPLES, ASK_MAX } from '@/data/ask'
 import type { Bundle } from '@/data/types'
+import { useTx } from '@/i18n'
 import { PageBand } from '@/components/PageBand'
 import { BUTTON, CARD } from '@/components/ui'
 
@@ -19,6 +20,7 @@ type Status = 'idle' | 'asking' | 'done' | 'error'
  * jumps to the same source card the rest of the site uses: quote, URL, hash, archived copy.
  */
 export function Ask({ bundle }: { bundle: Bundle }) {
+  const { tx } = useTx()
   // A question typed into the front page's search box arrives as router state, never in the URL.
   const passed = (useLocation().state as { question?: string } | null)?.question ?? ''
   const [question, setQuestion] = useState(passed.slice(0, MAX))
@@ -50,8 +52,8 @@ export function Ask({ bundle }: { bundle: Bundle }) {
         const body = (await res.json().catch(() => ({}))) as { error?: string }
         setMessage(
           res.status === 429
-            ? 'Too many questions from here right now. Please try again later.'
-            : (body.error ?? 'Something went wrong. Please try again.'),
+            ? tx('Too many questions from here right now. Please try again later.')
+            : (body.error ?? tx('Something went wrong. Please try again.')),
         )
         setStatus('error')
         return
@@ -93,12 +95,12 @@ export function Ask({ bundle }: { bundle: Bundle }) {
             setNumbers(new Map(nums))
             setClaims(new Map(bySource))
           } else if (ev.type === 'error') {
-            setMessage(ev.message ?? 'Something went wrong.')
+            setMessage(ev.message ?? tx('Something went wrong.'))
             setStatus('error')
             return
           } else if (ev.type === 'done') {
             if (ev.stop_reason === 'refusal') {
-              setMessage('This question could not be answered. Please rephrase it.')
+              setMessage(tx('This question could not be answered. Please rephrase it.'))
               setStatus('error')
               return
             }
@@ -108,7 +110,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
       setStatus('done')
     } catch (e) {
       if ((e as Error).name === 'AbortError') return
-      setMessage('Could not reach the answering service. Please try again.')
+      setMessage(tx('Could not reach the answering service. Please try again.'))
       setStatus('error')
     }
   }
@@ -128,10 +130,11 @@ export function Ask({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <PageBand kicker="EU-27 · Ask" title="Ask about data sovereignty in the EU">
+      <PageBand kicker={tx('EU-27 · Ask')} title={tx('Ask about data sovereignty in the EU')}>
         <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
-          Answers come only from this project’s sourced findings, with a citation for every fact.
-          When the findings don’t cover a question, the answer says so.
+          {tx(
+            'Answers come only from this project’s sourced findings, with a citation for every fact. When the findings don’t cover a question, the answer says so.',
+          )}
         </p>
       </PageBand>
 
@@ -144,7 +147,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
             }}
           >
             <label htmlFor="question" className="sr-only">
-              Your question
+              {tx('Your question')}
             </label>
             <div
               className={`${CARD} p-1.5 transition-colors focus-within:border-[var(--color-accent-text)]`}
@@ -154,7 +157,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
                 value={question}
                 maxLength={MAX}
                 rows={4}
-                placeholder="Ask about a member state, a holding or the ranking"
+                placeholder={tx('Ask about a member state, a holding or the ranking')}
                 onChange={e => setQuestion(e.target.value)}
                 // 16 px: iPhone Safari zooms the whole page into any field set smaller (#92).
                 className="w-full resize-y bg-transparent p-3 text-base outline-none placeholder:text-[var(--color-fg-muted)]"
@@ -168,18 +171,19 @@ export function Ask({ bundle }: { bundle: Bundle }) {
                   disabled={status === 'asking' || !question.trim()}
                   className={`${BUTTON} px-5 disabled:opacity-50`}
                 >
-                  {status === 'asking' ? 'Answering…' : 'Ask'}
+                  {status === 'asking' ? tx('Answering…') : tx('Ask')}
                 </button>
               </div>
             </div>
           </form>
 
           <p className="mt-2.5 max-w-2xl text-xs text-[var(--color-fg-muted)]">
-            Your question is sent to Anthropic’s API to generate the answer. This site does not
-            store it. Answers may be incomplete: they reflect only what has been verified so far.
+            {tx(
+              'Your question is sent to Anthropic’s API to generate the answer. This site does not store it. Answers may be incomplete: they reflect only what has been verified so far.',
+            )}
           </p>
 
-          <section aria-live="polite" aria-label="Answer" className="mt-6">
+          <section aria-live="polite" aria-label={tx('Answer')} className="mt-6">
             {status === 'error' ? (
               <p className="rounded border-l-4 border-[var(--color-accent-text)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
                 {message}
@@ -197,7 +201,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
                           key={n}
                           href={`#src-${n}`}
                           className="font-semibold text-[var(--color-accent-text)] no-underline hover:underline"
-                          aria-label={`Source ${n}`}
+                          aria-label={tx('Source {n}', { n })}
                         >
                           [{n}]
                         </a>
@@ -210,24 +214,27 @@ export function Ask({ bundle }: { bundle: Bundle }) {
                 ) : null}
               </div>
             ) : status === 'asking' ? (
-              <p className="text-sm text-[var(--color-fg-muted)]">Reading the sourced findings…</p>
+              <p className="text-sm text-[var(--color-fg-muted)]">
+                {tx('Reading the sourced findings…')}
+              </p>
             ) : null}
           </section>
         </div>
 
-        <section aria-label="Example questions">
+        <section aria-label={tx('Example questions')}>
           <h2 className="mb-2.5 text-xs font-semibold tracking-[0.12em] text-[var(--color-accent-text)] uppercase">
-            Try
+            {tx('Try')}
           </h2>
           <ul>
             {EXAMPLES.map(q => (
               <li key={q} className="border-t border-[var(--color-border)]">
                 <button
                   type="button"
-                  onClick={() => setQuestion(q)}
+                  // Clicked, the example becomes the reader's question, in the language they read it in.
+                  onClick={() => setQuestion(tx(q))}
                   className="block w-full py-3 text-left text-sm text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]"
                 >
-                  {q} <span className="text-[var(--color-accent-text)]">→</span>
+                  {tx(q)} <span className="text-[var(--color-accent-text)]">→</span>
                 </button>
               </li>
             ))}

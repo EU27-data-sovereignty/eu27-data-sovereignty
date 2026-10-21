@@ -2,6 +2,7 @@ import { geoAzimuthalEqualArea, geoPath } from 'd3'
 import { useMemo } from 'react'
 
 import type { Placement } from '@/data/types'
+import { useTx } from '@/i18n'
 import { GROUP_FILL } from './groups'
 import { ISO_OF, useEuShapes } from './euShapes'
 
@@ -26,6 +27,7 @@ export function EuMap({
   selected: string | null
   onSelect: (iso: string) => void
 }) {
+  const { tx } = useTx()
   const shapes = useEuShapes()
 
   const path = useMemo(() => {
@@ -37,14 +39,14 @@ export function EuMap({
   }, [shapes])
 
   if (!shapes || !path) {
-    return <p className="text-sm text-[var(--color-fg-muted)]">Loading the map…</p>
+    return <p className="text-sm text-[var(--color-fg-muted)]">{tx('Loading the map…')}</p>
   }
 
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
       role="group"
-      aria-label="Map of the EU-27 by data-sovereignty group"
+      aria-label={tx('Map of the EU-27 by data-sovereignty group')}
       className="h-auto w-full"
     >
       <defs>
@@ -57,7 +59,14 @@ export function EuMap({
         const p = placements[iso]
         if (!p) return null
         const d = path(f) ?? ''
-        const label = `${names[iso]}: ${labels[p.group]}, ${p.confidence} confidence`
+        const args = { name: names[iso] ?? '', group: labels[p.group] ?? '' }
+        // One sentence per confidence level, so a translation can agree the adjective with its noun.
+        const label =
+          p.confidence === 'High'
+            ? tx('{name}: {group}, High confidence', args)
+            : p.confidence === 'Medium'
+              ? tx('{name}: {group}, Medium confidence', args)
+              : tx('{name}: {group}, Low confidence', args)
         return (
           <g
             key={iso}

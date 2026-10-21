@@ -26,6 +26,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import i18n_drafts as drafts
+import i18n_site
 
 OUT = drafts.ROOT / "model" / "i18n"
 VERCEL = drafts.ROOT / "vercel.json"
@@ -120,6 +121,11 @@ def tables() -> dict[str, str]:
     files: dict[str, object] = {f"strings/{name}.json": out_tables[name] for name in sorted(out_tables)}
     files["languages.json"] = languages
     files["site.json"] = site_languages(languages)
+    # The site catalogs (#113): each reviewed sentence of each site language, keyed by its English.
+    for entry in files["site.json"]:  # type: ignore[union-attr]
+        table = i18n_site.admitted(entry["lang"])
+        if table:
+            files[f"site/{entry['lang']}.json"] = dict(sorted(table.items()))
     return {path: json.dumps(data, ensure_ascii=False, indent=2) + "\n" for path, data in files.items()}
 
 

@@ -1,4 +1,4 @@
-import { useLang, useT } from '@/i18n'
+import { useLang, useT, useTx } from '@/i18n'
 
 /**
  * Shown on every page, not buried in the methodology. The wording comes from the bundle
@@ -20,6 +20,7 @@ export function ProvenanceNotice({
 }) {
   const { lang, tag } = useLang()
   const t = useT()
+  const { tx } = useTx()
   return (
     <>
       {lang === 'en' ? null : (
@@ -27,14 +28,14 @@ export function ProvenanceNotice({
           {t('notice.disclaimer')}
         </p>
       )}
-      <p lang="en" className="mb-4">
-        {provenance} Generated {generated}.{' '}
+      <p className="mb-4">
+        <span lang="en">{provenance}</span> {tx('Generated {date}.', { date: generated })}{' '}
         <a className="underline" href="/methodology">
-          How this was built
+          {tx('How this was built')}
         </a>
         {' · '}
         <a className="underline" href="/fact-check">
-          How every fact was checked
+          {tx('How every fact was checked')}
         </a>
         .
       </p>

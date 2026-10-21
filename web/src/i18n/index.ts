@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from 'react'
+import { Fragment, createElement, useSyncExternalStore, type ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import en from '../../../model/i18n/strings/en.json'
@@ -47,6 +47,36 @@ const TABLES: Record<string, Record<Key, string>> = Object.fromEntries(
     }),
   ).map(([path, table]) => [path.slice(path.lastIndexOf('/') + 1, -'.json'.length), table]),
 )
+
+// The site catalogs (#113): English sentence -> its translation, per site language, as admission wrote them. They
+// are data, not code, so the build emits them as JSON files and a page fetches only its own language's, like the
+// data bundle; until it arrives, and for a sentence without an entry, the page prints English.
+const SITE_URLS: Record<string, string> = Object.fromEntries(
+  Object.entries(
+    import.meta.glob<string>('../../../model/i18n/site/*.json', {
+      eager: true,
+      query: '?url',
+      import: 'default',
+    }),
+  ).map(([path, url]) => [path.slice(path.lastIndexOf('/') + 1, -'.json'.length), url]),
+)
+const SITE_TABLES: Record<string, Record<string, string>> = {}
+const requested = new Set<string>()
+let siteVersion = 0
+
+function loadSite(lang: string) {
+  const url = SITE_URLS[lang]
+  if (!url || requested.has(lang)) return
+  requested.add(lang)
+  fetch(url)
+    .then(r => (r.ok ? (r.json() as Promise<Record<string, string>>) : Promise.reject(r.status)))
+    .then(table => {
+      SITE_TABLES[lang] = table
+      siteVersion++
+      listeners.forEach(l => l())
+    })
+    .catch(() => requested.delete(lang)) // a failed fetch leaves the page in English and is retried next render
+}
 
 const strip = ({ lang, tag, read }: Lang): Lang => ({ lang, tag, read })
 
@@ -187,7 +217,14 @@ export function format(
     const comma = inner.indexOf(',')
     const name = (comma < 0 ? inner : inner.slice(0, comma)).trim()
     const value = args[name]
-    if (comma < 0) out += value === undefined ? `{${inner}}` : String(value)
+    // A plain number takes the language's digits; English keeps the bare form the pages always printed.
+    if (comma < 0)
+      out +=
+        value === undefined
+          ? `{${inner}}`
+          : typeof value === 'number' && tag !== 'en'
+            ? new Intl.NumberFormat(tag).format(value)
+            : String(value)
     else out += plural(inner.slice(inner.indexOf(',', comma + 1) + 1), Number(value), args, tag)
     i = close + 1
   }
@@ -256,6 +293,67 @@ export function useLang(): Lang {
 
 export function useT(): T {
   return lookup(useLang().tag)
+}
+
+/**
+ * Marks an English string in a data file (the guides) for the site catalog. It returns the string unchanged: a
+ * component translates it when it renders, with `tx`. `model/i18n_site.py` reads these calls.
+ */
+export const m = (english: string): string => english
+
+export type Tx = (english: string, args?: Record<string, string | number>) => string
+export type Txr = (english: string, args: Record<string, ReactNode>) => ReactNode
+
+/**
+ * The page's own sentences in its language. `tx('English…', args)` returns a string; `txr` takes elements as
+ * arguments (a link inside a sentence) and returns nodes, so the translation can move the link where its grammar
+ * puts it. The English is the key; `model/i18n_site.py` extracts every call into the catalog.
+ */
+export function translator(lang: Lang): { tx: Tx; txr: Txr; num: (n: number) => string } {
+  const table = SITE_TABLES[lang.lang]
+  const pick = (english: string) => {
+    const hit = table?.[english]
+    return hit === undefined ? { text: english, tag: 'en' } : { text: hit, tag: lang.tag }
+  }
+  const tx: Tx = (english, args) => {
+    const { text, tag } = pick(english)
+    return args ? format(text, args, tag) : text
+  }
+  const txr: Txr = (english, args) => {
+    const { text, tag } = pick(english)
+    const strings: Record<string, string | number> = {}
+    const nodes: Record<string, ReactNode> = {}
+    for (const [k, v] of Object.entries(args)) {
+      if (typeof v === 'string' || typeof v === 'number') strings[k] = v
+      else nodes[k] = v
+    }
+    // Fill the plain arguments, then split on the element placeholders that remain.
+    const filled = format(
+      text,
+      { ...strings, ...Object.fromEntries(Object.keys(nodes).map(k => [k, `\u0000${k}\u0000`])) },
+      tag,
+    )
+    return createElement(
+      Fragment,
+      null,
+      ...filled.split('\u0000').map((part, i) => (i % 2 ? (nodes[part] ?? part) : part)),
+    )
+  }
+  // A count in the page's language: 1,234 in English, 1.234 in German.
+  const numbers = new Intl.NumberFormat(lang.tag)
+  return { tx, txr, num: (n: number) => numbers.format(n) }
+}
+
+export function useTx(): ReturnType<typeof translator> {
+  const lang = useLang()
+  // Re-render when a catalog arrives; ask for this page's language's.
+  useSyncExternalStore(
+    subscribe,
+    () => siteVersion,
+    () => 0,
+  )
+  loadSite(lang.lang)
+  return translator(lang)
 }
 
 /** A model span's text in the page's language: by its key where the model gave one, else as written. */

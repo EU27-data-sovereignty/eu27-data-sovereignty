@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { chooseLang, choices, stateOf, useLang, type Lang } from '@/i18n'
+import { chooseLang, choices, stateOf, useLang, useTx, type Lang } from '@/i18n'
 import { useDisclosure } from '@/utils/disclosure'
 import { countryPath } from '@/utils/routes'
 
@@ -20,6 +20,7 @@ export function LanguageSwitch() {
   const { pathname } = useLocation()
   const navigate = useNavigate()
   const current = useLang()
+  const { tx } = useTx()
   const iso = stateOf(pathname)
   const options = choices(iso)
   const { open, close, rootProps, buttonProps, panelProps } = useDisclosure()
@@ -34,7 +35,7 @@ export function LanguageSwitch() {
     <div {...rootProps} className="relative">
       <button
         {...buttonProps}
-        aria-label={`Language: ${endonym(current)}`}
+        aria-label={tx('Language: {name}', { name: endonym(current) })}
         className="inline-flex min-h-11 items-center gap-2.5 rounded-lg border-[1.5px] border-[var(--color-accent-text)] bg-[var(--color-bg-card)] px-4 text-[15px] font-semibold text-[var(--color-accent-text)]"
       >
         {current.lang.toUpperCase()}

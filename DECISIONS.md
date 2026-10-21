@@ -3275,10 +3275,22 @@ wants the site readable in their language throughout.
 **Closes off.** A language in the address of a page that is not a state page; a translated page without the unread
 notice while its language has no reading.
 
-**Verified:** 2026-10-21, stage 1. `web/src/__tests__/i18n.test.ts` (page language for a choice, on state and
-other pages; what the switch offers; named and nested arguments); Playwright: a choice made on `/` holds on
-`/sources` and `/nl`, an explicit `/de/en` wins, `/be` lists its languages first; the full gate and browser
-profiles as recorded in `CHANGELOG.md`. **NOT YET:** stages 2 and 3; a reading per language.
+- **Stage 2 (done 2026-10-21): the site catalog.** The English stays in the code as the key: `tx('…')` and `txr('…')`
+  (an element inside a sentence) translate at render, `m('…')` marks prose in data files. `model/i18n_site.py`
+  extracts every call into `docs/i18n/site/SOURCE.md` (476 strings) and checks the six drafts in
+  `docs/i18n/site/<lang>.md`: English in step, placeholders kept, every ICU plural block with the language's CLDR
+  categories, every cell reviewed by the other model. Unlike the 47 core strings, a site string is admitted per
+  cell: an English edit makes one new string that prints in English until its translation is drafted and reviewed,
+  instead of taking the language offline; `python3 model/i18n_site.py stale` lists them. Counts print in the page's
+  language (`num`, and plain number arguments). The owner kept "verified" in the English counts and had the English
+  plurals fixed ("1 sources"), which changed nine strings before review closed.
+
+**Verified:** 2026-10-21, stages 1 and 2. `web/src/__tests__/i18n.test.ts` (page language for a choice; what the
+switch offers; named, nested and plural arguments; `txr`); Playwright: a choice made on `/` holds on `/sources` and
+`/nl`, an explicit `/de/en` wins, `/be` lists its languages first; the English pages pixel-identical through the
+conversion (visual baselines unchanged); `python3 model/i18n_site.py check` with every cell `ok` after four rounds
+(drafted by one model, reviewed by the other: 179 fixes in round one, 7 in round two, 0 after); the full gate and
+browser profiles as recorded in `CHANGELOG.md`. **NOT YET:** stage 3; a reading per language.
 
 *Would change if:* search or sharing matters before the site is promoted, in which case the language moves into
 the address (the subdomain option) and the stored choice becomes a redirect; or a site language is withdrawn under

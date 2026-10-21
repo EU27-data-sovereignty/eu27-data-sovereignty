@@ -7,6 +7,30 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-21
 
+### Added: the web app's own wording in German, French, Spanish, Italian, Polish and Dutch (#113, stage 2)
+
+- **Catalog.** Every sentence the app writes (pages, guides, overview, selector, charts, notices) goes through `tx`,
+  `txr` or `m`; the English stays in the code and is the key. `model/i18n_site.py` extracts 476 strings into
+  `docs/i18n/site/SOURCE.md` and checks the drafts; admission writes `model/i18n/site/<lang>.json`. The English pages
+  are pixel-identical through the conversion.
+- **Translations.** Drafted per language by one model (Opus: de, fr, es; Fable: it, pl, nl), reviewed cell by cell by
+  the other, fixes applied by the drafter and re-reviewed, until every cell was `ok`: 179 fixes in the first review,
+  7 in the second. Terms follow each language's core draft; the brand stays English; "verified" stays as the English
+  says it (owner's call).
+- **English fixes.** Nine counts read wrongly at 1 ("1 sources support 1 claims"); they are ICU plurals now. The
+  selector's two-line labels are one string each, with the break inside, so they are translated whole.
+- **Numbers.** Counts print in the page's language (1.234 in German); English output is unchanged.
+- **Layout.** Translated pages hyphenate by their language, so a long compound ("Cybersicherheitsbehörden") breaks
+  inside its button instead of spilling out; English pages are unchanged.
+- **Loading.** The six catalogs are emitted as JSON files and fetched for the page's language only, like the data
+  bundle, so they stay out of the JavaScript budget (382 KB of 400 KB); a page prints English until its catalog
+  arrives. Vite and Vitest may read `model/i18n/`.
+- **Tests.** Tests about English wording on a state page open its English address (`/de/en`, `/lu/en`), since `/de`
+  and `/lu` now read in German and French; the header's navigation is found by place, not by its now-translated
+  label, which also makes the print test check the header again on a translated page.
+- **Checks.** `model/i18n_site.py` is registered in `model/notes.py`; it validates every plural block against the
+  language's CLDR categories and every placeholder against the English.
+
 ### Added: a language chosen on any page, remembered across the site (#113, stage 1)
 
 - **Switch.** On every page: a state's own languages first, then the six site languages (German, French,

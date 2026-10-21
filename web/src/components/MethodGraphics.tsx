@@ -5,6 +5,7 @@ import type { Block, Bundle, Span } from '@/data/types'
 import { SpanView } from './DocumentView'
 import { CARD } from './ui'
 import { num, text, verdicts } from '@/utils/blocks'
+import { useTx } from '@/i18n'
 
 /**
  * Graphics for the methodology and fact-check documents (#99). Each one draws a block the generated
@@ -36,6 +37,7 @@ export function Track({ share, tone = 'var(--color-method)' }: { share: number; 
 
 /** A two-column table whose second column counts something: each row as a labelled bar. */
 export function CountBars({ block, bundle }: { block: Table; bundle: Bundle }) {
+  const { tx } = useTx()
   const max = Math.max(1, ...block.rows.map(r => num(r[1])))
   return (
     <div className={`${CARD} mb-5 max-w-3xl overflow-hidden`}>
@@ -46,7 +48,7 @@ export function CountBars({ block, bundle }: { block: Table; bundle: Bundle }) {
               {block.columns[0]!.t}
             </th>
             <th scope="col" className="w-1/2 px-4 py-2.5 text-left font-semibold">
-              <span className="sr-only">Share</span>
+              <span className="sr-only">{tx('Share')}</span>
             </th>
             <th scope="col" className="px-4 py-2.5 text-right font-semibold">
               {block.columns[1]!.t}
@@ -78,16 +80,17 @@ export function CountBars({ block, bundle }: { block: Table; bundle: Bundle }) {
  * terms, scales and thresholds are cut from the rule's own text; if it no longer parses, the text is shown.
  */
 export function PriorityFormula({ rule }: { rule: string }) {
+  const { tx } = useTx()
   const m = /^(?:.*?\.\s*)?Priority = (.+?)\.\s*(.*)$/s.exec(rule)
   const terms = m?.[1]?.split(' + ').map(t => /^(.+?) \((.+)\)$/.exec(t.trim()))
   if (!m || !terms || terms.some(t => !t)) return <p className="mb-3 max-w-3xl">{rule}</p>
   return (
     <figure className={`${CARD} mb-5 max-w-4xl p-5`}>
       <figcaption className="mb-3 text-xs font-semibold tracking-[0.12em] text-[var(--color-method)] uppercase">
-        Priority of a holding
+        {tx('Priority of a holding')}
       </figcaption>
       <div className="flex flex-wrap items-stretch gap-2 font-display">
-        <span className="self-center text-xl font-bold">Priority =</span>
+        <span className="self-center text-xl font-bold">{tx('Priority =')}</span>
         {terms.map((t, i) => (
           <span key={i} className="flex items-stretch gap-2">
             {i > 0 ? <span className="self-center text-xl font-bold">+</span> : null}
@@ -310,6 +313,7 @@ export function VerdictBar({ cell }: { cell: string }) {
 
 /** The per-state table's own columns summed into headline tiles above it. */
 export function Totals({ block }: { block: Table }) {
+  const { tx, num: count } = useTx()
   const tiles = block.columns
     .slice(1)
     .map((c, i) => [c.t, block.rows.reduce((n, r) => n + (num(r[i + 1]) || 0), 0)])
@@ -317,10 +321,10 @@ export function Totals({ block }: { block: Table }) {
     <dl className="mb-4 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-4">
       {tiles.map(([label, n]) => (
         <div key={label} className="flex flex-col-reverse bg-[var(--color-bg-card)] p-4">
-          <dt className="text-xs text-[var(--color-fg-muted)]">{label}, all states</dt>
-          <dd className="font-display text-2xl font-bold tabular-nums">
-            {Number(n).toLocaleString('en')}
-          </dd>
+          <dt className="text-xs text-[var(--color-fg-muted)]">
+            {tx('{label}, all states', { label: String(label) })}
+          </dt>
+          <dd className="font-display text-2xl font-bold tabular-nums">{count(Number(n))}</dd>
         </div>
       ))}
     </dl>

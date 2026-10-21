@@ -18,7 +18,7 @@ import { Poster } from './pages/Poster'
 import { Sources } from './pages/Sources'
 import { Sovereignty } from './pages/Sovereignty'
 import { countryPath } from './utils/routes'
-import { langFromPath, lookup, resolveLang } from './i18n'
+import { langFromPath, lookup, resolveLang, translator } from './i18n'
 
 /**
  * A member state lives at its own top-level path, `/de` (#105), and a language other than its default at
@@ -51,7 +51,9 @@ export function App() {
   }, [])
 
   // Printed before the router has a page, so the language comes straight from the address.
-  const t = lookup(langFromPath(window.location.pathname).tag)
+  const lang = langFromPath(window.location.pathname)
+  const t = lookup(lang.tag)
+  const { txr } = translator(lang)
 
   if (error) {
     return (
@@ -59,7 +61,9 @@ export function App() {
         <h1 className="mb-2 text-xl font-semibold">{t('status.load_error')}</h1>
         <p className="text-[var(--color-fg-secondary)]">{error}</p>
         <p className="mt-2 text-sm text-[var(--color-fg-muted)]">
-          Run <code>python3 model/export_json.py</code> to regenerate the bundle.
+          {txr('Run {command} to regenerate the bundle.', {
+            command: <code>python3 model/export_json.py</code>,
+          })}
         </p>
       </main>
     )

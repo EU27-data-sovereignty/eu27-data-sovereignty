@@ -7,7 +7,7 @@ import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sour
 import type { Bundle } from '@/data/types'
 import { NotFound } from './NotFound'
 import { PageBand } from '@/components/PageBand'
-import { spanText, useT } from '@/i18n'
+import { spanText, useT, useTx } from '@/i18n'
 
 /**
  * One member state, analysed on its own fundamentals (#72). The body is the content model --
@@ -17,6 +17,7 @@ import { spanText, useT } from '@/i18n'
 export function Country({ bundle }: { bundle: Bundle }) {
   const { iso = '' } = useParams()
   const t = useT()
+  const { tx, txr } = useTx()
   const code = iso.toUpperCase()
   const doc = bundle.documents[code]
   const country = bundle.countries[code]
@@ -64,38 +65,63 @@ export function Country({ bundle }: { bundle: Bundle }) {
           title={doc.name}
         />
         <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
-          {cov.verified} of {cov.total} critical holding classes verified · {facts} sourced facts
-          shown · {t('fact.withheld', gaps)} · capacity not yet sized
+          {tx('{verified} of {total} critical holding classes verified', {
+            verified: cov.verified,
+            total: cov.total,
+          })}{' '}
+          ·{' '}
+          {tx('{n, plural, one {# sourced fact shown} other {# sourced facts shown}}', {
+            n: facts,
+          })}{' '}
+          · {t('fact.withheld', gaps)} · {tx('capacity not yet sized')}
         </p>
         <p className="mb-8">
           <a
             href={`/report/${code}.pdf`}
             className="inline-block rounded bg-[var(--color-accent)] px-3 py-1.5 text-sm font-semibold text-[var(--color-fg-on-accent)]"
           >
-            Download the {doc.name} report (PDF)
+            {tx('Download the {name} report (PDF)', { name: doc.name })}
           </a>
         </p>
 
         <p className="mb-8 max-w-3xl rounded border border-[var(--color-border)] px-3 py-2 text-sm">
-          Know a public source for one of the {gaps} withheld values, or a better one for a fact?{' '}
+          {tx(
+            '{n, plural, one {Know a public source for the withheld value, or a better one for a fact?} other {Know a public source for one of the # withheld values, or a better one for a fact?}}',
+            {
+              n: gaps,
+            },
+          )}{' '}
           <a className="underline" href={submitLink(bundle, code)} rel="noreferrer">
-            Submit a source
+            {tx('Submit a source')}
           </a>
-          . Every fact also has a <em>{t('fact.check_this')}</em> link in its source entry.
-          Submissions are checked by machine and then by a different person who reads the language (
-          <Link to="/methodology" className="underline">
-            methodology
-          </Link>
-          ).
+          .{' '}
+          {txr('Every fact also has a {label} link in its source entry.', {
+            label: <em>{t('fact.check_this')}</em>,
+          })}{' '}
+          {txr(
+            'Submissions are checked by machine and then by a different person who reads the language ({link}).',
+            {
+              link: (
+                <Link to="/methodology" className="underline">
+                  {tx('methodology')}
+                </Link>
+              ),
+            },
+          )}
         </p>
 
         <DocumentView doc={doc} bundle={bundle} numbers={numbers} />
         <p className="my-6 max-w-3xl text-sm">
-          How each fact above was checked by a second model, the one that did not write it:{' '}
-          <Link to={`/fact-check/${code}`} className="underline">
-            fact check for {doc.name}
-          </Link>
-          .
+          {txr(
+            'How each fact above was checked by a second model, the one that did not write it: {link}.',
+            {
+              link: (
+                <Link to={`/fact-check/${code}`} className="underline">
+                  {tx('fact check for {name}', { name: doc.name })}
+                </Link>
+              ),
+            },
+          )}
         </p>
         <SourceList bundle={bundle} numbers={numbers} claims={claims} />
       </div>

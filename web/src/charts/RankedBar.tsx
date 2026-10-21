@@ -1,3 +1,4 @@
+import { useTx } from '@/i18n'
 import { num } from '@/utils/format'
 
 export interface RankedDatum {
@@ -24,6 +25,7 @@ export interface RankedBarProps {
  * carry the accent AND a text marker, so the distinction is not colour-only.
  */
 export function RankedBar({ data, threshold, unit, caption, format = num }: RankedBarProps) {
+  const { tx } = useTx()
   const max = Math.max(...data.map(d => d.value), threshold?.value ?? 0)
 
   return (
@@ -59,8 +61,12 @@ export function RankedBar({ data, threshold, unit, caption, format = num }: Rank
 
       {threshold ? (
         <p className="mt-2 text-xs text-[var(--color-fg-secondary)]">
-          <span aria-hidden="true">▲</span> below {format(threshold.value)} {unit} —{' '}
-          {threshold.label}
+          <span aria-hidden="true">▲</span>{' '}
+          {tx('below {value} {unit} — {label}', {
+            value: format(threshold.value),
+            unit,
+            label: threshold.label,
+          })}
         </p>
       ) : null}
 

@@ -1,3 +1,5 @@
+import { useTx } from '@/i18n'
+
 export interface LegendProps {
   kind: 'sequential' | 'diverging'
   low: string
@@ -10,10 +12,15 @@ export interface LegendProps {
  * Both poles are labelled in text, so identity never rests on colour alone.
  */
 export function Legend({ low, high, stops }: LegendProps) {
+  const { tx } = useTx()
   return (
     <div className="flex items-center gap-2 text-xs text-[var(--color-fg-secondary)]">
       <span>{low}</span>
-      <span className="flex" role="img" aria-label={`Colour scale from ${low} to ${high}`}>
+      <span
+        className="flex"
+        role="img"
+        aria-label={tx('Colour scale from {low} to {high}', { low, high })}
+      >
         {stops.map((s, i) => (
           <span
             key={i}
