@@ -7,6 +7,12 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-21
 
+### Decided: the fact check keeps its name in every language (#113)
+
+- In nine languages "Fact check" and "Check this fact" are built on the word for verify (French "Vérification des
+  faits", Slovak "Overenie faktov"), the ordinary term for fact-checking. The owner kept them; `DECISIONS.md`
+  #113 records it, so a review does not flag them again. No string changes.
+
 ### Added: the whole site in all 24 official EU languages (#113)
 
 - **Languages.** Bulgarian, Czech, Danish, Greek, Estonian, Finnish, Irish, Croatian, Hungarian, Lithuanian,

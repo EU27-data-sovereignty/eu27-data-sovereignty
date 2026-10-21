@@ -3303,8 +3303,9 @@ notice while its language has no reading.
   as generic labels, the verify word on the machine's fact check, `one` covering 21 or 101, English prepositions
   calqued. A cross-check changed seven live core cells that used a language's verified word for sourced or
   checked, or disagreed with the same language elsewhere. Nine languages name the fact check with their
-  verify root (Vérification des faits, Overenie faktov), the ordinary term for fact-checking; left as is, the
-  owner's call.
+  verify root (Vérification des faits, Overenie faktov), the ordinary term for fact-checking; the owner kept
+  them (2026-10-21, "keep the fact check names as they are"), so a review does not flag them. The rule that
+  checked and verified are two words holds everywhere else.
 
 **Verified:** 2026-10-21, stages 1 and 2. `web/src/__tests__/i18n.test.ts` (page language for a choice; what the
 switch offers; named, nested and plural arguments; `txr`); Playwright: a choice made on `/` holds on `/sources` and
