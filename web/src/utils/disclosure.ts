@@ -35,6 +35,7 @@ export function useDisclosure() {
 
   return {
     open,
+    close: () => setOpenAt(null),
     rootProps: {
       ref: root,
       onBlur: (e: FocusEvent) => {

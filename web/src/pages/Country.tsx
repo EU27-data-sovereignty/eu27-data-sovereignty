@@ -7,7 +7,7 @@ import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sour
 import type { Bundle } from '@/data/types'
 import { NotFound } from './NotFound'
 import { PageBand } from '@/components/PageBand'
-import { lookup, spanText, useLang, useT } from '@/i18n'
+import { spanText, useT } from '@/i18n'
 
 /**
  * One member state, analysed on its own fundamentals (#72). The body is the content model --
@@ -17,7 +17,6 @@ import { lookup, spanText, useLang, useT } from '@/i18n'
 export function Country({ bundle }: { bundle: Bundle }) {
   const { iso = '' } = useParams()
   const t = useT()
-  const lang = useLang()
   const code = iso.toUpperCase()
   const doc = bundle.documents[code]
   const country = bundle.countries[code]
@@ -64,18 +63,6 @@ export function Country({ bundle }: { bundle: Bundle }) {
           kicker={`${t('site.kicker')} · ${t('country.kicker')} · ${doc.iso}`}
           title={doc.name}
         />
-        {lang.read ? null : (
-          // Served before anyone who reads the language has checked it (#112): say so, in it and in English.
-          <div
-            role="note"
-            className="mb-4 max-w-3xl rounded border-l-4 border-[var(--color-gap-mark)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm"
-          >
-            <p lang={lang.tag}>{t('notice.unread')}</p>
-            <p lang="en" className="mt-1 text-[var(--color-fg-secondary)]">
-              {lookup('en')('notice.unread')}
-            </p>
-          </div>
-        )}
         <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
           {cov.verified} of {cov.total} critical holding classes verified · {facts} sourced facts
           shown · {t('fact.withheld', gaps)} · capacity not yet sized

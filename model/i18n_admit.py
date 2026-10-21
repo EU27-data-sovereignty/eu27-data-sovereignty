@@ -48,6 +48,21 @@ def english_official() -> set[str]:
     return {r[0] for r in rows if "en is the source" in r[2]}
 
 
+def site_languages(languages: dict[str, list[dict]]) -> list[dict]:
+    """The languages a reader can choose for the whole site (#113), from STRINGS.md's "Site-wide languages": each
+    reads its home state's table, and is offered once that table is admitted."""
+    text = drafts.STRINGS.read_text(encoding="utf-8")
+    if "## Site-wide languages" not in text:
+        return []
+    rows = drafts._rows(text.split("## Site-wide languages")[1].splitlines())[1:]
+    by_tag = {e["tag"]: e for entries in languages.values() for e in entries}
+    out = []
+    for lang, home in ((r[0], r[1]) for r in rows):
+        e = by_tag.get(home, {})
+        out.append({"lang": lang, "tag": home, "admitted": bool(e.get("admitted")), "read": bool(e.get("read"))})
+    return out
+
+
 def admitted() -> tuple[dict[str, dict[str, str]], dict[str, list[dict]]]:
     """(tag -> table, ISO -> [{lang, tag, admitted, read}]) from the source table and the drafts."""
     keys, states = drafts.spec()
@@ -104,6 +119,7 @@ def tables() -> dict[str, str]:
     out_tables, languages = admitted()
     files: dict[str, object] = {f"strings/{name}.json": out_tables[name] for name in sorted(out_tables)}
     files["languages.json"] = languages
+    files["site.json"] = site_languages(languages)
     return {path: json.dumps(data, ensure_ascii=False, indent=2) + "\n" for path, data in files.items()}
 
 

@@ -1,6 +1,6 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-import { servedLanguages, stateOf, useLang, type Lang } from '@/i18n'
+import { chooseLang, choices, stateOf, useLang, type Lang } from '@/i18n'
 import { useDisclosure } from '@/utils/disclosure'
 import { countryPath } from '@/utils/routes'
 
@@ -11,18 +11,25 @@ function endonym(l: Lang): string {
 }
 
 /**
- * The header's language switch (#111). On a member state's page it lists the languages that page can be read
- * in: the state's admitted official languages, and English. Every other page is English only, and a button that
- * opens a list of one looks broken, so the switch is shown only where there is something to switch to.
+ * The header's language switch (#111, #113). It lists what the page can be read in: on a member state's page
+ * that state's admitted languages, then the site languages it lacks; elsewhere the site languages and English.
+ * A choice is remembered for the whole site (`chooseLang`) and the address does not change, except that a state
+ * page with an explicit language (`/be/fr`) returns to its plain address, where the choice applies.
  */
 export function LanguageSwitch() {
   const { pathname } = useLocation()
+  const navigate = useNavigate()
   const current = useLang()
   const iso = stateOf(pathname)
-  const options = iso ? servedLanguages(iso) : [current]
-  const { open, rootProps, buttonProps, panelProps } = useDisclosure()
+  const options = choices(iso)
+  const { open, close, rootProps, buttonProps, panelProps } = useDisclosure()
 
   if (options.length < 2) return null
+  const choose = (l: Lang) => {
+    chooseLang(l.lang)
+    close()
+    if (iso && pathname !== countryPath(iso)) navigate(countryPath(iso))
+  }
   return (
     <div {...rootProps} className="relative">
       <button
@@ -52,26 +59,21 @@ export function LanguageSwitch() {
         {...panelProps}
         className="absolute top-full right-0 z-20 mt-2 min-w-44 rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 shadow-[0_8px_24px_rgb(0_0_0/0.18)]"
       >
-        {options.map((l, i) => (
+        {options.map(l => (
           <li key={l.tag}>
-            {l.tag === current.tag || !iso ? (
-              <span
-                lang={l.tag}
-                aria-current="true"
-                className="block rounded-md bg-[var(--color-bg-emphasis)] px-3 py-2 text-[var(--color-accent-text)]"
-              >
-                {endonym(l)}
-              </span>
-            ) : (
-              <Link
-                to={countryPath(iso, i === 0 ? undefined : l.lang)}
-                lang={l.tag}
-                hrefLang={l.tag}
-                className="block rounded-md px-3 py-2 text-[var(--color-fg-secondary)] hover:bg-[var(--color-bg-emphasis)] hover:text-[var(--color-accent-text)]"
-              >
-                {endonym(l)}
-              </Link>
-            )}
+            <button
+              type="button"
+              lang={l.tag}
+              aria-current={l.tag === current.tag ? 'true' : undefined}
+              onClick={() => choose(l)}
+              className={`block w-full rounded-md px-3 py-2 text-left ${
+                l.tag === current.tag
+                  ? 'bg-[var(--color-bg-emphasis)] text-[var(--color-accent-text)]'
+                  : 'text-[var(--color-fg-secondary)] hover:bg-[var(--color-bg-emphasis)] hover:text-[var(--color-accent-text)]'
+              }`}
+            >
+              {endonym(l)}
+            </button>
           </li>
         ))}
       </ul>

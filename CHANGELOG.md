@@ -7,6 +7,18 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-21
 
+### Added: a language chosen on any page, remembered across the site (#113, stage 1)
+
+- **Switch.** On every page: a state's own languages first, then the six site languages (German, French,
+  Spanish, Italian, Polish, Dutch), then English. The browser remembers the choice; addresses do not change. A
+  state page's explicit language (`/be/fr`) still wins; a site language reads its home state's table, and a state's
+  own variant where it has one.
+- **Notice.** The unread-translation notice moves to the layout, so every translated page carries it.
+- **Messages.** `format` fills named ICU arguments, plain and plural, for the catalogs stage 2 adds.
+- **Data.** "Site-wide languages" in `docs/i18n/STRINGS.md`; admission writes `model/i18n/site.json`.
+- **Tests.** Unit tests for a choice on state and other pages and for arguments; Playwright for a choice made on
+  `/` holding across pages. The switch-hiding check of earlier today becomes the switch's site-wide test.
+
 ### Fixed: the language switch appears only where a page has another language
 
 - **Header.** Off the 27 state pages every page is English only, and the switch opened a list holding English

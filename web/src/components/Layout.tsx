@@ -4,7 +4,7 @@ import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-do
 import { LanguageSwitch } from './LanguageSwitch'
 import { ProvenanceNotice } from './ProvenanceNotice'
 import { CORRECTIONS_URL } from '@/data/contribute'
-import { servedLanguages, stateOf, useLang, useT, type Key } from '@/i18n'
+import { lookup, servedLanguages, stateOf, useLang, useT, type Key } from '@/i18n'
 import { useDisclosure } from '@/utils/disclosure'
 import { countryPath } from '@/utils/routes'
 import { useTheme } from '@/utils/theme'
@@ -40,7 +40,8 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
   const [mode, setMode] = useTheme()
   const { pathname, hash } = useLocation()
   const home = pathname === '/'
-  const { tag } = useLang()
+  const lang = useLang()
+  const { tag } = lang
   const t = useT()
 
   // The document's language is the page's: `de-DE` on a German page, so a screen reader speaks it as German.
@@ -160,6 +161,21 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
 
       {/* The front page lays out its own full-width hero and band; every other page sits in the column. */}
       <main id="main" className={home ? '' : 'mx-auto max-w-6xl px-4 py-8'}>
+        {lang.read ? null : (
+          // Served before anyone who reads the language has checked it (#112, #113): every such page says so,
+          // in its language and in English.
+          <div className={home ? 'mx-auto max-w-6xl px-4 pt-6' : ''}>
+            <div
+              role="note"
+              className="mb-6 max-w-3xl rounded border-l-4 border-[var(--color-gap-mark)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm"
+            >
+              <p lang={tag}>{t('notice.unread')}</p>
+              <p lang="en" className="mt-1 text-[var(--color-fg-secondary)]">
+                {lookup('en')('notice.unread')}
+              </p>
+            </div>
+          </div>
+        )}
         <Outlet />
       </main>
 

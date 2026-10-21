@@ -3242,3 +3242,44 @@ digits); Playwright `languages`; the full gate and browser profiles as recorded 
 *Would change if:* the site is promoted or indexed before every served language has a reading, in which case the
 unread languages are withdrawn (their admission reverts with one `fix`) until they are read; or a reader finds a
 weakened disclaimer, in which case that language comes off at once.
+
+### 113. The whole site in six languages, chosen once and remembered, with the address unchanged
+**Decision.** 2026-10-21, at the request of Marco Buhlmann ("the whole site should be translated"), with his
+choices: the language is a remembered choice, not part of the address; German, French, Spanish, Italian and
+Polish first, and Dutch added the same day; everything but the facts; the #112 rule for review and the unread
+notice. In stages, each its own commit:
+1. **The choice (done 2026-10-21).** The header's switch is on every page. It offers a state page's own admitted
+   languages first, then the site languages ("Site-wide languages" in `docs/i18n/STRINGS.md`, written to
+   `model/i18n/site.json` by admission), then English. A choice is stored by the browser (`eu27-lang`) and applies
+   wherever the page has that language: a state page's explicit segment (`/be/fr`) wins, then the choice, then the
+   page's default. A site language reads its home state's table (`nl` reads `nl-NL`); on a state page with its
+   own variant the state's wins (`fr` on `/be` is `fr-BE`). Messages take named ICU arguments (`format`). The
+   unread notice moves to the layout, so every translated page carries it.
+2. **The web app's own wording:** every page, the guides, the overview and the audience selector to keyed
+   messages in English catalogs, drafted in the six languages and cross-reviewed on two models.
+3. **The model's prose:** the report sentence patterns, the methodology and the hosting notes emitted as keyed
+   messages with arguments, translated the same way.
+The fact-check verdicts stay English: they are evidence written by the checking model, like the facts' glosses,
+and a translation would be a second unchecked machine output of the first.
+
+**Problem.** Only the state pages had languages, so the switch was empty everywhere a reader starts; the owner
+wants the site readable in their language throughout.
+
+**Alternatives considered.**
+- **Subdomains (`de.eu27.cloud`).** *Why not:* the owner chose a remembered choice; subdomains need DNS and
+  Vercel work and turn each state page into a second address.
+- **A marker path (`/lang/de/…`).** *Why not:* not chosen; longer addresses for a site with no traffic yet.
+- **All 24 languages at once.** *Why not:* the owner chose a first set; the pipeline proves itself on six.
+- **Translating the fact-check verdicts.** *Why not:* above.
+
+**Closes off.** A language in the address of a page that is not a state page; a translated page without the unread
+notice while its language has no reading.
+
+**Verified:** 2026-10-21, stage 1. `web/src/__tests__/i18n.test.ts` (page language for a choice, on state and
+other pages; what the switch offers; named and nested arguments); Playwright: a choice made on `/` holds on
+`/sources` and `/nl`, an explicit `/de/en` wins, `/be` lists its languages first; the full gate and browser
+profiles as recorded in `CHANGELOG.md`. **NOT YET:** stages 2 and 3; a reading per language.
+
+*Would change if:* search or sharing matters before the site is promoted, in which case the language moves into
+the address (the subdomain option) and the stored choice becomes a redirect; or a site language is withdrawn under
+#112, in which case it leaves `site.json` and the switch with it.

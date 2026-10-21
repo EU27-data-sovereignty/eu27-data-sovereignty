@@ -403,26 +403,51 @@ test.describe('languages (#111, #112)', () => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'ga-IE')
   })
 
-  test('the language switch shows only where a page has another language', async ({ page }) => {
+  test('a language chosen on any page is remembered across the site (#113)', async ({ page }) => {
     await page.goto('/')
     await loaded(page)
-    await expect(page.getByRole('button', { name: /^Language: / })).toHaveCount(0)
+    const sw = page.getByRole('button', { name: 'Language: English' })
+    await sw.click()
+    const list = page.locator(`#${await sw.getAttribute('aria-controls')}`)
+    await expect(list.getByRole('button')).toHaveText([
+      'Deutsch',
+      'Français',
+      'Español',
+      'Italiano',
+      'Polski',
+      'Nederlands',
+      'English',
+    ])
+    await list.getByRole('button', { name: 'Nederlands' }).click()
+    await expect(page).toHaveURL(/\/$/)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'nl-NL')
+    const nav = page.getByRole('navigation', { name: 'Main' })
+    await expect(nav.getByRole('link', { name: 'Overzicht' })).toBeVisible()
+    await expect(page.getByRole('note')).toContainText('machine translation')
+
+    // Remembered: another page, and a state page of Dutch's home state, stay in Dutch.
     await page.goto('/sources')
     await loaded(page)
-    await expect(page.getByRole('button', { name: /^Language: / })).toHaveCount(0)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'nl-NL')
+    await page.goto('/nl')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'nl-NL')
+    // An explicit language in a state address still wins.
+    await page.goto('/de/en')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   })
 
-  test('the language switch lists what the page can be read in', async ({ page }) => {
+  test("on a state page the switch puts the state's own languages first", async ({ page }) => {
     await page.goto('/be')
     await loaded(page)
     const sw = page.getByRole('button', { name: /^Language: / })
     await sw.click()
-    await expect(sw).toHaveAttribute('aria-expanded', 'true')
     const list = page.locator(`#${await sw.getAttribute('aria-controls')}`)
-    await expect(list.getByRole('listitem')).toHaveCount(4)
+    await expect(list.getByRole('button').first()).toHaveText('Nederlands')
     await expect(list.locator('[aria-current="true"]')).toHaveText('Nederlands')
-    await list.getByRole('link', { name: 'Français' }).click()
-    await expect(page).toHaveURL(/\/be\/fr$/)
+    await list.getByRole('button', { name: 'Français' }).click()
+    await expect(page).toHaveURL(/\/be$/)
     await expect(page.locator('html')).toHaveAttribute('lang', 'fr-BE')
   })
 

@@ -1,8 +1,11 @@
 import { describe, expect, it } from 'vitest'
 
 import {
+  choices,
   ENGLISH,
+  format,
   formatCount,
+  pageLang,
   langFromPath,
   lookup,
   resolveLang,
@@ -26,6 +29,40 @@ const STANDIN: Record<string, StateLanguage[]> = {
   MT: [{ lang: 'mt', tag: 'mt-MT', admitted: false, read: false }],
 }
 const FR = { lang: 'fr', tag: 'fr-BE', read: false }
+// Site languages (#113): German and Polish offered everywhere, Spanish not yet admitted.
+const SITE: StateLanguage[] = [
+  { lang: 'de', tag: 'de-DE', admitted: true, read: false },
+  { lang: 'pl', tag: 'pl-PL', admitted: true, read: false },
+  { lang: 'es', tag: 'es-ES', admitted: false, read: false },
+]
+const DE = { lang: 'de', tag: 'de-DE', read: false }
+const PL = { lang: 'pl', tag: 'pl-PL', read: false }
+
+describe("a reader's remembered language (#113)", () => {
+  it('applies on any page that has it, and English otherwise', () => {
+    expect(pageLang('/sources', 'pl', STANDIN, SITE)).toEqual(PL)
+    expect(pageLang('/sources', 'es', STANDIN, SITE)).toEqual(ENGLISH)
+    expect(pageLang('/sources', null, STANDIN, SITE)).toEqual(ENGLISH)
+  })
+
+  it("on a state page prefers the state's own variant, then a site language, then the default", () => {
+    // Belgium has fr-BE of its own; a reader who chose German gets the site's de-DE, Belgium's de-BE not
+    // being admitted in the stand-in.
+    expect(pageLang('/be', 'fr', STANDIN, SITE)).toEqual(FR)
+    expect(pageLang('/be', 'de', STANDIN, SITE)).toEqual(DE)
+    expect(pageLang('/be', null, STANDIN, SITE)).toEqual(FR)
+    expect(pageLang('/be', 'en', STANDIN, SITE)).toEqual(ENGLISH)
+  })
+
+  it('never overrides an explicit language in the address', () => {
+    expect(pageLang('/be/en', 'pl', STANDIN, SITE)).toEqual(ENGLISH)
+  })
+
+  it("offers a state's own languages first, then the site languages it lacks", () => {
+    expect(choices('be', STANDIN, SITE)).toEqual([FR, ENGLISH, DE, PL])
+    expect(choices(null, STANDIN, SITE)).toEqual([DE, PL, ENGLISH])
+  })
+})
 
 describe('a state address and its language', () => {
   it('serves English where nothing is admitted', () => {
@@ -81,6 +118,23 @@ describe('lookup', () => {
     const t = lookup('en')
     expect(t('fact.withheld', 1)).toBe('1 value withheld until sourced')
     expect(t('fact.withheld', 1204)).toBe('1,204 values withheld until sourced')
+  })
+})
+
+describe('format', () => {
+  it('fills named arguments, plain and plural', () => {
+    const p = '{name} has {n, plural, one {# register} other {# registers}} on file'
+    expect(format(p, { name: 'Malta', n: 1 }, 'en')).toBe('Malta has 1 register on file')
+    expect(format(p, { name: 'Malta', n: 12 }, 'en')).toBe('Malta has 12 registers on file')
+  })
+
+  it('fills an argument inside a plural branch', () => {
+    const p = '{n, plural, one {{name}: # value} other {{name}: # values}}'
+    expect(format(p, { name: 'DE', n: 3 }, 'en')).toBe('DE: 3 values')
+  })
+
+  it('leaves an argument it was not given visible rather than empty', () => {
+    expect(format('Hello {who}', {}, 'en')).toBe('Hello {who}')
   })
 })
 

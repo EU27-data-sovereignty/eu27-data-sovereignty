@@ -121,3 +121,18 @@ States that share a language (AT and DE; BE and NL; BE, FR and LU; CY and EL; FI
 German) get their own file each: the draft for Austria may differ from the one for Germany in register
 and in administrative terms (Austrian German says *Meldewesen* where German German says
 *Einwohnermeldewesen*), and the reviewer is asked to say so.
+
+## Site-wide languages
+
+The languages a reader can choose for the whole site, not only a state's pages (#113). A choice is remembered by
+the browser; addresses do not change. Each language reads its home state's table (`home`), so a reader who chose
+Dutch sees `nl-NL` wording on every page, and on a Belgian page the Belgian `nl-BE` wording where it differs.
+
+| lang | home |
+|---|---|
+| de | de-DE |
+| fr | fr-FR |
+| es | es-ES |
+| it | it-IT |
+| pl | pl-PL |
+| nl | nl-NL |

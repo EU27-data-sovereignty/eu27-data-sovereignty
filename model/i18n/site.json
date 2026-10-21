@@ -1,0 +1,38 @@
+[
+  {
+    "lang": "de",
+    "tag": "de-DE",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "fr",
+    "tag": "fr-FR",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "es",
+    "tag": "es-ES",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "it",
+    "tag": "it-IT",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "pl",
+    "tag": "pl-PL",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "nl",
+    "tag": "nl-NL",
+    "admitted": true,
+    "read": false
+  }
+]
