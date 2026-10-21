@@ -2,7 +2,7 @@
 
 - Languages: fr French (fr-LU); de German (de-LU); lb Luxembourgish (lb-LU)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
-- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 6 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 6 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-21: 3 cells changed (sourced, checked and verified kept apart and in step with the site catalog (cross-check 2026-10-21))
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,7 +19,7 @@
 | nav.sources | Sources | Sources | Quellen | Quellen |
 | nav.ask | Ask | Demander | Fragen | Froen |
 | nav.methodology | Methodology | Méthodologie | Methodik | Methodik |
-| nav.factcheck | Fact check | Vérification des faits | Faktencheck | Faktecheck |
+| nav.factcheck | Fact check | Vérification des faits | Faktenprüfung | Faktecheck |
 | nav.about | About the data | À propos des données | Über die Daten | Iwwer d'Daten |
 | country.kicker | Country report | Rapport par pays | Länderbericht | Lännerbericht |
 | country.contents | Contents | Sommaire | Inhalt | Inhalt |
@@ -44,8 +44,8 @@
 | col.position | Position | Position | Position | Positioun |
 | col.finding | Finding | Constat | Befund | Befund |
 | col.state | State | État | Staat | Staat |
-| col.registers_sourced | Registers sourced | Registres sourcés | Register mit Quelle | Registere mat Quell |
-| col.hosting_sourced | Hosting sourced | Hébergement sourcé | Hosting mit Quelle | Hosting mat Quell |
+| col.registers_sourced | Registers sourced | Registres avec source | Register mit Quelle | Registere mat Quell |
+| col.hosting_sourced | Hosting sourced | Hébergement avec source | Hosting mit Quelle | Hosting mat Quell |
 | fact.check_this | Check this fact | Vérifier ce fait | Diesen Fakt prüfen | Dëse Fakt iwwerpréiwen |
 | fact.gloss | Machine translation: | Traduction automatique : | Maschinelle Übersetzung: | Maschinell Iwwersetzung: |
 | fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# valeur retenue faute de source} many {# valeurs retenues faute de source} other {# valeurs retenues faute de source}} | {count, plural, one {# Wert zurückgehalten, bis eine Quelle vorliegt} other {# Werte zurückgehalten, bis eine Quelle vorliegt}} | {count, plural, one {# Wäert zréckgehalen, bis eng Quell virläit} other {# Wäerter zréckgehalen, bis eng Quell virläit}} |
@@ -65,6 +65,7 @@
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
 - Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Re-read 2026-10-21: reviewer B, claude-fable-5-1 (the cells changed 2026-10-21: ok)
 - Verdict: 141 ok, 0 fix
 
 | key | lang | verdict | note | suggested |

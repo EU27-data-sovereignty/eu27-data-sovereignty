@@ -124,7 +124,8 @@ and in administrative terms (Austrian German says *Meldewesen* where German Germ
 
 ## Site-wide languages
 
-The languages a reader can choose for the whole site, not only a state's pages (#113). A choice is remembered by
+The languages a reader can choose for the whole site, not only a state's pages (#113): all 24 official EU languages
+since 2026-10-21 (English is the source). A choice is remembered by
 the browser; addresses do not change. Each language reads its home state's table (`home`), so a reader who chose
 Dutch sees `nl-NL` wording on every page, and on a Belgian page the Belgian `nl-BE` wording where it differs.
 
@@ -136,3 +137,20 @@ Dutch sees `nl-NL` wording on every page, and on a Belgian page the Belgian `nl-
 | it | it-IT |
 | pl | pl-PL |
 | nl | nl-NL |
+| bg | bg-BG |
+| cs | cs-CZ |
+| da | da-DK |
+| el | el-GR |
+| et | et-EE |
+| fi | fi-FI |
+| ga | ga-IE |
+| hr | hr-HR |
+| hu | hu-HU |
+| lt | lt-LT |
+| lv | lv-LV |
+| mt | mt-MT |
+| pt | pt-PT |
+| ro | ro-RO |
+| sk | sk-SK |
+| sl | sl-SI |
+| sv | sv-SE |

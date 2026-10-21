@@ -2,7 +2,7 @@
 
 - Languages: nl Dutch (nl-BE); fr French (fr-BE); de German (de-BE)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
-- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 4 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 4 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-21: 1 cells changed (sourced, checked and verified kept apart and in step with the site catalog (cross-check 2026-10-21))
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,7 +19,7 @@
 | nav.sources | Sources | Bronnen | Sources | Quellen |
 | nav.ask | Ask | Vraag stellen | Interroger | Fragen |
 | nav.methodology | Methodology | Methodologie | Méthodologie | Methodik |
-| nav.factcheck | Fact check | Feitencontrole | Vérification des faits | Faktenprüfung |
+| nav.factcheck | Fact check | Factcheck | Vérification des faits | Faktenprüfung |
 | nav.about | About the data | Over de gegevens | À propos des données | Über die Daten |
 | country.kicker | Country report | Landenrapport | Rapport par pays | Länderbericht |
 | country.contents | Contents | Inhoud | Sommaire | Inhalt |
@@ -64,6 +64,7 @@
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
 - Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Re-read 2026-10-21: reviewer B, claude-fable-5-1 (the cells changed 2026-10-21: ok)
 - Verdict: 141 ok, 0 fix
 
 | key | lang | verdict | note | suggested |

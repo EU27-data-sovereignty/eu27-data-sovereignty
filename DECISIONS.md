@@ -3295,6 +3295,17 @@ notice while its language has no reading.
   written; "Disputed:" is translated, its reason is not. Where the methodology's graphics parse the English (the
   priority formula), a translated page shows the translated rule as text.
 
+- **All 24 languages (done 2026-10-21, at the request of Marco Buhlmann: "add the remaining EU languages").** The
+  other 17 official languages join the site set in `STRINGS.md` and `site.json`, through the same pipeline: each
+  catalog drafted by one model, reviewed cell by cell by the other (408 fixes), every applied fix read again by the
+  first (7 more). This supersedes the alternative "all 24 at once", rejected while the pipeline was unproven; six
+  languages proved it. Lessons the reviews kept finding went into the drafting brief: national institution names
+  as generic labels, the verify word on the machine's fact check, `one` covering 21 or 101, English prepositions
+  calqued. A cross-check changed seven live core cells that used a language's verified word for sourced or
+  checked, or disagreed with the same language elsewhere. Nine languages name the fact check with their
+  verify root (Vérification des faits, Overenie faktov), the ordinary term for fact-checking; left as is, the
+  owner's call.
+
 **Verified:** 2026-10-21, stages 1 and 2. `web/src/__tests__/i18n.test.ts` (page language for a choice; what the
 switch offers; named, nested and plural arguments; `txr`); Playwright: a choice made on `/` holds on `/sources` and
 `/nl`, an explicit `/de/en` wins, `/be` lists its languages first; the English pages pixel-identical through the

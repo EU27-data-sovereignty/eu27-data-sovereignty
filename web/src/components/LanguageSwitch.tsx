@@ -4,9 +4,17 @@ import { chooseLang, choices, stateOf, useLang, useTx, type Lang } from '@/i18n'
 import { useDisclosure } from '@/utils/disclosure'
 import { countryPath } from '@/utils/routes'
 
+/**
+ * Chrome ships no names in Irish or Maltese and answers "Irish" and "Maltese", which is not what a reader of
+ * either looks for in a list of languages; these are the names they would (#113).
+ */
+const OWN_NAME: Record<string, string> = { ga: 'Gaeilge', mt: 'Malti' }
+
 /** A language's own name for itself, "Deutsch", "français", as the reader of it would look for it. */
 function endonym(l: Lang): string {
-  const name = new Intl.DisplayNames([l.tag], { type: 'language' }).of(l.lang) ?? l.lang
+  const named = new Intl.DisplayNames([l.tag], { type: 'language' }).of(l.lang) ?? l.lang
+  const english = new Intl.DisplayNames(['en'], { type: 'language' }).of(l.lang)
+  const name = l.lang !== 'en' && named === english ? (OWN_NAME[l.lang] ?? named) : named
   return name.charAt(0).toLocaleUpperCase(l.tag) + name.slice(1)
 }
 

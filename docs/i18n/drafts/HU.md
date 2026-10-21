@@ -2,7 +2,7 @@
 
 - Languages: hu Hungarian (hu-HU)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
-- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 0 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-20 round 3: applied 1 fix
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 0 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-20 round 3: applied 1 fix; 2026-10-21: 2 cells changed (sourced, checked and verified kept apart and in step with the site catalog (cross-check 2026-10-21))
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -44,8 +44,8 @@
 | col.position | Position | Helyzet |
 | col.finding | Finding | Megállapítás |
 | col.state | State | Állam |
-| col.registers_sourced | Registers sourced | Forrással igazolt nyilvántartások |
-| col.hosting_sourced | Hosting sourced | Forrással igazolt tárhely |
+| col.registers_sourced | Registers sourced | Forrással alátámasztott nyilvántartások |
+| col.hosting_sourced | Hosting sourced | Forrással alátámasztott tárhely |
 | fact.check_this | Check this fact | Ellenőrizze ezt a tényt |
 | fact.gloss | Machine translation: | Gépi fordítás: |
 | fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# érték visszatartva, amíg nincs forrás} other {# érték visszatartva, amíg nincs forrás}} |
@@ -61,6 +61,7 @@
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
 - Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer); round 4: 3 fixes re-reviewed
+- Re-read 2026-10-21: reviewer B, claude-fable-5-1 (the cells changed 2026-10-21: ok)
 - Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |

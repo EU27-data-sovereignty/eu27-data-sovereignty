@@ -2,7 +2,7 @@
 
 - Languages: lt Lithuanian (lt-LT)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
-- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-21: 1 cells changed (sourced, checked and verified kept apart and in step with the site catalog (cross-check 2026-10-21))
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -54,13 +54,14 @@
 | status.load_error | Could not load the data | Nepavyko įkelti duomenų |
 | notfound.title | Page not found | Puslapis nerastas |
 | notfound.back | Back to the overview | Grįžti į apžvalgą |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Patikrinta mašininiu būdu, žmogaus nepatikrinta. Šiuos šaltinius rado ir mechaniškai patikrino automatizuoti agentai; nė vienas žmogus išvadų neperžiūrėjo. Ne anglų kalbos šaltinio formuluotė anglų kalba yra cituojamo teksto mašininis vertimas arba mašininė santrauka. Kiekvieną faktą laikykite nuoroda į cituojamą šaltinį, o ne nustatytu faktu. Pataisymai laukiami per saugyklos problemų pranešimo šabloną. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Patikrinta mašininiu būdu, žmogaus neverifikuota. Šiuos šaltinius rado ir mechaniškai patikrino automatizuoti agentai; nė vienas žmogus išvadų neperžiūrėjo. Ne anglų kalbos šaltinio formuluotė anglų kalba yra cituojamo teksto mašininis vertimas arba mašininė santrauka. Kiekvieną faktą laikykite nuoroda į cituojamą šaltinį, o ne nustatytu faktu. Pataisymai laukiami per saugyklos problemų pranešimo šabloną. |
 | notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Šio puslapio užrašai yra mašininis vertimas. Joks šią kalbą skaitantis žmogus jų dar nepatikrino. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
 - Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Re-read 2026-10-21: reviewer B, claude-fable-5-1 (the cells changed 2026-10-21: ok)
 - Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |

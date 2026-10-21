@@ -7,6 +7,24 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-21
 
+### Added: the whole site in all 24 official EU languages (#113)
+
+- **Languages.** Bulgarian, Czech, Danish, Greek, Estonian, Finnish, Irish, Croatian, Hungarian, Lithuanian,
+  Latvian, Maltese, Portuguese, Romanian, Slovak, Slovenian and Swedish join the six site languages: the switch on
+  every page now offers 23 languages and English (`STRINGS.md`, "Site-wide languages"; `model/i18n/site.json`).
+- **Catalogs.** Each new language has all 661 site strings (`docs/i18n/site/<lang>.md`), drafted by one model and
+  reviewed in full by the other: 408 fixes in the review round (from 5 Hungarian to 48 Slovenian and 48 Swedish),
+  then every rewritten cell read again by the first model, which found 7 more. The reviewers replaced national
+  institution names (a state's own gazette, land register or population register) with generic ones, kept the
+  fact check's "could not confirm" out of each language's word for verified, and gave a count an exact `=1` form
+  where the language's `one` also covers 21 or 101.
+- **The 47 core strings.** A cross-check against the new catalogs changed seven live cells that blurred sourced,
+  checked and verified or differed from their own language elsewhere: Hungarian "Registers sourced" and "Hosting
+  sourced" (igazolt is verified), the Lithuanian disclaimer's "not human-verified", Luxembourg's French column
+  headings and German "Fact check", Belgium's Dutch "Fact check". Each re-read by the other model.
+- **The switch** names Irish and Maltese in themselves (Gaeilge, Malti): Chrome has no names in either language
+  and answered in English. The test of the switch reads its list from `site.json`.
+
 ### Added: the model's own wording in the six site languages (#113, stage 3)
 
 - **Model.** The sentences `model/document.py` and `model/methodology.py` fill per state or per build (method

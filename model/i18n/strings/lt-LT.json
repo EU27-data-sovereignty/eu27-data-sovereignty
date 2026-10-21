@@ -44,6 +44,6 @@
   "status.load_error": "Nepavyko įkelti duomenų",
   "notfound.title": "Puslapis nerastas",
   "notfound.back": "Grįžti į apžvalgą",
-  "notice.disclaimer": "Patikrinta mašininiu būdu, žmogaus nepatikrinta. Šiuos šaltinius rado ir mechaniškai patikrino automatizuoti agentai; nė vienas žmogus išvadų neperžiūrėjo. Ne anglų kalbos šaltinio formuluotė anglų kalba yra cituojamo teksto mašininis vertimas arba mašininė santrauka. Kiekvieną faktą laikykite nuoroda į cituojamą šaltinį, o ne nustatytu faktu. Pataisymai laukiami per saugyklos problemų pranešimo šabloną.",
+  "notice.disclaimer": "Patikrinta mašininiu būdu, žmogaus neverifikuota. Šiuos šaltinius rado ir mechaniškai patikrino automatizuoti agentai; nė vienas žmogus išvadų neperžiūrėjo. Ne anglų kalbos šaltinio formuluotė anglų kalba yra cituojamo teksto mašininis vertimas arba mašininė santrauka. Kiekvieną faktą laikykite nuoroda į cituojamą šaltinį, o ne nustatytu faktu. Pataisymai laukiami per saugyklos problemų pranešimo šabloną.",
   "notice.unread": "Šio puslapio užrašai yra mašininis vertimas. Joks šią kalbą skaitantis žmogus jų dar nepatikrino."
 }

@@ -25,6 +25,10 @@ const BUNDLE = JSON.parse(
 const LANGUAGES = JSON.parse(
   fs.readFileSync(path.resolve(HERE, '../../model/i18n/languages.json'), 'utf8'),
 ) as Record<string, { lang: string; admitted: boolean }[]>
+// The site-wide languages the switch offers on a page that is not a state's (#113), from the table admission writes.
+const SITE = JSON.parse(
+  fs.readFileSync(path.resolve(HERE, '../../model/i18n/site.json'), 'utf8'),
+) as { lang: string; tag: string; admitted: boolean }[]
 const english = (iso: string) => {
   const served = LANGUAGES[iso]!.filter(l => l.admitted)
   return !served.length || served[0]!.lang === 'en'
@@ -416,13 +420,12 @@ test.describe('languages (#111, #112)', () => {
     const sw = page.getByRole('button', { name: 'Language: English' })
     await sw.click()
     const list = page.locator(`#${await sw.getAttribute('aria-controls')}`)
+    // Every admitted site language in the table's order, each named in itself and capitalised, then English.
     await expect(list.getByRole('button')).toHaveText([
-      'Deutsch',
-      'Français',
-      'Español',
-      'Italiano',
-      'Polski',
-      'Nederlands',
+      ...SITE.filter(l => l.admitted).map(l => {
+        const name = new Intl.DisplayNames([l.tag], { type: 'language' }).of(l.lang) ?? l.lang
+        return name.charAt(0).toLocaleUpperCase(l.tag) + name.slice(1)
+      }),
       'English',
     ])
     await list.getByRole('button', { name: 'Nederlands' }).click()

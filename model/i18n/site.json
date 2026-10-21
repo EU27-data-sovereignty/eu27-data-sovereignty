@@ -34,5 +34,107 @@
     "tag": "nl-NL",
     "admitted": true,
     "read": false
+  },
+  {
+    "lang": "bg",
+    "tag": "bg-BG",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "cs",
+    "tag": "cs-CZ",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "da",
+    "tag": "da-DK",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "el",
+    "tag": "el-GR",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "et",
+    "tag": "et-EE",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "fi",
+    "tag": "fi-FI",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "ga",
+    "tag": "ga-IE",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "hr",
+    "tag": "hr-HR",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "hu",
+    "tag": "hu-HU",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "lt",
+    "tag": "lt-LT",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "lv",
+    "tag": "lv-LV",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "mt",
+    "tag": "mt-MT",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "pt",
+    "tag": "pt-PT",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "ro",
+    "tag": "ro-RO",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "sk",
+    "tag": "sk-SK",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "sl",
+    "tag": "sl-SI",
+    "admitted": true,
+    "read": false
+  },
+  {
+    "lang": "sv",
+    "tag": "sv-SE",
+    "admitted": true,
+    "read": false
   }
 ]
