@@ -19,7 +19,7 @@ import notes  # noqa: E402
 
 class Registry(unittest.TestCase):
     def test_every_note_checker_is_registered(self):
-        on_disk = sorted(p.name for p in (ROOT / "model").glob("*_note.py")) + ["i18n_drafts.py"]
+        on_disk = sorted(p.name for p in (ROOT / "model").glob("*_note.py")) + ["i18n_drafts.py", "i18n_site.py"]
         self.assertEqual(sorted(set(on_disk)), sorted(notes.CHECKERS),
                          "a checker exists that the gate never runs, or the register names a module that is gone")
 
