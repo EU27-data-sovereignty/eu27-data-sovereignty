@@ -403,6 +403,15 @@ test.describe('languages (#111, #112)', () => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'ga-IE')
   })
 
+  test('the language switch shows only where a page has another language', async ({ page }) => {
+    await page.goto('/')
+    await loaded(page)
+    await expect(page.getByRole('button', { name: /^Language: / })).toHaveCount(0)
+    await page.goto('/sources')
+    await loaded(page)
+    await expect(page.getByRole('button', { name: /^Language: / })).toHaveCount(0)
+  })
+
   test('the language switch lists what the page can be read in', async ({ page }) => {
     await page.goto('/be')
     await loaded(page)

@@ -12,8 +12,8 @@ function endonym(l: Lang): string {
 
 /**
  * The header's language switch (#111). On a member state's page it lists the languages that page can be read
- * in: the state's official languages once admitted, and English. Every other page is English only, so the
- * list holds English alone; so does a state page until a translation has been read by a person.
+ * in: the state's admitted official languages, and English. Every other page is English only, and a button that
+ * opens a list of one looks broken, so the switch is shown only where there is something to switch to.
  */
 export function LanguageSwitch() {
   const { pathname } = useLocation()
@@ -22,6 +22,7 @@ export function LanguageSwitch() {
   const options = iso ? servedLanguages(iso) : [current]
   const { open, rootProps, buttonProps, panelProps } = useDisclosure()
 
+  if (options.length < 2) return null
   return (
     <div {...rootProps} className="relative">
       <button

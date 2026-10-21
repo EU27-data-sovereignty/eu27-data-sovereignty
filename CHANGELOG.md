@@ -5,6 +5,14 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-21
+
+### Fixed: the language switch appears only where a page has another language
+
+- **Header.** Off the 27 state pages every page is English only, and the switch opened a list holding English
+  alone, which read as broken. It now shows only on a page that can be read in more than one language; on a
+  state page it lists that state's languages as before. Playwright checks it is absent on `/` and `/sources`.
+
 ## 2026-10-20
 
 ### Fixed: a disputed value no longer stretches a row of the ranking table to twenty lines
