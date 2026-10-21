@@ -20,6 +20,18 @@ const BUNDLE = JSON.parse(
   fs.readFileSync(path.resolve(HERE, '../public/data/eu27.json'), 'utf8'),
 ) as Bundle
 
+// A state's page in English, for tests about English wording: `/<iso>/en`, or `/<iso>` itself where English is
+// official and so the default (IE, MT). Read from the same table the app reads (#112).
+const LANGUAGES = JSON.parse(
+  fs.readFileSync(path.resolve(HERE, '../../model/i18n/languages.json'), 'utf8'),
+) as Record<string, { lang: string; admitted: boolean }[]>
+const english = (iso: string) => {
+  const served = LANGUAGES[iso]!.filter(l => l.admitted)
+  return !served.length || served[0]!.lang === 'en'
+    ? `/${iso.toLowerCase()}`
+    : `/${iso.toLowerCase()}/en`
+}
+
 /** The first sourced fact in a country's fundamentals table, as the page shows it. */
 function firstFact(iso: string): string {
   const doc = BUNDLE.documents[iso]
@@ -238,7 +250,7 @@ test.describe('evidence rules (#82, #83)', () => {
     const iso = Object.keys(BUNDLE.documents).find(i =>
       docSpans(i).some(sp => sp.c?.some(c => BUNDLE.claims[c]?.some(x => x.gloss))),
     )!
-    await page.goto(`/${iso.toLowerCase()}`)
+    await page.goto(english(iso))
     await expect(page.getByText('Machine translation:').first()).toBeVisible()
   })
 
@@ -268,7 +280,7 @@ test.describe('contributing (#85)', () => {
   test('every fact has a prefilled "Check this fact" link to the review form', async ({ page }) => {
     const fact = docSpans('DE').find(sp => sp.role === 'fact')!
     const claim = fact.c![0]!
-    await page.goto('/de')
+    await page.goto(english('DE'))
     const link = page.locator('#src-1').getByRole('link', { name: 'Check this fact' }).first()
     await expect(link).toBeVisible()
     const href = await link.getAttribute('href')
@@ -349,36 +361,66 @@ test.describe('header navigation', () => {
   })
 })
 
-test.describe('languages (#111)', () => {
-  test('a state page is English until a translation is admitted, at one address', async ({
+test.describe('languages (#111, #112)', () => {
+  test('a state page opens in its language, says it is unread, and keeps English one step away', async ({
     page,
   }) => {
     await page.goto('/de')
     await loaded(page)
-    await expect(page.locator('html')).toHaveAttribute('lang', 'en')
-    await expect(page.getByRole('heading', { name: 'Germany', level: 1 })).toBeVisible()
+    await expect(page.locator('html')).toHaveAttribute('lang', 'de-DE')
+    const nav = page.getByRole('navigation', { name: 'Main' })
+    await expect(nav.getByRole('link', { name: 'Überblick' })).toBeVisible()
+    // No reader of German has checked it yet, and the page says so in German and in English.
+    const note = page.getByRole('note')
+    await expect(note.locator('[lang="de-DE"]')).toContainText('maschinelle Übersetzung')
+    await expect(note.locator('[lang="en"]')).toContainText('machine translation')
 
-    // The default spelled out and an official language not yet admitted both come back to /de.
-    for (const path of ['/de/en', '/de/de']) {
-      await page.goto(path)
-      await expect(page).toHaveURL(/\/de$/)
-    }
-    // A language Germany does not have is not a page.
+    await page.goto('/de/en')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en')
+    await expect(nav.getByRole('link', { name: 'Overview' })).toBeVisible()
+    await expect(page.getByRole('note')).toHaveCount(0)
+
+    // The default spelled out comes back to /de; a language Germany does not have is not a page.
+    await page.goto('/de/de')
+    await expect(page).toHaveURL(/\/de$/)
     await page.goto('/de/fr')
-    await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible()
+    await expect(
+      page
+        .getByRole('heading', { name: 'Seite nicht gefunden' })
+        .or(page.getByRole('heading', { name: 'Page not found' })),
+    ).toBeVisible()
+  })
+
+  test('where English is official the state opens in English, its other language beside it', async ({
+    page,
+  }) => {
+    await page.goto('/ie')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en-IE')
+    await page.goto('/ie/ga')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'ga-IE')
   })
 
   test('the language switch lists what the page can be read in', async ({ page }) => {
-    await page.goto('/de')
+    await page.goto('/be')
     await loaded(page)
-    const sw = page.getByRole('button', { name: 'Language: English' })
+    const sw = page.getByRole('button', { name: /^Language: / })
     await sw.click()
     await expect(sw).toHaveAttribute('aria-expanded', 'true')
     const list = page.locator(`#${await sw.getAttribute('aria-controls')}`)
-    await expect(list.getByRole('listitem')).toHaveCount(1)
-    await expect(list.getByText('English')).toHaveAttribute('aria-current', 'true')
-    await page.keyboard.press('Escape')
-    await expect(sw).toHaveAttribute('aria-expanded', 'false')
+    await expect(list.getByRole('listitem')).toHaveCount(4)
+    await expect(list.locator('[aria-current="true"]')).toHaveText('Nederlands')
+    await list.getByRole('link', { name: 'Français' }).click()
+    await expect(page).toHaveURL(/\/be\/fr$/)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'fr-BE')
+  })
+
+  test('a count prints in the language with its plural form', async ({ page }) => {
+    await page.goto('/pl')
+    await loaded(page)
+    await expect(page.locator('main#main')).toContainText(/\d+ wartoś/)
   })
 })
 
@@ -488,14 +530,19 @@ test.describe('ask', () => {
  * Wait for the page itself, not the placeholder. Until the bundle has been fetched the app renders
  * "Loading the EU-27 dataset…" inside a <main> of its own, so waiting for <main> alone lets a scan run
  * against the placeholder and pass without having checked anything. That happened twice on a slow machine
- * (#101, #102) while CI, which is faster, failed on the real page.
+ * (#101, #102) while CI, which is faster, failed on the real page. The app's own <main id="main"> exists only
+ * once the bundle has loaded; the placeholder's <main> has no id, and its text is in the page's language, so
+ * waiting for English text to vanish would pass on a German page at once (#112).
  */
 async function loaded(page: Page) {
-  await expect(page.locator('main')).toBeVisible()
-  await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
+  await expect(page.locator('main#main')).toBeVisible()
 }
 
 test.describe('accessibility', () => {
+  // The site is dark by default; this pass scans light, as a reader who chose it sees the page.
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('eu27-theme', 'light'))
+  })
   for (const route of ROUTES) {
     test(`${route} has no detectable violations`, async ({ page }) => {
       // /sources lists every claim with its checks and a "Check this fact" link (1,390 claims on
@@ -518,9 +565,7 @@ test.describe('accessibility in dark mode (#92)', () => {
     test(`${route} has no detectable violations in dark mode`, async ({ page }) => {
       await page.goto(route)
       await loaded(page)
-      expect(await page.evaluate(() => matchMedia('(prefers-color-scheme: dark)').matches)).toBe(
-        true,
-      )
+      await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
       const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
         .analyze()
@@ -536,6 +581,25 @@ test.describe('print (#92)', () => {
     await expect(page.getByRole('navigation', { name: 'Main' })).toBeHidden()
     await expect(page.getByRole('heading', { name: 'Germany', exact: true })).toBeVisible()
     await expect(page.locator('tbody tr').first()).toBeVisible()
+  })
+
+  test('a page printed from the dark default takes the light colours', async ({ page }) => {
+    await page.goto('/de')
+    await loaded(page)
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+    const token = (name: string) =>
+      page.evaluate(
+        n => getComputedStyle(document.documentElement).getPropertyValue(n).trim(),
+        name,
+      )
+    const onScreen = await token('--color-fg-primary')
+    await page.emulateMedia({ media: 'print' })
+    const onPaper = await token('--color-fg-primary')
+    await page.emulateMedia({ media: 'screen', colorScheme: 'light' })
+    await page.evaluate(() => document.documentElement.setAttribute('data-theme', 'light'))
+    // Printed text is the light theme's ink, not the pale text of the dark screen.
+    expect(onPaper).not.toBe(onScreen)
+    expect(onPaper).toBe(await token('--color-fg-primary'))
   })
 })
 

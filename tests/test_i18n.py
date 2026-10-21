@@ -29,10 +29,7 @@ BUNDLE = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(e
 
 # Keys in the table that nothing looks up yet, each with the reason. A key leaves this list when it is wired.
 NOT_YET = {
-    "site.title": "the tab title is static in web/index.html; it changes with the document title per page",
-    "fact.withheld": "printed inside a sentence with a count; it needs an ICU pattern (plan §3a), not a lookup",
-    "fact.disputed": "printed inside a sentence with a count; it needs an ICU pattern (plan §3a), not a lookup",
-    "notice.disclaimer": "the footer prints bundle.provenance; a translated notice is plan stage 2's last step",
+    "fact.disputed": "no state page prints it: the disputed count is on /countries, which is English (#112)",
 }
 
 
@@ -42,7 +39,7 @@ def _web_keys() -> set[str]:
         if "__tests__" in f.parts:
             continue
         text = f.read_text(encoding="utf-8")
-        keys |= set(re.findall(r"\bt\('([a-z_]+\.[a-z_]+)'\)", text))
+        keys |= set(re.findall(r"\bt\('([a-z_]+\.[a-z_]+)'[,)]", text))
         keys |= set(re.findall(r"label: '([a-z_]+\.[a-z_]+)'", text))
     return keys
 
@@ -66,6 +63,20 @@ def _bundle_keyed() -> list[tuple[str, str]]:
 
 
 class Tables(unittest.TestCase):
+    def test_a_language_is_admitted_only_with_a_clean_cross_review(self):
+        keys, states = i18n_admit.drafts.spec()
+        for iso, entries in LANGUAGES.items():
+            if any(e["admitted"] for e in entries):
+                problems, _ = i18n_admit.drafts.check_one(iso, keys, states[iso][1])
+                self.assertEqual(problems, [], f"{iso} is admitted with an unclean draft")
+
+    def test_vercel_names_the_language_of_every_translated_state_page(self):
+        config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
+        named = {b["source"]: h["value"] for b in config["headers"] for h in b["headers"]
+                 if h["key"] == "Content-Language"}
+        self.assertEqual(named, {b["source"]: b["headers"][0]["value"]
+                                 for b in i18n_admit.content_language(LANGUAGES)})
+
     def test_model_i18n_is_what_admission_writes(self):
         out = io.StringIO()
         with redirect_stdout(out):
@@ -75,6 +86,8 @@ class Tables(unittest.TestCase):
     def test_an_admitted_language_has_a_whole_table(self):
         for iso, langs in LANGUAGES.items():
             for lang in langs:
+                if lang["lang"] == "en":
+                    continue  # English where it is official (IE, MT) reads the source table
                 path = ROOT / "model" / "i18n" / "strings" / f"{lang['tag']}.json"
                 self.assertEqual(lang["admitted"], path.exists(), f"{iso} {lang['tag']}")
                 if path.exists():

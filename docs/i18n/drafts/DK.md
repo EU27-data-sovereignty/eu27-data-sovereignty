@@ -2,6 +2,7 @@
 
 - Languages: da Danish (da-DK)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 0 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Spørg |
 | nav.methodology | Methodology | Metode |
 | nav.factcheck | Fact check | Faktatjek |
+| nav.about | About the data | Om dataene |
 | country.kicker | Country report | Landerapport |
 | country.contents | Contents | Indhold |
 | country.sources | Sources | Kilder |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Hosting med kilde |
 | fact.check_this | Check this fact | Tjek dette faktum |
 | fact.gloss | Machine translation: | Maskinoversættelse: |
-| fact.withheld | withheld until sourced | tilbageholdt, indtil der er en kilde |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# værdi tilbageholdt, indtil der er en kilde} other {# værdier tilbageholdt, indtil der er en kilde}} |
 | fact.disputed | withheld as disputed | tilbageholdt som omstridt |
 | status.loading | Loading the EU-27 dataset… | Indlæser EU-27-datasættet… |
 | status.load_error | Could not load the data | Dataene kunne ikke indlæses |
 | notfound.title | Page not found | Siden blev ikke fundet |
 | notfound.back | Back to the overview | Tilbage til overblikket |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Maskinelt kontrolleret, ikke verificeret af mennesker. Automatiserede agenter har fundet disse kilder og kontrolleret dem mekanisk; ingen person har gennemgået konstateringerne. Den engelske ordlyd af en ikke-engelsk kilde er en maskinoversættelse eller et maskinelt resumé af den citerede tekst. Betragt hvert faktum som et spor til dets citerede kilde, ikke som fastslået. Rettelser modtages gerne via repositoriets skabelon til issues (issue template). |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Teksterne på denne side er en maskinoversættelse. Ingen person, der læser dette sprog, har gennemgået dem endnu. |
 
 ## Review
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
-- Verdict: 45 ok, 0 fix
+- Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,6 +76,7 @@
 | nav.ask | da | ok | | |
 | nav.methodology | da | ok | | |
 | nav.factcheck | da | ok | | |
+| nav.about | da | ok | 'Om dataene' with the definite form; natural | |
 | country.kicker | da | ok | | |
 | country.contents | da | ok | | |
 | country.sources | da | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | da | ok | | |
 | fact.check_this | da | ok | | |
 | fact.gloss | da | ok | | |
-| fact.withheld | da | ok | | |
+| fact.withheld | da | ok | ICU pattern, one/other as CLDR da; værdi / værdier agree | |
 | fact.disputed | da | ok | | |
 | status.loading | da | ok | | |
 | status.load_error | da | ok | | |
 | notfound.title | da | ok | | |
 | notfound.back | da | ok | | |
-| notice.disclaimer | da | ok | | |
+| notice.disclaimer | da | ok | re-read 2026-10-20: 'kontrolleret' for the machine, 'verificeret' for the person; the distinction stands, nothing weakened | |
+| notice.unread | da | ok | says machine translation; 'ingen person ... gennemgået': gone through, not verified; plain | |

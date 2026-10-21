@@ -308,7 +308,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
                   {r.cells.map((cell, i) => (
                     <td key={i} className="px-3.5 py-2.5">
                       <span className={PILL[cell.t] ?? ''}>
-                        <SpanView span={cell} numbers={numbers} bundle={bundle} />
+                        <SpanView span={cell} numbers={numbers} bundle={bundle} compact />
                       </span>
                     </td>
                   ))}

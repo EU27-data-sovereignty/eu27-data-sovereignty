@@ -2,6 +2,7 @@
 
 - Languages: fr French (fr-LU); de German (de-LU); lb Luxembourgish (lb-LU)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 6 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,12 +20,13 @@
 | nav.ask | Ask | Demander | Fragen | Froen |
 | nav.methodology | Methodology | Méthodologie | Methodik | Methodik |
 | nav.factcheck | Fact check | Vérification des faits | Faktencheck | Faktecheck |
-| country.kicker | Country report | Rapport par pays | Länderbericht | Länderbericht |
+| nav.about | About the data | À propos des données | Über die Daten | Iwwer d'Daten |
+| country.kicker | Country report | Rapport par pays | Länderbericht | Lännerbericht |
 | country.contents | Contents | Sommaire | Inhalt | Inhalt |
 | country.sources | Sources | Sources | Quellen | Quellen |
 | section.fundamentals | Fundamentals | Données de base | Grunddaten | Grondaten |
 | section.holdings | Critical data holdings, by priority | Fonds de données critiques, par priorité | Kritische Datenbestände, nach Priorität | Kritesch Datebestänn, no Prioritéit |
-| section.exposure | Foreign-dependency exposure | Exposition à la dépendance étrangère | Auslandsabhängigkeit | Ofhängegkeet vum Ausland |
+| section.exposure | Foreign-dependency exposure | Exposition à la dépendance étrangère | Exposition gegenüber Auslandsabhängigkeit | Expositioun géigeniwwer der Ofhängegkeet vum Ausland |
 | section.posture | Legal and institutional posture | Cadre juridique et institutionnel | Rechtliche und institutionelle Ausgangslage | Rechtlech an institutionell Ausgangslag |
 | section.sizing | Capacity | Capacité | Kapazität | Kapazitéit |
 | section.gaps | Research still open | Recherches encore ouvertes | Offene Forschungsfragen | Oppe Fuerschungsfroen |
@@ -46,13 +48,14 @@
 | col.hosting_sourced | Hosting sourced | Hébergement sourcé | Hosting mit Quelle | Hosting mat Quell |
 | fact.check_this | Check this fact | Vérifier ce fait | Diesen Fakt prüfen | Dëse Fakt iwwerpréiwen |
 | fact.gloss | Machine translation: | Traduction automatique : | Maschinelle Übersetzung: | Maschinell Iwwersetzung: |
-| fact.withheld | withheld until sourced | retenu faute de source | zurückgehalten, bis eine Quelle vorliegt | zréckgehalen, bis eng Quell virläit |
-| fact.disputed | withheld as disputed | retenu comme contesté | zurückgehalten als strittig | zréckgehalen als ëmstridden |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# valeur retenue faute de source} many {# valeurs retenues faute de source} other {# valeurs retenues faute de source}} | {count, plural, one {# Wert zurückgehalten, bis eine Quelle vorliegt} other {# Werte zurückgehalten, bis eine Quelle vorliegt}} | {count, plural, one {# Wäert zréckgehalen, bis eng Quell virläit} other {# Wäerter zréckgehalen, bis eng Quell virläit}} |
+| fact.disputed | withheld as disputed | retenu comme contesté | als strittig zurückgehalten | als ëmstridden zréckgehalen |
 | status.loading | Loading the EU-27 dataset… | Chargement du jeu de données EU-27… | EU-27-Datensatz wird geladen… | EU-27-Datesaz gëtt gelueden… |
 | status.load_error | Could not load the data | Impossible de charger les données | Die Daten konnten nicht geladen werden | D'Date konnten net geluede ginn |
 | notfound.title | Page not found | Page introuvable | Seite nicht gefunden | Säit net fonnt |
 | notfound.back | Back to the overview | Retour à la vue d'ensemble | Zurück zum Überblick | Zréck op den Iwwerbléck |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Vérifié par machine, non vérifié par une personne. Des agents automatisés ont trouvé ces sources et les ont contrôlées mécaniquement ; aucune personne n'a relu les constats. La formulation en anglais d'une source non anglophone est une traduction automatique ou un résumé automatique du texte cité. Considérez chaque fait comme une piste vers sa source citée, non comme établi. Les corrections sont les bienvenues via le modèle de signalement du dépôt. | Maschinell geprüft, nicht von Menschen verifiziert. Automatisierte Agenten haben diese Quellen gefunden und mechanisch geprüft; keine Person hat die Befunde durchgesehen. Die englische Formulierung einer nicht englischsprachigen Quelle ist eine maschinelle Übersetzung oder eine maschinelle Zusammenfassung des zitierten Textes. Behandeln Sie jeden Fakt als Hinweis auf seine zitierte Quelle, nicht als gesichert. Korrekturen sind über die Issue-Vorlage des Repositorys willkommen. | Maschinell gepréift, net vu Mënsche verifizéiert. Automatiséiert Agente hunn dës Quelle fonnt a mechanesch gepréift; keng Persoun huet d'Befunden duerchgekuckt. Déi englesch Formuléierung vun enger net-englescher Quell ass eng maschinell Iwwersetzung oder eng maschinell Zesummefaassung vum zitéierten Text. Behandelt all Fakt als Hiweis op seng zitéiert Quell, net als geséchert. Korrekture si wëllkomm iwwer d'Issue-Virlag vum Repository. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Contrôlé par machine, non vérifié par une personne. Des agents automatisés ont trouvé ces sources et les ont contrôlées mécaniquement ; aucune personne n'a examiné les constats. La formulation en anglais d'une source non anglophone est une traduction automatique ou un résumé automatique du texte cité. Considérez chaque fait comme une piste vers sa source citée, non comme établi. Les corrections sont les bienvenues via le modèle de signalement du dépôt. | Maschinell geprüft, nicht von Menschen verifiziert. Automatisierte Agenten haben diese Quellen gefunden und mechanisch geprüft; keine Person hat die Befunde durchgesehen. Die englische Formulierung einer nicht englischsprachigen Quelle ist eine maschinelle Übersetzung oder eine maschinelle Zusammenfassung des zitierten Textes. Behandeln Sie jeden Fakt als Hinweis auf seine zitierte Quelle, nicht als gesichert. Korrekturen sind über die Issue-Vorlage des Repositorys willkommen. | Maschinell gepréift, net vu Mënsche verifizéiert. Automatiséiert Agente hunn dës Quelle fonnt a mechanesch gepréift; keng Persoun huet d'Befunden duerchgekuckt. Déi englesch Formuléierung vun enger net-englescher Quell ass eng maschinell Iwwersetzung oder eng maschinell Zesummefaassung vum zitéierten Text. Behandelt all Fakt als Hiweis op seng zitéiert Quell, net als geséchert. Korrekture si wëllkomm iwwer d'Issue-Virlag vum Repository. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Les libellés de cette page sont une traduction automatique. Aucune personne lisant cette langue ne les a encore contrôlés. | Die Beschriftungen auf dieser Seite sind eine maschinelle Übersetzung. Keine Person, die diese Sprache liest, hat sie bisher geprüft. | D'Beschrëftungen op dëser Säit sinn eng maschinell Iwwersetzung. Keng Persoun, déi dës Sprooch liest, huet se bis elo gepréift. |
 
 - Note: lb is Luxembourgish, a national language, not an official EU language.
 - Note: fr follows Luxembourg administrative usage; it does not differ from the French draft for FR or BE in these strings. The space before the colon in fact.gloss ("Traduction automatique :") is the French typographic convention, kept in Luxembourg too.
@@ -61,7 +64,8 @@
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 129 ok, 6 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 141 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -76,6 +80,7 @@
 | nav.ask | fr | ok | | |
 | nav.methodology | fr | ok | | |
 | nav.factcheck | fr | ok | | |
+| nav.about | fr | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | fr | ok | | |
 | country.contents | fr | ok | | |
 | country.sources | fr | ok | | |
@@ -103,13 +108,14 @@
 | col.hosting_sourced | fr | ok | | |
 | fact.check_this | fr | ok | | |
 | fact.gloss | fr | ok | | |
-| fact.withheld | fr | ok | | |
+| fact.withheld | fr | ok | one/many/other; French singular also covers 0, as CLDR fr does | |
 | fact.disputed | fr | ok | | |
 | status.loading | fr | ok | | |
 | status.load_error | fr | ok | | |
 | notfound.title | fr | ok | | |
 | notfound.back | fr | ok | | |
-| notice.disclaimer | fr | fix | 'relu' (proofread) is weaker than 'reviewed' | Contrôlé par machine, non vérifié par une personne. Des agents automatisés ont trouvé ces sources et les ont contrôlées mécaniquement ; aucune personne n'a examiné les constats. La formulation en anglais d'une source non anglophone est une traduction automatique ou un résumé automatique du texte cité. Considérez chaque fait comme une piste vers sa source citée, non comme établi. Les corrections sont les bienvenues via le modèle de signalement du dépôt. |
+| notice.disclaimer | fr | ok | fix applied 2026-10-20, re-reviewed | |
+| notice.unread | fr | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |
 | site.title | de | ok | | |
 | site.kicker | de | ok | | |
 | nav.overview | de | ok | | |
@@ -121,12 +127,13 @@
 | nav.ask | de | ok | | |
 | nav.methodology | de | ok | | |
 | nav.factcheck | de | ok | | |
+| nav.about | de | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | de | ok | | |
 | country.contents | de | ok | | |
 | country.sources | de | ok | | |
 | section.fundamentals | de | ok | | |
 | section.holdings | de | ok | | |
-| section.exposure | de | fix | drops 'exposure' | Exposition gegenüber Auslandsabhängigkeit |
+| section.exposure | de | ok | fix applied 2026-10-20, re-reviewed | |
 | section.posture | de | ok | | |
 | section.sizing | de | ok | | |
 | section.gaps | de | ok | | |
@@ -148,13 +155,14 @@
 | col.hosting_sourced | de | ok | | |
 | fact.check_this | de | ok | | |
 | fact.gloss | de | ok | | |
-| fact.withheld | de | ok | | |
-| fact.disputed | de | fix | word order is unidiomatic | als strittig zurückgehalten |
+| fact.withheld | de | ok | one/other, Wert/Werte agree | |
+| fact.disputed | de | ok | fix applied 2026-10-20, re-reviewed | |
 | status.loading | de | ok | | |
 | status.load_error | de | ok | | |
 | notfound.title | de | ok | | |
 | notfound.back | de | ok | | |
-| notice.disclaimer | de | ok | | |
+| notice.disclaimer | de | ok | re-read 2026-10-20: 'machine-checked' is checked, not verified; nothing weakened | |
+| notice.unread | de | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |
 | site.title | lb | ok | | |
 | site.kicker | lb | ok | | |
 | nav.overview | lb | ok | | |
@@ -166,12 +174,13 @@
 | nav.ask | lb | ok | | |
 | nav.methodology | lb | ok | | |
 | nav.factcheck | lb | ok | | |
-| country.kicker | lb | fix | German spelling, not Luxembourgish | Lännerbericht |
+| nav.about | lb | ok | idiomatic menu label for 'About the data' | |
+| country.kicker | lb | ok | fix applied 2026-10-20, re-reviewed | |
 | country.contents | lb | ok | | |
 | country.sources | lb | ok | | |
 | section.fundamentals | lb | ok | | |
 | section.holdings | lb | ok | | |
-| section.exposure | lb | fix | drops 'exposure' | Expositioun géigeniwwer der Ofhängegkeet vum Ausland |
+| section.exposure | lb | ok | fix applied 2026-10-20, re-reviewed | |
 | section.posture | lb | ok | | |
 | section.sizing | lb | ok | | |
 | section.gaps | lb | ok | | |
@@ -193,10 +202,11 @@
 | col.hosting_sourced | lb | ok | | |
 | fact.check_this | lb | ok | | |
 | fact.gloss | lb | ok | | |
-| fact.withheld | lb | ok | | |
-| fact.disputed | lb | fix | word order is unidiomatic | als ëmstridden zréckgehalen |
+| fact.withheld | lb | ok | one/other, Wäert/Wäerter agree | |
+| fact.disputed | lb | ok | fix applied 2026-10-20, re-reviewed | |
 | status.loading | lb | ok | | |
 | status.load_error | lb | ok | | |
 | notfound.title | lb | ok | | |
 | notfound.back | lb | ok | | |
-| notice.disclaimer | lb | ok | | |
+| notice.disclaimer | lb | ok | re-read 2026-10-20: 'machine-checked' is checked, not verified; nothing weakened | |
+| notice.unread | lb | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

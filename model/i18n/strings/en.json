@@ -10,6 +10,7 @@
   "nav.ask": "Ask",
   "nav.methodology": "Methodology",
   "nav.factcheck": "Fact check",
+  "nav.about": "About the data",
   "country.kicker": "Country report",
   "country.contents": "Contents",
   "country.sources": "Sources",
@@ -37,11 +38,12 @@
   "col.hosting_sourced": "Hosting sourced",
   "fact.check_this": "Check this fact",
   "fact.gloss": "Machine translation:",
-  "fact.withheld": "withheld until sourced",
+  "fact.withheld": "{count, plural, one {# value withheld until sourced} other {# values withheld until sourced}}",
   "fact.disputed": "withheld as disputed",
   "status.loading": "Loading the EU-27 dataset…",
   "status.load_error": "Could not load the data",
   "notfound.title": "Page not found",
   "notfound.back": "Back to the overview",
-  "notice.disclaimer": "Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template."
+  "notice.disclaimer": "Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.",
+  "notice.unread": "The labels on this page are a machine translation. No person who reads this language has checked them yet."
 }

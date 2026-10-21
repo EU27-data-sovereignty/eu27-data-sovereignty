@@ -3,214 +3,258 @@
     {
       "lang": "de",
       "tag": "de-AT",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "BE": [
     {
       "lang": "nl",
       "tag": "nl-BE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     },
     {
       "lang": "fr",
       "tag": "fr-BE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     },
     {
       "lang": "de",
       "tag": "de-BE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "BG": [
     {
       "lang": "bg",
       "tag": "bg-BG",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "CY": [
     {
       "lang": "el",
       "tag": "el-CY",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "CZ": [
     {
       "lang": "cs",
       "tag": "cs-CZ",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "DE": [
     {
       "lang": "de",
       "tag": "de-DE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "DK": [
     {
       "lang": "da",
       "tag": "da-DK",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "EE": [
     {
       "lang": "et",
       "tag": "et-EE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "EL": [
     {
       "lang": "el",
       "tag": "el-GR",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "ES": [
     {
       "lang": "es",
       "tag": "es-ES",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "FI": [
     {
       "lang": "fi",
       "tag": "fi-FI",
-      "admitted": false
+      "admitted": true,
+      "read": false
     },
     {
       "lang": "sv",
       "tag": "sv-FI",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "FR": [
     {
       "lang": "fr",
       "tag": "fr-FR",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "HR": [
     {
       "lang": "hr",
       "tag": "hr-HR",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "HU": [
     {
       "lang": "hu",
       "tag": "hu-HU",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "IE": [
     {
+      "lang": "en",
+      "tag": "en-IE",
+      "admitted": true,
+      "read": true
+    },
+    {
       "lang": "ga",
       "tag": "ga-IE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "IT": [
     {
       "lang": "it",
       "tag": "it-IT",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "LT": [
     {
       "lang": "lt",
       "tag": "lt-LT",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "LU": [
     {
       "lang": "fr",
       "tag": "fr-LU",
-      "admitted": false
+      "admitted": true,
+      "read": false
     },
     {
       "lang": "de",
       "tag": "de-LU",
-      "admitted": false
+      "admitted": true,
+      "read": false
     },
     {
       "lang": "lb",
       "tag": "lb-LU",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "LV": [
     {
       "lang": "lv",
       "tag": "lv-LV",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "MT": [
     {
+      "lang": "en",
+      "tag": "en-MT",
+      "admitted": true,
+      "read": true
+    },
+    {
       "lang": "mt",
       "tag": "mt-MT",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "NL": [
     {
       "lang": "nl",
       "tag": "nl-NL",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "PL": [
     {
       "lang": "pl",
       "tag": "pl-PL",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "PT": [
     {
       "lang": "pt",
       "tag": "pt-PT",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "RO": [
     {
       "lang": "ro",
       "tag": "ro-RO",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "SE": [
     {
       "lang": "sv",
       "tag": "sv-SE",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "SI": [
     {
       "lang": "sl",
       "tag": "sl-SI",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ],
   "SK": [
     {
       "lang": "sk",
       "tag": "sk-SK",
-      "admitted": false
+      "admitted": true,
+      "read": false
     }
   ]
 }

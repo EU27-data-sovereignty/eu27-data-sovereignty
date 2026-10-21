@@ -2,6 +2,7 @@
 
 - Languages: es Spanish (es-ES)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -18,7 +19,8 @@
 | nav.sources | Sources | Fuentes |
 | nav.ask | Ask | Preguntar |
 | nav.methodology | Methodology | Metodología |
-| nav.factcheck | Fact check | Verificación de datos |
+| nav.factcheck | Fact check | Verificación de hechos |
+| nav.about | About the data | Acerca de los datos |
 | country.kicker | Country report | Informe por país |
 | country.contents | Contents | Índice |
 | country.sources | Sources | Fuentes |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Alojamiento con fuente |
 | fact.check_this | Check this fact | Comprobar este dato |
 | fact.gloss | Machine translation: | Traducción automática: |
-| fact.withheld | withheld until sourced | retenido hasta contar con fuente |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# valor retenido hasta contar con fuente} many {# de valores retenidos hasta contar con fuente} other {# valores retenidos hasta contar con fuente}} |
 | fact.disputed | withheld as disputed | retenido por controvertido |
 | status.loading | Loading the EU-27 dataset… | Cargando el conjunto de datos de la EU-27… |
 | status.load_error | Could not load the data | No se han podido cargar los datos |
 | notfound.title | Page not found | Página no encontrada |
 | notfound.back | Back to the overview | Volver a la visión general |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Comprobado por máquina, no verificado por personas. Agentes automatizados encontraron estas fuentes y las comprobaron de forma mecánica; ninguna persona ha revisado las constataciones. La redacción en inglés de una fuente no inglesa es una traducción automática o un resumen automático del texto citado. Trate cada dato como una pista hacia su fuente citada, no como algo establecido. Las correcciones son bienvenidas a través de la plantilla de incidencias (issue template) del repositorio. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Las etiquetas de esta página son una traducción automática. Ninguna persona que lea este idioma las ha revisado todavía. |
 
 ## Review
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -71,7 +75,8 @@
 | nav.sources | es | ok | | |
 | nav.ask | es | ok | | |
 | nav.methodology | es | ok | | |
-| nav.factcheck | es | fix | "datos" collides with data on a data-centre site; "hechos" is the fact-check term | Verificación de hechos |
+| nav.factcheck | es | ok | fix applied 2026-10-20, re-reviewed | |
+| nav.about | es | ok | natural label for the menu | |
 | country.kicker | es | ok | | |
 | country.contents | es | ok | | |
 | country.sources | es | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | es | ok | | |
 | fact.check_this | es | ok | | |
 | fact.gloss | es | ok | | |
-| fact.withheld | es | ok | | |
+| fact.withheld | es | ok | ICU pattern, one/many/other as CLDR es; many (millions) takes 'de valores', correct | |
 | fact.disputed | es | ok | | |
 | status.loading | es | ok | | |
 | status.load_error | es | ok | | |
 | notfound.title | es | ok | | |
 | notfound.back | es | ok | | |
-| notice.disclaimer | es | ok | | |
+| notice.disclaimer | es | ok | re-read 2026-10-20: 'comprobado' for the machine, 'verificado' for the person; the distinction stands, nothing weakened | |
+| notice.unread | es | ok | says machine translation; 'ninguna persona ... revisado': reviewed, not verified; plain | |

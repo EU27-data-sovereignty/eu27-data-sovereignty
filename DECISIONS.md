@@ -3198,3 +3198,47 @@ Belgium, lookups); Playwright `languages (#111)`; the full gate and the browser 
 *Would change if:* a language is admitted only in part, in which case per-key fallback and the plan's notice
 return; or a page other than a state's needs a language, in which case the segment rule moves up a level and
 #105's reservation of two-letter top-level paths is revisited.
+
+### 112. Translated state pages go live on a clean two-model review; the person's reading follows on the live site
+**Decision.** 2026-10-20, at the request of Marco Buhlmann: "apply all open changes", excluding the reading by a
+person who speaks each language, which "we'll do on the live site (site is currently not promoted and no traffic
+so its ok)". Amends #111:
+- **Admission** no longer waits for `- Read by (<lang>):`. A language is admitted when its draft passes
+  `model/i18n_drafts.py check` in full (every cell cross-reviewed by the agent on the other model) with no `fix`
+  open. The reading is still recorded the same way, and `model/i18n/languages.json` carries it as `read`.
+- **An unread language says so.** A state page served in a language with no recorded reading opens with
+  `notice.unread`, in that language and in English: the labels are a machine translation that no person who
+  reads the language has checked. The footer prints the translated disclaimer first and the English notice, the
+  project's source wording, unchanged after it.
+- **The open stage-2 items are done.** `nav.about` is a key; `fact.withheld` is an ICU plural pattern with each
+  language's CLDR categories, filled by `Intl.PluralRules` and `Intl.NumberFormat` (`formatCount`, no new
+  dependency), and the drafts checker holds every pattern to those categories; the tab title follows the page's
+  language; `hreflang` alternates with `x-default` on English go into the head of a state page with more than one
+  language; admission writes `Content-Language` per translated state path into `vercel.json`. `fact.disputed`
+  stays unwired: no state page prints it.
+- **The 42 fixes and the new strings** went through the plan's two-model loop on 2026-10-20: each drafter applied
+  the review's fixes and drafted the three changed keys, and the other model re-reviewed every applied fix, every
+  new cell and every disclaimer. `docs/i18n/README.md` records what that pass found.
+
+**Problem.** The plan held every translation back until a person who reads it had read it. Twenty-four readings
+are the slow part, and the owner wants to gather them against the live pages while the site has no audience.
+
+**Alternatives considered.**
+- **Keep #111's rule and wait for the readings.** *Why not:* the owner's call; the site is unannounced and
+  `X-Robots-Tag: noindex` keeps it out of search, so an unread page reaches nobody who is not looking for it.
+- **Admit unread languages with no notice.** *Why not:* the project's honesty notice says what no person has
+  reviewed; a page that hid that its own labels are unread machine translation would contradict it.
+- **Replace the English disclaimer with the translation.** *Why not:* the translation of the one sentence that
+  must not be weakened is itself unread; the English stays beside it as the source.
+
+**Closes off.** A translated page without `notice.unread` while its language has no reading; a language admitted
+with any `fix` open or any cell unreviewed; a count string built by concatenation.
+
+**Verified:** 2026-10-20. `python3 model/i18n_drafts.py check` exits 0; `python3 model/i18n_admit.py --check`;
+`tests/test_i18n.py`; `web/src/__tests__/i18n.test.ts` (plural branches for Polish, exact `=n`, localised
+digits); Playwright `languages`; the full gate and browser profiles as recorded in `CHANGELOG.md`.
+**NOT YET:** a reading by a person, per language, recorded on its file.
+
+*Would change if:* the site is promoted or indexed before every served language has a reading, in which case the
+unread languages are withdrawn (their admission reverts with one `fix`) until they are read; or a reader finds a
+weakened disclaimer, in which case that language comes off at once.

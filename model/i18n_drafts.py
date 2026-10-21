@@ -24,6 +24,52 @@ README = ROOT / "docs" / "i18n" / "README.md"
 VERDICTS = {"ok", "fix"}
 BCP47 = re.compile(r"^[a-z]{2,3}-[A-Z]{2}$")   # language subtag (ISO 639-1) + region (ISO 3166-1)
 
+# The CLDR cardinal plural categories each language has, as Intl.PluralRules reports them (Node 22, 2026-10-20).
+# A count pattern must give exactly these, so the browser never falls back to `other` where the language has a
+# form of its own, and never carries a branch it will not pick.
+PLURALS = {
+    "bg": {"one", "other"}, "cs": {"one", "few", "many", "other"}, "da": {"one", "other"},
+    "de": {"one", "other"}, "el": {"one", "other"}, "en": {"one", "other"}, "es": {"one", "many", "other"},
+    "et": {"one", "other"}, "fi": {"one", "other"}, "fr": {"one", "many", "other"},
+    "ga": {"one", "two", "few", "many", "other"}, "hr": {"one", "few", "other"}, "hu": {"one", "other"},
+    "it": {"one", "many", "other"}, "lb": {"one", "other"}, "lt": {"one", "few", "many", "other"},
+    "lv": {"zero", "one", "other"}, "mt": {"one", "two", "few", "many", "other"}, "nl": {"one", "other"},
+    "pl": {"one", "few", "many", "other"}, "pt": {"one", "many", "other"}, "ro": {"one", "few", "other"},
+    "sk": {"one", "few", "many", "other"}, "sl": {"one", "two", "few", "other"}, "sv": {"one", "other"},
+}
+PLURAL_HEAD = "{count, plural,"
+
+
+def plural_problem(cell: str, lang: str) -> str:
+    """Why `cell` is not a usable ICU plural pattern for `lang`, or '' if it is."""
+    if not cell.startswith(PLURAL_HEAD) or not cell.endswith("}"):
+        return f"is not an ICU pattern starting '{PLURAL_HEAD}'"
+    depth = 0
+    for ch in cell:
+        depth += {"{": 1, "}": -1}.get(ch, 0)
+        if depth < 0:
+            return "has unbalanced braces"
+    if depth:
+        return "has unbalanced braces"
+    if "#" not in cell:
+        return "never prints the count (#)"
+    body = cell[len(PLURAL_HEAD):-1]
+    cats, depth, word = set(), 0, ""
+    for ch in body:
+        if ch == "{":
+            if depth == 0 and word.strip():
+                cats.add(word.strip())
+            depth += 1
+            word = ""
+        elif ch == "}":
+            depth -= 1
+        elif depth == 0:
+            word += ch
+    want = PLURALS.get(lang)
+    if want is not None and {c for c in cats if not c.startswith("=")} != want:
+        return f"gives categories {sorted(cats)}, {lang} has {sorted(want)}"
+    return ""
+
 
 def _rows(table_lines: list[str]) -> list[list[str]]:
     out = []
@@ -125,6 +171,8 @@ def check_one(iso: str, keys: list[tuple[str, str]], langs: list[str]) -> tuple[
                 problems.append(f"{iso}: {key} {lang} drops the ellipsis (U+2026)")
             elif "EU-27" in src.get(key, "") and "EU-27" not in cell:
                 problems.append(f"{iso}: {key} {lang} drops 'EU-27'")
+            elif src.get(key, "").startswith(PLURAL_HEAD) and (why := plural_problem(cell, lang)):
+                problems.append(f"{iso}: {key} {lang} {why}")
             elif key == "notice.disclaimer" and not 0.6 <= len(cell) / len(src[key]) <= 2.2:
                 problems.append(f"{iso}: disclaimer {lang} length {len(cell)} vs source {len(src[key])}: not a full translation?")
 

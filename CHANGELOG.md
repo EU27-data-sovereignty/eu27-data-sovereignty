@@ -7,6 +7,39 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-20
 
+### Fixed: a disputed value no longer stretches a row of the ranking table to twenty lines
+
+- **Ranking.** In the indicators grid a disputed cell shows its verdict, "Disputed", and opens to the fact
+  checker's full reason (`<details>`, keyboard-reachable). The reason was printed in full in a narrow column, so one
+  cell made its whole row tens of lines tall. `SpanView`'s `compact` mode adds no words: the verdict is the first
+  word of the model's own text. Country reports, where the reason sits in a wide table, are unchanged.
+
+### Changed: dark is the site's default, and printing always takes the light colours
+
+- **Theme.** Without a stored choice the site is dark, whatever the OS prefers; `index.html` starts dark so the
+  first paint matches. A reader's light or dark choice is remembered as before.
+- **Print.** `design/build_tokens.py` now emits the light tokens under `@media print`, so a page printed from the
+  dark screen is dark ink on white rather than pale text. A Playwright test prints `/de` from the dark default.
+- **Tests.** The light accessibility scans and the light visual baselines store a light choice first; the dark
+  scans assert `data-theme="dark"`.
+
+### Added: the state pages in their official languages, unread translations labelled as such (#112)
+
+- **Live languages.** Every language whose draft passes the two-model review with no `fix` open is served at its
+  state's address (`/de`, `/be/fr`, `/ie/ga`), English at `/<iso>/en`. A person's reading is recorded, not
+  required (#112, amending #111, at the owner's request: the readings are gathered on the live, unannounced site).
+- **Honesty.** A page in a language no reader has checked opens with `notice.unread` in that language and in
+  English, and the footer prints the translated disclaimer above the unchanged English notice.
+- **The open strings.** `nav.about` is a key; `fact.withheld` is an ICU plural pattern with each language's CLDR
+  categories, filled by `Intl.PluralRules`; the tab title follows the language; `hreflang` alternates and
+  `Content-Language` headers (written into `vercel.json` by `model/i18n_admit.py`) name the translated pages.
+- **The drafts.** The 42 fixes of 2026-10-12 applied by their drafters and re-reviewed by the other model; the
+  three new or changed keys drafted in all 27 files and cross-reviewed; six new fixes from that pass applied and
+  re-reviewed in a third round. `model/i18n_drafts.py` now checks every plural pattern against CLDR's categories.
+- **Tests.** `tests/test_i18n.py` (admission needs a clean draft, `Content-Language` matches the admitted pages),
+  `web/src/__tests__/i18n.test.ts` (Polish plural branches, exact `=n`, localised digits), Playwright `languages`.
+  The `loaded()` wait no longer looks for English text, which a German page never shows.
+
 ### Added: language plumbing for the member-state pages, with English the only language served (#111)
 
 - **Addresses.** `/<iso>/<lang>` is a route: `/<iso>` serves the state's first admitted official language, else

@@ -2,21 +2,44 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "./run.sh site",
   "outputDirectory": "web/dist",
-  "functions": { "api/ask.ts": { "maxDuration": 60 } },
+  "functions": {
+    "api/ask.ts": {
+      "maxDuration": 60
+    }
+  },
   "installCommand": "echo skip",
   "cleanUrls": true,
   "trailingSlash": false,
-  "github": { "silent": true },
-  "git": { "deploymentEnabled": false },
+  "github": {
+    "silent": true
+  },
+  "git": {
+    "deploymentEnabled": false
+  },
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Robots-Tag", "value": "noindex" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()" },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+        },
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
@@ -25,12 +48,336 @@
     },
     {
       "source": "/data/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/at",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "de-AT"
+        }
+      ]
+    },
+    {
+      "source": "/be",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "nl-BE"
+        }
+      ]
+    },
+    {
+      "source": "/be/fr",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "fr-BE"
+        }
+      ]
+    },
+    {
+      "source": "/be/de",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "de-BE"
+        }
+      ]
+    },
+    {
+      "source": "/bg",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "bg-BG"
+        }
+      ]
+    },
+    {
+      "source": "/cy",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "el-CY"
+        }
+      ]
+    },
+    {
+      "source": "/cz",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "cs-CZ"
+        }
+      ]
+    },
+    {
+      "source": "/de",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "de-DE"
+        }
+      ]
+    },
+    {
+      "source": "/dk",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "da-DK"
+        }
+      ]
+    },
+    {
+      "source": "/ee",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "et-EE"
+        }
+      ]
+    },
+    {
+      "source": "/el",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "el-GR"
+        }
+      ]
+    },
+    {
+      "source": "/es",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "es-ES"
+        }
+      ]
+    },
+    {
+      "source": "/fi",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "fi-FI"
+        }
+      ]
+    },
+    {
+      "source": "/fi/sv",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "sv-FI"
+        }
+      ]
+    },
+    {
+      "source": "/fr",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "fr-FR"
+        }
+      ]
+    },
+    {
+      "source": "/hr",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "hr-HR"
+        }
+      ]
+    },
+    {
+      "source": "/hu",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "hu-HU"
+        }
+      ]
+    },
+    {
+      "source": "/ie",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "en-IE"
+        }
+      ]
+    },
+    {
+      "source": "/ie/ga",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "ga-IE"
+        }
+      ]
+    },
+    {
+      "source": "/it",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "it-IT"
+        }
+      ]
+    },
+    {
+      "source": "/lt",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "lt-LT"
+        }
+      ]
+    },
+    {
+      "source": "/lu",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "fr-LU"
+        }
+      ]
+    },
+    {
+      "source": "/lu/de",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "de-LU"
+        }
+      ]
+    },
+    {
+      "source": "/lu/lb",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "lb-LU"
+        }
+      ]
+    },
+    {
+      "source": "/lv",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "lv-LV"
+        }
+      ]
+    },
+    {
+      "source": "/mt",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "en-MT"
+        }
+      ]
+    },
+    {
+      "source": "/mt/mt",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "mt-MT"
+        }
+      ]
+    },
+    {
+      "source": "/nl",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "nl-NL"
+        }
+      ]
+    },
+    {
+      "source": "/pl",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "pl-PL"
+        }
+      ]
+    },
+    {
+      "source": "/pt",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "pt-PT"
+        }
+      ]
+    },
+    {
+      "source": "/ro",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "ro-RO"
+        }
+      ]
+    },
+    {
+      "source": "/se",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "sv-SE"
+        }
+      ]
+    },
+    {
+      "source": "/si",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "sl-SI"
+        }
+      ]
+    },
+    {
+      "source": "/sk",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "sk-SK"
+        }
+      ]
     }
   ],
   "redirects": [
-    { "source": "/briefs/:iso.pdf", "destination": "/report/:iso.pdf", "permanent": true },
-    { "source": "/country/:iso", "destination": "/:iso", "permanent": true }
+    {
+      "source": "/briefs/:iso.pdf",
+      "destination": "/report/:iso.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/country/:iso",
+      "destination": "/:iso",
+      "permanent": true
+    }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index"
+    }
+  ]
 }

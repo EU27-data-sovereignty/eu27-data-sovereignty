@@ -2,6 +2,7 @@
 
 - Languages: hu Hungarian (hu-HU)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 0 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-20 round 3: applied 1 fix
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Kérdezzen |
 | nav.methodology | Methodology | Módszertan |
 | nav.factcheck | Fact check | Tényellenőrzés |
+| nav.about | About the data | Az adatokról |
 | country.kicker | Country report | Országjelentés |
 | country.contents | Contents | Tartalom |
 | country.sources | Sources | Források |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Forrással igazolt tárhely |
 | fact.check_this | Check this fact | Ellenőrizze ezt a tényt |
 | fact.gloss | Machine translation: | Gépi fordítás: |
-| fact.withheld | withheld until sourced | visszatartva, amíg nincs forrás |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# érték visszatartva, amíg nincs forrás} other {# érték visszatartva, amíg nincs forrás}} |
 | fact.disputed | withheld as disputed | vitatottként visszatartva |
 | status.loading | Loading the EU-27 dataset… | Az EU-27 adatkészlet betöltése… |
 | status.load_error | Could not load the data | Az adatokat nem sikerült betölteni |
 | notfound.title | Page not found | Az oldal nem található |
 | notfound.back | Back to the overview | Vissza az áttekintéshez |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Gépileg ellenőrizve, ember által nem igazolva. Automatizált ágensek találták meg ezeket a forrásokat, és mechanikusan ellenőrizték őket; egyetlen ember sem vizsgálta át a megállapításokat. Egy nem angol nyelvű forrás angol nyelvű szövege az idézett szöveg gépi fordítása vagy gépi összefoglalása. Minden tényt a hivatkozott forrására mutató nyomként kezeljen, ne megalapozott tényként. A javításokat szívesen fogadjuk az adattár (repository) hibajegysablonján (issue template) keresztül. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Az oldalon látható feliratok gépi fordítás eredményei. Még egyetlen olyan ember sem nézte át őket, aki ezt a nyelvet olvassa. |
 
 ## Review
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
-- Verdict: 45 ok, 0 fix
+- Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer); round 4: 3 fixes re-reviewed
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,6 +76,7 @@
 | nav.ask | hu | ok | | |
 | nav.methodology | hu | ok | | |
 | nav.factcheck | hu | ok | | |
+| nav.about | hu | ok | natural label for the menu | |
 | country.kicker | hu | ok | | |
 | country.contents | hu | ok | | |
 | country.sources | hu | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | hu | ok | | |
 | fact.check_this | hu | ok | | |
 | fact.gloss | hu | ok | | |
-| fact.withheld | hu | ok | | |
+| fact.withheld | hu | ok | ICU pattern, one/other as CLDR hu; both branches identical, which is right since Hungarian keeps the noun singular after a numeral | |
 | fact.disputed | hu | ok | | |
 | status.loading | hu | ok | | |
 | status.load_error | hu | ok | | |
 | notfound.title | hu | ok | | |
 | notfound.back | hu | ok | | |
-| notice.disclaimer | hu | ok | | |
+| notice.disclaimer | hu | ok | re-read 2026-10-20: 'ellenőrizve' for the machine, 'igazolva' for the person; the distinction stands, nothing weakened | |
+| notice.unread | hu | ok | fix applied 2026-10-20 round 3, re-reviewed | |

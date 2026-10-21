@@ -90,7 +90,12 @@ Not translated, in this stage or any other without its own decision:
    language without one shows the English notice. The evidence test that forbids prose claiming a check
    that did not run applies to every language.
 
-## 6. The decision to write (#111, written 2026-10-20 for stage 2's plumbing)
+## 6. The decision to write (#111, written 2026-10-20 for stage 2's plumbing; amended by #112)
+
+**#112 changed §5.4's order at the owner's request:** a language is served once its two-model review is clean,
+and its page says it is unread machine translation until a person's reading is recorded on the file. The
+readings are gathered on the live site, which is unannounced and `noindex`, before it is promoted.
+
 
 - **Decision.** Language is the second path segment under a state; the first official language is the
   default; strings come from admitted tables keyed by `STRINGS.md`; facts are not translated.

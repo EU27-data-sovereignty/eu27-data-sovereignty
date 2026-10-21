@@ -181,6 +181,12 @@ describe('PageBand', () => {
 describe('useTheme', () => {
   beforeEach(() => localStorage.clear())
 
+  it('is dark without a choice, even where the OS prefers light', () => {
+    const { result } = renderHook(() => useTheme())
+    expect(result.current[0]).toBe('dark')
+    expect(document.documentElement.getAttribute('data-theme')).toBe('dark')
+  })
+
   it('applies and remembers an explicit choice', () => {
     const { result } = renderHook(() => useTheme())
     act(() => result.current[1]('dark'))

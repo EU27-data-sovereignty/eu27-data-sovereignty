@@ -10,8 +10,21 @@ import { spanText, useT } from '@/i18n'
  * is set in muted italics, so a withheld value reads as a gap and never as a fact (#75).
  * Nothing here adds a sentence: a renderer that writes content becomes a second source.
  */
-export function SpanView({ span, numbers, bundle }: SpanProps) {
+export function SpanView({ span, numbers, bundle, compact = false }: SpanProps) {
   const t = useT()
+  if (span.role === 'disputed' && compact) {
+    // In a grid the checker's whole reason would stretch one row to twenty lines: show the verdict, the word
+    // the reason opens with, and keep the reason one click away. Nothing is added; the text is the model's.
+    const [verdict = span.t] = span.t.split(':')
+    return (
+      <details className="max-w-56 text-[var(--color-fg-muted)]">
+        <summary className="cursor-pointer italic">
+          <span className="border-b border-dashed border-[var(--color-gap-mark)]">{verdict}</span>
+        </summary>
+        <p className="mt-1 text-xs italic">{span.t}</p>
+      </details>
+    )
+  }
   if (span.role === 'gap') {
     return <em className="text-[var(--color-fg-muted)]">{span.t}</em>
   }
@@ -51,6 +64,8 @@ interface SpanProps {
   span: Span
   numbers: Map<string, number>
   bundle: Bundle
+  /** In a dense grid: a disputed value shows its verdict and opens to its reason. */
+  compact?: boolean
 }
 
 function Spans({ spans, ...rest }: { spans: Span[] } & Omit<SpanProps, 'span'>) {

@@ -2,6 +2,7 @@
 
 - Languages: lt Lithuanian (lt-LT)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,12 +20,13 @@
 | nav.ask | Ask | Klausti |
 | nav.methodology | Methodology | Metodika |
 | nav.factcheck | Fact check | Faktų patikra |
+| nav.about | About the data | Apie duomenis |
 | country.kicker | Country report | Šalies ataskaita |
 | country.contents | Contents | Turinys |
 | country.sources | Sources | Šaltiniai |
 | section.fundamentals | Fundamentals | Pagrindiniai duomenys |
 | section.holdings | Critical data holdings, by priority | Kritiniai duomenų ištekliai pagal prioritetą |
-| section.exposure | Foreign-dependency exposure | Priklausomybė nuo užsienio |
+| section.exposure | Foreign-dependency exposure | Priklausomybės nuo užsienio mastas |
 | section.posture | Legal and institutional posture | Teisinė ir institucinė padėtis |
 | section.sizing | Capacity | Pajėgumas |
 | section.gaps | Research still open | Atviri tyrimo klausimai |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Priegloba su šaltiniais |
 | fact.check_this | Check this fact | Patikrinkite šį faktą |
 | fact.gloss | Machine translation: | Mašininis vertimas: |
-| fact.withheld | withheld until sourced | neskelbiama, kol nėra šaltinio |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# reikšmė neskelbiama, kol nėra šaltinio} few {# reikšmės neskelbiamos, kol nėra šaltinio} many {# reikšmės neskelbiama, kol nėra šaltinio} other {# reikšmių neskelbiama, kol nėra šaltinio}} |
 | fact.disputed | withheld as disputed | neskelbiama kaip ginčytina |
 | status.loading | Loading the EU-27 dataset… | Įkeliamas EU-27 duomenų rinkinys… |
 | status.load_error | Could not load the data | Nepavyko įkelti duomenų |
 | notfound.title | Page not found | Puslapis nerastas |
 | notfound.back | Back to the overview | Grįžti į apžvalgą |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Patikrinta mašininiu būdu, žmogaus nepatikrinta. Šiuos šaltinius rado ir mechaniškai patikrino automatizuoti agentai; nė vienas žmogus išvadų neperžiūrėjo. Ne anglų kalbos šaltinio formuluotė anglų kalba yra cituojamo teksto mašininis vertimas arba mašininė santrauka. Kiekvieną faktą laikykite nuoroda į cituojamą šaltinį, o ne nustatytu faktu. Pataisymai laukiami per saugyklos problemų pranešimo šabloną. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Šio puslapio užrašai yra mašininis vertimas. Joks šią kalbą skaitantis žmogus jų dar nepatikrino. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,12 +76,13 @@
 | nav.ask | lt | ok | | |
 | nav.methodology | lt | ok | | |
 | nav.factcheck | lt | ok | | |
+| nav.about | lt | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | lt | ok | | |
 | country.contents | lt | ok | | |
 | country.sources | lt | ok | | |
 | section.fundamentals | lt | ok | | |
 | section.holdings | lt | ok | | |
-| section.exposure | lt | fix | drops 'exposure' | Priklausomybės nuo užsienio mastas |
+| section.exposure | lt | ok | fix applied 2026-10-20, re-reviewed | |
 | section.posture | lt | ok | | |
 | section.sizing | lt | ok | | |
 | section.gaps | lt | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | lt | ok | | |
 | fact.check_this | lt | ok | | |
 | fact.gloss | lt | ok | | |
-| fact.withheld | lt | ok | | |
+| fact.withheld | lt | ok | one nom. sg., few nom. pl., many gen. sg., other gen. pl. with impersonal neskelbiama: all agree | |
 | fact.disputed | lt | ok | | |
 | status.loading | lt | ok | | |
 | status.load_error | lt | ok | | |
 | notfound.title | lt | ok | | |
 | notfound.back | lt | ok | | |
-| notice.disclaimer | lt | ok | | |
+| notice.disclaimer | lt | ok | re-read 2026-10-20: 'machine-checked' is checked, not verified; nothing weakened | |
+| notice.unread | lt | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

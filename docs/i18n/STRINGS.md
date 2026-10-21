@@ -4,7 +4,10 @@ The English wording the web app, the PDFs and the briefs print around the facts:
 titles, table headings, the notices. Facts are never translated here; a printed fact stays in its
 original-language quote with its machine gloss (#82). A draft translates this table and nothing else.
 
-Keys are stable identifiers. The `en` column is the source text as the app prints it on 2026-10-12.
+Keys are stable identifiers. The `en` column is the source text as the app prints it on 2026-10-12, with three
+changes on 2026-10-20 (#112): `nav.about` added for the "About the data" menu, `fact.withheld` rewritten as an ICU
+plural pattern because it prints with a count, and `notice.unread` added for pages served in a machine translation
+that no person who reads the language has checked.
 A draft file (`drafts/<ISO>.md`) carries every key below, in this order, with one column per official
 language of that state.
 
@@ -21,6 +24,7 @@ language of that state.
 | nav.ask | Ask | navigation |
 | nav.methodology | Methodology | navigation |
 | nav.factcheck | Fact check | navigation |
+| nav.about | About the data | navigation, the menu over Sources, Methodology and Fact check |
 | country.kicker | Country report | country page band |
 | country.contents | Contents | country page, sidebar |
 | country.sources | Sources | country page, sidebar and heading |
@@ -48,13 +52,14 @@ language of that state.
 | col.hosting_sourced | Hosting sourced | table heading |
 | fact.check_this | Check this fact | link on every fact |
 | fact.gloss | Machine translation: | label before a glossed quote |
-| fact.withheld | withheld until sourced | a value with no checked source |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | country page summary, the count of values with no checked source |
 | fact.disputed | withheld as disputed | a value the fact checker did not confirm |
 | status.loading | Loading the EU-27 dataset… | before the bundle arrives |
 | status.load_error | Could not load the data | bundle failed |
 | notfound.title | Page not found | unknown route |
 | notfound.back | Back to the overview | unknown route |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | footer of every page, every PDF and brief |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | top of a state page served in a language with no recorded reading |
 
 ## Official languages per state
 
@@ -105,7 +110,9 @@ language but is a national language of Luxembourg; its column is marked as such.
   diacritics cannot mix, and a cell with leading or trailing whitespace.
 - **The source is the English the app prints** (`en-GB` spelling). "EU-27" and the ellipsis (U+2026) are
   kept as they are.
-- **No string is built by concatenation and none carries a placeholder today.** A future string with a count
+- **No string is built by concatenation.** A string with a count (`fact.withheld`) is an ICU MessageFormat plural
+  pattern: keep `{count, plural, …}` and `#`, and give every plural category the target language has (CLDR: Polish
+  `one`, `few`, `many`, `other`; Irish `one`, `two`, `few`, `many`, `other`). A future string with a count
   or a date is written as an ICU MessageFormat pattern with the plural forms of the target language, and
   numbers and dates are formatted with `Intl` for the page's tag, never by hand.
 - **Direction is left to right** for every official EU language; no bidi handling is needed.

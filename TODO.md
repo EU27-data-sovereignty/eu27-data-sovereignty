@@ -124,11 +124,9 @@ Open
 - [ ] Mobile reader to schema 2 (content model), with the two Dependabot alerts fixed on the way
 - [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`
       span in the content model, a changelog entry, `/factcheck` before the push
-- [ ] Localisation stage 1 (`docs/plans/localisation-plan.md`): apply the 42 `fix` cells, a native reading per
-      language recorded as `- Read by (<lang>): <role>, <date>`, then `python3 model/i18n_admit.py` (#111)
-- [ ] Localisation, the rest of stage 2 (#111): a `nav.about` key for "About the data", drafted and cross-reviewed in
-      all 27 files; `site.title` per page; `fact.withheld` and `fact.disputed` as ICU patterns; the translated
-      disclaimer in the footer; `hreflang` alternates and `Content-Language` once a second language is admitted
+- [ ] Localisation readings (#112): one reading per language by a person who speaks it, on the live pages, recorded
+      as `- Read by (<lang>): <role>, <date>` on its draft, then `python3 model/i18n_admit.py`. Before the site is
+      promoted or indexed, every served language has one or is withdrawn.
 - [ ] Print book: country parts rendered from the content model; write Parts I, II and V
 - [ ] PDF tables: a long compound word (e.g. "Identitätsdokumentenregister") runs into the next column;
       allow hyphenation or breaking in table cells

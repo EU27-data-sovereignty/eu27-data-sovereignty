@@ -2,6 +2,7 @@
 
 - Languages: bg Bulgarian (bg-BG)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-20 round 3: applied 1 fix
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,12 +20,13 @@
 | nav.ask | Ask | Попитайте |
 | nav.methodology | Methodology | Методология |
 | nav.factcheck | Fact check | Проверка на фактите |
+| nav.about | About the data | За данните |
 | country.kicker | Country report | Доклад за държавата |
 | country.contents | Contents | Съдържание |
 | country.sources | Sources | Източници |
 | section.fundamentals | Fundamentals | Основни данни |
 | section.holdings | Critical data holdings, by priority | Критични масиви от данни, по приоритет |
-| section.exposure | Foreign-dependency exposure | Излагане на чуждестранна зависимост |
+| section.exposure | Foreign-dependency exposure | Изложеност на чуждестранна зависимост |
 | section.posture | Legal and institutional posture | Правна и институционална позиция |
 | section.sizing | Capacity | Капацитет |
 | section.gaps | Research still open | Все още незавършено проучване |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Хостинг с източник |
 | fact.check_this | Check this fact | Проверете този факт |
 | fact.gloss | Machine translation: | Машинен превод: |
-| fact.withheld | withheld until sourced | задържано до намиране на източник |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# стойност задържана до намиране на източник} other {# стойности задържани до намиране на източник}} |
 | fact.disputed | withheld as disputed | задържано като оспорено |
 | status.loading | Loading the EU-27 dataset… | Зареждане на набора от данни EU-27… |
 | status.load_error | Could not load the data | Данните не можаха да бъдат заредени |
 | notfound.title | Page not found | Страницата не е намерена |
 | notfound.back | Back to the overview | Обратно към общия преглед |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Проверено машинно, не е проверено от човек. Автоматизирани агенти са намерили тези източници и са ги проверили механично; никой човек не е преглеждал констатациите. Английският текст на източник, който не е на английски език, е машинен превод или машинно резюме на цитирания текст. Разглеждайте всеки факт като насока към цитирания му източник, а не като установен. Корекции се приемат чрез шаблона за сигнали (issue template) на хранилището. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Проверено машинно, не е потвърдено от човек. Автоматизирани агенти са намерили тези източници и са ги проверили механично; никой човек не е преглеждал констатациите. Английският текст на източник, който не е на английски език, е машинен превод или машинно резюме на цитирания текст. Разглеждайте всеки факт като насока към цитирания му източник, а не като установен. Корекции се приемат чрез шаблона за сигнали (issue template) на хранилището. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Надписите на тази страница са машинен превод. Все още никой човек, който чете този език, не ги е прегледал. |
 
 ## Review
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer); round 4: 3 fixes re-reviewed
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,12 +76,13 @@
 | nav.ask | bg | ok | | |
 | nav.methodology | bg | ok | | |
 | nav.factcheck | bg | ok | | |
+| nav.about | bg | ok | natural label for the menu | |
 | country.kicker | bg | ok | | |
 | country.contents | bg | ok | | |
 | country.sources | bg | ok | | |
 | section.fundamentals | bg | ok | | |
 | section.holdings | bg | ok | | |
-| section.exposure | bg | fix | "излагане" is the act of exposing; the state of exposure is "изложеност" | Изложеност на чуждестранна зависимост |
+| section.exposure | bg | ok | fix applied 2026-10-20, re-reviewed | |
 | section.posture | bg | ok | | |
 | section.sizing | bg | ok | | |
 | section.gaps | bg | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | bg | ok | | |
 | fact.check_this | bg | ok | | |
 | fact.gloss | bg | ok | | |
-| fact.withheld | bg | ok | | |
+| fact.withheld | bg | ok | ICU pattern, one/other as CLDR bg; стойност задържана / стойности задържани agree | |
 | fact.disputed | bg | ok | | |
 | status.loading | bg | ok | | |
 | status.load_error | bg | ok | | |
 | notfound.title | bg | ok | | |
 | notfound.back | bg | ok | | |
-| notice.disclaimer | bg | ok | | |
+| notice.disclaimer | bg | ok | fix applied 2026-10-20 round 3, re-reviewed | |
+| notice.unread | bg | ok | says machine translation; 'никой човек ... не ги е прегледал': reviewed, not verified; plain | |

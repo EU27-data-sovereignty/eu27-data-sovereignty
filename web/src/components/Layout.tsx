@@ -4,8 +4,9 @@ import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-do
 import { LanguageSwitch } from './LanguageSwitch'
 import { ProvenanceNotice } from './ProvenanceNotice'
 import { CORRECTIONS_URL } from '@/data/contribute'
-import { useLang, useT, type Key } from '@/i18n'
+import { servedLanguages, stateOf, useLang, useT, type Key } from '@/i18n'
 import { useDisclosure } from '@/utils/disclosure'
+import { countryPath } from '@/utils/routes'
 import { useTheme } from '@/utils/theme'
 
 // Labels are keys into the language tables (#111), so a state's page served in its language names them in it.
@@ -43,9 +44,34 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
   const t = useT()
 
   // The document's language is the page's: `de-DE` on a German page, so a screen reader speaks it as German.
+  // The tab title follows it.
+  const title = t('site.title')
   useEffect(() => {
     document.documentElement.lang = tag
-  }, [tag])
+    document.title = title
+  }, [tag, title])
+
+  // A state's page names its other languages as `hreflang` alternates, English as `x-default` (plan §3a).
+  const iso = stateOf(pathname)
+  useEffect(() => {
+    if (!iso) return
+    const served = servedLanguages(iso)
+    if (served.length < 2) return
+    const href = (i: number) =>
+      `${window.location.origin}${countryPath(iso, i === 0 ? undefined : served[i]!.lang)}`
+    const links = [
+      ...served.map((l, i) => [l.tag, href(i)]),
+      ['x-default', href(served.length - 1)],
+    ].map(([hreflang, url]) => {
+      const link = document.createElement('link')
+      link.rel = 'alternate'
+      link.hreflang = hreflang!
+      link.href = url!
+      document.head.appendChild(link)
+      return link
+    })
+    return () => links.forEach(l => l.remove())
+  }, [iso])
 
   // A client-side route change neither scrolls to a #section nor returns to the top, as a page load would.
   // Do both, one frame later, once the new page has rendered. Back and forward keep the browser's own
@@ -200,8 +226,7 @@ function AboutTheData() {
         {...buttonProps}
         className={`${LINK}inline-flex items-center gap-1.5 ${here ? ACTIVE : IDLE}`}
       >
-        {/* Not yet a key in the strings table: its drafts predate the menu (#111). */}
-        About the data
+        {t('nav.about')}
         <svg
           width="12"
           height="12"
