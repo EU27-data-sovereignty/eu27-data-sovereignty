@@ -204,6 +204,11 @@ Open
       published SDK 58 patch releases above the pins, e.g. `expo` 58.0.17 vs 58.0.14) and `audit` (the `braces`
       advisory GHSA-vfj7-8cjw-p6xm is allowlisted but no longer reported, so the allowlist is stale). Bump the pins to
       the template's and drop the stale row, in its own change (found while committing #118)
+- [ ] CI's `npm audit --audit-level=high --prefix web` fails as of 2026-10-23 (run 40009608303): `vite` 8.2.0–8.2.2
+      (high, GHSA-9jrq-w75r-8gcw and five more; fix in 8.3.5) and `vitest`/`@vitest/mocker` 5.0.0-beta.1–5.0.2
+      (moderate; fix in 5.0.5), all dev dependencies of `web/`. Local `./test.sh --only web` does not run this audit,
+      so the gate passed here and failed in CI: bump the exact pins in their own change, and consider adding the audit
+      to `./test.sh` so the two agree
 - [x] Web suites in CI: `ci.yml` runs `./test.sh --no-pdf` on pull requests (Vitest, Playwright, API
       type-check); `deploy.yml` runs the full `./test.sh`
 
