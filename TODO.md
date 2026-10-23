@@ -184,7 +184,26 @@ Open
       allow hyphenation or breaking in table cells
 - [ ] Capacity from measured holdings, once enough are measured (#73)
 
+## The Draghi note (#118, `DRAGHI-REPORT.md`)
+- [ ] Cross-model review of the 27 entries and section 3 by claude-fable-5-1, the #87 standard for a note; the
+      2026-10-23 draft was written and checked by claude-opus-5-5 only (#118 Verified: NOT YET)
+- [ ] A person reads the note; record it by role, never by name (#118 Verified: NOT YET)
+- [ ] What became of the B p. 84 cloud-procurement and residency proposals after September 2024: fetch and quote the
+      Commission's follow-up, then update section 3 and the caveat (2026-10-23)
+- [ ] Candidate label: a per-holding "sensitive-area carve-out" derived from the printed operator and the B p. 84
+      wording (defence, home affairs, justice); categorical, so it needs #79 review before it is printed (2026-10-23)
+- [ ] Candidate indicator: each state's EU 5G Toolbox restriction status, from the Commission's 2023 implementation
+      report that B p. 72 cites without naming the 14 states (2026-10-23)
+- [ ] Which states run the "secure cloud" setups B p. 77 describes without naming them: source each programme
+      against C2 and L3 (2026-10-23)
+- [ ] Source the ministry behind PT's IRN and the identity-register operators for BG, LT, LU and MT, which decide
+      whether the exception reaches their registers (`DRAGHI-REPORT.md` §4, 2026-10-23)
+
 ## Testing
+- [ ] `./test.sh` fails in `mobile/test.sh` as of 2026-10-23, not from any change in `mobile/`: `doctor` (Expo has
+      published SDK 58 patch releases above the pins, e.g. `expo` 58.0.17 vs 58.0.14) and `audit` (the `braces`
+      advisory GHSA-vfj7-8cjw-p6xm is allowlisted but no longer reported, so the allowlist is stale). Bump the pins to
+      the template's and drop the stale row, in its own change (found while committing #118)
 - [x] Web suites in CI: `ci.yml` runs `./test.sh --no-pdf` on pull requests (Vitest, Playwright, API
       type-check); `deploy.yml` runs the full `./test.sh`
 

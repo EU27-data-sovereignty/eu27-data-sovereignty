@@ -26,7 +26,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 2 | Verification ledger | `model/sources.py`: the source ledger is valid |
 | 3 | National data register | `model/national_data.py`: the register is valid |
 | 4 | Every fact sourced | `document.py --check`: every printed value resolves to a checked citation |
-| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the admitted language catalogue (#117), the technical-universities note; one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
+| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the admitted language catalogue (#117), the technical-universities note, the Draghi-report note (#118, which also re-finds its quotations in the archived PDFs where they are on disk and prints a skip line where they are not); one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
 | 6 | `/ask` type-check | `api/` compiles against the real Anthropic SDK |
 | 7 | Generated files current | the briefs, CSVs, bundle, `/ask` corpus and reports equal a fresh regeneration |
 | 8 | Admission reproduces | the registers rebuild from the committed evidence |
@@ -64,7 +64,7 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
 ## The Python suite, by subject
 
 - **Content and evidence:** `test_evidence`, `test_methodology`, `test_provenance`, `test_sources`,
-  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereign_appliance`, `test_i18n_drafts`, `test_i18n`, `test_notes`, `test_permissions`, `test_sovereignty`, `test_model`, `test_book`,
+  `test_research`, `test_vetting`, `test_national_data`, `test_national_ai`, `test_sovereign_appliance`, `test_draghi_note`, `test_i18n_drafts`, `test_i18n`, `test_notes`, `test_permissions`, `test_sovereignty`, `test_model`, `test_book`,
   `test_ask_corpus`, `test_emoji`, `test_institutions`, `test_gaps`.
 - **The fact check:** `test_factcheck`. It covers the rule, the hash, stage refusals, the gate, withholding,
   the appendix in every asset, the runbook's commands and the ledger replay.

@@ -97,7 +97,16 @@ figures. Document metadata (`docProps/core.xml`, `app.xml`) is absent, so it lea
 
 ## Third-party content
 
-**None.** No vendored libraries, fonts, images or datasets. Web dependencies are all resolved through
+**One archived report, kept outside git.** The two PDFs of Mario Draghi's *The future of European
+competitiveness* (European Commission, September 2024) are in `assets/reports/draghi-2024/`:
+`part-a-competitiveness-strategy.pdf` (3,631,370 bytes, sha256 `74b826dd0eb61060…`) and
+`part-b-in-depth-analysis.pdf` (12,060,205 bytes, sha256 `7b872cbbfe9b1b23…`). They were downloaded on 2026-10-23
+from the Commission's download URLs, which are recorded with the full hashes in the tracked
+`assets/reports/MANIFEST.csv`. **The project did not author them.** Their colophon licenses reuse under CC BY 4.0
+(Commission Decision 2011/833/EU). They are gitignored and excluded from Vercel (#118), so the repository distributes
+only the manifest, and `python3 model/draghi_note.py fetch` restores and verifies them. `DRAGHI-REPORT.md` quotes them.
+
+Otherwise none: no vendored libraries, fonts, images or datasets. Web dependencies are all resolved through
 `web/package.json` and its lockfile, and no file in this repository was copied from another project.
 
 If that changes, the `~/dev/CLAUDE.md` rule applies: a vendored file carries its source, version and

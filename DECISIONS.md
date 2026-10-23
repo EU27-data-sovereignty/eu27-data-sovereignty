@@ -3554,3 +3554,67 @@ keys), the 42 fixes, a native reading per language, and so the first admitted la
 *Would change if:* a person reads facts in a language and asks for them translated, which reopens the facts
 alternative under a new #87 rule; or a state asks for its own wording at scale, which turns overlays into
 per-state tables.
+
+### 118. The Draghi report is read in an authored note whose quotations and state facts are machine-checked, and its PDFs are archived outside git under a hash manifest
+**Decision.** 2026-10-23. Mario Draghi's *The future of European competitiveness* (European Commission, September 2024,
+Parts A and B) is read against the 27 states in `DRAGHI-REPORT.md`. This is an authored note, never rendered, with
+one entry per state in four fixed subsections. Its contract is `model/draghi_note.py`, registered in `model/notes.py`,
+so `./test.sh` runs it:
+- **Quotations.** Every quotation is followed by its PDF page, `“…” (B p. 84)`. The quote register
+  `docs/draghi-quotes.csv` is generated from those citations by `quotes`, which re-finds each one on its page of the
+  hashed PDF. `check` re-finds them again wherever the PDFs are on disk, and says out loud that it skipped this where
+  they are not.
+- **State facts.** Every fact about a state is a claim id that the committed bundle prints as a fact, quoted with the
+  text it prints (`` `indicator:NL:C2` reads “No” ``). `check` compares that text with the bundle, so a withheld or
+  changed fact fails the gate.
+- **The PDFs.** The two PDFs (3.6 MB and 12.1 MB) are archived in `assets/reports/draghi-2024/` and gitignored
+  (`assets/reports/**/*.pdf`, in `.gitignore` and `.vercelignore`, held by `tests/test_ignore_rules.py`). The tracked
+  `assets/reports/MANIFEST.csv` records their URLs, sizes and sha256, and `fetch` restores and verifies them.
+- **Backup.** The files are rebuildable from the Commission's URLs and are proven identical by the manifest, so they
+  get no backup entry.
+
+**Problem.** The owner asked for an analysis of the Draghi report and its implications for each member state, with the
+PDF saved in an assets folder. The report is EU-level and 401 pages long, and it names few states. An analysis can
+therefore drift in two ways: misquoting the report, or restating a state's facts from memory instead of from what the
+project prints. The repo's rules also keep large binaries out of git.
+
+**Alternatives considered.**
+- **An authored note with a generated quote register, claim texts checked against the bundle, and the PDFs outside git
+  under a manifest (chosen).**
+- **A working document in `docs/plans/` with no checker.** *Why not:* nothing would catch a misquotation or a state
+  fact that no longer matches the bundle, which goes against the project's first rule of auditability.
+- **Commit the PDFs.** *Why not:* that is 15 MB of binary, and git history never shrinks. The workspace rule keeps
+  media and large binaries out of git, and the manifest proves the copy without storing it.
+- **Admit the report into `model/sources/` and cite it in printed facts.** *Why not:* it is EU-level, and none of its
+  figures is a per-state fact. Admitting it would need the research and admit pipeline (#79) and a claim kind it has no
+  use for.
+- **Cite printed folios.** *Why not:* Part A's cover and colophon carry none, so its disclaimer (A p. 2) would have no
+  page. PDF pages are what `pdftotext -f N` and a reader's viewer both find.
+- **Write each state's facts in prose without claim ids.** *Why not:* the text would go stale silently the next time a
+  fact is vetted or withheld. With a claim id and its printed text, the gate fails instead.
+
+**Closes off.** A quotation of the report of 40 characters or more without a page or a claim id; a page reference that
+no register row backs; a register row edited by hand (the test compares the register with the note); a claim id from
+another state, or one the bundle withholds or does not print; a currency figure in a state entry, or anywhere outside a
+quotation; ranking language outside a quotation; any renderer, the reader included, naming the note; a report PDF in
+git.
+
+**Verified:** 2026-10-23.
+- `python3 model/draghi_note.py fetch`: both parts `ok` against the manifest (sha256 `74b826dd0eb61060…`, 3631370
+  bytes; `7b872cbbfe9b1b23…`, 12060205 bytes).
+- `python3 model/draghi_note.py quotes`: 58 quotations, 58 found on their page.
+- `python3 model/draghi_note.py check`: 27 states, 58 quotations (58 re-found in the hashed PDFs), 89 claim ids,
+  1 URL, 0 problems.
+- `git check-ignore` holds both PDFs, and `git status` lists no PDF.
+- `python3 -m unittest tests.test_draghi_note tests.test_notes tests.test_ignore_rules`: OK, including a synthetic
+  note that fails on an unregistered quotation, an unanchored long quotation, a drifted claim text, a withheld claim,
+  another state's claim, a missing state, a currency figure in an entry, and ranking language outside a quotation.
+
+**NOT YET** (`TODO.md`):
+- the cross-model review of the analysis (#87's standard);
+- a person's reading;
+- what became of the B p. 84 proposals after September 2024.
+
+*Would change if:* a printed fact needs a Draghi figure, which would move the report into `model/sources/` under #79,
+or the EU adopts the B p. 84 procurement and residency policy, which would turn the note's "plausibly" into a question
+the registers can answer.

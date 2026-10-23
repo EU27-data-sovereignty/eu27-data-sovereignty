@@ -178,6 +178,8 @@ SOVEREIGN-APPLIANCE.md       authored note: a state-owned, state-keyed appliance
 TECHNICAL-UNIVERSITIES.md    authored note: per member state, the institutions on a named published list
                              (CESAER, EuroTech) or cited from a fetched page; alphabetical, never ranked;
                              no person has read it (#108)
+DRAGHI-REPORT.md             authored note: the Draghi report (2024) read against the 27 states; every
+                             quotation re-found in the hashed PDF, every state fact a printed claim id (#118)
 .claude/settings.json        the assistant's project permission rule: exact pushes to main allowed, every
                              other outward action denied by name; the owner's OK still comes first (#106)
 
@@ -323,6 +325,23 @@ headings in order, the four columns, every row's basis one of the allowed shapes
 `docs/technical-universities-links.csv`, no ranking word, and that nothing renders it. A second agent on the same
 model and then a `claude-fable-5-1` agent checked every row against its page; no person has read it. The working log
 is `docs/plans/technical-universities-log.md`.
+
+## The Draghi report, per member state
+
+[`DRAGHI-REPORT.md`](DRAGHI-REPORT.md) is an authored note (#118), written 2026-10-23, that reads Mario Draghi's *The
+future of European competitiveness* (European Commission, September 2024) against this project's registers. The
+report is EU-level and names no member state in its cloud section. Its proposal for a single EU-wide cloud
+procurement and residency policy for public administrations (Part B, p. 84) carves out "nationally sensitive areas
+(e.g. defence, home affairs and justice)", so for each state the note reads that exception against the operator the
+project prints for its identity registers, and the proposal's ban on national "gold-plating" against the indicators
+L1 and L3.
+
+**What the gate checks** (`model/draghi_note.py`, through `model/notes.py`): every quotation is in
+`docs/draghi-quotes.csv` and found on its page of the hashed PDF; every state fact is a claim id quoted with the text
+the bundle prints; the 27 entries are in order with their subsections; there is no ranking language or currency figure
+outside a quotation; nothing renders the note. The PDFs are gitignored in `assets/reports/draghi-2024/` under the
+tracked `assets/reports/MANIFEST.csv`; `python3 model/draghi_note.py fetch` restores them. No other model has
+reviewed the analysis and no person has read it (`TODO.md`).
 
 ## What the evidence shows so far
 

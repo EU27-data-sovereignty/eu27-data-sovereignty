@@ -73,6 +73,7 @@ python3 model/provenance.py            # source register coverage per namespace
 python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
 python3 model/i18n.py strings|admit|check|why   # the bundle's labels into STRINGS-reader.md; admit read drafts into model/i18n/ and the reader's catalogue (#117)
 python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
+python3 model/draghi_note.py check|fetch|quotes|links   # the authored note DRAGHI-REPORT.md: its contract; restore the PDFs; regenerate the quote register from the PDFs; refetch URLs (#118)
 python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
@@ -214,5 +215,12 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `none: searched <date>` row; alphabetical
   within a state, no ranking word anywhere, every URL in `docs/technical-universities-links.csv`
   (`python3 model/technical_universities_note.py links` after a change). Never rendered.
+- **`DRAGHI-REPORT.md` is authored, not generated** (#118). Quote the report only as `“…” (A|B p. N)`, N being the PDF
+  page (Part A's printed folio is two lower), then run `python3 model/draghi_note.py quotes`: it regenerates
+  `docs/draghi-quotes.csv` from the note and re-finds each quotation in the hashed PDF. Never edit the register by
+  hand. A state fact is a claim id with its printed text, `` `record:XX:…` reads “…” ``, and `check` compares it with
+  the bundle: after `./run.sh data` changes a cited fact, re-read the entry. Never cite a withheld fact. The PDFs are
+  gitignored under `assets/reports/MANIFEST.csv`; `fetch` restores them, and without them `check` skips re-finding
+  the quotes and says so.
 - **A new authored note or draft set registers in `model/notes.py`** (#108), never as a new `test.sh` stage: one stage runs the
   register, and `tests/test_notes.py` fails on a `model/*_note.py` that is not in it.

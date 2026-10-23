@@ -5,6 +5,27 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-23
+
+### Added: the Draghi report, archived and read against the 27 states (#118)
+
+- **The note.** `DRAGHI-REPORT.md` is an authored note that is never rendered. It reads Draghi's *The future of
+  European competitiveness* (September 2024) against the project's registers, with one entry per state: where the
+  report names it, how its cloud-procurement proposal (B p. 84) lands on the state's holdings, the facts the project
+  prints today by claim id, and the questions left open. The central reading: the proposal's exception for
+  "defence, home affairs and justice" turns on which ministry runs each register, and the project already prints
+  that ministry as the holding's operator.
+- **The evidence.** All 58 quotations are rows of `docs/draghi-quotes.csv`, which
+  `python3 model/draghi_note.py quotes` generates from the note and re-finds on each page of the hashed PDF. All 89
+  claim ids are checked against the text the committed bundle prints. The gate runs `check` through `model/notes.py`;
+  it re-finds every quotation in the PDFs where they are on disk and says out loud that it skipped this where they
+  are not.
+- **The archive.** Both PDFs are in `assets/reports/draghi-2024/`. They are gitignored and excluded from Vercel, and
+  the tracked `assets/reports/MANIFEST.csv` records their URL, size and sha256. `python3 model/draghi_note.py fetch`
+  restores and verifies them. `tests/test_ignore_rules.py` fails if a report PDF is ever tracked.
+- **Tests.** `tests/test_draghi_note.py` covers the committed note and a synthetic note that fails on each thing the
+  contract forbids.
+
 ## 2026-10-19
 
 ### Added: the reader's language layer, English only until a native speaker has read a translation (#117)

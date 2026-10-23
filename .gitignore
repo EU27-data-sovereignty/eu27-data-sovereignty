@@ -82,6 +82,11 @@ web/playwright-report/
 # Mirrored in .vercelignore -- the CLI reads that INSTEAD of this file.
 cache/
 
+# Archived third-party reports (#118). Re-downloadable from the publisher, so the bytes stay out
+# of git; assets/reports/MANIFEST.csv IS tracked and carries each file's URL and sha256, and
+# `python3 model/draghi_note.py fetch` restores and verifies them. Mirrored in .vercelignore.
+assets/reports/**/*.pdf
+
 # Local Claude Code settings; the project skill under .claude/skills/ is tracked.
 .claude/settings.local.json
 

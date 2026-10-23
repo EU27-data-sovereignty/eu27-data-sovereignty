@@ -79,6 +79,12 @@ class Cache(unittest.TestCase):
         for path in (GITIGNORE, VERCELIGNORE):
             self.assertIn("cache/", rules(path), f"{path.name} lost `cache/` (#46)")
 
+    def test_archived_reports_in_both_files(self):
+        for path in (GITIGNORE, VERCELIGNORE):
+            self.assertIn("assets/reports/**/*.pdf", rules(path), f"{path.name} lost `assets/reports/**/*.pdf` (#118)")
+        tracked = subprocess.run(["git", "-C", str(ROOT), "ls-files", "assets"], capture_output=True, text=True).stdout
+        self.assertFalse([n for n in tracked.splitlines() if n.endswith(".pdf")], "an archived report PDF is tracked")
+
 
 if __name__ == "__main__":
     unittest.main()
