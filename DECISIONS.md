@@ -3615,6 +3615,8 @@ git.
 - a person's reading;
 - what became of the B p. 84 proposals after September 2024.
 
+The session's smaller choices and their trade-offs are logged in `docs/plans/draghi-report-log.md`.
+
 *Would change if:* a printed fact needs a Draghi figure, which would move the report into `model/sources/` under #79,
 or the EU adopts the B p. 84 procurement and residency policy, which would turn the note's "plausibly" into a question
 the registers can answer.
