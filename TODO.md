@@ -85,6 +85,10 @@ Open
       `dff7967`, 2026-10-14; the stash that carried them is kept as `stash@{0}`). Push that branch and
       `ci/status-2026-10-14`, then each to `main`; then `git branch -D sovereign-appliance`, `git worktree prune`,
       `git stash drop`
+- [ ] **Owner:** the worktree `.claude/worktrees/notes-internet-entry-points` (branch
+      `worktree-notes-internet-entry-points`, `19aef4c`) holds 2 commits not on `main`: `INTERNET-ENTRY-POINTS.md`
+      and its log (#109). Merge or drop them, then `git worktree remove` it; its older copies of the TODO files show
+      up in workspace sweeps — 2026-10-29, workspace TODO sweep
 - [ ] **Owner:** read `TECHNICAL-UNIVERSITIES.md` (#108) and a language draft or two; no person has read either
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
