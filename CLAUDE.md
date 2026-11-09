@@ -71,7 +71,7 @@ python3 model/provenance.py            # source register coverage per namespace
 ./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#103)
 ./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
 python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
-python3 model/i18n.py strings|admit|check|why   # the bundle's labels into STRINGS-reader.md; admit read drafts into model/i18n/ and the reader's catalogue (#122)
+python3 model/i18n.py strings|admit|check|why   # the bundle's labels into STRINGS-reader.md; admit read drafts into model/i18n-reader/ and the reader's catalogue (#122)
 python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
 python3 model/draghi_note.py check|fetch|quotes|links   # the authored note DRAGHI-REPORT.md: its contract; restore the PDFs; regenerate the quote register from the PDFs; refetch URLs (#123)
 python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
@@ -201,15 +201,26 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   the book, the web app or `/ask` (`tests/test_sovereign_appliance.py`); no ranking language, no currency figure anywhere,
   a member state named only in its Precedents and Sources sections and there only with a URL and access date or
   **[unverified]**; `./run.sh appliance links` after adding or changing a URL.
-- **The language drafts are staging, never rendered; the catalogue is admitted from them** (#122).
-  `docs/i18n/drafts/<ISO>.md` are machine translations of `docs/i18n/STRINGS.md` (45 chrome strings) and, in a
-  "Reader strings" part, `docs/i18n/STRINGS-reader.md` (the reader's strings plus the content model's labels and gaps,
-  whose table `model/i18n.py strings` generates), drafted by one agent and reviewed by the agent on the other model;
-  `tests/test_i18n_drafts.py` fails if a renderer, the reader included, names them. Only `model/i18n.py admit` reads
-  them, and it admits a state's language column only with both parts reviewed, every `fix` applied as `fixed`, and a
-  `- Read by (<lang>): <role>, <date>` line: a native speaker's reading, recorded by role, never by name. No person has
-  read one yet, so the catalogue is English only. Never edit `model/i18n/` or `mobile/assets/i18n/` by hand. The web
-  stage of `docs/plans/localisation-plan.md` needs its own decision entry.
+- **The language drafts are staging, never rendered.** `docs/i18n/drafts/<ISO>.md` are machine translations of the 45
+  chrome strings in `docs/i18n/STRINGS.md`, drafted by one agent and reviewed by the agent on the other model;
+  `tests/test_i18n_drafts.py` fails if a renderer names them or a file lacks its cross-review. No person has read them.
+  A language reaches a page only through `python3 model/i18n_admit.py` (#111, #112), which copies it into
+  `model/i18n/` once its draft passes the checker with no `fix` open; a page in a language with no
+  `- Read by (<lang>): …` line says it is unread machine translation. Re-run admission after any draft change.
+  Renderers print keyed strings through `t(key)`, counts through ICU patterns, and `tests/test_i18n.py` holds the
+  app, the bundle and the tables to one list.
+- **Every sentence the web app writes goes through the site catalog (#113).** Write new English as
+  `tx('Whole sentence.', { arg })` (or `txr` when an element sits inside it; `m('…')` in a data file), never as bare
+  JSX text, never built from pieces, a count as `{n, plural, one {…} other {…}}`. Then
+  `python3 model/i18n_site.py extract`; the gate fails until SOURCE.md matches the code. A new or edited string prints
+  in English in the six site languages until drafted and cross-reviewed (`python3 model/i18n_site.py stale`).
+- **The reader admits from the same drafts, more strictly** (#122). `python3 model/i18n.py admit` also reads each
+  draft's "Reader strings" part (`docs/i18n/STRINGS-reader.md`: the reader's strings plus the content model's labels
+  and gaps, whose table `model/i18n.py strings` generates). It admits a language only when both parts are reviewed
+  with no `fix` open **and** a `- Read by (<lang>): <role>, <date>` line is present, recorded by role, never by name.
+  No person has read one yet, so the reader is English only. It writes `model/i18n-reader/` and
+  `mobile/assets/i18n/catalogue.json`; `model/i18n/` belongs to `i18n_admit.py`. Each admission deletes what it did
+  not write in its own directory, so never point one at the other's, and never edit any of the three by hand.
 - **`TECHNICAL-UNIVERSITIES.md` is authored, not generated** (#108). Per state, the institutions on a named published
   list (CESAER, EuroTech) or the state's technical university cited from a fetched page, else **[unverified]**, or one
   `none: searched <date>` row; alphabetical

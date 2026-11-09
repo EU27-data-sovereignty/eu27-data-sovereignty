@@ -11,6 +11,13 @@
     color-scheme: light dark;
   }
 
+  /* German, Dutch and Polish compounds outgrow a button ("Cybersicherheitsbehörden"): on a translated page let the
+     browser hyphenate by the page's language (#113). English is left as it was. */
+  html:not([lang^='en']) body {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
   body {
     background-color: var(--color-bg-page);
     color: var(--color-fg-primary);

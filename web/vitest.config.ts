@@ -10,6 +10,8 @@ export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
+  // The language tables live in model/i18n/ (#111, #113), outside web/, as vite.config.ts allows too.
+  server: { fs: { allow: ['.', fileURLToPath(new URL('../model/i18n', import.meta.url))] } },
   test: {
     globals: true,
     environment: 'jsdom',

@@ -1,3 +1,5 @@
+import { useTx } from '@/i18n'
+
 /** One five-pointed star, drawn around the origin; the flag disc places twelve of them. */
 const STAR = '0,-3 0.9,-0.9 3,-0.9 1.3,0.4 1.9,2.6 0,1.3 -1.9,2.6 -1.3,0.4 -3,-0.9 -0.9,-0.9'
 
@@ -13,6 +15,7 @@ const RING = Array.from({ length: 12 }, (_, i) => {
  * and kept to the right so they never sit under the text.
  */
 export function Hero() {
+  const { tx, txr } = useTx()
   return (
     <section className="hero-band relative min-h-[415px] overflow-hidden">
       <div aria-hidden="true" className="hero-dots absolute inset-0" />
@@ -47,17 +50,20 @@ export function Hero() {
       </svg>
       <div className="relative mx-auto max-w-[1440px] px-6 pt-14 pb-20 sm:px-10 sm:pt-[92px] sm:pb-[110px]">
         <p className="text-sm font-bold tracking-[0.16em] text-[var(--color-accent-text)] uppercase">
-          Cloud Sovereignty for Europe
+          {tx('Cloud Sovereignty for Europe')}
         </p>
         <h1 className="mt-[18px] text-[clamp(1.9rem,8.6vw,2.75rem)] leading-[1.12] font-extrabold tracking-[-0.01em] text-[var(--color-fg-primary)] sm:text-[clamp(2.75rem,6vw,4.5rem)]">
-          Navigate
-          <br />
-          <span className="underline decoration-[var(--color-eu-gold)] decoration-[5px] underline-offset-[12px]">
-            Cloud Sovereignty
-          </span>
+          {txr('Navigate{br}{phrase}', {
+            br: <br />,
+            phrase: (
+              <span className="underline decoration-[var(--color-eu-gold)] decoration-[5px] underline-offset-[12px]">
+                {tx('Cloud Sovereignty')}
+              </span>
+            ),
+          })}
         </h1>
         <p className="mt-7 text-[clamp(1.125rem,1.8vw,1.375rem)] font-medium text-[var(--color-fg-secondary)]">
-          Understand. Comply. Decide. Stay sovereign.
+          {tx('Understand. Comply. Decide. Stay sovereign.')}
         </p>
       </div>
     </section>

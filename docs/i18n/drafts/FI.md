@@ -2,6 +2,7 @@
 
 - Languages: fi Finnish (fi-FI); sv Swedish (sv-FI)
 - Drafted by: agent A, claude-opus-5-5, 2026-10-12
+- Revised by: agent A, claude-opus-5-5, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -11,7 +12,7 @@
 | site.title | EU-27 Sovereign Data Centres | EU-27:n suvereenit datakeskukset | Suveräna datacenter i EU-27 |
 | site.kicker | EU-27 | EU-27 | EU-27 |
 | nav.overview | Overview | Yleiskatsaus | Översikt |
-| nav.ranking | Ranking | Sijoitus | Rangordning |
+| nav.ranking | Ranking | Paremmuusjärjestys | Rangordning |
 | nav.countries | Countries | Maat | Länder |
 | nav.holdings | Critical holdings | Kriittiset tietovarannot | Kritiska informationsresurser |
 | nav.hosting | Hosting | Isännöinti | Hosting |
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Kysy | Fråga |
 | nav.methodology | Methodology | Menetelmät | Metod |
 | nav.factcheck | Fact check | Faktantarkistus | Faktagranskning |
+| nav.about | About the data | Tietoja aineistosta | Om uppgifterna |
 | country.kicker | Country report | Maaraportti | Landrapport |
 | country.contents | Contents | Sisältö | Innehåll |
 | country.sources | Sources | Lähteet | Källor |
@@ -46,27 +48,29 @@
 | col.hosting_sourced | Hosting sourced | Isännöinti lähteineen | Hosting med källa |
 | fact.check_this | Check this fact | Tarkista tämä tieto | Kontrollera detta faktum |
 | fact.gloss | Machine translation: | Konekäännös: | Maskinöversättning: |
-| fact.withheld | withheld until sourced | pidätetty, kunnes lähde löytyy | undanhållet tills källa finns |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# arvo pidätetty, kunnes lähde löytyy} other {# arvoa pidätetty, kunnes lähde löytyy}} | {count, plural, one {# värde undanhållet tills källa finns} other {# värden undanhållna tills källa finns}} |
 | fact.disputed | withheld as disputed | pidätetty kiistanalaisena | undanhållet som omstritt |
 | status.loading | Loading the EU-27 dataset… | Ladataan EU-27-aineistoa… | EU-27-datamaterialet laddas… |
 | status.load_error | Could not load the data | Tietoja ei voitu ladata | Uppgifterna kunde inte laddas |
 | notfound.title | Page not found | Sivua ei löytynyt | Sidan hittades inte |
 | notfound.back | Back to the overview | Takaisin yleiskatsaukseen | Tillbaka till översikten |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Koneellisesti tarkistettu, ei ihmisen vahvistama. Automaattiset agentit löysivät nämä lähteet ja tarkistivat ne mekaanisesti; kukaan ihminen ei ole käynyt havaintoja läpi. Muulla kuin englannin kielellä olevan lähteen englanninkielinen sanamuoto on lainatun tekstin konekäännös tai koneellinen tiivistelmä. Pidä jokaista tietoa johtolankana viitattuun lähteeseensä, älä vakiintuneena tosiasiana. Korjaukset ovat tervetulleita repositorion issue-pohjan (issue template) kautta. | Maskinellt kontrollerat, inte verifierat av människor. Automatiserade agenter har hittat dessa källor och kontrollerat dem mekaniskt; ingen person har granskat iakttagelserna. Den engelska formuleringen av en icke-engelskspråkig källa är en maskinöversättning eller en maskinell sammanfattning av den citerade texten. Betrakta varje faktum som en ledtråd till dess citerade källa, inte som fastställt. Rättelser tas gärna emot via repositoriets mall för ärenden (issue template). |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Tämän sivun tekstit ovat konekäännös. Kukaan tätä kieltä lukeva ihminen ei ole vielä tarkistanut niitä. | Etiketterna på den här sidan är en maskinöversättning. Ingen person som läser det här språket har granskat dem ännu. |
 
 - Note: sv follows Finland-Swedish administrative usage: informationsresurs, as in the Swedish text of Finland's Information Management Act (tietovaranto in fi), where Sweden would more likely say informationsmängd or datamängd.
 
 ## Review
 
 - Reviewed by: agent B, claude-fable-5-1, 2026-10-12
-- Verdict: 89 ok, 1 fix
+- Re-reviewed by: agent B, claude-fable-5-1, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 94 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
 | site.title | fi | ok | | |
 | site.kicker | fi | ok | | |
 | nav.overview | fi | ok | | |
-| nav.ranking | fi | fix | "sijoitus" reads as a single placement or an investment, not a ranking | Järjestys |
+| nav.ranking | fi | ok | fix applied 2026-10-20 with 'Paremmuusjärjestys' rather than the suggested 'Järjestys', and the drafter's word is the better one: it is the standard Finnish term for a ranking, where bare 'Järjestys' is only 'order'; re-reviewed | |
 | nav.countries | fi | ok | | |
 | nav.holdings | fi | ok | | |
 | nav.hosting | fi | ok | | |
@@ -74,6 +78,7 @@
 | nav.ask | fi | ok | | |
 | nav.methodology | fi | ok | | |
 | nav.factcheck | fi | ok | | |
+| nav.about | fi | ok | 'Tietoja aineistosta' matches the Finnish convention (Tietoja meistä) and 'aineisto' as used for the dataset elsewhere in the column | |
 | country.kicker | fi | ok | | |
 | country.contents | fi | ok | | |
 | country.sources | fi | ok | | |
@@ -101,13 +106,14 @@
 | col.hosting_sourced | fi | ok | | |
 | fact.check_this | fi | ok | | |
 | fact.gloss | fi | ok | | |
-| fact.withheld | fi | ok | | |
+| fact.withheld | fi | ok | ICU pattern, one/other as CLDR fi; arvo after 1, partitive arvoa otherwise, correct | |
 | fact.disputed | fi | ok | | |
 | status.loading | fi | ok | | |
 | status.load_error | fi | ok | | |
 | notfound.title | fi | ok | | |
 | notfound.back | fi | ok | | |
-| notice.disclaimer | fi | ok | | |
+| notice.disclaimer | fi | ok | re-read 2026-10-20: 'tarkistettu' for the machine, 'vahvistama' for the person; the distinction stands, nothing weakened | |
+| notice.unread | fi | ok | says machine translation; 'kukaan ... ihminen ei ole tarkistanut': checked, not verified; plain | |
 | site.title | sv | ok | | |
 | site.kicker | sv | ok | | |
 | nav.overview | sv | ok | | |
@@ -119,6 +125,7 @@
 | nav.ask | sv | ok | | |
 | nav.methodology | sv | ok | | |
 | nav.factcheck | sv | ok | | |
+| nav.about | sv | ok | 'uppgifterna' as the rest of the column; natural | |
 | country.kicker | sv | ok | | |
 | country.contents | sv | ok | | |
 | country.sources | sv | ok | | |
@@ -146,10 +153,11 @@
 | col.hosting_sourced | sv | ok | | |
 | fact.check_this | sv | ok | | |
 | fact.gloss | sv | ok | | |
-| fact.withheld | sv | ok | | |
+| fact.withheld | sv | ok | ICU pattern, one/other as CLDR sv; neuter värde undanhållet / plural värden undanhållna agree | |
 | fact.disputed | sv | ok | | |
 | status.loading | sv | ok | | |
 | status.load_error | sv | ok | | |
 | notfound.title | sv | ok | | |
 | notfound.back | sv | ok | | |
-| notice.disclaimer | sv | ok | | |
+| notice.disclaimer | sv | ok | re-read 2026-10-20: 'kontrollerat' for the machine, 'verifierat' for the person; the distinction stands, nothing weakened | |
+| notice.unread | sv | ok | says machine translation; 'ingen person ... granskat': reviewed, not verified; plain | |

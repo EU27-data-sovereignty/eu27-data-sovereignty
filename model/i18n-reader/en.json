@@ -4,7 +4,7 @@
  "overlays": {},
  "provenance": [
   {
-   "sha256": "3ed3ca358f812710deda178c83372ac2115448c32fbca76d9ae7518f8f57f255",
+   "sha256": "bef79153e2e2415569533f33bc43bf2d86d4dbda4b264b9b7b5a7d6492279782",
    "source": "docs/i18n/STRINGS.md"
   },
   {
@@ -139,7 +139,7 @@
   "fact.check_this": "Check this fact",
   "fact.disputed": "withheld as disputed",
   "fact.gloss": "Machine translation:",
-  "fact.withheld": "withheld until sourced",
+  "fact.withheld": "{count, plural, one {# value withheld until sourced} other {# values withheld until sourced}}",
   "gap.not_stated_in_sources": "Not stated in sources",
   "gap.not_yet_measured": "Not yet measured",
   "gap.not_yet_sourced": "Not yet sourced",
@@ -256,6 +256,7 @@
   "label.value": "Value",
   "label.vehicle_licensing_tier_1": "Vehicle & licensing (tier 1)",
   "label.water_management_control_tier_1": "Water management control (tier 1)",
+  "nav.about": "About the data",
   "nav.ask": "Ask",
   "nav.countries": "Countries",
   "nav.factcheck": "Fact check",
@@ -268,6 +269,7 @@
   "notfound.back": "Back to the overview",
   "notfound.title": "Page not found",
   "notice.disclaimer": "Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.",
+  "notice.unread": "The labels on this page are a machine translation. No person who reads this language has checked them yet.",
   "overview.coverage": "What is known, per state",
   "overview.hosting": "Where key registers are hosted, and by whom",
   "section.exposure": "Foreign-dependency exposure",

@@ -9,16 +9,19 @@ import type { Bundle, Document, Span } from '@/data/types'
 import { claimsBySource, numberSources } from '@/data/sources'
 import { NotFound } from './NotFound'
 import { countryPath } from '@/utils/routes'
+import { m, useCountryName, useTx } from '@/i18n'
 
 const TIER_NOTE: Record<number, string> = {
-  0: 'The identity spine: civil registry, biometrics, eID, PKI',
-  1: 'The legal, fiscal and security state',
-  2: 'Health records, public health, statistics',
-  3: 'Geospatial base data, digital archives',
+  0: m('The identity spine: civil registry, biometrics, eID, PKI'),
+  1: m('The legal, fiscal and security state'),
+  2: m('Health records, public health, statistics'),
+  3: m('Geospatial base data, digital archives'),
 }
 
 /** Every holding class with how many states have a verified source for it, by tier (#99 layout). */
 export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
+  const { tx } = useTx()
+  const note = (t: number) => (TIER_NOTE[t] ? tx(TIER_NOTE[t]) : '')
   const [domain, setDomain] = useState('all')
   const countries = Object.values(bundle.countries)
   const rows = bundle.holding_classes.map(h => ({
@@ -34,29 +37,33 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <PageBand kicker="EU-27 · Critical holdings" title="Critical holdings">
+      <PageBand kicker={tx('EU-27 · Critical holdings')} title={tx('Critical holdings')}>
         <p className="mt-3 max-w-3xl text-[var(--color-fg-secondary)]">
-          The {bundle.holding_classes.length} kinds of government data holding this project
-          inventories, in tier order: tier 0 is the identity spine, tier 1 the legal, fiscal and
-          security state. Open one to compare it across all 27 member states.
+          {tx(
+            'The {n} kinds of government data holding this project inventories, in tier order: tier 0 is the identity spine, tier 1 the legal, fiscal and security state. Open one to compare it across all 27 member states.',
+            { n: bundle.holding_classes.length },
+          )}
         </p>
       </PageBand>
 
-      <ul className="mb-7 grid grid-cols-2 gap-3 lg:grid-cols-4" aria-label="Holdings by tier">
+      <ul
+        className="mb-7 grid grid-cols-2 gap-3 lg:grid-cols-4"
+        aria-label={tx('Holdings by tier')}
+      >
         {tiers.map(t => (
           <li key={t} className={`${CARD} p-4`}>
             <span className="text-xs font-semibold tracking-[0.1em] text-[var(--color-accent-text)] uppercase">
-              Tier {t}
+              {tx('Tier {t}', { t })}
             </span>
             <span className="block font-display text-3xl font-bold tabular-nums">
               {bundle.holding_classes.filter(h => h.tier === t).length}
             </span>
-            <span className="text-sm text-[var(--color-fg-secondary)]">{TIER_NOTE[t] ?? ''}</span>
+            <span className="text-sm text-[var(--color-fg-secondary)]">{note(t)}</span>
           </li>
         ))}
       </ul>
 
-      <div role="group" aria-label="Filter by domain" className="mb-4 flex flex-wrap gap-1.5">
+      <div role="group" aria-label={tx('Filter by domain')} className="mb-4 flex flex-wrap gap-1.5">
         {['all', ...domains].map(d => (
           <button
             key={d}
@@ -69,7 +76,7 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
                 : 'border-[var(--color-border)] text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]'
             }`}
           >
-            {d === 'all' ? 'All domains' : d}
+            {d === 'all' ? tx('All domains') : d}
           </button>
         ))}
       </div>
@@ -79,13 +86,13 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
           <thead>
             <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
               <th scope="col" className="px-4 py-2.5 text-left font-semibold">
-                Holding
+                {tx('Holding')}
               </th>
               <th scope="col" className="px-4 py-2.5 text-left font-semibold">
-                Domain
+                {tx('Domain')}
               </th>
               <th scope="col" className="px-4 py-2.5 text-left font-semibold">
-                States verified
+                {tx('States verified')}
               </th>
             </tr>
           </thead>
@@ -100,14 +107,14 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
                     scope="colgroup"
                     className="bg-[var(--color-bg-emphasis)]/60 px-4 py-2 text-left text-xs font-semibold tracking-[0.1em] text-[var(--color-accent-text)] uppercase"
                   >
-                    Tier {t} · {TIER_NOTE[t] ?? ''}
+                    {tx('Tier {t}', { t })} · {note(t)}
                   </th>
                 </tr>
                 {group.map(({ h, n }) => (
                   <tr key={h.class_id} className="border-t border-[var(--color-border)]">
                     <th scope="row" className="px-4 py-2.5 text-left font-medium">
                       <Link to={`/holdings/${h.class_id}`} className="hover:underline">
-                        {h.label}
+                        {tx(h.label)}
                       </Link>
                     </th>
                     <td className="px-4 py-2.5 text-[var(--color-fg-muted)] capitalize">
@@ -124,8 +131,9 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
         </table>
       </div>
       <p className="mt-3 text-sm text-[var(--color-fg-muted)]">
-        Faded bars: fewer than half the member states verified. A gap means not yet sourced, never
-        that the holding does not exist.
+        {tx(
+          'Faded bars: fewer than half the member states verified. A gap means not yet sourced, never that the holding does not exist.',
+        )}
       </p>
     </article>
   )
@@ -137,6 +145,8 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
  */
 export function Holding({ bundle }: { bundle: Bundle }) {
   const { cls = '' } = useParams()
+  const { tx } = useTx()
+  const countryName = useCountryName()
   const meta = bundle.holding_classes.find(h => h.class_id === cls)
   if (!meta) return <NotFound />
 
@@ -145,9 +155,9 @@ export function Holding({ bundle }: { bundle: Bundle }) {
   for (const doc of Object.values(bundle.documents).sort((a, b) => a.name.localeCompare(b.name))) {
     const table = doc.sections.find(s => s.id === 'holdings')?.blocks.find(b => b.type === 'table')
     if (!table || table.type !== 'table') continue
-    columns = table.columns.slice(2).map(c => c.t)
+    columns = table.columns.slice(2).map(c => tx(c.t))
     const row = table.rows.find(r => r[1]?.t.startsWith(`${meta.label} (`))
-    if (row) rows.push({ iso: doc.iso, name: doc.name, cells: row.slice(2) })
+    if (row) rows.push({ iso: doc.iso, name: countryName(doc.iso, doc.name), cells: row.slice(2) })
   }
   // A synthetic one-section document per row, so footnote numbering follows this page.
   const docs: Document[] = rows.map(r => ({
@@ -162,16 +172,16 @@ export function Holding({ bundle }: { bundle: Bundle }) {
     <article>
       <p className="text-xs tracking-widest text-[var(--color-fg-muted)] uppercase">
         <Link to="/holdings" className="hover:underline">
-          Critical holdings
+          {tx('Critical holdings')}
         </Link>{' '}
-        · tier {meta.tier}
+        · {tx('tier {t}', { t: meta.tier })}
       </p>
-      <PageBand kicker="EU-27 · Critical holding" title={meta.label} />
+      <PageBand kicker={tx('EU-27 · Critical holding')} title={tx(meta.label)} />
       <div className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
         <table className="w-full min-w-[40rem] border-collapse text-sm">
           <thead>
             <tr className="bg-[var(--color-bg-emphasis)] text-xs font-semibold tracking-wider text-[var(--color-fg-primary)] uppercase shadow-[inset_0_-2px_0_var(--color-accent-text)]">
-              {['Country', ...columns].map(h => (
+              {[tx('Country'), ...columns].map(h => (
                 <th key={h} scope="col" className="px-3.5 py-2.5 text-left">
                   {h}
                 </th>

@@ -2,6 +2,7 @@
 
 - Languages: nl Dutch (nl-NL)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Vragen |
 | nav.methodology | Methodology | Methodologie |
 | nav.factcheck | Fact check | Factcheck |
+| nav.about | About the data | Over de gegevens |
 | country.kicker | Country report | Landenrapport |
 | country.contents | Contents | Inhoud |
 | country.sources | Sources | Bronnen |
@@ -28,7 +30,7 @@
 | section.posture | Legal and institutional posture | Juridische en institutionele positie |
 | section.sizing | Capacity | Capaciteit |
 | section.gaps | Research still open | Nog openstaand onderzoek |
-| section.placement | Data-sovereignty placement | Plaatsing op datasoevereiniteit |
+| section.placement | Data-sovereignty placement | Plaatsing inzake datasoevereiniteit |
 | overview.hosting | Where key registers are hosted, and by whom | Waar de belangrijkste registers worden gehost, en door wie |
 | overview.coverage | What is known, per state | Wat bekend is, per lidstaat |
 | col.indicator | Indicator | Indicator |
@@ -46,20 +48,22 @@
 | col.hosting_sourced | Hosting sourced | Hosting met bron |
 | fact.check_this | Check this fact | Controleer dit feit |
 | fact.gloss | Machine translation: | Machinevertaling: |
-| fact.withheld | withheld until sourced | achtergehouden tot er een bron is |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# waarde achtergehouden tot er een bron is} other {# waarden achtergehouden tot er een bron is}} |
 | fact.disputed | withheld as disputed | achtergehouden als betwist |
 | status.loading | Loading the EU-27 dataset… | De EU-27-dataset wordt geladen… |
 | status.load_error | Could not load the data | De gegevens konden niet worden geladen |
 | notfound.title | Page not found | Pagina niet gevonden |
 | notfound.back | Back to the overview | Terug naar het overzicht |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Machinaal gecontroleerd, niet door mensen geverifieerd. Geautomatiseerde agents hebben deze bronnen gevonden en mechanisch gecontroleerd; geen enkele persoon heeft de bevindingen beoordeeld. De Engelse formulering van een niet-Engelstalige bron is een machinevertaling of een machinale samenvatting van de geciteerde tekst. Beschouw elk feit als een aanwijzing naar de geciteerde bron, niet als vaststaand. Correcties zijn welkom via het issue-sjabloon van de repository. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | De labels op deze pagina zijn een machinevertaling. Nog geen enkele persoon die deze taal leest, heeft ze gecontroleerd. |
 
 - Note: nl follows Netherlands usage: "datacenters" (Belgian Dutch often prefers "datacentra"), "kritiek" (Belgian texts more often "kritisch"), and "lidstaat" for the State column.
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -74,6 +78,7 @@
 | nav.ask | nl | ok | | |
 | nav.methodology | nl | ok | | |
 | nav.factcheck | nl | ok | | |
+| nav.about | nl | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | nl | ok | | |
 | country.contents | nl | ok | | |
 | country.sources | nl | ok | | |
@@ -83,7 +88,7 @@
 | section.posture | nl | ok | | |
 | section.sizing | nl | ok | | |
 | section.gaps | nl | ok | | |
-| section.placement | nl | fix | 'op datasoevereiniteit' is unidiomatic | Plaatsing inzake datasoevereiniteit |
+| section.placement | nl | ok | fix applied 2026-10-20, re-reviewed | |
 | overview.hosting | nl | ok | | |
 | overview.coverage | nl | ok | | |
 | col.indicator | nl | ok | | |
@@ -101,10 +106,11 @@
 | col.hosting_sourced | nl | ok | | |
 | fact.check_this | nl | ok | | |
 | fact.gloss | nl | ok | | |
-| fact.withheld | nl | ok | | |
+| fact.withheld | nl | ok | one/other, waarde/waarden agree | |
 | fact.disputed | nl | ok | | |
 | status.loading | nl | ok | | |
 | status.load_error | nl | ok | | |
 | notfound.title | nl | ok | | |
 | notfound.back | nl | ok | | |
-| notice.disclaimer | nl | ok | | |
+| notice.disclaimer | nl | ok | re-read 2026-10-20: 'machine-checked' is checked, not verified; nothing weakened | |
+| notice.unread | nl | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

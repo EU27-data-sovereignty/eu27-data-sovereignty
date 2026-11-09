@@ -1,5 +1,7 @@
 import { useId, useState } from 'react'
 
+import { useTx } from '@/i18n'
+
 import { cellKey } from './keys'
 import { Legend } from './Legend'
 
@@ -52,6 +54,7 @@ export function Heatmap({
   sortedBy,
   onCellClick,
 }: HeatmapProps) {
+  const { tx } = useTx()
   const [hover, setHover] = useState<HeatmapCell | null>(null)
   const [showTable, setShowTable] = useState(false)
   const tableId = useId()
@@ -67,7 +70,7 @@ export function Heatmap({
           onClick={() => setShowTable(v => !v)}
           className="rounded border border-[var(--color-border)] px-2 py-1 text-xs text-[var(--color-fg-secondary)] hover:bg-[var(--color-bg-emphasis)]"
         >
-          {showTable ? 'Hide' : 'Show'} data table
+          {showTable ? tx('Hide data table') : tx('Show data table')}
         </button>
       </div>
 
@@ -160,7 +163,7 @@ export function Heatmap({
           </>
         ) : (
           <span className="text-[var(--color-fg-muted)]">
-            Hover or tab to a cell for its value and source.
+            {tx('Hover or tab to a cell for its value and source.')}
           </span>
         )}
       </div>
@@ -175,7 +178,7 @@ export function Heatmap({
             <thead>
               <tr className="border-b border-[var(--color-border)]">
                 <th scope="col" className="p-1 text-left">
-                  Country
+                  {tx('Country')}
                 </th>
                 {cols.map(c => (
                   <th key={c} scope="col" className="p-1 text-left">

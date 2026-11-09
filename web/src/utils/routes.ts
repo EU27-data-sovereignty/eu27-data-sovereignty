@@ -1,6 +1,7 @@
 /**
  * One member state, one top-level path: `/de`, `/fr`, `/el` (#105). The code is the EU-27 ISO code the
- * bundle keys on (Eurostat's, so Greece is `EL`), lowercased. Every link to a country page is built here so
- * the shape changes in one place.
+ * bundle keys on (Eurostat's, so Greece is `EL`), lowercased. A language other than the state's default is a
+ * second segment, `/be/fr` (#111). Every link to a country page is built here so the shape changes in one place.
  */
-export const countryPath = (iso: string) => `/${iso.toLowerCase()}`
+export const countryPath = (iso: string, lang?: string) =>
+  `/${iso.toLowerCase()}${lang ? `/${lang}` : ''}`

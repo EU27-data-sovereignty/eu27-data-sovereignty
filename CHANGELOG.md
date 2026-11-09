@@ -5,6 +5,23 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-11-09
+
+### Changed: the mobile reader, its edition and the Draghi note land on the multilingual site (#114–#123)
+
+- **Decision numbers.** The branch's entries 109–118 are now #114–#123, because `main` had used #109–#113 for the
+  palette, the country outlines and the site's languages. The commit messages before the merge keep the old
+  numbers; #114 records the mapping (old *N* is new *N* + 5).
+- **Two admissions, two directories.** The reader's language tables move from `model/i18n/` to
+  `model/i18n-reader/`, and `model/i18n/` is left to the site's `model/i18n_admit.py`. Each admission deletes what it
+  did not write in its own directory, so sharing one would have let either erase the other's tables.
+- **Two rules, scoped** (#122). The site still serves a language after a clean two-model review (#112). The reader
+  still waits for a person's reading as well, because an app build is harder to take back than a page.
+- **The footer** keeps the site's translated text and adds the `/privacy` link through the site catalogue, so the
+  link reads "Privacy" in English until the drafts cover it.
+- **Tests.** The reader's admission tests move to `tests/test_i18n_reader.py`, beside the site's `tests/test_i18n.py`.
+  Their fixture now opens a `fix` itself, because the drafts on disk no longer carry one.
+
 ## 2026-10-23
 
 ### Added: the Draghi report, archived and read against the 27 states (#123)
@@ -26,6 +43,191 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Tests.** `tests/test_draghi_note.py` covers the committed note and a synthetic note that fails on each thing the
   contract forbids.
 
+## 2026-10-21
+
+### Decided: the fact check keeps its name in every language (#113)
+
+- In nine languages "Fact check" and "Check this fact" are built on the word for verify (French "Vérification des
+  faits", Slovak "Overenie faktov"), the ordinary term for fact-checking. The owner kept them; `DECISIONS.md`
+  #113 records it, so a review does not flag them again. No string changes.
+
+### Added: the whole site in all 24 official EU languages (#113)
+
+- **Languages.** Bulgarian, Czech, Danish, Greek, Estonian, Finnish, Irish, Croatian, Hungarian, Lithuanian,
+  Latvian, Maltese, Portuguese, Romanian, Slovak, Slovenian and Swedish join the six site languages: the switch on
+  every page now offers 23 languages and English (`STRINGS.md`, "Site-wide languages"; `model/i18n/site.json`).
+- **Catalogs.** Each new language has all 661 site strings (`docs/i18n/site/<lang>.md`), drafted by one model and
+  reviewed in full by the other: 408 fixes in the review round (from 5 Hungarian to 48 Slovenian and 48 Swedish),
+  then every rewritten cell read again by the first model, which found 7 more. The reviewers replaced national
+  institution names (a state's own gazette, land register or population register) with generic ones, kept the
+  fact check's "could not confirm" out of each language's word for verified, and gave a count an exact `=1` form
+  where the language's `one` also covers 21 or 101.
+- **The 47 core strings.** A cross-check against the new catalogs changed seven live cells that blurred sourced,
+  checked and verified or differed from their own language elsewhere: Hungarian "Registers sourced" and "Hosting
+  sourced" (igazolt is verified), the Lithuanian disclaimer's "not human-verified", Luxembourg's French column
+  headings and German "Fact check", Belgium's Dutch "Fact check". Each re-read by the other model.
+- **The switch** names Irish and Maltese in themselves (Gaeilge, Malti): Chrome has no names in either language
+  and answered in English. The test of the switch reads its list from `site.json`.
+
+### Added: the model's own wording in the six site languages (#113, stage 3)
+
+- **Model.** The sentences `model/document.py` and `model/methodology.py` fill per state or per build (method
+  notes, the placement explanation, what could move it, the build counts, "Disputed:") are patterns with arguments
+  (`msg`), so a page in another language translates each once. The English they print, in the bundle, the PDFs and
+  GOAL.md, is unchanged byte for byte; the bundle only gains `m` and `a` on 1,593 spans.
+- **Catalog.** `model/i18n_site.py extract` also reads the bundle: 184 model strings (holding classes, column
+  headings, method prose, group names, indicator questions, closed values), drafted and cross-reviewed like the rest;
+  it reports static model text that still names a state or holds a build count.
+- **Pages.** Country reports, the methodology, the ranking (groups, questions, the Yes / Partly / No grid), the
+  holdings and the hosting overview print model text through `modelText`; a state inside a sentence is named in the
+  page's language. Facts and the fact check's reasons stay as written.
+- **Country names.** Every page names a state in the reader's language (Deutschland, Duitsland, Allemagne), from the
+  browser's own region names: report titles, the ranking, the Countries cards, the fact check, holdings, sources.
+- **Review.** 184 model strings plus the hosting page's title, drafted and reviewed in four rounds per language
+  (16 Dutch, 6 German, 9 French, 7 Spanish, 28 Italian and 19 Polish fixes, each re-reviewed); the reviewers replaced
+  national institution names with generic ones, since a label shows on every state's page in that language.
+- **The hosting page** prints the reviewed translation of the disclaimer while the bundle's still matches the source.
+- **Checks.** A translation may add a plural block where its grammar needs one; unit tests for `modelText`; tests that
+  read a state's English heading or wording open its English address or expect its name in the page's language.
+
+### Added: the web app's own wording in German, French, Spanish, Italian, Polish and Dutch (#113, stage 2)
+
+- **Catalog.** Every sentence the app writes (pages, guides, overview, selector, charts, notices) goes through `tx`,
+  `txr` or `m`; the English stays in the code and is the key. `model/i18n_site.py` extracts 476 strings into
+  `docs/i18n/site/SOURCE.md` and checks the drafts; admission writes `model/i18n/site/<lang>.json`. The English pages
+  are pixel-identical through the conversion.
+- **Translations.** Drafted per language by one model (Opus: de, fr, es; Fable: it, pl, nl), reviewed cell by cell by
+  the other, fixes applied by the drafter and re-reviewed, until every cell was `ok`: 179 fixes in the first review,
+  7 in the second. Terms follow each language's core draft; the brand stays English; "verified" stays as the English
+  says it (owner's call).
+- **English fixes.** Nine counts read wrongly at 1 ("1 sources support 1 claims"); they are ICU plurals now. The
+  selector's two-line labels are one string each, with the break inside, so they are translated whole.
+- **Numbers.** Counts print in the page's language (1.234 in German); English output is unchanged.
+- **Layout.** Translated pages hyphenate by their language, so a long compound ("Cybersicherheitsbehörden") breaks
+  inside its button instead of spilling out; English pages are unchanged.
+- **Loading.** The six catalogs are emitted as JSON files and fetched for the page's language only, like the data
+  bundle, so they stay out of the JavaScript budget (382 KB of 400 KB); a page prints English until its catalog
+  arrives. Vite and Vitest may read `model/i18n/`.
+- **Tests.** Tests about English wording on a state page open its English address (`/de/en`, `/lu/en`), since `/de`
+  and `/lu` now read in German and French; the header's navigation is found by place, not by its now-translated
+  label, which also makes the print test check the header again on a translated page.
+- **Checks.** `model/i18n_site.py` is registered in `model/notes.py`; it validates every plural block against the
+  language's CLDR categories and every placeholder against the English.
+
+### Added: a language chosen on any page, remembered across the site (#113, stage 1)
+
+- **Switch.** On every page: a state's own languages first, then the six site languages (German, French,
+  Spanish, Italian, Polish, Dutch), then English. The browser remembers the choice; addresses do not change. A
+  state page's explicit language (`/be/fr`) still wins; a site language reads its home state's table, and a state's
+  own variant where it has one.
+- **Notice.** The unread-translation notice moves to the layout, so every translated page carries it.
+- **Messages.** `format` fills named ICU arguments, plain and plural, for the catalogs stage 2 adds.
+- **Data.** "Site-wide languages" in `docs/i18n/STRINGS.md`; admission writes `model/i18n/site.json`.
+- **Tests.** Unit tests for a choice on state and other pages and for arguments; Playwright for a choice made on
+  `/` holding across pages. The switch-hiding check of earlier today becomes the switch's site-wide test.
+
+### Fixed: the language switch appears only where a page has another language
+
+- **Header.** Off the 27 state pages every page is English only, and the switch opened a list holding English
+  alone, which read as broken. It now shows only on a page that can be read in more than one language; on a
+  state page it lists that state's languages as before. Playwright checks it is absent on `/` and `/sources`.
+
+## 2026-10-20
+
+### Fixed: a disputed value no longer stretches a row of the ranking table to twenty lines
+
+- **Ranking.** In the indicators grid a disputed cell shows its verdict, "Disputed", and opens to the fact
+  checker's full reason (`<details>`, keyboard-reachable). The reason was printed in full in a narrow column, so one
+  cell made its whole row tens of lines tall. `SpanView`'s `compact` mode adds no words: the verdict is the first
+  word of the model's own text. Country reports, where the reason sits in a wide table, are unchanged.
+
+### Changed: dark is the site's default, and printing always takes the light colours
+
+- **Theme.** Without a stored choice the site is dark, whatever the OS prefers; `index.html` starts dark so the
+  first paint matches. A reader's light or dark choice is remembered as before.
+- **Print.** `design/build_tokens.py` now emits the light tokens under `@media print`, so a page printed from the
+  dark screen is dark ink on white rather than pale text. A Playwright test prints `/de` from the dark default.
+- **Tests.** The light accessibility scans and the light visual baselines store a light choice first; the dark
+  scans assert `data-theme="dark"`.
+
+### Added: the state pages in their official languages, unread translations labelled as such (#112)
+
+- **Live languages.** Every language whose draft passes the two-model review with no `fix` open is served at its
+  state's address (`/de`, `/be/fr`, `/ie/ga`), English at `/<iso>/en`. A person's reading is recorded, not
+  required (#112, amending #111, at the owner's request: the readings are gathered on the live, unannounced site).
+- **Honesty.** A page in a language no reader has checked opens with `notice.unread` in that language and in
+  English, and the footer prints the translated disclaimer above the unchanged English notice.
+- **The open strings.** `nav.about` is a key; `fact.withheld` is an ICU plural pattern with each language's CLDR
+  categories, filled by `Intl.PluralRules`; the tab title follows the language; `hreflang` alternates and
+  `Content-Language` headers (written into `vercel.json` by `model/i18n_admit.py`) name the translated pages.
+- **The drafts.** The 42 fixes of 2026-10-12 applied by their drafters and re-reviewed by the other model; the
+  three new or changed keys drafted in all 27 files and cross-reviewed; six new fixes from that pass applied and
+  re-reviewed in a third round. `model/i18n_drafts.py` now checks every plural pattern against CLDR's categories.
+- **Tests.** `tests/test_i18n.py` (admission needs a clean draft, `Content-Language` matches the admitted pages),
+  `web/src/__tests__/i18n.test.ts` (Polish plural branches, exact `=n`, localised digits), Playwright `languages`.
+  The `loaded()` wait no longer looks for English text, which a German page never shows.
+
+### Added: language plumbing for the member-state pages, with English the only language served (#111)
+
+- **Addresses.** `/<iso>/<lang>` is a route: `/<iso>` serves the state's first admitted official language, else
+  English; the default spelled out and an official language not yet admitted redirect to `/<iso>`; any other segment
+  is not found. `countryPath(iso, lang)` builds the links.
+- **Tables.** `model/i18n_admit.py` writes `model/i18n/` from `docs/i18n/STRINGS.md` and from drafts that carry a
+  person's reading (`- Read by (<lang>): …`) and no open `fix`. None does yet, so only English is written.
+- **Lookups.** The navigation, the country page's contents, kicker and source links, "Check this fact", the gloss
+  label, the not-found page and the loading and error messages print through `t(key)`. The content model tags its
+  keyed section titles and column labels (`label(t, key)`), and the bundle is regenerated with those keys.
+  `<html lang>` follows the page. The header's EN button, which did nothing, now lists the languages a page can be
+  read in (English alone until a translation is admitted). "About the data" and the language button share one
+  disclosure hook.
+- **Docs.** Decision #111, the number the localisation plan reserved (it said #109, which the palette took today).
+  The plan, ROADMAP, TODO, `docs/testing.md`, `CLAUDE.md` and `docs/i18n/README.md` follow.
+- **Tests.** `tests/test_i18n.py`, `web/src/__tests__/i18n.test.ts` and Playwright `languages (#111)`. The
+  DocumentView component tests render inside a router, as the app does.
+- **Infographics.** The 27 `countries/<ISO>/<ISO>-infographic.png` re-rendered, because the bundle they are checked
+  against changed; they now also carry the navy-and-gold palette (#109), which they predated.
+
+### Changed: Sources, Methodology and Fact check move under "About the data" in the header
+
+- **Navigation.** The bar reads Overview, Ranking, Countries, Critical holdings, Hosting, About the data, Ask.
+  "About the data" is a disclosure button opening a short list of the three links (a list, not an ARIA menu, so Tab
+  and a screen reader's link list work as elsewhere in the bar). It closes on Escape, a click outside, focus leaving
+  it, and any route change, and is marked current while on one of its pages. On a phone the list aligns to the
+  button's right edge so it stays on screen.
+- **Tests.** A browser test opens it, closes it with Escape (focus returns to the button), follows Methodology, and
+  checks Ask is still last. The eight 1280 px visual baselines are regenerated: the header now fits one row at that
+  width (the language and theme buttons wrapped to a second row before), so every page starts about 56 px higher.
+
+### Fixed: Vite 8.2.4, past three launch-editor advisories that stopped the deploy
+
+- **Dependency.** `vite` 8.2.2 → 8.2.4 (pinned, same release line). GHSA-698v-4r3x-3vcv, GHSA-r825-w8mm-5pxw and
+  GHSA-587h-7wmj-h5pm (high) affect the dev server's open-in-editor helper, not the built site, but the deploy's
+  `npm audit --audit-level=high` gate failed on them and held back the three changes above.
+
+### Changed: each country card leads with the state's outline, filled to its verified share (#110)
+
+- **Countries.** Every card shows the state's own outline, filled from the bottom to the share of its holdings
+  with a verified source, beside the count in large type. The holdings bar is gone; tier 0, sourced facts,
+  disputed values and the PDF link are unchanged. The outline is decorative to screen readers: the count is the
+  reading.
+- **Map geometry.** Loaded through one shared module (`charts/euShapes.ts`), so the Ranking map and the cards
+  fetch it once.
+
+### Changed: a deeper navy and a muted gold across the site (#109)
+
+- **Palette only.** `design/tokens.json` takes the colours of the owner's reference design; content and layout are
+  untouched. Dark: page `#0C1628`, flat cards `#111E33`, links and meters in gold `#D9B35E`. Light: page `#F4F5F7`,
+  white cards, accents in slate navy `#1F3355`, gold kept for highlights. Generated `tokens.css`, `tokens.typ` and
+  `Colors.ts` follow; every WCAG pair the generator checks still passes.
+- **Tests.** The visual baselines (light mode) still match within their tolerance, so none changed.
+
+### Changed: the ranking explains a state under the map, and Ask moves to the end of the navigation
+
+- **Ranking.** A state's explanation ("What could move it") now sits directly under the map instead of below the
+  whole group list, so it is in view where the state was picked. On wide screens the map and the explanation stay
+  in view while the group list scrolls; on a phone, picking a state from the list scrolls its explanation into view.
+- **Navigation.** Ask is the last item, after Fact check.
+
 ## 2026-10-19
 
 ### Added: the reader's language layer, English only until a native speaker has read a translation (#122)
@@ -35,7 +237,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
   (table labels, country names, "Not yet sourced"); facts, categorical values included, explanations, quotes and
   sources stay English. `docs/i18n/STRINGS-reader.md` holds the reader's 107 strings and the generated labels-and-gaps
   table (`python3 model/i18n.py strings`).
-- **Admission.** `model/i18n.py admit` writes `model/i18n/` and `mobile/assets/i18n/catalogue.json` from the drafts,
+- **Admission.** `model/i18n.py admit` writes `model/i18n-reader/` and `mobile/assets/i18n/catalogue.json` from the drafts,
   one state column at a time, only with both parts cross-reviewed, every `fix` applied (a new verdict, `fixed`, whose
   cell must read exactly as suggested), and a `- Read by (<lang>): <role>, <date>` line. States that share a language
   merge, with a state's own wording kept as an overlay; each language file names who drafted, reviewed and read each

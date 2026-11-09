@@ -2,6 +2,7 @@
 
 - Languages: sl Slovenian (sl-SI)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Vprašaj |
 | nav.methodology | Methodology | Metodologija |
 | nav.factcheck | Fact check | Preverjanje dejstev |
+| nav.about | About the data | O podatkih |
 | country.kicker | Country report | Poročilo o državi |
 | country.contents | Contents | Kazalo |
 | country.sources | Sources | Viri |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Gostovanje z virom |
 | fact.check_this | Check this fact | Preveri to dejstvo |
 | fact.gloss | Machine translation: | Strojni prevod: |
-| fact.withheld | withheld until sourced | zadržano, dokler ni vira |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# vrednost zadržana, dokler ni vira} two {# vrednosti zadržani, dokler ni vira} few {# vrednosti zadržane, dokler ni vira} other {# vrednosti zadržanih, dokler ni vira}} |
 | fact.disputed | withheld as disputed | zadržano kot sporno |
 | status.loading | Loading the EU-27 dataset… | Nalaganje nabora podatkov EU-27… |
 | status.load_error | Could not load the data | Podatkov ni bilo mogoče naložiti |
 | notfound.title | Page not found | Stran ni najdena |
 | notfound.back | Back to the overview | Nazaj na pregled |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Strojno preverjeno, ne preverjeno s strani človeka. Te vire so našli in mehansko preverili avtomatizirani agenti; ugotovitev ni pregledal noben človek. Angleško besedilo neangleškega vira je strojni prevod ali strojni povzetek navedenega besedila. Vsako dejstvo obravnavajte kot napotilo k navedenemu viru, ne kot ugotovljeno. Popravki so dobrodošli prek predloge za prijave v repozitoriju. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Strojno preverjeno, človek tega ni potrdil. Te vire so našli in mehansko preverili avtomatizirani agenti; ugotovitev ni pregledal noben človek. Angleško besedilo neangleškega vira je strojni prevod ali strojni povzetek navedenega besedila. Vsako dejstvo obravnavajte kot napotilo k navedenemu viru, ne kot ugotovljeno. Popravki so dobrodošli prek predloge za prijave v repozitoriju. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Oznake na tej strani so strojni prevod. Noben človek, ki bere ta jezik, jih še ni pregledal. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,6 +76,7 @@
 | nav.ask | sl | ok | | |
 | nav.methodology | sl | ok | | |
 | nav.factcheck | sl | ok | | |
+| nav.about | sl | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | sl | ok | | |
 | country.contents | sl | ok | | |
 | country.sources | sl | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | sl | ok | | |
 | fact.check_this | sl | ok | | |
 | fact.gloss | sl | ok | | |
-| fact.withheld | sl | ok | | |
+| fact.withheld | sl | ok | one sg., two dual (zadržani), few pl. nom., other gen. pl.: all agree | |
 | fact.disputed | sl | ok | | |
 | status.loading | sl | ok | | |
 | status.load_error | sl | ok | | |
 | notfound.title | sl | ok | | |
 | notfound.back | sl | ok | | |
-| notice.disclaimer | sl | fix | 's strani' is a calque and repeating 'preverjeno' blurs checked vs verified | Strojno preverjeno, človek tega ni potrdil. Te vire so našli in mehansko preverili avtomatizirani agenti; ugotovitev ni pregledal noben človek. Angleško besedilo neangleškega vira je strojni prevod ali strojni povzetek navedenega besedila. Vsako dejstvo obravnavajte kot napotilo k navedenemu viru, ne kot ugotovljeno. Popravki so dobrodošli prek predloge za prijave v repozitoriju. |
+| notice.disclaimer | sl | ok | fix applied 2026-10-20, re-reviewed | |
+| notice.unread | sl | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

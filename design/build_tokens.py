@@ -85,7 +85,14 @@ def css(tokens: dict) -> str:
     lines += ["  " + l for l in dark_block]
     lines += ["    }", "  }", "", "  :root[data-theme='dark'] {"]
     lines += dark_block
-    lines += ["  }", "}", ""]
+    lines += ["  }", ""]
+    # Paper is white, so print takes the light theme whatever the screen shows; the site is dark by default
+    # (2026-10-20), and dark tokens on a white page would print pale text. Each selector matches the specificity
+    # of the screen rule it overrides and comes after it, so it wins without !important.
+    lines += ["  @media print {",
+              "    :root, :root[data-theme], :root:not([data-theme='light']) {"]
+    lines += [f"      --color-{kebab(k)}: {v};" for k, v in light.items()]
+    lines += ["    }", "  }", "}", ""]
     return "\n".join(lines)
 
 

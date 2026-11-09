@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react'
 
+import { useTx } from '@/i18n'
+
 /**
  * Small display pieces the EU27.CLOUD layouts share (#99). They draw numbers the page already has;
  * none of them computes or states a fact of its own.
@@ -17,6 +19,7 @@ export function Bar({
   label?: string
   faded?: boolean
 }) {
+  const { tx } = useTx()
   const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0
   return (
     <span className="flex min-w-36 items-center gap-2.5">
@@ -27,7 +30,7 @@ export function Bar({
         />
       </span>
       <span className="min-w-16 text-right text-sm text-[var(--color-fg-secondary)] tabular-nums">
-        {label ?? `${value} of ${max}`}
+        {label ?? tx('{value} of {max}', { value, max })}
       </span>
     </span>
   )

@@ -1,118 +1,118 @@
 {
- "edition": "1a970a50803fdee0232024d7127691b3f00e46692fdaa9d39968c4e3b371e4a0",
+ "edition": "0fadca6d6badbb62a16ea58467fa06acdc171598cedb014e2030b60f45944308",
  "generated": "2026-09-29",
  "parts": {
   "eu27.AT.json": {
-   "bytes": 304266,
-   "sha256": "255f04ec2e4e6f56eb11be4c31687dac343507072c52338ddbab66140f4f842c"
+   "bytes": 315869,
+   "sha256": "09a4b86bc23aeb019e7cd59b5056656ee029a19902fd574569c1cd1b95dcb4d5"
   },
   "eu27.BE.json": {
-   "bytes": 239516,
-   "sha256": "7191b65381ac283f9e70084ff078a7eaf8993f8d0f0850f25610b95124e35e5b"
+   "bytes": 250121,
+   "sha256": "72e3fc2c43d381d1dfe3b8e75c2f8265b928fc70b90b23d3784c4da04571bcb8"
   },
   "eu27.BG.json": {
-   "bytes": 265493,
-   "sha256": "ddc999e93397e23dfaa24622ea0101201df07875128db4bea901b2f7a59eda4a"
+   "bytes": 276648,
+   "sha256": "942873a03c5284c3eac94da4a7c8ef9a61cd00579ee1252d7ae061fa826dd389"
   },
   "eu27.CY.json": {
-   "bytes": 286423,
-   "sha256": "c1a6d33753575e359040544af4c659f359271ceba828243208bff330ef00adcc"
+   "bytes": 298334,
+   "sha256": "823a1dda8b764befa98e8a64d954655f66a8998942fd8a70a0ae48c5b498c7cd"
   },
   "eu27.CZ.json": {
-   "bytes": 328096,
-   "sha256": "dd55d745ab678feb0167ed5c7c33245cb592e1ac960469f61e60ca8e538a4657"
+   "bytes": 339748,
+   "sha256": "4f257d632d60cd23043c7b4443b4bde8ad9190edd09ef27c221a52ef400e1b73"
   },
   "eu27.DE.json": {
-   "bytes": 274833,
-   "sha256": "a490b1ae70aec31ba9d04f44d5b269e9b50c062529648d0dd946c683a084ba7d"
+   "bytes": 284838,
+   "sha256": "b6d042e1ba8fcdf21334b9f9ab0280e7b06dbf52b539986da4bb7a108a7fcf5f"
   },
   "eu27.DK.json": {
-   "bytes": 334888,
-   "sha256": "1b85ebe701cebe000204c00d718424b65df9ce15c8579de9aa0fbd503a42c77e"
+   "bytes": 344367,
+   "sha256": "3d345c31077b6b34447b3d82ef06956f3e74df974f09c251b982291f6414a716"
   },
   "eu27.EE.json": {
-   "bytes": 276614,
-   "sha256": "9b05a27535b320fbdf84fa5d44de9b127daadecee103aba3c59a7f9a493cb695"
+   "bytes": 287468,
+   "sha256": "f49c3215be6b08f9e143a58a7e9a5daa83a216cca4b94d3e96a6f033de91e75f"
   },
   "eu27.EL.json": {
-   "bytes": 350216,
-   "sha256": "5c5b31f8c7f8d8db21c991579c218c80df1b762ed2fac6524245b83426aa0df2"
+   "bytes": 360662,
+   "sha256": "845c0f76b81f3d54642c0fdfea827c371efe599bdd1aacc2a3f351075cf19e37"
   },
   "eu27.ES.json": {
-   "bytes": 288906,
-   "sha256": "b98d7f29787ad54293383f917c67b7910777476ae9ada4ef15ff6d25627b2894"
+   "bytes": 299920,
+   "sha256": "225a668330cf056bc39a88b32fc32379f39e7b88cd85dcee480e5b18003536d2"
   },
   "eu27.FI.json": {
-   "bytes": 271570,
-   "sha256": "daa396cbfb0fa1c4c525f3e05e1b08e8d259ec4585d01c588fc50c68feee6bfb"
+   "bytes": 282543,
+   "sha256": "2d2e1450f8ea3d8479664206035c410ac25c3815beb51ae2879324b3d67779e2"
   },
   "eu27.FR.json": {
-   "bytes": 303670,
-   "sha256": "10d731069c485d19da96103c99c6ee2c497906637a46d81a4c11afe1a167fe4b"
+   "bytes": 314467,
+   "sha256": "cca4c86ceb0563220df55ff5a8eeca1ceb300c9aba67c753529610eaef517d18"
   },
   "eu27.HR.json": {
-   "bytes": 293494,
-   "sha256": "e5e22c76443f1b5927d7455cc2ed0840f9a8f6c0ed261521043fee71ab363b79"
+   "bytes": 303514,
+   "sha256": "d46e4179f28ed1e6fbcb64b514b1b342b9c56c14e8daa4e6c6dacb7624ca6ab9"
   },
   "eu27.HU.json": {
-   "bytes": 375368,
-   "sha256": "e343ba284bfce95a90e96abf92eba1d5b4b541be25c6454ef39a4171946a10f3"
+   "bytes": 388449,
+   "sha256": "c193be1ca173b53ee3336c786acd19b2d4189fc91c53496b8cc7d97831be23d0"
   },
   "eu27.IE.json": {
-   "bytes": 277450,
-   "sha256": "82fd0e01eaa4c6ad704f0c95c85bf34be6fc07bb73860f72a11cd38f8ff47f19"
+   "bytes": 290794,
+   "sha256": "dcf61d6786f539fa5701867381c9437b0ddc4ba869e952eec35a2d6da2ea3e0b"
   },
   "eu27.IT.json": {
-   "bytes": 288238,
-   "sha256": "e2a64d7921c9986992284b51477c089a2bbc424d8098e0fa32632bc46f4536f1"
+   "bytes": 298541,
+   "sha256": "af0a64ab28d6cba65bd95b5db2d795f60f961e07cdaa5a86848b636db5a90080"
   },
   "eu27.LT.json": {
-   "bytes": 157850,
-   "sha256": "c0e9de9102f1214667000f2ead150f055ea50e4db17ee8f40d8884bde3dad07b"
+   "bytes": 170578,
+   "sha256": "fdc6b4b49d8b81a09c7b9bf76792635a584b62bf6f2c0c11bc40127a562359d9"
   },
   "eu27.LU.json": {
-   "bytes": 179855,
-   "sha256": "225bcd865dd0728834c73ade6b169cdf5824b4d0c08d6fb636a2286bd9b71eae"
+   "bytes": 191854,
+   "sha256": "9c74ee333a702eceec2927f287bad56d3e800c9db852b8bf7464bb06596c9a96"
   },
   "eu27.LV.json": {
-   "bytes": 281118,
-   "sha256": "cd593179fc7197caf8399d037f45c5c72d64d6813d08c19c8f33853bbcc847ec"
+   "bytes": 290798,
+   "sha256": "78ddaac3d859e7e292949a0bc1c03c1e4478c011b1e372c22e6217a98df37682"
   },
   "eu27.MT.json": {
-   "bytes": 174068,
-   "sha256": "c315153232b507f105fa4ea4c03ae8aefb86172fe404b9aa98ed8d1faceb1c39"
+   "bytes": 185835,
+   "sha256": "b73277d67e38adeb2157ca8adc73a6187225a7e293df823a9f2c908bf12a1a64"
   },
   "eu27.NL.json": {
-   "bytes": 291458,
-   "sha256": "4aa2cef03677071f3c86b7fd23a1cd5dd809d0b4eab94d4bfa25b078261adf6e"
+   "bytes": 301914,
+   "sha256": "d8710cc4ed15b028a97a3741338bc9baad8a49c0ae7dd33f34318803193c6d43"
   },
   "eu27.PL.json": {
-   "bytes": 253590,
-   "sha256": "ff7146156d52bae1b808f372d20b46c5834b91618221f36e80d19d93f43c8ede"
+   "bytes": 263668,
+   "sha256": "627c5bfdc172845aadff867730835b27884112273d11d5bc47a04da5b260bbb2"
   },
   "eu27.PT.json": {
-   "bytes": 267018,
-   "sha256": "19a2b52973e52ed210dededb64f9789cdb03d742eebe10e261ecdd13ca769638"
+   "bytes": 281445,
+   "sha256": "bd32f17058028636d5613897d92e439b2ed978df9d306405415a77aa2ccdff9f"
   },
   "eu27.RO.json": {
-   "bytes": 178441,
-   "sha256": "68c5a5d2e3621e0b7c8efdc3bb8a780cbd397f809cb50f933d91208e7d8c9f44"
+   "bytes": 190336,
+   "sha256": "ed14780a58b9b7587ee65ff24616a14aa5b33429bb7ed94a3a09544ad551e1a5"
   },
   "eu27.SE.json": {
-   "bytes": 249593,
-   "sha256": "c97b2b13647a83a2fc4424e6ec05dbf69f74c8233ea8e1f1b9e59538a1af0856"
+   "bytes": 261873,
+   "sha256": "165b6b695e862a06b9e109c655233dc23c3b5e180151ec1ec8850f95b7bf9ba1"
   },
   "eu27.SI.json": {
-   "bytes": 349423,
-   "sha256": "b8098bf17b3da8b9a86f9afcdc687a5923d253076888018518e1ce3d6f98fea6"
+   "bytes": 359567,
+   "sha256": "4787a4e5cbdac64b824daff6c96570e80dfec22f42d660fbe3c97187f4aff09f"
   },
   "eu27.SK.json": {
-   "bytes": 248647,
-   "sha256": "203f2eeb9d45e641e6333d7269c72f32cd36d1101de0ffbc312d80620a84e35c"
+   "bytes": 258917,
+   "sha256": "5eec33a2cf6215a38e21125d46dd5a512f54789df66c369400bb2edb8eac4dcc"
   },
   "eu27.core.json": {
-   "bytes": 681541,
-   "sha256": "b71e1a08fa1f9222c90d6030954424fb4bdf15a9c1a6d4f7a4a6f873de035ab0"
+   "bytes": 700619,
+   "sha256": "9ecbca2d85c3e85d76cf3a9d4f556a9abf2a1c27e71b5c7f2b8d174c0caf5691"
   }
  },
  "schema_version": 2

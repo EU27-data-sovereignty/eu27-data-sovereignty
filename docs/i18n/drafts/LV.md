@@ -2,6 +2,7 @@
 
 - Languages: lv Latvian (lv-LV)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,12 +20,13 @@
 | nav.ask | Ask | Jautāt |
 | nav.methodology | Methodology | Metodoloģija |
 | nav.factcheck | Fact check | Faktu pārbaude |
+| nav.about | About the data | Par datiem |
 | country.kicker | Country report | Valsts ziņojums |
 | country.contents | Contents | Saturs |
 | country.sources | Sources | Avoti |
 | section.fundamentals | Fundamentals | Pamatdati |
 | section.holdings | Critical data holdings, by priority | Kritiskie datu resursi pēc prioritātes |
-| section.exposure | Foreign-dependency exposure | Atkarība no ārvalstīm |
+| section.exposure | Foreign-dependency exposure | Pakļautība atkarībai no ārvalstīm |
 | section.posture | Legal and institutional posture | Tiesiskais un institucionālais stāvoklis |
 | section.sizing | Capacity | Kapacitāte |
 | section.gaps | Research still open | Vēl atvērtie pētījumu jautājumi |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Mitināšana ar avotiem |
 | fact.check_this | Check this fact | Pārbaudīt šo faktu |
 | fact.gloss | Machine translation: | Mašīntulkojums: |
-| fact.withheld | withheld until sourced | aizturēts, kamēr nav avota |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, zero {# vērtību aizturētas, kamēr nav avota} one {# vērtība aizturēta, kamēr nav avota} other {# vērtības aizturētas, kamēr nav avota}} |
 | fact.disputed | withheld as disputed | aizturēts kā apstrīdēts |
 | status.loading | Loading the EU-27 dataset… | Ielādē EU-27 datu kopu… |
 | status.load_error | Could not load the data | Neizdevās ielādēt datus |
 | notfound.title | Page not found | Lapa nav atrasta |
 | notfound.back | Back to the overview | Atpakaļ uz pārskatu |
 | notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Mašīnpārbaudīts, cilvēks nav verificējis. Šos avotus atrada un mehāniski pārbaudīja automatizēti aģenti; neviens cilvēks konstatējumus nav pārskatījis. Avota, kas nav angļu valodā, formulējums angļu valodā ir citētā teksta mašīntulkojums vai mašīnkopsavilkums. Uztveriet katru faktu kā norādi uz citēto avotu, nevis kā pierādītu. Labojumi ir gaidīti, izmantojot repozitorija problēmu pieteikuma veidni. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Šīs lapas uzraksti ir mašīntulkojums. Neviens cilvēks, kas lasa šo valodu, tos vēl nav pārbaudījis. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,12 +76,13 @@
 | nav.ask | lv | ok | | |
 | nav.methodology | lv | ok | | |
 | nav.factcheck | lv | ok | | |
+| nav.about | lv | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | lv | ok | | |
 | country.contents | lv | ok | | |
 | country.sources | lv | ok | | |
 | section.fundamentals | lv | ok | | |
 | section.holdings | lv | ok | | |
-| section.exposure | lv | fix | drops 'exposure' | Pakļautība atkarībai no ārvalstīm |
+| section.exposure | lv | ok | fix applied 2026-10-20, re-reviewed | |
 | section.posture | lv | ok | | |
 | section.sizing | lv | ok | | |
 | section.gaps | lv | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | lv | ok | | |
 | fact.check_this | lv | ok | | |
 | fact.gloss | lv | ok | | |
-| fact.withheld | lv | ok | | |
+| fact.withheld | lv | ok | zero branch (0, 10-20, 30…) uses the genitive plural, as CLDR's own lv unit patterns do ('{0} dienu'); the plural participle agrees ad sensum with a quantitative genitive subject, as in 'ieradušies simts cilvēku'. one and other agree | |
 | fact.disputed | lv | ok | | |
 | status.loading | lv | ok | | |
 | status.load_error | lv | ok | | |
 | notfound.title | lv | ok | | |
 | notfound.back | lv | ok | | |
-| notice.disclaimer | lv | ok | | |
+| notice.disclaimer | lv | ok | re-read 2026-10-20: 'machine-checked' is checked, not verified; nothing weakened | |
+| notice.unread | lv | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

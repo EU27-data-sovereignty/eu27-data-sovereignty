@@ -2,6 +2,7 @@
 
 - Languages: sk Slovak (sk-SK)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-20 round 3: applied 1 fix
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Opýtať sa |
 | nav.methodology | Methodology | Metodika |
 | nav.factcheck | Fact check | Overenie faktov |
+| nav.about | About the data | O údajoch |
 | country.kicker | Country report | Správa o krajine |
 | country.contents | Contents | Obsah |
 | country.sources | Sources | Zdroje |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Hosting so zdrojom |
 | fact.check_this | Check this fact | Overiť tento fakt |
 | fact.gloss | Machine translation: | Strojový preklad: |
-| fact.withheld | withheld until sourced | zadržané, kým nemá zdroj |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# hodnota zadržaná, kým nemá zdroj} few {# hodnoty zadržané, kým nemajú zdroj} many {# hodnoty zadržanej, kým nemá zdroj} other {# hodnôt zadržaných, kým nemajú zdroj}} |
 | fact.disputed | withheld as disputed | zadržané ako sporné |
 | status.loading | Loading the EU-27 dataset… | Načítava sa súbor údajov EU-27… |
 | status.load_error | Could not load the data | Údaje sa nepodarilo načítať |
 | notfound.title | Page not found | Stránka sa nenašla |
 | notfound.back | Back to the overview | Späť na prehľad |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Strojovo overené, neoverené človekom. Tieto zdroje našli a mechanicky overili automatizované agenty; žiadna osoba zistenia neposúdila. Anglické znenie neanglického zdroja je strojový preklad alebo strojové zhrnutie citovaného textu. Každý fakt považujte za stopu k citovanému zdroju, nie za preukázaný. Opravy sú vítané prostredníctvom šablóny na hlásenie problémov v repozitári. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Strojovo skontrolované, neoverené človekom. Tieto zdroje našli a mechanicky skontrolovali automatizovaní agenti; žiadna osoba zistenia neposúdila. Anglické znenie neanglického zdroja je strojový preklad alebo strojové zhrnutie citovaného textu. Každý fakt považujte za stopu k citovanému zdroju, nie za preukázaný. Opravy sú vítané prostredníctvom šablóny na hlásenie problémov v repozitári. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Popisy na tejto stránke sú strojový preklad. Žiadna osoba, ktorá číta tento jazyk, ich zatiaľ neskontrolovala. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer); round 4: 3 fixes re-reviewed
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,6 +76,7 @@
 | nav.ask | sk | ok | | |
 | nav.methodology | sk | ok | | |
 | nav.factcheck | sk | ok | | |
+| nav.about | sk | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | sk | ok | | |
 | country.contents | sk | ok | | |
 | country.sources | sk | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | sk | ok | | |
 | fact.check_this | sk | ok | | |
 | fact.gloss | sk | ok | | |
-| fact.withheld | sk | ok | | |
+| fact.withheld | sk | ok | one nom. sg., few nom. pl., many gen. sg., other gen. pl.: all agree | |
 | fact.disputed | sk | ok | | |
 | status.loading | sk | ok | | |
 | status.load_error | sk | ok | | |
 | notfound.title | sk | ok | | |
 | notfound.back | sk | ok | | |
-| notice.disclaimer | sk | fix | 'overené' upgrades machine-checked to verified | Strojovo skontrolované, neoverené človekom. Tieto zdroje našli a mechanicky skontrolovali automatizované agenty; žiadna osoba zistenia neposúdila. Anglické znenie neanglického zdroja je strojový preklad alebo strojové zhrnutie citovaného textu. Každý fakt považujte za stopu k citovanému zdroju, nie za preukázaný. Opravy sú vítané prostredníctvom šablóny na hlásenie problémov v repozitári. |
+| notice.disclaimer | sk | ok | fix applied 2026-10-20 round 3, re-reviewed | |
+| notice.unread | sk | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

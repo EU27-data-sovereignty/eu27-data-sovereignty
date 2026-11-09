@@ -2,6 +2,7 @@
 
 - Languages: mt Maltese (mt-MT)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 1 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern); 2026-10-20 round 3: applied 1 fix
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,6 +20,7 @@
 | nav.ask | Ask | Staqsi |
 | nav.methodology | Methodology | Metodoloġija |
 | nav.factcheck | Fact check | Verifika tal-fatti |
+| nav.about | About the data | Dwar id-data |
 | country.kicker | Country report | Rapport tal-pajjiż |
 | country.contents | Contents | Werrej |
 | country.sources | Sources | Sorsi |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Hosting b'sors |
 | fact.check_this | Check this fact | Ivverifika dan il-fatt |
 | fact.gloss | Machine translation: | Traduzzjoni awtomatika: |
-| fact.withheld | withheld until sourced | miżmum sakemm ikollu sors |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# valur miżmum sakemm jinstab sors} two {# valuri miżmuma sakemm jinstab sors} few {# valuri miżmuma sakemm jinstab sors} many {# valur miżmum sakemm jinstab sors} other {# valur miżmum sakemm jinstab sors}} |
 | fact.disputed | withheld as disputed | miżmum bħala kkontestat |
 | status.loading | Loading the EU-27 dataset… | Qed jitgħabba s-sett tad-data tal-EU-27… |
 | status.load_error | Could not load the data | Ma setgħetx titgħabba d-data |
 | notfound.title | Page not found | Il-paġna ma nstabitx |
 | notfound.back | Back to the overview | Lura għall-ħarsa ġenerali |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Ivverifikat b'mod awtomatiku, mhux ivverifikat minn bniedem. Aġenti awtomatizzati sabu dawn is-sorsi u vverifikawhom mekkanikament; l-ebda persuna ma rrevediet is-sejbiet. Il-kliem bl-Ingliż ta' sors mhux bl-Ingliż huwa traduzzjoni awtomatika jew sommarju awtomatiku tat-test ikkwotat. Ittratta kull fatt bħala indikazzjoni lejn is-sors ikkwotat tiegħu, mhux bħala stabbilit. Il-korrezzjonijiet huma milqugħa permezz tal-mudell tal-issues tar-repożitorju. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Ikkontrollat b'mod awtomatiku, mhux ivverifikat minn bniedem. Aġenti awtomatizzati sabu dawn is-sorsi u kkontrollawhom mekkanikament; l-ebda persuna ma rrevediet is-sejbiet. Il-kliem bl-Ingliż ta' sors mhux bl-Ingliż huwa traduzzjoni awtomatika jew sommarju awtomatiku tat-test ikkwotat. Ittratta kull fatt bħala indikazzjoni lejn is-sors ikkwotat tiegħu, mhux bħala stabbilit. Il-korrezzjonijiet huma milqugħa permezz tal-mudell tal-issues tar-repożitorju. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | It-tikketti f'din il-paġna huma traduzzjoni awtomatika. L-ebda persuna li taqra din il-lingwa għadha ma kkontrollathom. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 44 ok, 1 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer); round 4: 3 fixes re-reviewed
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,6 +76,7 @@
 | nav.ask | mt | ok | | |
 | nav.methodology | mt | ok | | |
 | nav.factcheck | mt | ok | | |
+| nav.about | mt | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | mt | ok | | |
 | country.contents | mt | ok | | |
 | country.sources | mt | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | mt | ok | | |
 | fact.check_this | mt | ok | | |
 | fact.gloss | mt | ok | | |
-| fact.withheld | mt | ok | | |
+| fact.withheld | mt | ok | fix applied 2026-10-20 round 3, re-reviewed | |
 | fact.disputed | mt | ok | | |
 | status.loading | mt | ok | | |
 | status.load_error | mt | ok | | |
 | notfound.title | mt | ok | | |
 | notfound.back | mt | ok | | |
-| notice.disclaimer | mt | fix | 'Ivverifikat' upgrades machine-checked to verified | Ikkontrollat b'mod awtomatiku, mhux ivverifikat minn bniedem. Aġenti awtomatizzati sabu dawn is-sorsi u kkontrollawhom mekkanikament; l-ebda persuna ma rrevediet is-sejbiet. Il-kliem bl-Ingliż ta' sors mhux bl-Ingliż huwa traduzzjoni awtomatika jew sommarju awtomatiku tat-test ikkwotat. Ittratta kull fatt bħala indikazzjoni lejn is-sors ikkwotat tiegħu, mhux bħala stabbilit. Il-korrezzjonijiet huma milqugħa permezz tal-mudell tal-issues tar-repożitorju. |
+| notice.disclaimer | mt | ok | fix applied 2026-10-20, re-reviewed | |
+| notice.unread | mt | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

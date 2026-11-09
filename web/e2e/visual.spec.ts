@@ -22,12 +22,16 @@ test.beforeEach(async ({ page }) => {
 for (const scheme of ['light', 'dark'] as const) {
   test.describe(`${scheme} mode`, () => {
     test.use({ colorScheme: scheme })
+    // Dark is the default whatever the OS says; light is a reader's stored choice.
+    test.beforeEach(async ({ page }) => {
+      await page.addInitScript(m => localStorage.setItem('eu27-theme', m), scheme)
+    })
     for (const route of PAGES) {
       test(`${route} at 1280 px`, async ({ page }) => {
         await page.setViewportSize({ width: 1280, height: 900 })
         await page.goto(route)
         await expect(page.locator('main')).toBeVisible()
-        await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
+        await expect(page.locator('main#main')).toBeVisible()
         await page.evaluate(() => document.fonts.ready)
         await expect(page).toHaveScreenshot({ maxDiffPixelRatio: 0.01 })
       })
@@ -41,7 +45,7 @@ for (const route of ['/', '/de']) {
     await page.goto(route)
     await expect(page.locator('main')).toBeVisible()
     // The loading message renders inside <main> too; a screenshot taken then showed only it (2026-10-06).
-    await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
+    await expect(page.locator('main#main')).toBeVisible()
     await page.evaluate(() => document.fonts.ready)
     await expect(page).toHaveScreenshot({ maxDiffPixelRatio: 0.01 })
   })

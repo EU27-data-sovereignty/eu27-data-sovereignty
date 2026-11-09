@@ -1,5 +1,6 @@
 import { reviewLink } from '@/data/contribute'
 import type { Bundle } from '@/data/types'
+import { useT, useTx } from '@/i18n'
 
 /** A checklist line's kind, by its own wording: the source tier, a check passed, or a shortfall. */
 function checkKind(item: string): 'tier' | 'pass' | 'short' | 'plain' {
@@ -66,18 +67,20 @@ export function SourceList({
   /** Sources a filter on the page has hidden; they stay in the list, so numbering never shifts. */
   hidden?: Set<string>
 }) {
+  const t = useT()
+  const { tx } = useTx()
   if (numbers.size === 0) return null
   const ordered = [...numbers.entries()].sort((a, b) => a[1] - b[1])
   return (
     <section id="sources" className="mt-12 border-t border-[var(--color-border)] pt-6">
-      <h2 className="mb-2 font-display text-2xl font-bold tracking-tight">Sources</h2>
+      <h2 className="mb-2 font-display text-2xl font-bold tracking-tight">{tx('Sources')}</h2>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
-        Each source is listed once. The hash identifies the exact document that was fetched; the
-        quote under each claim is text found in it by machine, in its original language, then a
-        machine translation where the source is not in English, then the checks the claim passed.
+        {tx(
+          'Each source is listed once. The hash identifies the exact document that was fetched; the quote under each claim is text found in it by machine, in its original language, then a machine translation where the source is not in English, then the checks the claim passed.',
+        )}
       </p>
       <p className="mb-4 max-w-3xl text-xs text-[var(--color-fg-muted)]">
-        Evidence grades. {bundle.notice.grade_rule}
+        {tx('Evidence grades.')} {bundle.notice.grade_rule}
       </p>
       <ol className="space-y-3 text-sm">
         {ordered.map(([sid, n]) => {
@@ -99,14 +102,14 @@ export function SourceList({
                   <div className="mt-0.5 text-xs text-[var(--color-fg-muted)]">
                     {[s.publisher, s.published, host(s.url)].filter(Boolean).join(' · ')} ·{' '}
                     <a className="underline" href={s.url} rel="noreferrer">
-                      Open source
+                      {tx('Open source')}
                     </a>
                     {s.archived_url ? (
                       <>
                         {' '}
                         ·{' '}
                         <a className="underline" href={s.archived_url} rel="noreferrer">
-                          Archived copy
+                          {tx('Archived copy')}
                         </a>
                       </>
                     ) : null}
@@ -137,12 +140,15 @@ export function SourceList({
                           </blockquote>
                         ) : (
                           <p className="text-[var(--color-fg-secondary)]">
-                            Value {c.value_as_found} at {c.locator}
+                            {tx('Value {value} at {locator}', {
+                              value: c.value_as_found,
+                              locator: c.locator,
+                            })}
                           </p>
                         )}
                         {c.gloss ? (
                           <p className="text-[var(--color-fg-secondary)]">
-                            Machine translation: <q>{c.gloss}</q>
+                            {t('fact.gloss')} <q>{c.gloss}</q>
                           </p>
                         ) : null}
                         <div className="flex flex-wrap items-center gap-1.5 text-xs">
@@ -164,13 +170,13 @@ export function SourceList({
                             </span>
                           ))}
                           <span className="text-[var(--color-fg-muted)]">
-                            retrieved {c.retrieved} ·{' '}
+                            {tx('retrieved {date}', { date: c.retrieved })} ·{' '}
                             <a
                               className="underline"
                               href={reviewLink(bundle, claim)}
                               rel="noreferrer"
                             >
-                              Check this fact
+                              {t('fact.check_this')}
                             </a>
                           </span>
                         </div>

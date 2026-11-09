@@ -2,6 +2,7 @@
 
 - Languages: pl Polish (pl-PL)
 - Drafted by: agent B, claude-fable-5-1, 2026-10-12
+- Revised by: agent B, claude-fable-5-1, 2026-10-20 (applied the review's 2 fixes; added nav.about and notice.unread; fact.withheld as an ICU plural pattern)
 - Status: draft, machine-translated, not rendered anywhere, reviewed by a different agent
 
 ## Strings
@@ -19,12 +20,13 @@
 | nav.ask | Ask | Zapytaj |
 | nav.methodology | Methodology | Metodologia |
 | nav.factcheck | Fact check | Weryfikacja faktów |
+| nav.about | About the data | O danych |
 | country.kicker | Country report | Raport krajowy |
 | country.contents | Contents | Spis treści |
 | country.sources | Sources | Źródła |
 | section.fundamentals | Fundamentals | Dane podstawowe |
 | section.holdings | Critical data holdings, by priority | Krytyczne zasoby danych według priorytetu |
-| section.exposure | Foreign-dependency exposure | Ekspozycja na zależność od podmiotów zagranicznych |
+| section.exposure | Foreign-dependency exposure | Ekspozycja na zależność od zagranicy |
 | section.posture | Legal and institutional posture | Stan prawny i instytucjonalny |
 | section.sizing | Capacity | Pojemność |
 | section.gaps | Research still open | Badania wciąż otwarte |
@@ -46,18 +48,20 @@
 | col.hosting_sourced | Hosting sourced | Hosting ze źródłem |
 | fact.check_this | Check this fact | Sprawdź ten fakt |
 | fact.gloss | Machine translation: | Tłumaczenie maszynowe: |
-| fact.withheld | withheld until sourced | wstrzymane do czasu podania źródła |
+| fact.withheld | {count, plural, one {# value withheld until sourced} other {# values withheld until sourced}} | {count, plural, one {# wartość wstrzymana do czasu podania źródła} few {# wartości wstrzymane do czasu podania źródła} many {# wartości wstrzymanych do czasu podania źródła} other {# wartości wstrzymanej do czasu podania źródła}} |
 | fact.disputed | withheld as disputed | wstrzymane jako sporne |
 | status.loading | Loading the EU-27 dataset… | Ładowanie zbioru danych EU-27… |
 | status.load_error | Could not load the data | Nie udało się wczytać danych |
 | notfound.title | Page not found | Nie znaleziono strony |
 | notfound.back | Back to the overview | Powrót do przeglądu |
-| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Sprawdzone maszynowo, niezweryfikowane przez człowieka. Zautomatyzowane agenty znalazły te źródła i sprawdziły je mechanicznie; żadna osoba nie przejrzała ustaleń. Angielskie brzmienie źródła w innym języku jest tłumaczeniem maszynowym lub maszynowym streszczeniem cytowanego tekstu. Traktuj każdy fakt jako trop prowadzący do cytowanego źródła, a nie jako ustalony. Poprawki są mile widziane za pośrednictwem szablonu zgłoszeń repozytorium. |
+| notice.disclaimer | Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. | Sprawdzone maszynowo, niezweryfikowane przez człowieka. Zautomatyzowane agenty znalazły te źródła i sprawdziły je mechanicznie; żadna osoba nie przejrzała ustaleń. Angielskie brzmienie źródła w innym języku jest tłumaczeniem maszynowym lub maszynowym streszczeniem cytowanego tekstu. Każdy fakt należy traktować jako trop prowadzący do cytowanego źródła, a nie jako ustalony. Poprawki są mile widziane za pośrednictwem szablonu zgłoszeń repozytorium. |
+| notice.unread | The labels on this page are a machine translation. No person who reads this language has checked them yet. | Etykiety na tej stronie są tłumaczeniem maszynowym. Żadna osoba czytająca ten język jeszcze ich nie sprawdziła. |
 
 ## Review
 
 - Reviewed by: agent A, claude-opus-5-5, 2026-10-12
-- Verdict: 43 ok, 2 fix
+- Re-reviewed by: agent A, claude-opus-5-5, 2026-10-20 (applied fixes, fact.withheld, nav.about, notice.unread, every disclaimer)
+- Verdict: 47 ok, 0 fix
 
 | key | lang | verdict | note | suggested |
 |---|---|---|---|---|
@@ -72,12 +76,13 @@
 | nav.ask | pl | ok | | |
 | nav.methodology | pl | ok | | |
 | nav.factcheck | pl | ok | | |
+| nav.about | pl | ok | idiomatic menu label for 'About the data' | |
 | country.kicker | pl | ok | | |
 | country.contents | pl | ok | | |
 | country.sources | pl | ok | | |
 | section.fundamentals | pl | ok | | |
 | section.holdings | pl | ok | | |
-| section.exposure | pl | fix | adds 'entities', not in the source | Ekspozycja na zależność od zagranicy |
+| section.exposure | pl | ok | fix applied 2026-10-20, re-reviewed | |
 | section.posture | pl | ok | | |
 | section.sizing | pl | ok | | |
 | section.gaps | pl | ok | | |
@@ -99,10 +104,11 @@
 | col.hosting_sourced | pl | ok | | |
 | fact.check_this | pl | ok | | |
 | fact.gloss | pl | ok | | |
-| fact.withheld | pl | ok | | |
+| fact.withheld | pl | ok | one nom. sg., few nom. pl., many gen. pl., other (fractions) gen. sg.: all agree | |
 | fact.disputed | pl | ok | | |
 | status.loading | pl | ok | | |
 | status.load_error | pl | ok | | |
 | notfound.title | pl | ok | | |
 | notfound.back | pl | ok | | |
-| notice.disclaimer | pl | fix | 'Traktuj' is too informal for an official notice | Sprawdzone maszynowo, niezweryfikowane przez człowieka. Zautomatyzowane agenty znalazły te źródła i sprawdziły je mechanicznie; żadna osoba nie przejrzała ustaleń. Angielskie brzmienie źródła w innym języku jest tłumaczeniem maszynowym lub maszynowym streszczeniem cytowanego tekstu. Każdy fakt należy traktować jako trop prowadzący do cytowanego źródła, a nie jako ustalony. Poprawki są mile widziane za pośrednictwem szablonu zgłoszeń repozytorium. |
+| notice.disclaimer | pl | ok | fix applied 2026-10-20, re-reviewed | |
+| notice.unread | pl | ok | says plainly it is a machine translation and that no reader of the language has checked it; no verified/approved word | |

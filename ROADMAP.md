@@ -239,8 +239,11 @@ sourced count or size. Each constant stays a declared `assumption:` claim.
 27 language drafts of the app's 45 chrome strings exist (`docs/i18n/drafts/`), machine-translated by two agents on
 two models, each reviewing the other's every cell (1,398 `ok`, 42 `fix`); nothing renders them and no person has
 read them. The plan, `docs/plans/localisation-plan.md`, sets the URL scheme `/<iso>/<lang>`, the standards (BCP 47,
-Unicode NFC, ICU MessageFormat, `Intl`), the admission step and the tests. Stage 1 applies the 42 fixes and gets a
-native reading; the decision entry is written then, not before. Facts are never translated.
+Unicode NFC, ICU MessageFormat, `Intl`), the admission step and the tests. The plumbing is in (#111, 2026-10-20):
+`/<iso>/<lang>`, `model/i18n_admit.py`, lookups by key and the language switch. Since #112 (2026-10-20) a language
+is served once its two-model review is clean, with the 42 fixes applied and re-reviewed, and a page says when no
+person who reads its language has checked it; those readings are gathered on the live site before it is promoted.
+Facts are never translated.
 
 ### Then — national AI as reviewed indicators (#103)
 `NATIONAL-AI-STRATEGIES.md` explores, per state, the route to a citizen-grade foundation model; its snapshots are

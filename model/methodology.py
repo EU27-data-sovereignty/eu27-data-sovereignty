@@ -39,6 +39,12 @@ def _rows(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(fh))
 
 
+def _pm(pattern: str, **args: object) -> dict:
+    """A paragraph whose English is a pattern with this build's counts in it (#113): a page in another language
+    translates the pattern once instead of a new sentence on every build."""
+    return {"type": "p", "spans": [document.msg("method", pattern, **args)]}
+
+
 def _p(text: str) -> dict:
     return {"type": "p", "spans": [method(text)]}
 
@@ -82,10 +88,11 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
         {"id": "m-status", "title": "What this is, and what it is not", "blocks": [
             {"type": "callout", "tone": "notice", "spans": [method(evidence.disclaimer(
                 sum(1 for s in spans if s.get("g") == evidence.VERIFIED), roles["fact"]))]},
-            _p(f"This appendix is generated from the code and data that produced this document. Every rule "
-               "below is the rule the build runs, and every number is counted from the files it reads. "
-               f"In this build: {roles['fact']} facts are printed, {roles['gap']} values are withheld as "
-               f"gaps, and {roles['disputed']} are withheld as disputed."),
+            _pm("This appendix is generated from the code and data that produced this document. Every rule "
+                "below is the rule the build runs, and every number is counted from the files it reads. "
+                "In this build: {facts} facts are printed, {gaps} values are withheld as "
+                "gaps, and {disputed} are withheld as disputed.",
+                facts=roles["fact"], gaps=roles["gap"], disputed=roles["disputed"]),
         ]},
         {"id": "m-sourcing", "title": "How sources were found", "blocks": [
             _p("Research agents, one per member state, looked for each critical holding and each "
@@ -95,11 +102,11 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
             _table(["Quote check of the first research runs", "Claims"],
                    [[k, verification[k]] for k in ("exact", "loose", "not_found", "fetch_failed") if verification[k]],
                    ["left", "right"]),
-            _p("A vetting run then re-examined every printed fact, and after it the gaps. It looked for a "
-               "better source, for newer information and for any source that disagrees. Each of its "
-               "findings was judged by a blind reviewer, shown the quote and URL but never the proposed "
-               f"value. Runs: {', '.join(runs) or 'none yet'}. Reviewer model: {', '.join(models) or 'n/a'}, "
-               "the same model as the researcher."),
+            _pm("A vetting run then re-examined every printed fact, and after it the gaps. It looked for a "
+                "better source, for newer information and for any source that disagrees. Each of its "
+                "findings was judged by a blind reviewer, shown the quote and URL but never the proposed "
+                "value. Runs: {runs}. Reviewer model: {models}, the same model as the researcher.",
+                runs=", ".join(runs) or "none yet", models=", ".join(models) or "n/a"),
             *([_table(["Vetting outcome", "Findings or items"], sorted([[k, n] for k, n in vet_results.items()]),
                       ["left", "right"])] if vet_results else []),
             _p("Every cited source is re-fetched periodically and each quote looked for again. A fact whose "
@@ -154,7 +161,8 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
                "printed fact has a current verdict of supported. The rule, the steps and each fact's verdict "
                "are in the fact-check appendix."),
             _table(["Fact written by", "Checked by"], factcheck.RULE),
-            _p(f"In this build, {checked['passing']} of {checked['printed']} printed facts pass the fact check."),
+            _pm("In this build, {passing} of {printed} printed facts pass the fact check.",
+                passing=checked["passing"], printed=checked["printed"]),
         ]},
         {"id": "m-people", "title": "Citizens and human review", "blocks": [
             _p("Anyone in any member state may submit a source or check a printed fact, through public "

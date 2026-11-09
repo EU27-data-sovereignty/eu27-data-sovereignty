@@ -94,7 +94,7 @@ regen_data() {
     python3 model/gaps.py > /dev/null                 # what is missing, and how hard it was looked for
     python3 model/factcheck.py audit > /dev/null      # reads the bundle just written (#87)
     python3 model/i18n.py strings > /dev/null         # the bundle's labels and gaps, for the drafts (#122)
-    python3 model/i18n.py admit > /dev/null           # model/i18n/ and the reader's catalogue
+    python3 model/i18n.py admit > /dev/null           # model/i18n-reader/ and the reader's catalogue (model/i18n/ is the site's)
     print_success "Country files, briefs, bundle, split edition, /ask corpus, docs/evidence.md, docs/gaps.md, docs/fact-check-audit.md and the interface catalogue regenerated"
 }
 

@@ -173,16 +173,21 @@ Open
 - [ ] Mobile reader: add `Gate / Mobile reader (./test.sh --only mobile)` to `main`'s ruleset after two weeks of timings (#118)
 - [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`
       span in the content model, a changelog entry, `/factcheck` before the push
-- [ ] Localisation stage 1 (`docs/plans/localisation-plan.md`): apply the 42 `fix` cells, a native reading per
-      language, then the decision entry the plan reserves (for the reader: #122, 2026-10-19; the three items below)
+- [x] Localisation stage 1 (`docs/plans/localisation-plan.md`): the 42 `fix` cells were applied and re-reviewed on
+      `main` on 2026-10-20, and the web's entries are #111–#113, the reader's #122 (ticked 2026-11-09, at the merge)
 - [ ] Languages (#122): draft the "Reader strings" part of the 27 drafts (the 223 keys of
       `docs/i18n/STRINGS-reader.md`), split between agents A and B as on 2026-10-12, and cross-review it on the other
       model; `python3 model/i18n_drafts.py check` then counts 27 drafted, 0 pending (2026-10-19)
-- [ ] Languages (#122): apply the 42 `fix` verdicts as `fixed`, the eleven weakened honesty notices first (2026-10-19)
-- [ ] **Owner:** languages (#122): one native reader per language; record `- Read by (<lang>): <role>, <date>` on the
-      draft, then `./run.sh data` admits it; `python3 model/i18n.py why` says what each column still waits on (2026-10-19)
+- [x] Languages (#122): apply the 42 `fix` verdicts (done on `main` on 2026-10-20, re-reviewed as `ok`; ticked
+      2026-11-09)
+- [x] **Owner:** languages (#122): one native reader per language. Folded into the readings item below on 2026-11-09:
+      one `Read by` line serves both admissions
 - [ ] Mobile reader: the Expo SDK 58 upgrade and `expo-localization` change the native fingerprint, so the next
       release is a store build through EAS, not an over-the-air update (#119, #120, #122; 2026-10-19)
+- [ ] Localisation readings (#112, #122): one reading per language by a person who speaks it, on the live pages,
+      recorded as `- Read by (<lang>): <role>, <date>` on its draft. Then `python3 model/i18n_admit.py` (the site)
+      and `./run.sh data` (the reader; `python3 model/i18n.py why` says what each column still waits on). Before
+      the site is promoted or indexed, every served language has one or is withdrawn.
 - [ ] Print book: country parts rendered from the content model; write Parts I, II and V
 - [ ] PDF tables: a long compound word (e.g. "Identitätsdokumentenregister") runs into the next column;
       allow hyphenation or breaking in table cells

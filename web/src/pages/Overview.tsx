@@ -7,6 +7,7 @@ import type { Bundle } from '@/data/types'
 import { AudienceSelector } from '@/components/AudienceSelector'
 import { Hero } from '@/components/Hero'
 import { BUTTON, CARD, SectionHead } from '@/components/ui'
+import { m, useTx } from '@/i18n'
 
 /** One headline number with a bar for its share, or a pending chip when there is nothing to show yet. */
 function Meter({
@@ -54,10 +55,10 @@ function Meter({
 /** Pages of the EU-27 report shown as previews, rendered from the report at build time
  * (book/report.py `PREVIEWS`; the names must match). */
 const REPORT_PREVIEWS: [string, string][] = [
-  ['cover', 'Cover'],
-  ['ranking', 'Data-sovereignty ranking'],
-  ['country', 'A country chapter: Germany'],
-  ['methodology', 'Methodology appendix'],
+  ['cover', m('Cover')],
+  ['ranking', m('Data-sovereignty ranking')],
+  ['country', m('A country chapter: Germany')],
+  ['methodology', m('Methodology appendix')],
 ]
 
 /**
@@ -67,6 +68,7 @@ const REPORT_PREVIEWS: [string, string][] = [
  */
 
 export function Overview({ bundle }: { bundle: Bundle }) {
+  const { tx } = useTx()
   const navigate = useNavigate()
   const [question, setQuestion] = useState('')
   const countries = Object.values(bundle.countries)
@@ -92,10 +94,10 @@ export function Overview({ bundle }: { bundle: Bundle }) {
             id="ask-heading"
             className="font-display text-4xl leading-tight font-extrabold tracking-tight sm:text-6xl"
           >
-            Hello, Europe
+            {tx('Hello, Europe')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-fg-secondary)] sm:text-xl">
-            Whatever is on your mind about EU Data Sovereignty, ask any question here.
+            {tx('Whatever is on your mind about EU Data Sovereignty, ask any question here.')}
           </p>
           <form
             role="search"
@@ -106,7 +108,7 @@ export function Overview({ bundle }: { bundle: Bundle }) {
             }}
           >
             <label htmlFor="overview-ask" className="sr-only">
-              Ask any question
+              {tx('Ask any question')}
             </label>
             <textarea
               id="overview-ask"
@@ -121,7 +123,7 @@ export function Overview({ bundle }: { bundle: Bundle }) {
                   go(question)
                 }
               }}
-              placeholder="Ask anything, in your own words…"
+              placeholder={tx('Ask anything, in your own words…')}
               // 16 px and up: iPhone Safari zooms the whole page into any field set smaller (#92).
               className="w-full resize-none bg-transparent px-4 pt-3 text-lg outline-none placeholder:text-[var(--color-fg-muted)]"
             />
@@ -134,28 +136,29 @@ export function Overview({ bundle }: { bundle: Bundle }) {
                 disabled={!question.trim()}
                 className={`${BUTTON} px-7 text-base disabled:opacity-50`}
               >
-                Ask
+                {tx('Ask')}
               </button>
             </div>
           </form>
           <p className="mx-auto mt-3 max-w-2xl text-xs text-[var(--color-fg-muted)]">
-            Your question is sent to Anthropic’s API to generate the answer. This site does not
-            store it. Answers come only from this project’s sourced findings, with a citation for
-            every fact.
+            {tx(
+              'Your question is sent to Anthropic’s API to generate the answer. This site does not store it. Answers come only from this project’s sourced findings, with a citation for every fact.',
+            )}
           </p>
           <div className="mt-7">
             <p className="mb-3 text-xs font-bold tracking-[0.16em] text-[var(--color-accent-text)] uppercase">
-              Or start from one of these
+              {tx('Or start from one of these')}
             </p>
             <ul className="flex flex-wrap justify-center gap-2">
               {ASK_EXAMPLES.map(q => (
                 <li key={q}>
                   <button
                     type="button"
-                    onClick={() => go(q)}
+                    // Clicked, the example becomes the reader's question, in the language they read it in.
+                    onClick={() => go(tx(q))}
                     className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-card)] px-4 py-2 text-left text-sm text-[var(--color-fg-secondary)] hover:border-[var(--color-accent-text)] hover:text-[var(--color-fg-primary)]"
                   >
-                    {q}
+                    {tx(q)}
                   </button>
                 </li>
               ))}
@@ -164,66 +167,79 @@ export function Overview({ bundle }: { bundle: Bundle }) {
         </section>
 
         <p className="mb-10 max-w-3xl text-[var(--color-fg-secondary)]">
-          Each member state analysed on its own fundamentals: the critical data holdings it cannot
-          let depend on infrastructure a foreign state can compel or switch off, who operates them,
-          under which law, and where they run. Every fact is footnoted to its source; where no
-          checked source has been found yet, the value is withheld and the gap is shown.
+          {tx(
+            'Each member state analysed on its own fundamentals: the critical data holdings it cannot let depend on infrastructure a foreign state can compel or switch off, who operates them, under which law, and where they run. Every fact is footnoted to its source; where no checked source has been found yet, the value is withheld and the gap is shown.',
+          )}
         </p>
 
-        <section aria-label="State of the evidence" className="mb-12">
+        <section aria-label={tx('State of the evidence')} className="mb-12">
           <SectionHead
-            eyebrow="Where the research stands"
-            title="The state of the evidence"
-            aside="Every fact is footnoted. Where no checked source exists yet, the value is withheld and the gap stays visible."
+            eyebrow={tx('Where the research stands')}
+            title={tx('The state of the evidence')}
+            aside={tx(
+              'Every fact is footnoted. Where no checked source exists yet, the value is withheld and the gap stays visible.',
+            )}
           />
           <div className="grid gap-px overflow-hidden rounded border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-2 lg:grid-cols-4">
             <Meter
-              label="Critical holdings verified"
+              label={tx('Critical holdings verified')}
               value={verified}
               of={total}
-              sub={`27 states × ${bundle.holding_classes.length} classes`}
+              sub={tx('27 states × {n, plural, one {# class} other {# classes}}', {
+                n: bundle.holding_classes.length,
+              })}
             />
             <Meter
-              label="Tier 0 holdings verified"
+              label={tx('Tier 0 holdings verified')}
               value={tier0}
               of={tier0Total}
-              sub="The identity spine every state runs on"
+              sub={tx('The identity spine every state runs on')}
             />
-            <Meter label="Sourced claims" value={claims} sub={`from ${sources} checked sources`} />
             <Meter
-              label="Countries sized"
+              label={tx('Sourced claims')}
+              value={claims}
+              sub={tx('from {n, plural, one {# checked source} other {# checked sources}}', {
+                n: sources,
+              })}
+            />
+            <Meter
+              label={tx('Countries sized')}
               value={0}
               of={27}
-              pending="Waiting on measured holdings"
-              sub="Sizing needs measured holdings"
+              pending={tx('Waiting on measured holdings')}
+              sub={tx('Sizing needs measured holdings')}
             />
           </div>
         </section>
 
-        <section aria-label="Start where your question is" className="mb-12">
-          <SectionHead eyebrow="Start where your question is" title="Three ways in" />
+        <section aria-label={tx('Start where your question is')} className="mb-12">
+          <SectionHead eyebrow={tx('Start where your question is')} title={tx('Three ways in')} />
           <nav className="grid gap-4 md:grid-cols-3">
             {[
               [
                 '/countries',
-                '“What about my country?”',
-                'Countries',
-                'All 27 member states, sortable, each with its own report and footnoted sources.',
-                'Browse countries',
+                tx('“What about my country?”'),
+                tx('Countries'),
+                tx(
+                  'All 27 member states, sortable, each with its own report and footnoted sources.',
+                ),
+                tx('Browse countries'),
               ],
               [
                 '/holdings',
-                '“Who holds the population register?”',
-                'Critical holdings',
-                'One kind of holding, such as tax, health or land records, compared across every member state.',
-                'Compare holdings',
+                tx('“Who holds the population register?”'),
+                tx('Critical holdings'),
+                tx(
+                  'One kind of holding, such as tax, health or land records, compared across every member state.',
+                ),
+                tx('Compare holdings'),
               ],
               [
                 '/sources',
-                '“Where does this claim come from?”',
-                'Sources',
-                'Every checked source, with the quoted passage and each claim it supports.',
-                'Trace sources',
+                tx('“Where does this claim come from?”'),
+                tx('Sources'),
+                tx('Every checked source, with the quoted passage and each claim it supports.'),
+                tx('Trace sources'),
               ],
             ].map(([to, q, title, blurb, go]) => (
               <Link
@@ -242,11 +258,11 @@ export function Overview({ bundle }: { bundle: Bundle }) {
           </nav>
           <div className="mt-4 flex flex-wrap gap-2.5 text-sm">
             {[
-              ['/sovereignty', 'Data-sovereignty ranking'],
-              ['/infrastructure', 'Where registers are hosted'],
-              ['/ask', 'Ask a question'],
-              ['/fact-check', 'The fact check'],
-              ['/methodology', 'Methodology'],
+              ['/sovereignty', tx('Data-sovereignty ranking')],
+              ['/infrastructure', tx('Where registers are hosted')],
+              ['/ask', tx('Ask a question')],
+              ['/fact-check', tx('The fact check')],
+              ['/methodology', tx('Methodology')],
             ].map(([to, label]) => (
               <Link
                 key={to}
@@ -261,27 +277,28 @@ export function Overview({ bundle }: { bundle: Bundle }) {
 
         <section className={`${CARD} mb-10 p-6 sm:p-8`}>
           <p className="mb-1.5 text-xs font-semibold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
-            The full report
+            {tx('The full report')}
           </p>
           <a href="/eu27-report.pdf" className="group block">
             <span className="font-display text-2xl font-bold group-hover:underline">
-              EU-27 report (PDF)
+              {tx('EU-27 report (PDF)')}
             </span>
             <span className="mt-2 block max-w-2xl text-[var(--color-fg-secondary)]">
-              Every member state in one document, with a table of contents, footnoted sources and a
-              source appendix. Each country is also available as its own PDF.
+              {tx(
+                'Every member state in one document, with a table of contents, footnoted sources and a source appendix. Each country is also available as its own PDF.',
+              )}
             </span>
           </a>
           <ul
             className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4"
-            aria-label="Pages from the EU-27 report"
+            aria-label={tx('Pages from the EU-27 report')}
           >
             {REPORT_PREVIEWS.map(([name, caption]) => (
               <li key={name}>
                 <a href="/eu27-report.pdf" className="block">
                   <img
                     src={`/previews/report-${name}.png`}
-                    alt={`Page from the EU-27 report: ${caption}`}
+                    alt={tx('Page from the EU-27 report: {caption}', { caption: tx(caption) })}
                     // Not lazy: a missing preview is removed below, and removing it while a reader (or a test)
                     // scrolls past would shift the page under their tap. Loading up front settles it first.
                     decoding="async"
@@ -293,7 +310,9 @@ export function Overview({ bundle }: { bundle: Bundle }) {
                       e.currentTarget.closest('li')?.remove()
                     }}
                   />
-                  <span className="mt-1 block text-xs text-[var(--color-fg-muted)]">{caption}</span>
+                  <span className="mt-1 block text-xs text-[var(--color-fg-muted)]">
+                    {tx(caption)}
+                  </span>
                 </a>
               </li>
             ))}

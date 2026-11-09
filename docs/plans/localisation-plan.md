@@ -1,7 +1,7 @@
 # Plan: a country URL that speaks the country's language
 
 Drafted 2026-10-12 at the owner's request. A plan, not a decision: nothing in it renders until the decision
-entry it proposes (reserved as #109; for the app it is #122) is written and the tests named here exist. The language drafts it relies on are
+entry it proposes (#111 for the site; #122 for the mobile reader) is written and the tests named here exist. The language drafts it relies on are
 agent output under `docs/i18n/drafts/`, and `docs/i18n/README.md` says what state they are in.
 
 ## 1. Where we are
@@ -90,7 +90,12 @@ Not translated, in this stage or any other without its own decision:
    language without one shows the English notice. The evidence test that forbids prose claiming a check
    that did not run applies to every language.
 
-## 6. The decision to write (reserved as #109; that number went to the reader, and #122 now decides it for the app)
+## 6. The decision to write (#111, written 2026-10-20 for stage 2's plumbing; amended by #112; the reader's is #122, stricter, see its scoping note)
+
+**#112 changed §5.4's order at the owner's request:** a language is served once its two-model review is clean,
+and its page says it is unread machine translation until a person's reading is recorded on the file. The
+readings are gathered on the live site, which is unannounced and `noindex`, before it is promoted.
+
 
 - **Decision.** Language is the second path segment under a state; the first official language is the
   default; strings come from admitted tables keyed by `STRINGS.md`; facts are not translated.
@@ -99,7 +104,8 @@ Not translated, in this stage or any other without its own decision:
   §4); machine drafts rendered without a native reading (rejected: §5.4).
 - **Closes off.** Any literal string in a renderer; any rendered translation without a review by a
   different agent and a reading by a person.
-- **Verified / Would change if.** To be filled when the stage ships.
+- **Verified / Would change if.** Written in DECISIONS.md #111 for the plumbing (2026-10-20); filled again when
+  the first language is admitted.
 
 ## 7. Stages and their checks
 
@@ -107,7 +113,7 @@ Not translated, in this stage or any other without its own decision:
 |---|---|---|
 | 0 (done) | `STRINGS.md`, 27 drafts, cross-review, `i18n_drafts.py check` | `check` exits 0; `docs/i18n/README.md` summary |
 | 1 | `fix` verdicts applied and re-reviewed; one native reading per language | every file carries `Read by:` |
-| 2 | a decision entry for the web segment (#122 covers the app); `model/i18n/`; admission script; the router segment; `countryPath(iso, lang)`; the switch | `tests/test_i18n.py`; Playwright on `/de`, `/be/fr`, `/ie/ga`; `./test.sh` green |
+| 2 (plumbing done 2026-10-20) | #111; `model/i18n/`; admission script; the router segment; `countryPath(iso, lang)`; the switch | `tests/test_i18n.py`; Playwright on `/de` now, `/be/fr` and `/ie/ga` once admitted; `./test.sh` green |
 | 3 | PDFs per language once fonts are pinned | `tests/test_workflows.py` checksums; PDF stage green |
 | 4 | glosses into the state's language, under #87's checker | a fact-check run with the new rule |
 

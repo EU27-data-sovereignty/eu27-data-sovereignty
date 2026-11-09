@@ -11,7 +11,13 @@ export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
-  server: { port: 5173, host: true },
+  // The language tables live in model/i18n/ (#111, #113), outside web/; the site catalogs are served from there as
+  // files, so the dev server and the tests must be allowed to read that folder.
+  server: {
+    port: 5173,
+    host: true,
+    fs: { allow: ['.', fileURLToPath(new URL('../model/i18n', import.meta.url))] },
+  },
   preview: { port: 4173, host: true },
   build: {
     outDir: 'dist',

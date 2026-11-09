@@ -25,6 +25,7 @@ CHECKERS: dict[str, str] = {
     "sovereign_appliance_note.py": "the sovereign-appliance note (#104)",
     "i18n_drafts.py": "the language drafts (docs/plans/localisation-plan.md)",
     "i18n.py": "the admitted interface catalogue (#122)",
+    "i18n_site.py": "the site catalog and its drafts (#113)",
     "technical_universities_note.py": "the technical-universities note",
     "draghi_note.py": "the Draghi-report note (#123)",
 }

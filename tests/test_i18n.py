@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-The admitted interface catalogue (#122): a language reaches the reader only from a draft that is complete in
-both parts, reviewed by the other agent with every `fix` applied, and read by a native speaker.
+The language tables and the app hold each other to one list of strings (#111).
 
     python3 -m unittest tests.test_i18n -v
+
+model/i18n/ is what admission writes and nothing else; every key the app or the model looks up is in the
+table; every key in the table is looked up somewhere, or is named below with the reason it is not yet; and a
+keyed heading in the bundle says exactly what the table's English says, so the two cannot drift apart.
 """
 from __future__ import annotations
 
 import io
 import json
 import re
-import shutil
 import sys
-import tempfile
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
@@ -20,136 +21,96 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "model"))
 
-import i18n  # noqa: E402
-import i18n_drafts  # noqa: E402
+import i18n_admit  # noqa: E402
+
+EN = json.loads((ROOT / "model" / "i18n" / "strings" / "en.json").read_text(encoding="utf-8"))
+LANGUAGES = json.loads((ROOT / "model" / "i18n" / "languages.json").read_text(encoding="utf-8"))
+BUNDLE = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
+
+# Keys in the table that nothing looks up yet, each with the reason. A key leaves this list when it is wired.
+NOT_YET = {
+    "fact.disputed": "no state page prints it: the disputed count is on /countries, which is English (#112)",
+}
 
 
-def _reader_part(langs: list[str], prefix: str = "") -> str:
-    """A complete 'Reader strings' and 'Reader review' part, every cell `<lang>:<en>`, every verdict ok."""
-    keys = i18n_drafts.reader_keys()
-    esc = lambda v: v.replace("|", "\\|")  # noqa: E731
-    rows = ["| key | en | " + " | ".join(langs) + " |", "|---|---|" + "---|" * len(langs)]
-    rows += [f"| {k} | {esc(en)} | " + " | ".join(f"{prefix}{lg}:{esc(en)}" for lg in langs) + " |" for k, en in keys]
-    review = ["| key | lang | verdict | note | suggestion |", "|---|---|---|---|---|"]
-    review += [f"| {k} | {lg} | ok | | |" for k, _ in keys for lg in langs]
-    return "\n## Reader strings\n\n" + "\n".join(rows) + "\n\n## Reader review\n\n" + "\n".join(review) + "\n"
+def _web_keys() -> set[str]:
+    keys: set[str] = set()
+    for f in (ROOT / "web" / "src").rglob("*.ts*"):
+        if "__tests__" in f.parts:
+            continue
+        text = f.read_text(encoding="utf-8")
+        keys |= set(re.findall(r"\bt\('([a-z_]+\.[a-z_]+)'[,)]", text))
+        keys |= set(re.findall(r"label: '([a-z_]+\.[a-z_]+)'", text))
+    return keys
 
 
-def _apply_fixes(text: str) -> str:
-    """Apply every `fix` suggestion to its cell and mark it `fixed`, as the reviewer's wording."""
-    head, review = text.split("\n## Review\n", 1)
-    review_part, rest = (review.split("\n## Reader strings\n", 1) + [""])[:2]
-    fixes = []
-    for line in review_part.splitlines():
-        cells = [c.strip() for c in re.split(r"(?<!\\)\|", line)[1:-1]]
-        if len(cells) >= 5 and cells[2] == "fix":
-            fixes.append((cells[0], cells[1], cells[4]))
-    langs = re.search(r"^\| key \| en \| (.+) \|$", head, re.M).group(1).split(" | ")
-    out = []
-    for line in head.splitlines():
-        cells = [c.strip() for c in re.split(r"(?<!\\)\|", line)[1:-1]]
-        for key, lang, wording in fixes:
-            if cells and cells[0] == key:
-                cells[2 + langs.index(lang)] = wording
-                line = "| " + " | ".join(cells) + " |"
-        out.append(line)
-    review_part = re.sub(r"^(\| [^|]+ \| [a-z]{2} \| )fix( \|)", r"\1fixed\2", review_part, flags=re.M)
-    return "\n".join(out) + "\n## Review\n" + review_part + ("\n## Reader strings\n" + rest if rest else "")
+def _bundle_keyed() -> list[tuple[str, str]]:
+    """(key, text) for every keyed section title and label in the bundle's documents."""
+    out: list[tuple[str, str]] = []
+
+    def walk(node: object) -> None:
+        if isinstance(node, dict):
+            if "key" in node and ("title" in node or node.get("role") == "label"):
+                out.append((node["key"], node.get("title", node.get("t", ""))))
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    walk(BUNDLE)
+    return out
 
 
-class Admission(unittest.TestCase):
-    """A scratch copy of the drafts, so each test can change one state's file and watch admission."""
+class Tables(unittest.TestCase):
+    def test_a_language_is_admitted_only_with_a_clean_cross_review(self):
+        keys, states = i18n_admit.drafts.spec()
+        for iso, entries in LANGUAGES.items():
+            if any(e["admitted"] for e in entries):
+                problems, _ = i18n_admit.drafts.check_one(iso, keys, states[iso][1])
+                self.assertEqual(problems, [], f"{iso} is admitted with an unclean draft")
 
-    def setUp(self):
-        self.tmp = Path(tempfile.mkdtemp())
-        shutil.copytree(i18n_drafts.DRAFTS, self.tmp / "drafts")
-        self._drafts = i18n_drafts.DRAFTS
-        i18n_drafts.DRAFTS = self.tmp / "drafts"
+    def test_vercel_names_the_language_of_every_translated_state_page(self):
+        config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
+        named = {b["source"]: h["value"] for b in config["headers"] for h in b["headers"]
+                 if h["key"] == "Content-Language"}
+        self.assertEqual(named, {b["source"]: b["headers"][0]["value"]
+                                 for b in i18n_admit.content_language(LANGUAGES)})
 
-    def tearDown(self):
-        i18n_drafts.DRAFTS = self._drafts
-        shutil.rmtree(self.tmp)
-
-    def _write(self, iso: str, transform):
-        p = self.tmp / "drafts" / f"{iso}.md"
-        p.write_text(transform(p.read_text(encoding="utf-8")), encoding="utf-8")
-
-    def _languages(self) -> dict:
-        files, _ = i18n.build()
-        return json.loads(files["mobile/assets/i18n/catalogue.json"])["languages"]
-
-    def _ready(self, text: str, read: bool = True, fixes: bool = True, prefix: str = "") -> str:
-        text = _apply_fixes(text) if fixes else text
-        text = text.rstrip("\n") + "\n" + _reader_part(["de"], prefix)
-        if read:
-            text = text.replace("- Languages:", "- Read by (de): native speaker, 2026-10-19\n- Languages:", 1)
-        return text
-
-    def test_the_tree_admits_english_only(self):
-        self.assertEqual(sorted(self._languages()), ["en"])
-
-    def test_read_reviewed_and_fixed_is_admitted(self):
-        self._write("AT", self._ready)
-        langs = self._languages()
-        self.assertIn("de", langs)
-        de = langs["de"]
-        self.assertEqual(de["strings"]["app.tab.countries"], "de:Countries")
-        self.assertEqual(set(de["strings"]), set(langs["en"]["strings"]))
-        self.assertEqual(de["provenance"][0]["read"], "native speaker, 2026-10-19")
-        self.assertEqual(de["provenance"][0]["iso"], "AT")
-
-    def test_unread_is_not_admitted(self):
-        self._write("AT", lambda t: self._ready(t, read=False))
-        self.assertNotIn("de", self._languages())
-
-    def test_an_outstanding_fix_blocks_admission(self):
-        self._write("AT", lambda t: self._ready(t, fixes=False))
-        self.assertNotIn("de", self._languages())
-
-    def test_a_fixed_cell_must_read_as_suggested(self):
-        def tamper(t: str) -> str:
-            t = self._ready(t)
-            return re.sub(r"^(\| [^|]+ \| de \| fixed \| [^|]* \| )([^|]+)( \|)$", r"\1something else\3", t, count=1, flags=re.M)
-        self._write("AT", tamper)
-        self.assertNotIn("de", self._languages())
-
-    def test_states_sharing_a_language_merge_with_overlays(self):
-        self._write("AT", lambda t: self._ready(t, prefix="AT-"))
-        self._write("DE", lambda t: self._ready(t, prefix=""))
-        files, _ = i18n.build()
-        de = json.loads(files["model/i18n/de.json"])
-        self.assertEqual([p["iso"] for p in de["provenance"]], ["AT", "DE"])
-        # A tie goes to the first state alphabetically; the other keeps its wording as an overlay.
-        self.assertEqual(de["strings"]["app.tab.countries"], "AT-de:Countries")
-        self.assertEqual(de["overlays"]["DE"]["app.tab.countries"], "de:Countries")
-        self.assertNotIn("AT", de["overlays"])
-
-
-class Catalogue(unittest.TestCase):
-    def test_check_passes_on_the_tree(self):
+    def test_model_i18n_is_what_admission_writes(self):
         out = io.StringIO()
         with redirect_stdout(out):
-            rc = i18n.check()
+            rc = i18n_admit.main(["--check"])
         self.assertEqual(rc, 0, out.getvalue())
 
-    def test_every_label_and_gap_the_bundle_prints_has_a_key(self):
-        bundle = json.loads(i18n.BUNDLE.read_text(encoding="utf-8"))
-        en = set(i18n.english().values())
-        for _key, text, _role in i18n.content_strings(bundle):
-            self.assertIn(text, en)
+    def test_an_admitted_language_has_a_whole_table(self):
+        for iso, langs in LANGUAGES.items():
+            for lang in langs:
+                if lang["lang"] == "en":
+                    continue  # English where it is official (IE, MT) reads the source table
+                path = ROOT / "model" / "i18n" / "strings" / f"{lang['tag']}.json"
+                self.assertEqual(lang["admitted"], path.exists(), f"{iso} {lang['tag']}")
+                if path.exists():
+                    table = json.loads(path.read_text(encoding="utf-8"))
+                    self.assertEqual(list(table), list(EN), f"{lang['tag']}: keys differ from English")
 
-    def test_keys_are_unique_across_both_tables(self):
-        chrome, _ = i18n_drafts.spec()
-        keys = [k for k, _ in chrome] + [k for k, _ in i18n_drafts.reader_keys()]
-        self.assertEqual(len(keys), len(set(keys)))
 
-    def test_only_label_and_gap_spans_are_keyed(self):
-        # A categorical fact value is a fact (#82, #87), even where a label elsewhere has the same words ("EU
-        # provider"): only the label is keyed, and the reader translates spans by role, never a fact span.
-        bundle = json.loads(i18n.BUNDLE.read_text(encoding="utf-8"))
-        rows = i18n.content_strings(bundle)
-        self.assertTrue(rows)
-        self.assertTrue(all(k.startswith(f"{role}.") and role in ("label", "gap") for k, _t, role in rows))
+class Wiring(unittest.TestCase):
+    def test_every_key_looked_up_is_in_the_table(self):
+        used = _web_keys() | {k for k, _ in _bundle_keyed()}
+        self.assertEqual(sorted(used - set(EN)), [])
+
+    def test_every_key_in_the_table_is_looked_up_or_named_with_its_reason(self):
+        used = _web_keys() | {k for k, _ in _bundle_keyed()}
+        self.assertEqual(sorted(set(EN) - used - set(NOT_YET)), [])
+        self.assertEqual(sorted(set(NOT_YET) & used), [], "wired now: take it off NOT_YET")
+
+    def test_a_keyed_heading_in_the_bundle_says_what_the_table_says(self):
+        keyed = _bundle_keyed()
+        self.assertTrue(keyed, "the bundle carries no keyed headings")
+        wrong = sorted({(k, t) for k, t in keyed if EN.get(k) != t})
+        self.assertEqual(wrong, [])
+
 
 if __name__ == "__main__":
     unittest.main()

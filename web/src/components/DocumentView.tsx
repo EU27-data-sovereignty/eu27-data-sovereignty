@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 
 import type { Block, Bundle, Document, Span } from '@/data/types'
+import { useModelText, useTx } from '@/i18n'
 
 /**
  * Renders the content model (model/document.py) -- the same document the PDF typesets.
@@ -9,24 +10,40 @@ import type { Block, Bundle, Document, Span } from '@/data/types'
  * is set in muted italics, so a withheld value reads as a gap and never as a fact (#75).
  * Nothing here adds a sentence: a renderer that writes content becomes a second source.
  */
-export function SpanView({ span, numbers, bundle }: SpanProps) {
+export function SpanView({ span, numbers, bundle, compact = false }: SpanProps) {
+  const text = useModelText()
+  const { tx } = useTx()
+  const shown = text(span)
+  if (span.role === 'disputed' && compact) {
+    // In a grid the checker's whole reason would stretch one row to twenty lines: show the verdict, the word
+    // the reason opens with, and keep the reason one click away. Nothing is added; the text is the model's.
+    const [verdict = shown] = shown.split(':')
+    return (
+      <details className="max-w-56 text-[var(--color-fg-muted)]">
+        <summary className="cursor-pointer italic">
+          <span className="border-b border-dashed border-[var(--color-gap-mark)]">{verdict}</span>
+        </summary>
+        <p className="mt-1 text-xs italic">{shown}</p>
+      </details>
+    )
+  }
   if (span.role === 'gap') {
-    return <em className="text-[var(--color-fg-muted)]">{span.t}</em>
+    return <em className="text-[var(--color-fg-muted)]">{shown}</em>
   }
   if (span.role === 'disputed') {
     return (
       <em className="border-b border-dashed border-[var(--color-gap-mark)] text-[var(--color-fg-muted)]">
-        {span.t}
+        {shown}
       </em>
     )
   }
-  if (span.role !== 'fact') return <>{span.t}</>
+  if (span.role !== 'fact') return <>{shown}</>
   const ids = [
     ...new Set((span.c ?? []).flatMap(claim => (bundle.claims[claim] ?? []).map(c => c.source_id))),
   ]
   return (
     <>
-      {span.t}
+      {shown}
       {ids.map(sid => {
         const n = numbers.get(sid)
         return (
@@ -34,7 +51,11 @@ export function SpanView({ span, numbers, bundle }: SpanProps) {
             <a
               href={`#src-${n}`}
               className="text-[var(--color-accent-text)] no-underline hover:underline"
-              aria-label={`Source ${n}: ${bundle.sources[sid]?.label ?? sid}. Evidence: ${span.g ?? ''}`}
+              aria-label={tx('Source {n}: {label}. Evidence: {evidence}', {
+                n: String(n),
+                label: bundle.sources[sid]?.label ?? sid,
+                evidence: span.g ?? '',
+              })}
             >
               [{n}]
             </a>
@@ -49,6 +70,8 @@ interface SpanProps {
   span: Span
   numbers: Map<string, number>
   bundle: Bundle
+  /** In a dense grid: a disputed value shows its verdict and opens to its reason. */
+  compact?: boolean
 }
 
 function Spans({ spans, ...rest }: { spans: Span[] } & Omit<SpanProps, 'span'>) {
@@ -65,6 +88,7 @@ function Spans({ spans, ...rest }: { spans: Span[] } & Omit<SpanProps, 'span'>) 
 }
 
 function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'>) {
+  const text = useModelText()
   switch (block.type) {
     case 'p':
       return (
@@ -103,7 +127,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
           className="scroll-x rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] mb-5"
           tabIndex={0}
           role="region"
-          aria-label={block.columns.map(c => c.t).join(', ')}
+          aria-label={block.columns.map(c => text(c)).join(', ')}
         >
           <table className="w-full min-w-[32rem] border-collapse text-sm">
             <thead>
@@ -114,7 +138,7 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
                     scope="col"
                     className={`px-3.5 py-2.5 font-semibold ${block.align?.[i] === 'right' ? 'text-right' : 'text-left'}`}
                   >
-                    {c.t}
+                    {text(c)}
                   </th>
                 ))}
               </tr>
@@ -163,15 +187,17 @@ export function DocumentView({
    */
   blocks?: (block: Block, section: string) => ReactNode | undefined
 }) {
+  const text = useModelText()
+  const { tx } = useTx()
   return (
     <>
       {doc.sections.map((s, i) => (
         <section key={s.id} id={s.id} className="mb-10 scroll-mt-4">
           <h2 className="mb-4 font-display text-2xl font-bold tracking-tight">
             <span className="mb-1 block font-sans text-xs font-semibold tracking-[0.14em] text-[var(--color-accent-text)] uppercase">
-              Section {i + 1}
+              {tx('Section {n}', { n: i + 1 })}
             </span>
-            {s.title}
+            {text({ t: s.title, key: s.key, role: 'label' })}
           </h2>
           {s.blocks.map((b, j) => {
             if (b.type === 'table' && tables[s.id]) return <div key={j}>{tables[s.id]!(b)}</div>

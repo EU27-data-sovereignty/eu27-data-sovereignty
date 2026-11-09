@@ -3092,6 +3092,232 @@ and a check of cesaer.org itself once it resolves.
 are re-read and the Criteria line cites the live page; or the project admits institutions as entities in the
 hosting model (#96), in which case this note becomes the seed of a sourced register and stops being authored.
 
+### 109. The palette moves to a deeper navy and a muted gold; content and layout stay as #101 left them
+**Decision.** 2026-10-20, at the request of Marco Buhlmann, from a reference screenshot of a navy-and-gold home
+design: "apply the color scheme to the current site without any changes to content and layout". Only
+`design/tokens.json` changes, and the three generated files with it:
+- **Brand.** Navy `#0C1628` (was `#0B1B3F`), navy surface `#111E33`, border `#1E2C44`, hover `#18263D`, icon on
+  navy `#C3CBD8`, gold `#D9B35E` (was `#F2C230`), brand blue `#1F3355`, a slate navy (was `#1E3A8A`).
+- **Dark.** Page `#0C1628`, cards `#111E33`, text `#E9EDF4` / `#C3CBD8` / `#9FABBF`. Accent and accent text are
+  the muted gold, so links and meters in dark mode are gold rather than pale blue. The hero is flat
+  (`hero_from` = `hero_to` = the page). Rank shades are slate blues ending in gold.
+- **Light.** Page `#F4F5F7`, white cards, navy text, borders `#DDE2EA`. Accent and accent text are the slate navy;
+  gold stays the highlight (hero underline, active toggle segment).
+
+**Problem.** The #101 palette's saturated EU blue and bright yellow read as a flag rather than as research; the
+owner's reference uses a greyer navy with flat panels and a quieter gold.
+
+**Alternatives considered.**
+- **Gold as the light-mode accent too, as in the reference's dark design.** *Why not:* gold on the light page is
+  under the 3:1 the generator demands for UI (`accent` on `bg_page`); the light accent has to be dark.
+- **Taking the reference's layout and type (Inter, a country-index hero) as well.** *Why not:* not asked; the
+  owner wanted the colours alone, on the content and layout as they are.
+
+**Closes off.** Any hex for these roles outside `design/tokens.json` (#74 already does); the #101 brand values in
+generated files.
+
+**Verified:** 2026-10-20. `python3 design/build_tokens.py` passes every WCAG pair it checks; `tests/test_tokens.py`
+passes; the home page built and screenshotted in dark and light at 1440 px and reviewed by the owner before
+commit; the light-mode visual baselines still match within tolerance; the full gate and the browser profiles as recorded in `CHANGELOG.md`.
+The hero's EU disc is an image and keeps its own blue.
+
+*Would change if:* the owner adopts the reference's layout too, or a contrast check fails on a page the home page
+does not show.
+
+### 110. A country card shows the state's own outline, filled to its share of verified holdings
+**Decision.** 2026-10-20, at the request of Marco Buhlmann, who chose this (option B) from three proposed card
+designs. Each card on `/countries` leads with the state's outline (`CountryOutline`, from the same world-atlas
+geometry as the Ranking map), filled from the bottom to the share of its holdings with a verified source, beside
+the name and that count in large type ("31 / 39, holdings with a verified source"). The holdings bar goes; tier 0
+dots, sourced facts, the disputed count and the PDF link stay. The outline is decoration (`aria-hidden`): the
+number beside it is the reading. The level runs over the outline's own height, and distant islands (Madeira, the
+Azores) are left out of the drawing so the mainland is legible. The geometry now loads through one shared module
+(`charts/euShapes.ts`), so the map and the cards fetch the chunk once.
+
+**Problem.** Twenty-seven identical cards of bars and dots read as a table; the owner wanted the page more
+inviting without adding claims.
+
+**Alternatives considered.**
+- **A ring per card (A).** *Why not:* not chosen; a ring is the same bar bent round and still looks alike 27 times.
+- **Compact evidence rows (C).** *Why not:* not chosen; denser, but the page stays a table.
+- **Filling by area rather than level.** *Why not:* a true area fill needs a search per shape for the matching
+  line and reads no better; the level is labelled by the number beside it.
+
+**Closes off.** A card whose graphic carries information its text does not; the outline as a ranking cue (every
+state is drawn at the same size, whatever its area).
+
+**Verified:** 2026-10-20. Built and screenshotted in dark and light at 1440 px and at 390 px; the full gate and the
+browser profiles as recorded in `CHANGELOG.md`.
+
+*Would change if:* the count shown moves from holdings to another measure, or the geometry chunk becomes too heavy
+for the page and the outlines are precomputed.
+
+### 111. A member state's page carries its language as a second path segment, from admitted tables only
+**Decision.** 2026-10-20, at the request of Marco Buhlmann ("fix the number and start the plumbing"), the decision
+`docs/plans/localisation-plan.md` §6 reserved, written for stage 2's plumbing ahead of stage 1's readings:
+- **Address.** `/<iso>` serves the state's first *admitted* official language, else English; `/<iso>/<lang>` serves
+  another admitted one, or English as `en`. The default spelled out (`/de/en` today) and an official language not
+  yet admitted (`/de/de`) redirect to `/<iso>`, so a page has one address; any other segment is not found. Every
+  other page is English. `countryPath(iso, lang)` builds every link; `resolveLang` decides what a segment serves.
+- **Tables.** `model/i18n_admit.py` writes `model/i18n/strings/<tag>.json` and `model/i18n/languages.json`:
+  English from `docs/i18n/STRINGS.md`, and a draft language only when its file carries `- Read by (<lang>): <role>,
+  <date>` and its review holds no `fix` for that language. Admission is whole or nothing, so no page mixes a
+  translated label with an English stand-in. The web app imports the tables at build time rather than through the
+  bundle, because the loading and error messages print before the bundle exists.
+- **Lookups.** Renderers print the keyed strings through `t(key)`: the navigation, the country page's contents,
+  kicker and source links, "Check this fact", the gloss label, not-found, loading and load error. The content model
+  tags its keyed section titles and column labels with `key` (`label(t, key)`), and `DocumentView` prints the table's
+  string for them. `<html lang>` follows the page. The header's language button lists what the page can be read in.
+- **Nothing translated renders yet.** No draft carries a reading on 2026-10-20, so every table but English is
+  absent and every page reads exactly as before.
+
+**Problem.** The plan's stage 2 (router segment, tables, lookups, switch) waited on stage 1's 24 human readings,
+which are slow; the owner asked for the plumbing first, so that admitting a read language changes data, not code.
+
+**Alternatives considered.**
+- **Writing this decision after stage 1, as the plan and ROADMAP said.** *Why not:* the owner asked for the
+  plumbing now; the rule the ordering protected (no unread translation renders) is kept by admission instead.
+- **The tables inside the bundle, as the plan sketched.** *Why not:* the two status messages print before the
+  bundle loads; a build-time import serves every string from one place.
+- **Per-key fallback to English with a notice (plan §5.6).** *Why not:* admission is whole, so a key is never
+  missing from an admitted table; the notice is needed only if partial admission is ever allowed.
+- **Keeping the inert "EN" button.** *Why not:* a control that does nothing; it now lists the page's languages.
+
+**Closes off.** A translated string on any page from a draft no person has read; a page served in a language that
+is not one of its state's official languages or English; a new keyed string printed as a literal
+(`tests/test_i18n.py`).
+
+**Verified:** 2026-10-20. `python3 model/i18n_admit.py --check`; `tests/test_i18n.py` (tables reproduce, every
+looked-up key exists, every table key is looked up or listed with its reason, every keyed heading in the bundle
+matches the English table); `web/src/__tests__/i18n.test.ts` (address resolution with a stand-in admitted French for
+Belgium, lookups); Playwright `languages (#111)`; the full gate and the browser profiles as recorded in
+`CHANGELOG.md`. **NOT YET:** four keys are not wired (`site.title`, `fact.withheld`, `fact.disputed`,
+`notice.disclaimer`, each with its reason in the test); "About the data" has no key; `hreflang` alternates and
+`Content-Language` wait for a second admitted language.
+
+*Would change if:* a language is admitted only in part, in which case per-key fallback and the plan's notice
+return; or a page other than a state's needs a language, in which case the segment rule moves up a level and
+#105's reservation of two-letter top-level paths is revisited.
+
+### 112. Translated state pages go live on a clean two-model review; the person's reading follows on the live site
+**Decision.** 2026-10-20, at the request of Marco Buhlmann: "apply all open changes", excluding the reading by a
+person who speaks each language, which "we'll do on the live site (site is currently not promoted and no traffic
+so its ok)". Amends #111:
+- **Admission** no longer waits for `- Read by (<lang>):`. A language is admitted when its draft passes
+  `model/i18n_drafts.py check` in full (every cell cross-reviewed by the agent on the other model) with no `fix`
+  open. The reading is still recorded the same way, and `model/i18n/languages.json` carries it as `read`.
+- **An unread language says so.** A state page served in a language with no recorded reading opens with
+  `notice.unread`, in that language and in English: the labels are a machine translation that no person who
+  reads the language has checked. The footer prints the translated disclaimer first and the English notice, the
+  project's source wording, unchanged after it.
+- **The open stage-2 items are done.** `nav.about` is a key; `fact.withheld` is an ICU plural pattern with each
+  language's CLDR categories, filled by `Intl.PluralRules` and `Intl.NumberFormat` (`formatCount`, no new
+  dependency), and the drafts checker holds every pattern to those categories; the tab title follows the page's
+  language; `hreflang` alternates with `x-default` on English go into the head of a state page with more than one
+  language; admission writes `Content-Language` per translated state path into `vercel.json`. `fact.disputed`
+  stays unwired: no state page prints it.
+- **The 42 fixes and the new strings** went through the plan's two-model loop on 2026-10-20: each drafter applied
+  the review's fixes and drafted the three changed keys, and the other model re-reviewed every applied fix, every
+  new cell and every disclaimer. `docs/i18n/README.md` records what that pass found.
+
+**Problem.** The plan held every translation back until a person who reads it had read it. Twenty-four readings
+are the slow part, and the owner wants to gather them against the live pages while the site has no audience.
+
+**Alternatives considered.**
+- **Keep #111's rule and wait for the readings.** *Why not:* the owner's call; the site is unannounced and
+  `X-Robots-Tag: noindex` keeps it out of search, so an unread page reaches nobody who is not looking for it.
+- **Admit unread languages with no notice.** *Why not:* the project's honesty notice says what no person has
+  reviewed; a page that hid that its own labels are unread machine translation would contradict it.
+- **Replace the English disclaimer with the translation.** *Why not:* the translation of the one sentence that
+  must not be weakened is itself unread; the English stays beside it as the source.
+
+**Closes off.** A translated page without `notice.unread` while its language has no reading; a language admitted
+with any `fix` open or any cell unreviewed; a count string built by concatenation.
+
+**Verified:** 2026-10-20. `python3 model/i18n_drafts.py check` exits 0; `python3 model/i18n_admit.py --check`;
+`tests/test_i18n.py`; `web/src/__tests__/i18n.test.ts` (plural branches for Polish, exact `=n`, localised
+digits); Playwright `languages`; the full gate and browser profiles as recorded in `CHANGELOG.md`.
+**NOT YET:** a reading by a person, per language, recorded on its file.
+
+*Would change if:* the site is promoted or indexed before every served language has a reading, in which case the
+unread languages are withdrawn (their admission reverts with one `fix`) until they are read; or a reader finds a
+weakened disclaimer, in which case that language comes off at once.
+
+### 113. The whole site in six languages, chosen once and remembered, with the address unchanged
+**Decision.** 2026-10-21, at the request of Marco Buhlmann ("the whole site should be translated"), with his
+choices: the language is a remembered choice, not part of the address; German, French, Spanish, Italian and
+Polish first, and Dutch added the same day; everything but the facts; the #112 rule for review and the unread
+notice. In stages, each its own commit:
+1. **The choice (done 2026-10-21).** The header's switch is on every page. It offers a state page's own admitted
+   languages first, then the site languages ("Site-wide languages" in `docs/i18n/STRINGS.md`, written to
+   `model/i18n/site.json` by admission), then English. A choice is stored by the browser (`eu27-lang`) and applies
+   wherever the page has that language: a state page's explicit segment (`/be/fr`) wins, then the choice, then the
+   page's default. A site language reads its home state's table (`nl` reads `nl-NL`); on a state page with its
+   own variant the state's wins (`fr` on `/be` is `fr-BE`). Messages take named ICU arguments (`format`). The
+   unread notice moves to the layout, so every translated page carries it.
+2. **The web app's own wording:** every page, the guides, the overview and the audience selector to keyed
+   messages in English catalogs, drafted in the six languages and cross-reviewed on two models.
+3. **The model's prose:** the report sentence patterns, the methodology and the hosting notes emitted as keyed
+   messages with arguments, translated the same way.
+The fact-check verdicts stay English: they are evidence written by the checking model, like the facts' glosses,
+and a translation would be a second unchecked machine output of the first.
+
+**Problem.** Only the state pages had languages, so the switch was empty everywhere a reader starts; the owner
+wants the site readable in their language throughout.
+
+**Alternatives considered.**
+- **Subdomains (`de.eu27.cloud`).** *Why not:* the owner chose a remembered choice; subdomains need DNS and
+  Vercel work and turn each state page into a second address.
+- **A marker path (`/lang/de/…`).** *Why not:* not chosen; longer addresses for a site with no traffic yet.
+- **All 24 languages at once.** *Why not:* the owner chose a first set; the pipeline proves itself on six.
+- **Translating the fact-check verdicts.** *Why not:* above.
+
+**Closes off.** A language in the address of a page that is not a state page; a translated page without the unread
+notice while its language has no reading.
+
+- **Stage 2 (done 2026-10-21): the site catalog.** The English stays in the code as the key: `tx('…')` and `txr('…')`
+  (an element inside a sentence) translate at render, `m('…')` marks prose in data files. `model/i18n_site.py`
+  extracts every call into `docs/i18n/site/SOURCE.md` (476 strings) and checks the six drafts in
+  `docs/i18n/site/<lang>.md`: English in step, placeholders kept, every ICU plural block with the language's CLDR
+  categories, every cell reviewed by the other model. Unlike the 47 core strings, a site string is admitted per
+  cell: an English edit makes one new string that prints in English until its translation is drafted and reviewed,
+  instead of taking the language offline; `python3 model/i18n_site.py stale` lists them. Counts print in the page's
+  language (`num`, and plain number arguments). The owner kept "verified" in the English counts and had the English
+  plurals fixed ("1 sources"), which changed nine strings before review closed.
+
+- **Stage 3 (done 2026-10-21): the model's own wording.** A sentence the model fills per state or per build is a
+  pattern: `document.msg(role, pattern, **args)` keeps the English `t` the PDFs, GOAL.md and English pages print,
+  byte for byte, and adds `m` and `a`. The extractor reads the bundle too: patterns and their translatable arguments,
+  static labels, method notes and gaps, closed values ("Yes", "High"), section titles, holding-class names and the
+  ranking's group names and questions (184 strings), and reports any static text still naming a state or carrying a
+  build count. `modelText` translates a span on a page in another language, naming a state in that language from
+  the browser's own data (`Intl.DisplayNames`). Facts, and the fact check's reasons, are evidence and stay as
+  written; "Disputed:" is translated, its reason is not. Where the methodology's graphics parse the English (the
+  priority formula), a translated page shows the translated rule as text.
+
+- **All 24 languages (done 2026-10-21, at the request of Marco Buhlmann: "add the remaining EU languages").** The
+  other 17 official languages join the site set in `STRINGS.md` and `site.json`, through the same pipeline: each
+  catalog drafted by one model, reviewed cell by cell by the other (408 fixes), every applied fix read again by the
+  first (7 more). This supersedes the alternative "all 24 at once", rejected while the pipeline was unproven; six
+  languages proved it. Lessons the reviews kept finding went into the drafting brief: national institution names
+  as generic labels, the verify word on the machine's fact check, `one` covering 21 or 101, English prepositions
+  calqued. A cross-check changed seven live core cells that used a language's verified word for sourced or
+  checked, or disagreed with the same language elsewhere. Nine languages name the fact check with their
+  verify root (Vérification des faits, Overenie faktov), the ordinary term for fact-checking; the owner kept
+  them (2026-10-21, "keep the fact check names as they are"), so a review does not flag them. The rule that
+  checked and verified are two words holds everywhere else.
+
+**Verified:** 2026-10-21, stages 1 and 2. `web/src/__tests__/i18n.test.ts` (page language for a choice; what the
+switch offers; named, nested and plural arguments; `txr`); Playwright: a choice made on `/` holds on `/sources` and
+`/nl`, an explicit `/de/en` wins, `/be` lists its languages first; the English pages pixel-identical through the
+conversion (visual baselines unchanged); `python3 model/i18n_site.py check` with every cell `ok` after four rounds
+(drafted by one model, reviewed by the other: 179 fixes in round one, 7 in round two, 0 after); the full gate and
+browser profiles as recorded in `CHANGELOG.md`. **NOT YET:** stage 3; a reading per language.
+
+*Would change if:* search or sharing matters before the site is promoted, in which case the language moves into
+the address (the subdomain option) and the stored choice becomes a redirect; or a site language is withdrawn under
+#112, in which case it leaves `site.json` and the switch with it.
+
 
 ### 114. The mobile reader is rebuilt from the workspace template on the content model, English only, with no release
 **Superseded in part by #119** (2026-10-16): the closure "EAS, store accounts or a build before the launch gate" is
@@ -3497,8 +3723,27 @@ cannot link to, and `docs/plans/stichting.md` deferred the notice to the foundat
 of processing; or a processor is added or dropped, which `tests/test_privacy.py` turns into a failing build.
 
 ### 122. The reader speaks the EU's 24 languages, interface, labels and gaps, and a language ships when a person has read it
+**Scoped to the reader 2026-11-09**, when the branch landed on a `main` that had meanwhile served the site in 24
+languages under #111–#113. The two admissions differ on purpose and stay apart, at the owner's request ("keep both,
+scoped"):
+- **The site follows #112.** A state page or the site chrome serves a language once its two-model review is clean,
+  with no person's reading, and says `notice.unread` until one is recorded.
+- **The reader follows this entry.** An app build is harder to take back than a page, so a reader language also
+  needs a `- Read by (<lang>):` line.
+- Both read the same drafts. They write to different places: `model/i18n_admit.py` writes `model/i18n/`, and
+  `model/i18n.py` writes `model/i18n-reader/` and `mobile/assets/i18n/catalogue.json`. Each deletes what it did not
+  write in its own directory, so neither may write into the other's. The 42 `fix` verdicts counted below were
+  applied on `main` on 2026-10-20 and re-reviewed as `ok`, which this admission accepts.
+
+**Rejected at the merge:** the reader taking #112's rule, because an unread machine translation would ship inside a
+binary; and the site taking this entry's, because that would withdraw the languages it serves.
+
+**Verified (scoping):** 2026-11-09, on the merge of `origin/main` `1802533`. `python3 -m unittest tests.test_i18n
+tests.test_i18n_reader tests.test_notes tests.test_i18n_drafts`: 23 tests OK. `python3 model/i18n.py check`: 1
+language admitted (en), 270 keys, 0 of 32 state columns admitted, 0 problems.
+
 **Decision.** 2026-10-19. The mobile reader (`mobile/`) gets its interface in the EU's 24 official languages, not
-27 per-state locales: one admitted table per language (`model/i18n/<lang>.json`), each state opening in its first
+27 per-state locales: one admitted table per language (`model/i18n-reader/<lang>.json`; `model/i18n/` is the site's, #111), each state opening in its first
 official language (BE nl/fr/de, LU lb/fr/de, FI fi/sv, IE ga/en, MT mt/en). Translated: the chrome keyed in
 `docs/i18n/STRINGS.md`, the reader's own strings in `docs/i18n/STRINGS-reader.md`, and the content model's label
 and gap texts (116 on 2026-10-19: table labels, country names, "Not yet sourced"), which `model/i18n.py strings`
@@ -3510,8 +3755,8 @@ native speaker (`- Read by (<lang>): <role>, <date>`); until then the app does n
 generated `mobile/assets/i18n/catalogue.json` through a small `src/i18n/` of its own plus `expo-localization`
 for the device's languages; the reader's choice is one file on the device. `mobile/` is first brought up to the template's pins
 (`templates/rn-supabase`, Expo 58), not re-scaffolded. This is the decision `docs/plans/localisation-plan.md` §6
-reserved as "#114" (a number since taken by the reader), for the app; the web's language segment stays that
-plan's stage 2 and needs its own entry. It settles `docs/plans/mobile-app.md` owner decision 3 (facts stay
+reserved as "#109", for the app; the web's language segment stays that plan's stage 2 and needs its own entry
+(it got #111–#113 on `main`). It settles `docs/plans/mobile-app.md` owner decision 3 (facts stay
 English) and makes decision 4 moot (no language ships unread, Irish and Maltese included).
 
 **Problem.** The owner asked for the app in every EU language. The groundwork exists but is staging: 27

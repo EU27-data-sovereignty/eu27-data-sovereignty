@@ -1,26 +1,79 @@
 import { useEffect } from 'react'
 import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom'
 
+import { LanguageSwitch } from './LanguageSwitch'
 import { ProvenanceNotice } from './ProvenanceNotice'
 import { CORRECTIONS_URL } from '@/data/contribute'
+import { lookup, servedLanguages, stateOf, useLang, useT, useTx, type Key } from '@/i18n'
+import { useDisclosure } from '@/utils/disclosure'
+import { countryPath } from '@/utils/routes'
 import { useTheme } from '@/utils/theme'
 
-const NAV = [
-  { to: '/', label: 'Overview', end: true },
-  { to: '/sovereignty', label: 'Ranking' },
-  { to: '/countries', label: 'Countries' },
-  { to: '/holdings', label: 'Critical holdings' },
-  { to: '/infrastructure', label: 'Hosting' },
-  { to: '/sources', label: 'Sources' },
-  { to: '/ask', label: 'Ask' },
-  { to: '/methodology', label: 'Methodology' },
-  { to: '/fact-check', label: 'Fact check' },
+// Labels are keys into the language tables (#111), so a state's page served in its language names them in it.
+const NAV: { to: string; label: Key; end?: boolean }[] = [
+  { to: '/', label: 'nav.overview', end: true },
+  { to: '/sovereignty', label: 'nav.ranking' },
+  { to: '/countries', label: 'nav.countries' },
+  { to: '/holdings', label: 'nav.holdings' },
+  { to: '/infrastructure', label: 'nav.hosting' },
 ]
+
+// How the evidence was gathered and checked: one entry in the bar, opened as a short list, so the bar names
+// what the site finds and this names how it knows.
+const ABOUT_THE_DATA: { to: string; label: Key }[] = [
+  { to: '/sources', label: 'nav.sources' },
+  { to: '/methodology', label: 'nav.methodology' },
+  { to: '/fact-check', label: 'nav.factcheck' },
+]
+
+// Last: it draws on every page before it.
+const ASK: { to: string; label: Key } = { to: '/ask', label: 'nav.ask' }
+
+// py-1: a 30 px tap target, over WCAG 2.2's 24 px minimum (#92).
+const LINK = 'inline-block py-1 '
+const ACTIVE =
+  'text-[var(--color-accent-text)] underline decoration-[var(--color-eu-gold)] decoration-2 underline-offset-8'
+const IDLE = 'text-[var(--color-fg-secondary)] hover:text-[var(--color-accent-text)]'
+const navClass = ({ isActive }: { isActive: boolean }) => LINK + (isActive ? ACTIVE : IDLE)
 
 export function Layout({ generated, provenance }: { generated: string; provenance: string }) {
   const [mode, setMode] = useTheme()
   const { pathname, hash } = useLocation()
   const home = pathname === '/'
+  const lang = useLang()
+  const { tag } = lang
+  const t = useT()
+  const { tx, txr } = useTx()
+
+  // The document's language is the page's: `de-DE` on a German page, so a screen reader speaks it as German.
+  // The tab title follows it.
+  const title = t('site.title')
+  useEffect(() => {
+    document.documentElement.lang = tag
+    document.title = title
+  }, [tag, title])
+
+  // A state's page names its other languages as `hreflang` alternates, English as `x-default` (plan §3a).
+  const iso = stateOf(pathname)
+  useEffect(() => {
+    if (!iso) return
+    const served = servedLanguages(iso)
+    if (served.length < 2) return
+    const href = (i: number) =>
+      `${window.location.origin}${countryPath(iso, i === 0 ? undefined : served[i]!.lang)}`
+    const links = [
+      ...served.map((l, i) => [l.tag, href(i)]),
+      ['x-default', href(served.length - 1)],
+    ].map(([hreflang, url]) => {
+      const link = document.createElement('link')
+      link.rel = 'alternate'
+      link.hreflang = hreflang!
+      link.href = url!
+      document.head.appendChild(link)
+      return link
+    })
+    return () => links.forEach(l => l.remove())
+  }, [iso])
 
   // A client-side route change neither scrolls to a #section nor returns to the top, as a page load would.
   // Do both, one frame later, once the new page has rendered. Back and forward keep the browser's own
@@ -42,7 +95,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:m-2 focus:rounded focus:bg-[var(--color-bg-card)] focus:p-2"
       >
-        Skip to content
+        {tx('Skip to content')}
       </a>
 
       {/* The header of the EU27.CLOUD landing design (#101): white, 68 px, a soft shadow. */}
@@ -51,7 +104,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
           <NavLink
             to="/"
             end
-            aria-label="EU27.CLOUD home"
+            aria-label={tx('EU27.CLOUD home')}
             className="flex shrink-0 items-center gap-3.5"
           >
             <img
@@ -64,65 +117,41 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             <span aria-hidden="true" className="h-11 w-px bg-[var(--color-border)]" />
             <img
               src="/brand/eu27-wordmark.png"
-              alt="EU27.CLOUD — European Union Data Sovereignty Initiative"
+              alt={tx('EU27.CLOUD — European Union Data Sovereignty Initiative')}
               width={1200}
               height={236}
               className="logo-light h-9 w-auto"
             />
             <img
               src="/brand/eu27-wordmark-white.png"
-              alt="EU27.CLOUD — European Union Data Sovereignty Initiative"
+              alt={tx('EU27.CLOUD — European Union Data Sovereignty Initiative')}
               width={1200}
               height={236}
               className="logo-dark h-9 w-auto"
             />
           </NavLink>
           <nav
-            aria-label="Main"
+            aria-label={tx('Main')}
             className="ml-auto flex flex-wrap items-center gap-x-7 gap-y-2 text-[15px] font-medium"
           >
             {NAV.map(n => (
-              <NavLink
-                key={n.to}
-                to={n.to}
-                end={n.end}
-                // py-1: a 30 px tap target, over WCAG 2.2's 24 px minimum (#92).
-                className={({ isActive }) =>
-                  'inline-block py-1 ' +
-                  (isActive
-                    ? 'text-[var(--color-accent-text)] underline decoration-[var(--color-eu-gold)] decoration-2 underline-offset-8'
-                    : 'text-[var(--color-fg-secondary)] hover:text-[var(--color-accent-text)]')
-                }
-              >
-                {n.label}
+              <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>
+                {t(n.label)}
               </NavLink>
             ))}
+            <AboutTheData />
+            <NavLink to={ASK.to} className={navClass}>
+              {t(ASK.label)}
+            </NavLink>
           </nav>
           <div className="flex items-center gap-3">
-            {/* English is the only language so far: the control states it and does nothing yet. */}
-            <button
-              type="button"
-              aria-label="Language: English"
-              className="inline-flex min-h-11 items-center gap-2.5 rounded-lg border-[1.5px] border-[var(--color-accent-text)] bg-[var(--color-bg-card)] px-4 text-[15px] font-semibold text-[var(--color-accent-text)]"
-            >
-              EN
-              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                <path
-                  d="M3 5l4 4 4-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <LanguageSwitch />
             {/* Shows the mode it switches to: a sun while dark, a moon while light. */}
             <button
               type="button"
               onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-              aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              title={mode === 'dark' ? 'Light mode' : 'Dark mode'}
+              aria-label={mode === 'dark' ? tx('Switch to light mode') : tx('Switch to dark mode')}
+              title={mode === 'dark' ? tx('Light mode') : tx('Dark mode')}
               className="grid h-11 w-11 place-items-center rounded-lg border border-[var(--color-border)] text-[var(--color-fg-secondary)] hover:border-[var(--color-accent-text)] hover:text-[var(--color-accent-text)]"
             >
               {mode === 'dark' ? <SunIcon /> : <MoonIcon />}
@@ -133,6 +162,21 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
 
       {/* The front page lays out its own full-width hero and band; every other page sits in the column. */}
       <main id="main" className={home ? '' : 'mx-auto max-w-6xl px-4 py-8'}>
+        {lang.read ? null : (
+          // Served before anyone who reads the language has checked it (#112, #113): every such page says so,
+          // in its language and in English.
+          <div className={home ? 'mx-auto max-w-6xl px-4 pt-6' : ''}>
+            <div
+              role="note"
+              className="mb-6 max-w-3xl rounded border-l-4 border-[var(--color-gap-mark)] bg-[var(--color-bg-emphasis)] px-4 py-3 text-sm"
+            >
+              <p lang={tag}>{t('notice.unread')}</p>
+              <p lang="en" className="mt-1 text-[var(--color-fg-secondary)]">
+                {lookup('en')('notice.unread')}
+              </p>
+            </div>
+          </div>
+        )}
         <Outlet />
       </main>
 
@@ -144,7 +188,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
             <NavLink
               to="/"
               end
-              aria-label="EU27.CLOUD, European Union Data Sovereignty Initiative"
+              aria-label={tx('EU27.CLOUD, European Union Data Sovereignty Initiative')}
               className="mb-4 flex items-center gap-3"
             >
               <img
@@ -169,19 +213,82 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
                 className="logo-dark h-9 w-auto"
               />
             </NavLink>
-            MIT licensed. Independent research, not affiliated with any government or EU body.
-            Corrections and sources welcome via{' '}
-            <a className="underline" href={CORRECTIONS_URL}>
-              the corrections form
-            </a>
-            .{' '}
+            {tx('MIT licensed.')}{' '}
+            {tx('Independent research, not affiliated with any government or EU body.')}{' '}
+            {txr('Corrections and sources welcome via {link}.', {
+              link: (
+                <a className="underline" href={CORRECTIONS_URL}>
+                  {tx('the corrections form')}
+                </a>
+              ),
+            })}
+            {' '}
             <NavLink className="underline" to="/privacy">
-              Privacy
+              {tx('Privacy')}
             </NavLink>
             .
           </div>
         </div>
       </footer>
+    </div>
+  )
+}
+
+/**
+ * "About the data": a disclosure button over Sources, Methodology and Fact check. A plain list of links, not an
+ * ARIA menu, so Tab and the screen reader's link list work as they do in the rest of the bar. Opening and
+ * closing is `useDisclosure`'s, shared with the language switch.
+ */
+function AboutTheData() {
+  const { pathname } = useLocation()
+  const t = useT()
+  const { open, rootProps, buttonProps, panelProps } = useDisclosure()
+  const here = ABOUT_THE_DATA.some(n => pathname === n.to || pathname.startsWith(`${n.to}/`))
+
+  return (
+    <div {...rootProps} className="relative">
+      <button
+        {...buttonProps}
+        className={`${LINK}inline-flex items-center gap-1.5 ${here ? ACTIVE : IDLE}`}
+      >
+        {t('nav.about')}
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 14 14"
+          aria-hidden="true"
+          className={open ? 'rotate-180' : ''}
+        >
+          <path
+            d="M3 5l4 4 4-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <ul
+        {...panelProps}
+        className="absolute top-full right-0 z-20 sm:right-auto sm:left-0 mt-2 min-w-48 rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 shadow-[0_8px_24px_rgb(0_0_0/0.18)]"
+      >
+        {ABOUT_THE_DATA.map(n => (
+          <li key={n.to}>
+            <NavLink
+              to={n.to}
+              className={({ isActive }) =>
+                'block rounded-md px-3 py-2 ' +
+                (isActive
+                  ? 'bg-[var(--color-bg-emphasis)] text-[var(--color-accent-text)]'
+                  : 'text-[var(--color-fg-secondary)] hover:bg-[var(--color-bg-emphasis)] hover:text-[var(--color-accent-text)]')
+              }
+            >
+              {t(n.label)}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

@@ -3,7 +3,7 @@
 The admitted interface catalogue (#122): which languages the reader may show, and in what words.
 
     python3 model/i18n.py strings   # rewrite the generated labels-and-gaps table in docs/i18n/STRINGS-reader.md
-    python3 model/i18n.py admit     # write model/i18n/ and mobile/assets/i18n/catalogue.json from the drafts
+    python3 model/i18n.py admit     # write model/i18n-reader/ and mobile/assets/i18n/catalogue.json from the drafts
     python3 model/i18n.py check     # all three are what the commands above would write; exit 1 otherwise
     python3 model/i18n.py why       # per state column: admitted, or the first reason it is not
 
@@ -34,7 +34,7 @@ import i18n_drafts as drafts  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 BUNDLE = ROOT / "web" / "public" / "data" / "eu27.json"
-OUT = ROOT / "model" / "i18n"
+OUT = ROOT / "model" / "i18n-reader"  # model/i18n/ is the site's, written by i18n_admit.py (#111)
 CATALOGUE = ROOT / "mobile" / "assets" / "i18n" / "catalogue.json"
 START, END = "<!-- generated:start -->\n", "<!-- generated:end -->"
 
@@ -180,17 +180,17 @@ def build() -> tuple[dict[str, str], list[str]]:
     en = english()
     sources = [drafts.STRINGS, drafts.READER_STRINGS]
     files = {
-        "model/i18n/en.json": _dump({
+        "model/i18n-reader/en.json": _dump({
             "lang": "en", "name": AUTONYMS["en"], "strings": en, "overlays": {},
             "provenance": [{"source": str(p.relative_to(ROOT)), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
                            for p in sources],
         }),
     }
     columns, report = admitted_columns()
-    languages = {"en": json.loads(files["model/i18n/en.json"])}
+    languages = {"en": json.loads(files["model/i18n-reader/en.json"])}
     for lang in sorted(columns):
         languages[lang] = merge(lang, columns[lang], list(en))
-        files[f"model/i18n/{lang}.json"] = _dump(languages[lang])
+        files[f"model/i18n-reader/{lang}.json"] = _dump(languages[lang])
     _, states = drafts.spec()
     index = {
         "languages": sorted(languages),
@@ -198,7 +198,7 @@ def build() -> tuple[dict[str, str], list[str]]:
         "files": {name.split("/")[-1]: hashlib.sha256(body.encode()).hexdigest()
                   for name, body in sorted(files.items())},
     }
-    files["model/i18n/index.json"] = _dump(index)
+    files["model/i18n-reader/index.json"] = _dump(index)
     files[str(CATALOGUE.relative_to(ROOT))] = _dump({"languages": languages, "states": index["states"]})
     return files, report
 
@@ -212,7 +212,7 @@ def admit() -> int:
     CATALOGUE.parent.mkdir(parents=True, exist_ok=True)
     for rel, body in files.items():
         (ROOT / rel).write_text(body, encoding="utf-8")
-    langs = json.loads(files["model/i18n/index.json"])["languages"]
+    langs = json.loads(files["model/i18n-reader/index.json"])["languages"]
     print(f"admitted {len(langs)} language(s): {', '.join(langs)}; wrote {len(files)} files")
     return 0
 
@@ -234,7 +234,7 @@ def check() -> int:
     for stray in sorted(OUT.glob("*.json")) if OUT.exists() else []:
         if str(stray.relative_to(ROOT)) not in files:
             problems.append(f"{stray.relative_to(ROOT)}: not admitted from any draft")
-    langs = json.loads(files["model/i18n/index.json"])["languages"]
+    langs = json.loads(files["model/i18n-reader/index.json"])["languages"]
     print(f"{len(langs)} language(s) admitted ({', '.join(langs)}), {len(english())} keys, "
           f"{sum(1 for r in report if r.endswith('admitted'))} of {len(report)} state columns admitted, "
           f"{len(problems)} problems")
