@@ -213,6 +213,13 @@ fi
 if in_group web; then
 cd web
 
+step "No high-severity advisories in the shipped dependencies"
+# The same two audits as gate.yml's web job, so a local run fails where CI does (it did not, on 2026-10-23).
+# Needs the registry; offline, npm audit fails and says why.
+(cd .. && npm audit --audit-level=high > /dev/null) || { echo -e "${RED}❌ npm audit (root) found a high advisory or could not reach the registry; run npm audit${NC}"; exit 1; }
+npm audit --audit-level=high > /dev/null || { echo -e "${RED}❌ npm audit (web/) found a high advisory or could not reach the registry; run npm audit --prefix web${NC}"; exit 1; }
+ok "npm audit: no high advisories at the root or in web/"
+
 step "TypeScript types"
 npm run --silent type-check
 ok "tsc --noEmit clean"

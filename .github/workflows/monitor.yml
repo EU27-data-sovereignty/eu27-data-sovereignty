@@ -77,5 +77,9 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.14"
+      # pipefail: without it tee's exit status is the step's, and --require never failed the job. The runs of
+      # 2026-10-25, 10-26, 11-06 and 11-09 printed not_configured and were green.
       - name: Ask one question
-        run: python3 model/ask_smoke.py --site https://eu27.cloud ${{ vars.ASK_LIVE == 'true' && '--require' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"
+        run: |
+          set -o pipefail
+          python3 model/ask_smoke.py --site https://eu27.cloud ${{ vars.ASK_LIVE == 'true' && '--require' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"

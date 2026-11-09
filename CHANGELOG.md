@@ -22,6 +22,32 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Tests.** The reader's admission tests move to `tests/test_i18n_reader.py`, beside the site's `tests/test_i18n.py`.
   Their fixture now opens a `fix` itself, because the drafts on disk no longer carry one.
 
+### Fixed: no high-severity advisory in `web/`, and `./test.sh` runs the audit CI runs
+
+- `undici` 8.11.2 → 8.12.4 (through jsdom) and `zod` 4.5.4 → 4.6.7 (through eslint-plugin-react-hooks): both are
+  transitive, so only `web/package-lock.json` changes. `npm audit --audit-level=high` passes at the root and in
+  `web/`.
+- `./test.sh`'s web group runs both audits, as `gate.yml` does, so the local gate no longer passes where CI fails.
+  13 moderate advisories remain (TODO.md).
+
+### Fixed: the daily `/ask` check fails when `/ask` does
+
+- The Monitor piped `ask_smoke.py --require` into `tee` without `pipefail`, so the job took `tee`'s exit status
+  and stayed green while `/ask` answered `not_configured` (2026-10-25, 10-26, 11-06 and 11-09). The step now
+  sets `pipefail`, as the source recheck step already did. The outage itself is an owner item in TODO.md.
+
+### Fixed: the mobile reader's suite passes again, on the latest SDK 58 patches
+
+- 13 packages move to the versions `expo-doctor` expects for SDK 58, as exact pins: `expo` 58.0.14 → 58.0.23,
+  `expo-router` 58.0.23 → 58.0.30, `react-native` 0.88.0 → 0.88.1, `jest-expo` 58.0.11 → 58.0.14, and nine more.
+  The new lockfile brings `node-forge` 1.4.3, past six high advisories published since 2026-10-23.
+- `mobile/audit-allowlist.json` is empty: the three advisories it accepted (`node-forge`, `braces`, `uuid`) are no
+  longer reported.
+- `mobile/src/data/types.ts` takes `main`'s `key` field on a block title, so it matches the web file byte for byte
+  again.
+- `react-native` moved, so the native fingerprint changes and the next release is a store build, not an
+  over-the-air update (TODO.md). No release runs until `EXPO_PROJECT_ID` is set.
+
 ## 2026-10-23
 
 ### Added: the Draghi report, archived and read against the 27 states (#123)

@@ -151,7 +151,7 @@ jobs:
         run: npm ci --prefix mobile
       # mobile/test.sh --ci: parity with web/, the split edition against its manifest, the generated tokens,
       # format, lint, types, unit tests with coverage floors, expo-doctor, the web export, and npm audit
-      # against mobile/audit-allowlist.json (two Expo-toolchain advisories have no patched release).
+      # against mobile/audit-allowlist.json (empty since 2026-11-09: every advisory there was patched).
       - name: Run the mobile group
         run: ./test.sh --only mobile
 

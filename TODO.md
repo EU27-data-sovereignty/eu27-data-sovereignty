@@ -11,11 +11,22 @@ produced: [`METHOD.md`](METHOD.md).
 - [x] Full fact check recorded; `factcheck.py gate` exits 0 at 1,309 of 1,309 (2026-10-02)
 - [x] Fast-forwarded `main` to `feat/fact-check` and pushed (2026-10-02); `Deploy` run 37072208296 green;
       live at https://eu27.cloud (noindex); recorded in `DEPLOYMENT.md`
-- [ ] Dependabot: 4 open (2 high, 2 moderate), all in `mobile/package-lock.json` (2026-10-05); `web/` is
+- [x] Dependabot: 4 open (2 high, 2 moderate), all in `mobile/package-lock.json` (2026-10-05); `web/` is
       clean. The rebuilt lockfile (#114) carries the same four Expo-toolchain transitives, allowlisted with reasons
-      in `mobile/audit-allowlist.json`; **owner:** dismiss them in the Security tab with those reasons
+      in `mobile/audit-allowlist.json`; **owner:** dismiss them in the Security tab with those reasons. Fixed rather than
+      dismissed on 2026-11-09: the SDK 58 patch pins bring `node-forge` 1.4.3 and drop the others, so the allowlist
+      is empty and the alerts close when the lockfile reaches `main`
 - [x] `security` workflow green on every push since 2026-10-03 (calls the shared workflow, `71d84ba`)
 - [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
+- [ ] **Owner, blocks the next deploy:** production `/ask` answers `unconfigured`, which `api/_ask-core.ts` returns
+      when the Anthropic API answers 401: the key in Vercel (set 35 days ago) is rejected. It comes and goes: the
+      Monitor saw `ok` up to 2026-10-19, `not_configured` from 10-25, `ok` from 10-29 to 11-02, and
+      `not_configured` from 11-06 to today, 2026-11-09. The deploy's live check (`./test.sh --only live`,
+      `--require`) would fail and roll back any push to `main`. Check the key and its workspace in the Anthropic
+      console, re-set it with `vercel env`, then `./test.sh --only live`
+- [ ] The Monitor's Eurostat step pipes into `tee` without `pipefail`, as `/ask`'s did until 2026-11-09, so its
+      exit status never fails the job. Decide whether "reported, never applied" means it should stay green on a
+      new vintage, and add `set -o pipefail` if not (2026-11-09)
       (author), then the 12-question eval (with approval), then the Vercel Firewall rate limit
 
 ## Fact check and methodology (#87, #88)
@@ -209,15 +220,21 @@ Open
       whether the exception reaches their registers (`DRAGHI-REPORT.md` §4, 2026-10-23)
 
 ## Testing
-- [ ] `./test.sh` fails in `mobile/test.sh` as of 2026-10-23, not from any change in `mobile/`: `doctor` (Expo has
+- [x] `./test.sh` fails in `mobile/test.sh` as of 2026-10-23, not from any change in `mobile/`: `doctor` (Expo has
       published SDK 58 patch releases above the pins, e.g. `expo` 58.0.17 vs 58.0.14) and `audit` (the `braces`
       advisory GHSA-vfj7-8cjw-p6xm is allowlisted but no longer reported, so the allowlist is stale). Bump the pins to
-      the template's and drop the stale row, in its own change (found while committing #123)
-- [ ] CI's `npm audit --audit-level=high --prefix web` fails as of 2026-10-23 (run 40009608303): `vite` 8.2.0–8.2.2
+      the template's and drop the stale row, in its own change (found while committing #123). Done 2026-11-09: 13 packages
+      to the latest SDK 58 patches as exact pins (`expo` 58.0.23, `react-native` 0.88.1), one patch above the
+      template's `expo` 58.0.22, which is what `expo-doctor` asks for; the allowlist is empty
+- [x] CI's `npm audit --audit-level=high --prefix web` fails as of 2026-10-23 (run 40009608303): `vite` 8.2.0–8.2.2
       (high, GHSA-9jrq-w75r-8gcw and five more; fix in 8.3.5) and `vitest`/`@vitest/mocker` 5.0.0-beta.1–5.0.2
       (moderate; fix in 5.0.5), all dev dependencies of `web/`. Local `./test.sh --only web` does not run this audit,
       so the gate passed here and failed in CI: bump the exact pins in their own change, and consider adding the audit
-      to `./test.sh` so the two agree
+      to `./test.sh` so the two agree. Done 2026-11-09: `main`'s vite 8.2.4 is no longer flagged; the two highs left
+      (`undici` 8.12.4, `zod` 4.6.7, both transitive) are lockfile-only fixes; `./test.sh`'s web group now runs both audits
+- [ ] `npm audit --prefix web` still reports 13 moderate advisories (2026-11-09): `vitest`/`@vitest/coverage-v8` 5.0.0
+      (fix in 5.1.0, an exact-pin bump), and `eslint` 10 / `typescript-eslint` through `minimatch`, where npm's only
+      offer is a major downgrade to eslint 9. The gate blocks on high only
 - [x] Web suites in CI: `ci.yml` runs `./test.sh --no-pdf` on pull requests (Vitest, Playwright, API
       type-check); `deploy.yml` runs the full `./test.sh`
 

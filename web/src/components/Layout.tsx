@@ -221,8 +221,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
                   {tx('the corrections form')}
                 </a>
               ),
-            })}
-            {' '}
+            })}{' '}
             <NavLink className="underline" to="/privacy">
               {tx('Privacy')}
             </NavLink>
