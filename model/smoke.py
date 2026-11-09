@@ -16,7 +16,7 @@ Checked: every route a reader can open answers 200 with HTML; the EU-27 report, 
 4 report previews answer with their type; every security header `vercel.json` sets on `/(.*)` is served as
 set; indexing is still off (robots and `X-Robots-Tag`); `www` redirects to the apex; the TLS certificate is
 valid for at least `--min-days` more days; and, with `--bundle`, the served data bundle is the committed one.
-With `--edition-url`, the mobile reader's edition channel (#111, model/edition.py) serves the committed
+With `--edition-url`, the mobile reader's edition channel (#116, model/edition.py) serves the committed
 manifest and every part under it, read anonymously; an empty URL (the owner has not created the project yet)
 is reported as not configured and does not fail. `--site ''` skips the site and checks the channel alone.
 """

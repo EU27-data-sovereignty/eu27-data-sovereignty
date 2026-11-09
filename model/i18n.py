@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The admitted interface catalogue (#117): which languages the reader may show, and in what words.
+The admitted interface catalogue (#122): which languages the reader may show, and in what words.
 
     python3 model/i18n.py strings   # rewrite the generated labels-and-gaps table in docs/i18n/STRINGS-reader.md
     python3 model/i18n.py admit     # write model/i18n/ and mobile/assets/i18n/catalogue.json from the drafts

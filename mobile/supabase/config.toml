@@ -1,4 +1,4 @@
-# Local Supabase for the edition channel (#111): one Storage bucket, nothing else. `supabase start` on
+# Local Supabase for the edition channel (#116): one Storage bucket, nothing else. `supabase start` on
 # Colima applies supabase/migrations and runs the stack mobile/test.sh --integration publishes to.
 # The hosted project (EU region, created by the owner) gets the same migration with `supabase db push`.
 # project_id is fixed, not derived from the directory name ("mobile"), so it cannot collide with

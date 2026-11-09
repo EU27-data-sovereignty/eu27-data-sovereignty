@@ -1,5 +1,5 @@
 /**
- * The app's own over-the-air update (#115): a port the screens drive, with every outcome reported, and
+ * The app's own over-the-air update (#120): a port the screens drive, with every outcome reported, and
  * nothing reached unless the port is enabled and the reader asked.
  */
 import { checkForAppUpdate, describeAppUpdate, noAppUpdates } from '../src/update/appUpdate';

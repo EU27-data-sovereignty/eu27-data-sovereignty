@@ -3,7 +3,7 @@
 A log of the work behind [`mobile/`](../../mobile/README.md), newest first, in the shape of
 [`technical-universities-log.md`](technical-universities-log.md). Each entry records who or what produced it,
 what the owner asked, what was decided and why, what changed, how it was checked, and what is still open. The
-decisions of record are `DECISIONS.md` #109 to #113; this log is the working narrative behind them, not a second
+decisions of record are `DECISIONS.md` #114 to #118; this log is the working narrative behind them, not a second
 copy. Planning, not data: nothing here is read by the model, the book, the web app, `/ask` or the app.
 
 ## 2026-10-14 — the reader rebuilt on the content model, the edition channel built and proven locally
@@ -22,7 +22,7 @@ workflow as the only writer; English only, no store release, no EAS; replacing `
 
 ### Decisions
 
-1. **Rebuild, not port** (#109). The old reader's 1,140 lines rendered schema-1 fields that no longer exist. The
+1. **Rebuild, not port** (#114). The old reader's 1,140 lines rendered schema-1 fields that no longer exist. The
    new app takes from `templates/rn-supabase` exactly: `.gitignore`, `.prettierrc`, `.prettierignore` (extended),
    `eslint.config.js`, `tsconfig.json` (extended), `jest.config.js` (rewritten), `expo-env.d.ts`,
    `package-lock.json` (reconciled with `npm install --save-exact` after the dependency list was cut to sixteen),
@@ -31,18 +31,18 @@ workflow as the only writer; English only, no store release, no EAS; replacing `
    else was written for this app. Kept from the old reader: `src/constants/Colors.ts` (generated), the pinned
    copies (regenerated from `web/`), `src/services/supabase.ts` (null when unconfigured, no auth), `.env.template`
    (the same two names), and the ideas of the parity and security suites.
-2. **The parts are generated, the manifest tracked** (#110). A judgment call made in planning and stated as such:
+2. **The parts are generated, the manifest tracked** (#115). A judgment call made in planning and stated as such:
    the 28 parts are a pure function of the committed 7.5 MB bundle, proven by `tests/test_export_split.py`;
    tracking them would add a second 7.5 MB per edition to history. One `.gitignore` line reverses it.
-3. **One stdlib module, `model/edition.py`, for check, publish and verify** (#112), rather than curl lines or the
+3. **One stdlib module, `model/edition.py`, for check, publish and verify** (#117), rather than curl lines or the
    Supabase CLI, so the publisher is unit-tested against a fake Storage server and run against the real one by the
    integration test, and `smoke.py` imports `verify` for the deploy and the weekly monitor.
-4. **A separate `edition` job after the deploy job** (#112), not a step inside it: the service-role key is scoped
+4. **A separate `edition` job after the deploy job** (#117), not a step inside it: the service-role key is scoped
    to one job, the deploy job's rollback condition is untouched, and a publish can only follow a site that was not
    rolled back.
-5. **The check for a newer edition is a tap, with an opt-in automatic check** (#111). A check on every launch would
+5. **The check for a newer edition is a tap, with an opt-in automatic check** (#116). A check on every launch would
    make "Data not collected" untrue of an app that contacts a host on every start.
-6. **The integration round-trip runs in the deploy's gate only** (#113): `supabase start` pulls about a dozen
+6. **The integration round-trip runs in the deploy's gate only** (#118): `supabase start` pulls about a dozen
    images and would be the critical path of every branch push.
 
 ### What changed
@@ -60,7 +60,7 @@ workflow as the only writer; English only, no store release, no EAS; replacing `
   class), `test_evidence.py` (mobile surfaces and `test_the_mobile_app_shows_it`), `test_ignore_rules.py`.
 - `.gitignore`; `model/national_ai_note.py` and `model/sovereign_appliance_note.py` skip `.expo`, `coverage`
   and `supabase` when scanning `mobile/`.
-- Documentation: `DECISIONS.md` #109–#113, `CHANGELOG.md`, `README.md`, `CLAUDE.md`, `docs/testing.md`,
+- Documentation: `DECISIONS.md` #114–#118, `CHANGELOG.md`, `README.md`, `CLAUDE.md`, `docs/testing.md`,
   `docs/ci-cd.md`, `DEPLOYMENT.md`, `ROADMAP.md`, `TODO.md`, `PROGRESS.md`, `artifacts/mobile/STYLE.md`,
   `docs/plans/mobile-app.md` (status), `docs/plans/stichting.md` (one line), this log.
 
@@ -71,7 +71,7 @@ workflow as the only writer; English only, no store release, no EAS; replacing `
 | `python3 -m unittest tests.test_export_split -q` | 13 tests, OK: round trip byte for byte, self-contained parts, every claim in exactly one state part, the two manifests the committed bundle's |
 | `python3 -m unittest tests.test_edition -q` | 12 tests, OK: immutable, idempotent, the pointer last, altered bytes refused by name, the key never on stdout, in a URL or in the summary |
 | `python3 -m unittest tests.test_workflows tests.test_evidence tests.test_ignore_rules tests.test_export_split tests.test_edition tests.test_repeatability -q` | 96 tests, OK |
-| `python3 -m unittest tests.test_docs -q` | OK: #109–#113 carry every part |
+| `python3 -m unittest tests.test_docs -q` | OK: #114–#118 carry every part |
 | `cd mobile && ./test.sh --ci` | 20 steps PASS (gate and integration skipped by flag) |
 | `cd mobile && npx jest --coverage` | 5 suites, 75 tests; 77.5% statements, 70.9% branches, 78.2% functions, 80.8% lines |
 | `cd mobile && npx expo export --platform web` | one bundle, 7.8 MB, the 28 parts inside |
@@ -103,8 +103,8 @@ workflow as the only writer; English only, no store release, no EAS; replacing `
 - **A reading on a device by a person.** The app has run under Jest and as a web export; `./run.sh ios` has not
   been opened in a simulator in this session.
 - **The first Actions timings** of the `mobile` and `mobile-integration` jobs; the ruleset context after two
-  weeks (#113).
+  weeks (#118).
 - **The four Dependabot alerts**, to be dismissed by the owner with the allowlist's reasons.
-- **A signed manifest**, so the channel proves authorship and not only integrity (#111).
+- **A signed manifest**, so the channel proves authorship and not only integrity (#116).
 - **The push to `main`.** The branch is pushed first; `main` only after the owner's OK and `/factcheck` status
   (`./run.sh factcheck status`: no printed fact changed in this work, so nothing is due).

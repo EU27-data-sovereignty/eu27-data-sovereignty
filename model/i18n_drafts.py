@@ -7,11 +7,11 @@ The language drafts under docs/i18n/drafts/: their contract, and the summary tab
 
 A draft is agent output (docs/plans/localisation-plan.md). Nothing renders it: not the bundle, not the
 web app, not the PDFs, not /ask, not the reader. This script only says whether each file keeps the shape
-that admission (model/i18n.py, #117) reads, and whether a second, different agent has gone over every cell.
+that admission (model/i18n.py, #122) reads, and whether a second, different agent has gone over every cell.
 
 A draft has two parts. "Strings" and "Review" cover docs/i18n/STRINGS.md, the site's and the PDFs' chrome.
 "Reader strings" and "Reader review" cover docs/i18n/STRINGS-reader.md, the reader's own strings and the
-content model's labels and gaps (#117); until a draft has that part, it is counted as pending, not as a
+content model's labels and gaps (#122); until a draft has that part, it is counted as pending, not as a
 problem. A review verdict is `ok`, `fix` (with a suggested wording), or `fixed`: the suggestion was applied
 and the cell now reads exactly as suggested.
 """

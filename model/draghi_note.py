@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DRAGHI-REPORT.md: the authored note's contract, its quote register and its archived source (#118).
+DRAGHI-REPORT.md: the authored note's contract, its quote register and its archived source (#123).
 
     python3 model/draghi_note.py check     # the contract, offline and without the PDFs; exit 1 on any problem
     python3 model/draghi_note.py fetch     # download both parts into assets/reports/draghi-2024/ and verify the manifest
@@ -47,7 +47,7 @@ LINKS = ROOT / "docs" / "draghi-report-links.csv"
 QUOTES = ROOT / "docs" / "draghi-quotes.csv"
 MANIFEST = ROOT / "assets" / "reports" / "MANIFEST.csv"
 BUNDLE = ROOT / "web" / "public" / "data" / "eu27.json"
-DECISION = "#118"
+DECISION = "#123"
 
 # A citation's page is the page of the PDF file, which a reader and `pdftotext -f N` find the same way. Part B's
 # printed folios match it; Part A's run two lower (the cover and the colophon carry none), so "A p. 36" is folio 34.

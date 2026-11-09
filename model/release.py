@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The release ledger of the mobile reader (DECISIONS.md #114): generated from EAS, never written by hand.
+The release ledger of the mobile reader (DECISIONS.md #119): generated from EAS, never written by hand.
 
     python3 model/release.py record --build <eas-build-id> [--dir mobile] [--ledger mobile/releases.csv]
     python3 model/release.py check  [--dir mobile] [--ledger mobile/releases.csv]
@@ -94,7 +94,7 @@ def check(app_dir: Path, ledger: Path) -> list[Result]:
 # --------------------------------------------------------------------------- #
 
 def eas_cli(app_dir: Path) -> str:
-    """The one pinned CLI: eas.json's cli.version, run through npx as the deploy does (#114)."""
+    """The one pinned CLI: eas.json's cli.version, run through npx as the deploy does (#119)."""
     version = json.loads((app_dir / "eas.json").read_text(encoding="utf-8"))["cli"]["version"]
     return f"eas-cli@{version}"
 

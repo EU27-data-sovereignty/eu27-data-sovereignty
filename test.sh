@@ -264,7 +264,7 @@ elif [ "$SKIP_MOBILE" = true ]; then
     echo -e "${YELLOW}⚠️  Skipping the mobile stage (--no-mobile)${NC}"
 else
 step "The mobile reader: parity with web/, the split edition, the tokens, and its own suite"
-# mobile/test.sh is the reader's full gate with its own summary table (#113): the 28 parts regenerated and
+# mobile/test.sh is the reader's full gate with its own summary table (#118): the 28 parts regenerated and
 # checked against the manifest and the committed bundle, the three copies of web/ files pinned byte for
 # byte, the generated tokens, format, lint, types, Jest with coverage floors, expo-doctor, the web export
 # and npm audit against mobile/audit-allowlist.json. --ci skips only the local security gate, which the

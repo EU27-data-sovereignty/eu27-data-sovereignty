@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Every check of the mobile reader in one place. Exit 0 = all green. The root gate runs it as the
-# `mobile` group (`./test.sh --only mobile`, #113); `./run.sh test` runs it from here.
+# `mobile` group (`./test.sh --only mobile`, #118); `./run.sh test` runs it from here.
 #
 #   ./test.sh                 everything that needs no Docker and no device
 #   ./test.sh --quick         static checks and unit tests only (no coverage, doctor, web export, audit)
@@ -118,7 +118,7 @@ check_shell() {
 # Tool versions that live outside package.json: the Supabase CLI the deploy's gate installs
 # (../.github/workflows/gate.yml) is an exact x.y.z and the one README.md names; the EAS CLI is one pinned
 # version in eas.json (cli.version, which the CLI enforces on itself) and the deploy's `app` job, run as
-# `npx eas-cli@<that>` and never as a project dependency, which expo-doctor refuses (#114).
+# `npx eas-cli@<that>` and never as a project dependency, which expo-doctor refuses (#119).
 check_tooling() {
     local rc=0 supa readme eas_json eas_deploy
     supa="$(sed -n -E 's/^[[:space:]]*version:[[:space:]]*(.*)$/\1/p' ../.github/workflows/gate.yml | tr -d "'\"" | sort -u)"
@@ -147,7 +147,7 @@ check_tooling() {
 }
 
 # The release workflow runs on EAS only when the deploy's `app` job (or ./run.sh release) asks: no GitHub
-# push may start it, and nothing reaches App Store Connect without the approval job in between (#114).
+# push may start it, and nothing reaches App Store Connect without the approval job in between (#119).
 check_workflows() {
     local rc=0 f
     for f in .eas/workflows/*.yml; do
@@ -166,7 +166,7 @@ check_workflows() {
     return $rc
 }
 
-# The App Store listing (store.config.json) is valid against the pinned CLI's schema (#116). Apple's review
+# The App Store listing (store.config.json) is valid against the pinned CLI's schema (#121). Apple's review
 # contact is required by the schema and lives outside the tree (store.config.js), so the lint runs with
 # placeholders built at runtime: no e-mail-shaped literal may sit in a tracked file (the security gate).
 check_listing() {
@@ -228,7 +228,7 @@ check_scripts() {
     return $rc
 }
 
-# The 28 parts are generated from the committed bundle (#110): regenerate them, so the checks below run on
+# The 28 parts are generated from the committed bundle (#115): regenerate them, so the checks below run on
 # the tree as a fresh checkout would have it.
 check_parts() {
     python3 ../model/export_json.py --split --from ../web/public/data/eu27.json

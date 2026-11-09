@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The edition channel's publisher and verifier (model/edition.py, #111, #112), against a fake Storage server.
+The edition channel's publisher and verifier (model/edition.py, #116, #117), against a fake Storage server.
 
     python3 -m unittest discover -s tests -v
 

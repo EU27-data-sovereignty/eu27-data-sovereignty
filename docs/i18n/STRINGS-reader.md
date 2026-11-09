@@ -1,7 +1,7 @@
 # The reader's strings
 
 The mobile reader's own wording, and the content model's table labels and gap markers, which the reader shows in
-the reader's language once that language is admitted (#117). Facts, quotes, glosses, explanations and sources are
+the reader's language once that language is admitted (#122). Facts, quotes, glosses, explanations and sources are
 never translated here; a printed fact stays in its original-language quote with its machine gloss (#82).
 
 A draft (`drafts/<ISO>.md`) covers this file in its "Reader strings" and "Reader review" sections, every key below,

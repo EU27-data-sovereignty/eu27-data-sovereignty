@@ -1,5 +1,5 @@
 /**
- * The edition store (#110, #111): what it renders, what it accepts from the channel, and what it refuses.
+ * The edition store (#115, #116): what it renders, what it accepts from the channel, and what it refuses.
  * Every case runs the real store on an in-memory file store with a channel the test stocks, so the device
  * runs exactly this logic.
  */

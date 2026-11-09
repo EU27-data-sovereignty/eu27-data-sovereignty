@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The split edition the mobile reader ships (model/export_json.py --split, #110).
+The split edition the mobile reader ships (model/export_json.py --split, #115).
 
     python3 -m unittest discover -s tests -v
 

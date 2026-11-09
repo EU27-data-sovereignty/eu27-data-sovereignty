@@ -103,7 +103,7 @@ competitiveness* (European Commission, September 2024) are in `assets/reports/dr
 `part-b-in-depth-analysis.pdf` (12,060,205 bytes, sha256 `7b872cbbfe9b1b23…`). They were downloaded on 2026-10-23
 from the Commission's download URLs, which are recorded with the full hashes in the tracked
 `assets/reports/MANIFEST.csv`. **The project did not author them.** Their colophon licenses reuse under CC BY 4.0
-(Commission Decision 2011/833/EU). They are gitignored and excluded from Vercel (#118), so the repository distributes
+(Commission Decision 2011/833/EU). They are gitignored and excluded from Vercel (#123), so the repository distributes
 only the manifest, and `python3 model/draghi_note.py fetch` restores and verifies them. `DRAGHI-REPORT.md` quotes them.
 
 Otherwise none: no vendored libraries, fonts, images or datasets. Web dependencies are all resolved through

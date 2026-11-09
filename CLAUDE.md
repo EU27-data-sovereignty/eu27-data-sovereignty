@@ -41,9 +41,9 @@ are recorded: `tests/test_docs.py` enforces it.
 ./test.sh --no-pdf                     # without compiling the PDFs (otherwise missing typst fails)
 ./test.sh --no-live                    # without the live /ask check (one real API call to eu27.cloud)
 ./test.sh --no-mobile                  # without the mobile reader's suite (no mobile/node_modules)
-./test.sh --only model|pdf|web|mobile|e2e|live [--project NAME]   # one stage group; CI runs them as parallel jobs (#97, #113)
+./test.sh --only model|pdf|web|mobile|e2e|live [--project NAME]   # one stage group; CI runs them as parallel jobs (#97, #118)
 ./run.sh                               # dev server, http://localhost:5173
-./run.sh data                          # regenerate briefs, bundle, the split edition (mobile/assets/data, #110) and /ask corpus (pins the epoch)
+./run.sh data                          # regenerate briefs, bundle, the split edition (mobile/assets/data, #115) and /ask corpus (pins the epoch)
 ./run.sh artefacts                     # re-render the 27 tracked posters (needs Chrome)
 ./run.sh export                        # EU-27 report + 27 country PDFs into book/build/
 git push origin main                   # PRODUCTION deploy via .github/workflows/deploy.yml; allowed by .claude/settings.json (#106), still only after the owner's OK in the conversation
@@ -71,20 +71,20 @@ python3 model/provenance.py            # source register coverage per namespace
 ./run.sh national-ai check|links       # the authored note NATIONAL-AI-STRATEGIES.md: its contract; or refetch every URL into the link register (#103)
 ./run.sh appliance check|links         # the authored note SOVEREIGN-APPLIANCE.md: its contract; or refetch every URL into the link register (#104)
 python3 model/i18n_drafts.py check|summary   # the 27 language drafts: complete and cross-reviewed; or rewrite docs/i18n/README.md's table
-python3 model/i18n.py strings|admit|check|why   # the bundle's labels into STRINGS-reader.md; admit read drafts into model/i18n/ and the reader's catalogue (#117)
+python3 model/i18n.py strings|admit|check|why   # the bundle's labels into STRINGS-reader.md; admit read drafts into model/i18n/ and the reader's catalogue (#122)
 python3 model/technical_universities_note.py check|links   # the authored note TECHNICAL-UNIVERSITIES.md: its contract; or refetch every URL into its link register
-python3 model/draghi_note.py check|fetch|quotes|links   # the authored note DRAGHI-REPORT.md: its contract; restore the PDFs; regenerate the quote register from the PDFs; refetch URLs (#118)
+python3 model/draghi_note.py check|fetch|quotes|links   # the authored note DRAGHI-REPORT.md: its contract; restore the PDFs; regenerate the quote register from the PDFs; refetch URLs (#123)
 python3 model/notes.py check|list      # every registered note and draft checker in one go: the test.sh stage; a new note registers here
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
-cd mobile && ./init.sh                 # the reader: npm ci, the 28 parts, an .env.local you may leave empty (#109)
+cd mobile && ./init.sh                 # the reader: npm ci, the 28 parts, an .env.local you may leave empty (#114)
 cd mobile && ./test.sh [--quick|--integration|--offline|--ci]   # its full suite; --integration needs colima start && supabase start
 cd mobile && ./run.sh web|ios|android  # the app; unconfigured, it reads its bundled edition and makes no request
-cd mobile && ./run.sh release          # the EAS release workflow by hand (#114); the deploy's `app` job runs it after the gate
+cd mobile && ./run.sh release          # the EAS release workflow by hand (#119); the deploy's `app` job runs it after the gate
 cd mobile && ./run.sh release record <build-id>   # append an EAS build to mobile/releases.csv (model/release.py)
 cd mobile && ./run.sh build ios|android | update "<msg>" | metadata lint|push|pull   # one EAS step by hand; push needs EAS_REVIEW_EMAIL/PHONE
 python3 model/export_json.py --split --from web/public/data/eu27.json   # the 28 parts + manifest from the committed bundle
-python3 model/edition.py check|publish|verify   # the edition channel: the tree, the deploy's publisher, the bucket read back (#112)
+python3 model/edition.py check|publish|verify   # the edition channel: the tree, the deploy's publisher, the bucket read back (#117)
 
 vercel build --yes && vercel deploy --prebuilt --yes            # protected preview
 vercel curl <path> --deployment <preview-url> -- -sS            # previews need auth; plain curl gets 302
@@ -175,17 +175,17 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   still reads `row[1]` and `row[2]`, so keep the holding and register in those positions.
 - **Withheld labels still feed counts.** `exposure_section` and `sovereignty.py` read the raw
   `foreign_dependency`, including labels the report withholds (TODO.md). Don't build new counts that way.
-- **The mobile reader renders the split edition** (#109, #110). The 28 parts under `mobile/assets/data/` are generated
+- **The mobile reader renders the split edition** (#114, #115). The 28 parts under `mobile/assets/data/` are generated
   from the committed bundle and gitignored; only `manifest.json` is tracked, and it must equal
   `web/public/data/manifest.json` (`./run.sh data` writes both). `mobile/src/data/{types,format,sources}.ts` are
   byte-for-byte copies of the web's files: edit the web file, copy it, same commit. Only the deploy's `edition` job
-  writes the Supabase bucket, with a key that is never on a command line (#112); the app has no write path (#111).
-- **The reader is released through EAS, and the last click is the owner's** (#114–#116). The deploy's `app` job starts
+  writes the Supabase bucket, with a key that is never on a command line (#117); the app has no write path (#116).
+- **The reader is released through EAS, and the last click is the owner's** (#119–#121). The deploy's `app` job starts
   `mobile/.eas/workflows/release.yml` for the deployed commit once `EXPO_PROJECT_ID` is set: build on a native change,
   TestFlight, `require-approval` in the Expo dashboard, the upload to App Store Connect; "Submit for Review" and
   "Release" stay manual there (the launch gate, #25). **A push to `main` is therefore also an over-the-air update of
   the app's JavaScript** when the native fingerprint is unchanged, fetched only when a reader taps "Check for a newer
-  edition" (`checkAutomatically: NEVER`, #115). The EAS CLI is `npx eas-cli@<exact>`, one pin in `mobile/eas.json`
+  edition" (`checkAutomatically: NEVER`, #120). The EAS CLI is `npx eas-cli@<exact>`, one pin in `mobile/eas.json`
   (`cli.version`) and `deploy.yml` (`EAS_CLI`), never a project dependency, which `expo-doctor` refuses
   (`mobile/test.sh` `tooling`; `./run.sh eas <args>` runs it); the workflow may have no `push` trigger and no `submit` without an
   approval; the Expo token lives only in the `production` environment, read from env, never argv
@@ -201,7 +201,7 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   the book, the web app or `/ask` (`tests/test_sovereign_appliance.py`); no ranking language, no currency figure anywhere,
   a member state named only in its Precedents and Sources sections and there only with a URL and access date or
   **[unverified]**; `./run.sh appliance links` after adding or changing a URL.
-- **The language drafts are staging, never rendered; the catalogue is admitted from them** (#117).
+- **The language drafts are staging, never rendered; the catalogue is admitted from them** (#122).
   `docs/i18n/drafts/<ISO>.md` are machine translations of `docs/i18n/STRINGS.md` (45 chrome strings) and, in a
   "Reader strings" part, `docs/i18n/STRINGS-reader.md` (the reader's strings plus the content model's labels and gaps,
   whose table `model/i18n.py strings` generates), drafted by one agent and reviewed by the agent on the other model;
@@ -215,7 +215,7 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `none: searched <date>` row; alphabetical
   within a state, no ranking word anywhere, every URL in `docs/technical-universities-links.csv`
   (`python3 model/technical_universities_note.py links` after a change). Never rendered.
-- **`DRAGHI-REPORT.md` is authored, not generated** (#118). Quote the report only as `“…” (A|B p. N)`, N being the PDF
+- **`DRAGHI-REPORT.md` is authored, not generated** (#123). Quote the report only as `“…” (A|B p. N)`, N being the PDF
   page (Part A's printed folio is two lower), then run `python3 model/draghi_note.py quotes`: it regenerates
   `docs/draghi-quotes.csv` from the note and re-finds each quotation in the hashed PDF. Never edit the register by
   hand. A state fact is a claim id with its printed text, `` `record:XX:…` reads “…” ``, and `check` compares it with

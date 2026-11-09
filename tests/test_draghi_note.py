@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-`DRAGHI-REPORT.md` keeps its contract (#118): every quotation of the report is a row of the generated quote register,
+`DRAGHI-REPORT.md` keeps its contract (#123): every quotation of the report is a row of the generated quote register,
 found on its page of the hashed PDF; every fact about a state is a claim id the committed bundle prints, with the text
 it prints; one entry per state in a fixed template; no ranking language or currency figure outside a quotation; never
 rendered. The PDFs are gitignored, so these tests run offline against the manifest and the register; `check` re-finds
@@ -81,7 +81,7 @@ class TheChecker(unittest.TestCase):
 
     @classmethod
     def build(cls) -> str:
-        body = ("# T\n\nAuthored note. Not generated. See #118. It ranks nothing.\n\n---\n\n## 1. The report\n\n"
+        body = ("# T\n\nAuthored note. Not generated. See #123. It ranks nothing.\n\n---\n\n## 1. The report\n\n"
                 f"## 2. What it says about hosting state data\n\n“{cls.QUOTE}” (B p. 84).\n\n"
                 "## 3. What it means for this project\n\n## 4. The twenty-seven\n\n")
         for iso in sorted(note.STATES, key=lambda i: note.STATES[i]):

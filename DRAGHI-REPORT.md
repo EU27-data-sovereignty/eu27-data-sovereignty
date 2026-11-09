@@ -2,7 +2,7 @@
 
 **Authored note, 2026-10-23. Not generated, and not part of the model, the JSON bundle, the web app, the PDFs, the
 reader or `/ask`.** `run.sh data` never touches it. It reads Mario Draghi's *The future of European competitiveness*
-(European Commission, September 2024) against this project's per-state registers. Decision #118 records why it is
+(European Commission, September 2024) against this project's per-state registers. Decision #123 records why it is
 written this way. It ranks nothing. Section 4 lists the states alphabetically, and the order carries no meaning (#10, #77).
 It gives no per-state cost or capacity figure (#72, #73).
 

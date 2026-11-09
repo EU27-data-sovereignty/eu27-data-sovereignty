@@ -1,5 +1,5 @@
 /**
- * The app and the site must be the same document (#110).
+ * The app and the site must be the same document (#115).
  *
  * Three files under `src/data/` are copies of files in `web/`, and the edition under `assets/data/` is a
  * split of `web/public/data/eu27.json`. Copies drift: `./run.sh data` regenerates the bundle, the web copy is

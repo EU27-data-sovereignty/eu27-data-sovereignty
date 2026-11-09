@@ -1,6 +1,6 @@
 /**
  * The checks that keep this app boring: no capabilities, no telemetry, no publishable secrets, and exactly
- * one network path (#111).
+ * one network path (#116).
  *
  * A reader of a public dataset needs nothing from the device and has nothing to collect. That is a property
  * worth asserting rather than intending, because each of these is one careless dependency or one copied
@@ -44,7 +44,7 @@ describe('publishable configuration', () => {
     }
   });
 
-  it('never checks for an over-the-air code update unless the reader asks (#115)', () => {
+  it('never checks for an over-the-air code update unless the reader asks (#120)', () => {
     const { expo } = json('app.json');
     expect(JSON.stringify(expo.extra ?? {})).not.toMatch(SECRET_SHAPED);
     // expo-updates would otherwise ask Expo's service at every launch; the About tab asks, on a tap or the
@@ -63,7 +63,7 @@ describe('publishable configuration', () => {
     expect(expo.ios.config).toEqual({ usesNonExemptEncryption: false });
   });
 
-  it('eas.json: the pinned CLI, build numbers on EAS, and no credential in the tree (#114)', () => {
+  it('eas.json: the pinned CLI, build numbers on EAS, and no credential in the tree (#119)', () => {
     const eas = json('eas.json');
     const pkg = json('package.json');
     // One exact pin the CLI enforces on itself; never a project dependency (expo-doctor refuses it), so
@@ -86,7 +86,7 @@ describe('publishable configuration', () => {
     expect(JSON.stringify(eas)).not.toMatch(SECRET_SHAPED);
   });
 
-  it('the store listing names the privacy policy at the site and says no person verified the data (#116)', () => {
+  it('the store listing names the privacy policy at the site and says no person verified the data (#121)', () => {
     const { expo } = json('app.json');
     const listing = json('store.config.json').apple;
     const info = listing.info['en-US'];
@@ -165,7 +165,7 @@ describe('dependencies', () => {
     expect(ranged).toEqual([]);
   });
 
-  it('reads the device language in one file, and only to pick an admitted language (#117)', () => {
+  it('reads the device language in one file, and only to pick an admitted language (#122)', () => {
     expect(where(/expo-localization/)).toEqual(['src/i18n/deviceLocales.ts']);
   });
 
@@ -214,7 +214,7 @@ describe('network: one path, one host, every URL derived from the configured pro
     expect(read('src/services/site.ts')).toMatch(/Constants\.expoConfig/);
   });
 
-  it('reaches the update service only through its port (#115)', () => {
+  it('reaches the update service only through its port (#120)', () => {
     expect(where(/expo-updates/)).toEqual(['src/update/expoAppUpdates.ts']);
     expect(where(/checkForUpdateAsync|fetchUpdateAsync|reloadAsync/)).toEqual([
       'src/update/expoAppUpdates.ts',

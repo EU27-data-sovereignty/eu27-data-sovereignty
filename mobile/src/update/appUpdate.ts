@@ -1,11 +1,11 @@
 /**
- * Over-the-air updates of the app's own code (DECISIONS.md #115): a port, so the screens and the tests never
+ * Over-the-air updates of the app's own code (DECISIONS.md #120): a port, so the screens and the tests never
  * touch the Expo module directly (that is `expoAppUpdates.ts`, the one file that imports it), and one rule
  * that the port cannot break: a check runs only when the reader asks, in the same tap or the same opt-in as
  * the check for a newer edition. `app.json` sets `updates.checkAutomatically` to `NEVER`, so the native layer
  * never asks on its own (`__tests__/security.test.ts`).
  *
- * The data edition still comes only from the edition channel (#111): an app update carries code and the
+ * The data edition still comes only from the edition channel (#116): an app update carries code and the
  * edition inside the binary at the time it was published; the reader's downloaded edition stays in place.
  */
 import { english, type Translator } from '@/i18n/catalogue';
@@ -74,7 +74,7 @@ export async function checkForAppUpdate(
   }
 }
 
-/** The sentence for a state, in the reader's language (`app.appupdate.*`, #117); English by default. */
+/** The sentence for a state, in the reader's language (`app.appupdate.*`, #122); English by default. */
 export function describeAppUpdate(state: AppUpdateState, t: Translator['t'] = english.t): string {
   return t(`app.appupdate.${state.kind.replace(/-/g, '_')}`);
 }

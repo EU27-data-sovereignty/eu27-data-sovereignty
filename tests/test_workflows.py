@@ -198,7 +198,7 @@ class Deploy(unittest.TestCase):
 
 
 class Edition(unittest.TestCase):
-    """The edition channel (#111, #112): published by one job after the site is final, written by one stdlib
+    """The edition channel (#116, #117): published by one job after the site is final, written by one stdlib
     module, read back anonymously after every deploy and every week."""
 
     EDITION_PY = (ROOT / "model" / "edition.py").read_text(encoding="utf-8")
@@ -207,7 +207,7 @@ class Edition(unittest.TestCase):
     def job(self) -> str:
         parts = DEPLOY.split("\n  edition:\n")
         self.assertEqual(len(parts), 2, "deploy.yml needs the edition job")
-        # Up to the next job (#114 added `app` after it): the key rules below are about this job alone.
+        # Up to the next job (#119 added `app` after it): the key rules below are about this job alone.
         return parts[1].split("\n  app:\n", 1)[0]
 
     def test_the_edition_is_published_by_its_own_job_after_the_deploy(self):
@@ -273,7 +273,7 @@ class Edition(unittest.TestCase):
 
 
 class App(unittest.TestCase):
-    """The reader's release (#114, #115): one job after the deploy starts the EAS workflow for the same commit,
+    """The reader's release (#119, #120): one job after the deploy starts the EAS workflow for the same commit,
     with the pinned CLI from the lockfile and the token in the production environment; the EAS workflow itself
     never runs on a push and never submits without an approval."""
 
@@ -333,7 +333,7 @@ class App(unittest.TestCase):
         for submit in ("submit_ios",):
             block = self.RELEASE.split(f"\n  {submit}:\n", 1)[1].split("\n  ", 1)[0]
             self.assertIn("require_approval", block, f"{submit} runs only after the approval")
-        self.assertNotIn("submit_android", self.RELEASE, "no Play account yet (#114)")
+        self.assertNotIn("submit_android", self.RELEASE, "no Play account yet (#119)")
         self.assertIn("submit_beta_review: false", self.RELEASE)
         self.assertLessEqual(len(self.RELEASE.encode()), 16 * 1024)
 

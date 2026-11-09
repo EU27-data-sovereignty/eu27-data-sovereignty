@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
 # The mobile reader of the EU-27 report: an Expo app that ships the fact-checked edition and reads it
-# offline (#109, #110). It is built, sent to TestFlight and uploaded to App Store Connect by the release
-# workflow on EAS (.eas/workflows/release.yml, #114), which the deploy's `app` job starts after the site's
+# offline (#114, #115). It is built, sent to TestFlight and uploaded to App Store Connect by the release
+# workflow on EAS (.eas/workflows/release.yml, #119), which the deploy's `app` job starts after the site's
 # gate; the commands below run the same steps by hand with the pinned `npx eas-cli@<exact>` (eas.json). "Submit for
 # Review" and "Release" stay clicks in App Store Connect: the launch gate (DECISIONS.md #25, #67).
 set -euo pipefail
@@ -19,7 +19,7 @@ check_deps() {
     fi
 }
 
-# The 28 parts are generated from the committed bundle and gitignored (#110): Metro cannot bundle
+# The 28 parts are generated from the committed bundle and gitignored (#115): Metro cannot bundle
 # the app until they exist. Cheap (about a second) and idempotent.
 ensure_parts() {
     if [ ! -f assets/data/eu27.core.json ]; then
@@ -78,7 +78,7 @@ usage() {
 
 # The EAS CLI is not a project dependency (expo-doctor refuses that); it runs as `npx eas-cli@<exact>`, the
 # one version pinned in eas.json's cli.version, which the CLI itself enforces, as the Vercel CLI does in
-# ../.github/workflows/deploy.yml (#114).
+# ../.github/workflows/deploy.yml (#119).
 EAS="eas-cli@$(node -p 'require("./eas.json").cli.version')"
 eas() { npx --yes "$EAS" "$@"; }
 

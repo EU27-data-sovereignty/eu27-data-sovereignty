@@ -1,6 +1,6 @@
 /**
  * All 27 member states, filterable, from the edition's index: the same counts the web's Countries page
- * derives, computed by the model (#110). Each row reports evidence, not judgement: how much of a state's
+ * derives, computed by the model (#115). Each row reports evidence, not judgement: how much of a state's
  * inventory has a verified source, and how many values are withheld. Opening a row loads that state's part.
  */
 import { Link } from 'expo-router';

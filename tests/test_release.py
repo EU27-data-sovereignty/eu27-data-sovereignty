@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The mobile release ledger (#114): generated from EAS, held in shape by `check`, and every row retraceable.
+The mobile release ledger (#119): generated from EAS, held in shape by `check`, and every row retraceable.
 
     python3 -m unittest tests.test_release -v
 """

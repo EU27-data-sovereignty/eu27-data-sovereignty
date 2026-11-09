@@ -30,12 +30,12 @@ VERCELIGNORE = ROOT / ".vercelignore"
 PERSONAL = ["**/contacts/", "*-contacts.md"]
 
 # The Expo reader is never built by Vercel, holds a local Supabase stack's state, and bundles the 28
-# generated parts of the split edition (#110): only their manifest is tracked.
+# generated parts of the split edition (#115): only their manifest is tracked.
 MOBILE_GIT = ["mobile/node_modules/", "mobile/.expo/", "mobile/dist/", "mobile/coverage/", "mobile/.env.local",
               "mobile/.env.production", "mobile/assets/data/eu27.*.json", "mobile/supabase/.temp/",
               "mobile/supabase/.branches/", "mobile/supabase/.env"]
 
-# Signing keys and store credentials live on EAS (#114). `eas credentials` can download them into the tree
+# Signing keys and store credentials live on EAS (#119). `eas credentials` can download them into the tree
 # as credentials.json, a .p8 key or a keystore; none of that may ever be committed.
 MOBILE_KEYS = ["*.pem", "*.p8", "*.p12", "*.jks", "*.keystore", "*.mobileprovision", "credentials.json",
                "google-service-account*.json", "*.ipa", "*.aab", "*.apk"]
@@ -68,7 +68,7 @@ class Mobile(unittest.TestCase):
     def test_no_signing_key_or_store_credential_can_be_committed(self):
         have = rules(ROOT / "mobile" / ".gitignore")
         for rule in MOBILE_KEYS:
-            self.assertIn(rule, have, f"mobile/.gitignore lost `{rule}` (#114)")
+            self.assertIn(rule, have, f"mobile/.gitignore lost `{rule}` (#119)")
         tracked = subprocess.run(["git", "-C", str(ROOT), "ls-files", "mobile"], capture_output=True, text=True).stdout
         for name in tracked.splitlines():
             self.assertNotRegex(name, r"\.(p8|p12|jks|keystore|mobileprovision|ipa|aab|apk)$|credentials\.json$", name)
@@ -81,7 +81,7 @@ class Cache(unittest.TestCase):
 
     def test_archived_reports_in_both_files(self):
         for path in (GITIGNORE, VERCELIGNORE):
-            self.assertIn("assets/reports/**/*.pdf", rules(path), f"{path.name} lost `assets/reports/**/*.pdf` (#118)")
+            self.assertIn("assets/reports/**/*.pdf", rules(path), f"{path.name} lost `assets/reports/**/*.pdf` (#123)")
         tracked = subprocess.run(["git", "-C", str(ROOT), "ls-files", "assets"], capture_output=True, text=True).stdout
         self.assertFalse([n for n in tracked.splitlines() if n.endswith(".pdf")], "an archived report PDF is tracked")
 

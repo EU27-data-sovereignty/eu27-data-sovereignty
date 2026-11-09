@@ -1,5 +1,5 @@
 /**
- * The site's addresses the app may open in the system browser (#116): the privacy policy Apple and Google
+ * The site's addresses the app may open in the system browser (#121): the privacy policy Apple and Google
  * require to be reachable from the app. Read from `app.json` (`extra.siteUrl`, `extra.privacyPath`), never
  * written down here, so `__tests__/security.test.ts` still finds no host in the code, and the one place a
  * site URL is built is this file.

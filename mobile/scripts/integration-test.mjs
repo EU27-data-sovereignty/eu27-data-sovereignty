@@ -1,5 +1,5 @@
 // The edition channel end to end against the LOCAL Supabase stack (`supabase start`), run by
-// `./test.sh --integration` and by the deploy's gate (#112, #113). Keys come from `supabase status -o env`
+// `./test.sh --integration` and by the deploy's gate (#117, #118). Keys come from `supabase status -o env`
 // inside this process; they are handed to the publisher through its environment and never written or printed.
 //
 // What it proves, in order: the deploy's own publisher (model/edition.py) fills the bucket; every object is

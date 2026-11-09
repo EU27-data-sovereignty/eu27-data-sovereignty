@@ -1,5 +1,5 @@
 /**
- * Supabase: one public, read-only bucket, read anonymously (#111).
+ * Supabase: one public, read-only bucket, read anonymously (#116).
  *
  * The app ships the fact-checked edition inside its binary and renders it with no backend. What Supabase
  * is *for* is the edition channel: `latest.json` and the parts of a newer edition, which `src/edition/`

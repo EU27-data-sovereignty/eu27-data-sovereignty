@@ -1,5 +1,5 @@
 /**
- * The edition channel's addresses (#111): the public URL of `latest.json` and of each object under an
+ * The edition channel's addresses (#116): the public URL of `latest.json` and of each object under an
  * edition id, in the bucket `editions` of the configured Supabase project. This is the only place in the
  * app a URL is built, and every one is derived from the configured project, never written down: a reader
  * of the code can see that the app talks to one host, and `__tests__/security.test.ts` checks that no

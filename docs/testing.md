@@ -26,7 +26,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 2 | Verification ledger | `model/sources.py`: the source ledger is valid |
 | 3 | National data register | `model/national_data.py`: the register is valid |
 | 4 | Every fact sourced | `document.py --check`: every printed value resolves to a checked citation |
-| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the admitted language catalogue (#117), the technical-universities note, the Draghi-report note (#118, which also re-finds its quotations in the archived PDFs where they are on disk and prints a skip line where they are not); one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
+| 5 | Authored notes and agent drafts keep their contracts | `model/notes.py check`, the register: the national-AI note (#103), the sovereign-appliance note (#104), the language drafts ([`docs/i18n/README.md`](i18n/README.md)), the admitted language catalogue (#122), the technical-universities note, the Draghi-report note (#123, which also re-finds its quotations in the archived PDFs where they are on disk and prints a skip line where they are not); one line each. A new note registers there, never as a stage; `tests/test_notes.py` fails on an unregistered checker |
 | 6 | `/ask` type-check | `api/` compiles against the real Anthropic SDK |
 | 7 | Generated files current | the briefs, CSVs, bundle, `/ask` corpus and reports equal a fresh regeneration |
 | 8 | Admission reproduces | the registers rebuild from the committed evidence |
@@ -35,7 +35,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 11–14 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
 | 15 | Production build | `vite build` succeeds |
 | 16 | Size budget | gzipped: data bundle ≤ 1,100 KB (900 KB until 2026-10-06), all JavaScript ≤ 400 KB |
-| 17 | The mobile reader | `mobile/test.sh --ci`, the reader's own suite ([`../mobile/README.md`](../mobile/README.md), #113): node, deps, no tracked env, shell, tooling, exact pins, identity, env keys, scripts, format, lint, types; the 28 parts regenerated and checked against the manifest and the committed bundle (`model/edition.py check`); the generated tokens current; the Expo config resolved; the language catalogue current (#117); Jest with coverage floors, incl. parity with `web/` byte for byte; expo-doctor; the web export; npm audit against `mobile/audit-allowlist.json`. With `MOBILE_TEST_FLAGS=--integration` (the deploy's gate only): the edition channel round-trip against local Supabase |
+| 17 | The mobile reader | `mobile/test.sh --ci`, the reader's own suite ([`../mobile/README.md`](../mobile/README.md), #118): node, deps, no tracked env, shell, tooling, exact pins, identity, env keys, scripts, format, lint, types; the 28 parts regenerated and checked against the manifest and the committed bundle (`model/edition.py check`); the generated tokens current; the Expo config resolved; the language catalogue current (#122); Jest with coverage floors, incl. parity with `web/` byte for byte; expo-doctor; the web export; npm audit against `mobile/audit-allowlist.json`. With `MOBILE_TEST_FLAGS=--integration` (the deploy's gate only): the edition channel round-trip against local Supabase |
 | 18 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
 | 19 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
@@ -90,11 +90,11 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
   also shows the smoke test fails against a server that serves the wrong things.
 - **Delivery:** `test_workflows`, `test_vercel_config`, `test_ignore_rules`, `test_artifacts`, `test_tokens`,
   `test_repeatability`, `test_docs`, `test_contrib`, `test_fetch`.
-- **The mobile reader's edition (#110, #111, #112):** `test_export_split` (the 28 parts merge back to the single
+- **The mobile reader's edition (#115, #116, #117):** `test_export_split` (the 28 parts merge back to the single
   bundle byte for byte, every part renders alone, the two tracked manifests are the committed bundle's) and
   `test_edition` (the publisher and verifier against a fake Storage server: immutable per edition, idempotent,
   the pointer last, altered bytes refused by name, the service key never in a URL, on stdout or in a summary).
-- **The mobile reader's release (#114, #116):** `test_release` (the EAS release ledger `mobile/releases.csv` is
+- **The mobile reader's release (#119, #121):** `test_release` (the EAS release ledger `mobile/releases.csv` is
   generated, held in shape by `check`, and every row retraceable to a build, a commit and an edition manifest) and
   `test_privacy` (the `/privacy` page the stores link to names every processor the plans name and makes the same
   claims the reader's own tests hold it to).
@@ -110,7 +110,7 @@ a group is not run. Locally, `./test.sh` with no flag still runs everything in o
 - the TLS certificate is valid for 14 more days or longer;
 - with `--bundle`, the served data is the committed data;
 - with `--edition-url` and `--manifest`, the mobile reader's edition channel serves the committed manifest and
-  every part under it, read anonymously (#111); an empty URL is reported as not configured.
+  every part under it, read anonymously (#116); an empty URL is reported as not configured.
 
 It runs after every deploy and every week.
 
@@ -164,5 +164,5 @@ tests.test_properties tests.test_hypothesis`, from a throwaway clone.
 ## Still waiting on the owner
 
 - **The mobile reader's four Dependabot alerts** (`node-forge`, `braces`, `decode-uri-component`, `uuid`) are
-  Expo-toolchain transitives the rebuild (#109) carries too, allowlisted with reasons in
+  Expo-toolchain transitives the rebuild (#114) carries too, allowlisted with reasons in
   `mobile/audit-allowlist.json`; they close when the owner dismisses them in the Security tab with those reasons.

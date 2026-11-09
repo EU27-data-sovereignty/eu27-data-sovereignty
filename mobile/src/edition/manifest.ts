@@ -1,5 +1,5 @@
 /**
- * The edition: what `model/export_json.py --split` writes and `model/edition.py` publishes (#110, #111).
+ * The edition: what `model/export_json.py --split` writes and `model/edition.py` publishes (#115, #116).
  *
  * A manifest names the sha256 of every part and of the single bundle (the edition id). latest.json, the one
  * mutable object in the bucket, names the edition the deploy last published. Nothing here trusts a shape it

@@ -33,7 +33,7 @@ SURFACES = [
     ROOT / "book" / "report.py", ROOT / "model" / "generate_countries.py",
     ROOT / "model" / "export_json.py", ROOT / "model" / "national_data.py",
     ROOT / "api" / "_ask-core.ts", *sorted((ROOT / "web" / "src").rglob("*.tsx")),
-    # The mobile reader's own code, never mobile/ wholesale (node_modules): #109.
+    # The mobile reader's own code, never mobile/ wholesale (node_modules): #114.
     *sorted((ROOT / "mobile" / "app").rglob("*.tsx")), *sorted((ROOT / "mobile" / "src").rglob("*.ts*")),
 ]
 
@@ -58,7 +58,7 @@ class Disclaimer(unittest.TestCase):
 
     def test_the_mobile_app_shows_it(self):
         # Every screen renders inside Screen (or a list with ScreenFooter), which appends the ProvenanceNotice
-        # with the edition's own wording; About prints the disclaimer in full (#109).
+        # with the edition's own wording; About prints the disclaimer in full (#114).
         mobile = ROOT / "mobile"
         screen = (mobile / "src" / "components" / "Screen.tsx").read_text(encoding="utf-8")
         self.assertIn("<ProvenanceNotice", screen)

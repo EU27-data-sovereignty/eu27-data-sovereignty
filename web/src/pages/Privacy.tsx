@@ -2,7 +2,7 @@ import { PageBand } from '@/components/PageBand'
 import { CORRECTIONS_URL } from '@/data/contribute'
 
 /**
- * What this project collects, and from whom (#116). One page for every surface: the site, `/ask`, and the
+ * What this project collects, and from whom (#121). One page for every surface: the site, `/ask`, and the
  * mobile reader, whose store listings must point at a privacy policy and whose About tab links here. Every
  * sentence below is a statement the tree can be held to: the reader's `__tests__/security.test.ts` asserts
  * the app's claims, and `tests/test_privacy.py` that this page names each processor the plans name.

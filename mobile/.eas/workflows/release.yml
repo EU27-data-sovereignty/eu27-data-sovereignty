@@ -1,4 +1,4 @@
-# The release workflow (DECISIONS.md #114, #115). Runs on EAS, never on a GitHub push: the deploy's `app` job
+# The release workflow (DECISIONS.md #119, #120). Runs on EAS, never on a GitHub push: the deploy's `app` job
 # triggers it with `eas workflow:run` only after the site's gate, the fact-check gate and the deploy itself
 # passed (.github/workflows/deploy.yml), and `./run.sh release` runs it by hand.
 #
@@ -7,7 +7,7 @@
 # TestFlight internal group; stop for the owner's approval in the Expo dashboard; only then upload it to App Store
 # Connect, where "Submit for Review" and "Release" stay manual clicks (the launch gate, #25, #67). When a build
 # already exists for the fingerprint, publish the JavaScript as an over-the-air update to the `production`
-# channel instead: installed apps fetch it only when the reader asks (#115). Android builds and is never
+# channel instead: installed apps fetch it only when the reader asks (#120). Android builds and is never
 # submitted here: a Play account does not exist yet.
 name: Release the reader
 run_name: Release ${{ github.sha }}

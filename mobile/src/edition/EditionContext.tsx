@@ -1,6 +1,6 @@
 /**
- * The edition for the screens: which one is active, its core part, and the update state (#110, #111), plus
- * the state of the app's own over-the-air update, checked in the same tap (#115). The provider takes the
+ * The edition for the screens: which one is active, its core part, and the update state (#115, #116), plus
+ * the state of the app's own over-the-air update, checked in the same tap (#120). The provider takes the
  * store and the update port, so tests render the real screens on a `MemoryFileStore` edition with no Expo
  * service behind them.
  */
@@ -31,7 +31,7 @@ export interface EditionApi {
   core: CorePart | null;
   loadError: string | null;
   update: UpdateState;
-  /** The edition check and, in the same tap, the check for a newer build of the app (#115). */
+  /** The edition check and, in the same tap, the check for a newer build of the app (#120). */
   checkForUpdate(): Promise<void>;
   switchToInstalled(): Promise<void>;
   appUpdate: AppUpdateState;

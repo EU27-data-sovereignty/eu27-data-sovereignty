@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The privacy page (#116): one page the app stores link to, naming every processor the plans name, and the
+The privacy page (#121): one page the app stores link to, naming every processor the plans name, and the
 same claims the mobile reader's own tests hold it to.
 
     python3 -m unittest tests.test_privacy -v
@@ -38,7 +38,7 @@ class Page(unittest.TestCase):
 
     def test_the_app_s_claims_are_the_ones_its_tests_hold(self):
         # The reader's security suite asserts: no permissions, no analytics, no request unless asked, the
-        # update check only on the same tap (#115). The page may not promise more or less.
+        # update check only on the same tap (#120). The page may not promise more or less.
         self.assertIn("collects nothing", PAGE)
         self.assertIn("makes no\n        request", PAGE.replace("makes no request", "makes no\n        request"))
         self.assertIn("Expo’s update service", PAGE)

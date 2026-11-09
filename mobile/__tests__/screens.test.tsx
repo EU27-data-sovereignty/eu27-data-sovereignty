@@ -137,7 +137,7 @@ describe('about this edition', () => {
     await provenanceShown();
   });
 
-  it('checks for a newer app build only in the same tap as the edition check, then offers a restart (#115)', async () => {
+  it('checks for a newer app build only in the same tap as the edition check, then offers a restart (#120)', async () => {
     const { port, calls } = fakeAppUpdates({ available: true });
     await renderWithEdition(<About />, makeStore({ configured: true }).store, port);
     await waitFor(() => expect(screen.getByText(BUNDLED_MANIFEST.edition)).toBeTruthy());

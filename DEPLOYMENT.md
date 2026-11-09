@@ -40,7 +40,7 @@ The site is static except for one function, `/api/ask` (#78). There is no databa
 | Secret | `ANTHROPIC_API_KEY` (Vercel env, Production, sensitive) | The owner sets the value in the Vercel dashboard, and it is never printed. The key is from the Anthropic workspace `eu27` and **expires 2026-11-05** (see the `/ask` runbook). Without it, `/ask` returns a readable error |
 | Cost cap | A dedicated Anthropic workspace for that key, with a monthly spend limit | The hard ceiling, enforced by Anthropic. When it is reached, `/ask` says questions are paused |
 | Rate limit | Vercel Firewall rule on `/api/ask`, per IP | Staged with `vercel firewall`, applied only with the owner's OK |
-| Edition channel | Supabase Storage, bucket `editions`, public read, in an EU-27 region (project NOT YET created, 2026-10-14) | The mobile reader's only network path (#111). `<edition>/manifest.json` and the 28 parts, immutable; `latest.json`, the pointer. Written only by `deploy.yml`'s `edition` job after the site is final (#112); the policy is `mobile/supabase/migrations/` |
+| Edition channel | Supabase Storage, bucket `editions`, public read, in an EU-27 region (project NOT YET created, 2026-10-14) | The mobile reader's only network path (#116). `<edition>/manifest.json` and the 28 parts, immutable; `latest.json`, the pointer. Written only by `deploy.yml`'s `edition` job after the site is final (#117); the policy is `mobile/supabase/migrations/` |
 | Edition variable and secret | `SUPABASE_URL` (repository variable); `SUPABASE_SERVICE_ROLE_KEY` (environment secret, `production`) | The job is skipped until the variable exists; then a missing secret fails the run. The key reaches `model/edition.py` through its environment, never a command line, and is never printed |
 | Edition check | `model/smoke.py --edition-url`, in the `edition` job and weekly in `monitor.yml` | `latest.json` names the committed edition; the served manifest and every part hash to the committed manifest, read anonymously |
 
@@ -160,7 +160,7 @@ vercel ls eu27-data-sovereignty        # newest production deploy and its age
 Every `Deploy` run does this check itself, as the last step of its smoke test. The bundle only catches data changes. A UI-only change leaves it unchanged, so also compare the newest
 deploy's date with `git log -1 --format=%ci`.
 
-## The edition channel (Supabase Storage, #111, #112)
+## The edition channel (Supabase Storage, #116, #117)
 
 **What it is.** One bucket, `editions`, in a hosted Supabase project in an EU-27 region (Frankfurt `eu-central-1`
 or Stockholm `eu-north-1`; not London, not Zurich). Public read: the one policy is a `select` for `anon`
@@ -303,7 +303,7 @@ owner's approval:
   with the value on the clipboard.
 - **The edition pointer is mutable and unsigned.** `latest.json` is the one object the deploy overwrites; a
   write with the service key from anywhere else would show only at the next check (after every deploy, and
-  weekly), and the hash chain proves integrity, not who published (#111). A signed manifest is the follow-up.
+  weekly), and the hash chain proves integrity, not who published (#116). A signed manifest is the follow-up.
   `latest.json` is cached for a minute, the parts for a year; a manual site rollback (`vercel rollback`) does
   not move the pointer, so the bucket can be one edition ahead of the site until the next deploy.
 - **The Vercel MCP connector cannot list this project's deployments.** `list_deployments` returns 403

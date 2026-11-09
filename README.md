@@ -150,8 +150,8 @@ countries/
                              an input), the xlsx the engine reproduces, FRONTIER-MODEL.md, TODO, plan
 web/                         React + Vite visualization app; reads the JSON bundle, no server
 mobile/                      Expo reader of the split edition: offline-first, the 28 parts inside the app, a newer
-                             edition from a public EU-region Supabase bucket the deploy writes (#109–#113); built and
-                             uploaded to App Store Connect by an EAS workflow the deploy starts, released by hand (#114)
+                             edition from a public EU-region Supabase bucket the deploy writes (#114–#118); built and
+                             uploaded to App Store Connect by an EAS workflow the deploy starts, released by hand (#119)
 tests/                       stdlib unittest suite for the model and the data
 ROADMAP.md                   what is done, in progress and next, and what gates what
 METHOD.md                    how a claim is researched, checked, reviewed and shown: the evidence pipeline
@@ -179,7 +179,7 @@ TECHNICAL-UNIVERSITIES.md    authored note: per member state, the institutions o
                              (CESAER, EuroTech) or cited from a fetched page; alphabetical, never ranked;
                              no person has read it (#108)
 DRAGHI-REPORT.md             authored note: the Draghi report (2024) read against the 27 states; every
-                             quotation re-found in the hashed PDF, every state fact a printed claim id (#118)
+                             quotation re-found in the hashed PDF, every state fact a printed claim id (#123)
 .claude/settings.json        the assistant's project permission rule: exact pushes to main allowed, every
                              other outward action denied by name; the owner's OK still comes first (#106)
 
@@ -328,7 +328,7 @@ is `docs/plans/technical-universities-log.md`.
 
 ## The Draghi report, per member state
 
-[`DRAGHI-REPORT.md`](DRAGHI-REPORT.md) is an authored note (#118), written 2026-10-23, that reads Mario Draghi's *The
+[`DRAGHI-REPORT.md`](DRAGHI-REPORT.md) is an authored note (#123), written 2026-10-23, that reads Mario Draghi's *The
 future of European competitiveness* (European Commission, September 2024) against this project's registers. The
 report is EU-level and names no member state in its cloud section. Its proposal for a single EU-wide cloud
 procurement and residency policy for public administrations (Part B, p. 84) carves out "nationally sensitive areas
@@ -368,8 +368,8 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file; the methodology and fact-check appendices in every asset, marked in a method teal | #87–#88 |
 | 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
 | 2026-10-10 | National AI: an authored strategy per member state for a citizen-grade foundation model, with the routes, the EU vehicles and the language clusters; the sourced follow-on planned | #103 |
-| 2026-10-14 | The mobile reader rebuilt on the content model: the split edition shipped in the app, Supabase Storage (EU region) as the update channel written only by the deploy, a `mobile` group in the gate | #109–#113 |
-| 2026-10-16 | The reader released through EAS: build, TestFlight, the owner's approval, the upload to App Store Connect, with the public release click held; over-the-air code updates on the reader's tap; the privacy page at `/privacy` | #114–#116 |
+| 2026-10-14 | The mobile reader rebuilt on the content model: the split edition shipped in the app, Supabase Storage (EU region) as the update channel written only by the deploy, a `mobile` group in the gate | #114–#118 |
+| 2026-10-16 | The reader released through EAS: build, TestFlight, the owner's approval, the upload to App Store Connect, with the public release click held; over-the-air code updates on the reader's tap; the privacy page at `/privacy` | #119–#121 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

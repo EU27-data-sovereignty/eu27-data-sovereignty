@@ -11,8 +11,8 @@ The edition channel: publish the split edition to Supabase Storage, verify what 
 
 Why this file exists
 --------------------
-The mobile reader ships the fact-checked bundle as 28 hash-pinned parts and a manifest (#110), and learns of a
-newer edition from one public, read-only bucket (#111). Only the deploy workflow writes to that bucket (#112),
+The mobile reader ships the fact-checked bundle as 28 hash-pinned parts and a manifest (#115), and learns of a
+newer edition from one public, read-only bucket (#116). Only the deploy workflow writes to that bucket (#117),
 after the site it belongs to passed every check, and what it writes must be provable from outside: the same
 manifest the gate tested, under a path named by the edition id, never overwritten. A bash loop of curl lines
 cannot be unit-tested and the Supabase CLI would need its own pin and checksum, so the publisher is this

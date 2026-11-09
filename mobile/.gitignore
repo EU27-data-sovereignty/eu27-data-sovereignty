@@ -88,7 +88,7 @@ supabase/.env
 !.env.example
 !supabase/config.toml
 
-# Key material — signing keys and store credentials live on EAS (#114), never here
+# Key material — signing keys and store credentials live on EAS (#119), never here
 *.pem
 *.key
 *.p12

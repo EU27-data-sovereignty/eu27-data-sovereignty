@@ -1,5 +1,5 @@
 /**
- * The reader's language (DECISIONS.md #117): the reader's own choice, stored on the device in one small file,
+ * The reader's language (DECISIONS.md #122): the reader's own choice, stored on the device in one small file,
  * else the device's language if the catalogue has admitted it, else English. Only admitted languages can be
  * chosen. The choice is never sent anywhere; it sits next to the edition in the app's own documents folder.
  */

@@ -7,7 +7,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-23
 
-### Added: the Draghi report, archived and read against the 27 states (#118)
+### Added: the Draghi report, archived and read against the 27 states (#123)
 
 - **The note.** `DRAGHI-REPORT.md` is an authored note that is never rendered. It reads Draghi's *The future of
   European competitiveness* (September 2024) against the project's registers, with one entry per state: where the
@@ -28,9 +28,9 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-19
 
-### Added: the reader's language layer, English only until a native speaker has read a translation (#117)
+### Added: the reader's language layer, English only until a native speaker has read a translation (#122)
 
-- **Scope widened the same day (#117).** A count showed most of what a reader sees is the content model's text, so
+- **Scope widened the same day (#122).** A count showed most of what a reader sees is the content model's text, so
   the translated set is the app's own strings, the site's chrome, and the content model's 116 label and gap texts
   (table labels, country names, "Not yet sourced"); facts, categorical values included, explanations, quotes and
   sources stay English. `docs/i18n/STRINGS-reader.md` holds the reader's 107 strings and the generated labels-and-gaps
@@ -51,19 +51,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
   English; the screens on a fixture catalogue translate labels and gaps and never a categorical fact; the choice is
   stored and never requested over the network).
 
-### Changed: the reader on Expo SDK 58, the template's pins; the languages decided (#117)
+### Changed: the reader on Expo SDK 58, the template's pins; the languages decided (#122)
 
-- **The languages (#117).** The reader will speak the EU's 24 official languages, interface only, each shipped once
+- **The languages (#122).** The reader will speak the EU's 24 official languages, interface only, each shipped once
   a native speaker has read it; facts stay English with their original-language quote. Nothing is translated yet:
   this records the rule and closes the gap that let the app read the drafts unnoticed. `tests/test_i18n_drafts.py`
   `NeverRendered` now scans `mobile/src` and `mobile/app`. `docs/plans/localisation-plan.md` §6 and
-  `docs/plans/mobile-app.md` point at #117.
+  `docs/plans/mobile-app.md` point at #122.
 - **SDK 58.** `mobile/` moves to the pins of `templates/rn-supabase` (2026-10-17): expo 58.0.14, expo-router
   58.0.23, React Native 0.88.0, React 19.3.0, @supabase/supabase-js 2.118.0, Jest 30.5.2 with jest-expo 58.0.11,
   and the expo-* modules at their 58 releases; `react-test-renderer` removed (jest-expo 58 renders through
   `test-renderer`). Node floor 22.13.0 in `package.json`, `init.sh` and `test.sh`. React Native 0.88 types
   `ScrollView` as a function component, so the screen's scroll ref is a `ScrollViewInstance`. A new native
-  fingerprint: the next release is a store build, not an over-the-air update (#115).
+  fingerprint: the next release is a store build, not an over-the-air update (#120).
 - **`mobile/test.sh` gains the template's `config` step** (`expo config --type introspect` must resolve every
   plugin, which otherwise fails only on EAS), and `scripts/check-audit.mjs` now fails when an allowlist entry's
   review date has passed. The `decode-uri-component` entry is gone: expo-router 58 no longer pulls it in.
@@ -78,7 +78,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
   working tree of this repo and was showing up as an untracked directory, one `git add -A` away from a commit of a
   whole second checkout.
 - The smoke test's route list gains `/privacy`, so every deploy and the weekly run check the page the app stores link to
-  (#116), and `docs/testing.md` lists `test_release` and `test_privacy`; both were left out by the 2026-10-16 work and
+  (#121), and `docs/testing.md` lists `test_release` and `test_privacy`; both were left out by the 2026-10-16 work and
   caught by the gate.
 - `./init.sh` installs Playwright's Firefox and WebKit, and `./test.sh`'s browser stage refuses to start without them, in one
   message naming the install command. Until now the gate ran 180 browser tests that each failed at launch on a machine
@@ -86,7 +86,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-16
 
-### Added: the reader's release through EAS, to the App Store, with the public release click held; over-the-air code updates on the reader's tap; the privacy page (#114–#116)
+### Added: the reader's release through EAS, to the App Store, with the public release click held; over-the-air code updates on the reader's tap; the privacy page (#119–#121)
 
 - **The release path.** `mobile/.eas/workflows/release.yml` runs on Expo Application Services: fingerprint the
   native project; find an existing production build for it or build one; send a new iOS build to the TestFlight
@@ -96,18 +96,18 @@ What changed and when. Reasoning for the choices behind these changes lives in
   that starts the workflow for the deployed commit, skipped until the owner sets `EXPO_PROJECT_ID`; the Expo
   token is a `production`-environment secret, read by `npx eas-cli@25.0.0` from its environment; the pin is
   `eas.json`'s `cli.version`, which the CLI enforces, never a project dependency (`expo-doctor` refuses it).
-  `./run.sh release|build|update|metadata` run the same steps by hand (#114).
+  `./run.sh release|build|update|metadata` run the same steps by hand (#119).
 - **The ledger.** `mobile/releases.csv`, generated by `model/release.py record` from `eas build:view`: app
   version, build number, build id, fingerprint, runtime version, channel, commit and the sha256 of the edition
-  manifest at that commit. `check` holds its shape on every run of `mobile/test.sh` (#114).
+  manifest at that commit. `check` holds its shape on every run of `mobile/test.sh` (#119).
 - **Over-the-air code updates.** `expo-updates` with `checkAutomatically: NEVER`: the About tab's "Check for a
   newer edition" also asks Expo's update service, in the same tap, and offers "Restart to apply"; the native
-  layer never asks on its own. Unsigned (code signing needs a paid plan): recorded as a limit (#115).
+  layer never asks on its own. Unsigned (code signing needs a paid plan): recorded as a limit (#120).
 - **The listing.** `mobile/store.config.json` (EAS Metadata): title, description with the machine-checked
   disclaimer, keywords, categories Reference and Education, age rating, review notes; Apple's review contact
-  comes from the environment of `./run.sh metadata push` (`store.config.js`), never the tree (#114, #116).
+  comes from the environment of `./run.sh metadata push` (`store.config.js`), never the tree (#119, #121).
 - **The privacy page.** `https://eu27.cloud/privacy`: the site, `/ask`, the reader, and every processor with
-  what it sees; linked from the footer, the About tab and the listing; `tests/test_privacy.py` (#116).
+  what it sees; linked from the footer, the About tab and the listing; `tests/test_privacy.py` (#121).
 - **Dependencies.** `expo-updates` 57.0.26 added; `expo` 57.0.30, `expo-constants` 57.0.22, `expo-linking` 57.0.13
   and `expo-router` 57.0.28 are the versions `expo-doctor` expects for SDK 57 on 2026-10-16 (`npx expo install
   --fix`, then pinned exactly). `mobile/package-lock.json` was regenerated from scratch, because the incremental
@@ -131,26 +131,26 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-14
 
-### Added: the mobile reader rebuilt on the content model, offline-first, with Supabase Storage as its edition channel (#109–#111)
+### Added: the mobile reader rebuilt on the content model, offline-first, with Supabase Storage as its edition channel (#114–#116)
 
 - **What it is.** `mobile/` is an Expo SDK 57 app built from `templates/rn-supabase` with its auth, forms and EAS
   removed. It renders the content model as the site does: `src/components/DocumentView.tsx` is the port of the
   web renderer, `src/data/{types,format,sources}.ts` are byte-for-byte copies of the web's files, and every
   screen ends with the provenance notice in the edition's own words. Seven screens: the 27 states, a state's
   report with its numbered sources, the infrastructure overview, the ranking, the methodology, the fact-check
-  appendices, and the edition. English only; no store release, no EAS (#109).
+  appendices, and the edition. English only; no store release, no EAS (#114).
 - **The edition.** `python3 model/export_json.py --split` writes the committed bundle as 28 parts
   (`eu27.core.json` with an index of the 27, and one `eu27.<ISO>.json` per state, each self-contained) and a
   `manifest.json` naming every part's sha256 and the bundle's, the edition id. The parts are generated and
   gitignored; the manifest is tracked in `mobile/assets/data/` and at `web/public/data/manifest.json`, so the
   site publishes its edition id too. `tests/test_export_split.py` proves the parts merge back to the single file
-  byte for byte and that every claim is in exactly one state part (#110).
+  byte for byte and that every claim is in exactly one state part (#115).
 - **The channel.** One public, read-only Supabase Storage bucket `editions` in an EU region
   (`mobile/supabase/migrations/`: a `select` policy for `anon`, nothing else). The app checks for a newer edition
   on a tap in About, or at launch if the reader opts in; it hashes every downloaded file against the published
   manifest, and the manifest against `latest.json`, before showing a value, re-hashes a downloaded part on every
   read, and discards an edition whose part fails. Unconfigured, it makes no request. The hash chain proves
-  integrity, not authorship: the project is a trusted party until a signed manifest exists (#111).
+  integrity, not authorship: the project is a trusted party until a signed manifest exists (#116).
 - **Checked.** `cd mobile && ./test.sh --ci`: 20 steps PASS. Jest: 75 tests; coverage 77.5% statements.
   `./test.sh --quick --ci --integration` against local Supabase 2.120.0 on Colima: 9 of 9 steps, incl. anonymous
   writes refused and an object altered in the bucket rejected by name. `expo-doctor` 21 of 21; the web export
@@ -159,7 +159,7 @@ What changed and when. Reasoning for the choices behind these changes lives in
 - **Where it is recorded.** `mobile/README.md`, `artifacts/mobile/STYLE.md`, `docs/plans/mobile-log.md`,
   `docs/plans/mobile-app.md` (status), `ROADMAP.md`, `PROGRESS.md`, `CLAUDE.md`.
 
-### Changed: `./run.sh data` writes the split edition; `./test.sh` gains a `mobile` group and `--no-mobile`; the deploy publishes the edition and the weekly monitor checks it (#112, #113)
+### Changed: `./run.sh data` writes the split edition; `./test.sh` gains a `mobile` group and `--no-mobile`; the deploy publishes the edition and the weekly monitor checks it (#117, #118)
 
 - **What changed.** `./run.sh data` and the gate's "Generated files are current" stage run `export_json.py
   --split`; a stale manifest fails the model group. `./test.sh --only mobile` (stage 17; browser tests are 18,
@@ -167,11 +167,11 @@ What changed and when. Reasoning for the choices behind these changes lives in
   manifest and the bundle (`model/edition.py check`), the generated tokens, format, lint, types, Jest with
   coverage floors, expo-doctor, the web export, and `npm audit` against `mobile/audit-allowlist.json`.
   `gate.yml` runs it as a parallel job; a second job, `mobile-integration`, runs the Supabase round-trip only
-  when `deploy.yml` asks (#113). `deploy.yml` gains the job `edition`, after the deploy job: `model/edition.py
+  when `deploy.yml` asks (#118). `deploy.yml` gains the job `edition`, after the deploy job: `model/edition.py
   publish` uploads the manifest and parts under the edition id, never overwriting, and moves `latest.json` last;
   the service-role key is an environment secret read only there; the job then reads the bucket back
   anonymously, as `monitor.yml` does weekly (`smoke.py --edition-url`). Skipped until the owner sets
-  `SUPABASE_URL` (#112). `model/reproduce.py` and the root `init.sh` install `mobile/`; `.github/dependabot.yml`
+  `SUPABASE_URL` (#117). `model/reproduce.py` and the root `init.sh` install `mobile/`; `.github/dependabot.yml`
   watches its lockfile; `.gitignore` gains the generated parts, the local Supabase state and the coverage
   directory, each asserted by name in `tests/test_ignore_rules.py`.
 - **Dependabot.** The four alerts on the old lockfile (`node-forge` GHSA-86w9-cpqp-85rv, `braces`

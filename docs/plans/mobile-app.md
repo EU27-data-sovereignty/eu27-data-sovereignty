@@ -80,7 +80,7 @@ on 2026-10-14 (see Status below); the languages remain a plan.
 
 - **Builds.** Expo managed, with continuous native generation. EAS builds run only from the EAS workflow
   `mobile/.eas/workflows/release.yml`, started by the deploy's `app` job after `./test.sh` and the fact-check
-  gates, with the owner's approval before any upload (#114; this paragraph said `mobile-release.yml` until
+  gates, with the owner's approval before any upload (#119; this paragraph said `mobile-release.yml` until
   2026-10-16).
 - **Proving the bundle is the checked one.** The app's copy is checked against `manifest.json` at HEAD, as
   the web smoke test checks the served bundle.
@@ -109,36 +109,36 @@ on 2026-10-14 (see Status below); the languages remain a plan.
 - **US processors** (Expo EAS, Supabase).
 - **Accounts in a personal name** until the foundation exists.
 
-## Status 2026-10-19 (#117)
+## Status 2026-10-19 (#122)
 
 The owner decided the languages: 24, interface only, each shipped once a native speaker has read it, in the existing
-`mobile/` brought up to the template's pins (#117). Owner decision 3 is settled (facts stay English); 4 is moot (no
+`mobile/` brought up to the template's pins (#122). Owner decision 3 is settled (facts stay English); 4 is moot (no
 language ships unread). The i18next layer in "Languages" above is superseded: `expo-localization` plus a small
-`src/i18n/`. Phase 3 follows #117; phase 4's translated facts are not planned.
+`src/i18n/`. Phase 3 follows #122; phase 4's translated facts are not planned.
 
-## Status 2026-10-16 (#114–#116)
+## Status 2026-10-16 (#119–#121)
 
 The owner decided to release through EAS and to the App Store, keeping the public release click manual. Of the
 open items above: 5 **store accounts** — personal, state unknown on 2026-10-16 (`TODO.md`); 7 **internal testing** —
 TestFlight's internal group, then App Review, then a manual release; 9 **builds** — EAS cloud builds, with the
 credentials on EAS and the audit trail in `mobile/releases.csv`. `mobile-release.yml` became the EAS workflow
 `mobile/.eas/workflows/release.yml`, started by the deploy's `app` job, with `require-approval` before the upload.
-"Over-the-air updates (EAS Update) are not used" above is superseded by #115: used, never automatic. The privacy
-policy page exists at `/privacy` (#116). 6 **DSA trader** stays the owner's, in App Store Connect.
+"Over-the-air updates (EAS Update) are not used" above is superseded by #120: used, never automatic. The privacy
+policy page exists at `/privacy` (#121). 6 **DSA trader** stays the owner's, in App Store Connect.
 
 ## Status 2026-10-14
 
-The owner decided in planning (`docs/plans/mobile-log.md`; DECISIONS.md #109–#113), and the reader was rebuilt in
+The owner decided in planning (`docs/plans/mobile-log.md`; DECISIONS.md #114–#118), and the reader was rebuilt in
 the same session. Of the nine decisions below:
 
-1. **Rebuild:** yes (#109). The old reader is gone; `mobile/` is the new app.
+1. **Rebuild:** yes (#114). The old reader is gone; `mobile/` is the new app.
 2. **Edition check:** yes, but against a Supabase Storage bucket the deploy writes, not against `eu27.cloud`
-   (#111, #112). The "Edition check (v1.1)" paragraph above is superseded: the app's only network call is the
+   (#116, #117). The "Edition check (v1.1)" paragraph above is superseded: the app's only network call is the
    bucket, on a tap or an opt-in; the site still publishes `/data/manifest.json` so the two can be compared.
-3. **Facts:** English, with the original quote in each source entry (#109). Translation stays in
+3. **Facts:** English, with the original quote in each source entry (#114). Translation stays in
    `localisation-plan.md`.
 4. **Irish and Maltese labels:** not applicable until 3 changes.
-5. **Store accounts**, 6. **DSA trader**, 7. **Internal testing:** open; no release, no EAS (#109).
+5. **Store accounts**, 6. **DSA trader**, 7. **Internal testing:** open; no release, no EAS (#114).
 8. **Supabase:** answered early, by the owner: hosted, in an EU region, as a read-only edition channel only; the
    foundation's processor list names it for that reason. Submissions stay on the GitHub forms.
 9. **Builds:** neither; no builds until the launch gate.

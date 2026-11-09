@@ -12,7 +12,7 @@ produced: [`METHOD.md`](METHOD.md).
 - [x] Fast-forwarded `main` to `feat/fact-check` and pushed (2026-10-02); `Deploy` run 37072208296 green;
       live at https://eu27.cloud (noindex); recorded in `DEPLOYMENT.md`
 - [ ] Dependabot: 4 open (2 high, 2 moderate), all in `mobile/package-lock.json` (2026-10-05); `web/` is
-      clean. The rebuilt lockfile (#109) carries the same four Expo-toolchain transitives, allowlisted with reasons
+      clean. The rebuilt lockfile (#114) carries the same four Expo-toolchain transitives, allowlisted with reasons
       in `mobile/audit-allowlist.json`; **owner:** dismiss them in the Security tab with those reasons
 - [x] `security` workflow green on every push since 2026-10-03 (calls the shared workflow, `71d84ba`)
 - [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
@@ -67,8 +67,8 @@ Open
       2026-11-02, 09:00 ET, with these steps
 - [x] Live `/ask` answers with citations (`ask_smoke.py --require`: 1122 characters, 3 citations, 2026-10-03);
       repository variable ASK_LIVE=true, so the daily check now fails if it stops
-- [x] Owner: port the mobile reader to schema 2, or drop it: rebuilt on the content model (#109, 2026-10-14)
-- [ ] **Owner:** the edition channel (#111, #112): create the Supabase project in an EU-27 region, apply
+- [x] Owner: port the mobile reader to schema 2, or drop it: rebuilt on the content model (#114, 2026-10-14)
+- [ ] **Owner:** the edition channel (#116, #117): create the Supabase project in an EU-27 region, apply
       `mobile/supabase/migrations/` (`cd mobile && supabase link --project-ref <ref> && supabase db push`),
       `gh variable set SUPABASE_URL --body https://<ref>.supabase.co`, and
       `pbpaste | gh secret set SUPABASE_SERVICE_ROLE_KEY --env production`; until then the deploy's `edition` job is
@@ -87,13 +87,13 @@ Open
       `git stash drop`
 - [ ] **Owner:** the worktree `.claude/worktrees/notes-internet-entry-points` (branch
       `worktree-notes-internet-entry-points`, `19aef4c`) holds 2 commits not on `main`: `INTERNET-ENTRY-POINTS.md`
-      and its log (#109). Merge or drop them, then `git worktree remove` it; its older copies of the TODO files show
+      and its log (#114). Merge or drop them, then `git worktree remove` it; its older copies of the TODO files show
       up in workspace sweeps — 2026-10-29, workspace TODO sweep
 - [ ] **Owner:** read `TECHNICAL-UNIVERSITIES.md` (#108) and a language draft or two; no person has read either
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
 - [ ] Dependabot in `mobile/`: `node-forge` (no fix), `braces` (no fix), `decode-uri-component`, `uuid`: allowlisted with
-      reasons (#113); owner to dismiss with those reasons
+      reasons (#118); owner to dismiss with those reasons
 - [x] Testing items (b89f03c, 1e52404): live `/ask` check, mutation testing, `hypothesis`, fact-check
       stability sampling, visual baselines, Firefox/WebKit, iPhone
 - [x] Weekly source link check: the `sources` job of `monitor.yml` re-fetches every cited source on Mondays (#98);
@@ -134,7 +134,7 @@ Open
 - [ ] Rendering fetch for JavaScript pages (FI, PT, LT, CY) and a retry route for refused sites
       (LU, LV, RO, IE)
 
-## Release the reader (#114–#116; the public release click stays behind the launch gate)
+## Release the reader (#119–#121; the public release click stays behind the launch gate)
 - [ ] **Owner:** accounts. `! npx eas-cli@25.1.1 whoami` (expect "Not logged in"); an Expo account at expo.dev if none;
       an Apple Developer Program membership (https://developer.apple.com/account, €99/yr, personal, transferable to
       the stichting later). State unknown on 2026-10-16
@@ -149,17 +149,17 @@ Open
       `gh secret set EXPO_TOKEN --env production` with a robot token for the project, and
       `gh variable set EXPO_PROJECT_ID --body <projectId>`; until then the deploy's `app` job is skipped
 - [ ] Spike before the first push to `main` with the variable set: `cd mobile && EXPO_TOKEN=… ./run.sh release` on a
-      pushed commit, and `./run.sh eas workflow:validate .eas/workflows/release.yml` (needs the login); record both outputs in #114's Verified line
+      pushed commit, and `./run.sh eas workflow:validate .eas/workflows/release.yml` (needs the login); record both outputs in #119's Verified line
 - [ ] **Owner, in App Store Connect by hand** (EAS Metadata does not cover them): App Privacy "Data Not Collected";
       screenshots (6.9" iPhone and 13" iPad from the simulator, `./run.sh ios`); the EU DSA trader declaration; the
       age-rating confirmation. Then `EAS_REVIEW_EMAIL=… EAS_REVIEW_PHONE=… ./run.sh metadata push`
 - [ ] First release: push the branch, green `ci.yml`, owner's OK, `git push origin HEAD:main`; TestFlight on a device
-      (closes #109's "NOT YET: a reading on a physical device by a person"); approve in the Expo dashboard; "Submit
+      (closes #114's "NOT YET: a reading on a physical device by a person"); approve in the Expo dashboard; "Submit
       for Review" in App Store Connect; `./run.sh release record <build-id>` and commit `mobile/releases.csv`; fill
-      #114's and #115's Verified lines
+      #119's and #120's Verified lines
 - [ ] Google Play: a developer account ($25), a service-account key on EAS, `submit_android` behind the same
       approval, and Google's closed test (12 testers, 14 days) before production
-- [ ] EAS Update code signing, if the project ever moves to a plan that includes it (#115)
+- [ ] EAS Update code signing, if the project ever moves to a plan that includes it (#120)
 
 - [ ] Re-run the thin run-1 states: AT, BE, EE
 - [ ] Record counts and data sizes per holding, for capacity (#73)
@@ -167,31 +167,31 @@ Open
 - [ ] Human sampling audit with a measured error rate: the launch gate (#25, #67)
 
 ## Outputs
-- [x] Mobile reader to schema 2 (content model): rebuilt, #109–#113 (2026-10-14)
-- [x] Mobile reader: a release path through EAS to App Store Connect, the public click held (#114–#116, 2026-10-16)
-- [ ] Mobile reader: a signed manifest (ed25519) so the channel proves authorship, not only integrity (#111)
-- [ ] Mobile reader: add `Gate / Mobile reader (./test.sh --only mobile)` to `main`'s ruleset after two weeks of timings (#113)
+- [x] Mobile reader to schema 2 (content model): rebuilt, #114–#118 (2026-10-14)
+- [x] Mobile reader: a release path through EAS to App Store Connect, the public click held (#119–#121, 2026-10-16)
+- [ ] Mobile reader: a signed manifest (ed25519) so the channel proves authorship, not only integrity (#116)
+- [ ] Mobile reader: add `Gate / Mobile reader (./test.sh --only mobile)` to `main`'s ruleset after two weeks of timings (#118)
 - [ ] Print `eu27.cloud/<iso>` on the country PDFs and posters, which carry no address today (#105): a `label`
       span in the content model, a changelog entry, `/factcheck` before the push
 - [ ] Localisation stage 1 (`docs/plans/localisation-plan.md`): apply the 42 `fix` cells, a native reading per
-      language, then the decision entry the plan reserves (for the reader: #117, 2026-10-19; the three items below)
-- [ ] Languages (#117): draft the "Reader strings" part of the 27 drafts (the 223 keys of
+      language, then the decision entry the plan reserves (for the reader: #122, 2026-10-19; the three items below)
+- [ ] Languages (#122): draft the "Reader strings" part of the 27 drafts (the 223 keys of
       `docs/i18n/STRINGS-reader.md`), split between agents A and B as on 2026-10-12, and cross-review it on the other
       model; `python3 model/i18n_drafts.py check` then counts 27 drafted, 0 pending (2026-10-19)
-- [ ] Languages (#117): apply the 42 `fix` verdicts as `fixed`, the eleven weakened honesty notices first (2026-10-19)
-- [ ] **Owner:** languages (#117): one native reader per language; record `- Read by (<lang>): <role>, <date>` on the
+- [ ] Languages (#122): apply the 42 `fix` verdicts as `fixed`, the eleven weakened honesty notices first (2026-10-19)
+- [ ] **Owner:** languages (#122): one native reader per language; record `- Read by (<lang>): <role>, <date>` on the
       draft, then `./run.sh data` admits it; `python3 model/i18n.py why` says what each column still waits on (2026-10-19)
 - [ ] Mobile reader: the Expo SDK 58 upgrade and `expo-localization` change the native fingerprint, so the next
-      release is a store build through EAS, not an over-the-air update (#114, #115, #117; 2026-10-19)
+      release is a store build through EAS, not an over-the-air update (#119, #120, #122; 2026-10-19)
 - [ ] Print book: country parts rendered from the content model; write Parts I, II and V
 - [ ] PDF tables: a long compound word (e.g. "Identitätsdokumentenregister") runs into the next column;
       allow hyphenation or breaking in table cells
 - [ ] Capacity from measured holdings, once enough are measured (#73)
 
-## The Draghi note (#118, `DRAGHI-REPORT.md`)
+## The Draghi note (#123, `DRAGHI-REPORT.md`)
 - [ ] Cross-model review of the 27 entries and section 3 by claude-fable-5-1, the #87 standard for a note; the
-      2026-10-23 draft was written and checked by claude-opus-5-5 only (#118 Verified: NOT YET)
-- [ ] A person reads the note; record it by role, never by name (#118 Verified: NOT YET)
+      2026-10-23 draft was written and checked by claude-opus-5-5 only (#123 Verified: NOT YET)
+- [ ] A person reads the note; record it by role, never by name (#123 Verified: NOT YET)
 - [ ] What became of the B p. 84 cloud-procurement and residency proposals after September 2024: fetch and quote the
       Commission's follow-up, then update section 3 and the caveat (2026-10-23)
 - [ ] Candidate label: a per-holding "sensitive-area carve-out" derived from the printed operator and the B p. 84
@@ -207,7 +207,7 @@ Open
 - [ ] `./test.sh` fails in `mobile/test.sh` as of 2026-10-23, not from any change in `mobile/`: `doctor` (Expo has
       published SDK 58 patch releases above the pins, e.g. `expo` 58.0.17 vs 58.0.14) and `audit` (the `braces`
       advisory GHSA-vfj7-8cjw-p6xm is allowlisted but no longer reported, so the allowlist is stale). Bump the pins to
-      the template's and drop the stale row, in its own change (found while committing #118)
+      the template's and drop the stale row, in its own change (found while committing #123)
 - [ ] CI's `npm audit --audit-level=high --prefix web` fails as of 2026-10-23 (run 40009608303): `vite` 8.2.0–8.2.2
       (high, GHSA-9jrq-w75r-8gcw and five more; fix in 8.3.5) and `vitest`/`@vitest/mocker` 5.0.0-beta.1–5.0.2
       (moderate; fix in 5.0.5), all dev dependencies of `web/`. Local `./test.sh --only web` does not run this audit,

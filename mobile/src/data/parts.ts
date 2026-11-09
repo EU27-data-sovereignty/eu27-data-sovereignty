@@ -1,5 +1,5 @@
 /**
- * The split edition's two part shapes (#110), and the one view that lets the parity-pinned helpers in
+ * The split edition's two part shapes (#115), and the one view that lets the parity-pinned helpers in
  * `sources.ts` run unchanged: `bundleView(core, part)` is a `Bundle` whose per-state maps hold the one
  * state that is loaded. Nothing is derived here that the single bundle does not hold; `index` is the one
  * addition, counted by `model/export_json.py` with the rules `sources.ts` applies.

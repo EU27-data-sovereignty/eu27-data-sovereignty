@@ -1,11 +1,11 @@
 /**
  * This edition: its id (the sha256 of the bundle it was split from), when it was generated, where it came
  * from, what it counts, what the project can honestly say about its evidence, and the one control that
- * reaches the network: a check for a newer edition (#110, #111), which in the same tap also asks for a
- * newer build of the app itself (#115). Every sentence about evidence comes from the edition's `notice`;
+ * reaches the network: a check for a newer edition (#115, #116), which in the same tap also asks for a
+ * newer build of the app itself (#120). Every sentence about evidence comes from the edition's `notice`;
  * the privacy sentences are the app’s own and say exactly what one check sends, and to whom. The privacy
- * policy the stores require is linked from here (#116). The reader chooses the app's language here, from the
- * languages the catalogue has admitted, and sees who drafted, reviewed and read the one on screen (#117).
+ * policy the stores require is linked from here (#121). The reader chooses the app's language here, from the
+ * languages the catalogue has admitted, and sees who drafted, reviewed and read the one on screen (#122).
  */
 import Constants from 'expo-constants';
 import { Linking, Pressable, StyleSheet, Switch, Text, View } from 'react-native';

@@ -8,7 +8,7 @@
  * content becomes a second source. `__tests__/document-view.test.tsx` checks that the rendered text, minus
  * the [n] marks, is exactly the spans' text.
  *
- * In a language the catalogue has admitted (#117), a label or gap span, and a section title, is shown in that
+ * In a language the catalogue has admitted (#122), a label or gap span, and a section title, is shown in that
  * language when the catalogue has its exact English text; a fact, a disputed value or an explanation never is.
  */
 import { StyleSheet, Text, View, type StyleProp, type TextStyle } from 'react-native';

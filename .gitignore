@@ -38,7 +38,7 @@ web/dist/
 # these; each is repeated because tests/test_ignore_rules.py asserts it by name, and a rule
 # that is only implied is a rule that disappears the next time the general one is edited.
 # The 28 parts of the split edition are generated from web/public/data/eu27.json by
-# `python3 model/export_json.py --split` (#110); only manifest.json beside them is tracked.
+# `python3 model/export_json.py --split` (#115); only manifest.json beside them is tracked.
 mobile/node_modules/
 mobile/.expo/
 mobile/dist/
@@ -82,7 +82,7 @@ web/playwright-report/
 # Mirrored in .vercelignore -- the CLI reads that INSTEAD of this file.
 cache/
 
-# Archived third-party reports (#118). Re-downloadable from the publisher, so the bytes stay out
+# Archived third-party reports (#123). Re-downloadable from the publisher, so the bytes stay out
 # of git; assets/reports/MANIFEST.csv IS tracked and carries each file's URL and sha256, and
 # `python3 model/draghi_note.py fetch` restores and verifies them. Mirrored in .vercelignore.
 assets/reports/**/*.pdf

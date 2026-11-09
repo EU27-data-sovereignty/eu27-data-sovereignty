@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The admitted interface catalogue (#117): a language reaches the reader only from a draft that is complete in
+The admitted interface catalogue (#122): a language reaches the reader only from a draft that is complete in
 both parts, reviewed by the other agent with every `fix` applied, and read by a native speaker.
 
     python3 -m unittest tests.test_i18n -v

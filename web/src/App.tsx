@@ -85,7 +85,7 @@ export function App() {
         <Route path="map" element={<Sovereignty bundle={bundle} />} />
         <Route path="country/:iso" element={<LegacyCountry />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
-        {/* The privacy policy the app stores link to (#116): static, every surface on one page. */}
+        {/* The privacy policy the app stores link to (#121): static, every surface on one page. */}
         <Route path="privacy" element={<Privacy />} />
         <Route path="fact-check" element={<FactCheck bundle={bundle} />} />
         <Route path="fact-check/:iso" element={<FactCheck bundle={bundle} />} />

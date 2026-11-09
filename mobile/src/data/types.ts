@@ -1,5 +1,5 @@
 /**
- * Copy of `web/src/data/types.ts`: the shape of the bundle and of every part of the split edition (schema 2, #74, #75, #110).
+ * Copy of `web/src/data/types.ts`: the shape of the bundle and of every part of the split edition (schema 2, #74, #75, #115).
  *
  * Pinned byte for byte below this comment by `__tests__/parity.test.ts`, so the app and the site cannot
  * disagree. Edit the web file, then copy it here in the same commit; never edit this copy.

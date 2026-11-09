@@ -17,7 +17,7 @@ on:
         type: boolean
         default: false
       mobile_integration:
-        description: Start a local Supabase and run the edition channel round-trip (mobile/test.sh --integration, #113)
+        description: Start a local Supabase and run the edition channel round-trip (mobile/test.sh --integration, #118)
         type: boolean
         default: false
 
@@ -155,7 +155,7 @@ jobs:
       - name: Run the mobile group
         run: ./test.sh --only mobile
 
-  # The edition channel end to end (#112, #113): a local Supabase stack, the deploy's own publisher filling
+  # The edition channel end to end (#117, #118): a local Supabase stack, the deploy's own publisher filling
   # its bucket, anonymous reads, refused anonymous writes, verify(), and the app's store installing a good
   # edition and rejecting an altered one. `supabase start` pulls about a dozen images by tag, so this runs
   # only when the caller asks (deploy.yml does; ci.yml does not), in parallel with the PDFs.

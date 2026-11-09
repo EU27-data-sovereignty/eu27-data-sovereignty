@@ -9,7 +9,7 @@ Reads the same country_data.build() dict and content model (document.py) the mar
 briefs and the PDFs are rendered from, so no output can disagree with another. The bundle is about
 930 KB gzipped (7.5 MB raw); the web app ships the entire model client-side and needs no API.
 
-`--split` also writes the *edition* the mobile reader ships (#110): the same content as 28 parts,
+`--split` also writes the *edition* the mobile reader ships (#115): the same content as 28 parts,
 `eu27.core.json` plus one `eu27.<ISO>.json` per member state, each self-contained, and a
 `manifest.json` naming the sha256 of every part and of the single file (the edition id). The parts are
 a pure function of the single file, so they are generated, never tracked; the manifest is tracked, in
@@ -38,7 +38,7 @@ import evidence  # noqa: E402
 
 SCHEMA_VERSION = 2
 DEFAULT_OUT = cm.ROOT / "web" / "public" / "data" / "eu27.json"
-# The split edition (#110): the parts next to the app that bundles them, the manifest also next to the site's
+# The split edition (#115): the parts next to the app that bundles them, the manifest also next to the site's
 # single file. Part names are fixed so the app's static requires and the manifest's keys cannot drift.
 SPLIT_DIR = cm.ROOT / "mobile" / "assets" / "data"
 SITE_MANIFEST = DEFAULT_OUT.parent / "manifest.json"

@@ -3093,9 +3093,14 @@ are re-read and the Criteria line cites the live page; or the project admits ins
 hosting model (#96), in which case this note becomes the seed of a sourced register and stops being authored.
 
 
-### 109. The mobile reader is rebuilt from the workspace template on the content model, English only, with no release
-**Superseded in part by #114** (2026-10-16): the closure "EAS, store accounts or a build before the launch gate" is
+### 114. The mobile reader is rebuilt from the workspace template on the content model, English only, with no release
+**Superseded in part by #119** (2026-10-16): the closure "EAS, store accounts or a build before the launch gate" is
 lifted; the public release click stays behind the gate.
+
+**Renumbered 2026-11-09.** #114–#123 were written on the branch `notes/draghi-report` as 109–118. `main` had
+meanwhile used 109–113 for other decisions, and those were already deployed, so at the owner's request the
+branch's entries moved up by five when it landed (the same repair as #54's 47–50). The commit messages
+`ceba07f`…`e6ad284` still carry the old numbers: old *N* is new *N + 5*.
 
 **Decision.** 2026-10-14, at the owner's request for "a mobile app with react native and supabase". `mobile/` is
 replaced, not ported: an Expo SDK 57 app (expo-router, React Native 0.86) scaffolded from `templates/rn-supabase`
@@ -3139,9 +3144,9 @@ reading on a physical device by a person; the app has run in Jest and as a web e
 
 *Would change if:* the content model gains a block type the renderer does not draw (then the port is extended,
 never a local sentence); or the launch gate is passed and a release is decided, which reopens EAS, the store
-accounts and the identifiers `cloud.eu27.reader` (#111's region and processor questions come with it).
+accounts and the identifiers `cloud.eu27.reader` (#116's region and processor questions come with it).
 
-### 110. The app ships the bundle as a split edition: 28 generated parts and a tracked manifest whose id is the bundle's sha256
+### 115. The app ships the bundle as a split edition: 28 generated parts and a tracked manifest whose id is the bundle's sha256
 **Decision.** 2026-10-14. `python3 model/export_json.py --split` writes `web/public/data/eu27.json` as
 `eu27.core.json` (everything that is not one state's, plus `index`, the one key the single file lacks: each
 state's name and the evidence counts the web's Countries page derives) and 27 `eu27.<ISO>.json` (one state's
@@ -3187,15 +3192,15 @@ which `test_every_claim_in_the_bundle_is_in_exactly_one_country_part` would fail
 JSON modules proves too heavy at startup on low-end devices, in which case the parts become assets
 (`expo-asset`), which would also allow hashing the bundled parts at runtime.
 
-### 111. The edition channel is one public, read-only Supabase Storage bucket in an EU region, read on a tap
-**Amended by #115** (2026-10-16): EAS Update ships the app's code, fetched only on the reader's tap; the data
+### 116. The edition channel is one public, read-only Supabase Storage bucket in an EU region, read on a tap
+**Amended by #120** (2026-10-16): EAS Update ships the app's code, fetched only on the reader's tap; the data
 edition still comes only from this channel.
 
 **Decision.** 2026-10-14, the owner's choice over the plan of 2026-10-03 (`docs/plans/mobile-app.md`, which
 recommended no Supabase in v1). A hosted Supabase project in an EU-27 region (Frankfurt or Stockholm; not
 London, not Zurich), one bucket `editions`, public, 16 MiB per object, JSON only, with one `select` policy for
 `anon` and no insert, update or delete policy (`mobile/supabase/migrations/20261015000000_editions_bucket.sql`):
-only the service role, which bypasses row-level security, writes, and only the deploy holds it (#112). Objects:
+only the service role, which bypasses row-level security, writes, and only the deploy holds it (#117). Objects:
 `<edition>/manifest.json`, the 28 parts and `<edition>/published.json`, immutable; `latest.json`, the one
 mutable pointer. The app's `src/services/channel.ts` is the only place a URL is built, from the configured
 project; `src/edition/expoFiles.ts` the only place anything is downloaded. A check runs on a tap in the About
@@ -3249,10 +3254,10 @@ device fetching from it.
 which the Supabase project is no longer trusted for authorship; or the foundation chooses an EU self-hosted
 store, in which case `channel.ts` changes and nothing else; or Supabase stops offering an EU-27 region.
 
-### 112. Only the deploy publishes an edition: one job, after the site is final, immutable objects, the pointer last
+### 117. Only the deploy publishes an edition: one job, after the site is final, immutable objects, the pointer last
 **Decision.** 2026-10-14. `deploy.yml` gains a job `edition` with `needs: deploy`, in the `production`
 environment, skipped until the repository variable `SUPABASE_URL` is set (the `ASK_LIVE` phase-in): it
-regenerates the parts from the committed bundle (#110) and runs `python3 model/edition.py publish`, which reads
+regenerates the parts from the committed bundle (#115) and runs `python3 model/edition.py publish`, which reads
 the service-role key from `SUPABASE_SERVICE_ROLE_KEY` in its environment (never argv, never printed), proves
 the local tree first, uploads each object under `<edition>/` with `x-upsert: false` (an object already there is
 accepted only if it hashes to ours; different bytes under the same id fail), writes `published.json` once with
@@ -3261,7 +3266,7 @@ the commit and run, and only when every part is served moves `latest.json`, the 
 objects uploaded or already present; the same job then reads the bucket back anonymously
 (`model/smoke.py --edition-url`), and `monitor.yml` does the same weekly. A failed publish fails the run and
 touches nothing on the site. `model/edition.py` is stdlib `urllib`, tested against a fake Storage server
-(`tests/test_edition.py`) and against the real one by the integration run (#111). `tests/test_workflows.py`
+(`tests/test_edition.py`) and against the real one by the integration run (#116). `tests/test_workflows.py`
 holds the shape: one job, `needs: deploy`, the secret once and only in an `env:` block, one `run:` line of
 `python3 model/edition.py publish`, no npx, curl, supabase or pip in the step, `upsert=True` once in the module.
 
@@ -3295,7 +3300,7 @@ rollback of the site because of the bucket.
 
 **Verified:** 2026-10-14. `python3 -m unittest tests.test_edition tests.test_workflows -q`: OK (12 publisher
 tests, incl. the key never on stdout, in a URL or in the summary; the six `Edition` workflow tests). The
-integration run of #111: the same `edition.py publish` against local Supabase, 9 of 9. **NOT YET:** the first
+integration run of #116: the same `edition.py publish` against local Supabase, 9 of 9. **NOT YET:** the first
 production publish (the job is skipped until `SUPABASE_URL` exists); the first weekly check with a URL; a
 publish failure in production, expected never to roll the site back.
 
@@ -3303,7 +3308,7 @@ publish failure in production, expected never to roll the site back.
 `put_immutable` would report as an upload failure on the next deploy; or the foundation moves the bucket, in
 which case `Storage.object()` and `Storage.public()` change and the tests hold the rest.
 
-### 113. The mobile reader is a stage of the gate and a parallel CI job; its Supabase round-trip runs only in the deploy's gate
+### 118. The mobile reader is a stage of the gate and a parallel CI job; its Supabase round-trip runs only in the deploy's gate
 **Decision.** 2026-10-14. `./test.sh` gains a sixth `--only` group, `mobile` (stage 17), and `--no-mobile`; the
 stage runs `mobile/test.sh --ci`, the reader's own suite with its summary table, and fails, not skips, when
 `mobile/node_modules` is missing, the file's precedent for `web/`. `gate.yml` runs it as a parallel job on every
@@ -3345,12 +3350,12 @@ in it.
 `Gate / Mobile reader (./test.sh --only mobile)` is added to `.github/rulesets/main.json`; or `supabase start`
 becomes pinnable by digest, in which case the round-trip can move to every push.
 
-### 114. The reader is released through Expo Application Services, to the App Store, with the public release click held by the owner
+### 119. The reader is released through Expo Application Services, to the App Store, with the public release click held by the owner
 **Decision.** 2026-10-16, at the owner's request ("deploy to the app store", "use all expo capabilities"). The
 mobile reader is built, sent to TestFlight and uploaded to App Store Connect by one EAS workflow,
 `mobile/.eas/workflows/release.yml` (EAS Workflows: `fingerprint` → `get-build` → `build` only when the native
 fingerprint changed → `testflight` → `require-approval` → `submit`; or `update` when a build for the fingerprint
-exists, #115), started only by the deploy's new `app` job after the site's gate, the fact-check gate and the
+exists, #120), started only by the deploy's new `app` job after the site's gate, the fact-check gate and the
 deploy passed, or by hand with `./run.sh release`. Credentials live on EAS: the Apple distribution certificate,
 the provisioning profile for `cloud.eu27.reader`, an App Store Connect API key with the App Manager role, and
 an Android upload keystore; the Expo robot token is a `production`-environment secret that reaches the pinned
@@ -3361,11 +3366,11 @@ EAS (`appVersionSource: remote`, `autoIncrement`), and `mobile/releases.csv`, ge
 record` from `eas build:view`, retraces every build to its commit and the edition inside it. The listing is
 `mobile/store.config.json` (EAS Metadata), with `automaticRelease: false`: "Submit for Review" and "Release" stay
 clicks in App Store Connect, so the public release remains the launch-gate decision (#25, #67). iOS now;
-Android builds and is never submitted until a Play account exists. This supersedes in part #109's closure "EAS,
+Android builds and is never submitted until a Play account exists. This supersedes in part #114's closure "EAS,
 store accounts or a build before the launch gate", and answers `docs/plans/mobile-app.md` owner questions 5, 7
 and 9.
 
-**Problem.** #109 built a reader that nobody can install. Proving the release pipeline end to end, through
+**Problem.** #114 built a reader that nobody can install. Proving the release pipeline end to end, through
 App Review, is work the launch gate does not depend on and that takes weeks of calendar time (accounts, review,
 rejections), and leaving it to the day the gate passes would make that day a release day and a first-time-setup
 day at once. The owner also wants the single remaining click to be theirs, which a pipeline that releases on
@@ -3416,27 +3421,27 @@ holds the accounts, which moves `owner` in `app.json` and the credentials, not t
 drops the `testflight` or `require-approval` job, in which case `eas submit` from the GitHub job with the
 owner's OK in the conversation replaces the approval.
 
-### 115. Over-the-air updates of the app's code go through EAS Update, fetched only when the reader asks
+### 120. Over-the-air updates of the app's code go through EAS Update, fetched only when the reader asks
 **Decision.** 2026-10-16. `expo-updates` 57.0.26 is in the app with `updates.checkAutomatically: "NEVER"` and
 the `appVersion` runtime-version policy; the release workflow publishes the JavaScript to the `production`
-channel when a build for the native fingerprint already exists (#114), so a text or rendering fix reaches
+channel when a build for the native fingerprint already exists (#119), so a text or rendering fix reaches
 installed apps without a store cycle. The native layer never asks for an update on its own: the About tab's
 "Check for a newer edition" (or the opt-in check at launch) runs the edition check first and then, in the same
 tap, `src/update/appUpdate.ts` through its one port (`src/update/expoAppUpdates.ts`, the only file that
 imports the module), reports every state, and offers "Restart to apply". The data edition still comes only
-from the edition channel (#111); an update carries code and the edition inside the binary at publish time. The
+from the edition channel (#116); an update carries code and the edition inside the binary at publish time. The
 updates are not code-signed (EAS Update code signing needs the Production plan): Expo's TLS and account are the
-trust boundary, recorded here and on `/privacy`. This amends #111's rejection of EAS Update and its "a second
+trust boundary, recorded here and on `/privacy`. This amends #116's rejection of EAS Update and its "a second
 network call or host" closure: the second host exists, and the About tab names it.
 
-**Problem.** #111 rejected EAS Update for data, rightly: a data correction is not a code release. But the
+**Problem.** #116 rejected EAS Update for data, rightly: a data correction is not a code release. But the
 owner's request for every EAS capability includes it, and without it a crash fix waits for App Review. The
 risk it carries is the default behaviour: `expo-updates` checks at every launch, which would make "the app
 makes no request unless you ask" and "Data not collected" untrue of the shipped binary.
 
 **Alternatives considered.**
 - **EAS Update with `checkAutomatically: NEVER`, driven from the same tap as the edition check (chosen).**
-- **The default (`ON_LOAD`).** *Why not:* a request to a US host on every start, unasked; #111's privacy
+- **The default (`ON_LOAD`).** *Why not:* a request to a US host on every start, unasked; #116's privacy
   reasoning.
 - **No EAS Update.** *Why not:* the owner asked for every capability; a crash in a release would wait a review
   cycle.
@@ -3459,7 +3464,7 @@ served to an installed build; the `appVersion` policy against a real runtime.
 is committed and `--private-key-path` signs every publish; or EAS Update is retired, in which case `updates.enabled`
 becomes false, the port stays, and the About tab says so.
 
-### 116. The site carries the privacy policy at `/privacy`, and the app links to it
+### 121. The site carries the privacy policy at `/privacy`, and the app links to it
 **Decision.** 2026-10-16. `web/src/pages/Privacy.tsx` at `/privacy`, linked from the footer, from the About
 tab (`extra.siteUrl` + `extra.privacyPath` in `app.json`, read in `src/services/site.ts` alone) and from the
 listing (`privacyPolicyUrl`). One page for every surface: the site (Vercel), `/ask` (Anthropic), the reader
@@ -3491,7 +3496,7 @@ cannot link to, and `docs/plans/stichting.md` deferred the notice to the foundat
 *Would change if:* the foundation becomes the controller, which rewrites the last section and adds a record
 of processing; or a processor is added or dropped, which `tests/test_privacy.py` turns into a failing build.
 
-### 117. The reader speaks the EU's 24 languages, interface, labels and gaps, and a language ships when a person has read it
+### 122. The reader speaks the EU's 24 languages, interface, labels and gaps, and a language ships when a person has read it
 **Decision.** 2026-10-19. The mobile reader (`mobile/`) gets its interface in the EU's 24 official languages, not
 27 per-state locales: one admitted table per language (`model/i18n/<lang>.json`), each state opening in its first
 official language (BE nl/fr/de, LU lb/fr/de, FI fi/sv, IE ga/en, MT mt/en). Translated: the chrome keyed in
@@ -3505,7 +3510,7 @@ native speaker (`- Read by (<lang>): <role>, <date>`); until then the app does n
 generated `mobile/assets/i18n/catalogue.json` through a small `src/i18n/` of its own plus `expo-localization`
 for the device's languages; the reader's choice is one file on the device. `mobile/` is first brought up to the template's pins
 (`templates/rn-supabase`, Expo 58), not re-scaffolded. This is the decision `docs/plans/localisation-plan.md` §6
-reserved as "#109" (a number since taken by the reader), for the app; the web's language segment stays that
+reserved as "#114" (a number since taken by the reader), for the app; the web's language segment stays that
 plan's stage 2 and needs its own entry. It settles `docs/plans/mobile-app.md` owner decision 3 (facts stay
 English) and makes decision 4 moot (no language ships unread, Irish and Maltese included).
 
@@ -3533,7 +3538,7 @@ the drafts without a test failing.
   27 drafts already weakened that very notice, which is the failure a reader catches and a label does not.
 - **i18next + react-i18next.** *Why not:* two dependencies on the allowlist (`security.test.ts`) for
   interpolation and namespaces the 45 strings do not use; `Intl.PluralRules` covers plurals.
-- **A fresh scaffold from the template.** *Why not:* redoes #109–#116 (edition channel, EAS, privacy) for an
+- **A fresh scaffold from the template.** *Why not:* redoes #114–#121 (edition channel, EAS, privacy) for an
   upgrade of pins.
 
 **Closes off.** A rendered translation without a different-model review and a `Read by:` line; any reader of
@@ -3555,7 +3560,7 @@ keys), the 42 fixes, a native reading per language, and so the first admitted la
 alternative under a new #87 rule; or a state asks for its own wording at scale, which turns overlays into
 per-state tables.
 
-### 118. The Draghi report is read in an authored note whose quotations and state facts are machine-checked, and its PDFs are archived outside git under a hash manifest
+### 123. The Draghi report is read in an authored note whose quotations and state facts are machine-checked, and its PDFs are archived outside git under a hash manifest
 **Decision.** 2026-10-23. Mario Draghi's *The future of European competitiveness* (European Commission, September 2024,
 Parts A and B) is read against the 27 states in `DRAGHI-REPORT.md`. This is an authored note, never rendered, with
 one entry per state in four fixed subsections. Its contract is `model/draghi_note.py`, registered in `model/notes.py`,

@@ -1,8 +1,8 @@
 # Mobile style
 
-Covers the Expo Router reader in `mobile/` (#109). It renders the content model from the split edition inside
-its binary and learns of a newer edition from one public, read-only bucket (#110, #111). It is built and uploaded
-to App Store Connect by an EAS workflow the deploy starts (#114); the public release click waits for the launch
+Covers the Expo Router reader in `mobile/` (#114). It renders the content model from the split edition inside
+its binary and learns of a newer edition from one public, read-only bucket (#115, #116). It is built and uploaded
+to App Store Connect by an EAS workflow the deploy starts (#119); the public release click waits for the launch
 gate (#25, #50). The tokens are those of
 [`../STYLE.md`](../STYLE.md), generated into `src/constants/Colors.ts` by `design/build_tokens.py`.
 
@@ -26,7 +26,7 @@ Consequences:
 - **`./run.sh data` writes the parts and both manifests.** The parts are gitignored; a fresh checkout runs
   `mobile/run.sh parts` (or `init.sh`, or `test.sh`) before Metro can bundle them.
 - **The suite runs in the gate.** `./test.sh --only mobile` and the `mobile` job of `gate.yml` run
-  `mobile/test.sh --ci` (#113). A bundle change is not done until that passes.
+  `mobile/test.sh --ci` (#118). A bundle change is not done until that passes.
 
 ## Structure
 

@@ -48,7 +48,7 @@ venv/
 # this rule the whole cache uploads with the source on every deploy.
 cache/
 
-# Archived third-party reports (#118): 15 MB of PDF the deployed app never reads.
+# Archived third-party reports (#123): 15 MB of PDF the deployed app never reads.
 assets/reports/**/*.pdf
 
 # Representation style guides. Documentation for people editing this repo; nothing

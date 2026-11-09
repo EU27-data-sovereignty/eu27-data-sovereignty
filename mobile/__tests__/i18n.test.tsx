@@ -1,5 +1,5 @@
 /**
- * The reader's languages (DECISIONS.md #117). The shipped catalogue holds English and every admitted language;
+ * The reader's languages (DECISIONS.md #122). The shipped catalogue holds English and every admitted language;
  * these tests run the screens on a fixture catalogue with two made-up translations, so the wiring is proven
  * before any real language is admitted: every key the app uses exists in English, a language shows only where
  * the catalogue has it, a fact is never translated, and the reader's choice is stored only on the device.

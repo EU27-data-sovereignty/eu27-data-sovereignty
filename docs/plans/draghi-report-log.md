@@ -7,7 +7,7 @@ A log of the work behind [`DRAGHI-REPORT.md`](../../DRAGHI-REPORT.md), newest fi
 - each choice made, the trade-off it accepted, and what changed;
 - how it was checked, and what is still open.
 
-`DECISIONS.md` #118 is the decision of record. This log is the working narrative behind it and does not repeat its
+`DECISIONS.md` #123 is the decision of record. This log is the working narrative behind it and does not repeat its
 alternatives. It is planning, not data: nothing here is read by the model, the book, the web app, the reader or `/ask`.
 
 ## 2026-10-23: the report archived, read against the 27 states, committed and pushed to a branch
@@ -60,8 +60,8 @@ cost.
 ### Decisions about the note's form
 
 5. **The branch was cut from `mobile/rebuild`, not `main`.**
-   - *Why:* the decision number follows #117 without a collision.
-   - *Trade-off:* the branch carries the unmerged reader work (#109–#117), so it cannot reach `main` on its own.
+   - *Why:* the decision number follows #122 without a collision.
+   - *Trade-off:* the branch carries the unmerged reader work (#114–#122), so it cannot reach `main` on its own.
 6. **Citations use the PDF page, not the printed folio.** Part A's cover and colophon carry no folio, so its
    disclaimer (A p. 2) would otherwise have no page.
    - *Trade-off:* a reader of the printed Part A has to subtract two.
@@ -160,7 +160,7 @@ cost.
 
 ### Still open
 
-Every open item is in `TODO.md`, under "The Draghi note (#118)" and "Testing". In short:
+Every open item is in `TODO.md`, under "The Draghi note (#123)" and "Testing". In short:
 - the cross-model review, and a person's reading;
 - what became of the B p. 84 proposals;
 - the 5G-toolbox states and the "secure cloud" programmes;

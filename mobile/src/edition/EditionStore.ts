@@ -1,5 +1,5 @@
 /**
- * Which edition the app renders, and how a newer one arrives (#110, #111).
+ * Which edition the app renders, and how a newer one arrives (#115, #116).
  *
  * The app ships an edition inside its binary: `assets/data/manifest.json` and the 28 parts it names. The
  * edition channel is one public, read-only bucket holding `latest.json`, a pointer to the edition the deploy
@@ -15,7 +15,7 @@
  * Trust boundary, stated once: the hash chain (latest.json -> manifest -> parts) proves that what arrived is
  * what the deploy published and that it was not altered in transit or on disk. It does not prove who
  * published, since the pointer and the manifest come from the same origin; until a signed manifest exists,
- * the Supabase project is a trusted party (DECISIONS.md #111). Bundled parts are not hashed at runtime: they
+ * the Supabase project is a trusted party (DECISIONS.md #116). Bundled parts are not hashed at runtime: they
  * are inside the code-signed binary, and `__tests__/parity.test.ts` pins them to the committed manifest.
  *
  * Three ports are injected (files, sha256, channel), so Jest and the Node integration test drive the same

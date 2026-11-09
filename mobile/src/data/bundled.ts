@@ -1,6 +1,6 @@
 /**
  * The edition inside the binary: the 28 parts `model/export_json.py --split` wrote next to the manifest the
- * app also ships (#110). Each part is behind a function so Metro evaluates it on first use, not at launch.
+ * app also ships (#115). Each part is behind a function so Metro evaluates it on first use, not at launch.
  *
  * The requires are literal because Metro resolves them statically; `__tests__/parity.test.ts` fails if this
  * list and `assets/data/manifest.json` ever name different parts. The parts are generated (gitignored), so a
