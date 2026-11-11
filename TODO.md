@@ -23,7 +23,9 @@ produced: [`METHOD.md`](METHOD.md).
       Monitor saw `ok` up to 2026-10-19, `not_configured` from 10-25, `ok` from 10-29 to 11-02, and
       `not_configured` from 11-06 to today, 2026-11-09. The deploy's live check (`./test.sh --only live`,
       `--require`) would fail and roll back any push to `main`. Check the key and its workspace in the Anthropic
-      console, re-set it with `vercel env`, then `./test.sh --only live`
+      console, re-set it with `vercel env`, then `./test.sh --only live`. Still `not_configured` on 2026-11-11
+      (`model/ask_smoke.py --require`, exit 1). `notes/draghi-report` is pushed at `6634f7b` with `CI` and
+      `security` green, and is held off `main` until this passes; then `git push origin HEAD:main`
 - [ ] The Monitor's Eurostat step pipes into `tee` without `pipefail`, as `/ask`'s did until 2026-11-09, so its
       exit status never fails the job. Decide whether "reported, never applied" means it should stay green on a
       new vintage, and add `set -o pipefail` if not (2026-11-09)
